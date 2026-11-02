@@ -1,89 +1,89 @@
 {
- "topic": "Receiving work instructions",
- "title_jp": "{仕事|しごと}の{指示|しじ}",
- "context": "First morning volunteering at the guesthouse. The owner explains today's jobs quickly, and you need to catch them.",
+ "topic": "News: Japan's new disaster agency",
+ "news": true,
+ "title_jp": "{防災庁|ぼうさいちょう}{発足|ほっそく}",
+ "context": "News from 2 November 2026: Japan opened a new government agency for disasters, the 防災庁. On day one it asked everyone to store at least 3 days of water and food, ideally a week. Useful words for anyone staying in an earthquake country.",
  "phrases": [
   {
-   "jp": "{何|なに}をすればいいですか。",
-   "en": "What should I do?",
+   "jp": "{水|みず}と{食料|しょくりょう}を{備蓄|びちく}しておきましょう。",
+   "en": "Let's stock up on water and food.",
    "register": "polite",
-   "note": "～ばいいですか asks for the right way to do something. Super useful."
+   "note": "{備蓄|びちく} = stockpile. ～ておく = do something in advance."
   },
   {
-   "jp": "もう{一度|いちど}お{願|ねが}いします。",
-   "en": "Once more, please.",
+   "jp": "{最低|さいてい}3{日分|みっかぶん}、できれば1{週間分|しゅうかんぶん}です。",
+   "en": "At least 3 days' worth, ideally a week's.",
+   "register": "polite",
+   "note": "～{分|ぶん} = \"worth of\": 3{日分|みっかぶん}, 2{人分|ふたりぶん}."
+  },
+  {
+   "jp": "{避難所|ひなんじょ}はどこですか。",
+   "en": "Where is the evacuation shelter?",
    "register": "polite"
   },
   {
-   "jp": "{終|お}わったら{声|こえ}をかけてください。",
-   "en": "Let me know when you're done.",
-   "register": "neutral",
-   "note": "You'll hear this a lot. {声|こえ}をかける = to call out to someone."
-  },
-  {
-   "jp": "これはどこに{置|お}けばいいですか。",
-   "en": "Where should I put this?",
+   "jp": "{地震|じしん}のとき、どうすればいいですか。",
+   "en": "What should I do in an earthquake?",
    "register": "polite"
   },
   {
-   "jp": "オッケー、{了解|りょうかい}！",
-   "en": "OK, got it!",
-   "register": "casual",
-   "note": "Fine with coworkers your age. To the boss, say わかりました."
+   "jp": "{水|みず}、{何|なん}リットル{買|か}えばいい？",
+   "en": "How many litres of water should we buy?",
+   "register": "casual"
   }
  ],
- "dialogue_setting": "In the guesthouse hallway, first thing in the morning.",
+ "dialogue_setting": "At home, your host is watching the evening news.",
  "dialogue": [
   {
-   "speaker": "Owner",
-   "jp": "じゃあ、まず{部屋|へや}の{掃除|そうじ}からお{願|ねが}いね。",
-   "en": "OK, start with cleaning the rooms, please."
+   "speaker": "Host",
+   "jp": "ニュース{見|み}た？{今週|こんしゅう}、{防災庁|ぼうさいちょう}ができたんだって。",
+   "en": "Did you see the news? A disaster agency was set up this week."
   },
   {
    "speaker": "You",
-   "jp": "はい。{掃除機|そうじき}はどこにありますか。",
-   "en": "Sure. Where's the vacuum cleaner?",
+   "jp": "{防災庁|ぼうさいちょう}？{何|なに}をするところですか。",
+   "en": "A disaster agency? What does it do?",
    "me": true
   },
   {
-   "speaker": "Owner",
-   "jp": "{階段|かいだん}の{下|した}の{物置|ものおき}。シーツは{全部|ぜんぶ}{取|と}り{替|か}えてね。",
-   "en": "In the cupboard under the stairs. Change all the sheets."
+   "speaker": "Host",
+   "jp": "{地震|じしん}とか{災害|さいがい}の{準備|じゅんび}。{家|いえ}に1{週間分|しゅうかんぶん}の{水|みず}と{食料|しょくりょう}を{用意|ようい}してって。",
+   "en": "It prepares for earthquakes and disasters. They're asking us to keep a week of water and food at home."
   },
   {
    "speaker": "You",
-   "jp": "すみません、もう{一度|いちど}お{願|ねが}いします。",
-   "en": "Sorry, once more, please.",
+   "jp": "1{週間分|しゅうかんぶん}ですか。この{家|いえ}は{大丈夫|だいじょうぶ}ですか。",
+   "en": "A week's worth? Is this house OK?",
    "me": true
   },
   {
-   "speaker": "Owner",
-   "jp": "シーツを{全部|ぜんぶ}、{新|あたら}しいのに{替|か}えて。{終|お}わったら{声|こえ}かけてね。",
-   "en": "Swap all the sheets for new ones. Tell me when you're done."
+   "speaker": "Host",
+   "jp": "{水|みず}がちょっと{少|すく}ないかな。{明日|あした}、{一緒|いっしょ}に{買|か}いに{行|い}こう。",
+   "en": "We're a bit short on water. Let's go and buy some together tomorrow."
   },
   {
    "speaker": "You",
-   "jp": "わかりました！",
-   "en": "Got it!",
+   "jp": "はい、{手伝|てつだ}います！",
+   "en": "Sure, I'll help!",
    "me": true
   }
  ],
  "kanji": {
-  "kanji": "立入禁止",
-  "reading": "たちいりきんし",
-  "romaji": "Tachiiri kinshi",
-  "meaning": "No entry",
-  "where": "On doors, ropes and construction sites. At work it marks staff-only or dangerous areas.",
-  "related": "Related: {関係者以外立入禁止|かんけいしゃいがいたちいりきんし} staff only."
+  "kanji": "避難所",
+  "reading": "ひなんじょ",
+  "romaji": "Hinanjo",
+  "meaning": "Evacuation shelter",
+  "where": "On signs at schools, community centres and parks: where to go after a big earthquake. Find the nearest one to where you're staying on your first day.",
+  "related": "Related: {避難場所|ひなんばしょ} evacuation area, {非常口|ひじょうぐち} emergency exit."
  },
  "tip": {
-  "mark": "報",
-  "title": "Report when you finish",
-  "body": "Japanese workplaces value ほうれんそう: {報告|ほうこく} (report), {連絡|れんらく} (inform), {相談|そうだん} (consult). Telling your host {終|お}わりました！ after each task, and asking before starting something new, comes across as reliable, not needy."
+  "mark": "備",
+  "title": "The 3-litre rule",
+  "body": "The guideline is 3 litres of water per person per day, including cooking, so one week for one person is 21 litres. Many families use \"rolling stock\" (ローリングストック): buy a bit extra of what you normally eat and use the oldest first. On your stay, ask your host where the emergency bag ({非常持|ひじょうも}ち{出|だ}し{袋|ぶくろ}) is."
  },
  "challenge": {
-  "prompt": "You've finished cleaning the bath. Tell your host it's done and ask what to do next.",
-  "hint": "finished = {終|お}わりました, next = {次|つぎ}は",
-  "model_answer": "お{風呂|ふろ}の{掃除|そうじ}、{終|お}わりました。{次|つぎ}は{何|なに}をすればいいですか。"
+  "prompt": "Ask your host: \"Where is the nearest evacuation shelter?\"",
+  "hint": "nearest = {一番|いちばん}{近|ちか}い",
+  "model_answer": "{一番|いちばん}{近|ちか}い{避難所|ひなんじょ}はどこですか。"
  }
 }

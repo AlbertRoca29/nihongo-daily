@@ -253,7 +253,7 @@ textarea{width:100%;min-height:96px;resize:vertical;font-family:var(--jp);font-s
 
   function renderBoard(){
     const st = steps[idx];
-    $("kicker").textContent = st.type === "intro" ? "Today's line" : st.en;
+    $("kicker").textContent = st.type === "intro" ? (lesson.news ? "ニュース · News day" : "Today's line") : st.en;
     $("bTitle").innerHTML = st.type === "intro" || st.type === "done" ? ruby(lesson.title_jp || lesson.topic) : esc(st.jp);
     $("bEn").textContent = st.type === "intro" || st.type === "done" ? lesson.topic : lesson.topic;
     $("bNum").textContent = String(idx + 1).padStart(2, "0");
