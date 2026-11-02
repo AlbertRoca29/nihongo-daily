@@ -1,4 +1,6 @@
 {
+ "topic": "Trains, tickets and IC cards",
+ "category": "trains",
  "challenge": {
   "hint": "\"can't use\" = {使|つか}えない. \"Could you look at it?\" (polite) = {見|み}ていただけますか.",
   "model_answer": "すみません、このカードが{使|つか}えないんですが、{見|み}ていただけますか。",
@@ -85,6 +87,5 @@
   "mark": "整",
   "title": "Rural buses and trains: take a {整理券|せいりけん}"
  },
- "title_jp": "{電車|でんしゃ}と{切符|きっぷ}",
- "topic": "Trains, tickets and IC cards"
+ "title_jp": "{電車|でんしゃ}と{切符|きっぷ}"
 }

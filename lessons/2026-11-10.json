@@ -1,5 +1,6 @@
 {
  "topic": "Station announcements and signs",
+ "category": "station-signs",
  "title_jp": "{駅|えき}のアナウンス",
  "context": "Trains run on time, until they don't. When something changes you only get a fast announcement. Today: catching the key words and asking staff.",
  "phrases": [

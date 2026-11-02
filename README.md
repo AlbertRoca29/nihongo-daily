@@ -1,15 +1,15 @@
 # Nihongo Line
 
-Daily Japanese micro-lessons for life in Japan (N4–N3), as an installable phone web app.
+Daily Japanese micro-lessons for life in Japan, as an installable phone web app: one situation a day, step by step, with toggleable furigana, audio and a short challenge.
 
 Live: https://albertroca29.github.io/nihongo-daily/
 
-## How lessons are added
-Each lesson is one file, `lessons/YYYY-MM-DD.json`, plus an entry `{"id": "YYYY-MM-DD", "topic": "..."}` in `lessons/index.json`.
-A scheduled Claude task adds one every morning.
+## How it works
+- Each lesson is `lessons/YYYY-MM-DD.json`, listed in `lessons/index.json`. The app shows every lesson up to today.
+- A scheduled Claude task runs every morning at 7:41 (Madrid). It follows [`CLAUDE.md`](CLAUDE.md): it picks the least recently covered topic from [`topics.json`](topics.json), and about three times a month writes a lesson around a real recent news story instead.
+- [`scripts/lessons.py`](scripts/lessons.py) keeps it safe: `status` says what today's run should do, `check` validates every lesson before a push, `bump` moves a lesson to a later day.
 
-Japanese strings use `{漢字|かんじ}` markup for furigana.
-
-## Lesson plan
-- Most days follow the life-in-Japan topic list (konbini, trains, host, farm, hostel…), written in batches.
-- **News days: the 7th, 17th and 27th of each month.** That day's lesson is written ON the day, from real Japan news of the previous 10 days, in easy Japanese (lesson JSON has `"news": true`). Never pre-write news lessons.
+## Changing what you learn
+- Add or edit topics in `topics.json`.
+- Change how lessons are written in `CLAUDE.md`.
+- Edits can be made straight from GitHub; the next morning's run picks them up.
