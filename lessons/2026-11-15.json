@@ -1,0 +1,88 @@
+{
+ "topic": "Helping in a classroom",
+ "title_jp": "{教室|きょうしつ}で",
+ "context": "You help out in a local school's English class. The kids are curious, and the teachers expect polite Japanese.",
+ "phrases": [
+  {
+   "jp": "よろしくお{願|ねが}いします。",
+   "en": "Nice to be working with you.",
+   "register": "polite",
+   "note": "Say it to the teachers in the staff room on day one."
+  },
+  {
+   "jp": "{先生|せんせい}、ちょっといいですか。",
+   "en": "Excuse me, do you have a moment?",
+   "register": "polite"
+  },
+  {
+   "jp": "{名前|なまえ}は{何|なん}ですか。",
+   "en": "What's your name?",
+   "register": "polite"
+  },
+  {
+   "jp": "{黒板|こくばん}に{書|か}いてもいいですか。",
+   "en": "May I write on the blackboard?",
+   "register": "polite"
+  },
+  {
+   "jp": "すごいね！よくできたね！",
+   "en": "Great! Well done!",
+   "register": "casual",
+   "note": "Praise for kids. Speak casually with children."
+  }
+ ],
+ "dialogue_setting": "In a primary school classroom, before the lesson starts.",
+ "dialogue": [
+  {
+   "speaker": "Student",
+   "jp": "{先生|せんせい}、どこから{来|き}たの？",
+   "en": "Teacher, where are you from?"
+  },
+  {
+   "speaker": "You",
+   "jp": "スペインから{来|き}たよ。どこにあるか{知|し}ってる？",
+   "en": "I'm from Spain. Do you know where it is?",
+   "me": true
+  },
+  {
+   "speaker": "Student",
+   "jp": "{知|し}らない！",
+   "en": "No idea!"
+  },
+  {
+   "speaker": "You",
+   "jp": "じゃあ、{地図|ちず}で{見|み}てみよう。",
+   "en": "Then let's look at the map.",
+   "me": true
+  },
+  {
+   "speaker": "Teacher",
+   "jp": "みんな、{席|せき}に{着|つ}いてください。",
+   "en": "Everyone, please take your seats."
+  },
+  {
+   "speaker": "You",
+   "jp": "{先生|せんせい}、{次|つぎ}は{何|なに}をしましょうか。",
+   "en": "What shall we do next?",
+   "me": true
+  }
+ ],
+ "kanji": {
+  "kanji": "職員室",
+  "reading": "しょくいんしつ",
+  "romaji": "Shokuinshitsu",
+  "meaning": "Staff room",
+  "where": "Above the teachers' room door in every school. Knock, open, and say {失礼|しつれい}します as you go in.",
+  "related": "Related: {校長室|こうちょうしつ} principal's office."
+ },
+ "tip": {
+  "mark": "学",
+  "title": "失礼します opens every door",
+  "body": "When you enter a staff room or office, say {失礼|しつれい}します; when you leave, {失礼|しつれい}しました. Students will call you {先生|せんせい} even as a volunteer. Casual with kids, always です/ます with teachers."
+ },
+ "challenge": {
+  "prompt": "After class, ask the teacher: \"What should I prepare for tomorrow?\"",
+  "hint": "prepare = {準備|じゅんび}する, + ～ばいいですか",
+  "model_answer": "{明日|あした}は{何|なに}を{準備|じゅんび}すればいいですか。"
+ }
+}

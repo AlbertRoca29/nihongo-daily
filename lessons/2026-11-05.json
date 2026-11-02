@@ -1,0 +1,88 @@
+{
+ "topic": "Checking into a hostel",
+ "title_jp": "チェックイン",
+ "context": "You arrive at a hostel in Kyoto with your backpack, the night before your volunteer stay starts. Today: checking in and asking the basics.",
+ "phrases": [
+  {
+   "jp": "{予約|よやく}しているアルバートです。",
+   "en": "I have a reservation. I'm Albert.",
+   "register": "polite",
+   "note": "～ている shows the booking is already done."
+  },
+  {
+   "jp": "{荷物|にもつ}を{預|あず}かってもらえますか。",
+   "en": "Could you keep my luggage?",
+   "register": "polite",
+   "note": "Ask before check-in time or after you check out."
+  },
+  {
+   "jp": "チェックアウトは{何時|なんじ}ですか。",
+   "en": "What time is check-out?",
+   "register": "polite"
+  },
+  {
+   "jp": "Wi-Fiのパスワードを{教|おし}えてください。",
+   "en": "Please tell me the Wi-Fi password.",
+   "register": "polite"
+  },
+  {
+   "jp": "{部屋|へや}、{思|おも}ったより{広|ひろ}いね！",
+   "en": "The room's bigger than I expected!",
+   "register": "casual"
+  }
+ ],
+ "dialogue_setting": "At the reception desk of a hostel.",
+ "dialogue": [
+  {
+   "speaker": "Staff",
+   "jp": "こんにちは。チェックインですか。",
+   "en": "Hello. Checking in?"
+  },
+  {
+   "speaker": "You",
+   "jp": "はい、{予約|よやく}しているアルバートです。",
+   "en": "Yes, I have a reservation. I'm Albert.",
+   "me": true
+  },
+  {
+   "speaker": "Staff",
+   "jp": "アルバート{様|さま}ですね。パスポートを{見|み}せていただけますか。",
+   "en": "Mr Albert. Could I see your passport?"
+  },
+  {
+   "speaker": "You",
+   "jp": "はい、どうぞ。",
+   "en": "Yes, here you are.",
+   "me": true
+  },
+  {
+   "speaker": "Staff",
+   "jp": "ありがとうございます。2{階|かい}の{上|うえ}のベッドです。シャワーは{夜|よる}11{時|じ}までです。",
+   "en": "Thank you. You're in a top bunk on the 2nd floor. Showers are until 11 p.m."
+  },
+  {
+   "speaker": "You",
+   "jp": "わかりました。ありがとうございます。",
+   "en": "Got it. Thank you.",
+   "me": true
+  }
+ ],
+ "kanji": {
+  "kanji": "受付",
+  "reading": "うけつけ",
+  "romaji": "Uketsuke",
+  "meaning": "Reception",
+  "where": "Above desks at hostels, clinics, offices and temples. If nobody is there, look for a small bell to ring.",
+  "related": "Related: {営業時間|えいぎょうじかん} opening hours."
+ },
+ "tip": {
+  "mark": "靴",
+  "title": "Shoes off, slippers on",
+  "body": "Many hostels and guesthouses have a {玄関|げんかん}, an entrance step where shoes come off and slippers go on. On tatami, slippers come off too. Toilets have their own toilet slippers, and walking out still wearing them is the classic foreigner mistake."
+ },
+ "challenge": {
+  "prompt": "You arrive early. Ask the receptionist: \"Could you keep my luggage until check-in?\"",
+  "hint": "until check-in = チェックインまで, keep (for me) = {預|あず}かって",
+  "model_answer": "チェックインまで{荷物|にもつ}を{預|あず}かってもらえますか。"
+ }
+}

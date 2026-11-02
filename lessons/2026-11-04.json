@@ -1,0 +1,89 @@
+{
+ "topic": "Ordering at a restaurant",
+ "title_jp": "{注文|ちゅうもん}する",
+ "context": "Your first evening in town: a small family restaurant with a counter, a handwritten menu and no English. Today: getting seated, ordering and paying.",
+ "phrases": [
+  {
+   "jp": "{二人|ふたり}です。",
+   "en": "Two people.",
+   "register": "polite",
+   "note": "Staff will ask {何名様|なんめいさま}ですか. Holding up fingers helps too."
+  },
+  {
+   "jp": "おすすめは{何|なん}ですか。",
+   "en": "What do you recommend?",
+   "register": "polite"
+  },
+  {
+   "jp": "これをください。",
+   "en": "I'll have this, please.",
+   "register": "polite",
+   "note": "Point at the menu or the plastic food display. Works everywhere."
+  },
+  {
+   "jp": "お{会計|かいけい}お{願|ねが}いします。",
+   "en": "The bill, please.",
+   "register": "polite"
+  },
+  {
+   "jp": "これ、めっちゃおいしい！",
+   "en": "This is so good!",
+   "register": "casual",
+   "note": "めっちゃ (super) comes from Kansai but young people use it everywhere."
+  }
+ ],
+ "dialogue_setting": "At the counter of a small set-meal restaurant.",
+ "dialogue": [
+  {
+   "speaker": "Staff",
+   "jp": "いらっしゃいませ！{何名様|なんめいさま}ですか。",
+   "en": "Welcome! How many people?"
+  },
+  {
+   "speaker": "You",
+   "jp": "{一人|ひとり}です。",
+   "en": "Just one.",
+   "me": true
+  },
+  {
+   "speaker": "Staff",
+   "jp": "カウンター{席|せき}へどうぞ。お{決|き}まりでしたら、お{呼|よ}びください。",
+   "en": "Please take a counter seat. Call me when you've decided."
+  },
+  {
+   "speaker": "You",
+   "jp": "すみません、おすすめは{何|なん}ですか。",
+   "en": "Excuse me, what do you recommend?",
+   "me": true
+  },
+  {
+   "speaker": "Staff",
+   "jp": "{今日|きょう}は{焼|や}き{魚|ざかな}{定食|ていしょく}がおすすめです。",
+   "en": "Today the grilled fish set meal is our recommendation."
+  },
+  {
+   "speaker": "You",
+   "jp": "じゃあ、それをお{願|ねが}いします。",
+   "en": "Then that one, please.",
+   "me": true
+  }
+ ],
+ "kanji": {
+  "kanji": "定食",
+  "reading": "ていしょく",
+  "romaji": "Teishoku",
+  "meaning": "Set meal",
+  "where": "On menus and boards outside small restaurants: a main dish with rice, miso soup and pickles. Usually the cheapest filling option at lunch.",
+  "related": "Related: {大盛|おおも}り large portion, {日替|ひが}わり daily special."
+ },
+ "tip": {
+  "mark": "食",
+  "title": "Rice refills and the call button",
+  "body": "Many places refill rice for free: ask ご{飯|はん}のおかわり、できますか. If the table has a call button, press it instead of calling out; otherwise a clear すみません！ with a raised hand is normal. You pay at the register by the door, and there's no tipping."
+ },
+ "challenge": {
+  "prompt": "You've finished eating. Catch the staff's attention and ask for the bill.",
+  "hint": "to call staff = すみません, bill = お{会計|かいけい}",
+  "model_answer": "すみません、お{会計|かいけい}お{願|ねが}いします。"
+ }
+}

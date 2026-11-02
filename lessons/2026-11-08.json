@@ -1,0 +1,87 @@
+{
+ "topic": "Asking \"is this OK?\"",
+ "title_jp": "これでいいですか",
+ "context": "You're helping in the guesthouse kitchen and want to check your work before you get something wrong.",
+ "phrases": [
+  {
+   "jp": "これでいいですか。",
+   "en": "Is this OK?",
+   "register": "polite"
+  },
+  {
+   "jp": "こんな{感|かん}じですか。",
+   "en": "Something like this?",
+   "register": "polite",
+   "note": "Perfect when you show your work halfway through."
+  },
+  {
+   "jp": "{捨|す}ててもいいですか。",
+   "en": "Is it OK to throw this away?",
+   "register": "polite"
+  },
+  {
+   "jp": "{使|つか}ってもいいですか。",
+   "en": "May I use this?",
+   "register": "polite"
+  },
+  {
+   "jp": "これ、{大丈夫|だいじょうぶ}そう？",
+   "en": "Does this look OK?",
+   "register": "casual"
+  }
+ ],
+ "dialogue_setting": "In the kitchen, preparing dinner with your host.",
+ "dialogue": [
+  {
+   "speaker": "You",
+   "jp": "すみません、{野菜|やさい}の{切|き}り{方|かた}、こんな{感|かん}じですか。",
+   "en": "Excuse me, is this the right way to cut the vegetables?",
+   "me": true
+  },
+  {
+   "speaker": "Host",
+   "jp": "うん、いいね。でも、もうちょっと{小|ちい}さく{切|き}ってくれる？",
+   "en": "Yes, good. But could you cut them a bit smaller?"
+  },
+  {
+   "speaker": "You",
+   "jp": "このぐらいですか。",
+   "en": "About this size?",
+   "me": true
+  },
+  {
+   "speaker": "Host",
+   "jp": "そうそう、ばっちり！",
+   "en": "That's it, perfect!"
+  },
+  {
+   "speaker": "You",
+   "jp": "この{皮|かわ}は{捨|す}ててもいいですか。",
+   "en": "Can I throw away these peels?",
+   "me": true
+  },
+  {
+   "speaker": "Host",
+   "jp": "あ、それは{畑|はたけ}の{肥料|ひりょう}にするから、そっちのバケツに{入|い}れて。",
+   "en": "Oh, we use those as fertilizer for the field, so put them in that bucket."
+  }
+ ],
+ "kanji": {
+  "kanji": "使用中",
+  "reading": "しようちゅう",
+  "romaji": "Shiyōchū",
+  "meaning": "In use / occupied",
+  "where": "On toilet doors, shower rooms and meeting rooms. When it's free, the sign shows {空|あ}き (vacant).",
+  "related": "Related: {準備中|じゅんびちゅう} preparing (closed for now)."
+ },
+ "tip": {
+  "mark": "確",
+  "title": "Ask before you assume",
+  "body": "In Japan, doing something your own way without checking can cause more trouble than asking too much. ～てもいいですか (is it OK if…) is your best friend. If the answer is ちょっと…, it means no, said politely."
+ },
+ "challenge": {
+  "prompt": "There's a bike outside the guesthouse. Ask the owner if you can use it to go to the supermarket.",
+  "hint": "bike = {自転車|じてんしゃ}, may I use = {使|つか}ってもいいですか",
+  "model_answer": "スーパーに{行|い}きたいんですが、{自転車|じてんしゃ}を{使|つか}ってもいいですか。"
+ }
+}

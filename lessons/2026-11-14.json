@@ -1,0 +1,88 @@
+{
+ "topic": "Working at hostel reception",
+ "title_jp": "{受付|うけつけ}の{仕事|しごと}",
+ "context": "Now you're on the other side of the desk, welcoming guests at the hostel where you volunteer.",
+ "phrases": [
+  {
+   "jp": "ご{予約|よやく}のお{名前|なまえ}をお{願|ねが}いします。",
+   "en": "May I have the name on the reservation?",
+   "register": "polite"
+  },
+  {
+   "jp": "{少々|しょうしょう}お{待|ま}ちください。",
+   "en": "One moment, please.",
+   "register": "polite",
+   "note": "The most-used phrase in Japanese service. Say it whenever you need time."
+  },
+  {
+   "jp": "こちらにご{記入|きにゅう}ください。",
+   "en": "Please fill this in.",
+   "register": "polite"
+  },
+  {
+   "jp": "{朝食|ちょうしょく}は7{時|じ}から9{時|じ}までです。",
+   "en": "Breakfast is from 7 to 9.",
+   "register": "polite"
+  },
+  {
+   "jp": "{今日|きょう}、{満室|まんしつ}だって。",
+   "en": "Apparently we're fully booked today.",
+   "register": "casual",
+   "note": "～だって = \"I heard that…\", to a coworker."
+  }
+ ],
+ "dialogue_setting": "Behind the reception desk, a guest walks in without a booking.",
+ "dialogue": [
+  {
+   "speaker": "Guest",
+   "jp": "すみません、{今夜|こんや}{空|あ}いてる{部屋|へや}ありますか。",
+   "en": "Excuse me, do you have a room free tonight?"
+  },
+  {
+   "speaker": "You",
+   "jp": "{少々|しょうしょう}お{待|ま}ちください。…はい、ドミトリーでしたら{空|あ}いています。",
+   "en": "One moment, please… Yes, we have a dorm bed free.",
+   "me": true
+  },
+  {
+   "speaker": "Guest",
+   "jp": "いくらですか。",
+   "en": "How much is it?"
+  },
+  {
+   "speaker": "You",
+   "jp": "{一泊|いっぱく}3,500{円|えん}です。",
+   "en": "3,500 yen per night.",
+   "me": true
+  },
+  {
+   "speaker": "Guest",
+   "jp": "じゃあ、お{願|ねが}いします。",
+   "en": "Then I'll take it."
+  },
+  {
+   "speaker": "You",
+   "jp": "ありがとうございます。こちらにご{記入|きにゅう}ください。",
+   "en": "Thank you. Please fill this in.",
+   "me": true
+  }
+ ],
+ "kanji": {
+  "kanji": "満室",
+  "reading": "まんしつ",
+  "romaji": "Manshitsu",
+  "meaning": "Fully booked",
+  "where": "On hotel signs and booking sites. The opposite is {空室|くうしつ}あり (rooms available).",
+  "related": "Related: {空室|くうしつ} vacancy."
+ },
+ "tip": {
+  "mark": "敬",
+  "title": "Learn service phrases as blocks",
+  "body": "At work you'll use fixed polite phrases: かしこまりました (certainly), {申|もう}し{訳|わけ}ございません (I'm very sorry), ございます. Learn them as blocks; nobody expects you to build keigo from scratch. A smile and a clear voice matter more than perfect grammar."
+ },
+ "challenge": {
+  "prompt": "A guest asks something you don't understand. Say: \"I'm very sorry, one moment please. I'll call the manager.\"",
+  "hint": "manager = {責任者|せきにんしゃ}, go and call = {呼|よ}んできます",
+  "model_answer": "{申|もう}し{訳|わけ}ございません、{少々|しょうしょう}お{待|ま}ちください。{責任者|せきにんしゃ}を{呼|よ}んできます。"
+ }
+}

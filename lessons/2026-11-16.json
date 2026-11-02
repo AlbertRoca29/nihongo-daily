@@ -1,0 +1,86 @@
+{
+ "topic": "House rules: garbage and bath",
+ "title_jp": "ハウスルール",
+ "context": "Your host walks you through the house rules: garbage, bath and noise. Getting these wrong is the fastest way to upset the neighbours.",
+ "phrases": [
+  {
+   "jp": "ごみは{何曜日|なんようび}に{出|だ}しますか。",
+   "en": "Which day does the garbage go out?",
+   "register": "polite"
+  },
+  {
+   "jp": "これは{燃|も}えるごみですか。",
+   "en": "Is this burnable garbage?",
+   "register": "polite"
+  },
+  {
+   "jp": "お{風呂|ふろ}は{何時|なんじ}まで{入|はい}れますか。",
+   "en": "Until what time can I take a bath?",
+   "register": "polite"
+  },
+  {
+   "jp": "{洗濯機|せんたくき}を{使|つか}ってもいいですか。",
+   "en": "May I use the washing machine?",
+   "register": "polite"
+  },
+  {
+   "jp": "あ、ペットボトルはこっちだよ。",
+   "en": "Oh, plastic bottles go here.",
+   "register": "casual"
+  }
+ ],
+ "dialogue_setting": "In the kitchen, next to a row of different bins.",
+ "dialogue": [
+  {
+   "speaker": "Host",
+   "jp": "ごみの{分|わ}け{方|かた}を{説明|せつめい}するね。",
+   "en": "Let me explain how we sort the garbage."
+  },
+  {
+   "speaker": "You",
+   "jp": "はい、お{願|ねが}いします。",
+   "en": "Yes, please.",
+   "me": true
+  },
+  {
+   "speaker": "Host",
+   "jp": "{生|なま}ごみと{紙|かみ}は{燃|も}えるごみ。{火曜日|かようび}と{金曜日|きんようび}の{朝|あさ}に{出|だ}してね。",
+   "en": "Food scraps and paper are burnable. Put them out on Tuesday and Friday mornings."
+  },
+  {
+   "speaker": "You",
+   "jp": "ペットボトルはどうしますか。",
+   "en": "What about plastic bottles?",
+   "me": true
+  },
+  {
+   "speaker": "Host",
+   "jp": "キャップとラベルを{取|と}って、{洗|あら}ってからこの{袋|ふくろ}に{入|い}れて。",
+   "en": "Take off the cap and label, rinse it, then put it in this bag."
+  },
+  {
+   "speaker": "You",
+   "jp": "わかりました。{気|き}をつけます。",
+   "en": "Got it. I'll be careful.",
+   "me": true
+  }
+ ],
+ "kanji": {
+  "kanji": "燃えるごみ",
+  "reading": "もえるごみ",
+  "romaji": "Moeru gomi",
+  "meaning": "Burnable garbage",
+  "where": "On bins and on the town's garbage calendar. Some towns write {可燃|かねん}ごみ instead.",
+  "related": "Related: {燃|も}えないごみ non-burnable, {資源|しげん}ごみ recyclables."
+ },
+ "tip": {
+  "mark": "湯",
+  "title": "Japanese bath rules",
+  "body": "Wash and rinse at the shower BEFORE getting into the tub: the hot water is shared by the whole family, so never drain it, and keep your towel out of the water. If you're last, ask {栓|せん}を{抜|ぬ}いてもいいですか (shall I pull the plug?)."
+ },
+ "challenge": {
+  "prompt": "You have an empty plastic bottle. Ask your host: \"Where should I throw away plastic bottles?\"",
+  "hint": "throw away = {捨|す}てる, + ～ばいいですか",
+  "model_answer": "ペットボトルはどこに{捨|す}てればいいですか。"
+ }
+}
