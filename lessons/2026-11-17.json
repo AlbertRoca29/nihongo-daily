@@ -1,89 +1,88 @@
 {
- "topic": "News: autumn leaves season",
- "news": true,
- "title_jp": "{紅葉|こうよう}の{見頃|みごろ}",
- "context": "News: autumn colours are moving down from the mountains to the cities. Weathernews' 29 October forecast put Mt Takao in Tokyo at its best from around 13 November and Kyoto's Arashiyama from around 23 November. A warm autumn made the season a little later than usual.",
+ "topic": "Making plans with friends",
+ "title_jp": "{友達|ともだち}と{予定|よてい}",
+ "context": "You've made friends with other volunteers and a local your age. Time to make weekend plans, in casual Japanese.",
  "phrases": [
   {
-   "jp": "{紅葉|こうよう}が{見頃|みごろ}ですね。",
-   "en": "The autumn leaves are at their best, aren't they?",
-   "register": "polite",
-   "note": "{見頃|みごろ} = the best time to see something. Also used for cherry blossoms."
-  },
-  {
-   "jp": "{今年|ことし}は{紅葉|こうよう}が{遅|おそ}いそうです。",
-   "en": "I hear the leaves are late this year.",
-   "register": "polite",
-   "note": "Plain form + そうです = \"I heard that…\". Perfect for passing on news."
-  },
-  {
-   "jp": "おすすめの{紅葉|こうよう}スポットはありますか。",
-   "en": "Do you know a good spot for autumn leaves?",
-   "register": "polite"
-  },
-  {
-   "jp": "{朝早|あさはや}く{行|い}ったほうがいいですか。",
-   "en": "Is it better to go early in the morning?",
-   "register": "polite"
-  },
-  {
-   "jp": "めっちゃきれい！{写真|しゃしん}{撮|と}ろう！",
-   "en": "So beautiful! Let's take photos!",
+   "jp": "{週末|しゅうまつ}、{空|あ}いてる？",
+   "en": "Are you free this weekend?",
    "register": "casual"
+  },
+  {
+   "jp": "{一緒|いっしょ}に{行|い}かない？",
+   "en": "Want to go together?",
+   "register": "casual",
+   "note": "A negative question is an invitation. Very common."
+  },
+  {
+   "jp": "{何時|なんじ}にどこで{待|ま}ち{合|あ}わせる？",
+   "en": "What time and where shall we meet?",
+   "register": "casual"
+  },
+  {
+   "jp": "いいね、{行|い}こう！",
+   "en": "Sounds good, let's go!",
+   "register": "casual"
+  },
+  {
+   "jp": "すみません、その{日|ひ}はちょっと…",
+   "en": "Sorry, that day is a bit…",
+   "register": "polite",
+   "note": "Trailing off with ちょっと… is how you say no politely. With friends: ごめん、その{日|ひ}はちょっと…"
   }
  ],
- "dialogue_setting": "At breakfast, the TV is showing the autumn leaves report.",
+ "dialogue_setting": "Texting and chatting with a local friend.",
  "dialogue": [
   {
-   "speaker": "Host",
-   "jp": "{見|み}て、{高尾山|たかおさん}の{紅葉|こうよう}が{今|いま}{見頃|みごろ}だって。",
-   "en": "Look, they say the leaves on Mt Takao are at their best now."
+   "speaker": "Friend",
+   "jp": "ねえ、{土曜日|どようび}{空|あ}いてる？",
+   "en": "Hey, are you free on Saturday?"
   },
   {
    "speaker": "You",
-   "jp": "{京都|きょうと}はどうですか。",
-   "en": "What about Kyoto?",
+   "jp": "うん、{空|あ}いてるよ。どうしたの？",
+   "en": "Yeah, I'm free. What's up?",
    "me": true
   },
   {
-   "speaker": "Host",
-   "jp": "{嵐山|あらしやま}は{来週|らいしゅう}ぐらいからだって。{今年|ことし}はちょっと{遅|おそ}いみたい。",
-   "en": "Arashiyama starts around next week. It seems a bit late this year."
+   "speaker": "Friend",
+   "jp": "お{祭|まつ}りがあるんだけど、{一緒|いっしょ}に{行|い}かない？",
+   "en": "There's a festival. Want to go together?"
   },
   {
    "speaker": "You",
-   "jp": "{週末|しゅうまつ}に{行|い}きたいです！{混|こ}みますか。",
-   "en": "I'd like to go at the weekend! Does it get crowded?",
+   "jp": "いいね、{行|い}こう！{何時|なんじ}にする？",
+   "en": "Sounds good, let's go! What time?",
    "me": true
   },
   {
-   "speaker": "Host",
-   "jp": "すごく{混|こ}むよ。{朝早|あさはや}く{行|い}ったほうがいいね。",
-   "en": "Very crowded. Better to go early in the morning."
+   "speaker": "Friend",
+   "jp": "5{時|じ}に{駅前|えきまえ}で{待|ま}ち{合|あ}わせしよう。",
+   "en": "Let's meet in front of the station at 5."
   },
   {
    "speaker": "You",
-   "jp": "じゃあ、{始発|しはつ}で{行|い}きます！",
-   "en": "Then I'll take the first train!",
+   "jp": "オッケー、じゃあまたね！",
+   "en": "OK, see you then!",
    "me": true
   }
  ],
  "kanji": {
-  "kanji": "紅葉",
-  "reading": "こうよう / もみじ",
-  "romaji": "Kōyō / Momiji",
-  "meaning": "Autumn leaves",
-  "where": "On station posters, tourist boards and the TV weather: 紅葉情報 (leaf reports). Same kanji, two readings: こうよう for the autumn colours, もみじ for maple trees.",
-  "related": "Related: {見頃|みごろ} best time to see, {色|いろ}づき{始|はじ}め just starting to change colour."
+  "kanji": "祭",
+  "reading": "まつり",
+  "romaji": "Matsuri",
+  "meaning": "Festival",
+  "where": "On posters, lanterns and shrine banners. Check the local notice board for {秋祭|あきまつ}り and its date.",
+  "related": "Related: {花火大会|はなびたいかい} fireworks show."
  },
  "tip": {
-  "mark": "秋",
-  "title": "Leaf hunting",
-  "body": "Going to see autumn leaves is called {紅葉狩|もみじが}り, literally \"leaf hunting\". Famous spots are packed on weekends, so locals go early in the morning or to smaller temples nearby. Many temples also hold evening illuminations (ライトアップ), which are worth the ticket."
+  "mark": "友",
+  "title": "When to drop です/ます",
+  "body": "With people your age, once they talk casually to you, it's natural to switch too. With older people and anyone you work for, stay polite until they say otherwise. Mixing is normal: ありがとう！ to a friend, ありがとうございます to their parents."
  },
  "challenge": {
-  "prompt": "Pass on the news to someone: \"I heard the autumn leaves in Kyoto will be at their best next week.\"",
-  "hint": "best time = {見頃|みごろ}, I heard = plain form + そうです",
-  "model_answer": "{来週|らいしゅう}、{京都|きょうと}の{紅葉|こうよう}が{見頃|みごろ}になるそうです。"
+  "prompt": "Invite a friend, casually: \"Want to go to the onsen together on Sunday?\"",
+  "hint": "onsen = {温泉|おんせん}, invitation = ～ない？",
+  "model_answer": "{日曜日|にちようび}、{一緒|いっしょ}に{温泉|おんせん}{行|い}かない？"
  }
 }
