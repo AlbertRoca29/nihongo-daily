@@ -1,0 +1,90 @@
+{
+ "challenge": {
+  "hint": "\"can't use\" = {使|つか}えない. \"Could you look at it?\" (polite) = {見|み}ていただけますか.",
+  "model_answer": "すみません、このカードが{使|つか}えないんですが、{見|み}ていただけますか。",
+  "prompt": "Your card doesn't work at the ticket gate. Tell the station staff: \"Excuse me, this card isn't working. Could you take a look?\""
+ },
+ "context": "You've landed and need to reach your first volunteer host in the mountains. Today: topping up your IC card, finding the platform, and booking a seat at the ticket office.",
+ "dialogue": [
+  {
+   "en": "Excuse me, I'd like to go to Matsumoto.",
+   "jp": "すみません、{松本|まつもと}まで{行|い}きたいんですが。",
+   "me": true,
+   "speaker": "You"
+  },
+  {
+   "en": "Limited express or local train?",
+   "jp": "{特急|とっきゅう}ですか、{普通|ふつう}ですか。",
+   "speaker": "Staff"
+  },
+  {
+   "en": "Limited express, please. A reserved seat.",
+   "jp": "{特急|とっきゅう}でお{願|ねが}いします。{指定席|していせき}で。",
+   "me": true,
+   "speaker": "You"
+  },
+  {
+   "en": "There's the Azusa leaving at 10:00. Is a window seat all right?",
+   "jp": "10{時|じ}{発|はつ}の「あずさ」がございます。{窓側|まどがわ}でよろしいですか。",
+   "speaker": "Staff"
+  },
+  {
+   "en": "Yes, that's fine. Which platform?",
+   "jp": "はい、{大丈夫|だいじょうぶ}です。{何番線|なんばんせん}ですか。",
+   "me": true,
+   "speaker": "You"
+  },
+  {
+   "en": "Platform 9. Have a safe trip.",
+   "jp": "9{番線|ばんせん}です。お{気|き}をつけて。",
+   "speaker": "Staff"
+  }
+ ],
+ "dialogue_setting": "At the ticket office ({みどりの窓口|みどりのまどぐち}) in Shinjuku.",
+ "kanji": {
+  "kanji": "改札口",
+  "meaning": "Ticket gates",
+  "reading": "かいさつぐち",
+  "related": "Related: {出口|でぐち} exit, {乗換|のりかえ} transfer (often on orange signs).",
+  "romaji": "Kaisatsuguchi",
+  "where": "On the overhead signs of every station. Follow it to get in or out. Big stations have several: {中央改札|ちゅうおうかいさつ} (central gates), {南改札|みなみかいさつ} (south gates)."
+ },
+ "phrases": [
+  {
+   "en": "I'd like to top up my IC card.",
+   "jp": "ICカードにチャージしたいんですが。",
+   "note": "～たいんですが softens a request. Leave the sentence hanging and staff will help.",
+   "register": "polite"
+  },
+  {
+   "en": "Which platform is it?",
+   "jp": "{何番線|なんばんせん}ですか。",
+   "note": "{番線|ばんせん} = platform number. You'll hear it in every announcement: 3{番線|ばんせん}に{電車|でんしゃ}が{参|まい}ります.",
+   "register": "polite"
+  },
+  {
+   "en": "Does this train stop at Matsumoto?",
+   "jp": "この{電車|でんしゃ}は{松本|まつもと}に{止|と}まりますか。",
+   "note": "Ask this before boarding a rapid or express: they skip small stations.",
+   "register": "polite"
+  },
+  {
+   "en": "Where do I transfer?",
+   "jp": "{乗|の}り{換|か}えはどこですか。",
+   "register": "polite"
+  },
+  {
+   "en": "We're getting off at the next one.",
+   "jp": "{次|つぎ}で{降|お}りるよ。",
+   "note": "With friends you drop the です/ます and add よ. {次|つぎ}の{駅|えき} shortens to just {次|つぎ}.",
+   "register": "casual"
+  }
+ ],
+ "tip": {
+  "body": "In the countryside, many one-car trains and buses have no ticket gate. Board at the back, take a small numbered ticket ({整理券|せいりけん}) from the machine, then check the fare screen at the front for your number. Pay into the box by the driver when you get off. Most of them take IC cards now, but have coins ready just in case.",
+  "mark": "整",
+  "title": "Rural buses and trains: take a {整理券|せいりけん}"
+ },
+ "title_jp": "{電車|でんしゃ}と{切符|きっぷ}",
+ "topic": "Trains, tickets and IC cards"
+}
