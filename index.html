@@ -543,7 +543,8 @@ textarea{width:100%;min-height:96px;resize:vertical;font-family:var(--jp);font-s
     try{
       const r = await fetch("lessons/index.json", {cache: "no-cache"});
       const list = await r.json();
-      lessons = list.filter(l => l.id && l.topic).sort((a, b) => a.id < b.id ? -1 : 1);
+      const now = new Date(), today = now.getFullYear() + "-" + String(now.getMonth()+1).padStart(2,"0") + "-" + String(now.getDate()).padStart(2,"0");
+      lessons = list.filter(l => l.id && l.topic && l.id <= today).sort((a, b) => a.id < b.id ? -1 : 1);
       if (!lessons.length){ showEmpty("Your first lesson arrives tomorrow morning", "A new lesson lands here every day at 7:47."); return; }
       const want = location.hash.slice(1);
       await open(lessons.some(l => l.id === want) ? want : lessons[lessons.length - 1].id);

@@ -1,0 +1,90 @@
+{
+ "topic": "Asking directions",
+ "title_jp": "{道|みち}を{聞|き}く",
+ "context": "You've got off the bus in a small town and need to find your guesthouse. Today: asking the way, understanding the answer, and where to go when you're really lost.",
+ "phrases": [
+  {
+   "jp": "すみません、{駅|えき}はどちらですか。",
+   "en": "Excuse me, which way is the station?",
+   "register": "polite",
+   "note": "どちら is a politer どこ. Perfect for strangers."
+  },
+  {
+   "jp": "ここから{歩|ある}いて{行|い}けますか。",
+   "en": "Can I walk there from here?",
+   "register": "polite"
+  },
+  {
+   "jp": "{地図|ちず}で{教|おし}えてもらえますか。",
+   "en": "Could you show me on the map?",
+   "register": "polite",
+   "note": "Hold out your phone map while you say it. Much easier for both of you."
+  },
+  {
+   "jp": "この{道|みち}をまっすぐ{行|い}って、{二|ふた}つ{目|め}の{信号|しんごう}を{右|みぎ}です。",
+   "en": "Go straight down this road and turn right at the second traffic light.",
+   "register": "neutral",
+   "note": "This is what you'll HEAR. Listen for the ～て chain: {行|い}って → then the turn."
+  },
+  {
+   "jp": "コンビニの{角|かど}を{曲|ま}がるんだよね？",
+   "en": "We turn at the corner with the konbini, right?",
+   "register": "casual",
+   "note": "～んだよね？ checks something you think is true. Great with friends."
+  }
+ ],
+ "dialogue_setting": "On a quiet street in a mountain town, asking an older local.",
+ "dialogue": [
+  {
+   "speaker": "You",
+   "me": true,
+   "jp": "すみません、「やまびこ」っていうゲストハウスを{探|さが}しているんですが…",
+   "en": "Excuse me, I'm looking for a guesthouse called Yamabiko…"
+  },
+  {
+   "speaker": "Local",
+   "jp": "ああ、やまびこね。この{道|みち}をまっすぐ{行|い}って、{橋|はし}を{渡|わた}ったら{左|ひだり}だよ。",
+   "en": "Ah, Yamabiko. Go straight along this road, and after you cross the bridge it's on the left."
+  },
+  {
+   "speaker": "You",
+   "me": true,
+   "jp": "{橋|はし}を{渡|わた}って{左|ひだり}ですね。{歩|ある}いて{何分|なんぷん}ぐらいですか。",
+   "en": "Cross the bridge, then left. About how many minutes on foot?"
+  },
+  {
+   "speaker": "Local",
+   "jp": "うーん、10{分|ぷん}ぐらいかな。{坂|さか}がちょっときついけどね。",
+   "en": "Hmm, about 10 minutes. The slope is a bit steep, though."
+  },
+  {
+   "speaker": "You",
+   "me": true,
+   "jp": "わかりました。ありがとうございます！",
+   "en": "Got it. Thank you very much!"
+  },
+  {
+   "speaker": "Local",
+   "jp": "{気|き}をつけてね。",
+   "en": "Take care."
+  }
+ ],
+ "kanji": {
+  "kanji": "交番",
+  "reading": "こうばん",
+  "romaji": "Kōban",
+  "meaning": "Police box",
+  "where": "Small police posts near stations and big crossings. Officers there give directions all day and have detailed local maps, so it's the best place to go when you're really lost.",
+  "related": "Related: {案内所|あんないじょ} information desk, {観光案内所|かんこうあんないじょ} tourist information."
+ },
+ "tip": {
+  "mark": "道",
+  "title": "Streets don't have names",
+  "body": "Most Japanese streets have no names, and addresses go by district, block and building number. So people give directions by landmarks: konbini, traffic lights ({信号|しんごう}), bridges. Learn {角|かど} (corner), {突|つ}き{当|あ}たり (end of the road) and {手前|てまえ} (just before). In the countryside someone may even walk you there, so thank them warmly."
+ },
+ "challenge": {
+  "prompt": "You're lost near a station. Ask a passer-by: \"Excuse me, is there a konbini around here?\"",
+  "hint": "around here = この{辺|へん}, is there…? = …はありますか",
+  "model_answer": "すみません、この{辺|へん}にコンビニはありますか。"
+ }
+}
