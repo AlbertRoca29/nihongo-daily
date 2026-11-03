@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parent.parent
 LESSONS = ROOT / "lessons"
 INDEX = LESSONS / "index.json"
 TOPICS = ROOT / "topics.json"
+TRACK = ROOT / "curriculum" / "n3-kanji.json"
 TZ = "Europe/Madrid"
 
 NEWS_OPTIONAL_AFTER = 8   # days since last news: write one if there's a good story
@@ -27,6 +28,99 @@ REVIEW_EVERY = 12         # lessons since last review before a review is allowed
 RUBY = re.compile(r"\{([^|{}]+)\|([^{}]+)\}")
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 REGISTERS = {"polite", "casual", "neutral"}
+LEVELS = {"N5", "N4", "N3", "N2", "N1"}
+KANA = re.compile(r"^[\u3040-\u30ff・ー（）()\s]+$")
+HIRA = re.compile(r"^[\u3040-\u309fー（）()・\s]+$")
+KATA = re.compile(r"^[\u30a0-\u30ff・\s]+$")
+SRC = re.compile(r"^([pd])(\d+)$")
+
+
+def plain(s):
+    return RUBY.sub(lambda m: m.group(1), s)
+
+
+def load_track():
+    try:
+        return load_json(TRACK)["kanji"]
+    except Exception:
+        return ""
+
+
+def check_words(lid, L, track, errs):
+    """vocab + kanji_study (the parts the app quizzes)."""
+    vocab = L.get("vocab")
+    if not isinstance(vocab, list) or not 8 <= len(vocab) <= 10:
+        errs.append(f"{lid}: vocab needs 8-10 words")
+        vocab = vocab if isinstance(vocab, list) else []
+    seen = set()
+    for i, v in enumerate(vocab):
+        w = f"vocab[{i}]"
+        if not isinstance(v, dict):
+            errs.append(f"{lid}: {w} must be an object")
+            continue
+        for k in ("jp", "reading", "en", "level", "src", "surface"):
+            if not isinstance(v.get(k), str) or not v[k].strip():
+                errs.append(f"{lid}: {w}.{k} missing or empty")
+        if v.get("level") not in LEVELS:
+            errs.append(f"{lid}: {w}.level must be N5-N1")
+        if isinstance(v.get("reading"), str) and not KANA.match(v["reading"]):
+            errs.append(f"{lid}: {w}.reading must be kana")
+        word = plain(str(v.get("jp", "")))
+        if word in seen:
+            errs.append(f"{lid}: {w} '{word}' is listed twice")
+        seen.add(word)
+        m = SRC.match(str(v.get("src", "")))
+        lst = L.get("phrases" if m and m.group(1) == "p" else "dialogue") or []
+        if not m or int(m.group(2)) >= len(lst):
+            errs.append(f"{lid}: {w}.src must be p0-p4 or d0-dN pointing at a real line")
+        elif str(v.get("surface", "")) not in plain(str(lst[int(m.group(2))].get("jp", ""))):
+            errs.append(f"{lid}: {w}.surface '{v.get('surface')}' is not in sentence {v.get('src')}")
+    ks = L.get("kanji_study")
+    if not isinstance(ks, list) or len(ks) != 2:
+        errs.append(f"{lid}: kanji_study needs exactly 2 kanji")
+        return
+    tracks = sorted(str(k.get("track")) for k in ks if isinstance(k, dict))
+    if tracks != ["lesson", "n3"]:
+        errs.append(f"{lid}: kanji_study needs one track 'lesson' and one track 'n3'")
+    vocab_text = "".join(plain(str(v.get("jp", ""))) for v in vocab if isinstance(v, dict))
+    for i, k in enumerate(ks):
+        w = f"kanji_study[{i}]"
+        if not isinstance(k, dict):
+            errs.append(f"{lid}: {w} must be an object")
+            continue
+        kj = str(k.get("kanji", ""))
+        if len(kj) != 1:
+            errs.append(f"{lid}: {w}.kanji must be one character")
+        if not str(k.get("meaning", "")).strip():
+            errs.append(f"{lid}: {w}.meaning missing")
+        on, kun = str(k.get("on", "")), str(k.get("kun", ""))
+        if not on and not kun:
+            errs.append(f"{lid}: {w} needs an on or kun reading")
+        if on and not KATA.match(on):
+            errs.append(f"{lid}: {w}.on must be katakana (join several with ・)")
+        if kun and not HIRA.match(kun):
+            errs.append(f"{lid}: {w}.kun must be hiragana (okurigana in brackets, several joined with ・)")
+        if k.get("track") == "lesson" and kj not in vocab_text:
+            errs.append(f"{lid}: {w} is track 'lesson' but {kj} is in none of today's vocab")
+        if k.get("track") == "n3" and track and kj not in track:
+            errs.append(f"{lid}: {w} is track 'n3' but {kj} is not in curriculum/n3-kanji.json")
+        words = k.get("words")
+        if not isinstance(words, list) or not 2 <= len(words) <= 3:
+            errs.append(f"{lid}: {w}.words needs 2-3 example words")
+            words = []
+        for j, x in enumerate(words):
+            if not isinstance(x, dict) or not all(isinstance(x.get(f), str) and x[f].strip() for f in ("jp", "reading", "en")):
+                errs.append(f"{lid}: {w}.words[{j}] needs jp, reading, en")
+                continue
+            if kj not in plain(x["jp"]):
+                errs.append(f"{lid}: {w}.words[{j}] does not contain {kj}")
+            if not KANA.match(x["reading"]):
+                errs.append(f"{lid}: {w}.words[{j}].reading must be kana")
+        d = k.get("decoys") or {}
+        for f, right in (("meanings", k.get("meaning")), ("readings", words[0].get("reading") if words and isinstance(words[0], dict) else None)):
+            opts = d.get(f)
+            if not isinstance(opts, list) or len(opts) != 3 or len(set(opts)) != 3 or right in opts:
+                errs.append(f"{lid}: {w}.decoys.{f} needs 3 different wrong answers")
 
 
 def today_str(override):
@@ -99,6 +193,8 @@ def check_lesson(lid, L, topic_ids, errs):
     elif L.get("category") == "news":
         errs.append(f"{lid}: category 'news' needs \"news\": true")
 
+    check_words(lid, L, load_track(), errs)
+
     for path, s in strings(L):
         if path in ("kanji.kanji", "kanji.reading"):
             if re.search(r"[{}|]", s):
@@ -150,6 +246,7 @@ def cmd_check(args):
     for lid in sorted(files - set(ids)):
         errs.append(f"lessons/{lid}.json exists but is not in index.json")
     by_id = {e["id"]: e for e in idx if isinstance(e, dict) and "id" in e}
+    taught_k, taught_v = {}, {}
     for lid in sorted(files & set(ids)):
         try:
             L = load_json(LESSONS / f"{lid}.json")
@@ -161,6 +258,18 @@ def cmd_check(args):
             errs.append(f"{lid}: topic differs between lesson file and index.json")
         if L.get("category") != by_id[lid].get("category"):
             errs.append(f"{lid}: category differs between lesson file and index.json")
+        for k in L.get("kanji_study") or []:
+            kj = k.get("kanji") if isinstance(k, dict) else None
+            if kj in taught_k:
+                errs.append(f"{lid}: kanji {kj} was already taught on {taught_k[kj]}")
+            elif kj:
+                taught_k[kj] = lid
+        for v in L.get("vocab") or []:
+            word = plain(str(v.get("jp", ""))) if isinstance(v, dict) else None
+            if word in taught_v:
+                errs.append(f"{lid}: vocab '{word}' was already taught on {taught_v[word]}")
+            elif word:
+                taught_v[word] = lid
     if errs:
         print("FAIL\n- " + "\n- ".join(errs))
         return 1
@@ -207,6 +316,20 @@ def cmd_status(args):
     print(f"Pre-written upcoming lessons: {len(upcoming)}" + (f" (last {upcoming[-1]['id']})" if upcoming else ""))
     print(f"Last news lesson: {news[-1] if news else 'none yet'} -> {days} days ago -> news {news_state}")
     print(f"Review allowed: {'yes' if review_ok else 'no'} ({since_review} lessons since last review)")
+    track = load_track()
+    taught_k, taught_v = [], []
+    for e in idx:
+        try:
+            L = load_json(LESSONS / f"{e['id']}.json")
+        except Exception:
+            continue
+        taught_k += [k.get("kanji") for k in L.get("kanji_study") or [] if isinstance(k, dict)]
+        taught_v += [plain(str(v.get("jp", ""))) for v in L.get("vocab") or [] if isinstance(v, dict)]
+    nxt = [c for c in track if c not in taught_k]
+    print(f"N3 kanji track: {len(track) - len(nxt)}/{len(track)} taught. Next n3 kanji: {nxt[0] if nxt else 'track finished'}"
+          + (f" (then {''.join(nxt[1:6])})" if len(nxt) > 1 else ""))
+    print("Kanji already taught (never teach again): " + ("".join(taught_k) or "none"))
+    print(f"Vocab already taught ({len(taught_v)}, never list again): " + ("、".join(taught_v) or "none"))
     print("Least recently used topics: " + ", ".join(
         f"{t['id']} ({last_used.get(t['id'], 'never')})" for t in pool[:6]))
     print()

@@ -88,6 +88,164 @@
   "hint": "around here = この{辺|へん}, is there…? = …はありますか",
   "model_answer": "すみません、この{辺|へん}にコンビニはありますか。"
  },
+ "vocab": [
+  {
+   "jp": "{探|さが}す",
+   "reading": "さがす",
+   "en": "to look for",
+   "level": "N4",
+   "src": "d0",
+   "surface": "探して"
+  },
+  {
+   "jp": "{地図|ちず}",
+   "reading": "ちず",
+   "en": "map",
+   "level": "N4",
+   "src": "p2",
+   "surface": "地図"
+  },
+  {
+   "jp": "{信号|しんごう}",
+   "reading": "しんごう",
+   "en": "traffic light",
+   "level": "N3",
+   "src": "p3",
+   "surface": "信号"
+  },
+  {
+   "jp": "{角|かど}",
+   "reading": "かど",
+   "en": "corner",
+   "level": "N3",
+   "src": "p4",
+   "surface": "角"
+  },
+  {
+   "jp": "{曲|ま}がる",
+   "reading": "まがる",
+   "en": "to turn",
+   "level": "N4",
+   "src": "p4",
+   "surface": "曲がる"
+  },
+  {
+   "jp": "{橋|はし}",
+   "reading": "はし",
+   "en": "bridge",
+   "level": "N4",
+   "src": "d1",
+   "surface": "橋"
+  },
+  {
+   "jp": "{渡|わた}る",
+   "reading": "わたる",
+   "en": "to cross (a bridge, road)",
+   "level": "N3",
+   "src": "d1",
+   "surface": "渡った",
+   "note": "渡ったら = once you've crossed."
+  },
+  {
+   "jp": "{坂|さか}",
+   "reading": "さか",
+   "en": "slope, hill",
+   "level": "N4",
+   "src": "d3",
+   "surface": "坂"
+  },
+  {
+   "jp": "きつい",
+   "reading": "きつい",
+   "en": "tough, steep, tight",
+   "level": "N3",
+   "src": "d3",
+   "surface": "きつい",
+   "note": "Also for tight clothes and hard work: {仕事|しごと}がきつい."
+  },
+  {
+   "jp": "{気|き}をつける",
+   "reading": "きをつける",
+   "en": "to take care, watch out",
+   "level": "N4",
+   "src": "d5",
+   "surface": "気をつけて"
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "曲",
+   "track": "lesson",
+   "on": "キョク",
+   "kun": "ま(がる)・ま(げる)",
+   "meaning": "bend, turn; tune",
+   "words": [
+    {
+     "jp": "{曲|ま}がる",
+     "reading": "まがる",
+     "en": "to turn"
+    },
+    {
+     "jp": "{曲|きょく}",
+     "reading": "きょく",
+     "en": "song, tune"
+    },
+    {
+     "jp": "{曲|ま}がり{角|かど}",
+     "reading": "まがりかど",
+     "en": "street corner"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "cross over",
+     "straight",
+     "stop"
+    ],
+    "readings": [
+     "あがる",
+     "さがる",
+     "まわる"
+    ]
+   }
+  },
+  {
+   "kanji": "着",
+   "track": "n3",
+   "on": "チャク",
+   "kun": "き(る)・つ(く)",
+   "meaning": "arrive; wear",
+   "words": [
+    {
+     "jp": "{到着|とうちゃく}",
+     "reading": "とうちゃく",
+     "en": "arrival"
+    },
+    {
+     "jp": "{着|つ}く",
+     "reading": "つく",
+     "en": "to arrive"
+    },
+    {
+     "jp": "{着物|きもの}",
+     "reading": "きもの",
+     "en": "kimono"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "depart",
+     "stop",
+     "transfer"
+    ],
+    "readings": [
+     "とうじゃく",
+     "どうちゃく",
+     "とうちょく"
+    ]
+   }
+  }
+ ],
  "extras": [
   {
    "title": "Words for the route",

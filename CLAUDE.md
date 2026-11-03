@@ -1,12 +1,20 @@
 # Writing lessons for Nihongo Line
 
-You add one short Japanese lesson per day to this app. The learner's level and goals come from whoever runs you (the task prompt). If none is given, assume a JLPT N4–N3 learner preparing to volunteer and travel in Japan.
+You add one short Japanese lesson per day to this app. The learner's goals come from whoever runs you (the task prompt). If none is given, assume a learner studying for JLPT N3 who is preparing to volunteer and travel in Japan.
 
-Only touch `lessons/` and, when a new topic is truly needed, `topics.json`. Never change `index.html`, `sw.js`, the manifest or icons unless the user asks.
+Only touch `lessons/` and, when a new topic is truly needed, `topics.json`. Never change `index.html`, `sw.js`, the manifest, icons or `curriculum/` unless the user asks.
+
+Write **only today's lesson**. Never write lessons for future dates: each lesson follows the kanji track and avoids words already taught, so it must be written on the day.
+
+## Level: N3, without assuming it's known
+
+- Lessons are pitched at N3: N3 grammar and vocabulary used naturally in the phrases and dialogue.
+- Assume N5 is known and N4 mostly known. Treat every N3 word and kanji as new: it gets furigana everywhere and is explained the first time.
+- Keep it short and spoken. N3 does not mean long or formal sentences.
 
 ## The daily run
 
-1. `python3 scripts/lessons.py status` and follow its DECISION line. It tells you whether today's lesson already exists, whether a news lesson is due, and which topics were used least recently.
+1. `python3 scripts/lessons.py status` and follow its DECISION line. It tells you whether today's lesson already exists, whether a news lesson is due, which topics were used least recently, the next kanji on the N3 track, and every kanji and word already taught.
 2. Write the lesson (rules below) as `lessons/YYYY-MM-DD.json` and add `{"id", "topic", "category"}` to `lessons/index.json`, keeping it sorted.
 3. `python3 scripts/lessons.py check` must print `OK`. Never push while it fails: a broken `index.json` takes down the whole app.
 4. Commit `Lesson YYYY-MM-DD: <topic>` and push to `master`. If the push is rejected, `git pull --rebase origin master` and push again.
@@ -48,7 +56,33 @@ Follow `lessons/2026-11-02.json` as the reference. Fields:
 | `kanji` | `{kanji, reading, romaji, meaning, where, related?}`: a word seen on real signs or labels for this topic |
 | `tip` | `{mark, title, body}`: `mark` is one kanji shown as a stamp; body is 2–4 sentences textbooks don't teach |
 | `challenge` | `{prompt, hint, model_answer}`: a short task to answer in Japanese |
+| `vocab` | 8–10 words to learn, taken from today's phrases and dialogue (see below) |
+| `kanji_study` | Exactly 2 kanji to learn (see below) |
+| `extras` | Optional bonus sections `{title, title_jp, intro, items: [{jp, en, note?}]}`; 2–3 of them, for the learner who wants more |
 | `news` | `true` only on news lessons |
+
+## Vocab
+
+The learner stars the words he wants; starred words come back in the app's warm-up, inside their sentence. So every word must come from a real line of today's lesson.
+
+Each item: `{jp, reading, en, level, src, surface, note?}`
+- `jp`: dictionary form with furigana, e.g. `{渡|わた}る`. `reading`: the whole word in kana.
+- `level`: `N5`–`N1`. Mostly `N3` (at least half), the rest `N4`. `N5` only if truly key.
+- `src`: the line it comes from, `p0`–`p4` (phrases) or `d0`… (dialogue lines).
+- `surface`: the exact form in that line without furigana, e.g. `渡った`. The check verifies it's there.
+- Never repeat a word taught in an earlier lesson (status lists them; the check refuses repeats).
+
+## Kanji study
+
+Exactly 2 kanji, recognition only (reading and meaning):
+- `track: "lesson"`: a kanji from one of today's vocab words, not taught before. Prefer N3 kanji.
+- `track: "n3"`: the next kanji on the N3 track (status names it). If it's very awkward for today, you may take one of the next five it lists.
+
+Each: `{kanji, track, on, kun, meaning, words, decoys}`
+- `on` in katakana, `kun` in hiragana with okurigana in brackets (`ま(がる)`); several readings joined with `・`. Leave one empty only if the kanji truly has none in common use.
+- `words`: 2–3 common words using it `{jp, reading, en}`. Put the most useful first: the quiz asks its reading. Use today's word for the `lesson` kanji.
+- `decoys`: `{meanings: [3 wrong meanings], readings: [3 wrong readings of words[0]]}`. Make them plausible: related meanings, readings a learner might really guess (wrong voicing, long vs short vowel, the other on-reading).
+- Never teach a kanji twice (the check refuses repeats).
 
 ## Furigana markup
 
@@ -61,4 +95,4 @@ Every Japanese string (except `kanji.kanji` and `kanji.reading`) marks each kanj
 
 - Natural spoken Japanese, the kind people really say in that situation, not textbook sentences.
 - Notes explain nuance in one line: when to use it, what you'll hear back, a common mistake.
-- English is plain and short. The whole lesson should take under 10 minutes.
+- English is plain and short. Core lesson (warm-up, phrases, dialogue, sign kanji, tip, words, kanji quiz, challenge) under 10 minutes; extras are on top.

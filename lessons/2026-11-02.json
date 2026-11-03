@@ -87,5 +87,164 @@
   "mark": "整",
   "title": "Rural buses and trains: take a {整理券|せいりけん}"
  },
- "title_jp": "{電車|でんしゃ}と{切符|きっぷ}"
+ "title_jp": "{電車|でんしゃ}と{切符|きっぷ}",
+ "vocab": [
+  {
+   "jp": "{何番線|なんばんせん}",
+   "reading": "なんばんせん",
+   "en": "which platform",
+   "level": "N4",
+   "src": "p1",
+   "surface": "何番線"
+  },
+  {
+   "jp": "{止|と}まる",
+   "reading": "とまる",
+   "en": "to stop (train, car)",
+   "level": "N4",
+   "src": "p2",
+   "surface": "止まり"
+  },
+  {
+   "jp": "{乗|の}り{換|か}え",
+   "reading": "のりかえ",
+   "en": "transfer, change of trains",
+   "level": "N4",
+   "src": "p3",
+   "surface": "乗り換え"
+  },
+  {
+   "jp": "{降|お}りる",
+   "reading": "おりる",
+   "en": "to get off",
+   "level": "N4",
+   "src": "p4",
+   "surface": "降りる"
+  },
+  {
+   "jp": "{特急|とっきゅう}",
+   "reading": "とっきゅう",
+   "en": "limited express",
+   "level": "N3",
+   "src": "d1",
+   "surface": "特急"
+  },
+  {
+   "jp": "{普通|ふつう}",
+   "reading": "ふつう",
+   "en": "local train (also: normal)",
+   "level": "N4",
+   "src": "d1",
+   "surface": "普通",
+   "note": "On station boards 普通 is the slowest train, stopping everywhere."
+  },
+  {
+   "jp": "{指定席|していせき}",
+   "reading": "していせき",
+   "en": "reserved seat",
+   "level": "N3",
+   "src": "d2",
+   "surface": "指定席"
+  },
+  {
+   "jp": "{発|はつ}",
+   "reading": "はつ",
+   "en": "departing (at/from)",
+   "level": "N3",
+   "src": "d3",
+   "surface": "発",
+   "note": "10時発 = leaving at 10:00. 東京発 = from Tokyo."
+  },
+  {
+   "jp": "{窓側|まどがわ}",
+   "reading": "まどがわ",
+   "en": "window side",
+   "level": "N3",
+   "src": "d3",
+   "surface": "窓側",
+   "note": "The aisle seat is {通路側|つうろがわ}."
+  },
+  {
+   "jp": "ございます",
+   "reading": "ございます",
+   "en": "there is (very polite あります)",
+   "level": "N3",
+   "src": "d3",
+   "surface": "ございます"
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "席",
+   "track": "lesson",
+   "on": "セキ",
+   "kun": "",
+   "meaning": "seat",
+   "words": [
+    {
+     "jp": "{指定席|していせき}",
+     "reading": "していせき",
+     "en": "reserved seat"
+    },
+    {
+     "jp": "{自由席|じゆうせき}",
+     "reading": "じゆうせき",
+     "en": "non-reserved seat"
+    },
+    {
+     "jp": "{出席|しゅっせき}",
+     "reading": "しゅっせき",
+     "en": "attendance"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "window",
+     "platform",
+     "ticket"
+    ],
+    "readings": [
+     "しんていせき",
+     "していじゃく",
+     "じていせき"
+    ]
+   }
+  },
+  {
+   "kanji": "発",
+   "track": "n3",
+   "on": "ハツ・ハッ・ホツ",
+   "kun": "",
+   "meaning": "depart; emit; start",
+   "words": [
+    {
+     "jp": "{出発|しゅっぱつ}",
+     "reading": "しゅっぱつ",
+     "en": "departure"
+    },
+    {
+     "jp": "{発車|はっしゃ}",
+     "reading": "はっしゃ",
+     "en": "(a train) leaving"
+    },
+    {
+     "jp": "{始発|しはつ}",
+     "reading": "しはつ",
+     "en": "first train of the day"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "arrive",
+     "stop",
+     "transfer"
+    ],
+    "readings": [
+     "しゅうはつ",
+     "しゅっぱく",
+     "しゅっぱち"
+    ]
+   }
+  }
+ ]
 }
