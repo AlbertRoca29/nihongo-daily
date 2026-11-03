@@ -818,7 +818,12 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
     lesson = L; steps = buildSteps(L);
     $("dateLabel").innerHTML = esc(fmtDate(L.id)) + (L.id === lessons[lessons.length-1].id ? ' <span class="today-dot">Today</span>' : "");
     if (changed){ idx = Math.min(store.get("pos:" + L.id, 0), steps.length - 1); }
-    try{ if (location.hash.slice(1) !== L.id) history.replaceState(null, "", "#" + L.id); }catch{}
+    // Latest lesson keeps the bare URL, so a home-screen shortcut always opens "today"
+    try{
+      const isLatest = L.id === lessons[lessons.length - 1].id;
+      const want = isLatest ? "" : "#" + L.id;
+      if (location.hash !== want) history.replaceState(null, "", location.pathname + location.search + want);
+    }catch{}
     renderStep();
   }
 
@@ -828,7 +833,7 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
   }
 
   window.addEventListener("hashchange", () => {
-    const id = location.hash.slice(1);
+    const id = location.hash.slice(1) || (lessons.length ? lessons[lessons.length - 1].id : "");
     if (id && lessons.some(l => l.id === id) && (!lesson || lesson.id !== id)) open(id);
   });
 
