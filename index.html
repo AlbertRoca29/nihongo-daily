@@ -271,6 +271,7 @@ textarea:focus{border-color:var(--accent);outline:none}
     if (L.dialogue?.length) s.push({type:"dialogue", jp:"会話", en:"Dialogue"});
     if (L.kanji) s.push({type:"kanji", jp:"看板の漢字", en:"Sign kanji"});
     if (L.tip) s.push({type:"tip", jp:"ヒント", en:"Tip"});
+    (L.extras || []).forEach((x, i) => s.push({type:"extra", x, i, jp:String(x.title_jp || "おまけ").replace(/\{([^|}]+)\|[^}]+\}/g, "$1"), en:x.title || "Extra"}));
     if (L.challenge) s.push({type:"challenge", jp:"チャレンジ", en:"Your turn"});
     s.push({type:"done", jp:"終点", en:"Last stop"});
     return s;
@@ -306,7 +307,7 @@ textarea:focus{border-color:var(--accent);outline:none}
           <div class="label">Situation</div>
           <p style="margin:0;font-size:16px">${esc(L.context)}</p>
         </div>
-        <div class="agenda-row"><span>${(L.phrases||[]).length} phrases</span><span>Dialogue</span><span>Sign kanji</span><span>Tip</span><span>Your turn</span></div>
+        <div class="agenda-row"><span>${(L.phrases||[]).length} phrases</span><span>Dialogue</span><span>Sign kanji</span><span>Tip</span>${(L.extras||[]).map(x => `<span>${esc(x.title || "Extra")}</span>`).join("")}<span>Your turn</span></div>
         <p class="note" style="margin:0">Furigana off? Tap any word to peek at its reading.</p>
       </div>`;
     }
@@ -362,6 +363,19 @@ textarea:focus{border-color:var(--accent);outline:none}
         <h3>${ruby(L.tip.title)}</h3>
         <p>${ruby(L.tip.body)}</p>
       </div></div>`;
+    }
+    if (st.type === "extra"){
+      const x = st.x;
+      h = `<div class="step">
+        ${x.intro ? `<p class="note" style="margin:0">${ruby(x.intro)}</p>` : ""}
+        <div class="card" style="display:flex;flex-direction:column;gap:14px">
+          ${(x.items || []).map(it => `<div style="display:flex;flex-direction:column;gap:2px">
+            <div class="bubble-row"><div class="jp-mid">${ruby(it.jp)}</div>${canSpeak ? `<button class="play" data-say="${esc(it.jp)}" aria-label="Play">${ICON_SAY}</button>` : ""}</div>
+            <div style="font-size:15px">${esc(it.en)}</div>
+            ${it.note ? `<div class="note">${ruby(it.note)}</div>` : ""}
+          </div>`).join("")}
+        </div>
+      </div>`;
     }
     if (st.type === "challenge"){
       const c = L.challenge;

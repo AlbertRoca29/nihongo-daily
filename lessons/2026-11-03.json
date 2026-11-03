@@ -87,5 +87,90 @@
   "prompt": "You're lost near a station. Ask a passer-by: \"Excuse me, is there a konbini around here?\"",
   "hint": "around here = この{辺|へん}, is there…? = …はありますか",
   "model_answer": "すみません、この{辺|へん}にコンビニはありますか。"
- }
+ },
+ "extras": [
+  {
+   "title": "Words for the route",
+   "title_jp": "{道案内|みちあんない}の{言葉|ことば}",
+   "intro": "Directions are built from landmarks. These are the words you'll hear most.",
+   "items": [
+    {
+     "jp": "{角|かど}",
+     "en": "corner",
+     "note": "コンビニの{角|かど} = the corner with the konbini."
+    },
+    {
+     "jp": "{突|つ}き{当|あ}たり",
+     "en": "the end of the road (T-junction)",
+     "note": "{突|つ}き{当|あ}たりを{左|ひだり} = turn left where the road ends."
+    },
+    {
+     "jp": "{手前|てまえ}",
+     "en": "just before",
+     "note": "{橋|はし}の{手前|てまえ} = just before the bridge, on your side."
+    },
+    {
+     "jp": "{向|む}かい",
+     "en": "across the street, opposite",
+     "note": "{郵便局|ゆうびんきょく}の{向|む}かい = opposite the post office."
+    },
+    {
+     "jp": "{三|みっ}つ{目|め}の{信号|しんごう}",
+     "en": "the third traffic light",
+     "note": "～{目|め} makes an order: {一|ひと}つ{目|め}, {二|ふた}つ{目|め}, {三|みっ}つ{目|め}."
+    }
+   ]
+  },
+  {
+   "title": "When you don't catch it",
+   "title_jp": "{聞|き}き{取|と}れないとき",
+   "intro": "Directions come fast. These keep the conversation going without panic.",
+   "items": [
+    {
+     "jp": "すみません、もう{一度|いちど}お{願|ねが}いします。",
+     "en": "Sorry, once more please."
+    },
+    {
+     "jp": "ゆっくり{言|い}ってもらえますか。",
+     "en": "Could you say it slowly?"
+    },
+    {
+     "jp": "{右|みぎ}ですか、{左|ひだり}ですか。",
+     "en": "Right or left?",
+     "note": "An either/or question gets you a one-word answer. Very handy."
+    },
+    {
+     "jp": "えっと、{橋|はし}を{渡|わた}って…？",
+     "en": "Um, cross the bridge, and then…?",
+     "note": "Repeat the part you got and let your voice rise. They'll fill in the rest."
+    }
+   ]
+  },
+  {
+   "title": "On the map board",
+   "title_jp": "{地図|ちず}の{看板|かんばん}",
+   "intro": "Station and town maps use these words. Spot them first and you're halfway there.",
+   "items": [
+    {
+     "jp": "{現在地|げんざいち}",
+     "en": "You are here",
+     "note": "Usually a red dot or arrow on the map board."
+    },
+    {
+     "jp": "{北口|きたぐち}・{南口|みなみぐち}",
+     "en": "North exit / South exit",
+     "note": "Ask {何口|なにぐち}ですか？ when meeting someone at a station."
+    },
+    {
+     "jp": "{徒歩|とほ}5{分|ふん}",
+     "en": "5 minutes on foot",
+     "note": "Read とほ. On signs and websites; people say {歩|ある}いて5{分|ふん}."
+    },
+    {
+     "jp": "{出口|でぐち}",
+     "en": "Exit"
+    }
+   ]
+  }
+ ]
 }
