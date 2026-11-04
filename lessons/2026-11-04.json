@@ -1,287 +1,178 @@
 {
- "topic": "Asking directions",
- "category": "directions",
- "title_jp": "{道|みち}を{聞|き}く",
- "context": "The bus dropped you in a small town and your guesthouse is somewhere nearby, but your phone map is confusing. Today: stopping a local, confirming the way, and finding the kōban.",
+ "topic": "First dinner at the Tanakas'",
+ "category": "food-cooking",
+ "function": "requesting",
+ "format": "dialogue",
+ "cast": ["tanaka"],
+ "title_jp": "{田中家|たなかけ}の{晩|ばん}ご{飯|はん}",
+ "context": "This afternoon Tanaka-san picked you up at Guesthouse Kaze and drove you to the farm. Now it's your first dinner with him and his wife Keiko. Today: asking for things politely at someone's table, and being looked after.",
  "phrases": [
   {
-   "jp": "すみません、ちょっと{道|みち}に{迷|まよ}ってしまって…",
-   "en": "Excuse me, I'm a bit lost...",
+   "jp": "お{醤油|しょうゆ}を{取|と}っていただけますか。",
+   "en": "Could you pass me the soy sauce?",
    "register": "polite",
-   "note": "Say it and trail off: people will usually ask you where you're going."
+   "note": "〜ていただけますか is a notch politer than 〜てもらえますか: a safe choice with your host family in the first days."
   },
   {
-   "jp": "この{近|ちか}くに{交番|こうばん}はありますか。",
-   "en": "Is there a police box near here?",
+   "jp": "おかわりをお{願|ねが}いしてもいいですか。",
+   "en": "Could I have seconds?",
    "register": "polite",
-   "note": "{交番|こうばん} = small police box. Officers give directions all day; it's normal to ask them."
+   "note": "おかわり = another helping (rice, soup, a drink). Asking for it is a compliment to the cook, not greedy."
   },
   {
-   "jp": "{次|つぎ}の{角|かど}を{右|みぎ}ですね。",
-   "en": "So it's right at the next corner?",
+   "jp": "これは{何|なん}という{料理|りょうり}ですか。",
+   "en": "What's this dish called?",
    "register": "polite",
-   "note": "Repeat directions back with ですね to check. You'll hear はい、そうです or a correction."
+   "note": "〜という = called. Asking about the food is the easiest way to start a conversation at a Japanese table."
   },
   {
-   "jp": "{道|みち}の{反対側|はんたいがわ}ですか。",
-   "en": "Is it on the other side of the road?",
+   "jp": "ご{飯|はん}の{量|りょう}を{少|すく}なめにしてもらえますか。",
+   "en": "Could you make my rice portion a bit smaller?",
    "register": "polite",
-   "note": "You may also hear {向|む}かい{側|がわ}, same meaning."
+   "note": "〜め softens an adjective: {少|すく}なめ = on the small side, {大|おお}きめ = on the big side. Also works at restaurants: ご{飯|はん}{少|すく}なめで."
   },
   {
-   "jp": "あれ、{道|みち}{間違|まちが}えたかも。",
-   "en": "Huh, I might have gone the wrong way.",
+   "jp": "{遠慮|えんりょ}しないで、どんどん{食|た}べて。",
+   "en": "Don't hold back, eat as much as you like.",
    "register": "casual",
-   "note": "かも = maybe (short for かもしれない). The を after {道|みち} drops in casual talk."
+   "note": "You'll hear this constantly from hosts. A graceful reply: じゃあ、お{言葉|ことば}に{甘|あま}えて (then I'll take you up on that)."
   }
  ],
- "dialogue_setting": "On a quiet street in a small town, asking a local the way.",
+ "dialogue_setting": "At the low table in the Tanakas' living room, a clay pot bubbling in the middle.",
  "dialogue": [
   {
-   "speaker": "You",
-   "jp": "すみません、さくらゲストハウスを{探|さが}しているんですが。",
-   "en": "Excuse me, I'm looking for Sakura Guesthouse.",
-   "me": true
-  },
-  {
-   "speaker": "Local",
-   "jp": "ああ、この{道|みち}を{真|ま}っすぐ{行|い}って、{二|ふた}つ{目|め}の{信号|しんごう}を{左|ひだり}に{曲|ま}がってください。",
-   "en": "Ah, go straight along this road and turn left at the second traffic light."
+   "speaker": "Keiko",
+   "jp": "{主人|しゅじん}に{頼|たの}まれて、{今日|きょう}はりんご{鍋|なべ}にしたのよ。",
+   "en": "My husband asked me to, so tonight it's apple nabe."
   },
   {
    "speaker": "You",
-   "jp": "{二|ふた}つ{目|め}の{信号|しんごう}を{左|ひだり}ですね。",
-   "en": "Left at the second light, right?",
+   "jp": "りんごを{鍋|なべ}に{入|い}れるんですか。{初|はじ}めて{見|み}ました！",
+   "en": "You put apples in nabe? I've never seen that!",
    "me": true
   },
   {
-   "speaker": "Local",
-   "jp": "そうそう。{曲|ま}がったら、{突|つ}き{当|あ}たりにありますよ。",
-   "en": "That's it. Once you turn, it's at the end of the street."
+   "speaker": "Tanaka-san",
+   "jp": "{鷹ノ原|たかのはら}のりんごは{甘|あま}いずら。{遠慮|えんりょ}しないで{食|た}べな。",
+   "en": "Takanohara apples are sweet, you'll see. Don't be shy, eat."
   },
   {
    "speaker": "You",
-   "jp": "ここから{歩|ある}いてどのくらいですか。",
-   "en": "How long is it on foot from here?",
+   "jp": "すごくおいしいです。おかわりしてもいいですか。",
+   "en": "It's really delicious. Can I have some more?",
    "me": true
   },
   {
-   "speaker": "Local",
-   "jp": "5{分|ふん}ぐらいで{着|つ}きますよ。",
-   "en": "You'll get there in about five minutes."
+   "speaker": "Tanaka-san",
+   "jp": "{明日|あした}は{五時|ごじ}に{起|お}きるぞ。{遅|おく}れたら{妻|つま}に{怒|おこ}られるからな。",
+   "en": "Tomorrow we get up at five. If you're late, my wife will tell you off."
+  },
+  {
+   "speaker": "You",
+   "jp": "はい、{気|き}をつけます。{目覚|めざ}ましを{二|ふた}つかけておきます！",
+   "en": "OK, I'll be careful. I'll set two alarms!",
+   "me": true
   }
  ],
+ "grammar": {
+  "id": "n4-passive",
+  "pattern": "〜られる ({受身|うけみ})",
+  "level": "N4",
+  "meaning": "passive: something is done (to you)",
+  "form": "う-verbs: -a + れる ({頼|たの}む → {頼|たの}まれる, {怒|おこ}る → {怒|おこ}られる) · る-verbs: + られる ({見|み}る → {見|み}られる) · する → される · {来|く}る → {来|こ}られる",
+  "explanation": "The person something happens to becomes the subject, and the one who does it gets に: {妻|つま}に{怒|おこ}られる = get told off by my wife. Japanese uses it far more than English, often for things that happen to you with a feeling of being bothered ({雨|あめ}に{降|ふ}られた = I got rained on). Careful: for る-verbs it looks the same as the potential form ({食|た}べられる = can eat or be eaten); context decides.",
+  "src": ["d0", "d4"],
+  "examples": [
+   {"jp": "{電車|でんしゃ}で{足|あし}を{踏|ふ}まれました。", "en": "Someone stepped on my foot on the train."},
+   {"jp": "{子|こ}どもの{頃|ころ}、よく{母|はは}に{褒|ほ}められた。", "en": "As a kid I was often praised by my mum."}
+  ],
+  "quiz": {
+   "question": "{先生|せんせい}に{名前|なまえ}を＿＿。",
+   "en": "My name was called by the teacher.",
+   "options": ["{呼|よ}ばれた", "{呼|よ}んだ", "{呼|よ}ばせた", "{呼|よ}べた"],
+   "explain": "{呼|よ}ぶ → {呼|よ}ばれる: the teacher (に) did it to me. {呼|よ}ばせた is causative (made someone call), {呼|よ}べた is potential (could call)."
+  }
+ },
  "kanji": {
-  "kanji": "現在地",
-  "reading": "げんざいち",
-  "romaji": "Genzaichi",
-  "meaning": "You are here",
-  "where": "The red dot on every street map board, station map and mall floor plan. Find it first, then look for your destination.",
-  "related": "Related: {案内図|あんないず} map board, {方面|ほうめん} direction (e.g. {駅|えき}{方面|ほうめん} towards the station)."
+  "kanji": "鍋",
+  "reading": "なべ",
+  "romaji": "nabe",
+  "meaning": "hotpot; pot",
+  "where": "From November it's everywhere: izakaya menus, supermarket shelves of {鍋|なべ}の{素|もと} (ready soup bases), {寄|よ}せ{鍋|なべ} and キムチ{鍋|なべ} at family restaurants.",
+  "related": "{土鍋|どなべ} = the clay pot itself. {鍋|なべ}パーティー (鍋パ) = a hotpot party with friends."
  },
  "tip": {
-  "mark": "丁",
-  "title": "No street names: count lights and landmarks",
-  "body": "Most streets in Japan have no names. Addresses go by area, block and building, like 3{丁目|ちょうめ}5-2, so locals give directions with landmarks and by counting traffic lights. Listen for コンビニ, {信号|しんごう} and {角|かど}. If an address beats everyone, a kōban officer has detailed block maps."
+  "mark": "取",
+  "title": "Don't dive into the pot with your own chopsticks",
+  "body": "At a shared nabe there's usually an お{玉|たま} (ladle) or {取|と}り{箸|ばし} (serving chopsticks): use those to fill your bowl, not the chopsticks you eat with. Often the host serves the first round for everyone, so wait a moment. Some people flip their chopsticks to serve, but many Japanese find that unhygienic, so asking for {取|と}り{箸|ばし} is the safer move."
  },
  "challenge": {
-  "prompt": "You're lost on the way to the bus stop. Tell a passer-by: \"Excuse me, I'm lost. Is the bus stop near here?\"",
-  "hint": "bus stop = バス{停|てい}. near here = この{近|ちか}く.",
-  "model_answer": "すみません、{道|みち}に{迷|まよ}ってしまったんですが、バス{停|てい}はこの{近|ちか}くですか。"
+  "prompt": "Keiko offers you more rice, but you're full. Thank her, say it was delicious, and ask if you can help wash the dishes.",
+  "hint": "お{腹|なか}いっぱい · お{皿|さら}を{洗|あら}う · 〜てもいいですか",
+  "model_answer": "ありがとうございます。もうお{腹|なか}いっぱいです。とてもおいしかったです。お{皿|さら}を{洗|あら}ってもいいですか。"
  },
  "vocab": [
-  {
-   "jp": "{迷|まよ}う",
-   "reading": "まよう",
-   "en": "to get lost; to hesitate",
-   "level": "N3",
-   "src": "p0",
-   "surface": "迷って",
-   "note": "{道|みち}に{迷|まよ}う = lose your way."
-  },
-  {
-   "jp": "{交番|こうばん}",
-   "reading": "こうばん",
-   "en": "police box",
-   "level": "N3",
-   "src": "p1",
-   "surface": "交番"
-  },
-  {
-   "jp": "{角|かど}",
-   "reading": "かど",
-   "en": "corner (of a street)",
-   "level": "N4",
-   "src": "p2",
-   "surface": "角"
-  },
-  {
-   "jp": "{反対側|はんたいがわ}",
-   "reading": "はんたいがわ",
-   "en": "the opposite side",
-   "level": "N3",
-   "src": "p3",
-   "surface": "反対側"
-  },
-  {
-   "jp": "{間違|まちが}える",
-   "reading": "まちがえる",
-   "en": "to get wrong, to mistake",
-   "level": "N4",
-   "src": "p4",
-   "surface": "間違えた"
-  },
-  {
-   "jp": "{信号|しんごう}",
-   "reading": "しんごう",
-   "en": "traffic light",
-   "level": "N3",
-   "src": "d1",
-   "surface": "信号"
-  },
-  {
-   "jp": "{曲|ま}がる",
-   "reading": "まがる",
-   "en": "to turn (a corner)",
-   "level": "N4",
-   "src": "d1",
-   "surface": "曲がって",
-   "note": "Takes を: {角|かど}を{曲|ま}がる."
-  },
-  {
-   "jp": "{突|つ}き{当|あ}たり",
-   "reading": "つきあたり",
-   "en": "the end of a street (T-junction)",
-   "level": "N3",
-   "src": "d3",
-   "surface": "突き当たり"
-  },
-  {
-   "jp": "{着|つ}く",
-   "reading": "つく",
-   "en": "to arrive",
-   "level": "N4",
-   "src": "d5",
-   "surface": "着き"
-  }
+  {"jp": "{醤油|しょうゆ}", "reading": "しょうゆ", "en": "soy sauce", "level": "N3", "src": "p0", "surface": "醤油"},
+  {"jp": "{取|と}る", "reading": "とる", "en": "to take; to pass (something to someone)", "level": "N4", "src": "p0", "surface": "取って"},
+  {"jp": "おかわり", "reading": "おかわり", "en": "another helping, seconds", "level": "N3", "src": "p1", "surface": "おかわり"},
+  {"jp": "{料理|りょうり}", "reading": "りょうり", "en": "dish; cooking", "level": "N4", "src": "p2", "surface": "料理"},
+  {"jp": "{量|りょう}", "reading": "りょう", "en": "amount, portion", "level": "N3", "src": "p3", "surface": "量"},
+  {"jp": "{少|すく}なめ", "reading": "すくなめ", "en": "on the small side, a little less", "level": "N3", "src": "p3", "surface": "少なめ"},
+  {"jp": "{遠慮|えんりょ}する", "reading": "えんりょする", "en": "to hold back, be reserved", "level": "N3", "src": "p4", "surface": "遠慮しない", "note": "ご{遠慮|えんりょ}ください on signs = please refrain."},
+  {"jp": "{主人|しゅじん}", "reading": "しゅじん", "en": "(my) husband", "level": "N4", "src": "d0", "surface": "主人", "note": "Older women's word for their husband; younger people say {夫|おっと} or {旦那|だんな}."},
+  {"jp": "{頼|たの}む", "reading": "たのむ", "en": "to ask (a favour), to request", "level": "N4", "src": "d0", "surface": "頼まれ"},
+  {"jp": "{怒|おこ}る", "reading": "おこる", "en": "to get angry; to tell off", "level": "N4", "src": "d4", "surface": "怒られる"}
  ],
  "kanji_study": [
   {
-   "kanji": "曲",
+   "kanji": "量",
    "track": "lesson",
-   "on": "キョク",
-   "kun": "ま(がる)・ま(げる)",
-   "meaning": "bend; turn; song",
+   "on": "リョウ",
+   "kun": "はか(る)",
+   "meaning": "amount, quantity",
    "words": [
-    {
-     "jp": "{曲|ま}がる",
-     "reading": "まがる",
-     "en": "to turn"
-    },
-    {
-     "jp": "{曲|きょく}",
-     "reading": "きょく",
-     "en": "song, tune"
-    },
-    {
-     "jp": "{作曲|さっきょく}",
-     "reading": "さっきょく",
-     "en": "composing music"
-    }
+    {"jp": "{量|りょう}", "reading": "りょう", "en": "amount, portion"},
+    {"jp": "{大量|たいりょう}", "reading": "たいりょう", "en": "a large quantity"},
+    {"jp": "{量|はか}る", "reading": "はかる", "en": "to measure (weight, volume)"}
    ],
-   "decoys": {
-    "meanings": [
-     "straight",
-     "corner",
-     "cross"
-    ],
-    "readings": [
-     "まかる",
-     "まわる",
-     "まげる"
-    ]
-   }
+   "decoys": {"meanings": ["heavy", "price", "space"], "readings": ["りゅう", "ろう", "りょ"]}
   },
   {
    "kanji": "着",
    "track": "n3",
-   "on": "チャク",
+   "on": "チャク・ジャク",
    "kun": "き(る)・つ(く)",
-   "meaning": "arrive; wear",
+   "meaning": "arrive; put on (clothes)",
    "words": [
-    {
-     "jp": "{到着|とうちゃく}",
-     "reading": "とうちゃく",
-     "en": "arrival"
-    },
-    {
-     "jp": "{着|つ}く",
-     "reading": "つく",
-     "en": "to arrive"
-    },
-    {
-     "jp": "{着物|きもの}",
-     "reading": "きもの",
-     "en": "kimono"
-    }
+    {"jp": "{着|つ}く", "reading": "つく", "en": "to arrive"},
+    {"jp": "{着物|きもの}", "reading": "きもの", "en": "kimono"},
+    {"jp": "{到着|とうちゃく}", "reading": "とうちゃく", "en": "arrival"}
    ],
-   "decoys": {
-    "meanings": [
-     "depart",
-     "return",
-     "stop"
-    ],
-    "readings": [
-     "どうちゃく",
-     "とうじゃく",
-     "とちゃく"
-    ]
-   }
+   "decoys": {"meanings": ["depart; take off", "send; deliver", "stay; remain"], "readings": ["きく", "ちゃく", "づく"]}
   }
  ],
  "extras": [
   {
-   "title": "Landmark words",
-   "title_jp": "{目印|めじるし}の{言葉|ことば}",
-   "intro": "Directions you'll hear, especially in the countryside.",
+   "title": "Table phrases",
+   "title_jp": "{食卓|しょくたく}のひとこと",
+   "intro": "The set phrases you'll say or hear at every meal with your host family.",
    "items": [
-    {
-     "jp": "{橋|はし}を{渡|わた}って、すぐです。",
-     "en": "Cross the bridge and it's right there."
-    },
-    {
-     "jp": "{踏切|ふみきり}の{手前|てまえ}です。",
-     "en": "It's just before the railway crossing.",
-     "note": "{手前|てまえ} = this side of; {先|さき} = past it."
-    },
-    {
-     "jp": "コンビニの{向|む}かいです。",
-     "en": "It's opposite the konbini."
-    },
-    {
-     "jp": "ガソリンスタンドの{隣|となり}です。",
-     "en": "It's next to the gas station."
-    }
+    {"jp": "いただきます。", "en": "(before eating) Thank you for the food.", "note": "Said with hands together, to everyone, even at home."},
+    {"jp": "ごちそうさまでした。", "en": "(after eating) That was a feast, thank you.", "note": "Say it to the cook. At home the casual ごちそうさま is fine."},
+    {"jp": "お{腹|なか}いっぱいです。", "en": "I'm full."},
+    {"jp": "{熱|あつ}いから{気|き}をつけてね。", "en": "It's hot, be careful.", "note": "What you'll hear when the nabe is served."}
    ]
   },
   {
-   "title": "At the kōban",
-   "title_jp": "{交番|こうばん}で",
-   "intro": "Show the address on your phone and use these.",
+   "title": "Asking nicely, step by step",
+   "title_jp": "お{願|ねが}いの{丁寧|ていねい}さ",
+   "intro": "The same request from casual to very polite. With your hosts, start at the third and move down as you get closer.",
    "items": [
-    {
-     "jp": "この{住所|じゅうしょ}に{行|い}きたいんですが。",
-     "en": "I'd like to go to this address."
-    },
-    {
-     "jp": "{地図|ちず}に{書|か}いていただけますか。",
-     "en": "Could you draw it on the map for me?"
-    },
-    {
-     "jp": "{地図|ちず}の{写真|しゃしん}を{撮|と}ってもいいですか。",
-     "en": "May I take a photo of the map?",
-     "note": "Kōban often have big hand-drawn local maps on the wall."
-    }
+    {"jp": "{取|と}って。", "en": "Pass it. (family, close friends)"},
+    {"jp": "{取|と}ってくれる？", "en": "Can you pass it? (friends)"},
+    {"jp": "{取|と}ってもらえますか。", "en": "Could you pass it? (polite)"},
+    {"jp": "{取|と}っていただけますか。", "en": "Could you kindly pass it? (more polite)"},
+    {"jp": "{取|と}っていただけないでしょうか。", "en": "Would you mind passing it? (very polite, work and strangers)"}
    ]
   }
  ]

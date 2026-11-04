@@ -11,7 +11,7 @@
    "castle-ruins": "Stone walls and a small museum on the hill. Kurogane Hayato's legend is tied to it.",
    "nagano-city": "Real city. Ren lives and works there. Sōta lives there with his parents."
   },
-  "story_start": "The first three lessons (2–4 Nov 2026) were before the cast existed: the learner travelled to Takanohara and found his way to Guesthouse Kaze, where he stays his first nights. Next in the story: he meets Kenta at the guesthouse and Tanaka-san comes to pick him up and bring him to the farm. The other characters are met naturally over the following weeks; Ren comes in only after the learner has settled (not before mid-November).",
+  "story_start": "The first three lessons (2–4 Nov 2026) were before the cast existed: the learner travelled to Takanohara and found his way to Guesthouse Kaze, where he stays his first nights. On 4 Nov Tanaka-san picked him up and brought him to the farm. The other characters are met naturally over the following weeks; Ren comes in only after the learner has settled (not before mid-November).",
   "calendar": "Lessons follow the real date and season in Nagano: apple harvest and autumn leaves in November, first snow and 忘年会 in December, New Year at the Tanaka house, ski season, plum then cherry blossoms in April, rice planting in May, rainy season, summer festival (the town's {鷹祭り|たかまつり} on the first weekend of August, honouring Hayato), Obon."
  },
  "cast": [
@@ -224,9 +224,15 @@
   },
   {
    "date": "2026-11-04",
-   "cast": [],
-   "summary": "Gets off the bus in town and asks a local the way to the guesthouse; finds the kōban.",
-   "new_facts": []
+   "cast": [
+    "tanaka"
+   ],
+   "summary": "Tanaka-san picks you up at Guesthouse Kaze (where you spent your first night) and brings you to the farm. First dinner with him and Keiko: her apple nabe. He warns you the day starts at 5 and Keiko scolds latecomers.",
+   "new_facts": [
+    "Keiko's apple nabe (りんご鍋) is a house speciality.",
+    "Farm days start at 5 a.m.; Keiko telling off latecomers is a running joke.",
+    "You haven't met Kenta yet: you'll meet him when your guesthouse shifts start."
+   ]
   }
  ]
 }
