@@ -1,4 +1,4 @@
-const SHELL = "nihongo-shell-v5";
+const SHELL = "nihongo-shell-v6";
 const FILES = ["./", "index.html", "manifest.webmanifest", "icons/icon-192.png"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(SHELL).then(c => c.addAll(FILES))); self.skipWaiting(); });
 self.addEventListener("activate", e => { e.waitUntil(self.clients.claim()); });

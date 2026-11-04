@@ -98,6 +98,7 @@ rt{font-size:.5em;color:var(--muted);font-weight:500;letter-spacing:0;transition
 .row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
 .chip{font-size:12px;font-weight:700;letter-spacing:.02em;padding:5px 12px;border-radius:999px;background:var(--soft);text-transform:capitalize}
 .chip.polite{color:var(--polite)} .chip.casual{color:var(--casual)} .chip.neutral{color:var(--muted)}
+.chip.dialect{color:var(--good)} .chip.slang{color:#c026d3} .chip.archaic{color:#a16207}
 .say{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--ink);padding:8px 13px;border-radius:999px;background:var(--ghost)}
 .say svg{width:15px;height:15px}
 .reveal{width:100%;text-align:left;border-radius:16px;padding:13px 16px;color:var(--muted);font-size:15px;font-weight:600;background:var(--card);border:1.5px dashed var(--ghost)}
@@ -154,6 +155,7 @@ textarea:focus{border-color:var(--accent);outline:none}
 .btn.primary{background:var(--btn);color:var(--on-btn)}
 .btn.ghost{background:var(--ghost);color:var(--ink)}
 .btn:disabled{opacity:.4;cursor:default}
+.btn svg{width:18px;height:18px;flex:none}
 .fb{display:flex;flex-direction:column;gap:12px}
 .verdict{display:flex;align-items:center;gap:10px;font-weight:700}
 .fb .k{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
@@ -198,6 +200,45 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
 .grade{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .btn.good{background:var(--good);color:#fff}
 .wsent{font-family:var(--jp);font-size:21px;font-weight:500;line-height:1.9;overflow-wrap:anywhere}
+
+/* cast */
+.cast{display:flex;flex-direction:column;gap:8px}
+.who-row{display:flex;gap:10px;align-items:center}
+.ava{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--soft);color:var(--accent);font-family:var(--jp);font-weight:700;font-size:15px}
+.who-row .r{font-size:13px;color:var(--muted)}
+
+/* LINE chat */
+.chat{background:var(--soft);border-radius:20px;padding:10px 10px 12px;display:flex;flex-direction:column;gap:8px}
+.chat-head{font-size:13px;font-weight:700;text-align:center;color:var(--muted);padding:2px 0 4px}
+.chat .line{flex-direction:row;align-items:flex-end;gap:6px}
+.chat .line.me{flex-direction:row-reverse}
+.chat .line .ava{width:28px;height:28px;font-size:12px;align-self:flex-start;background:var(--card)}
+.chat .stack{display:flex;flex-direction:column;gap:2px;min-width:0;max-width:82%}
+.chat .line.me .stack{align-items:flex-end}
+.chat .bubble{max-width:100%;border-radius:16px 16px 16px 4px}
+.chat .line.me .bubble{background:#06c755;border-radius:16px 16px 4px 16px}
+.chat .time{font-size:10.5px;color:var(--muted);flex:none;padding-bottom:2px}
+
+/* story */
+.story{display:flex;flex-direction:column;gap:4px}
+.story .para{cursor:pointer;padding:6px 2px;border-bottom:1px solid var(--rule)}
+.story .para:last-child{border-bottom:0}
+.story .en{font-size:14px;color:var(--muted);margin-top:2px}
+.story .en.hid{display:none}
+
+/* real text */
+.notice{background:var(--card);border-radius:8px;border:2px solid var(--ink);overflow:hidden}
+.notice-head{background:var(--ink);color:var(--card);font-weight:700;font-size:13px;letter-spacing:.12em;padding:7px 14px;font-family:var(--jp)}
+.notice .part{padding:10px 14px;border-bottom:1px dashed var(--rule);cursor:pointer}
+.notice .part:last-child{border-bottom:0}
+.notice .plabel{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.notice .en{font-size:14px;color:var(--muted);margin-top:2px}
+.notice .en.hid{display:none}
+
+/* grammar */
+.gpat{font-family:var(--jp);font-size:clamp(24px,7vw,30px);font-weight:700;line-height:1.5}
+.gsec{display:flex;flex-direction:column;gap:6px}
+.gline{font-family:var(--jp);font-size:17px;line-height:1.9}
 
 .empty{display:flex;flex-direction:column;gap:10px;align-items:flex-start;padding-top:20px}
 .empty h2{margin:0;font-size:22px;font-weight:700}
@@ -256,7 +297,10 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
   };
   const ICON_SAY = '<svg viewBox="0 0 16 16" fill="currentColor"><path d="M2 6h2.5L8 3v10L4.5 10H2z"/><path d="M10.5 5.5a3.5 3.5 0 0 1 0 5M12.5 3.5a6 6 0 0 1 0 9" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>';
 
-  let lessons = [], lesson = null, steps = [], idx = 0, db = null, sample = null;
+  let lessons = [], lesson = null, steps = [], idx = 0, db = null, sample = null, castById = {};
+  const FMT = {dialogue:{jp:"会話", en:"Dialogue", chip:"Dialogue"}, line:{jp:"LINE", en:"LINE chat", chip:"LINE chat"},
+    story:{jp:"お話", en:"Story", chip:"Story"}, text:{jp:"読み物", en:"Real text", chip:"Real text"}};
+  const fmtOf = L => FMT[L.format] ? L.format : "dialogue";
 
   /* ---------- furigana ---------- */
   let furi = store.get("furi", true);
@@ -397,8 +441,9 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
     warmState = {queue:warmQueue.slice(), qi:0, ok:0, again:new Set()};
     if (warmQueue.length) s.push({type:"warm", jp:"復習", en:"Warm-up"});
     (L.phrases || []).forEach((p, i) => s.push({type:"phrase", p, i, jp:"フレーズ " + (i+1), en:"Phrase " + (i+1)}));
-    if (L.dialogue?.length) s.push({type:"dialogue", jp:"会話", en:"Dialogue"});
-    if (L.kanji) s.push({type:"kanji", jp:"看板の漢字", en:"Sign kanji"});
+    if (L.dialogue?.length) s.push({type:"dialogue", jp:FMT[fmtOf(L)].jp, en:FMT[fmtOf(L)].en});
+    if (L.grammar) s.push({type:"grammar", jp:"文法", en:"Grammar"});
+    if (L.kanji) s.push({type:"kanji", jp:L.format ? "見つけた漢字" : "看板の漢字", en:L.format ? "Spotted kanji" : "Sign kanji"});
     if (L.tip) s.push({type:"tip", jp:"ヒント", en:"Tip"});
     if (L.vocab?.length) s.push({type:"words", jp:"単語", en:"Words"});
     if (L.kanji_study?.length){
@@ -409,6 +454,102 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
     (L.extras || []).forEach((x, i) => s.push({type:"extra", x, i, jp:String(x.title_jp || "おまけ").replace(/\{([^|}]+)\|[^}]+\}/g, "$1"), en:"Extra · " + (x.title || "Bonus")}));
     s.push({type:"done", jp:"終点", en:"Last stop"});
     return s;
+  }
+
+  const initial = n => {
+    const c = Object.values(castById).find(x => x.name === n);
+    return esc([...plain((c && c.name_jp) || n || "?")][0] || "?");
+  };
+  function castCard(L){
+    const people = (L.cast || []).map(id => castById[id]).filter(Boolean);
+    if (L.guest) people.push({name:L.guest.name, name_jp:L.guest.name_jp || "", role:"Guest · " + (L.guest.role || "")});
+    if (!people.length) return "";
+    return `<div class="card cast"><div class="label">Who's in it</div>${people.map(c => `<div class="who-row">
+        <span class="ava">${initial(c.name_jp || c.name)}</span>
+        <div style="min-width:0"><div style="font-weight:600">${esc(c.name)}${c.name_jp ? ` <span class="note" style="font-family:var(--jp)">${ruby(c.name_jp)}</span>` : ""}</div><div class="r">${esc(c.role || "")}</div></div>
+      </div>`).join("")}</div>`;
+  }
+  const playBtn = jp => canSpeak ? `<button class="play" data-say="${esc(jp)}" aria-label="Play">${ICON_SAY}</button>` : "";
+  const playAllBtn = label => canSpeak ? `<button class="btn ghost" id="playAll">${ICON_SAY}${label}</button>` : "";
+  function renderMain(L){
+    const f = fmtOf(L), setting = L.dialogue_setting ? `<p class="note" style="margin:0">${ruby(L.dialogue_setting)} ${f === "dialogue" || f === "line" ? "Tap a message for English." : "Tap a line for English."}</p>` : "";
+    const star = i => starBtn("l:" + L.id + ":d" + i, lineDef(L, L.dialogue[i]));
+    if (f === "line"){
+      const others = [...new Set(L.dialogue.filter(d => !d.me).map(d => d.speaker))];
+      return `<div class="step">${setting}
+        <div class="chat"><div class="chat-head">${esc(others.join(", ") || "LINE")}</div>
+        ${L.dialogue.map((d, i) => `<div class="line ${d.me ? "me" : ""}">
+          ${d.me ? "" : `<span class="ava">${initial(d.speaker)}</span>`}
+          <div class="stack">
+            ${d.me ? "" : `<span class="who" style="padding:0 4px">${esc(d.speaker)}</span>`}
+            <div class="bubble" data-show="${i}" role="button" tabindex="0" aria-label="Show English">
+              <div class="bubble-row"><div class="jp-mid">${ruby(d.jp)}</div><div style="display:flex;gap:6px;flex:none">${playBtn(d.jp)}${star(i)}</div></div>
+              <div class="en hid" data-en="${i}">${esc(d.en)}</div>
+            </div>
+          </div>
+          ${d.time ? `<span class="time">${esc(d.time)}</span>` : ""}
+        </div>`).join("")}</div>
+        ${playAllBtn("Read the chat aloud")}</div>`;
+    }
+    if (f === "story"){
+      const tellers = [...new Set(L.dialogue.map(d => d.speaker))];
+      return `<div class="step">${setting}
+        <div class="card story"><div class="label">Told by ${esc(tellers.join(" & "))}</div>
+        ${L.dialogue.map((d, i) => `<div class="para" data-show="${i}" role="button" tabindex="0">
+          <div class="bubble-row"><div class="jp-mid">${ruby(d.jp)}</div><div style="display:flex;gap:6px;flex:none">${playBtn(d.jp)}${star(i)}</div></div>
+          <div class="en hid" data-en="${i}">${esc(d.en)}</div></div>`).join("")}</div>
+        ${playAllBtn("Listen to the whole story")}</div>`;
+    }
+    if (f === "text"){
+      return `<div class="step">${setting}
+        <div class="notice"><div class="notice-head">${ruby(L.text_title || "お知らせ")}</div>
+        ${L.dialogue.map((d, i) => `<div class="part" data-show="${i}" role="button" tabindex="0">
+          <div class="row"><span class="plabel">${esc(d.speaker)}</span><div style="display:flex;gap:6px">${playBtn(d.jp)}${star(i)}</div></div>
+          <div class="jp-mid">${ruby(d.jp)}</div>
+          <div class="en hid" data-en="${i}">${esc(d.en)}</div></div>`).join("")}</div>
+        ${playAllBtn("Read it aloud")}</div>`;
+    }
+    return `<div class="step">${setting}
+        <div class="lines">${L.dialogue.map((d, i) => `
+          <div class="line ${d.me ? "me" : ""}">
+            <span class="who">${esc(d.speaker)}</span>
+            <div class="bubble" data-show="${i}" role="button" tabindex="0" aria-label="Show English">
+              <div class="bubble-row"><div class="jp-mid">${ruby(d.jp)}</div><div style="display:flex;gap:6px;flex:none">${playBtn(d.jp)}${star(i)}</div></div>
+              <div class="en hid" data-en="${i}">${esc(d.en)}</div>
+            </div>
+          </div>`).join("")}
+        </div>
+        ${playAllBtn("Play whole dialogue")}
+      </div>`;
+  }
+  const grammarDef = (L, G) => {
+    const line = lineOf(L, (G.src || [])[0]) || (G.examples || [])[0] || {};
+    return {kind:"grammar", pattern:G.pattern, meaning:G.meaning, form:G.form || "", level:G.level || "", sent:line.jp || "", sentEn:line.en || "", lesson:L.id};
+  };
+  function renderGrammar(L){
+    const G = L.grammar, inLesson = (G.src || []).map(r => lineOf(L, r)).filter(Boolean);
+    return `<div class="step">
+      <div class="card gsec" style="gap:8px">
+        <div class="row"><span class="lvl ${esc(G.level)}">${esc(G.level)} grammar</span>${starBtn("g:" + G.id, grammarDef(L, G))}</div>
+        <div class="gpat">${ruby(G.pattern)}</div>
+        <div style="font-size:17px;font-weight:600">${esc(G.meaning)}</div>
+      </div>
+      <div class="card gsec"><div class="label">How to make it</div><div class="gline">${ruby(G.form)}</div></div>
+      <div class="card gsec"><div class="label">How it works</div><p style="margin:0">${ruby(G.explanation)}</p></div>
+      ${inLesson.length ? `<div class="card gsec"><div class="label">In today's lesson</div>${inLesson.map(x => `<div><div class="bubble-row"><div class="gline">${ruby(x.jp)}</div>${playBtn(x.jp)}</div><div class="note">${esc(x.en)}</div></div>`).join("")}</div>` : ""}
+      ${(G.examples || []).length ? `<div class="card gsec"><div class="label">More examples</div>${G.examples.map(x => `<div><div class="bubble-row"><div class="gline">${ruby(x.jp)}</div>${playBtn(x.jp)}</div><div class="note">${esc(x.en)}</div></div>`).join("")}</div>` : ""}
+      <div id="gquiz">${G.quiz ? `<button class="btn ghost" id="ggo" style="width:100%">Quick check · fill the gap</button>` : ""}</div>
+    </div>`;
+  }
+  function runGrammarQuiz(){
+    const L = lesson, G = L.grammar, q = G.quiz, key = "g:" + G.id;
+    runQuiz($("gquiz"), [{ask:"Fill the gap", prompt:`<span style="font-size:20px;font-weight:600">${ruby(q.question)}</span><div class="note" style="font-weight:500;margin-top:6px">${esc(q.en)}</div>`,
+      options:q.options.map(plain), jpo:true,
+      onWrong:() => { cardDefs[key] = grammarDef(L, G); addCard(key); paintStars(key); },
+      wrongNote:`${ruby(q.explain)} Added to your review.`}], (r) => {
+      $("gquiz").innerHTML = `<div class="card" style="display:flex;flex-direction:column;gap:6px"><b>${r ? "正解！ Right." : "Saved for review."}</b><p class="note" style="margin:0">${ruby(q.explain)}</p><button class="btn ghost" id="ggo" style="width:100%">Try again</button></div>`;
+      $("ggo").onclick = runGrammarQuiz;
+    });
   }
 
   function renderBoard(){
@@ -441,7 +582,8 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
           <div class="label">Situation</div>
           <p style="margin:0;font-size:16px">${esc(L.context)}</p>
         </div>
-        <div class="agenda-row">${warmQueue.length ? `<span>Warm-up · ${warmQueue.length}</span>` : ""}<span>${(L.phrases||[]).length} phrases</span><span>Dialogue</span><span>Sign kanji</span><span>Tip</span>${L.vocab?.length ? `<span>Words</span>` : ""}${L.kanji_study?.length ? `<span>Kanji quiz</span>` : ""}<span>Your turn</span>${(L.extras||[]).length ? `<span style="color:var(--muted)">+${L.extras.length} extra</span>` : ""}</div>
+        ${castCard(L)}
+        <div class="agenda-row">${warmQueue.length ? `<span>Warm-up · ${warmQueue.length}</span>` : ""}<span>${(L.phrases||[]).length} phrases</span><span>${FMT[fmtOf(L)].chip}</span>${L.grammar ? `<span>Grammar · ${esc(L.grammar.level || "")}</span>` : ""}<span>Kanji</span><span>Tip</span>${L.vocab?.length ? `<span>Words</span>` : ""}${L.kanji_study?.length ? `<span>Kanji quiz</span>` : ""}<span>Your turn</span>${(L.extras||[]).length ? `<span style="color:var(--muted)">+${L.extras.length} extra</span>` : ""}</div>
         <p class="note" style="margin:0">Tap ☆ on any phrase, line or word you want to learn. It comes back in tomorrow's warm-up. Furigana off? Tap a word to peek at its reading.</p>
       </div>`;
     }
@@ -458,21 +600,8 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
         ${p.note ? `<p class="note" id="pnote" hidden>${ruby(p.note)}</p>` : ""}
       </div>`;
     }
-    if (st.type === "dialogue"){
-      h = `<div class="step">
-        ${L.dialogue_setting ? `<p class="note" style="margin:0">${ruby(L.dialogue_setting)} Tap a bubble for English.</p>` : ""}
-        <div class="lines">${L.dialogue.map((d, i) => `
-          <div class="line ${d.me ? "me" : ""}">
-            <span class="who">${esc(d.speaker)}</span>
-            <div class="bubble" data-show="${i}" role="button" tabindex="0" aria-label="Show English">
-              <div class="bubble-row"><div class="jp-mid">${ruby(d.jp)}</div><div style="display:flex;gap:6px;flex:none">${canSpeak ? `<button class="play" data-say="${esc(d.jp)}" aria-label="Play">${ICON_SAY}</button>` : ""}${starBtn("l:" + L.id + ":d" + i, lineDef(L, d))}</div></div>
-              <div class="en hid" data-en="${i}">${esc(d.en)}</div>
-            </div>
-          </div>`).join("")}
-        </div>
-        ${canSpeak ? `<button class="btn ghost" id="playAll">${ICON_SAY}Play whole dialogue</button>` : ""}
-      </div>`;
-    }
+    if (st.type === "dialogue") h = renderMain(L);
+    if (st.type === "grammar") h = renderGrammar(L);
     if (st.type === "kanji"){
       const k = L.kanji;
       h = `<div class="step">
@@ -626,6 +755,7 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
     }
     if (st.type === "warm") wireWarm();
     if (st.type === "words") $("vgo").onclick = () => runVocabQuiz();
+    if (st.type === "grammar" && $("ggo")) $("ggo").onclick = runGrammarQuiz;
     if (st.type === "kstudy") rememberKanji(L.kanji_study);
     if (st.type === "kquiz") runKanjiQuiz();
     if (st.type === "challenge") wireChallenge();
@@ -641,6 +771,7 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
         ${c.words?.[0] ? `<div class="wsent" style="text-align:center">${esc(plain(c.words[0].jp))}</div>` : ""}
         <p class="note" style="margin:0;text-align:center">Meaning? And how do you read the word?</p>`;
       if (c.kind === "line") return `<div class="wsent">${esc(plain(c.sent))}</div><p class="note" style="margin:0">Read it out loud. What does it mean?</p>`;
+      if (c.kind === "grammar") return `<div class="qprompt">${esc(plain(c.pattern))}</div>${c.sent ? `<div class="wsent">${esc(plain(c.sent))}</div>` : ""}<p class="note" style="margin:0">What does this pattern mean? How is it made?</p>`;
       const ks = [...plain(c.word)].filter(ch => kseen[ch]);
       return `<div class="wsent">${c.sent ? highlight(c.sent, c.surface) : `<mark>${esc(plain(c.word))}</mark>`}</div>
         <p class="note" style="margin:0">What does the highlighted word mean?${ks.length ? ` And how do you read ${esc(ks.join("・"))} in it?` : ""}</p>`;
@@ -650,6 +781,7 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
         <div class="kread">${c.on ? `<b>On</b><span style="font-family:var(--jp)">${esc(c.on)}</span>` : ""}${c.kun ? `<b>Kun</b><span style="font-family:var(--jp)">${esc(c.kun)}</span>` : ""}</div>
         ${(c.words || []).map(w => `<div class="row" style="justify-content:flex-start;gap:10px"><span class="jp-mid" style="line-height:1.8">${ruby(w.jp)}</span><span class="note">${esc(w.en)}</span></div>`).join("")}`;
       if (c.kind === "line") return `<div class="jp-mid">${ruby(c.sent)}</div><div>${esc(c.sentEn)}</div>${sayBtn(c.sent)}`;
+      if (c.kind === "grammar") return `<div style="font-size:18px;font-weight:700">${esc(c.meaning)}</div>${c.form ? `<div class="gline">${ruby(c.form)}</div>` : ""}${c.sent ? `<div class="jp-mid" style="font-size:16px">${ruby(c.sent)}</div><div class="note">${esc(c.sentEn)}</div>${sayBtn(c.sent)}` : ""}`;
       const ks = [...plain(c.word)].filter(ch => kseen[ch]);
       return `<div class="row" style="justify-content:flex-start;gap:10px"><span class="jp-big" style="line-height:1.7">${ruby(c.word)}</span><span style="font-size:17px;font-weight:600">${esc(c.en)}</span></div>
         ${c.note ? `<div class="note">${ruby(c.note)}</div>` : ""}
@@ -847,6 +979,10 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
   }
   (async () => {
     try{
+      try{
+        const cr = await fetch("cast.json", {cache: "no-cache"});
+        if (cr.ok) (await cr.json()).cast.forEach(c => { castById[c.id] = c; });
+      }catch{}
       const r = await fetch("lessons/index.json", {cache: "no-cache"});
       const list = await r.json();
       const today = todayStr();

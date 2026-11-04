@@ -1,0 +1,881 @@
+{
+ "_about": "Ordered grammar track: N4 core first, then N3 with an N4 refresher about every fifth point. One point per lesson, next untaught first (status names it). Patterns in plain text, no furigana markup.",
+ "grammar": [
+  {
+   "id": "n4-passive",
+   "level": "N4",
+   "pattern": "〜られる (受身)",
+   "meaning": "passive: something is done (to you)"
+  },
+  {
+   "id": "n4-causative",
+   "level": "N4",
+   "pattern": "〜させる (使役)",
+   "meaning": "make / let someone do"
+  },
+  {
+   "id": "n4-causative-passive",
+   "level": "N4",
+   "pattern": "〜させられる",
+   "meaning": "be made to do (against your will)"
+  },
+  {
+   "id": "n4-you-ni-suru",
+   "level": "N4",
+   "pattern": "〜ようにする",
+   "meaning": "make an effort to, make a habit of"
+  },
+  {
+   "id": "n4-you-ni-naru",
+   "level": "N4",
+   "pattern": "〜ようになる",
+   "meaning": "come to be able to / start doing"
+  },
+  {
+   "id": "n4-koto-ni-suru",
+   "level": "N4",
+   "pattern": "〜ことにする",
+   "meaning": "decide to"
+  },
+  {
+   "id": "n4-koto-ni-naru",
+   "level": "N4",
+   "pattern": "〜ことになる",
+   "meaning": "it's been decided that / it turns out that"
+  },
+  {
+   "id": "n4-te-shimau",
+   "level": "N4",
+   "pattern": "〜てしまう / 〜ちゃう",
+   "meaning": "end up doing, do completely (often with regret)"
+  },
+  {
+   "id": "n3-uchi-ni",
+   "level": "N3",
+   "pattern": "〜うちに",
+   "meaning": "while (before it changes)"
+  },
+  {
+   "id": "n3-nai-uchi-ni",
+   "level": "N3",
+   "pattern": "〜ないうちに",
+   "meaning": "before (something happens)"
+  },
+  {
+   "id": "n3-wake-da",
+   "level": "N3",
+   "pattern": "〜わけだ",
+   "meaning": "so that's why, no wonder"
+  },
+  {
+   "id": "n3-wake-dewa-nai",
+   "level": "N3",
+   "pattern": "〜わけではない",
+   "meaning": "it doesn't mean that"
+  },
+  {
+   "id": "n4-te-oku",
+   "level": "N4",
+   "pattern": "〜ておく / 〜とく",
+   "meaning": "do in advance, leave as is"
+  },
+  {
+   "id": "n3-wake-ga-nai",
+   "level": "N3",
+   "pattern": "〜わけがない",
+   "meaning": "there's no way that"
+  },
+  {
+   "id": "n3-wake-ni-wa-ikanai",
+   "level": "N3",
+   "pattern": "〜わけにはいかない",
+   "meaning": "can't (for social or moral reasons)"
+  },
+  {
+   "id": "n3-sei-de",
+   "level": "N3",
+   "pattern": "〜せいで",
+   "meaning": "because of (blaming)"
+  },
+  {
+   "id": "n3-okage-de",
+   "level": "N3",
+   "pattern": "〜おかげで",
+   "meaning": "thanks to"
+  },
+  {
+   "id": "n4-bakari",
+   "level": "N4",
+   "pattern": "〜たばかり",
+   "meaning": "have just done"
+  },
+  {
+   "id": "n3-tame-cause",
+   "level": "N3",
+   "pattern": "〜ため (原因)",
+   "meaning": "because of (formal)"
+  },
+  {
+   "id": "n3-ni-yoru-to",
+   "level": "N3",
+   "pattern": "〜によると",
+   "meaning": "according to"
+  },
+  {
+   "id": "n3-ni-yotte",
+   "level": "N3",
+   "pattern": "〜によって",
+   "meaning": "by, depending on, due to"
+  },
+  {
+   "id": "n3-ni-tsuite",
+   "level": "N3",
+   "pattern": "〜について",
+   "meaning": "about, concerning"
+  },
+  {
+   "id": "n4-tokoro",
+   "level": "N4",
+   "pattern": "〜るところ / 〜ているところ / 〜たところ",
+   "meaning": "about to / in the middle of / just did"
+  },
+  {
+   "id": "n3-ni-taishite",
+   "level": "N3",
+   "pattern": "〜に対して",
+   "meaning": "towards, in contrast to"
+  },
+  {
+   "id": "n3-ni-totte",
+   "level": "N3",
+   "pattern": "〜にとって",
+   "meaning": "for (someone), from their point of view"
+  },
+  {
+   "id": "n3-toshite",
+   "level": "N3",
+   "pattern": "〜として",
+   "meaning": "as (a role)"
+  },
+  {
+   "id": "n3-ni-kurabete",
+   "level": "N3",
+   "pattern": "〜に比べて",
+   "meaning": "compared to"
+  },
+  {
+   "id": "n4-tara",
+   "level": "N4",
+   "pattern": "〜たら",
+   "meaning": "if / when (after)"
+  },
+  {
+   "id": "n3-ni-chigai-nai",
+   "level": "N3",
+   "pattern": "〜に違いない",
+   "meaning": "must be, surely"
+  },
+  {
+   "id": "n3-ppoi",
+   "level": "N3",
+   "pattern": "〜っぽい",
+   "meaning": "-ish, kind of like"
+  },
+  {
+   "id": "n3-rashii-typical",
+   "level": "N3",
+   "pattern": "〜らしい (典型)",
+   "meaning": "typical of, true to type"
+  },
+  {
+   "id": "n3-kke",
+   "level": "N3",
+   "pattern": "〜っけ",
+   "meaning": "was it...? (trying to remember)"
+  },
+  {
+   "id": "n4-ba",
+   "level": "N4",
+   "pattern": "〜ば",
+   "meaning": "if (condition)"
+  },
+  {
+   "id": "n3-tte",
+   "level": "N3",
+   "pattern": "〜って",
+   "meaning": "they say / speaking of / quote (casual)"
+  },
+  {
+   "id": "n3-nante",
+   "level": "N3",
+   "pattern": "〜なんて / 〜なんか",
+   "meaning": "things like (dismissive or surprised)"
+  },
+  {
+   "id": "n3-toka",
+   "level": "N3",
+   "pattern": "〜とか",
+   "meaning": "things like, or something"
+  },
+  {
+   "id": "n3-ba-hodo",
+   "level": "N3",
+   "pattern": "〜ば〜ほど",
+   "meaning": "the more..., the more..."
+  },
+  {
+   "id": "n4-nara",
+   "level": "N4",
+   "pattern": "〜なら",
+   "meaning": "if it's the case that / as for"
+  },
+  {
+   "id": "n3-hodo",
+   "level": "N3",
+   "pattern": "〜ほど",
+   "meaning": "to the extent that"
+  },
+  {
+   "id": "n3-kurai",
+   "level": "N3",
+   "pattern": "〜くらい / 〜ぐらい",
+   "meaning": "about, to the point that"
+  },
+  {
+   "id": "n3-sae",
+   "level": "N3",
+   "pattern": "〜さえ",
+   "meaning": "even"
+  },
+  {
+   "id": "n3-sae-ba",
+   "level": "N3",
+   "pattern": "〜さえ〜ば",
+   "meaning": "if only, as long as"
+  },
+  {
+   "id": "n4-to-cond",
+   "level": "N4",
+   "pattern": "〜と (条件)",
+   "meaning": "whenever / if A then naturally B"
+  },
+  {
+   "id": "n3-koso",
+   "level": "N3",
+   "pattern": "〜こそ",
+   "meaning": "precisely, it's X that"
+  },
+  {
+   "id": "n3-dake-de-naku",
+   "level": "N3",
+   "pattern": "〜だけでなく",
+   "meaning": "not only... but also"
+  },
+  {
+   "id": "n3-bakari-ka",
+   "level": "N3",
+   "pattern": "〜ばかりか",
+   "meaning": "not only... but even"
+  },
+  {
+   "id": "n3-te-bakari",
+   "level": "N3",
+   "pattern": "〜てばかりいる",
+   "meaning": "doing nothing but"
+  },
+  {
+   "id": "n4-sou-look",
+   "level": "N4",
+   "pattern": "〜そう (様子)",
+   "meaning": "looks like, seems about to"
+  },
+  {
+   "id": "n3-tabi-ni",
+   "level": "N3",
+   "pattern": "〜たびに",
+   "meaning": "every time"
+  },
+  {
+   "id": "n3-totan",
+   "level": "N3",
+   "pattern": "〜たとたん",
+   "meaning": "the moment that"
+  },
+  {
+   "id": "n3-saichuu",
+   "level": "N3",
+   "pattern": "〜最中に",
+   "meaning": "right in the middle of"
+  },
+  {
+   "id": "n3-tsuide-ni",
+   "level": "N3",
+   "pattern": "〜ついでに",
+   "meaning": "while you're at it"
+  },
+  {
+   "id": "n4-sou-hear",
+   "level": "N4",
+   "pattern": "〜そうだ (伝聞)",
+   "meaning": "I heard that"
+  },
+  {
+   "id": "n3-nagara-contrast",
+   "level": "N3",
+   "pattern": "〜ながら (逆接)",
+   "meaning": "although, while"
+  },
+  {
+   "id": "n3-mono-da",
+   "level": "N3",
+   "pattern": "〜ものだ",
+   "meaning": "used to / that's just how it is"
+  },
+  {
+   "id": "n3-mono-no",
+   "level": "N3",
+   "pattern": "〜ものの",
+   "meaning": "although"
+  },
+  {
+   "id": "n3-koto-wa-nai",
+   "level": "N3",
+   "pattern": "〜ことはない",
+   "meaning": "there's no need to"
+  },
+  {
+   "id": "n4-rashii",
+   "level": "N4",
+   "pattern": "〜らしい",
+   "meaning": "apparently, it seems (from what I hear)"
+  },
+  {
+   "id": "n3-koto-da",
+   "level": "N3",
+   "pattern": "〜ことだ (助言)",
+   "meaning": "you should (advice)"
+  },
+  {
+   "id": "n3-koto-ni-natte-iru",
+   "level": "N3",
+   "pattern": "〜ことになっている",
+   "meaning": "it's the rule that"
+  },
+  {
+   "id": "n3-you-ni-shite-iru",
+   "level": "N3",
+   "pattern": "〜ようにしている",
+   "meaning": "I make a point of"
+  },
+  {
+   "id": "n3-kiru",
+   "level": "N3",
+   "pattern": "〜きる",
+   "meaning": "do completely, finish"
+  },
+  {
+   "id": "n4-you-mitai",
+   "level": "N4",
+   "pattern": "〜ようだ / 〜みたい",
+   "meaning": "it seems, looks like (my judgement)"
+  },
+  {
+   "id": "n3-kakeru",
+   "level": "N3",
+   "pattern": "〜かける",
+   "meaning": "half-done, start to"
+  },
+  {
+   "id": "n3-dasu",
+   "level": "N3",
+   "pattern": "〜出す",
+   "meaning": "suddenly start"
+  },
+  {
+   "id": "n3-tsuzukeru",
+   "level": "N3",
+   "pattern": "〜続ける",
+   "meaning": "keep doing"
+  },
+  {
+   "id": "n3-naosu",
+   "level": "N3",
+   "pattern": "〜直す",
+   "meaning": "redo"
+  },
+  {
+   "id": "n4-hazu",
+   "level": "N4",
+   "pattern": "〜はずだ",
+   "meaning": "should be, is expected to"
+  },
+  {
+   "id": "n3-au",
+   "level": "N3",
+   "pattern": "〜合う",
+   "meaning": "do to each other"
+  },
+  {
+   "id": "n3-you-to-suru",
+   "level": "N3",
+   "pattern": "〜ようとする",
+   "meaning": "try to, be about to"
+  },
+  {
+   "id": "n3-you-to-omou",
+   "level": "N3",
+   "pattern": "〜(よ)うと思う",
+   "meaning": "I'm thinking of doing"
+  },
+  {
+   "id": "n3-zu-ni",
+   "level": "N3",
+   "pattern": "〜ずに",
+   "meaning": "without doing"
+  },
+  {
+   "id": "n4-noni",
+   "level": "N4",
+   "pattern": "〜のに",
+   "meaning": "even though (with frustration)"
+  },
+  {
+   "id": "n3-nakucha",
+   "level": "N3",
+   "pattern": "〜なくちゃ / 〜なきゃ",
+   "meaning": "have to (casual)"
+  },
+  {
+   "id": "n3-beki",
+   "level": "N3",
+   "pattern": "〜べきだ",
+   "meaning": "should, ought to"
+  },
+  {
+   "id": "n3-hazu-ga-nai",
+   "level": "N3",
+   "pattern": "〜はずがない",
+   "meaning": "can't possibly be"
+  },
+  {
+   "id": "n3-te-tamaranai",
+   "level": "N3",
+   "pattern": "〜てたまらない",
+   "meaning": "unbearably, really want"
+  },
+  {
+   "id": "n4-tame-purpose",
+   "level": "N4",
+   "pattern": "〜ために (目的)",
+   "meaning": "in order to"
+  },
+  {
+   "id": "n3-te-shouganai",
+   "level": "N3",
+   "pattern": "〜てしょうがない",
+   "meaning": "can't help feeling"
+  },
+  {
+   "id": "n3-te-hoshii",
+   "level": "N3",
+   "pattern": "〜てほしい",
+   "meaning": "I want you to"
+  },
+  {
+   "id": "n3-sasete-kudasai",
+   "level": "N3",
+   "pattern": "〜させてください",
+   "meaning": "please let me"
+  },
+  {
+   "id": "n3-sasete-itadaku",
+   "level": "N3",
+   "pattern": "〜させていただく",
+   "meaning": "humbly do (with permission)"
+  },
+  {
+   "id": "n4-you-ni-purpose",
+   "level": "N4",
+   "pattern": "〜ように (目的)",
+   "meaning": "so that"
+  },
+  {
+   "id": "n3-tara-dou",
+   "level": "N3",
+   "pattern": "〜たらどう？",
+   "meaning": "why don't you"
+  },
+  {
+   "id": "n3-ba-yokatta",
+   "level": "N3",
+   "pattern": "〜ばよかった",
+   "meaning": "I should have"
+  },
+  {
+   "id": "n3-tara-ii-noni",
+   "level": "N3",
+   "pattern": "〜たらいいのに",
+   "meaning": "I wish"
+  },
+  {
+   "id": "n3-ippou-de",
+   "level": "N3",
+   "pattern": "〜一方で",
+   "meaning": "on the other hand"
+  },
+  {
+   "id": "n4-shi",
+   "level": "N4",
+   "pattern": "〜し、〜し",
+   "meaning": "and also (listing reasons)"
+  },
+  {
+   "id": "n3-hanmen",
+   "level": "N3",
+   "pattern": "〜反面",
+   "meaning": "while, but on the other side"
+  },
+  {
+   "id": "n3-kawari-ni",
+   "level": "N3",
+   "pattern": "〜かわりに",
+   "meaning": "instead of, in exchange for"
+  },
+  {
+   "id": "n3-to-shitara",
+   "level": "N3",
+   "pattern": "〜としたら / 〜とすれば",
+   "meaning": "if we suppose that"
+  },
+  {
+   "id": "n3-to-shitemo",
+   "level": "N3",
+   "pattern": "〜としても",
+   "meaning": "even if"
+  },
+  {
+   "id": "n4-yasui-nikui",
+   "level": "N4",
+   "pattern": "〜やすい / 〜にくい",
+   "meaning": "easy / hard to do"
+  },
+  {
+   "id": "n3-ni-shite-wa",
+   "level": "N3",
+   "pattern": "〜にしては",
+   "meaning": "for a... (surprisingly)"
+  },
+  {
+   "id": "n3-wari-ni",
+   "level": "N3",
+   "pattern": "〜わりに",
+   "meaning": "considering, for"
+  },
+  {
+   "id": "n3-kuse-ni",
+   "level": "N3",
+   "pattern": "〜くせに",
+   "meaning": "even though (critical)"
+  },
+  {
+   "id": "n3-ni-tsurete",
+   "level": "N3",
+   "pattern": "〜につれて",
+   "meaning": "as... changes, so does"
+  },
+  {
+   "id": "n4-sugiru",
+   "level": "N4",
+   "pattern": "〜すぎる",
+   "meaning": "too much"
+  },
+  {
+   "id": "n3-to-tomo-ni",
+   "level": "N3",
+   "pattern": "〜とともに",
+   "meaning": "together with, along with"
+  },
+  {
+   "id": "n3-gachi",
+   "level": "N3",
+   "pattern": "〜がち",
+   "meaning": "tend to"
+  },
+  {
+   "id": "n3-gimi",
+   "level": "N3",
+   "pattern": "〜気味",
+   "meaning": "a bit, a touch of"
+  },
+  {
+   "id": "n3-darake",
+   "level": "N3",
+   "pattern": "〜だらけ",
+   "meaning": "full of, covered in"
+  },
+  {
+   "id": "n4-giving",
+   "level": "N4",
+   "pattern": "あげる・くれる・もらう",
+   "meaning": "giving and receiving"
+  },
+  {
+   "id": "n3-buri",
+   "level": "N3",
+   "pattern": "〜ぶり",
+   "meaning": "for the first time in (time)"
+  },
+  {
+   "id": "n3-oki-ni",
+   "level": "N3",
+   "pattern": "〜おきに",
+   "meaning": "every other, at intervals"
+  },
+  {
+   "id": "n3-goto-ni",
+   "level": "N3",
+   "pattern": "〜ごとに",
+   "meaning": "each, every"
+  },
+  {
+   "id": "n3-toori",
+   "level": "N3",
+   "pattern": "〜とおり(に)",
+   "meaning": "just as, the way"
+  },
+  {
+   "id": "n4-te-kureru",
+   "level": "N4",
+   "pattern": "〜てくれる / 〜てもらう",
+   "meaning": "someone does something for you"
+  },
+  {
+   "id": "n3-muke",
+   "level": "N3",
+   "pattern": "〜向け / 〜向き",
+   "meaning": "aimed at / suited for"
+  },
+  {
+   "id": "n3-ge",
+   "level": "N3",
+   "pattern": "〜げ",
+   "meaning": "seeming, looking"
+  },
+  {
+   "id": "n3-furi",
+   "level": "N3",
+   "pattern": "〜ふりをする",
+   "meaning": "pretend to"
+  },
+  {
+   "id": "n3-you-ni-iu",
+   "level": "N3",
+   "pattern": "〜ように言う・頼む",
+   "meaning": "tell / ask someone to"
+  },
+  {
+   "id": "n4-tsumori",
+   "level": "N4",
+   "pattern": "〜つもり",
+   "meaning": "intend to"
+  },
+  {
+   "id": "n3-to-iu-no-wa",
+   "level": "N3",
+   "pattern": "〜というのは",
+   "meaning": "what... means is"
+  },
+  {
+   "id": "n3-to-iu-koto-da",
+   "level": "N3",
+   "pattern": "〜ということだ",
+   "meaning": "I hear that / that means"
+  },
+  {
+   "id": "n3-to-iu-yori",
+   "level": "N3",
+   "pattern": "〜というより",
+   "meaning": "rather than"
+  },
+  {
+   "id": "n3-to-wa-kagiranai",
+   "level": "N3",
+   "pattern": "〜とは限らない",
+   "meaning": "not necessarily"
+  },
+  {
+   "id": "n4-mama",
+   "level": "N4",
+   "pattern": "〜まま",
+   "meaning": "as it is, still in that state"
+  },
+  {
+   "id": "n3-ni-kimatteiru",
+   "level": "N3",
+   "pattern": "〜に決まっている",
+   "meaning": "definitely, obviously"
+  },
+  {
+   "id": "n3-te-kara-de-nai-to",
+   "level": "N3",
+   "pattern": "〜てからでないと",
+   "meaning": "not until after"
+  },
+  {
+   "id": "n3-made-ni",
+   "level": "N3",
+   "pattern": "〜までに",
+   "meaning": "by (deadline)"
+  },
+  {
+   "id": "n3-honorific-rareru",
+   "level": "N3",
+   "pattern": "〜(ら)れる (尊敬)",
+   "meaning": "honorific passive form"
+  },
+  {
+   "id": "n4-ka-dou-ka",
+   "level": "N4",
+   "pattern": "〜かどうか",
+   "meaning": "whether or not"
+  },
+  {
+   "id": "n3-o-ni-naru",
+   "level": "N3",
+   "pattern": "お〜になる",
+   "meaning": "honorific: someone respected does"
+  },
+  {
+   "id": "n3-o-suru",
+   "level": "N3",
+   "pattern": "お〜する / いたす",
+   "meaning": "humble: I do for you"
+  },
+  {
+   "id": "n3-de-gozaimasu",
+   "level": "N3",
+   "pattern": "〜でございます",
+   "meaning": "very polite です"
+  },
+  {
+   "id": "n3-teineigo-shop",
+   "level": "N3",
+   "pattern": "〜でよろしいでしょうか",
+   "meaning": "service keigo: is this OK?"
+  },
+  {
+   "id": "n4-temo-ii",
+   "level": "N4",
+   "pattern": "〜てもいい / 〜なくてもいい",
+   "meaning": "may / don't have to"
+  },
+  {
+   "id": "n3-yori-hou-ga",
+   "level": "N3",
+   "pattern": "〜より〜のほうが",
+   "meaning": "comparison: X more than Y"
+  },
+  {
+   "id": "n3-hodo-nai",
+   "level": "N3",
+   "pattern": "〜ほど〜ない",
+   "meaning": "not as... as"
+  },
+  {
+   "id": "n3-mitaina",
+   "level": "N3",
+   "pattern": "〜みたいな / 〜ような",
+   "meaning": "like, such as"
+  },
+  {
+   "id": "n3-ppanashi",
+   "level": "N3",
+   "pattern": "〜っぱなし",
+   "meaning": "leave on, keep in that state"
+  },
+  {
+   "id": "n4-keigo-basic",
+   "level": "N4",
+   "pattern": "いらっしゃる・召し上がる・伺う",
+   "meaning": "basic honorific and humble verbs"
+  },
+  {
+   "id": "n3-nai-koto-wa-nai",
+   "level": "N3",
+   "pattern": "〜ないことはない",
+   "meaning": "it's not that... not"
+  },
+  {
+   "id": "n3-temo-shikata",
+   "level": "N3",
+   "pattern": "〜ても仕方がない",
+   "meaning": "it's no use, can't be helped"
+  },
+  {
+   "id": "n3-ni-shitemo",
+   "level": "N3",
+   "pattern": "〜にしても",
+   "meaning": "even if, granted that"
+  },
+  {
+   "id": "n3-wo-chuushin-ni",
+   "level": "N3",
+   "pattern": "〜を中心に",
+   "meaning": "centred on"
+  },
+  {
+   "id": "n4-tagaru",
+   "level": "N4",
+   "pattern": "〜たがる",
+   "meaning": "(someone else) wants to"
+  },
+  {
+   "id": "n3-wo-moto-ni",
+   "level": "N3",
+   "pattern": "〜をもとに",
+   "meaning": "based on"
+  },
+  {
+   "id": "n3-ni-kanshite",
+   "level": "N3",
+   "pattern": "〜に関して",
+   "meaning": "regarding (formal)"
+  },
+  {
+   "id": "n3-wo-hajime",
+   "level": "N3",
+   "pattern": "〜をはじめ",
+   "meaning": "starting with, including"
+  },
+  {
+   "id": "n3-koto-kara",
+   "level": "N3",
+   "pattern": "〜ことから",
+   "meaning": "from the fact that"
+  },
+  {
+   "id": "n4-te-kuru-iku",
+   "level": "N4",
+   "pattern": "〜てくる / 〜ていく (変化)",
+   "meaning": "change coming up to now / going forward"
+  },
+  {
+   "id": "n3-koto-ni-emotion",
+   "level": "N3",
+   "pattern": "〜ことに",
+   "meaning": "to my (surprise / joy)"
+  },
+  {
+   "id": "n3-uchi-ni-change",
+   "level": "N3",
+   "pattern": "〜うちに (変化)",
+   "meaning": "while doing, before you know it"
+  },
+  {
+   "id": "n4-aida",
+   "level": "N4",
+   "pattern": "〜間 / 〜間に",
+   "meaning": "during, while (within that time)"
+  }
+ ]
+}

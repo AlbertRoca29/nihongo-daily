@@ -1,0 +1,232 @@
+{
+ "_about": "The fixed world and recurring cast of Nihongo Line. Facts here are canon: never contradict them. 'log' is the story so far; the daily run appends one entry per lesson. New facts a lesson invents go in that entry's 'new_facts' and become canon too.",
+ "world": {
+  "you": "The learner, 'You' in dialogues. His name and personal details come from the task prompt (private: never write them into the repo; in lessons use only his name). He arrived in Japan at the start of November 2026 to volunteer and is staying for months: helps on the Tanaka farm in exchange for a room in their house, does reception shifts at Guesthouse Kaze, and assists in English classes at Takanohara High once a week. Characters address him by name with さん (polite: Tanaka-san at first, Sato-sensei, strangers), a short nickname for friends (Yuki, Kenta, Ren once close), くん (Sōta, Mio), ちゃん (Hana-obāchan).",
+  "place": "{鷹ノ原町|たかのはらまち} (Takanohara), a small fictional mountain town in Nagano prefecture: apple orchards, rice fields, one station on a local line, rural buses, an onsen, a small shopping street, and the ruins of a castle on the hill ({鷹ノ原城跡|たかのはらじょうあと}). About 40 minutes by train to Nagano city, about 3 hours to Tokyo.",
+  "places": {
+   "tanaka-farm": "The Tanaka house and orchard at the edge of town. Old wooden house with a {縁側|えんがわ}, a kotatsu (こたつ) in winter, a vegetable garden. the learner has the small upstairs room.",
+   "guesthouse-kaze": "{ゲストハウス風|ゲストハウスかぜ}, a 12-bed guesthouse near the station, mostly foreign hikers and skiers. Kenta runs reception.",
+   "takanohara-high": "{鷹ノ原高校|たかのはらこうこう}, the town high school. Sato-sensei teaches English there; Mio is a 2nd-year student.",
+   "shotengai": "The small shopping street: a konbini, a supermarket, a ramen shop, an izakaya called {とり吉|とりきち}, a pharmacy, the post office.",
+   "castle-ruins": "Stone walls and a small museum on the hill. Kurogane Hayato's legend is tied to it.",
+   "nagano-city": "Real city. Ren lives and works there. Sōta lives there with his parents."
+  },
+  "story_start": "The first three lessons (2–4 Nov 2026) were before the cast existed: the learner travelled to Takanohara and found his way to Guesthouse Kaze, where he stays his first nights. Next in the story: he meets Kenta at the guesthouse and Tanaka-san comes to pick him up and bring him to the farm. The other characters are met naturally over the following weeks; Ren comes in only after the learner has settled (not before mid-November).",
+  "calendar": "Lessons follow the real date and season in Nagano: apple harvest and autumn leaves in November, first snow and 忘年会 in December, New Year at the Tanaka house, ski season, plum then cherry blossoms in April, rice planting in May, rainy season, summer festival (the town's {鷹祭り|たかまつり} on the first weekend of August, honouring Hayato), Obon."
+ },
+ "cast": [
+  {
+   "id": "tanaka",
+   "name": "Tanaka-san",
+   "name_jp": "{田中茂|たなかしげる}さん",
+   "age": 67,
+   "role": "Your volunteer host. Apple and rice farmer.",
+   "about": "Born and raised in Takanohara, took over his father's orchard. Quiet, practical, dry sense of humour, shows care through food and small favours rather than words. Gets up at 5. Watches baseball (Hanshin is his team, for reasons he won't explain). Married to Keiko.",
+   "speech": "Plain form with you, short sentences. A little Shinshu (Nagano) dialect: 〜ずら (= だろう), 〜だに (emphasis), ごしたい (= tired). Mark dialect in notes. Polite form only with strangers or officials.",
+   "family": "Wife {田中恵子|たなかけいこ} (Keiko, 64, cooks, warm, talkative, speaks polite-casual mix; can appear as a minor character). Daughter {由美|ゆみ} lives in Nagano city; her son is Sōta.",
+   "fits": [
+    "work-volunteering",
+    "food-cooking",
+    "nature-seasons",
+    "home-admin",
+    "traditions",
+    "family-childhood"
+   ],
+   "fixed": [
+    "Doesn't know about Ren at the start; whether and how he finds out is part of the story.",
+    "Never drinks on weekdays; drinks local sake at New Year and festivals."
+   ]
+  },
+  {
+   "id": "yuki",
+   "name": "Yuki",
+   "name_jp": "{由紀|ゆき}",
+   "age": 25,
+   "role": "Your friend in Tokyo, mostly on LINE.",
+   "about": "{森由紀|もりゆき}. Office worker in Tokyo (marketing at a mid-size company). You met in Spain during her exchange year at university, through a language exchange. Anime and manga otaku, karaoke addict, follows idols, goes to events at Akihabara and Ikebukuro. Big sister energy: gives you dating advice, explains slang and memes, complains about her boss.",
+   "speech": "Very casual Tokyo speech: 〜じゃん, 〜よね, マジ, ヤバい, やっぱ, lots of LINE abbreviations and stickers. Switches to polished keigo when she imitates her work self.",
+   "fits": [
+    "entertainment",
+    "tech-internet",
+    "love-relationships",
+    "money-work",
+    "language",
+    "feelings",
+    "hobbies"
+   ],
+   "fixed": [
+    "Lives in Tokyo, not Takanohara; appears in person only when she visits or you visit Tokyo.",
+    "Knows about the learner's love life and is fully supportive."
+   ]
+  },
+  {
+   "id": "kenta",
+   "name": "Kenta",
+   "name_jp": "{健太|けんた}",
+   "age": 24,
+   "role": "Your coworker at Guesthouse Kaze reception.",
+   "about": "{大西健太|おおにしけんた}. From Osaka, moved to Takanohara for the snowboarding and stayed. Funny, teases you constantly, lazy about paperwork, great with guests. Loves okonomiyaki and says Osaka food is better than anything here.",
+   "speech": "Kansai-ben: 〜やん, 〜へん (= ない), あかん, めっちゃ, ほんま, なんでやねん, 〜や (= だ), おおきに. Mark Kansai forms in notes with the standard equivalent. Switches to standard keigo with guests (a good keigo model).",
+   "fits": [
+    "work-volunteering",
+    "hobbies",
+    "language",
+    "food-cooking",
+    "entertainment",
+    "love-relationships"
+   ],
+   "fixed": [
+    "Finds out about Ren early and is completely relaxed about it; teases you about him like he would about anyone.",
+    "Has a girlfriend, {沙織|さおり}, a nurse in Nagano city."
+   ]
+  },
+  {
+   "id": "sato",
+   "name": "Sato-sensei",
+   "name_jp": "{佐藤|さとう}{先生|せんせい}",
+   "age": 41,
+   "role": "English teacher at Takanohara High, your supervisor there.",
+   "about": "{佐藤美咲|さとうみさき}. Precise, kind but formal, very organised. Two children in elementary school. Studied in Canada for a year. Takes you through staff-room etiquette, school events and paperwork.",
+   "speech": "Polite です・ます with you, proper keigo with the principal and parents (the best model for 尊敬語・謙譲語). Never casual with you, except one day when she's very tired.",
+   "fits": [
+    "school-youth",
+    "work-volunteering",
+    "language",
+    "society-opinions",
+    "money-work"
+   ],
+   "fixed": [
+    "Mio is one of her students.",
+    "Calls you アルベルトさん, never by a nickname."
+   ]
+  },
+  {
+   "id": "hana",
+   "name": "Hana-obāchan",
+   "name_jp": "ハナおばあちゃん",
+   "age": 84,
+   "role": "The Tanakas' neighbour, keeper of the town's stories.",
+   "about": "{山本|やまもと}ハナ. Widow, made wagashi in the shopping street for 50 years, now retired but still makes ohagi for every festival. Knows every legend, every family, every old custom. Tells Kurogane Hayato's stories. Sharp, funny, slightly nosy.",
+   "speech": "Old-fashioned, gentle casual speech, a bit of dialect, long storytelling sentences in plain past form, 〜じゃ and 〜のう now and then (mark as old/regional). Uses lots of onomatopoeia.",
+   "fits": [
+    "traditions",
+    "history-samurai",
+    "food-cooking",
+    "nature-seasons",
+    "family-childhood",
+    "feelings"
+   ],
+   "fixed": [
+    "Her late husband was {正一|しょういち}, a carpenter.",
+    "Has a cat, {タマ|たま}."
+   ]
+  },
+  {
+   "id": "ren",
+   "name": "Ren",
+   "name_jp": "{蓮|れん}",
+   "age": 26,
+   "role": "A guy you meet and start dating.",
+   "about": "{高橋蓮|たかはしれん}. Graphic designer at a small studio in Nagano city. Grew up in Nagano, studied in Tokyo, came back. Calm, a bit shy at first, dry humour, loves film photography, coffee and hiking. Into old movies.",
+   "speech": "Polite at the very start (first messages), drifts to soft casual: 〜だね, 〜かな, 〜しよっか. On LINE uses few stickers, short messages, sometimes slow to reply.",
+   "out": "Out to his close friends and his younger sister; not out at work or to his parents. Talks about it calmly but carefully. This is a realistic, respectful thread: the language of feelings, being discreet, and what being gay in a small Japanese city is like. Nothing sexual; dating storyline stays at the level of a warm TV drama.",
+   "arc": "Planned beats, in order, one beat every few appearances, never rushed: matching on a dating app and first messages → first meeting for coffee in Nagano city → texting and small misunderstandings (reading the air on LINE) → a real date (hike or film) → meeting his friends → a cultural misunderstanding or argument and making up → talking about the future (you have to leave Japan one day) → whether to tell Tanaka-san. Check the log for the current beat.",
+   "fits": [
+    "love-relationships",
+    "feelings",
+    "hobbies",
+    "tech-internet",
+    "society-opinions",
+    "entertainment"
+   ],
+   "fixed": [
+    "Lives in Nagano city, so dates happen there or he visits Takanohara on weekends.",
+    "Has a younger sister {葵|あおい} (22)."
+   ]
+  },
+  {
+   "id": "sota",
+   "name": "Sōta",
+   "name_jp": "{颯太|そうた}",
+   "age": 11,
+   "role": "Tanaka-san's grandson.",
+   "about": "{颯太|そうた}, 5th grade, lives in Nagano city, spends weekends and school holidays at the farm. Obsessed with beetles, video games and football (he wants to see Barcelona play). Asks you endless questions about Spain. Thinks you are the coolest adult he knows.",
+   "speech": "Kid's plain form, very direct: なんで？, すげー, 〜だもん, 〜しよう！, ねえねえ. Uses boys' casual (俺 when showing off, 僕 with adults). Good for simple, natural plain-form Japanese and how kids talk.",
+   "fits": [
+    "family-childhood",
+    "hobbies",
+    "entertainment",
+    "school-youth",
+    "nature-seasons",
+    "language"
+   ],
+   "fixed": [
+    "Only at the farm on weekends and holidays (check the date: no weekday visits during term).",
+    "Doesn't know or care about your love life; if Ren comes up he just thinks Ren is 'Al's friend'."
+   ]
+  },
+  {
+   "id": "mio",
+   "name": "Mio",
+   "name_jp": "{澪|みお}",
+   "age": 16,
+   "role": "A 2nd-year student at Takanohara High.",
+   "about": "{小林澪|こばやしみお}. In the brass band club (trumpet). Wants to study in Tokyo and maybe abroad; nervous about university entrance exams. Into fashion, K-pop and Japanese indie bands, always on her phone. Practises English with you, you practise Japanese with her.",
+   "speech": "Teen casual with friends: 〜っしょ, ウケる, エモい, ガチ, 〜すぎ, それな. Stiff polite with you at first, warms up over time. Keigo with teachers. Teen slang is marked in notes as slang.",
+   "fits": [
+    "school-youth",
+    "entertainment",
+    "tech-internet",
+    "feelings",
+    "language",
+    "society-opinions"
+   ],
+   "fixed": [
+    "Interactions are always in a school or public setting (class, club, school festival, a group event). Teacher-student boundaries are kept: no private one-to-one meetups, no romance topics involving the learner."
+   ]
+  },
+  {
+   "id": "hayato",
+   "name": "Kurogane Hayato",
+   "name_jp": "{黒鉄隼人|くろがねはやと}",
+   "age": "about 30 in his legends",
+   "role": "A fictional samurai of the Takanohara domain, around 1790 (Edo period).",
+   "about": "A low-ranking samurai who guarded the mountain pass above the town. In the legends: honest to a fault, bad at poetry, loved buckwheat noodles, once saved the village from a flood by breaking a dam on his lord's land without permission, and was punished for it. The town's 鷹祭り honours him. The setting is fictional but the history around him is real: daimyō and domains, sankin-kōtai, the class system, rice as tax, the Tenmei famine of the 1780s, Edo-period daily life.",
+   "speech": "Drama-style samurai speech: 拙者, 〜でござる, 〜じゃ, 〜ぬ (= ない), 〜いたす, かたじけない. ALWAYS mark these as archaic/drama speech in notes, with the modern equivalent, so the learner never uses them by accident. Vocab from his lines should mostly be modern words that are still useful.",
+   "fits": [
+    "history-samurai",
+    "traditions",
+    "society-opinions",
+    "language",
+    "feelings"
+   ],
+   "fixed": [
+    "Only appears in story lessons: a legend told by Hana-obāchan, a museum panel at the castle ruins, the festival play, a picture book read to Sōta. He never speaks with the learner directly.",
+    "Real historical facts mentioned with him must be accurate."
+   ]
+  }
+ ],
+ "guests": {
+  "rule": "About one lesson in eight brings a one-off guest (status says when). Invent someone new who fits the field: a monk at a temple, a taxi driver, a hostel guest from Osaka, an idol fan on the train, a ramen shop owner, Ren's sister, a ski instructor. Give them a name, age and one clear speech style. Put them in the lesson as \"guest\": {\"name\", \"name_jp\", \"role\"} and in the log entry. Never reuse a guest's name. A guest can return only if the user asks to promote them to the cast."
+ },
+ "log": [
+  {
+   "date": "2026-11-02",
+   "cast": [],
+   "summary": "the learner lands in Tokyo and takes trains towards Takanohara, books a seat at the ticket office.",
+   "new_facts": []
+  },
+  {
+   "date": "2026-11-03",
+   "cast": [],
+   "summary": "First evening near Takanohara: konbini dinner, heated bento.",
+   "new_facts": []
+  },
+  {
+   "date": "2026-11-04",
+   "cast": [],
+   "summary": "Gets off the bus in town and asks a local the way to the guesthouse; finds the kōban.",
+   "new_facts": []
+  }
+ ]
+}

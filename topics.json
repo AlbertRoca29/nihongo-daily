@@ -1,34 +1,466 @@
-[
- {"id": "konbini", "name": "Konbini checkout", "notes": "Paying, bags, heating food, points cards."},
- {"id": "trains", "name": "Trains, tickets and IC cards", "notes": "Topping up, ticket office, platforms."},
- {"id": "directions", "name": "Asking directions", "notes": "Asking the way, landmarks, kōban."},
- {"id": "restaurant", "name": "Ordering at a restaurant", "notes": "Seating, ordering, ticket machines, paying."},
- {"id": "hostel-checkin", "name": "Checking into a hostel", "notes": "Reservation, luggage, rules."},
- {"id": "meeting-host", "name": "Meeting your volunteer host", "notes": "Self-introduction, set phrases, first impressions."},
- {"id": "work-instructions", "name": "Receiving work instructions", "notes": "Understanding tasks, asking again, reporting back."},
- {"id": "asking-ok", "name": "Asking \"is this OK?\"", "notes": "Checking your work, asking permission."},
- {"id": "pharmacy", "name": "Pharmacy and feeling sick", "notes": "Symptoms, medicine, dosage."},
- {"id": "station-signs", "name": "Station announcements and signs", "notes": "Delays, platforms, train types."},
- {"id": "supermarket", "name": "Supermarket and food labels", "notes": "Finding items, labels, checkout."},
- {"id": "small-talk", "name": "Small talk", "notes": "Weather, hometown, compliments."},
- {"id": "farm", "name": "Farm work", "notes": "Tools, tasks, breaks, rural speech."},
- {"id": "hostel-work", "name": "Working at hostel reception", "notes": "Service phrases, guests, keigo blocks."},
- {"id": "classroom", "name": "Helping in a classroom", "notes": "Teachers, kids, staff room manners."},
- {"id": "house-rules", "name": "House rules: garbage and bath", "notes": "Sorting garbage, bath etiquette, laundry."},
- {"id": "friends-plans", "name": "Making plans with friends", "notes": "Casual invitations, meeting up, saying no."},
- {"id": "apologizing", "name": "Apologizing and thanking at work", "notes": "すみません vs ごめん vs 申し訳ありません."},
- {"id": "lost-item", "name": "Lost item / asking for help", "notes": "Lost and found, describing things."},
- {"id": "izakaya", "name": "Izakaya and drinking etiquette", "notes": "Ordering, kanpai, pouring, splitting the bill."},
- {"id": "onsen", "name": "Onsen and sento", "notes": "Rules, signs, tattoos, towels."},
- {"id": "post-office", "name": "Post office / sending packages", "notes": "Sending, forms, takkyubin."},
- {"id": "rural-bus", "name": "Bus travel in rural areas", "notes": "Seiriken tickets, timetables, getting off."},
- {"id": "hobbies", "name": "Talking about likes and hobbies", "notes": "Casual conversation."},
- {"id": "room-problem", "name": "Dealing with a problem in your room", "notes": "Broken things, noise, asking for help."},
- {"id": "phone-reservations", "name": "Phone calls and reservations", "notes": "Booking, spelling your name, numbers."},
- {"id": "shopping", "name": "Shopping and asking for sizes/prices", "notes": "Trying on, tax-free, payment."},
- {"id": "emergencies", "name": "Emergencies", "notes": "Doctor, police, earthquake, calling 110/119."},
- {"id": "goodbye-host", "name": "Saying goodbye to your host", "notes": "Thanks, keeping in touch, set phrases."},
- {"id": "culture", "name": "A cultural situation that confuses foreigners", "notes": "Free choice."},
- {"id": "review", "name": "Review", "notes": "Mix of key phrases from recent lessons. Only when the status command says it's eligible."},
- {"id": "news", "name": "News", "notes": "Written on the day from real recent news. Only when the status command says so."}
-]
+{
+ "_about": "What lessons are about. Each lesson = one field (vocabulary world) x one function (what you do with the language) x one format. 'legacy' lists the topic ids used before November 2026; they stay valid for old lessons only.",
+ "fields": [
+  {
+   "id": "getting-around",
+   "name": "Getting around",
+   "practical": true,
+   "angles": [
+    "trains, IC cards, station announcements",
+    "rural buses and timetables",
+    "taxis and giving an address",
+    "asking and giving directions",
+    "a missed connection or delay"
+   ]
+  },
+  {
+   "id": "shops-eating-out",
+   "name": "Shops and eating out",
+   "practical": true,
+   "angles": [
+    "konbini and supermarket",
+    "ordering at a restaurant or ticket machine",
+    "izakaya and splitting the bill",
+    "shopping, sizes, returns",
+    "hair salon"
+   ]
+  },
+  {
+   "id": "health-body",
+   "name": "Health and the body",
+   "practical": true,
+   "angles": [
+    "pharmacy and symptoms",
+    "seeing a doctor",
+    "body parts and injuries",
+    "sleep, stress and tiredness",
+    "onsen and sento rules"
+   ]
+  },
+  {
+   "id": "home-admin",
+   "name": "Home and paperwork",
+   "practical": true,
+   "angles": [
+    "garbage sorting and house rules",
+    "post office and parcels",
+    "SIM card, bank, city hall, residence card",
+    "a problem in your room",
+    "phone calls and bookings"
+   ]
+  },
+  {
+   "id": "work-volunteering",
+   "name": "Work and volunteering",
+   "practical": true,
+   "angles": [
+    "receiving instructions and reporting back",
+    "farm work",
+    "guesthouse reception and guests",
+    "helping in a classroom, staff room manners",
+    "apologising and thanking at work",
+    "a meeting or a part-time job interview"
+   ]
+  },
+  {
+   "id": "safety",
+   "name": "Safety and the unexpected",
+   "practical": true,
+   "angles": [
+    "earthquakes and alerts",
+    "typhoons and heavy snow",
+    "lost item, kōban, police",
+    "an accident or emergency call"
+   ]
+  },
+  {
+   "id": "food-cooking",
+   "name": "Food and cooking",
+   "practical": false,
+   "angles": [
+    "cooking at home with someone",
+    "regional and seasonal food",
+    "tastes and textures",
+    "table manners and set phrases",
+    "a recipe or a food you hate"
+   ]
+  },
+  {
+   "id": "feelings",
+   "name": "Feelings and the mind",
+   "practical": false,
+   "angles": [
+    "happy, nervous, lonely, homesick",
+    "anger and calming down",
+    "worries and comforting someone",
+    "embarrassment and pride"
+   ]
+  },
+  {
+   "id": "love-relationships",
+   "name": "Love, friendship and dating",
+   "practical": false,
+   "angles": [
+    "dating apps and first messages",
+    "a date",
+    "jealousy, misunderstandings, making up",
+    "friendship and keeping in touch",
+    "being gay in Japan"
+   ]
+  },
+  {
+   "id": "family-childhood",
+   "name": "Family and childhood",
+   "practical": false,
+   "angles": [
+    "family members and roles",
+    "childhood memories",
+    "kids' games and school days",
+    "generations and growing older"
+   ]
+  },
+  {
+   "id": "school-youth",
+   "name": "School and youth",
+   "practical": false,
+   "angles": [
+    "club activities",
+    "exams and the future",
+    "school events and festivals",
+    "teen slang and trends"
+   ]
+  },
+  {
+   "id": "nature-seasons",
+   "name": "Nature, weather and seasons",
+   "practical": false,
+   "angles": [
+    "weather and forecasts",
+    "autumn leaves, snow, cherry blossoms",
+    "animals and insects",
+    "hiking and mountains"
+   ]
+  },
+  {
+   "id": "traditions",
+   "name": "Traditions, festivals and religion",
+   "practical": false,
+   "angles": [
+    "shrines and temples",
+    "matsuri",
+    "New Year and Obon",
+    "superstitions and good-luck charms",
+    "weddings, funerals, gifts"
+   ]
+  },
+  {
+   "id": "history-samurai",
+   "name": "History and samurai",
+   "practical": false,
+   "angles": [
+    "Edo-period daily life",
+    "samurai, daimyō, castles",
+    "famous eras: Heian to Meiji",
+    "a local legend"
+   ]
+  },
+  {
+   "id": "entertainment",
+   "name": "Anime, music, games and sports",
+   "practical": false,
+   "angles": [
+    "anime and manga",
+    "karaoke and music",
+    "games",
+    "baseball, sumo, football",
+    "films and dramas"
+   ]
+  },
+  {
+   "id": "tech-internet",
+   "name": "Phones, apps and social media",
+   "practical": false,
+   "angles": [
+    "LINE etiquette and stickers",
+    "social media and posting",
+    "online shopping and apps",
+    "tech problems"
+   ]
+  },
+  {
+   "id": "money-work",
+   "name": "Money, jobs and ambitions",
+   "practical": false,
+   "angles": [
+    "salaries, prices and saving",
+    "Japanese work culture vs Spain",
+    "dream jobs and careers",
+    "part-time jobs"
+   ]
+  },
+  {
+   "id": "society-opinions",
+   "name": "Society and opinions",
+   "practical": false,
+   "angles": [
+    "comparing Japan and Spain",
+    "social issues: ageing, rural towns, LGBTQ rights",
+    "rules and manners debates",
+    "news and current topics"
+   ]
+  },
+  {
+   "id": "language",
+   "name": "Language and communication",
+   "practical": false,
+   "angles": [
+    "dialects: Kansai-ben, Nagano",
+    "slang and loanwords",
+    "keigo in real life",
+    "misunderstandings and reading the air",
+    "learning Japanese"
+   ]
+  },
+  {
+   "id": "hobbies",
+   "name": "Hobbies and free time",
+   "practical": false,
+   "angles": [
+    "sports and the gym",
+    "travel plans",
+    "photography, reading, crafts",
+    "weekends and days off"
+   ]
+  }
+ ],
+ "functions": [
+  {
+   "id": "requesting",
+   "name": "Asking and requesting"
+  },
+  {
+   "id": "describing",
+   "name": "Describing people, places and things"
+  },
+  {
+   "id": "narrating",
+   "name": "Telling what happened"
+  },
+  {
+   "id": "comparing",
+   "name": "Comparing"
+  },
+  {
+   "id": "opinions",
+   "name": "Giving and asking opinions, agreeing and disagreeing"
+  },
+  {
+   "id": "feelings",
+   "name": "Expressing feelings"
+  },
+  {
+   "id": "hypotheticals",
+   "name": "What-ifs and conditions"
+  },
+  {
+   "id": "advice",
+   "name": "Advice and suggestions"
+  },
+  {
+   "id": "reasons",
+   "name": "Explaining reasons and causes"
+  },
+  {
+   "id": "hearsay",
+   "name": "Reporting what you heard or read"
+  },
+  {
+   "id": "planning",
+   "name": "Plans, intentions and decisions"
+  },
+  {
+   "id": "politeness",
+   "name": "Keigo, thanks and apologies"
+  },
+  {
+   "id": "reacting",
+   "name": "Reacting, aizuchi and small talk"
+  }
+ ],
+ "formats": [
+  {
+   "id": "dialogue",
+   "name": "Dialogue",
+   "lines": [
+    4,
+    6
+   ],
+   "me": true,
+   "about": "A spoken conversation; you take part."
+  },
+  {
+   "id": "line",
+   "name": "LINE chat",
+   "lines": [
+    4,
+    8
+   ],
+   "me": true,
+   "about": "A LINE message thread; casual written Japanese, short messages, an optional time per message."
+  },
+  {
+   "id": "story",
+   "name": "Story",
+   "lines": [
+    4,
+    6
+   ],
+   "me": false,
+   "about": "One narrator tells something (a memory, a legend, what happened yesterday). Each line is one or two sentences."
+  },
+  {
+   "id": "text",
+   "name": "Real text",
+   "lines": [
+    4,
+    8
+   ],
+   "me": false,
+   "about": "A written text to decode: a notice, menu, sign, flyer, school letter, museum panel, post. Each line is one part of it; speaker is the part's label."
+  }
+ ],
+ "special": [
+  {
+   "id": "review",
+   "name": "Review",
+   "notes": "Mix of key phrases and grammar from recent lessons. Only when status says it's eligible."
+  },
+  {
+   "id": "news",
+   "name": "News",
+   "notes": "Written on the day from real recent news. Only when status says so."
+  }
+ ],
+ "legacy": [
+  {
+   "id": "konbini",
+   "name": "Konbini checkout"
+  },
+  {
+   "id": "trains",
+   "name": "Trains, tickets and IC cards"
+  },
+  {
+   "id": "directions",
+   "name": "Asking directions"
+  },
+  {
+   "id": "restaurant",
+   "name": "Ordering at a restaurant"
+  },
+  {
+   "id": "hostel-checkin",
+   "name": "Checking into a hostel"
+  },
+  {
+   "id": "meeting-host",
+   "name": "Meeting your volunteer host"
+  },
+  {
+   "id": "work-instructions",
+   "name": "Receiving work instructions"
+  },
+  {
+   "id": "asking-ok",
+   "name": "Asking \"is this OK?\""
+  },
+  {
+   "id": "pharmacy",
+   "name": "Pharmacy and feeling sick"
+  },
+  {
+   "id": "station-signs",
+   "name": "Station announcements and signs"
+  },
+  {
+   "id": "supermarket",
+   "name": "Supermarket and food labels"
+  },
+  {
+   "id": "small-talk",
+   "name": "Small talk"
+  },
+  {
+   "id": "farm",
+   "name": "Farm work"
+  },
+  {
+   "id": "hostel-work",
+   "name": "Working at hostel reception"
+  },
+  {
+   "id": "classroom",
+   "name": "Helping in a classroom"
+  },
+  {
+   "id": "house-rules",
+   "name": "House rules: garbage and bath"
+  },
+  {
+   "id": "friends-plans",
+   "name": "Making plans with friends"
+  },
+  {
+   "id": "apologizing",
+   "name": "Apologizing and thanking at work"
+  },
+  {
+   "id": "lost-item",
+   "name": "Lost item / asking for help"
+  },
+  {
+   "id": "izakaya",
+   "name": "Izakaya and drinking etiquette"
+  },
+  {
+   "id": "onsen",
+   "name": "Onsen and sento"
+  },
+  {
+   "id": "post-office",
+   "name": "Post office / sending packages"
+  },
+  {
+   "id": "rural-bus",
+   "name": "Bus travel in rural areas"
+  },
+  {
+   "id": "hobbies",
+   "name": "Talking about likes and hobbies"
+  },
+  {
+   "id": "room-problem",
+   "name": "Dealing with a problem in your room"
+  },
+  {
+   "id": "phone-reservations",
+   "name": "Phone calls and reservations"
+  },
+  {
+   "id": "shopping",
+   "name": "Shopping and asking for sizes/prices"
+  },
+  {
+   "id": "emergencies",
+   "name": "Emergencies"
+  },
+  {
+   "id": "goodbye-host",
+   "name": "Saying goodbye to your host"
+  },
+  {
+   "id": "culture",
+   "name": "A cultural situation that confuses foreigners"
+  }
+ ]
+}

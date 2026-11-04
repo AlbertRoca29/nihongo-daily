@@ -1,65 +1,115 @@
 # Writing lessons for Nihongo Line
 
-You add one short Japanese lesson per day to this app. The learner's goals come from whoever runs you (the task prompt). If none is given, assume a learner studying for JLPT N3 who is preparing to volunteer and travel in Japan.
+You add one short Japanese lesson per day to this app. The learner is studying for JLPT N3 and, in the story, lives for a few months in a small Japanese mountain town (see `cast.json`). His personal profile comes from the task prompt: it is private, never write it into the repo (lessons may use his name). He wants to learn **all of Japanese**, not only survival phrases: practical situations are one day in three, the rest covers every part of life, feelings, culture and ideas. The task prompt may add goals; follow it if it does.
 
-Only touch `lessons/` and, when a new topic is truly needed, `topics.json`. Never change `index.html`, `sw.js`, the manifest, icons or `curriculum/` unless the user asks.
+Only touch `lessons/` and `cast.json` (the story log), and `topics.json` when a new angle is truly needed. Never change `index.html`, `sw.js`, the manifest, icons or `curriculum/` unless the user asks.
 
-Write **only today's lesson**. Never write lessons for future dates: each lesson follows the kanji track and avoids words already taught, so it must be written on the day.
+Write **only today's lesson**. Never write lessons for future dates: each lesson follows the kanji and grammar tracks, the story log, and avoids words already taught, so it must be written on the day.
 
 ## Level: N3, without assuming it's known
 
-- Lessons are pitched at N3: N3 grammar and vocabulary used naturally in the phrases and dialogue.
-- Assume N5 is known and N4 mostly known. Treat every N3 word and kanji as new: it gets furigana everywhere and is explained the first time.
-- Keep it short and spoken. N3 does not mean long or formal sentences.
+- Pitched at N3: N3 grammar and vocabulary used naturally.
+- Assume N5 is known and N4 mostly known. Treat every N3 word and kanji as new: furigana everywhere, explained the first time.
+- Keep it short. N3 does not mean long or formal sentences.
 
 ## The daily run
 
-1. `python3 scripts/lessons.py status` and follow its DECISION line. It tells you whether today's lesson already exists, whether a news lesson is due, which topics were used least recently, the next kanji on the N3 track, and every kanji and word already taught.
-2. Write the lesson (rules below) as `lessons/YYYY-MM-DD.json` and add `{"id", "topic", "category"}` to `lessons/index.json`, keeping it sorted.
-3. `python3 scripts/lessons.py check` must print `OK`. Never push while it fails: a broken `index.json` takes down the whole app.
-4. Commit `Lesson YYYY-MM-DD: <topic>` and push to `master`. If the push is rejected, `git pull --rebase origin master` and push again.
-5. Report the day's topic, and whether it was a news lesson.
+1. `python3 scripts/lessons.py status` and follow its DECISION line. It gives: whether today's lesson exists, news and review state, today's **field**, **function** and **format**, the next **grammar** point, the next N3 kanji, which characters appeared when, whether a **guest** is due, the **story so far**, canon facts, and every kanji and word already taught.
+2. Read `cast.json` (the characters and world) and the last ~5 lessons, so you continue the story and don't repeat phrases.
+3. Write the lesson (rules below) as `lessons/YYYY-MM-DD.json`. Add `{"id", "topic", "category", "function", "format"}` to `lessons/index.json`, keeping it sorted.
+4. Append today's entry to `log` in `cast.json`: `{"date", "cast": [ids], "summary": "one or two sentences of what happened", "new_facts": ["anything you invented that must stay true"]}`. Add `"guest": "Name (role)"` when there was one.
+5. `python3 scripts/lessons.py check` must print `OK`. Never push while it fails: a broken `index.json` takes down the whole app.
+6. Commit `Lesson YYYY-MM-DD: <topic>` and push to `master`. If the push is rejected, `git pull --rebase origin master` and push again.
+7. Report the topic, field, function, format, grammar point and who was in it.
 
 If today's lesson already exists and no news is due, write nothing.
 
-## Choosing the topic
+## What a lesson is about: field × function × format
 
-- Pick the least recently used topic from `topics.json` (status lists them). Take a fresh angle if it was covered before: new situation, new phrases, new sign kanji. Read the last ~10 lessons so you don't repeat phrases.
-- `review`: only when status says it's allowed. Mix the most useful phrases from recent lessons into a new situation.
-- A new topic is fine if it's clearly useful for life in Japan: add it to `topics.json` with a short kebab-case id.
+Defined in `topics.json`. Status picks the least recently used of each; follow it.
+- **Field** (`category`): the vocabulary world, e.g. `love-relationships`, `history-samurai`, `health-body`. Every third regular lesson is a practical field (status says "PRACTICAL day"). Each field lists `angles`; pick one not used recently, or a new one in the same spirit.
+- **Function** (`function`): what you do with the language: narrating, comparing, giving opinions, reporting hearsay, keigo, etc. The phrases and dialogue must really practise it.
+- **Format** (`format`): `dialogue`, `line`, `story` or `text` (rules below). Status suggests one; you may pick another if the field clearly suits it better (a legend → story), never the same as yesterday.
+- **Grammar**: the next point on `curriculum/grammar.json` (status names it). The lesson must use it naturally in at least one or two lines. Combine it with the function; they don't have to be the same thing.
+
+Make the combination feel like one real moment, not a checklist: "Yuki tells you on LINE that she heard her boss is quitting" (money-work × hearsay × line × 〜らしい).
+
+## The cast and the story
+
+`cast.json` is canon. Read each character's `about`, `speech`, `fixed` and the log before writing.
+- Pick 1–2 characters whose `fits` include today's field (or who make sense in the scene). Rotate: prefer someone who hasn't appeared for a while. Respect where people are (Yuki is in Tokyo, Ren in Nagano city, Sōta only on weekends and school holidays, Hayato only in stories).
+- Each character speaks in their own voice (Kenta in Kansai-ben, Tanaka-san with a bit of Nagano dialect, Mio with teen slang, Sato-sensei in keigo, Hayato in drama samurai speech). When a line uses dialect, slang or archaic forms, the `register` says so (`dialect`, `slang`, `archaic`) and the `note` gives the standard Japanese. Never let the learner's own lines use archaic speech.
+- **Continuity**: the story moves forward with the real calendar. Small things carry over (a promise made, a cold Tanaka-san had, Ren's last message). Never contradict the log or `new_facts`; when you invent a fact (a name, a pet, a place) add it to `new_facts`.
+- **Ren's storyline** follows his `arc` beats in order, one beat every few appearances, no faster. It's warm and real, like a TV drama: feelings, shyness, misunderstandings, being discreet in a small town. Nothing sexual.
+- **Mio** (16): always school or group settings; no romance topics involving the learner.
+- **Guests**: when status says a guest is due, invent a new one-off character (name, age, one clear speech style) who fits the field, and put `"guest": {"name", "name_jp", "role"}` in the lesson. Never reuse a guest's name.
+- The learner is "You" (`"me": true`). Characters address him by the name in the task prompt, as described in `world.you`.
+
+## Formats
+
+All four keep their lines in `dialogue`, so vocab `src` (`d0`, `d1`…) works the same.
+
+| Format | Lines | Rules |
+|---|---|---|
+| `dialogue` | 4–6 | Spoken conversation. `speaker` is the character's `name` or `You`; `"me": true` on the learner's lines. |
+| `line` | 4–8 | A LINE thread. Short written messages, casual written style (abbreviations, ｗ, emoji words, stamps written as （スタンプ：…）). Optional `time` per line (`"21:04"`). At least one `"me": true`. |
+| `story` | 4–6 | One or two narrators tell something: a memory, a legend, yesterday's disaster. Each line is 1–2 sentences, plain or です/ます past narration. No `me` needed. |
+| `text` | 4–8 | A written text to decode: notice, menu, flyer, school letter, museum panel, shop sign, social media post, email. `speaker` is the part's label (`Title`, `Rule 1`, `Price`, `Note`). Add `"text_title"` (shown as the header, with furigana markup). No `me` needed. |
 
 ## News lessons
 
 About three a month, on no fixed day. The status line decides:
-- **OPTIONAL** (8–9 days since the last one): write a news lesson only if you find a good story; otherwise a regular lesson.
-- **DUE** (10+ days): always write one. If a regular lesson was already written for today, run `python3 scripts/lessons.py bump <today>` first: it moves that lesson to the first free day after the last lesson, so nothing is lost.
+- **OPTIONAL** (8–9 days since the last one): write a news lesson only if you find a good story; otherwise the regular lesson.
+- **DUE** (10+ days): always write one. If a regular lesson was already written for today, run `python3 scripts/lessons.py bump <today>` first.
 
 Rules for the story:
-- Real Japan news from the **last 10 days**, found with web search in Japanese and English. Never pre-write news lessons for future dates.
-- Useful or interesting for someone about to live and travel in Japan: daily life, travel, transport, prices, seasons, culture, safety, rules for visitors. Nothing tragic or graphic.
+- Real Japan news from the **last 10 days**, found with web search in Japanese and English.
+- Interesting for someone living in Japan: daily life, travel, prices, seasons, culture, technology, sport, society, rules. Nothing tragic or graphic.
 - Confirmed by at least **two reliable sources** (NHK, Kyodo, Jiji, Asahi, Mainichi, Yomiuri, Japan Times, Nippon.com, official sites). Fetch them; get dates, numbers and names exactly right. Never invent facts.
-- `"news": true`, `"category": "news"`, topic starts with `News:`. `context` summarises the story in 2–3 English sentences with its date and ends with `Source: <outlet>`. Phrases, dialogue, kanji, tip and challenge all relate to the story.
+- `"news": true`, `"category": "news"`, topic starts with `News:`. `context` summarises the story in 2–3 English sentences with its date and ends with `Source: <outlet>`.
+- It still has a function, format and the next grammar point. A cast member can bring up the news (Kenta reading it at reception, Yuki on LINE), or use the `text` format for a simplified article.
+
+## Review lessons
+
+When status allows: `"category": "review"`, a new scene with the cast that reuses the most useful phrases from recent lessons. Its `grammar` section revisits one point already taught (the check requires that). Vocab and kanji are still new.
 
 ## Lesson format
 
-Follow `lessons/2026-11-02.json` as the reference. Fields:
+`lessons/2026-11-02.json` shows the old core fields; new lessons add `function`, `format`, `cast` and `grammar` (the field goes in `category`). Fields:
 
 | Field | Content |
 |---|---|
-| `topic` | Short English name (same as in index.json) |
-| `category` | A topic id from `topics.json` (same as in index.json) |
+| `topic` | Short English name (same as in index.json), e.g. `Yuki's terrible date` |
+| `category` | The field id (or `news` / `review`), same as in index.json |
+| `function` | A function id from `topics.json` |
+| `format` | `dialogue`, `line`, `story` or `text` |
+| `cast` | List of character ids from `cast.json` |
+| `guest` | Optional `{name, name_jp, role}` |
 | `title_jp` | Short Japanese title |
-| `context` | 1–2 English sentences setting the scene for the trip |
-| `phrases` | Exactly 5 × `{jp, en, register, note?}`; register is `polite`, `casual` or `neutral`. Usually 4 polite + 1 casual |
-| `dialogue_setting` | One English line: where the dialogue happens |
-| `dialogue` | 4–6 × `{speaker, jp, en, me?}`; `"me": true` on the learner's lines; speaker is `You` or a short role (`Staff`, `Host`, `Friend`) |
-| `kanji` | `{kanji, reading, romaji, meaning, where, related?}`: a word seen on real signs or labels for this topic |
+| `context` | 1–2 English sentences setting today's scene in the story |
+| `phrases` | Exactly 5 × `{jp, en, register, note?}`; register is `polite`, `casual`, `neutral`, `dialect`, `slang` or `archaic`. The mix follows the scene: casual with friends, polite with strangers and at work |
+| `dialogue_setting` | One English line: where/how this happens |
+| `dialogue` | The main text in today's format (see Formats) |
+| `text_title` | Only for `text` format |
+| `grammar` | Today's grammar point (see below) |
+| `kanji` | `{kanji, reading, romaji, meaning, where, related?}`: a word you'd really see written in this world (sign, label, menu, scroll, app screen) |
 | `tip` | `{mark, title, body}`: `mark` is one kanji shown as a stamp; body is 2–4 sentences textbooks don't teach |
-| `challenge` | `{prompt, hint, model_answer}`: a short task to answer in Japanese |
-| `vocab` | 8–10 words to learn, taken from today's phrases and dialogue (see below) |
-| `kanji_study` | Exactly 2 kanji to learn (see below) |
-| `extras` | Optional bonus sections `{title, title_jp, intro, items: [{jp, en, note?}]}`; 2–3 of them, for the learner who wants more |
+| `challenge` | `{prompt, hint, model_answer}`: a short task to answer in Japanese, ideally replying to a character |
+| `vocab` | 8–10 words from today's phrases and main text |
+| `kanji_study` | Exactly 2 kanji to learn |
+| `extras` | Optional bonus sections `{title, title_jp, intro, items: [{jp, en, note?}]}`; 2–3 of them |
 | `news` | `true` only on news lessons |
+
+## Grammar
+
+`grammar`: `{id, pattern, level, meaning, form, explanation, src, examples, quiz}`
+- `id`, `pattern`, `level`, `meaning`: from `curriculum/grammar.json` (the `pattern` may get furigana markup).
+- `form`: how to build it, e.g. `{動詞|どうし}た{形|けい} + ばかり`, one line, with a mini example.
+- `explanation`: 2–3 plain English sentences: when people use it, the nuance, the classic mistake, how it differs from the similar point learners confuse it with.
+- `src`: the lines of today's lesson that use it (`["d2", "p1"]`), at least one.
+- `examples`: 1–3 extra `{jp, en}` sentences in other situations, so the pattern isn't tied to one scene.
+- `quiz`: `{question, en, options, explain}`. `question` is a Japanese sentence with `＿＿` where the answer goes; `en` its translation; `options` 4 forms, **the right one first** (the app shuffles), the wrong ones plausible (wrong conjugation, the similar pattern); `explain` one line on why.
+- Never teach the same grammar point twice (the check refuses it), except in review lessons.
 
 ## Vocab
 
@@ -67,10 +117,10 @@ The learner stars the words he wants; starred words come back in the app's warm-
 
 Each item: `{jp, reading, en, level, src, surface, note?}`
 - `jp`: dictionary form with furigana, e.g. `{渡|わた}る`. `reading`: the whole word in kana.
-- `level`: `N5`–`N1`. Mostly `N3` (at least half), the rest `N4`. `N5` only if truly key.
-- `src`: the line it comes from, `p0`–`p4` (phrases) or `d0`… (dialogue lines).
+- `level`: `N5`–`N1`. Mostly `N3` (at least half), the rest `N4`. `N5` only if truly key. An `N2` word is fine when the field needs it (history, feelings), at most one.
+- `src`: the line it comes from, `p0`–`p4` (phrases) or `d0`… (main text lines).
 - `surface`: the exact form in that line without furigana, e.g. `渡った`. The check verifies it's there.
-- Never repeat a word taught in an earlier lesson (status lists them; the check refuses repeats).
+- Never repeat a word taught in an earlier lesson (status lists them; the check refuses repeats). Don't pick archaic words as vocab.
 
 ## Kanji study
 
@@ -81,7 +131,7 @@ Exactly 2 kanji, recognition only (reading and meaning):
 Each: `{kanji, track, on, kun, meaning, words, decoys}`
 - `on` in katakana, `kun` in hiragana with okurigana in brackets (`ま(がる)`); several readings joined with `・`. Leave one empty only if the kanji truly has none in common use.
 - `words`: 2–3 common words using it `{jp, reading, en}`. Put the most useful first: the quiz asks its reading. Use today's word for the `lesson` kanji.
-- `decoys`: `{meanings: [3 wrong meanings], readings: [3 wrong readings of words[0]]}`. Make them plausible: related meanings, readings a learner might really guess (wrong voicing, long vs short vowel, the other on-reading).
+- `decoys`: `{meanings: [3 wrong meanings], readings: [3 wrong readings of words[0]]}`. Make them plausible.
 - Never teach a kanji twice (the check refuses repeats).
 
 ## Furigana markup
@@ -93,6 +143,7 @@ Every Japanese string (except `kanji.kanji` and `kanji.reading`) marks each kanj
 
 ## Writing quality
 
-- Natural spoken Japanese, the kind people really say in that situation, not textbook sentences.
-- Notes explain nuance in one line: when to use it, what you'll hear back, a common mistake.
-- English is plain and short. Core lesson (warm-up, phrases, dialogue, sign kanji, tip, words, kanji quiz, challenge) under 10 minutes; extras are on top.
+- Natural Japanese, the kind these people really say or write, not textbook sentences. Each character sounds like themselves.
+- Notes explain nuance in one line: when to use it, what you'll hear back, a common mistake, the standard form of dialect or slang.
+- English is plain and short. Core lesson under 12 minutes; extras are on top.
+- Vary everything: openings, scenes, who speaks first, the kind of challenge. If it feels like yesterday's lesson with new nouns, change the angle.
