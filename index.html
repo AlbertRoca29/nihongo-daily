@@ -187,6 +187,14 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
 .vrow:first-child{padding-top:0}
 .vrow .src{font-family:var(--jp);font-size:13px;color:var(--muted);margin-top:2px}
 .kbig{font-family:var(--mincho);font-size:64px;line-height:1.1}
+.pad{display:flex;flex-direction:column;gap:8px;align-items:center}
+.pad-box{position:relative;width:min(100%,300px);aspect-ratio:1;border-radius:16px;background:var(--soft);overflow:hidden;touch-action:none}
+.pad-box .guide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--mincho);font-size:min(220px,62vw);line-height:1;color:var(--ink);opacity:.12;pointer-events:none;user-select:none}
+.pad-box .guide.off{opacity:0}
+.pad-box svg.grid{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;color:var(--muted);opacity:.35}
+.pad-box canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none}
+.pad-tools{display:flex;gap:8px;width:min(100%,300px)}
+.pad-tools .btn{flex:1;white-space:nowrap;min-height:40px;padding:0 12px;font-size:14px}
 .kread{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;font-size:15px}
 .kread b{font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.05em;padding-top:2px}
 .opts{display:grid;gap:8px}
@@ -425,7 +433,7 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
         const pick = opts[+b.dataset.o];
         box.querySelectorAll("[data-o]").forEach((bb, i) => { bb.disabled = true; if (opts[i].ok) bb.classList.add("right"); });
         if (pick.ok) right++; else { b.classList.add("wrong"); if (q.onWrong) q.onWrong(); }
-        box.querySelector("#qafter").innerHTML = `${!pick.ok && q.wrongNote ? `<p class="note" style="margin:4px 0 0">${q.wrongNote}</p>` : ""}<button class="btn primary" id="qnext" style="width:100%;margin-top:8px">${qi === qs.length - 1 ? "Finish" : "Next question"}</button>`;
+        box.querySelector("#qafter").innerHTML = `${q.note ? `<p class="note" style="margin:4px 0 0">${q.note}</p>` : ""}${!pick.ok && q.wrongNote ? `<p class="note" style="margin:4px 0 0">${q.wrongNote}</p>` : ""}<button class="btn primary" id="qnext" style="width:100%;margin-top:8px">${qi === qs.length - 1 ? "Finish" : "Next question"}</button>`;
         box.querySelector("#qnext").onclick = () => { qi++; show(); };
       });
     };
@@ -672,6 +680,8 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
           </div>
           <div class="kread">${k.on ? `<b>On</b><span style="font-family:var(--jp)">${esc(k.on)}</span>` : ""}${k.kun ? `<b>Kun</b><span style="font-family:var(--jp)">${esc(k.kun)}</span>` : ""}</div>
           <div style="display:flex;flex-direction:column;gap:6px">${(k.words || []).map(w => `<div class="row" style="justify-content:flex-start;gap:10px"><span class="jp-mid" style="line-height:1.8">${ruby(w.jp)}</span><span class="note">${esc(w.en)}</span></div>`).join("")}</div>
+          <button class="btn ghost" data-draw="${esc(k.kanji)}" style="align-self:flex-start;min-height:40px;font-size:14px">✍️ Draw it · optional</button>
+          <div class="pad" hidden></div>
         </div>`).join("")}
         <p class="note" style="margin:0">Next: a quick quiz on these two. Wrong answers go into your review automatically.</p>
       </div>`;
@@ -756,7 +766,15 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
     if (st.type === "warm") wireWarm();
     if (st.type === "words") $("vgo").onclick = () => runVocabQuiz();
     if (st.type === "grammar" && $("ggo")) $("ggo").onclick = runGrammarQuiz;
-    if (st.type === "kstudy") rememberKanji(L.kanji_study);
+    if (st.type === "kstudy"){
+      rememberKanji(L.kanji_study);
+      document.querySelectorAll("[data-draw]").forEach(b => b.onclick = () => {
+        const pad = b.nextElementSibling;
+        if (!pad.hidden){ pad.hidden = true; b.textContent = "✍️ Draw it · optional"; return; }
+        pad.hidden = false; b.textContent = "Hide drawing pad";
+        if (!pad.dataset.ready){ makePad(pad, b.dataset.draw); pad.dataset.ready = "1"; }
+      });
+    }
     if (st.type === "kquiz") runKanjiQuiz();
     if (st.type === "challenge") wireChallenge();
     if (st.type === "done") $("restart").onclick = () => { idx = 0; renderStep(); };
@@ -832,19 +850,45 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
       $("vquiz").innerHTML = `<div class="card"><b>${r}/${n} right.</b> <span class="note">Words you missed were saved for review.</span></div>`;
     });
   }
+  /* optional practice pad: trace over a faint guide, then hide it and draw from memory */
+  function makePad(el, kanji){
+    el.innerHTML = `<div class="pad-box">
+        <svg class="grid" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M50 0V100M0 50H100" stroke="currentColor" stroke-width=".6" stroke-dasharray="3 3" fill="none"/></svg>
+        <div class="guide">${esc(kanji)}</div><canvas></canvas></div>
+      <div class="pad-tools"><button class="btn ghost" data-g>Guide off</button><button class="btn ghost" data-u>Undo</button><button class="btn ghost" data-c>Clear</button></div>
+      <p class="note" style="margin:0;text-align:center">Trace it first, then hide the guide and write it from memory.</p>`;
+    const box = el.querySelector(".pad-box"), cv = el.querySelector("canvas"), ctx = cv.getContext("2d"), guide = el.querySelector(".guide");
+    let strokes = [], cur = null;
+    const fit = () => { const r = box.getBoundingClientRect(), dpr = window.devicePixelRatio || 1; cv.width = r.width * dpr; cv.height = r.height * dpr; redraw(); };
+    const redraw = () => {
+      const w = cv.width; ctx.clearRect(0, 0, w, w);
+      ctx.strokeStyle = getComputedStyle(document.body).color; ctx.lineCap = ctx.lineJoin = "round"; ctx.lineWidth = w * 0.035;
+      strokes.forEach(st => { ctx.beginPath(); st.forEach((p, i) => i ? ctx.lineTo(p[0] * w, p[1] * w) : ctx.moveTo(p[0] * w, p[1] * w)); if (st.length === 1) ctx.lineTo(st[0][0] * w + .1, st[0][1] * w); ctx.stroke(); });
+    };
+    const pt = e => { const r = cv.getBoundingClientRect(); return [(e.clientX - r.left) / r.width, (e.clientY - r.top) / r.height]; };
+    cv.onpointerdown = e => { e.preventDefault(); cv.setPointerCapture(e.pointerId); cur = [pt(e)]; strokes.push(cur); redraw(); };
+    cv.onpointermove = e => { if (!cur) return; e.preventDefault(); cur.push(pt(e)); redraw(); };
+    cv.onpointerup = cv.onpointercancel = () => { cur = null; };
+    el.querySelector("[data-g]").onclick = e => { const off = guide.classList.toggle("off"); e.currentTarget.textContent = off ? "Guide on" : "Guide off"; };
+    el.querySelector("[data-u]").onclick = () => { strokes.pop(); redraw(); };
+    el.querySelector("[data-c]").onclick = () => { strokes = []; redraw(); };
+    fit();
+  }
   function runKanjiQuiz(){
     const L = lesson, ks = L.kanji_study, qs = [];
     rememberKanji(ks);
-    const others = [...(L.vocab || []).map(v => plain(v.jp)), ...ks.flatMap(k => (k.words || []).map(w => plain(w.jp)))];
+    const others = [...(L.vocab || []), ...ks.flatMap(k => k.words || [])].filter(w => w && w.reading).map(w => ({jp:plain(w.jp), reading:w.reading, ruby:w.jp}));
     ks.forEach(k => {
       const key = "k:" + k.kanji, miss = () => { cardDefs[key] = kanjiDef(L, k); addCard(key); };
       const w0 = (k.words || [])[0], d = k.decoys || {};
       qs.push({ask:"What does this kanji mean?", prompt:esc(k.kanji), cls:"k", options:[k.meaning, ...(d.meanings || [])], onWrong:miss, wrongNote:"Added to your review."});
       if (w0 && (d.readings || []).length) qs.push({ask:"How do you read it?", prompt:esc(plain(w0.jp)), jpo:true, options:[w0.reading, ...d.readings], onWrong:miss, wrongNote:`${ruby(w0.jp)} = ${esc(w0.en)}. Added to your review.`});
-      const withK = (k.words || []).map(w => plain(w.jp));
-      const without = [...new Set(others.filter(o => !o.includes(k.kanji)))];
-      if (withK.length && without.length >= 3) qs.push({ask:`Which word uses ${k.kanji}?`, prompt:esc(k.kanji), cls:"k", jpo:true,
-        options:[withK[withK.length - 1], ...shuffle(without).slice(0, 3)], onWrong:miss, wrongNote:"Added to your review."});
+      // options in kana only, so the answer can't be spotted by looking for the character
+      const target = (k.words || []).filter(w => w.reading).slice(-1)[0];
+      const without = target ? [...new Map(others.filter(o => !o.jp.includes(k.kanji) && o.reading !== target.reading).map(o => [o.reading, o])).values()] : [];
+      if (target && without.length >= 3) qs.push({ask:`Which word is written with ${k.kanji}?`, prompt:esc(k.kanji), cls:"k", jpo:true,
+        options:[target.reading, ...shuffle(without).slice(0, 3).map(o => o.reading)], onWrong:miss,
+        wrongNote:"Added to your review.", note:`${ruby(target.jp)} = ${esc(target.en)}`});
     });
     runQuiz($("kq"), qs, (r, n) => {
       $("kq").innerHTML = `<div class="card" style="display:flex;flex-direction:column;gap:8px;align-items:flex-start">
