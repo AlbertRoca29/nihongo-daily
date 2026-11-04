@@ -92,6 +92,17 @@ rt{font-size:.5em;color:var(--muted);font-weight:500;letter-spacing:0;transition
 .furi-off rt{opacity:0}
 .furi-off ruby.peek rt{opacity:1}
 .furi-off ruby{cursor:pointer;border-bottom:1px dotted var(--muted)}
+/* hard words: underlined, tap for meaning */
+.gl,.furi-off ruby.gl{cursor:pointer;border-bottom:2px dotted color-mix(in srgb,var(--accent) 70%,transparent);border-radius:2px;-webkit-tap-highlight-color:transparent;transition:background .15s}
+.gl.gl-on{background:color-mix(in srgb,var(--accent) 16%,transparent);border-bottom-style:solid}
+.gl:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.line.me .gl{border-bottom-color:rgba(255,255,255,.8)}
+.line.me .gl.gl-on{background:rgba(255,255,255,.22)}
+.gpop{position:fixed;z-index:60;box-sizing:border-box;background:var(--card);color:var(--ink);border-radius:16px;padding:12px 14px;box-shadow:0 10px 30px rgba(0,0,0,.18),0 0 0 1px var(--rule);display:flex;flex-direction:column;gap:4px;animation:in .15s ease}
+.gpop-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.gpop-w{font-family:var(--jp);font-size:22px;font-weight:700;line-height:1.3}
+.gpop-r{font-family:var(--jp);font-size:14px;color:var(--muted)}
+.gpop-m{font-size:16px;font-weight:600;line-height:1.35}
 
 .jp-big{font-family:var(--jp);font-size:clamp(21px,6.4vw,26px);font-weight:700;line-height:1.95;word-break:keep-all;overflow-wrap:anywhere}
 .jp-mid{font-family:var(--jp);font-size:18px;font-weight:500;line-height:2;overflow-wrap:anywhere}
@@ -297,8 +308,18 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
 (() => {
   const $ = id => document.getElementById(id);
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-  const ruby = s => esc(s).replace(/\{([^|{}]+)\|([^{}]+)\}/g, "<ruby>$1<rt>$2</rt></ruby>");
-  const plain = s => String(s ?? "").replace(/\{([^|{}]+)\|[^{}]+\}/g, "$1");
+  /* Markup: {漢字|かんじ} = furigana; {漢字|かんじ|meaning} or {かな||meaning} = a hard word you can tap for its meaning. */
+  const MARK = /\{([^|{}]+)\|([^|{}]*)(?:\|([^{}]+))?\}/g;
+  const glossSrc = [];   // the source sentence of each rendered string, so a tapped word can be saved with its sentence
+  const ruby = s => {
+    const raw = String(s ?? ""), si = raw.includes("|") ? glossSrc.push(raw) - 1 : -1;
+    return esc(raw).replace(MARK, (m, b, r, g) => {
+      if (!g) return r ? `<ruby>${b}<rt>${r}</rt></ruby>` : m;
+      const a = `class="gl" tabindex="0" role="button" data-gl="${g}" data-r="${r}" data-si="${si}"`;
+      return r ? `<ruby ${a}>${b}<rt>${r}</rt></ruby>` : `<span ${a}>${b}</span>`;
+    });
+  };
+  const plain = s => String(s ?? "").replace(MARK, "$1");
   const store = {
     get(k, d){ try{ const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); }catch{ return d; } },
     set(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch{} }
@@ -322,6 +343,48 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
     if (r && !furi) r.classList.toggle("peek");
   });
   applyFuri();
+
+  /* ---------- hard-word glosses: tap an underlined word for its meaning ---------- */
+  const gpop = document.createElement("div");
+  gpop.className = "gpop"; gpop.id = "gpop"; gpop.hidden = true; gpop.setAttribute("role", "dialog");
+  document.body.appendChild(gpop);
+  let gFor = null;
+  const hideGloss = () => { if (gFor) gFor.classList.remove("gl-on"); gpop.hidden = true; gFor = null; };
+  const showGloss = el => {
+    if (gFor === el){ hideGloss(); return; }
+    hideGloss();
+    const base = el.tagName === "RUBY" ? Array.from(el.childNodes).filter(n => n.nodeName !== "RT").map(n => n.textContent).join("") : el.textContent;
+    const r = el.dataset.r || "", g = el.dataset.gl || "", src = glossSrc[+el.dataset.si] || "";
+    const v = lesson && (lesson.vocab || []).find(x => plain(x.jp) === base || x.surface === base);
+    const word = r ? `{${base}|${r}}` : base;
+    const line = lesson && [...(lesson.phrases || []), ...(lesson.dialogue || [])].find(x => x.jp === src);
+    const key = "w:" + (v ? plain(v.jp) : base);
+    const def = v ? wordDef(lesson, v)
+      : {kind:"word", word, reading:r || base, en:g, note:"", surface:base, sent:src, sentEn:line ? line.en : "", lesson:lesson ? lesson.id : ""};
+    gpop.innerHTML = `<div class="gpop-top"><div style="min-width:0">
+        <div class="gpop-w">${esc(base)}</div>${r ? `<div class="gpop-r">${esc(r)}</div>` : ""}
+      </div>${starBtn(key, def)}</div>
+      <div class="gpop-m">${esc(g)}</div>${v && v.note ? `<div class="note">${ruby(v.note)}</div>` : ""}`;
+    gpop.hidden = false; gFor = el; el.classList.add("gl-on");
+    const b = el.getBoundingClientRect(), W = innerWidth, H = innerHeight, pw = Math.min(300, W - 32);
+    gpop.style.width = pw + "px";
+    gpop.style.left = Math.max(16, Math.min(W - pw - 16, b.left + b.width / 2 - pw / 2)) + "px";
+    const ph = gpop.offsetHeight, below = b.bottom + 8;
+    gpop.style.top = (below + ph < H - 12 || b.top - ph - 8 < 12 ? below : b.top - ph - 8) + "px";
+  };
+  document.addEventListener("click", e => {
+    if (e.target.closest("#gpop")) return;
+    const el = e.target.closest(".gl");
+    if (el){ e.stopPropagation(); e.preventDefault(); showGloss(el); return; }
+    if (gFor) hideGloss();
+  }, true);
+  document.addEventListener("keydown", e => {
+    const el = e.target.closest && e.target.closest(".gl");
+    if (el && (e.key === "Enter" || e.key === " ")){ e.preventDefault(); showGloss(el); }
+    if (e.key === "Escape") hideGloss();
+  });
+  addEventListener("scroll", hideGloss, true);
+  addEventListener("resize", hideGloss);
 
   /* ---------- speech ---------- */
   const canSpeak = "speechSynthesis" in window && typeof SpeechSynthesisUtterance === "function";

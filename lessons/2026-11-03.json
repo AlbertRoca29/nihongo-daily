@@ -1,36 +1,36 @@
 {
  "topic": "Konbini checkout",
  "category": "konbini",
- "title_jp": "コンビニのレジ",
+ "title_jp": "コンビニの{レジ||checkout, till}",
  "context": "It's your first evening near your host's village and the only shop still open is the konbini. Today: getting your bento heated, saying no to a bag, and paying.",
  "phrases": [
   {
    "en": "Could you heat this up?",
-   "jp": "これ、{温|あたた}めてもらえますか。",
+   "jp": "これ、{温|あたた|to heat up, warm}めてもらえますか。",
    "note": "Usually staff ask you first: {温|あたた}めますか? Just say はい、お{願|ねが}いします.",
    "register": "polite"
   },
   {
    "en": "I don't need a bag.",
-   "jp": "{袋|ふくろ}はいりません。",
+   "jp": "{袋|ふくろ|bag}はいりません。",
    "note": "Bags cost 3–5 yen. When asked {袋|ふくろ}はご{利用|りよう}ですか, a soft {大丈夫|だいじょうぶ}です also means \"no thanks\".",
    "register": "polite"
   },
   {
    "en": "Could you put in some chopsticks?",
-   "jp": "お{箸|はし}を{付|つ}けてもらえますか。",
+   "jp": "お{箸|はし}を{付|つ|to add, include}けてもらえますか。",
    "note": "You'll hear お{箸|はし}おつけしますか? Chopsticks, spoons and straws are free but often only on request.",
    "register": "polite"
   },
   {
    "en": "Please bag them separately.",
-   "jp": "{別々|べつべつ}に{入|い}れてください。",
+   "jp": "{別々|べつべつ|separately}に{入|い}れてください。",
    "note": "Handy when hot food and cold drinks or ice cream would go in the same bag.",
    "register": "polite"
   },
   {
    "en": "Can we stop by the konbini for a sec?",
-   "jp": "ちょっとコンビニ{寄|よ}ってもいい？",
+   "jp": "ちょっとコンビニ{寄|よ|to drop by}ってもいい？",
    "note": "{寄|よ}る = drop in on the way. Very common with friends on a walk or a drive.",
    "register": "casual"
   }
@@ -39,7 +39,7 @@
  "dialogue": [
   {
    "speaker": "Staff",
-   "jp": "お{弁当|べんとう}、{温|あたた}めますか。",
+   "jp": "お{弁当|べんとう}、{温|あたた|to heat up, warm}めますか。",
    "en": "Shall I heat up your bento?"
   },
   {
@@ -50,18 +50,18 @@
   },
   {
    "speaker": "Staff",
-   "jp": "ポイントカードはお{持|も}ちですか。",
+   "jp": "ポイントカードはお{持|も|(honorific) do you have}ちですか。",
    "en": "Do you have a points card?"
   },
   {
    "speaker": "You",
-   "jp": "いえ、{大丈夫|だいじょうぶ}です。",
+   "jp": "いえ、{大丈夫|だいじょうぶ|(here) I'm fine, no thanks}です。",
    "en": "No, that's OK.",
    "me": true
   },
   {
    "speaker": "Staff",
-   "jp": "お{支払|しはら}いは{現金|げんきん}ですか。",
+   "jp": "お{支払|しはら|payment}いは{現金|げんきん|cash}ですか。",
    "en": "Will you pay in cash?"
   },
   {
@@ -87,7 +87,7 @@
  "challenge": {
   "prompt": "Tell the clerk you don't need a bag, and ask if you can pay by card.",
   "hint": "\"Can I pay?\" = {払|はら}えますか.",
-  "model_answer": "{袋|ふくろ}はいりません。カードで{払|はら}えますか。"
+  "model_answer": "{袋|ふくろ|bag}はいりません。カードで{払|はら}えますか。"
  },
  "vocab": [
   {"jp": "{温|あたた}める", "reading": "あたためる", "en": "to heat up, warm", "level": "N3", "src": "p0", "surface": "温め"},
@@ -140,9 +140,9 @@
    "title_jp": "{店員|てんいん}さんの{言葉|ことば}",
    "intro": "Fast, polite set phrases you'll hear at every till.",
    "items": [
-    {"jp": "{袋|ふくろ}はご{利用|りよう}ですか。", "en": "Do you need a bag?"},
-    {"jp": "{年齢確認|ねんれいかくにん}のボタンを{押|お}してください。", "en": "Please press the age check button.", "note": "For alcohol and cigarettes: tap the screen to confirm you're over 20."},
-    {"jp": "レシートはご{利用|りよう}ですか。", "en": "Do you want the receipt?"},
+    {"jp": "{袋|ふくろ|bag}はご{利用|りよう|use (polite ご〜ですか = do you need)}ですか。", "en": "Do you need a bag?"},
+    {"jp": "{年齢確認|ねんれいかくにん|age verification}のボタンを{押|お}してください。", "en": "Please press the age check button.", "note": "For alcohol and cigarettes: tap the screen to confirm you're over 20."},
+    {"jp": "レシートはご{利用|りよう|use (polite ご〜ですか = do you need)}ですか。", "en": "Do you want the receipt?"},
     {"jp": "こちらにタッチしてください。", "en": "Please touch your card here."}
    ]
   },
@@ -152,9 +152,9 @@
    "intro": "Konbini are mini service centres. Ask for these at the till.",
    "items": [
     {"jp": "ATMはどこですか。", "en": "Where's the ATM?"},
-    {"jp": "コピー{機|き}を{使|つか}いたいんですが。", "en": "I'd like to use the copy machine."},
+    {"jp": "{コピー機|コピーき|photocopier}を{使|つか}いたいんですが。", "en": "I'd like to use the copy machine."},
     {"jp": "これ、ここから{送|おく}れますか。", "en": "Can I send this from here?", "note": "Most konbini accept parcels ({宅急便|たっきゅうびん})."},
-    {"jp": "トイレをお{借|か}りしてもいいですか。", "en": "May I use the toilet?"}
+    {"jp": "トイレをお{借|か|to borrow (humble お〜する)}りしてもいいですか。", "en": "May I use the toilet?"}
    ]
   }
  ]

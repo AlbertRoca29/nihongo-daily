@@ -8,13 +8,13 @@
  "context": "This afternoon Tanaka-san picked you up at Guesthouse Kaze and drove you to the farm. Now it's your first dinner with him and his wife Keiko. Today: asking for things politely at someone's table, and being looked after.",
  "phrases": [
   {
-   "jp": "お{醤油|しょうゆ}を{取|と}っていただけますか。",
+   "jp": "お{醤油|しょうゆ|soy sauce}を{取|と|to pass (to someone)}っていただけますか。",
    "en": "Could you pass me the soy sauce?",
    "register": "polite",
    "note": "〜ていただけますか is a notch politer than 〜てもらえますか: a safe choice with your host family in the first days."
   },
   {
-   "jp": "おかわりをお{願|ねが}いしてもいいですか。",
+   "jp": "{おかわり||seconds, another helping}をお{願|ねが}いしてもいいですか。",
    "en": "Could I have seconds?",
    "register": "polite",
    "note": "おかわり = another helping (rice, soup, a drink). Asking for it is a compliment to the cook, not greedy."
@@ -26,13 +26,13 @@
    "note": "〜という = called. Asking about the food is the easiest way to start a conversation at a Japanese table."
   },
   {
-   "jp": "ご{飯|はん}の{量|りょう}を{少|すく}なめにしてもらえますか。",
+   "jp": "ご{飯|はん}の{量|りょう|amount, portion}を{少なめ|すくなめ|on the small side}にしてもらえますか。",
    "en": "Could you make my rice portion a bit smaller?",
    "register": "polite",
    "note": "〜め softens an adjective: {少|すく}なめ = on the small side, {大|おお}きめ = on the big side. Also works at restaurants: ご{飯|はん}{少|すく}なめで."
   },
   {
-   "jp": "{遠慮|えんりょ}しないで、どんどん{食|た}べて。",
+   "jp": "{遠慮|えんりょ|holding back, being shy}しないで、{どんどん||freely, as much as you like}{食|た}べて。",
    "en": "Don't hold back, eat as much as you like.",
    "register": "casual",
    "note": "You'll hear this constantly from hosts. A graceful reply: じゃあ、お{言葉|ことば}に{甘|あま}えて (then I'll take you up on that)."
@@ -42,34 +42,34 @@
  "dialogue": [
   {
    "speaker": "Keiko",
-   "jp": "{主人|しゅじん}に{頼|たの}まれて、{今日|きょう}はりんご{鍋|なべ}にしたのよ。",
+   "jp": "{主人|しゅじん|(my) husband}に{頼|たの|to ask (a favour)}まれて、{今日|きょう}はりんご{鍋|なべ|hotpot}にしたのよ。",
    "en": "My husband asked me to, so tonight it's apple nabe."
   },
   {
    "speaker": "You",
-   "jp": "りんごを{鍋|なべ}に{入|い}れるんですか。{初|はじ}めて{見|み}ました！",
+   "jp": "りんごを{鍋|なべ|hotpot}に{入|い}れるんですか。{初|はじ}めて{見|み}ました！",
    "en": "You put apples in nabe? I've never seen that!",
    "me": true
   },
   {
    "speaker": "Tanaka-san",
-   "jp": "{鷹ノ原|たかのはら}のりんごは{甘|あま}いずら。{遠慮|えんりょ}しないで{食|た}べな。",
+   "jp": "{鷹ノ原|たかのはら}のりんごは{甘|あま}い{ずら||(Nagano dialect) = でしょう, you'll see}。{遠慮|えんりょ|holding back, being shy}しないで{食べな|たべな|(casual) eat! = 食べなさい}。",
    "en": "Takanohara apples are sweet, you'll see. Don't be shy, eat."
   },
   {
    "speaker": "You",
-   "jp": "すごくおいしいです。おかわりしてもいいですか。",
+   "jp": "すごくおいしいです。{おかわり||seconds, another helping}してもいいですか。",
    "en": "It's really delicious. Can I have some more?",
    "me": true
   },
   {
    "speaker": "Tanaka-san",
-   "jp": "{明日|あした}は{五時|ごじ}に{起|お}きるぞ。{遅|おく}れたら{妻|つま}に{怒|おこ}られるからな。",
+   "jp": "{明日|あした}は{五時|ごじ}に{起|お}きるぞ。{遅|おく}れたら{妻|つま|(my) wife}に{怒|おこ|to get angry, tell off}られるからな。",
    "en": "Tomorrow we get up at five. If you're late, my wife will tell you off."
   },
   {
    "speaker": "You",
-   "jp": "はい、{気|き}をつけます。{目覚|めざ}ましを{二|ふた}つかけておきます！",
+   "jp": "はい、{気|き}をつけます。{目覚まし|めざまし|alarm clock}を{二|ふた}つ{かけて||set (an alarm)}おきます！",
    "en": "OK, I'll be careful. I'll set two alarms!",
    "me": true
   }
@@ -83,8 +83,8 @@
   "explanation": "The person something happens to becomes the subject, and the one who does it gets に: {妻|つま}に{怒|おこ}られる = get told off by my wife. Japanese uses it far more than English, often for things that happen to you with a feeling of being bothered ({雨|あめ}に{降|ふ}られた = I got rained on). Careful: for る-verbs it looks the same as the potential form ({食|た}べられる = can eat or be eaten); context decides.",
   "src": ["d0", "d4"],
   "examples": [
-   {"jp": "{電車|でんしゃ}で{足|あし}を{踏|ふ}まれました。", "en": "Someone stepped on my foot on the train."},
-   {"jp": "{子|こ}どもの{頃|ころ}、よく{母|はは}に{褒|ほ}められた。", "en": "As a kid I was often praised by my mum."}
+   {"jp": "{電車|でんしゃ}で{足|あし}を{踏|ふ|to step on}まれました。", "en": "Someone stepped on my foot on the train."},
+   {"jp": "{子|こ}どもの{頃|ころ}、よく{母|はは}に{褒|ほ|to praise}められた。", "en": "As a kid I was often praised by my mum."}
   ],
   "quiz": {
    "question": "{先生|せんせい}に{名前|なまえ}を＿＿。",
@@ -154,7 +154,7 @@
  "extras": [
   {
    "title": "Table phrases",
-   "title_jp": "{食卓|しょくたく}のひとこと",
+   "title_jp": "{食卓|しょくたく|dining table}のひとこと",
    "intro": "The set phrases you'll say or hear at every meal with your host family.",
    "items": [
     {"jp": "いただきます。", "en": "(before eating) Thank you for the food.", "note": "Said with hands together, to everyone, even at home."},
@@ -165,14 +165,14 @@
   },
   {
    "title": "Asking nicely, step by step",
-   "title_jp": "お{願|ねが}いの{丁寧|ていねい}さ",
+   "title_jp": "お{願|ねが}いの{丁寧|ていねい|polite, courteous}さ",
    "intro": "The same request from casual to very polite. With your hosts, start at the third and move down as you get closer.",
    "items": [
-    {"jp": "{取|と}って。", "en": "Pass it. (family, close friends)"},
-    {"jp": "{取|と}ってくれる？", "en": "Can you pass it? (friends)"},
-    {"jp": "{取|と}ってもらえますか。", "en": "Could you pass it? (polite)"},
-    {"jp": "{取|と}っていただけますか。", "en": "Could you kindly pass it? (more polite)"},
-    {"jp": "{取|と}っていただけないでしょうか。", "en": "Would you mind passing it? (very polite, work and strangers)"}
+    {"jp": "{取|と|to pass (to someone)}って。", "en": "Pass it. (family, close friends)"},
+    {"jp": "{取|と|to pass (to someone)}ってくれる？", "en": "Can you pass it? (friends)"},
+    {"jp": "{取|と|to pass (to someone)}ってもらえますか。", "en": "Could you pass it? (polite)"},
+    {"jp": "{取|と|to pass (to someone)}っていただけますか。", "en": "Could you kindly pass it? (more polite)"},
+    {"jp": "{取|と|to pass (to someone)}っていただけないでしょうか。", "en": "Would you mind passing it? (very polite, work and strangers)"}
    ]
   }
  ]

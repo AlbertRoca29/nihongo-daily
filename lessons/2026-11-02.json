@@ -16,29 +16,29 @@
   },
   {
    "en": "Limited express or local train?",
-   "jp": "{特急|とっきゅう}ですか、{普通|ふつう}ですか。",
+   "jp": "{特急|とっきゅう|limited express (train)}ですか、{普通|ふつう|local train (stops everywhere)}ですか。",
    "speaker": "Staff"
   },
   {
    "en": "Limited express, please. A reserved seat.",
-   "jp": "{特急|とっきゅう}でお{願|ねが}いします。{指定席|していせき}で。",
+   "jp": "{特急|とっきゅう|limited express (train)}でお{願|ねが}いします。{指定席|していせき|reserved seat}で。",
    "me": true,
    "speaker": "You"
   },
   {
    "en": "There's the Azusa leaving at 10:00. Is a window seat all right?",
-   "jp": "10{時|じ}{発|はつ}の「あずさ」がございます。{窓側|まどがわ}でよろしいですか。",
+   "jp": "10{時|じ}{発|はつ|departing (at)}の「あずさ」が{ございます||(very polite) = あります, there is}。{窓側|まどがわ|window side (seat)}で{よろしい||(polite) = いい, all right}ですか。",
    "speaker": "Staff"
   },
   {
    "en": "Yes, that's fine. Which platform?",
-   "jp": "はい、{大丈夫|だいじょうぶ}です。{何番線|なんばんせん}ですか。",
+   "jp": "はい、{大丈夫|だいじょうぶ}です。{何番線|なんばんせん|which platform?}ですか。",
    "me": true,
    "speaker": "You"
   },
   {
    "en": "Platform 9. Have a safe trip.",
-   "jp": "9{番線|ばんせん}です。お{気|き}をつけて。",
+   "jp": "{9番線|きゅうばんせん|platform 9}です。お{気|き}をつけて。",
    "speaker": "Staff"
   }
  ],
@@ -54,25 +54,25 @@
  "phrases": [
   {
    "en": "I'd like to top up my IC card.",
-   "jp": "ICカードにチャージしたいんですが。",
+   "jp": "ICカードに{チャージ||top up (an IC card)}したいんですが。",
    "note": "～たいんですが softens a request. Leave the sentence hanging and staff will help.",
    "register": "polite"
   },
   {
    "en": "Which platform is it?",
-   "jp": "{何番線|なんばんせん}ですか。",
+   "jp": "{何番線|なんばんせん|which platform?}ですか。",
    "note": "{番線|ばんせん} = platform number. You'll hear it in every announcement: 3{番線|ばんせん}に{電車|でんしゃ}が{参|まい}ります.",
    "register": "polite"
   },
   {
    "en": "Does this train stop at Matsumoto?",
-   "jp": "この{電車|でんしゃ}は{松本|まつもと}に{止|と}まりますか。",
+   "jp": "この{電車|でんしゃ}は{松本|まつもと}に{止|と|to stop (at a station)}まりますか。",
    "note": "Ask this before boarding a rapid or express: they skip small stations.",
    "register": "polite"
   },
   {
    "en": "Where do I transfer?",
-   "jp": "{乗|の}り{換|か}えはどこですか。",
+   "jp": "{乗り換え|のりかえ|transfer, change of trains}はどこですか。",
    "register": "polite"
   },
   {

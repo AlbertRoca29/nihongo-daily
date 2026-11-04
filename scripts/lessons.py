@@ -30,7 +30,10 @@ PRACTICAL_EVERY = 3       # one regular lesson in three is on a practical field
 GUEST_EVERY = 8           # lessons since the last guest before a new guest is due
 FORMAT_CYCLE = ["dialogue", "line", "story", "dialogue", "text", "line"]
 
-RUBY = re.compile(r"\{([^|{}]+)\|([^{}]+)\}")
+RUBY = re.compile(r"\{([^|{}]+)\|([^|{}]*)(?:\|([^{}]+))?\}")  # {base|reading} or {base|reading|gloss}
+KANJI = re.compile(r"[\u3400-\u9fff々]")
+# Where tap-to-see glosses are not allowed (the word itself is being taught or quizzed there)
+NO_GLOSS = re.compile(r"^(vocab|kanji_study|kanji\.|grammar\.(quiz\.options|pattern|form))")
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 REGISTERS = {"polite", "casual", "neutral", "dialect", "slang", "archaic"}
 LEVELS = {"N5", "N4", "N3", "N2", "N1"}
@@ -316,9 +319,21 @@ def check_lesson(lid, L, topic_ids, errs):
         rest = RUBY.sub("", s)
         if re.search(r"[{}|]", rest):
             errs.append(f"{lid}: broken furigana markup in {path}: {s[:60]}")
-        for base, reading in RUBY.findall(s):
-            if not re.search(r"[぀-ヿ]", reading):
+        for base, reading, gloss in RUBY.findall(s):
+            if gloss and NO_GLOSS.match(path):
+                errs.append(f"{lid}: no gloss allowed in {path} ('{base}')")
+            if not reading:
+                if not gloss:
+                    errs.append(f"{lid}: empty reading for '{base}' in {path}")
+                elif KANJI.search(base):
+                    errs.append(f"{lid}: '{base}' in {path} has kanji, so it needs a reading")
+            elif not re.search(r"[぀-ヿ]", reading):
                 errs.append(f"{lid}: reading '{reading}' for '{base}' in {path} should be kana")
+            if gloss and not gloss.strip():
+                errs.append(f"{lid}: empty gloss for '{base}' in {path}")
+    main = [str(x.get("jp", "")) for x in (L.get("phrases") or []) + (L.get("dialogue") or []) if isinstance(x, dict)]
+    if sum(1 for t in main for m in RUBY.finditer(t) if m.group(3)) < 3:
+        errs.append(f"{lid}: gloss the hard words in phrases and the main text ({{word|reading|meaning}}): fewer than 3 found")
 
 
 def cmd_check(args):

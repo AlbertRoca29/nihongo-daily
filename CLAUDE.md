@@ -141,6 +141,16 @@ Every Japanese string (except `kanji.kanji` and `kanji.reading`) marks each kanj
 - Readings are in kana. Kana, katakana, numbers and Latin letters need no markup.
 - Counters can be one block: `{3日分|みっかぶん}`.
 
+## Hard-word glosses (tap to see the meaning)
+
+Words the learner probably doesn't know get a third part, the meaning: `{遠慮|えんりょ|holding back, being reserved}`. The app underlines them and shows the meaning when he taps. Kana-only words use an empty reading: `{どんどん||one after another, freely}`.
+- **Gloss**: every N3, N2 or N1 word, every dialect, slang or archaic form, set expressions whose meaning isn't obvious from the parts, and rare place or dish names. **Don't gloss** N5 or common N4 words, names of the cast, or grammar endings (the grammar step teaches those).
+- Gloss every occurrence, also when the word is in today's vocab (the popover then offers the vocab note and the ☆).
+- Where: `phrases[].jp`, `dialogue[].jp`, `text_title`, `grammar.examples`, `grammar.quiz.question`, `challenge.prompt`/`model_answer`, `extras` items. **Never** in `vocab`, `kanji_study`, `kanji`, `grammar.pattern`, `grammar.form` or quiz `options` (the check refuses it).
+- The base is the whole word as written, okurigana included when it reads naturally: `{乗り換え|のりかえ|transfer (trains)}`, `{遠慮|えんりょ|holding back}しない`. Conjugated verbs: gloss the stem block and give the dictionary meaning: `{頼|たの|to ask (a favour)}まれて`.
+- The meaning is short plain English (2–6 words), the sense used in this line; for dialect or slang add the standard form: `{ずら||(Nagano dialect) = でしょう, right?}`. No `{`, `}` or `|` inside it.
+- The check needs at least 3 glosses across phrases and the main text; most lessons have 6–12.
+
 ## Writing quality
 
 - Natural Japanese, the kind these people really say or write, not textbook sentences. Each character sounds like themselves.
