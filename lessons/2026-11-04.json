@@ -1,0 +1,288 @@
+{
+ "topic": "Asking directions",
+ "category": "directions",
+ "title_jp": "{道|みち}を{聞|き}く",
+ "context": "The bus dropped you in a small town and your guesthouse is somewhere nearby, but your phone map is confusing. Today: stopping a local, confirming the way, and finding the kōban.",
+ "phrases": [
+  {
+   "jp": "すみません、ちょっと{道|みち}に{迷|まよ}ってしまって…",
+   "en": "Excuse me, I'm a bit lost...",
+   "register": "polite",
+   "note": "Say it and trail off: people will usually ask you where you're going."
+  },
+  {
+   "jp": "この{近|ちか}くに{交番|こうばん}はありますか。",
+   "en": "Is there a police box near here?",
+   "register": "polite",
+   "note": "{交番|こうばん} = small police box. Officers give directions all day; it's normal to ask them."
+  },
+  {
+   "jp": "{次|つぎ}の{角|かど}を{右|みぎ}ですね。",
+   "en": "So it's right at the next corner?",
+   "register": "polite",
+   "note": "Repeat directions back with ですね to check. You'll hear はい、そうです or a correction."
+  },
+  {
+   "jp": "{道|みち}の{反対側|はんたいがわ}ですか。",
+   "en": "Is it on the other side of the road?",
+   "register": "polite",
+   "note": "You may also hear {向|む}かい{側|がわ}, same meaning."
+  },
+  {
+   "jp": "あれ、{道|みち}{間違|まちが}えたかも。",
+   "en": "Huh, I might have gone the wrong way.",
+   "register": "casual",
+   "note": "かも = maybe (short for かもしれない). The を after {道|みち} drops in casual talk."
+  }
+ ],
+ "dialogue_setting": "On a quiet street in a small town, asking a local the way.",
+ "dialogue": [
+  {
+   "speaker": "You",
+   "jp": "すみません、さくらゲストハウスを{探|さが}しているんですが。",
+   "en": "Excuse me, I'm looking for Sakura Guesthouse.",
+   "me": true
+  },
+  {
+   "speaker": "Local",
+   "jp": "ああ、この{道|みち}を{真|ま}っすぐ{行|い}って、{二|ふた}つ{目|め}の{信号|しんごう}を{左|ひだり}に{曲|ま}がってください。",
+   "en": "Ah, go straight along this road and turn left at the second traffic light."
+  },
+  {
+   "speaker": "You",
+   "jp": "{二|ふた}つ{目|め}の{信号|しんごう}を{左|ひだり}ですね。",
+   "en": "Left at the second light, right?",
+   "me": true
+  },
+  {
+   "speaker": "Local",
+   "jp": "そうそう。{曲|ま}がったら、{突|つ}き{当|あ}たりにありますよ。",
+   "en": "That's it. Once you turn, it's at the end of the street."
+  },
+  {
+   "speaker": "You",
+   "jp": "ここから{歩|ある}いてどのくらいですか。",
+   "en": "How long is it on foot from here?",
+   "me": true
+  },
+  {
+   "speaker": "Local",
+   "jp": "5{分|ふん}ぐらいで{着|つ}きますよ。",
+   "en": "You'll get there in about five minutes."
+  }
+ ],
+ "kanji": {
+  "kanji": "現在地",
+  "reading": "げんざいち",
+  "romaji": "Genzaichi",
+  "meaning": "You are here",
+  "where": "The red dot on every street map board, station map and mall floor plan. Find it first, then look for your destination.",
+  "related": "Related: {案内図|あんないず} map board, {方面|ほうめん} direction (e.g. {駅|えき}{方面|ほうめん} towards the station)."
+ },
+ "tip": {
+  "mark": "丁",
+  "title": "No street names: count lights and landmarks",
+  "body": "Most streets in Japan have no names. Addresses go by area, block and building, like 3{丁目|ちょうめ}5-2, so locals give directions with landmarks and by counting traffic lights. Listen for コンビニ, {信号|しんごう} and {角|かど}. If an address beats everyone, a kōban officer has detailed block maps."
+ },
+ "challenge": {
+  "prompt": "You're lost on the way to the bus stop. Tell a passer-by: \"Excuse me, I'm lost. Is the bus stop near here?\"",
+  "hint": "bus stop = バス{停|てい}. near here = この{近|ちか}く.",
+  "model_answer": "すみません、{道|みち}に{迷|まよ}ってしまったんですが、バス{停|てい}はこの{近|ちか}くですか。"
+ },
+ "vocab": [
+  {
+   "jp": "{迷|まよ}う",
+   "reading": "まよう",
+   "en": "to get lost; to hesitate",
+   "level": "N3",
+   "src": "p0",
+   "surface": "迷って",
+   "note": "{道|みち}に{迷|まよ}う = lose your way."
+  },
+  {
+   "jp": "{交番|こうばん}",
+   "reading": "こうばん",
+   "en": "police box",
+   "level": "N3",
+   "src": "p1",
+   "surface": "交番"
+  },
+  {
+   "jp": "{角|かど}",
+   "reading": "かど",
+   "en": "corner (of a street)",
+   "level": "N4",
+   "src": "p2",
+   "surface": "角"
+  },
+  {
+   "jp": "{反対側|はんたいがわ}",
+   "reading": "はんたいがわ",
+   "en": "the opposite side",
+   "level": "N3",
+   "src": "p3",
+   "surface": "反対側"
+  },
+  {
+   "jp": "{間違|まちが}える",
+   "reading": "まちがえる",
+   "en": "to get wrong, to mistake",
+   "level": "N4",
+   "src": "p4",
+   "surface": "間違えた"
+  },
+  {
+   "jp": "{信号|しんごう}",
+   "reading": "しんごう",
+   "en": "traffic light",
+   "level": "N3",
+   "src": "d1",
+   "surface": "信号"
+  },
+  {
+   "jp": "{曲|ま}がる",
+   "reading": "まがる",
+   "en": "to turn (a corner)",
+   "level": "N4",
+   "src": "d1",
+   "surface": "曲がって",
+   "note": "Takes を: {角|かど}を{曲|ま}がる."
+  },
+  {
+   "jp": "{突|つ}き{当|あ}たり",
+   "reading": "つきあたり",
+   "en": "the end of a street (T-junction)",
+   "level": "N3",
+   "src": "d3",
+   "surface": "突き当たり"
+  },
+  {
+   "jp": "{着|つ}く",
+   "reading": "つく",
+   "en": "to arrive",
+   "level": "N4",
+   "src": "d5",
+   "surface": "着き"
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "曲",
+   "track": "lesson",
+   "on": "キョク",
+   "kun": "ま(がる)・ま(げる)",
+   "meaning": "bend; turn; song",
+   "words": [
+    {
+     "jp": "{曲|ま}がる",
+     "reading": "まがる",
+     "en": "to turn"
+    },
+    {
+     "jp": "{曲|きょく}",
+     "reading": "きょく",
+     "en": "song, tune"
+    },
+    {
+     "jp": "{作曲|さっきょく}",
+     "reading": "さっきょく",
+     "en": "composing music"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "straight",
+     "corner",
+     "cross"
+    ],
+    "readings": [
+     "まかる",
+     "まわる",
+     "まげる"
+    ]
+   }
+  },
+  {
+   "kanji": "着",
+   "track": "n3",
+   "on": "チャク",
+   "kun": "き(る)・つ(く)",
+   "meaning": "arrive; wear",
+   "words": [
+    {
+     "jp": "{到着|とうちゃく}",
+     "reading": "とうちゃく",
+     "en": "arrival"
+    },
+    {
+     "jp": "{着|つ}く",
+     "reading": "つく",
+     "en": "to arrive"
+    },
+    {
+     "jp": "{着物|きもの}",
+     "reading": "きもの",
+     "en": "kimono"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "depart",
+     "return",
+     "stop"
+    ],
+    "readings": [
+     "どうちゃく",
+     "とうじゃく",
+     "とちゃく"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Landmark words",
+   "title_jp": "{目印|めじるし}の{言葉|ことば}",
+   "intro": "Directions you'll hear, especially in the countryside.",
+   "items": [
+    {
+     "jp": "{橋|はし}を{渡|わた}って、すぐです。",
+     "en": "Cross the bridge and it's right there."
+    },
+    {
+     "jp": "{踏切|ふみきり}の{手前|てまえ}です。",
+     "en": "It's just before the railway crossing.",
+     "note": "{手前|てまえ} = this side of; {先|さき} = past it."
+    },
+    {
+     "jp": "コンビニの{向|む}かいです。",
+     "en": "It's opposite the konbini."
+    },
+    {
+     "jp": "ガソリンスタンドの{隣|となり}です。",
+     "en": "It's next to the gas station."
+    }
+   ]
+  },
+  {
+   "title": "At the kōban",
+   "title_jp": "{交番|こうばん}で",
+   "intro": "Show the address on your phone and use these.",
+   "items": [
+    {
+     "jp": "この{住所|じゅうしょ}に{行|い}きたいんですが。",
+     "en": "I'd like to go to this address."
+    },
+    {
+     "jp": "{地図|ちず}に{書|か}いていただけますか。",
+     "en": "Could you draw it on the map for me?"
+    },
+    {
+     "jp": "{地図|ちず}の{写真|しゃしん}を{撮|と}ってもいいですか。",
+     "en": "May I take a photo of the map?",
+     "note": "Kōban often have big hand-drawn local maps on the wall."
+    }
+   ]
+  }
+ ]
+}
