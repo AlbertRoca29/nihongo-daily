@@ -1,0 +1,362 @@
+{
+ "topic": "First farm day, told to Yuki",
+ "category": "feelings",
+ "function": "describing",
+ "format": "line",
+ "cast": [
+  "yuki"
+ ],
+ "title_jp": "{一日目|いちにちめ}の{気持|きも}ち",
+ "context": "Your first full day on the Tanaka farm started at 5 a.m. Tonight Yuki, your friend in Tokyo, messages you on LINE to ask how it went. Today: describing how you feel and what people around you are like.",
+ "phrases": [
+  {
+   "jp": "{慣|な|to get used to}れない{生活|せいかつ}で、ちょっと{疲|つか}れ{気味|ぎみ|a bit, slightly (so)}です。",
+   "en": "This new life I'm not used to has left me a bit tired.",
+   "register": "polite",
+   "note": "〜{気味|ぎみ} = a touch of: {疲|つか}れ{気味|ぎみ}, {風邪|かぜ}{気味|ぎみ} (a bit of a cold). Softer than just {疲|つか}れました."
+  },
+  {
+   "jp": "{家族|かぞく}のことを{思い出|おもいだ|to remember, recall}して、{寂|さび|lonely}しくなった。",
+   "en": "I thought of my family and got lonely.",
+   "register": "casual",
+   "note": "〜くなる = became: {寂|さび}しくなった describes a feeling that came over you, not a permanent state."
+  },
+  {
+   "jp": "{緊張|きんちょう|nervousness, tension}して、{何|なに}も{言|い}えなかった。",
+   "en": "I was so nervous I couldn't say anything.",
+   "register": "casual",
+   "note": "{緊張|きんちょう}する is the everyday word for nervous (before a meeting, a test, a first date). Not {心配|しんぱい}, which is worry."
+  },
+  {
+   "jp": "{田中|たなか}さんは{無口|むくち|quiet, of few words}だけど、{温|あたた}かい{人|ひと}です。",
+   "en": "Tanaka-san doesn't say much, but he's a warm person.",
+   "register": "polite",
+   "note": "Describing someone: [trait]だけど[trait]. {無口|むくち} is neutral, not rude: just a person of few words."
+  },
+  {
+   "jp": "{親|おや}を{心配|しんぱい}させたくないから、{毎週|まいしゅう}{電話|でんわ}してる。",
+   "en": "I don't want to make my parents worry, so I call every week.",
+   "register": "casual",
+   "note": "{心配|しんぱい}させる = make someone worry (causative). Very common with family: {親|おや}を{心配|しんぱい}させないで！"
+  }
+ ],
+ "dialogue_setting": "A LINE chat at night: you're under the kotatsu in your upstairs room, Yuki is on the train home in Tokyo.",
+ "dialogue": [
+  {
+   "speaker": "Yuki",
+   "time": "21:02",
+   "jp": "アル〜！{農家|のうか|farm, farming family}{生活|せいかつ}{一日目|いちにちめ}、どうだった？？",
+   "en": "Al~! Day one of farm life, how was it??"
+  },
+  {
+   "speaker": "You",
+   "time": "21:05",
+   "jp": "{疲|つか}れた〜ｗ 5{時|じ}に{起|お}きて、{一日中|いちにちじゅう|all day long}りんご{畑|ばたけ}にいた。でも{景色|けしき|view, scenery}がめっちゃきれい。{山|やま}が{真っ赤|まっか|bright red}だよ",
+   "me": true,
+   "en": "So tired lol. Up at 5, in the apple orchard all day. But the view is amazing. The mountains are bright red."
+  },
+  {
+   "speaker": "Yuki",
+   "time": "21:06",
+   "jp": "いいじゃん！で、{田中|たなか}さんってどんな{人|ひと}？{怖|こわ}い？",
+   "en": "Nice! So what's Tanaka-san like? Scary?"
+  },
+  {
+   "speaker": "You",
+   "time": "21:09",
+   "jp": "{無口|むくち|quiet, of few words}だけど{優|やさ}しいよ。{今日|きょう}、{畑|はたけ}で{軽|けい}トラを{運転|うんてん}させてくれた！",
+   "me": true,
+   "en": "He doesn't talk much but he's kind. Today he let me drive the kei truck in the field!"
+  },
+  {
+   "speaker": "Yuki",
+   "time": "21:10",
+   "jp": "マジ！？いい{人|ひと}じゃん。でも{夜|よる}とか{寂|さび|lonely}しくない？",
+   "en": "Seriously!? He sounds great. But don't you get lonely, like at night?"
+  },
+  {
+   "speaker": "You",
+   "time": "21:14",
+   "jp": "ちょっとね。{静|しず}かすぎて、スペインの{家族|かぞく}を{思い出|おもいだ|to remember, recall}す。まだ{慣|な|to get used to}れないけど、がんばる",
+   "me": true,
+   "en": "A little. It's so quiet I keep thinking of my family in Spain. Not used to it yet, but I'll hang in there."
+  },
+  {
+   "speaker": "Yuki",
+   "time": "21:15",
+   "jp": "えらい！{家族|かぞく}を{心配|しんぱい}させないように、{写真|しゃしん}{送|おく}ってあげなよ（スタンプ：ファイト！）",
+   "en": "Good on you! Send them some photos so they don't worry (sticker: You got this!)"
+  },
+  {
+   "speaker": "You",
+   "time": "21:16",
+   "jp": "うん、{明日|あした}{送|おく}る！{おやすみ||good night}（スタンプ：ねこがおじぎ）",
+   "me": true,
+   "en": "Yeah, I'll send them tomorrow! Night (sticker: cat bowing)"
+  }
+ ],
+ "grammar": {
+  "id": "n4-causative",
+  "pattern": "〜させる ({使役|しえき})",
+  "level": "N4",
+  "meaning": "make / let someone do",
+  "form": "う-verbs: -a + せる ({行|い}く → {行|い}かせる) · る-verbs: + させる ({食|た}べる → {食|た}べさせる) · する → させる ({運転|うんてん}させる) · {来|く}る → {来|こ}させる",
+  "explanation": "The causer is the subject and the person made or allowed to act gets に (or を with intransitive verbs): {親|おや}を{心配|しんぱい}させる. Alone it often sounds like forcing; add てくれる / てもらう and it becomes kind permission: {運転|うんてん}させてくれた = he let me drive. Don't mix it up with the passive (〜られる, something done to you) or the causative-passive (〜させられる, being made to do it).",
+  "src": [
+   "d3",
+   "d6",
+   "p4"
+  ],
+  "examples": [
+   {
+    "jp": "{母|はは}は{毎日|まいにち}{私|わたし}に{野菜|やさい}を{食|た}べさせた。",
+    "en": "My mum made me eat vegetables every day."
+   },
+   {
+    "jp": "{少|すこ}し{考|かんが}えさせてください。",
+    "en": "Please let me think about it a little."
+   },
+   {
+    "jp": "{冗談|じょうだん|joke}を{言|い}って、みんなを{笑|わら}わせた。",
+    "en": "I told a joke and made everyone laugh."
+   }
+  ],
+  "quiz": {
+   "question": "{先生|せんせい}は{学生|がくせい}に{本|ほん}を＿＿。",
+   "en": "The teacher made the students read the book.",
+   "options": [
+    "{読|よ}ませた",
+    "{読|よ}まれた",
+    "{読|よ}ませられた",
+    "{読|よ}めた"
+   ],
+   "explain": "{読|よ}む → {読|よ}ませる: the teacher (subject) makes the students (に) read. {読|よ}まれた is passive, {読|よ}ませられた is being made to read, {読|よ}めた is could read."
+  }
+ },
+ "kanji": {
+  "kanji": "既読",
+  "reading": "きどく",
+  "romaji": "kidoku",
+  "meaning": "read (message seen)",
+  "where": "Under every message you send on LINE, the small grey 既読 appears as soon as the other person opens it.",
+  "related": "既読スルー (or 既読無視) = reading a message and not replying, a classic source of LINE drama."
+ },
+ "tip": {
+  "mark": "寂",
+  "title": "There's no one word for 'homesick'",
+  "body": "Japanese mostly borrows ホームシック: ホームシックになった. Among friends you can say {寂|さび}しい freely, but with your host family it can sound like you're unhappy with them and make them worry. Gentler: {家族|かぞく}にちょっと{会|あ}いたくなりました, or simply スペインが{恋|こい}しいです (I miss Spain)."
+ },
+ "challenge": {
+  "prompt": "Yuki replies: 「{明日|あした}も5{時|じ}{起|お}き？{今|いま}の{気持|きも}ち、{一言|ひとこと|in a word}で！」 Tell her how you feel and one thing the Tanakas let you do, with 〜させてくれた.",
+  "hint": "{眠|ねむ}い · {楽|たの}しい · {仕事|しごと}をやらせてくれた",
+  "model_answer": "ちょっと{眠|ねむ}いけど、{楽|たの}しい！ケイコさんが{台所|だいどころ}で{料理|りょうり}を{手伝|てつだ}わせてくれたよ。"
+ },
+ "vocab": [
+  {
+   "jp": "{慣|な}れる",
+   "reading": "なれる",
+   "en": "to get used to",
+   "level": "N3",
+   "src": "p0",
+   "surface": "慣れない",
+   "note": "〜に{慣|な}れる: {日本|にほん}の{生活|せいかつ}に{慣|な}れた？ is a question you'll hear a lot."
+  },
+  {
+   "jp": "{気味|ぎみ}",
+   "reading": "ぎみ",
+   "en": "a touch of, slightly (after a noun or stem)",
+   "level": "N3",
+   "src": "p0",
+   "surface": "気味"
+  },
+  {
+   "jp": "{寂|さび}しい",
+   "reading": "さびしい",
+   "en": "lonely; missing someone",
+   "level": "N3",
+   "src": "p1",
+   "surface": "寂しく"
+  },
+  {
+   "jp": "{思い出|おもいだ}す",
+   "reading": "おもいだす",
+   "en": "to remember, recall",
+   "level": "N4",
+   "src": "p1",
+   "surface": "思い出して"
+  },
+  {
+   "jp": "{緊張|きんちょう}する",
+   "reading": "きんちょうする",
+   "en": "to be nervous, tense",
+   "level": "N3",
+   "src": "p2",
+   "surface": "緊張して"
+  },
+  {
+   "jp": "{無口|むくち}",
+   "reading": "むくち",
+   "en": "quiet, of few words",
+   "level": "N2",
+   "src": "p3",
+   "surface": "無口"
+  },
+  {
+   "jp": "{心配|しんぱい}する",
+   "reading": "しんぱいする",
+   "en": "to worry",
+   "level": "N4",
+   "src": "p4",
+   "surface": "心配させ"
+  },
+  {
+   "jp": "{一日中|いちにちじゅう}",
+   "reading": "いちにちじゅう",
+   "en": "all day long",
+   "level": "N3",
+   "src": "d1",
+   "surface": "一日中"
+  },
+  {
+   "jp": "{景色|けしき}",
+   "reading": "けしき",
+   "en": "view, scenery",
+   "level": "N3",
+   "src": "d1",
+   "surface": "景色"
+  },
+  {
+   "jp": "{運転|うんてん}する",
+   "reading": "うんてんする",
+   "en": "to drive",
+   "level": "N4",
+   "src": "d3",
+   "surface": "運転させ"
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "慣",
+   "track": "lesson",
+   "on": "カン",
+   "kun": "な(れる)・な(らす)",
+   "meaning": "get used to; habit",
+   "words": [
+    {
+     "jp": "{慣|な}れる",
+     "reading": "なれる",
+     "en": "to get used to"
+    },
+    {
+     "jp": "{習慣|しゅうかん}",
+     "reading": "しゅうかん",
+     "en": "habit, custom"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "lazy",
+     "busy",
+     "fear"
+    ],
+    "readings": [
+     "かれる",
+     "ふれる",
+     "なられる"
+    ]
+   }
+  },
+  {
+   "kanji": "予",
+   "track": "n3",
+   "on": "ヨ",
+   "kun": "あらかじ(め)",
+   "meaning": "beforehand, in advance",
+   "words": [
+    {
+     "jp": "{予定|よてい}",
+     "reading": "よてい",
+     "en": "plan, schedule"
+    },
+    {
+     "jp": "{予約|よやく}",
+     "reading": "よやく",
+     "en": "reservation, booking"
+    },
+    {
+     "jp": "{天気予報|てんきよほう}",
+     "reading": "てんきよほう",
+     "en": "weather forecast"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "afterwards",
+     "promise",
+     "remainder"
+    ],
+    "readings": [
+     "ようてい",
+     "よでい",
+     "しょてい"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Feelings, from mild to strong",
+   "title_jp": "{気持|きも}ちのことば",
+   "intro": "Words for how you feel in a new place, the ones friends actually use.",
+   "items": [
+    {
+     "jp": "ドキドキする",
+     "en": "my heart is pounding (excited or nervous)"
+    },
+    {
+     "jp": "ワクワクする",
+     "en": "to be excited, looking forward to it"
+    },
+    {
+     "jp": "{落|お}ち{込|こ|to feel down}む",
+     "en": "to feel down",
+     "note": "{落|お}ち{込|こ}んでる？ = are you feeling down?"
+    },
+    {
+     "jp": "ほっとした",
+     "en": "what a relief",
+     "note": "Said the moment worry disappears."
+    },
+    {
+     "jp": "{懐|なつ|nostalgic}かしい",
+     "en": "brings back memories",
+     "note": "A happy feeling about the past, not sadness."
+    }
+   ]
+  },
+  {
+   "title": "Describing people",
+   "title_jp": "どんな{人|ひと}？",
+   "intro": "Answers to Yuki's question, for when someone asks about your host, coworker or a date.",
+   "items": [
+    {
+     "jp": "{明|あか}るくて{話|はな}しやすい。",
+     "en": "Cheerful and easy to talk to."
+    },
+    {
+     "jp": "{真面目|まじめ|serious, earnest}な{人|ひと}。",
+     "en": "A serious, hardworking person."
+    },
+    {
+     "jp": "ちょっと{人見知り|ひとみしり|shy with strangers}。",
+     "en": "A bit shy with new people.",
+     "note": "Very common self-description; no single English word."
+    },
+    {
+     "jp": "{面倒見|めんどうみ|caring for others}がいい。",
+     "en": "Good at looking after people."
+    }
+   ]
+  }
+ ]
+}

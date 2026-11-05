@@ -15,5 +15,12 @@
   "category": "food-cooking",
   "function": "requesting",
   "format": "dialogue"
+ },
+ {
+  "id": "2026-11-05",
+  "topic": "First farm day, told to Yuki",
+  "category": "feelings",
+  "function": "describing",
+  "format": "line"
  }
 ]
