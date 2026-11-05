@@ -134,6 +134,14 @@ Each: `{kanji, track, on, kun, meaning, words, decoys}`
 - `decoys`: `{meanings: [3 wrong meanings], readings: [3 wrong readings of words[0]]}`. Make them plausible.
 - Never teach a kanji twice (the check refuses repeats).
 
+## Audio (voices)
+
+A GitHub automation reads every line with Google voices after each push (`scripts/tts.py`, casting in `voices.json`). Don't run it yourself; just give it what it needs:
+- Cast members, `You` and `text`-format parts get their voice automatically.
+- Any other speaker (a guest, `Staff`, a shopkeeper) needs a gender: `"voice": "f"` or `"m"` on the guest object, or on each of their lines. Without it they get the narrator's voice.
+- A side character who will come back (like Keiko) gets a fixed voice: add them to `others` in `voices.json` with a voice from the `pool` (remove it from the pool).
+- Names of people and places are read from their furigana automatically. If a line has another word the engine might misread (a rare reading, 今日 meaning こんにち), add `"tts"` to that line: the whole line as it should be read, with that word in kana.
+
 ## Furigana markup
 
 Every Japanese string (except `kanji.kanji` and `kanji.reading`) marks each kanji word with its reading: `{漢字|かんじ}`.

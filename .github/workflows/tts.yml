@@ -1,0 +1,33 @@
+name: Lesson audio
+
+# Reads every lesson line with Google voices (see voices.json and scripts/tts.py).
+# Runs when a lesson or the voice casting changes; only new or changed lines are made.
+on:
+  push:
+    branches: [master]
+    paths: ["lessons/**", "voices.json", "cast.json", "scripts/tts.py"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: lesson-audio
+  cancel-in-progress: false
+
+jobs:
+  audio:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Make audio
+        env:
+          GOOGLE_TTS_KEY: ${{ secrets.GOOGLE_TTS_KEY }}
+        run: python3 scripts/tts.py
+      - name: Commit audio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A audio
+          git commit -m "Lesson audio" || exit 0
+          for i in 1 2 3; do git pull --rebase origin master && git push origin HEAD:master && break; sleep 5; done

@@ -387,18 +387,62 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
   addEventListener("resize", hideGloss);
 
   /* ---------- speech ---------- */
-  const canSpeak = "speechSynthesis" in window && typeof SpeechSynthesisUtterance === "function";
+  // Recorded Google voices (audio/<lesson>.json maps a line's plain text to its mp3),
+  // with the device's own Japanese voice as a fallback for anything without a file.
+  const hasTTS = "speechSynthesis" in window && typeof SpeechSynthesisUtterance === "function";
+  const canSpeak = true;
   let jaVoice = null;
   const pickVoice = () => { try{ jaVoice = speechSynthesis.getVoices().find(v => /^ja/i.test(v.lang)) || null; }catch{} };
-  if (canSpeak){ pickVoice(); try{ speechSynthesis.onvoiceschanged = pickVoice; }catch{} }
-  const speak = (text, slow) => {
-    if (!canSpeak) return;
+  if (hasTTS){ pickVoice(); try{ speechSynthesis.onvoiceschanged = pickVoice; }catch{} }
+  const audioMaps = {};
+  const loadAudio = async id => {
+    if (audioMaps[id]) return audioMaps[id];
     try{
-      speechSynthesis.cancel();
-      const u = new SpeechSynthesisUtterance(plain(text));
-      u.lang = "ja-JP"; if (jaVoice) u.voice = jaVoice; u.rate = slow ? 0.7 : 0.95;
-      speechSynthesis.speak(u);
-    }catch{}
+      const r = await fetch("audio/" + id + ".json", {cache: "no-cache"});
+      audioMaps[id] = r.ok ? await r.json() : {};
+    }catch{ audioMaps[id] = {}; }
+    return audioMaps[id];
+  };
+  const audioFor = key => {
+    const cur = lesson && audioMaps[lesson.id];
+    if (cur && cur[key]) return cur[key];
+    for (const m of Object.values(audioMaps)) if (m[key]) return m[key];
+    return null;
+  };
+  let player = null, playRun = 0;
+  const stopAll = () => {
+    playRun++;
+    if (player){ try{ player.pause(); }catch{} player = null; }
+    if (hasTTS) try{ speechSynthesis.cancel(); }catch{}
+  };
+  // Plays one line; resolves when it ends (or fails), so lines can be chained.
+  const playOne = (text, slow, run) => new Promise(done => {
+    const key = plain(text), src = audioFor(key);
+    const device = () => {
+      if (!hasTTS || run !== playRun) return done();
+      try{
+        const u = new SpeechSynthesisUtterance(key);
+        u.lang = "ja-JP"; if (jaVoice) u.voice = jaVoice; u.rate = slow ? 0.7 : 0.95;
+        u.onend = u.onerror = () => done();
+        speechSynthesis.speak(u);
+      }catch{ done(); }
+    };
+    if (!src) return device();
+    const a = new Audio(src);
+    a.preservesPitch = true; a.playbackRate = slow ? 0.75 : 1;
+    a.onended = () => done();
+    a.onerror = () => device();
+    player = a;
+    a.play().catch(() => device());
+  });
+  const speak = (text, slow) => { stopAll(); playOne(text, slow, playRun); };
+  const speakAll = async texts => {
+    stopAll(); const run = playRun;
+    for (const t of texts){
+      if (run !== playRun) return;
+      await playOne(t, false, run);
+      await new Promise(r => setTimeout(r, 350));
+    }
   };
   const sayBtn = (text, label = "Listen") => canSpeak
     ? `<button class="say" data-say="${esc(text)}">${ICON_SAY}${label}</button>` : "";
@@ -806,16 +850,7 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
         en.classList.toggle("hid");
       });
       const pa = $("playAll");
-      if (pa) pa.onclick = () => {
-        try{
-          speechSynthesis.cancel();
-          L.dialogue.forEach(d => {
-            const u = new SpeechSynthesisUtterance(plain(d.jp));
-            u.lang = "ja-JP"; if (jaVoice) u.voice = jaVoice; u.rate = 0.95;
-            speechSynthesis.speak(u);
-          });
-        }catch{}
-      };
+      if (pa) pa.onclick = () => speakAll(L.dialogue.map(d => d.jp));
     }
     if (st.type === "kanji"){
       $("krev").onclick = e => {
@@ -1082,7 +1117,9 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
     if (cache[id]) return cache[id];
     const r = await fetch("lessons/" + id + ".json", {cache: "no-cache"});
     if (!r.ok) throw new Error("missing");
-    const L = await r.json(); L.id = id; cache[id] = L; return L;
+    const L = await r.json(); L.id = id; cache[id] = L;
+    await loadAudio(id);
+    return L;
   }
   (async () => {
     try{

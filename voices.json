@@ -1,0 +1,42 @@
+{
+  "_about": "Who speaks with which Google voice. All are Chirp 3 HD Japanese voices (ja-JP-Chirp3-HD-<name>). Change a name here and the audio is remade on the next run. Picked by measured pitch, liveliness and pace to fit each character.",
+  "model": "Chirp3-HD",
+  "you": "Achird",
+  "narrator": "Kore",
+  "cast": {
+    "tanaka": "Charon",
+    "yuki": "Despina",
+    "kenta": "Puck",
+    "sato": "Gacrux",
+    "hana": "Pulcherrima",
+    "ren": "Algieba",
+    "sota": "Fenrir",
+    "mio": "Achernar",
+    "hayato": "Algenib"
+  },
+  "others": {
+    "Keiko": "Callirrhoe"
+  },
+  "pool": {
+    "f": [
+      "Aoede",
+      "Leda",
+      "Zephyr",
+      "Autonoe",
+      "Sulafat",
+      "Laomedeia",
+      "Erinome"
+    ],
+    "m": [
+      "Orus",
+      "Umbriel",
+      "Sadachbia",
+      "Rasalgethi",
+      "Alnilam",
+      "Zubenelgenubi",
+      "Iapetus",
+      "Enceladus",
+      "Sadaltager"
+    ]
+  }
+}

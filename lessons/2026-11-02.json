@@ -17,7 +17,7 @@
   {
    "en": "Limited express or local train?",
    "jp": "{特急|とっきゅう|limited express (train)}ですか、{普通|ふつう|local train (stops everywhere)}ですか。",
-   "speaker": "Staff"
+   "speaker": "Staff", "voice": "m"
   },
   {
    "en": "Limited express, please. A reserved seat.",
@@ -28,7 +28,7 @@
   {
    "en": "There's the Azusa leaving at 10:00. Is a window seat all right?",
    "jp": "10{時|じ}{発|はつ|departing (at)}の「あずさ」が{ございます||(very polite) = あります, there is}。{窓側|まどがわ|window side (seat)}で{よろしい||(polite) = いい, all right}ですか。",
-   "speaker": "Staff"
+   "speaker": "Staff", "voice": "m"
   },
   {
    "en": "Yes, that's fine. Which platform?",
@@ -39,7 +39,7 @@
   {
    "en": "Platform 9. Have a safe trip.",
    "jp": "{9番線|きゅうばんせん|platform 9}です。お{気|き}をつけて。",
-   "speaker": "Staff"
+   "speaker": "Staff", "voice": "m"
   }
  ],
  "dialogue_setting": "At the ticket office ({みどりの窓口|みどりのまどぐち}) in Shinjuku.",
