@@ -3,8 +3,10 @@
  "category": "food-cooking",
  "function": "requesting",
  "format": "dialogue",
- "cast": ["tanaka"],
- "title_jp": "{田中家|たなかけ}の{晩|ばん}ご{飯|はん}",
+ "cast": [
+  "tanaka"
+ ],
+ "title_jp": "{田中家|たなかけ}の{晩|ばん|evening}ご{飯|はん}",
  "context": "This afternoon Tanaka-san picked you up at Guesthouse Kaze and drove you to the farm. Now it's your first dinner with him and his wife Keiko. Today: asking for things politely at someone's table, and being looked after.",
  "phrases": [
   {
@@ -20,7 +22,7 @@
    "note": "おかわり = another helping (rice, soup, a drink). Asking for it is a compliment to the cook, not greedy."
   },
   {
-   "jp": "これは{何|なん}という{料理|りょうり}ですか。",
+   "jp": "これは{何|なん}という{料理|りょうり|dish, cooking}ですか。",
    "en": "What's this dish called?",
    "register": "polite",
    "note": "〜という = called. Asking about the food is the easiest way to start a conversation at a Japanese table."
@@ -81,15 +83,29 @@
   "meaning": "passive: something is done (to you)",
   "form": "う-verbs: -a + れる ({頼|たの}む → {頼|たの}まれる, {怒|おこ}る → {怒|おこ}られる) · る-verbs: + られる ({見|み}る → {見|み}られる) · する → される · {来|く}る → {来|こ}られる",
   "explanation": "The person something happens to becomes the subject, and the one who does it gets に: {妻|つま}に{怒|おこ}られる = get told off by my wife. Japanese uses it far more than English, often for things that happen to you with a feeling of being bothered ({雨|あめ}に{降|ふ}られた = I got rained on). Careful: for る-verbs it looks the same as the potential form ({食|た}べられる = can eat or be eaten); context decides.",
-  "src": ["d0", "d4"],
+  "src": [
+   "d0",
+   "d4"
+  ],
   "examples": [
-   {"jp": "{電車|でんしゃ}で{足|あし}を{踏|ふ|to step on}まれました。", "en": "Someone stepped on my foot on the train."},
-   {"jp": "{子|こ}どもの{頃|ころ}、よく{母|はは}に{褒|ほ|to praise}められた。", "en": "As a kid I was often praised by my mum."}
+   {
+    "jp": "{電車|でんしゃ}で{足|あし}を{踏|ふ|to step on}まれました。",
+    "en": "Someone stepped on my foot on the train."
+   },
+   {
+    "jp": "{子|こ}どもの{頃|ころ|time, when (子どもの頃 = as a child)}、よく{母|はは}に{褒|ほ|to praise}められた。",
+    "en": "As a kid I was often praised by my mum."
+   }
   ],
   "quiz": {
    "question": "{先生|せんせい}に{名前|なまえ}を＿＿。",
    "en": "My name was called by the teacher.",
-   "options": ["{呼|よ}ばれた", "{呼|よ}んだ", "{呼|よ}ばせた", "{呼|よ}べた"],
+   "options": [
+    "{呼|よ}ばれた",
+    "{呼|よ}んだ",
+    "{呼|よ}ばせた",
+    "{呼|よ}べた"
+   ],
    "explain": "{呼|よ}ぶ → {呼|よ}ばれる: the teacher (に) did it to me. {呼|よ}ばせた is causative (made someone call), {呼|よ}べた is potential (could call)."
   }
  },
@@ -99,29 +115,103 @@
   "romaji": "nabe",
   "meaning": "hotpot; pot",
   "where": "From November it's everywhere: izakaya menus, supermarket shelves of {鍋|なべ}の{素|もと} (ready soup bases), {寄|よ}せ{鍋|なべ} and キムチ{鍋|なべ} at family restaurants.",
-  "related": "{土鍋|どなべ} = the clay pot itself. {鍋|なべ}パーティー (鍋パ) = a hotpot party with friends."
+  "related": "{土鍋|どなべ} = the clay pot itself. {鍋|なべ}パーティー (鍋パ) = a hotpot party with friends.",
+  "breakdown": "{鍋|なべ}: 金 metal on the left (pots were metal) + a part on the right that gives the sound か."
  },
  "tip": {
   "mark": "取",
   "title": "Don't dive into the pot with your own chopsticks",
-  "body": "At a shared nabe there's usually an お{玉|たま} (ladle) or {取|と}り{箸|ばし} (serving chopsticks): use those to fill your bowl, not the chopsticks you eat with. Often the host serves the first round for everyone, so wait a moment. Some people flip their chopsticks to serve, but many Japanese find that unhygienic, so asking for {取|と}り{箸|ばし} is the safer move."
+  "body": "At a shared nabe there's usually an お{玉|たま|お玉 = ladle} (ladle) or {取|と}り{箸|ばし} (serving chopsticks): use those to fill your bowl, not the chopsticks you eat with. Often the host serves the first round for everyone, so wait a moment. Some people flip their chopsticks to serve, but many Japanese find that unhygienic, so asking for {取|と}り{箸|ばし} is the safer move."
  },
  "challenge": {
   "prompt": "Keiko offers you more rice, but you're full. Thank her, say it was delicious, and ask if you can help wash the dishes.",
-  "hint": "お{腹|なか}いっぱい · お{皿|さら}を{洗|あら}う · 〜てもいいですか",
-  "model_answer": "ありがとうございます。もうお{腹|なか}いっぱいです。とてもおいしかったです。お{皿|さら}を{洗|あら}ってもいいですか。"
+  "hint": "お{腹|なか|お腹 = belly, stomach}いっぱい · お{皿|さら}を{洗|あら}う · 〜てもいいですか",
+  "model_answer": "ありがとうございます。もうお{腹|なか|お腹 = belly, stomach}いっぱいです。とてもおいしかったです。お{皿|さら}を{洗|あら}ってもいいですか。",
+  "explanation": "もうお{腹|なか}いっぱいです = I'm already full: the polite, natural way to say no to more. おいしかった is past because the meal is over. {洗|あら}ってもいいですか uses 〜てもいい to ask permission: 'May I wash the dishes?'"
  },
  "vocab": [
-  {"jp": "{醤油|しょうゆ}", "reading": "しょうゆ", "en": "soy sauce", "level": "N3", "src": "p0", "surface": "醤油"},
-  {"jp": "{取|と}る", "reading": "とる", "en": "to take; to pass (something to someone)", "level": "N4", "src": "p0", "surface": "取って"},
-  {"jp": "おかわり", "reading": "おかわり", "en": "another helping, seconds", "level": "N3", "src": "p1", "surface": "おかわり"},
-  {"jp": "{料理|りょうり}", "reading": "りょうり", "en": "dish; cooking", "level": "N4", "src": "p2", "surface": "料理"},
-  {"jp": "{量|りょう}", "reading": "りょう", "en": "amount, portion", "level": "N3", "src": "p3", "surface": "量"},
-  {"jp": "{少|すく}なめ", "reading": "すくなめ", "en": "on the small side, a little less", "level": "N3", "src": "p3", "surface": "少なめ"},
-  {"jp": "{遠慮|えんりょ}する", "reading": "えんりょする", "en": "to hold back, be reserved", "level": "N3", "src": "p4", "surface": "遠慮しない", "note": "ご{遠慮|えんりょ}ください on signs = please refrain."},
-  {"jp": "{主人|しゅじん}", "reading": "しゅじん", "en": "(my) husband", "level": "N4", "src": "d0", "surface": "主人", "note": "Older women's word for their husband; younger people say {夫|おっと} or {旦那|だんな}."},
-  {"jp": "{頼|たの}む", "reading": "たのむ", "en": "to ask (a favour), to request", "level": "N4", "src": "d0", "surface": "頼まれ"},
-  {"jp": "{怒|おこ}る", "reading": "おこる", "en": "to get angry; to tell off", "level": "N4", "src": "d4", "surface": "怒られる"}
+  {
+   "jp": "{醤油|しょうゆ}",
+   "reading": "しょうゆ",
+   "en": "soy sauce",
+   "level": "N3",
+   "src": "p0",
+   "surface": "醤油"
+  },
+  {
+   "jp": "{取|と}る",
+   "reading": "とる",
+   "en": "to take; to pass (something to someone)",
+   "level": "N4",
+   "src": "p0",
+   "surface": "取って"
+  },
+  {
+   "jp": "おかわり",
+   "reading": "おかわり",
+   "en": "another helping, seconds",
+   "level": "N3",
+   "src": "p1",
+   "surface": "おかわり"
+  },
+  {
+   "jp": "{料理|りょうり}",
+   "reading": "りょうり",
+   "en": "dish; cooking",
+   "level": "N4",
+   "src": "p2",
+   "surface": "料理"
+  },
+  {
+   "jp": "{量|りょう}",
+   "reading": "りょう",
+   "en": "amount, portion",
+   "level": "N3",
+   "src": "p3",
+   "surface": "量"
+  },
+  {
+   "jp": "{少|すく}なめ",
+   "reading": "すくなめ",
+   "en": "on the small side, a little less",
+   "level": "N3",
+   "src": "p3",
+   "surface": "少なめ"
+  },
+  {
+   "jp": "{遠慮|えんりょ}する",
+   "reading": "えんりょする",
+   "en": "to hold back, be reserved",
+   "level": "N3",
+   "src": "p4",
+   "surface": "遠慮しない",
+   "note": "ご{遠慮|えんりょ}ください on signs = please refrain."
+  },
+  {
+   "jp": "{主人|しゅじん}",
+   "reading": "しゅじん",
+   "en": "(my) husband",
+   "level": "N4",
+   "src": "d0",
+   "surface": "主人",
+   "note": "Older women's word for their husband; younger people say {夫|おっと} or {旦那|だんな}."
+  },
+  {
+   "jp": "{頼|たの}む",
+   "reading": "たのむ",
+   "en": "to ask (a favour), to request",
+   "level": "N4",
+   "src": "d0",
+   "surface": "頼まれ"
+  },
+  {
+   "jp": "{怒|おこ}る",
+   "reading": "おこる",
+   "en": "to get angry; to tell off",
+   "level": "N4",
+   "src": "d4",
+   "surface": "怒られる"
+  }
  ],
  "kanji_study": [
   {
@@ -131,11 +221,34 @@
    "kun": "はか(る)",
    "meaning": "amount, quantity",
    "words": [
-    {"jp": "{量|りょう}", "reading": "りょう", "en": "amount, portion"},
-    {"jp": "{大量|たいりょう}", "reading": "たいりょう", "en": "a large quantity"},
-    {"jp": "{量|はか}る", "reading": "はかる", "en": "to measure (weight, volume)"}
+    {
+     "jp": "{量|りょう}",
+     "reading": "りょう",
+     "en": "amount, portion"
+    },
+    {
+     "jp": "{大量|たいりょう}",
+     "reading": "たいりょう",
+     "en": "a large quantity"
+    },
+    {
+     "jp": "{量|はか}る",
+     "reading": "はかる",
+     "en": "to measure (weight, volume)"
+    }
    ],
-   "decoys": {"meanings": ["heavy", "price", "space"], "readings": ["りゅう", "ろう", "りょ"]}
+   "decoys": {
+    "meanings": [
+     "heavy",
+     "price",
+     "space"
+    ],
+    "readings": [
+     "りゅう",
+     "ろう",
+     "りょ"
+    ]
+   }
   },
   {
    "kanji": "着",
@@ -144,11 +257,34 @@
    "kun": "き(る)・つ(く)",
    "meaning": "arrive; put on (clothes)",
    "words": [
-    {"jp": "{着|つ}く", "reading": "つく", "en": "to arrive"},
-    {"jp": "{着物|きもの}", "reading": "きもの", "en": "kimono"},
-    {"jp": "{到着|とうちゃく}", "reading": "とうちゃく", "en": "arrival"}
+    {
+     "jp": "{着|つ}く",
+     "reading": "つく",
+     "en": "to arrive"
+    },
+    {
+     "jp": "{着物|きもの}",
+     "reading": "きもの",
+     "en": "kimono"
+    },
+    {
+     "jp": "{到着|とうちゃく}",
+     "reading": "とうちゃく",
+     "en": "arrival"
+    }
    ],
-   "decoys": {"meanings": ["depart; take off", "send; deliver", "stay; remain"], "readings": ["きく", "ちゃく", "づく"]}
+   "decoys": {
+    "meanings": [
+     "depart; take off",
+     "send; deliver",
+     "stay; remain"
+    ],
+    "readings": [
+     "きく",
+     "ちゃく",
+     "づく"
+    ]
+   }
   }
  ],
  "extras": [
@@ -157,10 +293,25 @@
    "title_jp": "{食卓|しょくたく|dining table}のひとこと",
    "intro": "The set phrases you'll say or hear at every meal with your host family.",
    "items": [
-    {"jp": "いただきます。", "en": "(before eating) Thank you for the food.", "note": "Said with hands together, to everyone, even at home."},
-    {"jp": "ごちそうさまでした。", "en": "(after eating) That was a feast, thank you.", "note": "Say it to the cook. At home the casual ごちそうさま is fine."},
-    {"jp": "お{腹|なか}いっぱいです。", "en": "I'm full."},
-    {"jp": "{熱|あつ}いから{気|き}をつけてね。", "en": "It's hot, be careful.", "note": "What you'll hear when the nabe is served."}
+    {
+     "jp": "いただきます。",
+     "en": "(before eating) Thank you for the food.",
+     "note": "Said with hands together, to everyone, even at home."
+    },
+    {
+     "jp": "ごちそうさまでした。",
+     "en": "(after eating) That was a feast, thank you.",
+     "note": "Say it to the cook. At home the casual ごちそうさま is fine."
+    },
+    {
+     "jp": "お{腹|なか|お腹 = belly, stomach}いっぱいです。",
+     "en": "I'm full."
+    },
+    {
+     "jp": "{熱|あつ|hot (to the touch)}いから{気|き}をつけてね。",
+     "en": "It's hot, be careful.",
+     "note": "What you'll hear when the nabe is served."
+    }
    ]
   },
   {
@@ -168,11 +319,26 @@
    "title_jp": "お{願|ねが}いの{丁寧|ていねい|polite, courteous}さ",
    "intro": "The same request from casual to very polite. With your hosts, start at the third and move down as you get closer.",
    "items": [
-    {"jp": "{取|と|to pass (to someone)}って。", "en": "Pass it. (family, close friends)"},
-    {"jp": "{取|と|to pass (to someone)}ってくれる？", "en": "Can you pass it? (friends)"},
-    {"jp": "{取|と|to pass (to someone)}ってもらえますか。", "en": "Could you pass it? (polite)"},
-    {"jp": "{取|と|to pass (to someone)}っていただけますか。", "en": "Could you kindly pass it? (more polite)"},
-    {"jp": "{取|と|to pass (to someone)}っていただけないでしょうか。", "en": "Would you mind passing it? (very polite, work and strangers)"}
+    {
+     "jp": "{取|と|to pass (to someone)}って。",
+     "en": "Pass it. (family, close friends)"
+    },
+    {
+     "jp": "{取|と|to pass (to someone)}ってくれる？",
+     "en": "Can you pass it? (friends)"
+    },
+    {
+     "jp": "{取|と|to pass (to someone)}ってもらえますか。",
+     "en": "Could you pass it? (polite)"
+    },
+    {
+     "jp": "{取|と|to pass (to someone)}っていただけますか。",
+     "en": "Could you kindly pass it? (more polite)"
+    },
+    {
+     "jp": "{取|と|to pass (to someone)}っていただけないでしょうか。",
+     "en": "Would you mind passing it? (very polite, work and strangers)"
+    }
    ]
   }
  ]

@@ -258,6 +258,42 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
 .gpat{font-family:var(--jp);font-size:clamp(24px,7vw,30px);font-weight:700;line-height:1.5}
 .gsec{display:flex;flex-direction:column;gap:6px}
 .gline{font-family:var(--jp);font-size:17px;line-height:1.9}
+.gsec p{line-height:2.1}
+.gsec p ruby{line-height:1}
+.gform{display:flex;flex-direction:column;gap:4px;margin:0;padding:0;list-style:none}
+.gform li{font-family:var(--jp);font-size:16.5px;line-height:2.1;padding-left:16px;position:relative}
+.gform li ruby{line-height:1}
+.gform li::before{content:"";position:absolute;left:3px;top:1.05em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+
+/* avatars */
+img.ava{object-fit:cover;padding:0;background:var(--soft)}
+.who{display:inline-flex;align-items:center;gap:6px}
+.lines .who img.ava{width:24px;height:24px}
+.tellers{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.tellers img.ava{width:28px;height:28px}
+.story .para-who{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-top:2px}
+.story .para-who img.ava{width:20px;height:20px}
+.cast .ava{width:44px;height:44px}
+
+/* kanji by kanji */
+.kparts{display:flex;flex-direction:column;gap:10px}
+.kpart{display:flex;gap:12px;align-items:center}
+.kpart .kc{font-family:var(--mincho);font-size:36px;line-height:1;width:52px;height:52px;display:grid;place-items:center;border-radius:14px;background:var(--soft);flex:none}
+.kpart .km{font-weight:700;font-size:16px;line-height:1.3}
+.kpart .kr{font-family:var(--jp);font-size:13px;color:var(--muted)}
+.gpop-k{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--rule);padding-top:8px}
+.gpop-k b{font-family:var(--jp);color:var(--ink);font-size:15px;margin-right:6px}
+
+/* stroke order */
+.pad-box svg.order{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.pad-box svg.order.off{display:none}
+.order path{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.order .ghost{stroke:var(--ink);opacity:.14;stroke-width:3}
+.order .live{stroke:var(--accent);stroke-width:3.4}
+.order .num{font:700 7px var(--ui);fill:var(--accent)}
+.order .dot{fill:var(--stamp)}
+.pad-order{display:flex;gap:8px;width:min(100%,300px)}
+.pad-order .btn{flex:1;min-height:40px;font-size:14px;padding:0 10px;white-space:nowrap}
 
 .empty{display:flex;flex-direction:column;gap:10px;align-items:flex-start;padding-top:20px}
 .empty h2{margin:0;font-size:22px;font-weight:700}
@@ -411,6 +447,17 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
   });
   applyFuri();
 
+  /* ---------- kanji dictionary (data/kanji.json: meanings + readings, from KANJIDIC) ---------- */
+  let KD = null, kdLoad = null;
+  const kanjiDict = () => kdLoad || (kdLoad = fetch("data/kanji.json").then(r => r.ok ? r.json() : {k:{}}).then(j => (KD = j.k || {})).catch(() => (KD = {})));
+  const kanjiOf = s => [...new Set([...plain(s)].filter(ch => /[一-鿿㐀-䶿]/.test(ch)))];
+  // one row per kanji: big character, meaning, readings
+  const kanjiParts = (s, D) => kanjiOf(s).map(ch => {
+    const e = D[ch]; if (!e) return "";
+    return `<div class="kpart"><div class="kc">${esc(ch)}</div><div style="min-width:0"><div class="km">${esc(e[0])}</div>
+      <div class="kr">${esc([e[1], e[2]].filter(Boolean).join(" · "))}</div></div></div>`;
+  }).join("");
+
   /* ---------- hard-word glosses: tap an underlined word for its meaning ---------- */
   const gpop = document.createElement("div");
   gpop.className = "gpop"; gpop.id = "gpop"; gpop.hidden = true; gpop.setAttribute("role", "dialog");
@@ -431,13 +478,24 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
     gpop.innerHTML = `<div class="gpop-top"><div style="min-width:0">
         <div class="gpop-w">${esc(base)}</div>${r ? `<div class="gpop-r">${esc(r)}</div>` : ""}
       </div>${starBtn(key, def)}</div>
-      <div class="gpop-m">${esc(g)}</div>${v && v.note ? `<div class="note">${ruby(v.note)}</div>` : ""}`;
+      <div class="gpop-m">${esc(g)}</div>${v && v.note ? `<div class="note">${ruby(v.note)}</div>` : ""}<div class="gpop-k" hidden></div>`;
     gpop.hidden = false; gFor = el; el.classList.add("gl-on");
-    const b = el.getBoundingClientRect(), W = innerWidth, H = innerHeight, pw = Math.min(300, W - 32);
-    gpop.style.width = pw + "px";
-    gpop.style.left = Math.max(16, Math.min(W - pw - 16, b.left + b.width / 2 - pw / 2)) + "px";
-    const ph = gpop.offsetHeight, below = b.bottom + 8;
-    gpop.style.top = (below + ph < H - 12 || b.top - ph - 8 < 12 ? below : b.top - ph - 8) + "px";
+    // each kanji in the word, with its own meaning (helps it stick)
+    const ks = kanjiOf(base);
+    if (ks.length) kanjiDict().then(D => {
+      if (gFor !== el) return;
+      const rows = ks.filter(ch => D[ch]).map(ch => `<div><b>${esc(ch)}</b>${esc(D[ch][0])}</div>`).join("");
+      const box = gpop.querySelector(".gpop-k");
+      if (rows && box){ box.innerHTML = rows; box.hidden = false; place(); }
+    });
+    function place(){
+      const b = el.getBoundingClientRect(), W = innerWidth, H = innerHeight, pw = Math.min(300, W - 32);
+      gpop.style.width = pw + "px";
+      gpop.style.left = Math.max(16, Math.min(W - pw - 16, b.left + b.width / 2 - pw / 2)) + "px";
+      const ph = gpop.offsetHeight, below = b.bottom + 8;
+      gpop.style.top = (below + ph < H - 12 || b.top - ph - 8 < 12 ? below : b.top - ph - 8) + "px";
+    }
+    place();
   };
   document.addEventListener("click", e => {
     if (e.target.closest("#gpop")) return;
@@ -643,26 +701,47 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
     const c = Object.values(castById).find(x => x.name === n);
     return esc([...plain((c && c.name_jp) || n || "?")][0] || "?");
   };
+  /* character portraits: icons/cast/<id>.svg (drawn for the main cast, Keiko and you); others get their initial */
+  const PORTRAITS = new Set(["tanaka","yuki","kenta","sato","hana","ren","sota","mio","hayato","keiko","you"]);
+  const portraitId = (name, me) => {
+    if (me || name === "You") return "you";
+    const n = String(name || "").toLowerCase();
+    const c = Object.values(castById).find(x => x.name.toLowerCase() === n || x.id === n || n.split(/[\s-]/)[0] === x.id
+      || x.name.toLowerCase().split(/[\s-]/)[0] === n.split(/[\s-]/)[0]);
+    const id = c ? c.id : n.split(/[\s-]/)[0];
+    return PORTRAITS.has(id) ? id : "";
+  };
+  const avatar = (name, me) => {
+    const id = portraitId(name, me);
+    return id ? `<img class="ava" src="icons/cast/${id}.svg" alt="">` : `<span class="ava">${initial(name)}</span>`;
+  };
   function castCard(L){
     const people = (L.cast || []).map(id => castById[id]).filter(Boolean);
     if (L.guest) people.push({name:L.guest.name, name_jp:L.guest.name_jp || "", role:"Guest · " + (L.guest.role || "")});
     if (!people.length) return "";
     return `<div class="card cast"><div class="label">Who's in it</div>${people.map(c => `<div class="who-row">
-        <span class="ava">${initial(c.name_jp || c.name)}</span>
+        ${c.id ? avatar(c.name) : `<span class="ava">${initial(c.name_jp || c.name)}</span>`}
         <div style="min-width:0"><div style="font-weight:600">${esc(c.name)}${c.name_jp ? ` <span class="note" style="font-family:var(--jp)">${ruby(c.name_jp)}</span>` : ""}</div><div class="r">${esc(c.role || "")}</div></div>
       </div>`).join("")}</div>`;
   }
+  /* how-to hints: shown only in the first 3 lessons you open (and always again in those lessons) */
+  const firstTimes = (key, id, n = 3) => {
+    const seen = store.get("hint:" + key, []);
+    if (seen.includes(id)) return true;
+    if (seen.length >= n) return false;
+    seen.push(id); store.set("hint:" + key, seen); return true;
+  };
   const playBtn = jp => canSpeak ? `<button class="play" data-say="${esc(jp)}" aria-label="Play">${ICON_SAY}</button>` : "";
   const playAllBtn = label => canSpeak ? `<button class="btn ghost" id="playAll">${ICON_SAY}${label}</button>` : "";
   function renderMain(L){
-    const f = fmtOf(L), setting = L.dialogue_setting ? `<p class="note" style="margin:0">${ruby(L.dialogue_setting)} ${f === "dialogue" || f === "line" ? "Tap a message for English." : "Tap a line for English."}</p>` : "";
+    const f = fmtOf(L), setting = L.dialogue_setting ? `<p class="note" style="margin:0">${ruby(L.dialogue_setting)} ${!firstTimes("tapline", L.id) ? "" : f === "dialogue" || f === "line" ? "Tap a message for English." : "Tap a line for English."}</p>` : "";
     const star = i => starBtn("l:" + L.id + ":d" + i, lineDef(L, L.dialogue[i]));
     if (f === "line"){
       const others = [...new Set(L.dialogue.filter(d => !d.me).map(d => d.speaker))];
       return `<div class="step">${setting}
         <div class="chat"><div class="chat-head">${esc(others.join(", ") || "LINE")}</div>
         ${L.dialogue.map((d, i) => `<div class="line ${d.me ? "me" : ""}">
-          ${d.me ? "" : `<span class="ava">${initial(d.speaker)}</span>`}
+          ${d.me ? "" : avatar(d.speaker)}
           <div class="stack">
             ${d.me ? "" : `<span class="who" style="padding:0 4px">${esc(d.speaker)}</span>`}
             <div class="bubble" data-show="${i}" role="button" tabindex="0" aria-label="Show English">
@@ -677,8 +756,9 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
     if (f === "story"){
       const tellers = [...new Set(L.dialogue.map(d => d.speaker))];
       return `<div class="step">${setting}
-        <div class="card story"><div class="label">Told by ${esc(tellers.join(" & "))}</div>
+        <div class="card story"><div class="tellers">${tellers.map(t => avatar(t, t === "You")).join("")}<span class="label">Told by ${esc(tellers.join(" & "))}</span></div>
         ${L.dialogue.map((d, i) => `<div class="para" data-show="${i}" role="button" tabindex="0">
+          ${tellers.length > 1 && (i === 0 || L.dialogue[i-1].speaker !== d.speaker) ? `<div class="para-who">${avatar(d.speaker, d.me)}${esc(d.speaker)}</div>` : ""}
           <div class="bubble-row"><div class="jp-mid">${ruby(d.jp)}</div><div style="display:flex;gap:6px;flex:none">${playBtn(d.jp)}${star(i)}</div></div>
           <div class="en hid" data-en="${i}">${esc(d.en)}</div></div>`).join("")}</div>
         ${playAllBtn("Listen to the whole story")}</div>`;
@@ -695,7 +775,7 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
     return `<div class="step">${setting}
         <div class="lines">${L.dialogue.map((d, i) => `
           <div class="line ${d.me ? "me" : ""}">
-            <span class="who">${esc(d.speaker)}</span>
+            <span class="who">${d.me ? "" : avatar(d.speaker)}${esc(d.speaker)}${d.me ? avatar(d.speaker, true) : ""}</span>
             <div class="bubble" data-show="${i}" role="button" tabindex="0" aria-label="Show English">
               <div class="bubble-row"><div class="jp-mid">${ruby(d.jp)}</div><div style="display:flex;gap:6px;flex:none">${playBtn(d.jp)}${star(i)}</div></div>
               <div class="en hid" data-en="${i}">${esc(d.en)}</div>
@@ -709,6 +789,11 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
     const line = lineOf(L, (G.src || [])[0]) || (G.examples || [])[0] || {};
     return {kind:"grammar", pattern:G.pattern, meaning:G.meaning, form:G.form || "", level:G.level || "", sent:line.jp || "", sentEn:line.en || "", lesson:L.id};
   };
+  // "う-verbs: … · る-verbs: … · する → させる" reads better one rule per line
+  const formList = form => {
+    const parts = String(form || "").split(/\s+[·・;；]\s+|\n/).map(s => s.trim()).filter(Boolean);
+    return parts.length > 1 ? `<ul class="gform">${parts.map(p => `<li>${ruby(p)}</li>`).join("")}</ul>` : `<div class="gline">${ruby(form)}</div>`;
+  };
   function renderGrammar(L){
     const G = L.grammar, inLesson = (G.src || []).map(r => lineOf(L, r)).filter(Boolean);
     return `<div class="step">
@@ -717,7 +802,7 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
         <div class="gpat">${ruby(G.pattern)}</div>
         <div style="font-size:17px;font-weight:600">${esc(G.meaning)}</div>
       </div>
-      <div class="card gsec"><div class="label">How to make it</div><div class="gline">${ruby(G.form)}</div></div>
+      <div class="card gsec"><div class="label">How to make it</div>${formList(G.form)}</div>
       <div class="card gsec"><div class="label">How it works</div><p style="margin:0">${ruby(G.explanation)}</p></div>
       ${inLesson.length ? `<div class="card gsec"><div class="label">In today's lesson</div>${inLesson.map(x => `<div><div class="bubble-row"><div class="gline">${ruby(x.jp)}</div>${playBtn(x.jp)}</div><div class="note">${esc(x.en)}</div></div>`).join("")}</div>` : ""}
       ${(G.examples || []).length ? `<div class="card gsec"><div class="label">More examples</div>${G.examples.map(x => `<div><div class="bubble-row"><div class="gline">${ruby(x.jp)}</div>${playBtn(x.jp)}</div><div class="note">${esc(x.en)}</div></div>`).join("")}</div>` : ""}
@@ -769,8 +854,8 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
           <p style="margin:0;font-size:16px">${esc(L.context)}</p>
         </div>
         ${castCard(L)}
-        <div class="agenda-row">${warmQueue.length ? `<span>Warm-up · ${warmQueue.length}</span>` : ""}<span>${(L.phrases||[]).length} phrases</span><span>${FMT[fmtOf(L)].chip}</span>${L.grammar ? `<span>Grammar · ${esc(L.grammar.level || "")}</span>` : ""}<span>Kanji</span><span>Tip</span>${L.vocab?.length ? `<span>Words</span>` : ""}${L.kanji_study?.length ? `<span>Kanji quiz</span>` : ""}<span>Your turn</span>${(L.extras||[]).length ? `<span style="color:var(--muted)">+${L.extras.length} extra</span>` : ""}</div>
-        <p class="note" style="margin:0">Tap ☆ on any phrase, line or word you want to learn. It comes back in tomorrow's warm-up. Furigana off? Tap a word to peek at its reading.</p>
+        <div class="agenda-row">${L.news ? `<span>📰 News</span>` : ""}${warmQueue.length ? `<span>Warm-up · ${warmQueue.length}</span>` : ""}<span>${FMT[fmtOf(L)].chip}</span>${L.grammar ? `<span style="font-family:var(--jp)">${esc(plain(L.grammar.pattern))}</span>` : ""}${L.kanji_study?.length ? `<span style="font-family:var(--jp)">${esc(L.kanji_study.map(k => k.kanji).join(" "))}</span>` : ""}${(L.extras||[]).length ? `<span style="color:var(--muted)">+${L.extras.length} extra</span>` : ""}</div>
+        ${firstTimes("intro", L.id) ? `<p class="note" style="margin:0">Tap ☆ on any phrase, line or word you want to learn. It comes back in tomorrow's warm-up. Furigana off? Tap a word to peek at its reading.</p>` : ""}
       </div>`;
     }
     if (st.type === "phrase"){
@@ -804,6 +889,11 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
           <p style="margin:0">${ruby(k.where)}</p>
           ${k.related ? `<p class="note" style="margin:0">${ruby(k.related)}</p>` : ""}
         </div>
+        <div class="card" id="kparts" hidden style="display:flex;flex-direction:column;gap:10px">
+          <div class="label">Kanji by kanji</div>
+          <div class="kparts"></div>
+          ${k.breakdown ? `<p style="margin:0">${ruby(k.breakdown)}</p>` : ""}
+        </div>
       </div>`;
     }
     if (st.type === "tip"){
@@ -831,7 +921,6 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
     }
     if (st.type === "words"){
       h = `<div class="step">
-        <p class="note" style="margin:0">Today's words. Tap ☆ on the ones you want to learn.</p>
         <div class="card">${L.vocab.map((v, i) => `<div class="vrow">
             <div style="min-width:0;flex:1">
               <div class="row" style="justify-content:flex-start;gap:8px"><span class="jp-mid" style="line-height:1.8">${ruby(v.jp)}</span><span class="lvl ${esc(v.level)}">${esc(v.level)}</span></div>
@@ -858,10 +947,9 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
           </div>
           <div class="kread">${k.on ? `<b>On</b><span style="font-family:var(--jp)">${esc(k.on)}</span>` : ""}${k.kun ? `<b>Kun</b><span style="font-family:var(--jp)">${esc(k.kun)}</span>` : ""}</div>
           <div style="display:flex;flex-direction:column;gap:6px">${(k.words || []).map(w => `<div class="row" style="justify-content:flex-start;gap:10px"><span class="jp-mid" style="line-height:1.8">${ruby(w.jp)}</span><span class="note">${esc(w.en)}</span></div>`).join("")}</div>
-          <button class="btn ghost" data-draw="${esc(k.kanji)}" style="align-self:flex-start;min-height:40px;font-size:14px">✍️ Draw it · optional</button>
+          <button class="btn ghost" data-draw="${esc(k.kanji)}" style="align-self:flex-start;min-height:40px;font-size:14px">✍️ Draw it · stroke order</button>
           <div class="pad" hidden></div>
         </div>`).join("")}
-        <p class="note" style="margin:0">Next: a quick quiz on these two. Wrong answers go into your review automatically.</p>
       </div>`;
     }
     if (st.type === "kquiz"){
@@ -887,10 +975,11 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
         <div class="card" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
           <span class="hanko">済</span>
           <h3 style="margin:0;font-size:20px">お{疲|つか}れ{様|さま}でした！</h3>
-          <p style="margin:0">You reached the last stop. ${savedOn(todayStr()) ? `<b>${savedOn(todayStr())} saved today.</b> They start in tomorrow's warm-up.` : "Nothing saved today. Go back and tap ☆ on what you want to review."}</p>
-          <p class="note" style="margin:0">${streakLine()} Review deck: ${Object.keys(getDeck()).length} cards. Quick look at today's phrases:</p>
+          ${savedOn(todayStr()) ? `<p style="margin:0"><b>${savedOn(todayStr())} saved today</b> · ${Object.keys(getDeck()).length} in your review deck.</p>` : ""}
+          <p class="note" style="margin:0">${streakLine()}</p>
         </div>
         <div class="card" style="display:flex;flex-direction:column;gap:12px">
+          <div class="label">Today's phrases</div>
           ${(L.phrases||[]).map(p => `<div><div class="jp-mid">${ruby(p.jp)}</div><div class="note">${esc(p.en)}</div></div>`).join("")}
         </div>
         <a class="btn primary" href="#">Back to home</a>
@@ -932,6 +1021,11 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
         b.classList.add("open"); b.textContent = k.meaning;
         $("kwhere").hidden = false;
         speak(k.reading);
+        kanjiDict().then(D => {
+          const box = $("kparts"); if (!box) return;
+          const rows = kanjiParts(k.kanji, D);
+          if (rows || k.breakdown){ box.querySelector(".kparts").innerHTML = rows; box.hidden = false; }
+        });
       };
     }
     if (st.type === "warm") wireWarm();
@@ -941,7 +1035,7 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
       rememberKanji(L.kanji_study);
       document.querySelectorAll("[data-draw]").forEach(b => b.onclick = () => {
         const pad = b.nextElementSibling;
-        if (!pad.hidden){ pad.hidden = true; b.textContent = "✍️ Draw it · optional"; return; }
+        if (!pad.hidden){ pad.hidden = true; b.textContent = "✍️ Draw it · stroke order"; return; }
         pad.hidden = false; b.textContent = "Hide drawing pad";
         if (!pad.dataset.ready){ makePad(pad, b.dataset.draw); pad.dataset.ready = "1"; }
       });
@@ -1027,14 +1121,76 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
       $("vquiz").innerHTML = `<div class="card"><b>${r}/${n} right.</b> <span class="note">Words you missed were saved for review.</span></div>`;
     });
   }
-  /* optional practice pad: trace over a faint guide, then hide it and draw from memory */
+  /* stroke order: strokes/<hex>.json (KanjiVG, saved by scripts/strokes.py), or KanjiVG straight from the CDN */
+  const strokeCache = {};
+  const loadStrokes = ch => strokeCache[ch] || (strokeCache[ch] = (async () => {
+    const hex = ch.codePointAt(0).toString(16).padStart(5, "0");
+    try{ const r = await fetch("strokes/" + hex + ".json"); if (r.ok){ const j = await r.json(); if (j.d?.length) return j; } }catch{}
+    try{
+      const r = await fetch("https://cdn.jsdelivr.net/gh/KanjiVG/kanjivg@master/kanji/" + hex + ".svg");
+      if (!r.ok) return null;
+      const doc = new DOMParser().parseFromString(await r.text(), "image/svg+xml");
+      const d = [...doc.querySelectorAll("path[id*='-s']")].sort((a, b) => +a.id.split("-s")[1] - +b.id.split("-s")[1]).map(p => p.getAttribute("d"));
+      const n = [...doc.querySelectorAll("text")].map(t => { const m = /([\d.]+) ([\d.]+)\)$/.exec(t.getAttribute("transform") || ""); return m ? [+m[1], +m[2]] : null; });
+      return d.length ? {d, n} : null;
+    }catch{ return null; }
+  })());
+  const SVGNS = "http://www.w3.org/2000/svg";
+  const svgEl = (tag, attrs) => { const e = document.createElementNS(SVGNS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; };
+
+  /* optional practice pad: watch the stroke order, trace over the guide, then hide it and draw from memory */
   function makePad(el, kanji){
-    el.innerHTML = `<div class="pad-box">
+    el.innerHTML = `<div class="pad-order" hidden><button class="btn primary" data-play>▶ Stroke order</button><button class="btn ghost" data-step>Next stroke</button></div>
+      <div class="pad-box">
         <svg class="grid" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M50 0V100M0 50H100" stroke="currentColor" stroke-width=".6" stroke-dasharray="3 3" fill="none"/></svg>
-        <div class="guide">${esc(kanji)}</div><canvas></canvas></div>
+        <div class="guide">${esc(kanji)}</div><svg class="order off" viewBox="0 0 109 109"></svg><canvas></canvas></div>
       <div class="pad-tools"><button class="btn ghost" data-g>Guide off</button><button class="btn ghost" data-u>Undo</button><button class="btn ghost" data-c>Clear</button></div>
-      <p class="note" style="margin:0;text-align:center">Trace it first, then hide the guide and write it from memory.</p>`;
+      <p class="note" style="margin:0;text-align:center" data-help>Trace it first, then hide the guide and write it from memory.</p>`;
     const box = el.querySelector(".pad-box"), cv = el.querySelector("canvas"), ctx = cv.getContext("2d"), guide = el.querySelector(".guide");
+    const osvg = el.querySelector("svg.order");
+    let SD = null, shown = 0, run = 0;
+    const startOf = d => { const m = /^[Mm]\s*([-\d.]+)[,\s]*([-\d.]+)/.exec(d); return m ? [+m[1], +m[2]] : null; };
+    const drawStroke = (i, animate) => new Promise(done => {
+      const d = SD.d[i], live = svgEl("path", {d, class:"live"});
+      osvg.appendChild(live);
+      const s = startOf(d), np = SD.n[i] || s;
+      if (np) { const t = svgEl("text", {x:np[0], y:np[1], class:"num"}); t.textContent = i + 1; osvg.appendChild(t); }
+      if (s) osvg.appendChild(svgEl("circle", {cx:s[0], cy:s[1], r:2.2, class:"dot"}));
+      if (!animate || !live.animate) return done();
+      const len = live.getTotalLength();
+      live.style.strokeDasharray = len; live.style.strokeDashoffset = len;
+      const a = live.animate([{strokeDashoffset:len}, {strokeDashoffset:0}], {duration:Math.max(300, Math.min(900, len * 14)), easing:"ease-in-out", fill:"forwards"});
+      a.onfinish = () => { live.style.strokeDasharray = ""; live.style.strokeDashoffset = ""; done(); };
+    });
+    const resetOrder = () => {
+      osvg.innerHTML = ""; shown = 0;
+      SD.d.forEach(d => osvg.appendChild(svgEl("path", {d, class:"ghost"})));
+      osvg.classList.remove("off"); guide.classList.add("off");
+    };
+    const play = async () => {
+      const me = ++run; resetOrder();
+      for (let i = 0; i < SD.d.length; i++){
+        if (me !== run) return;
+        await drawStroke(i, true); shown = i + 1;
+        await new Promise(r => setTimeout(r, 180));
+      }
+    };
+    const step = async () => {
+      run++;
+      if (osvg.classList.contains("off") || shown >= SD.d.length) resetOrder();
+      const i = shown; shown++;
+      await drawStroke(i, true);
+      el.querySelector("[data-step]").textContent = shown >= SD.d.length ? "Start again" : `Next stroke (${shown + 1}/${SD.d.length})`;
+    };
+    loadStrokes(kanji).then(d => {
+      if (!d) return;
+      SD = d;
+      el.querySelector(".pad-order").hidden = false;
+      el.querySelector("[data-step]").textContent = `Stroke by stroke`;
+      el.querySelector("[data-play]").onclick = () => { el.querySelector("[data-step]").textContent = "Stroke by stroke"; play(); };
+      el.querySelector("[data-step]").onclick = step;
+      el.querySelector("[data-help]").textContent = `${d.d.length} strokes. The red dot shows where each stroke starts; watch the order, trace it, then hide the guide and write it from memory.`;
+    });
     let strokes = [], cur = null;
     const fit = () => { const r = box.getBoundingClientRect(), dpr = window.devicePixelRatio || 1; cv.width = r.width * dpr; cv.height = r.height * dpr; redraw(); };
     const redraw = () => {
@@ -1046,7 +1202,12 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
     cv.onpointerdown = e => { e.preventDefault(); cv.setPointerCapture(e.pointerId); cur = [pt(e)]; strokes.push(cur); redraw(); };
     cv.onpointermove = e => { if (!cur) return; e.preventDefault(); cur.push(pt(e)); redraw(); };
     cv.onpointerup = cv.onpointercancel = () => { cur = null; };
-    el.querySelector("[data-g]").onclick = e => { const off = guide.classList.toggle("off"); e.currentTarget.textContent = off ? "Guide on" : "Guide off"; };
+    el.querySelector("[data-g]").onclick = e => {
+      const b = e.currentTarget, on = b.textContent === "Guide on";
+      run++;
+      if (on){ guide.classList.remove("off"); osvg.classList.add("off"); b.textContent = "Guide off"; }
+      else { guide.classList.add("off"); osvg.classList.add("off"); b.textContent = "Guide on"; }
+    };
     el.querySelector("[data-u]").onclick = () => { strokes.pop(); redraw(); };
     el.querySelector("[data-c]").onclick = () => { strokes = []; redraw(); };
     fit();
@@ -1070,7 +1231,7 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
     runQuiz($("kq"), qs, (r, n) => {
       $("kq").innerHTML = `<div class="card" style="display:flex;flex-direction:column;gap:8px;align-items:flex-start">
         <span class="hanko">漢</span><h3 style="margin:0;font-size:20px">${r}/${n} right</h3>
-        <p style="margin:0">${r === n ? "Clean sweep. Tap ☆ on the kanji screen if you still want them in review." : "Kanji you missed are in tomorrow's warm-up."}</p>
+        <p style="margin:0">${r === n ? "Clean sweep." : "Kanji you missed are in tomorrow's warm-up."}</p>
         <button class="btn ghost" id="kagain">Try the quiz again</button></div>`;
       $("kagain").onclick = () => runKanjiQuiz();
     });
@@ -1096,15 +1257,17 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
     ta.oninput = () => store.set(draftKey, ta.value);
     const hint = $("hint");
     if (hint) hint.onclick = () => { hint.classList.add("open"); hint.innerHTML = ruby(c.hint); };
+    const why = c.explanation ? `<div><div class="k">Why it works</div><p style="margin:0;line-height:2.05">${ruby(c.explanation)}</p></div>` : "";
     $("model").onclick = e => {
       const b = e.currentTarget; b.classList.add("open");
-      b.innerHTML = `<div class="jp-mid">${ruby(c.model_answer)}</div>`;
+      b.innerHTML = `<div class="jp-mid">${ruby(c.model_answer)}</div>${c.explanation ? `<p style="margin:6px 0 0;line-height:2.05;color:var(--ink)">${ruby(c.explanation)}</p>` : ""}`;
     };
     const fb = $("fb");
     const compare = answer => {
       fb.innerHTML = `
         <div><div class="k">You wrote</div><div class="jp-mid">${esc(answer)}</div></div>
         <div><div class="k">Model answer</div><div class="jp-mid">${ruby(c.model_answer)}</div>${sayBtn(c.model_answer)}</div>
+        ${why}
         <p class="note" style="margin:0">Different wording can still be right. For a full correction, copy your answer and ask Claude.</p>
         <button class="btn ghost" id="copyAsk">Copy a correction request</button>`;
       fb.hidden = false;
@@ -1134,9 +1297,14 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
     else goHome();
   };
   let sx = null, sy = null;
-  $("stage").addEventListener("touchstart", e => { const t = e.touches[0]; sx = t.clientX; sy = t.clientY; }, {passive:true});
+  // swipe left/right to change step, but never while drawing on the pad or typing
+  const noSwipe = el => el.closest && el.closest("textarea, .pad");
+  $("stage").addEventListener("touchstart", e => {
+    if (noSwipe(e.target)){ sx = null; return; }
+    const t = e.touches[0]; sx = t.clientX; sy = t.clientY;
+  }, {passive:true});
   $("stage").addEventListener("touchend", e => {
-    if (sx == null || !lesson || e.target.closest("textarea")) return;
+    if (sx == null || !lesson || noSwipe(e.target)) return;
     const t = e.changedTouches[0], dx = t.clientX - sx, dy = t.clientY - sy;
     if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5){
       if (dx < 0 && idx < steps.length - 1){ idx++; renderStep(); }

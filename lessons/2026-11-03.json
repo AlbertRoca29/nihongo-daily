@@ -18,8 +18,8 @@
   },
   {
    "en": "Could you put in some chopsticks?",
-   "jp": "お{箸|はし}を{付|つ|to add, include}けてもらえますか。",
-   "note": "You'll hear お{箸|はし}おつけしますか? Chopsticks, spoons and straws are free but often only on request.",
+   "jp": "お{箸|はし|chopsticks}を{付|つ|to add, include}けてもらえますか。",
+   "note": "You'll hear お{箸|はし|chopsticks}おつけしますか? Chopsticks, spoons and straws are free but often only on request.",
    "register": "polite"
   },
   {
@@ -38,8 +38,9 @@
  "dialogue_setting": "At the till of a konbini, late evening.",
  "dialogue": [
   {
-   "speaker": "Staff", "voice": "f",
-   "jp": "お{弁当|べんとう}、{温|あたた|to heat up, warm}めますか。",
+   "speaker": "Staff",
+   "voice": "f",
+   "jp": "お{弁当|べんとう|boxed meal}、{温|あたた|to heat up, warm}めますか。",
    "en": "Shall I heat up your bento?"
   },
   {
@@ -49,7 +50,8 @@
    "me": true
   },
   {
-   "speaker": "Staff", "voice": "f",
+   "speaker": "Staff",
+   "voice": "f",
    "jp": "ポイントカードはお{持|も|(honorific) do you have}ちですか。",
    "en": "Do you have a points card?"
   },
@@ -60,7 +62,8 @@
    "me": true
   },
   {
-   "speaker": "Staff", "voice": "f",
+   "speaker": "Staff",
+   "voice": "f",
    "jp": "お{支払|しはら|payment}いは{現金|げんきん|cash}ですか。",
    "en": "Will you pay in cash?"
   },
@@ -77,28 +80,95 @@
   "romaji": "Waribiki",
   "meaning": "Discount",
   "where": "On yellow or red stickers on bento, onigiri and bread close to their date, often in the evening. 2{割引|わりびき} = 20% off; 50{円引|えんび}き = 50 yen off.",
-  "related": "Related: {半額|はんがく} half price, {消費期限|しょうひきげん} use-by date."
+  "related": "Related: {半額|はんがく} half price, {消費期限|しょうひきげん} use-by date.",
+  "breakdown": "{割引|わりびき}: 割 cut, divide + 引 pull, take away → part of the price is cut off."
  },
  "tip": {
   "mark": "内",
   "title": "Eating in changes the tax",
-  "body": "At the till you may hear {店内|てんない}でお{召|め}し{上|あ}がりですか (Eating here?). Food to take away is taxed at 8%, but eating in the konbini's eat-in corner is 10%, so say {持|も}ち{帰|かえ}りです if you're taking it away. Konbini also have free toilets, ATMs that take foreign cards, and copy machines that print documents from your phone."
+  "body": "At the till you may hear {店内|てんない|inside the shop}でお{召|め|to eat (honorific)}し{上|あ}がりですか (Eating here?). Food to take away is taxed at 8%, but eating in the konbini's eat-in corner is 10%, so say {持|も}ち{帰|かえ}りです if you're taking it away. Konbini also have free toilets, ATMs that take foreign cards, and copy machines that print documents from your phone."
  },
  "challenge": {
   "prompt": "Tell the clerk you don't need a bag, and ask if you can pay by card.",
   "hint": "\"Can I pay?\" = {払|はら}えますか.",
-  "model_answer": "{袋|ふくろ|bag}はいりません。カードで{払|はら}えますか。"
+  "model_answer": "{袋|ふくろ|bag}はいりません。カードで{払|はら}えますか。",
+  "explanation": "{袋|ふくろ}はいりません: いる here is 要る 'to need', so いりません = I don't need it (not 'there isn't'). カードで: で marks the means. {払|はら}える is the can-form of {払|はら}う, so the whole thing is 'Can I pay by card?'"
  },
  "vocab": [
-  {"jp": "{温|あたた}める", "reading": "あたためる", "en": "to heat up, warm", "level": "N3", "src": "p0", "surface": "温め"},
-  {"jp": "{袋|ふくろ}", "reading": "ふくろ", "en": "bag", "level": "N3", "src": "p1", "surface": "袋", "note": "Plastic shopping bag = レジ{袋|ぶくろ}."},
-  {"jp": "{箸|はし}", "reading": "はし", "en": "chopsticks", "level": "N4", "src": "p2", "surface": "箸"},
-  {"jp": "{付|つ}ける", "reading": "つける", "en": "to include, attach", "level": "N4", "src": "p2", "surface": "付け"},
-  {"jp": "{別々|べつべつ}", "reading": "べつべつ", "en": "separately", "level": "N3", "src": "p3", "surface": "別々", "note": "Also for paying separately: {別々|べつべつ}でお{願|ねが}いします."},
-  {"jp": "{寄|よ}る", "reading": "よる", "en": "to stop by, drop in", "level": "N3", "src": "p4", "surface": "寄って"},
-  {"jp": "{弁当|べんとう}", "reading": "べんとう", "en": "boxed meal, bento", "level": "N4", "src": "d0", "surface": "弁当"},
-  {"jp": "{支払|しはら}い", "reading": "しはらい", "en": "payment", "level": "N3", "src": "d4", "surface": "支払い"},
-  {"jp": "{現金|げんきん}", "reading": "げんきん", "en": "cash", "level": "N3", "src": "d4", "surface": "現金"}
+  {
+   "jp": "{温|あたた}める",
+   "reading": "あたためる",
+   "en": "to heat up, warm",
+   "level": "N3",
+   "src": "p0",
+   "surface": "温め"
+  },
+  {
+   "jp": "{袋|ふくろ}",
+   "reading": "ふくろ",
+   "en": "bag",
+   "level": "N3",
+   "src": "p1",
+   "surface": "袋",
+   "note": "Plastic shopping bag = レジ{袋|ぶくろ}."
+  },
+  {
+   "jp": "{箸|はし}",
+   "reading": "はし",
+   "en": "chopsticks",
+   "level": "N4",
+   "src": "p2",
+   "surface": "箸"
+  },
+  {
+   "jp": "{付|つ}ける",
+   "reading": "つける",
+   "en": "to include, attach",
+   "level": "N4",
+   "src": "p2",
+   "surface": "付け"
+  },
+  {
+   "jp": "{別々|べつべつ}",
+   "reading": "べつべつ",
+   "en": "separately",
+   "level": "N3",
+   "src": "p3",
+   "surface": "別々",
+   "note": "Also for paying separately: {別々|べつべつ}でお{願|ねが}いします."
+  },
+  {
+   "jp": "{寄|よ}る",
+   "reading": "よる",
+   "en": "to stop by, drop in",
+   "level": "N3",
+   "src": "p4",
+   "surface": "寄って"
+  },
+  {
+   "jp": "{弁当|べんとう}",
+   "reading": "べんとう",
+   "en": "boxed meal, bento",
+   "level": "N4",
+   "src": "d0",
+   "surface": "弁当"
+  },
+  {
+   "jp": "{支払|しはら}い",
+   "reading": "しはらい",
+   "en": "payment",
+   "level": "N3",
+   "src": "d4",
+   "surface": "支払い"
+  },
+  {
+   "jp": "{現金|げんきん}",
+   "reading": "げんきん",
+   "en": "cash",
+   "level": "N3",
+   "src": "d4",
+   "surface": "現金"
+  }
  ],
  "kanji_study": [
   {
@@ -108,13 +178,33 @@
    "kun": "あたた(かい)・あたた(める)",
    "meaning": "warm",
    "words": [
-    {"jp": "{温|あたた}める", "reading": "あたためる", "en": "to heat up"},
-    {"jp": "{温泉|おんせん}", "reading": "おんせん", "en": "hot spring"},
-    {"jp": "{温度|おんど}", "reading": "おんど", "en": "temperature"}
+    {
+     "jp": "{温|あたた}める",
+     "reading": "あたためる",
+     "en": "to heat up"
+    },
+    {
+     "jp": "{温泉|おんせん}",
+     "reading": "おんせん",
+     "en": "hot spring"
+    },
+    {
+     "jp": "{温度|おんど}",
+     "reading": "おんど",
+     "en": "temperature"
+    }
    ],
    "decoys": {
-    "meanings": ["cold", "boil", "cook"],
-    "readings": ["あたたまる", "あだためる", "おんめる"]
+    "meanings": [
+     "cold",
+     "boil",
+     "cook"
+    ],
+    "readings": [
+     "あたたまる",
+     "あだためる",
+     "おんめる"
+    ]
    }
   },
   {
@@ -124,13 +214,33 @@
    "kun": "はら(う)",
    "meaning": "pay",
    "words": [
-    {"jp": "{支払|しはら}い", "reading": "しはらい", "en": "payment"},
-    {"jp": "{払|はら}う", "reading": "はらう", "en": "to pay"},
-    {"jp": "{払|はら}い{戻|もど}し", "reading": "はらいもどし", "en": "refund"}
+    {
+     "jp": "{支払|しはら}い",
+     "reading": "しはらい",
+     "en": "payment"
+    },
+    {
+     "jp": "{払|はら}う",
+     "reading": "はらう",
+     "en": "to pay"
+    },
+    {
+     "jp": "{払|はら}い{戻|もど}し",
+     "reading": "はらいもどし",
+     "en": "refund"
+    }
    ],
    "decoys": {
-    "meanings": ["receive", "buy", "return"],
-    "readings": ["しばらい", "しっぱらい", "しはい"]
+    "meanings": [
+     "receive",
+     "buy",
+     "return"
+    ],
+    "readings": [
+     "しばらい",
+     "しっぱらい",
+     "しはい"
+    ]
    }
   }
  ],
@@ -140,10 +250,23 @@
    "title_jp": "{店員|てんいん}さんの{言葉|ことば}",
    "intro": "Fast, polite set phrases you'll hear at every till.",
    "items": [
-    {"jp": "{袋|ふくろ|bag}はご{利用|りよう|use (polite ご〜ですか = do you need)}ですか。", "en": "Do you need a bag?"},
-    {"jp": "{年齢確認|ねんれいかくにん|age verification}のボタンを{押|お}してください。", "en": "Please press the age check button.", "note": "For alcohol and cigarettes: tap the screen to confirm you're over 20."},
-    {"jp": "レシートはご{利用|りよう|use (polite ご〜ですか = do you need)}ですか。", "en": "Do you want the receipt?"},
-    {"jp": "こちらにタッチしてください。", "en": "Please touch your card here."}
+    {
+     "jp": "{袋|ふくろ|bag}はご{利用|りよう|use (polite ご〜ですか = do you need)}ですか。",
+     "en": "Do you need a bag?"
+    },
+    {
+     "jp": "{年齢確認|ねんれいかくにん|age verification}のボタンを{押|お}してください。",
+     "en": "Please press the age check button.",
+     "note": "For alcohol and cigarettes: tap the screen to confirm you're over 20."
+    },
+    {
+     "jp": "レシートはご{利用|りよう|use (polite ご〜ですか = do you need)}ですか。",
+     "en": "Do you want the receipt?"
+    },
+    {
+     "jp": "こちらにタッチしてください。",
+     "en": "Please touch your card here."
+    }
    ]
   },
   {
@@ -151,10 +274,23 @@
    "title_jp": "コンビニでできること",
    "intro": "Konbini are mini service centres. Ask for these at the till.",
    "items": [
-    {"jp": "ATMはどこですか。", "en": "Where's the ATM?"},
-    {"jp": "{コピー機|コピーき|photocopier}を{使|つか}いたいんですが。", "en": "I'd like to use the copy machine."},
-    {"jp": "これ、ここから{送|おく}れますか。", "en": "Can I send this from here?", "note": "Most konbini accept parcels ({宅急便|たっきゅうびん})."},
-    {"jp": "トイレをお{借|か|to borrow (humble お〜する)}りしてもいいですか。", "en": "May I use the toilet?"}
+    {
+     "jp": "ATMはどこですか。",
+     "en": "Where's the ATM?"
+    },
+    {
+     "jp": "{コピー機|コピーき|photocopier}を{使|つか}いたいんですが。",
+     "en": "I'd like to use the copy machine."
+    },
+    {
+     "jp": "これ、ここから{送|おく}れますか。",
+     "en": "Can I send this from here?",
+     "note": "Most konbini accept parcels ({宅急便|たっきゅうびん|courier parcel delivery})."
+    },
+    {
+     "jp": "トイレをお{借|か|to borrow (humble お〜する)}りしてもいいですか。",
+     "en": "May I use the toilet?"
+    }
    ]
   }
  ]

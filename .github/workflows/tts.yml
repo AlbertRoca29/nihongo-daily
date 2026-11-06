@@ -20,6 +20,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Stroke order for new kanji
+        run: python3 scripts/strokes.py || true
       - name: Make audio
         env:
           GOOGLE_TTS_KEY: ${{ secrets.GOOGLE_TTS_KEY }}
@@ -28,6 +30,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A audio
+          git add -A audio strokes
           git commit -m "Lesson audio" || exit 0
           for i in 1 2 3; do git pull --rebase origin master && git push origin HEAD:master && break; sleep 5; done

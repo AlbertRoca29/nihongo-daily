@@ -43,6 +43,7 @@ Make the combination feel like one real moment, not a checklist: "Yuki tells you
 - **Ren's storyline** follows his `arc` beats in order, one beat every few appearances, no faster. It's warm and real, like a TV drama: feelings, shyness, misunderstandings, being discreet in a small town. Nothing sexual.
 - **Mio** (16): always school or group settings; no romance topics involving the learner.
 - **Guests**: when status says a guest is due, invent a new one-off character (name, age, one clear speech style) who fits the field, and put `"guest": {"name", "name_jp", "role"}` in the lesson. Never reuse a guest's name.
+- Portraits: the app shows a drawn avatar for each cast member, Keiko and You (`icons/cast/<id>.svg`), matched by the speaker name, so always use the character's exact `name` as `speaker` (`Tanaka-san`, `Hana-obāchan`, `Keiko`). Guests and staff get their initial.
 - The learner is "You" (`"me": true`). Characters address him by the name in the task prompt, as described in `world.you`.
 
 ## Formats
@@ -92,9 +93,9 @@ When status allows: `"category": "review"`, a new scene with the cast that reuse
 | `dialogue` | The main text in today's format (see Formats) |
 | `text_title` | Only for `text` format |
 | `grammar` | Today's grammar point (see below) |
-| `kanji` | `{kanji, reading, romaji, meaning, where, related?}`: a word you'd really see written in this world (sign, label, menu, scroll, app screen) |
+| `kanji` | `{kanji, reading, romaji, meaning, where, breakdown, related?}`: a word you'd really see written in this world (sign, label, menu, scroll, app screen). `breakdown`: one line on how its kanji build the meaning, e.g. `{既読|きどく}: 既 already + 読 read → 'already read'.` (the app also shows each kanji's dictionary meaning; for a single kanji, say what its parts hint at) |
 | `tip` | `{mark, title, body}`: `mark` is one kanji shown as a stamp; body is 2–4 sentences textbooks don't teach |
-| `challenge` | `{prompt, hint, model_answer}`: a short task to answer in Japanese, ideally replying to a character |
+| `challenge` | `{prompt, hint, model_answer, explanation}`: a short task to answer in Japanese, ideally replying to a character. `explanation`: 2–3 English sentences (furigana markup allowed) that walk through the model answer: which grammar does what, why that word or form, the register. Shown with the model answer |
 | `vocab` | 8–10 words from today's phrases and main text |
 | `kanji_study` | Exactly 2 kanji to learn |
 | `extras` | Optional bonus sections `{title, title_jp, intro, items: [{jp, en, note?}]}`; 2–3 of them |
@@ -104,7 +105,7 @@ When status allows: `"category": "review"`, a new scene with the cast that reuse
 
 `grammar`: `{id, pattern, level, meaning, form, explanation, src, examples, quiz}`
 - `id`, `pattern`, `level`, `meaning`: from `curriculum/grammar.json` (the `pattern` may get furigana markup).
-- `form`: how to build it, e.g. `{動詞|どうし}た{形|けい} + ばかり`, one line, with a mini example.
+- `form`: how to build it, e.g. `{動詞|どうし}た{形|けい} + ばかり`, with a mini example. When there are several rules (by verb group, by word type), separate them with ` · ` (space, middle dot, space): the app shows each rule on its own line.
 - `explanation`: 2–3 plain English sentences: when people use it, the nuance, the classic mistake, how it differs from the similar point learners confuse it with.
 - `src`: the lines of today's lesson that use it (`["d2", "p1"]`), at least one.
 - `examples`: 1–3 extra `{jp, en}` sentences in other situations, so the pattern isn't tied to one scene.
@@ -152,12 +153,13 @@ Every Japanese string (except `kanji.kanji` and `kanji.reading`) marks each kanj
 ## Hard-word glosses (tap to see the meaning)
 
 Words the learner probably doesn't know get a third part, the meaning: `{遠慮|えんりょ|holding back, being reserved}`. The app underlines them and shows the meaning when he taps. Kana-only words use an empty reading: `{どんどん||one after another, freely}`.
-- **Gloss**: every N3, N2 or N1 word, every dialect, slang or archaic form, set expressions whose meaning isn't obvious from the parts, and rare place or dish names. **Don't gloss** N5 or common N4 words, names of the cast, or grammar endings (the grammar step teaches those).
+- **Gloss generously.** The learner should never meet a word he can't look up. Gloss every N3, N2 or N1 word, every vocab word, every dialect, slang or archaic form, set expressions whose meaning isn't obvious from the parts, rare place or dish names, and also the less common N4 words (e.g. {畑|はたけ}, {坂|さか}, {箸|はし}, {整理券|せいりけん}, {宅急便|たっきゅうびん}, {千円札|せんえんさつ}). Rule of thumb: if someone who knows N5 and everyday N4 might pause on it, gloss it; a missing gloss is worse than an extra one. **Phrase cards** (`phrases[].jp`) get the same care as the main text. **Don't gloss** N5 or everyday N4 words ({電車|でんしゃ}, {友達|ともだち}, {大丈夫|だいじょうぶ}), names of the cast, or grammar endings (the grammar step teaches those).
+- Before finishing, reread every phrase and main-text line word by word and ask of each kanji word and katakana loanword: would he know this? If not, gloss it.
 - Gloss every occurrence, also when the word is in today's vocab (the popover then offers the vocab note and the ☆).
 - Where: `phrases[].jp`, `dialogue[].jp`, `text_title`, `grammar.examples`, `grammar.quiz.question`, `challenge.prompt`/`model_answer`, `extras` items. **Never** in `vocab`, `kanji_study`, `kanji`, `grammar.pattern`, `grammar.form` or quiz `options` (the check refuses it).
 - The base is the whole word as written, okurigana included when it reads naturally: `{乗り換え|のりかえ|transfer (trains)}`, `{遠慮|えんりょ|holding back}しない`. Conjugated verbs: gloss the stem block and give the dictionary meaning: `{頼|たの|to ask (a favour)}まれて`.
 - The meaning is short plain English (2–6 words), the sense used in this line; for dialect or slang add the standard form: `{ずら||(Nagano dialect) = でしょう, right?}`. No `{`, `}` or `|` inside it.
-- The check needs at least 3 glosses across phrases and the main text; most lessons have 6–12.
+- The check needs at least 6 glosses across phrases and the main text (most lessons have 10–20), and every vocab word must be glossed in the line it comes from.
 
 ## Writing quality
 

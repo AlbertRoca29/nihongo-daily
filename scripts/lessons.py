@@ -300,7 +300,8 @@ def check_lesson(lid, L, topic_ids, errs):
         check_new(lid, L, errs)
     need(L.get("kanji"), ["kanji", "reading", "romaji", "meaning", "where"], "kanji")
     need(L.get("tip"), ["mark", "title", "body"], "tip")
-    need(L.get("challenge"), ["prompt", "hint", "model_answer"], "challenge")
+    need(L.get("challenge"), ["prompt", "hint", "model_answer", "explanation"], "challenge")
+    need(L.get("kanji"), ["breakdown"], "kanji")
     if L.get("news"):
         if L.get("category") != "news":
             errs.append(f"{lid}: news lessons need category 'news'")
@@ -332,8 +333,18 @@ def check_lesson(lid, L, topic_ids, errs):
             if gloss and not gloss.strip():
                 errs.append(f"{lid}: empty gloss for '{base}' in {path}")
     main = [str(x.get("jp", "")) for x in (L.get("phrases") or []) + (L.get("dialogue") or []) if isinstance(x, dict)]
-    if sum(1 for t in main for m in RUBY.finditer(t) if m.group(3)) < 3:
-        errs.append(f"{lid}: gloss the hard words in phrases and the main text ({{word|reading|meaning}}): fewer than 3 found")
+    if sum(1 for t in main for m in RUBY.finditer(t) if m.group(3)) < 6:
+        errs.append(f"{lid}: gloss the hard words in phrases and the main text ({{word|reading|meaning}}): fewer than 6 found")
+    # every vocab word must be tappable (glossed) in the line it comes from
+    for v in L.get("vocab") or []:
+        if not isinstance(v, dict):
+            continue
+        line, sf = line_at(L, v.get("src")), str(v.get("surface", ""))
+        if not line or not sf:
+            continue
+        glossed = [m.group(1) for m in RUBY.finditer(str(line.get("jp", ""))) if m.group(3)]
+        if not any(b and (b in sf or sf in b) for b in glossed):
+            errs.append(f"{lid}: vocab '{sf}' is not glossed in {v.get('src')} (add {{word|reading|meaning}} there)")
 
 
 def cmd_check(args):

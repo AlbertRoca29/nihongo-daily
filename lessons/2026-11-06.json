@@ -16,7 +16,7 @@
    "note": "〜{行|い}き = bound for. In town people say バス{停|てい} for a bus stop; {停留所|ていりゅうじょ} is the official word on signs and announcements."
   },
   {
-   "jp": "{千円札|せんえんさつ}を{両替|りょうがえ|changing into coins}したいんですが…",
+   "jp": "{千円札|せんえんさつ|1,000-yen note}を{両替|りょうがえ|changing into coins}したいんですが…",
    "en": "I'd like to change a 1000-yen note...",
    "register": "polite",
    "note": "On a rural bus, say this to the driver while the bus is stopped. The fare box has a slot that turns a 1000-yen note into coins."
@@ -50,7 +50,7 @@
   },
   {
    "speaker": "Hana-obāchan",
-   "jp": "{停留所|ていりゅうじょ|bus stop}に、{背|せ}の{高|たか}い{外国|がいこく}の{子|こ}が{おって||(dialect) = いて, was there}のう。{時刻表|じこくひょう|timetable}をじーっと{見|み}て、{困|こま}った{顔|かお}を{しとった||(dialect) = していた}んじゃ。",
+   "jp": "{停留所|ていりゅうじょ|bus stop}に、{背|せ|height (背が高い = tall)}の{高|たか}い{外国|がいこく}の{子|こ}が{おって||(dialect) = いて, was there}のう。{時刻表|じこくひょう|timetable}をじーっと{見|み}て、{困|こま|to be in trouble, at a loss}った{顔|かお}を{しとった||(dialect) = していた}んじゃ。",
    "en": "There was a tall foreign lad at the bus stop, you see. He was staring and staring at the timetable with such a lost face.",
    "note": "おって = いて, しとった = していた, 〜のう and 〜じゃ = old-fashioned よ / だ. Understand them; don't copy them."
   },
@@ -64,19 +64,19 @@
   {
    "speaker": "You",
    "me": true,
-   "jp": "でも{千円札|せんえんさつ}しかなくて、{両替|りょうがえ|changing into coins}で{慌|あわ|to panic, get flustered}てているうちに、{郵便局前|ゆうびんきょくまえ}を{乗り越|のりこ|to ride past one's stop}してしまった。",
+   "jp": "でも{千円札|せんえんさつ|1,000-yen note}しかなくて、{両替|りょうがえ|changing into coins}で{慌|あわ|to panic, get flustered}てているうちに、{郵便局前|ゆうびんきょくまえ}を{乗り越|のりこ|to ride past one's stop}してしまった。",
    "en": "But I only had a 1000-yen note, and while I was panicking over the change, I rode right past the Post Office stop."
   },
   {
    "speaker": "Hana-obāchan",
-   "jp": "{仕方|しかた}ないから、あたしも{一緒|いっしょ}に{降|お}りて、{坂|さか}をてくてく{歩|ある}いて{戻|もど}ったんじゃ。{子|こ}どもの{頃|ころ}は、{毎日|まいにち}この{坂|さか}を{歩|ある}かされたもんじゃよ。",
+   "jp": "{仕方|しかた|仕方ない = it can’t be helped}ないから、あたしも{一緒|いっしょ}に{降|お}りて、{坂|さか|slope, hill}をてくてく{歩|ある}いて{戻|もど|to go back}ったんじゃ。{子|こ}どもの{頃|ころ}は、{毎日|まいにち}この{坂|さか|slope, hill}を{歩|ある}かされたもんじゃよ。",
    "en": "Nothing for it, so I got off with him and we plodded back up the slope. When I was a girl, they made me walk this slope every single day.",
    "note": "てくてく = the sound of walking a long way on foot. 〜たもんじゃ = 〜たものだ: 'I used to...' when remembering the past."
   },
   {
    "speaker": "You",
    "me": true,
-   "jp": "{郵便局|ゆうびんきょく}が{閉|し}まる{前|まえ}に、なんとか{間に合|まにあ|to make it in time}った。そのおばあさんは、{田中|たなか}さんの{隣|となり}に{住|す}んでいるハナさんだった！",
+   "jp": "{郵便局|ゆうびんきょく}が{閉|し|to close}まる{前|まえ}に、なんとか{間に合|まにあ|to make it in time}った。そのおばあさんは、{田中|たなか}さんの{隣|となり|next door}に{住|す}んでいるハナさんだった！",
    "en": "I somehow made it before the post office closed. And the old lady turned out to be Hana-san, who lives next door to the Tanakas!"
   }
  ],
@@ -94,7 +94,7 @@
   ],
   "examples": [
    {
-    "jp": "{子|こ}どもの{頃|ころ}、{嫌|きら}いなピーマンを{食|た}べさせられた。",
+    "jp": "{子|こ}どもの{頃|ころ}、{嫌|きら|disliked, hated}いなピーマンを{食|た}べさせられた。",
     "en": "As a kid, I was made to eat green peppers I hated."
    },
    {
@@ -124,17 +124,19 @@
   "romaji": "seiriken",
   "meaning": "numbered boarding ticket (on buses)",
   "where": "A little machine by the rear door of rural buses prints it as you get on. The number on it tells you which fare to pay on the screen at the front.",
-  "related": "{運賃表|うんちんひょう} = the fare board at the front, showing the price for each ticket number."
+  "related": "{運賃表|うんちんひょう} = the fare board at the front, showing the price for each ticket number.",
+  "breakdown": "{整理券|せいりけん}: 整 put in order + 理 arrange + 券 ticket → 整理 = sorting; the ticket sorts passengers by the stop where they got on."
  },
  "tip": {
   "mark": "降",
   "title": "How a country bus really works",
-  "body": "Get on at the back and take a {整理券|せいりけん} (or touch your IC card, if it works on that line: many rural buses don't take Suica). When you hear your stop, press the button and 「{次|つぎ}、{止|と}まります」 lights up. Pay at the front as you get off, in exact coins: change notes only while the bus is stopped, never at the last second, or you'll end up like today."
+  "body": "Get on at the back and take a {整理券|せいりけん|numbered boarding ticket} (or touch your IC card, if it works on that line: many rural buses don't take Suica). When you hear your stop, press the button and 「{次|つぎ}、{止|と}まります」 lights up. Pay at the front as you get off, in exact coins: change notes only while the bus is stopped, never at the last second, or you'll end up like today."
  },
  "challenge": {
   "prompt": "At dinner Tanaka-san asks: 「バス、{大丈夫|だいじょうぶ}だったずら？」 Tell him what happened in two short sentences, using one 〜させられた (or 〜された) form.",
   "hint": "{乗り越|のりこ}す · {歩|ある}かされた · ハナさんが{助|たす}けてくれた",
-  "model_answer": "{乗り越|のりこ|to ride past one's stop}しちゃって、{坂|さか}を{30分|さんじゅっぷん}も{歩|ある}かされました。でも、ハナさんが{助|たす}けてくれたから{大丈夫|だいじょうぶ}でした！"
+  "model_answer": "{乗り越|のりこ|to ride past one's stop}しちゃって、{坂|さか|slope, hill}を{30分|さんじゅっぷん}も{歩|ある}かされました。でも、ハナさんが{助|たす}けてくれたから{大丈夫|だいじょうぶ}でした！",
+  "explanation": "{乗り越|のりこ}しちゃって = {乗り越|のりこ}してしまって, the casual 'I ended up riding past my stop' (with regret). {歩|ある}かされました is causative-passive: I was made to walk; も after {30分|さんじゅっぷん} stresses 'a whole 30 minutes'. {助|たす}けてくれたから gives the reason it ended well."
  },
  "vocab": [
   {
@@ -341,7 +343,7 @@
      "en": "in the end, after all"
     },
     {
-     "jp": "{実|じつ}は",
+     "jp": "{実|じつ|実は = actually, truth is}は",
      "en": "actually, the truth is",
      "note": "Opens a surprise or a confession."
     }
