@@ -246,6 +246,19 @@
     "Your room upstairs has a kotatsu.",
     "You promised Yuki to send photos to your family in Spain."
    ]
+  },
+  {
+   "date": "2026-11-06",
+   "cast": [
+    "hana"
+   ],
+   "summary": "Tanaka-san makes you take the town bus alone to post photos and a parcel to your family in Spain. You panic changing a 1000-yen note and ride past the post office stop; an old lady gets off with you and walks you back up the slope. She turns out to be Hana-obāchan, the Tanakas' neighbour.",
+   "new_facts": [
+    "The town bus runs about once an hour; you take a 整理券 at the back and pay at the front when getting off.",
+    "There's a 郵便局前 (Post Office) stop on the shopping street; the post office is up a slope from the next stop.",
+    "You first met Hana-obāchan on the bus on 6 Nov; as a girl she had to walk that slope every day.",
+    "You sent photos and a parcel to your family in Spain (promise to Yuki kept)."
+   ]
   }
  ]
 }

@@ -1,0 +1,351 @@
+{
+ "topic": "Lost on the town bus",
+ "category": "getting-around",
+ "function": "narrating",
+ "format": "story",
+ "cast": [
+  "hana"
+ ],
+ "title_jp": "{初|はじ}めての{町|まち}のバス",
+ "context": "Tanaka-san sent you alone on the town bus to post a parcel to your family in Spain. It didn't go to plan, and an old lady on the bus saw the whole thing. Today you and she each tell what happened: narrating, and being made to do things.",
+ "phrases": [
+  {
+   "jp": "すみません、{郵便局|ゆうびんきょく}{行|い}きのバスは、どの{停留所|ていりゅうじょ|bus stop}から{出|で}ますか。",
+   "en": "Excuse me, which stop does the bus to the post office leave from?",
+   "register": "polite",
+   "note": "〜{行|い}き = bound for. In town people say バス{停|てい} for a bus stop; {停留所|ていりゅうじょ} is the official word on signs and announcements."
+  },
+  {
+   "jp": "{千円札|せんえんさつ}を{両替|りょうがえ|changing into coins}したいんですが…",
+   "en": "I'd like to change a 1000-yen note...",
+   "register": "polite",
+   "note": "On a rural bus, say this to the driver while the bus is stopped. The fare box has a slot that turns a 1000-yen note into coins."
+  },
+  {
+   "jp": "やばい、{乗り越|のりこ|to ride past one's stop}しちゃった！",
+   "en": "Oh no, I've gone past my stop!",
+   "register": "casual",
+   "note": "〜ちゃった = 〜てしまった: something happened that you didn't want. Works for trains too: {寝|ね}て{乗り越|のりこ}しちゃった (fell asleep and missed my stop)."
+  },
+  {
+   "jp": "{時刻表|じこくひょう|timetable}を{見|み}たら、{次|つぎ}のバスは{40分後|よんじゅっぷんご}だって。",
+   "en": "I checked the timetable: the next bus is in 40 minutes.",
+   "register": "casual",
+   "note": "〜たら here = when I did X, I found Y. 〜だって = apparently / it says: you're reporting what the timetable told you."
+  },
+  {
+   "jp": "{雨|あめ}の{中|なか}、{30分|さんじゅっぷん}も{待|ま}たされた。",
+   "en": "I was kept waiting 30 minutes in the rain.",
+   "register": "neutral",
+   "note": "{待|ま}たされる = be made to wait: the classic complaint about late buses, slow shops and late friends. 〜も stresses that 30 minutes is a lot."
+  }
+ ],
+ "dialogue_setting": "That evening, two versions of the same afternoon: yours, and Hana-obāchan's, told on the Tanakas' engawa.",
+ "dialogue": [
+  {
+   "speaker": "You",
+   "me": true,
+   "jp": "{今日|きょう}は{田中|たなか}さんに、{一人|ひとり}でバスに{乗|の}って{郵便局|ゆうびんきょく}まで{行|い}かされた。スペインの{家族|かぞく}に、{写真|しゃしん}と{小包|こづつみ|parcel, package}を{送|おく}るためだ。",
+   "en": "Today Tanaka-san made me take the bus to the post office on my own. I had to send photos and a parcel to my family in Spain."
+  },
+  {
+   "speaker": "Hana-obāchan",
+   "jp": "{停留所|ていりゅうじょ|bus stop}に、{背|せ}の{高|たか}い{外国|がいこく}の{子|こ}が{おって||(dialect) = いて, was there}のう。{時刻表|じこくひょう|timetable}をじーっと{見|み}て、{困|こま}った{顔|かお}を{しとった||(dialect) = していた}んじゃ。",
+   "en": "There was a tall foreign lad at the bus stop, you see. He was staring and staring at the timetable with such a lost face.",
+   "note": "おって = いて, しとった = していた, 〜のう and 〜じゃ = old-fashioned よ / だ. Understand them; don't copy them."
+  },
+  {
+   "speaker": "You",
+   "me": true,
+   "jp": "バスは{約|やく|about, approximately}{1時間|いちじかん}に{1本|いっぽん}。そのおばあさんが「{運賃|うんちん|fare}は{降|お}りるときに{払|はら}うんじゃよ」と{教|おし}えてくれた。",
+   "en": "There's only about one bus an hour. The old lady told me: 'You pay the fare when you get off.'",
+   "note": "In the quote, 払うんじゃよ is Hana's old-style 払うんだよ."
+  },
+  {
+   "speaker": "You",
+   "me": true,
+   "jp": "でも{千円札|せんえんさつ}しかなくて、{両替|りょうがえ|changing into coins}で{慌|あわ|to panic, get flustered}てているうちに、{郵便局前|ゆうびんきょくまえ}を{乗り越|のりこ|to ride past one's stop}してしまった。",
+   "en": "But I only had a 1000-yen note, and while I was panicking over the change, I rode right past the Post Office stop."
+  },
+  {
+   "speaker": "Hana-obāchan",
+   "jp": "{仕方|しかた}ないから、あたしも{一緒|いっしょ}に{降|お}りて、{坂|さか}をてくてく{歩|ある}いて{戻|もど}ったんじゃ。{子|こ}どもの{頃|ころ}は、{毎日|まいにち}この{坂|さか}を{歩|ある}かされたもんじゃよ。",
+   "en": "Nothing for it, so I got off with him and we plodded back up the slope. When I was a girl, they made me walk this slope every single day.",
+   "note": "てくてく = the sound of walking a long way on foot. 〜たもんじゃ = 〜たものだ: 'I used to...' when remembering the past."
+  },
+  {
+   "speaker": "You",
+   "me": true,
+   "jp": "{郵便局|ゆうびんきょく}が{閉|し}まる{前|まえ}に、なんとか{間に合|まにあ|to make it in time}った。そのおばあさんは、{田中|たなか}さんの{隣|となり}に{住|す}んでいるハナさんだった！",
+   "en": "I somehow made it before the post office closed. And the old lady turned out to be Hana-san, who lives next door to the Tanakas!"
+  }
+ ],
+ "grammar": {
+  "id": "n4-causative-passive",
+  "pattern": "〜させられる ({使役受身|しえきうけみ})",
+  "level": "N4",
+  "meaning": "be made to do (against your will)",
+  "form": "う-verbs: -a + される / せられる ({待|ま}つ → {待|ま}たされる) · る-verbs: + させられる ({食|た}べさせられる) · する → させられる · {来|く}る → {来|こ}させられる",
+  "explanation": "The person who had to do it is the subject, and the one who made them gets に: {田中|たなか}さんに{行|い}かされた. It nearly always carries a complaint or 'I had no choice', so it's perfect for telling stories about your day. For う-verbs the short form (〜される: {待|ま}たされる, {歩|ある}かされる) is what people actually say; don't confuse it with the plain passive {待|ま}たれる or the causative {待|ま}たせる (you make someone wait).",
+  "src": [
+   "d0",
+   "d4",
+   "p4"
+  ],
+  "examples": [
+   {
+    "jp": "{子|こ}どもの{頃|ころ}、{嫌|きら}いなピーマンを{食|た}べさせられた。",
+    "en": "As a kid, I was made to eat green peppers I hated."
+   },
+   {
+    "jp": "{会議|かいぎ}で、いきなり{英語|えいご}で{発表|はっぴょう|presentation}させられた。",
+    "en": "At the meeting I was suddenly made to present in English."
+   },
+   {
+    "jp": "{友達|ともだち}に{1時間|いちじかん}も{待|ま}たされて、{寒|さむ}かった。",
+    "en": "My friend kept me waiting a whole hour, and it was cold."
+   }
+  ],
+  "quiz": {
+   "question": "{子|こ}どもの{頃|ころ}、{母|はは}に{毎日|まいにち}ピアノを＿＿。",
+   "en": "As a child, my mother made me practise the piano every day.",
+   "options": [
+    "{練習|れんしゅう}させられた",
+    "{練習|れんしゅう}させた",
+    "{練習|れんしゅう}された",
+    "{練習|れんしゅう}させてくれた"
+   ],
+   "explain": "I (subject) was made to practise by my mother (に): causative-passive させられた. させた = I made someone practise, された = plain passive, させてくれた = she kindly let me."
+  }
+ },
+ "kanji": {
+  "kanji": "整理券",
+  "reading": "せいりけん",
+  "romaji": "seiriken",
+  "meaning": "numbered boarding ticket (on buses)",
+  "where": "A little machine by the rear door of rural buses prints it as you get on. The number on it tells you which fare to pay on the screen at the front.",
+  "related": "{運賃表|うんちんひょう} = the fare board at the front, showing the price for each ticket number."
+ },
+ "tip": {
+  "mark": "降",
+  "title": "How a country bus really works",
+  "body": "Get on at the back and take a {整理券|せいりけん} (or touch your IC card, if it works on that line: many rural buses don't take Suica). When you hear your stop, press the button and 「{次|つぎ}、{止|と}まります」 lights up. Pay at the front as you get off, in exact coins: change notes only while the bus is stopped, never at the last second, or you'll end up like today."
+ },
+ "challenge": {
+  "prompt": "At dinner Tanaka-san asks: 「バス、{大丈夫|だいじょうぶ}だったずら？」 Tell him what happened in two short sentences, using one 〜させられた (or 〜された) form.",
+  "hint": "{乗り越|のりこ}す · {歩|ある}かされた · ハナさんが{助|たす}けてくれた",
+  "model_answer": "{乗り越|のりこ|to ride past one's stop}しちゃって、{坂|さか}を{30分|さんじゅっぷん}も{歩|ある}かされました。でも、ハナさんが{助|たす}けてくれたから{大丈夫|だいじょうぶ}でした！"
+ },
+ "vocab": [
+  {
+   "jp": "{停留所|ていりゅうじょ}",
+   "reading": "ていりゅうじょ",
+   "en": "bus stop",
+   "level": "N3",
+   "src": "p0",
+   "surface": "停留所",
+   "note": "Spoken: バス{停|てい}."
+  },
+  {
+   "jp": "{両替|りょうがえ}",
+   "reading": "りょうがえ",
+   "en": "changing money (into coins or another currency)",
+   "level": "N3",
+   "src": "p1",
+   "surface": "両替",
+   "note": "Also the word at airports: {円|えん}に{両替|りょうがえ}する."
+  },
+  {
+   "jp": "{乗り越|のりこ}す",
+   "reading": "のりこす",
+   "en": "to ride past one's stop",
+   "level": "N3",
+   "src": "p2",
+   "surface": "乗り越し"
+  },
+  {
+   "jp": "{時刻表|じこくひょう}",
+   "reading": "じこくひょう",
+   "en": "timetable",
+   "level": "N3",
+   "src": "p3",
+   "surface": "時刻表"
+  },
+  {
+   "jp": "{小包|こづつみ}",
+   "reading": "こづつみ",
+   "en": "parcel, package",
+   "level": "N3",
+   "src": "d0",
+   "surface": "小包"
+  },
+  {
+   "jp": "{約|やく}",
+   "reading": "やく",
+   "en": "about, approximately",
+   "level": "N3",
+   "src": "d2",
+   "surface": "約",
+   "note": "Written and announcement style; in speech people say だいたい."
+  },
+  {
+   "jp": "{運賃|うんちん}",
+   "reading": "うんちん",
+   "en": "fare (bus, train, taxi)",
+   "level": "N3",
+   "src": "d2",
+   "surface": "運賃"
+  },
+  {
+   "jp": "{慌|あわ}てる",
+   "reading": "あわてる",
+   "en": "to panic, get flustered",
+   "level": "N3",
+   "src": "d3",
+   "surface": "慌てて",
+   "note": "{慌|あわ}てないで = don't panic, take your time."
+  },
+  {
+   "jp": "{坂|さか}",
+   "reading": "さか",
+   "en": "slope, hill (road)",
+   "level": "N4",
+   "src": "d4",
+   "surface": "坂"
+  },
+  {
+   "jp": "{間に合|まにあ}う",
+   "reading": "まにあう",
+   "en": "to make it in time",
+   "level": "N3",
+   "src": "d5",
+   "surface": "間に合った"
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "停",
+   "track": "lesson",
+   "on": "テイ",
+   "kun": "",
+   "meaning": "stop, halt",
+   "words": [
+    {
+     "jp": "{停留所|ていりゅうじょ}",
+     "reading": "ていりゅうじょ",
+     "en": "bus stop"
+    },
+    {
+     "jp": "バス{停|てい}",
+     "reading": "ばすてい",
+     "en": "bus stop (spoken)"
+    },
+    {
+     "jp": "{停電|ていでん}",
+     "reading": "ていでん",
+     "en": "power cut"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "stay overnight",
+     "hurry",
+     "transfer"
+    ],
+    "readings": [
+     "ていりょうしょ",
+     "てりゅうじょ",
+     "じょうりゅうじょ"
+    ]
+   }
+  },
+  {
+   "kanji": "約",
+   "track": "n3",
+   "on": "ヤク",
+   "kun": "",
+   "meaning": "promise; approximately",
+   "words": [
+    {
+     "jp": "{約束|やくそく}",
+     "reading": "やくそく",
+     "en": "promise, appointment"
+    },
+    {
+     "jp": "{約|やく}",
+     "reading": "やく",
+     "en": "about, approximately"
+    },
+    {
+     "jp": "{予約|よやく}",
+     "reading": "よやく",
+     "en": "reservation"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "deliver",
+     "invite",
+     "divide"
+    ],
+    "readings": [
+     "やくぞく",
+     "よくそく",
+     "やっそく"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "What you'll hear on the bus",
+   "title_jp": "バスのアナウンス",
+   "intro": "Recorded announcements on a country bus, in the order you'll hear them.",
+   "items": [
+    {
+     "jp": "{次|つぎ}は、{鷹ノ原駅前|たかのはらえきまえ}です。",
+     "en": "Next stop: Takanohara Station."
+    },
+    {
+     "jp": "お{降|お}りの{方|かた}は、ボタンでお{知|し}らせください。",
+     "en": "If you're getting off, please press the button.",
+     "note": "Polite keigo: お{降|お}りの{方|かた} = people getting off."
+    },
+    {
+     "jp": "{両替|りょうがえ|changing into coins}は、{停車中|ていしゃちゅう|while stopped}にお{願|ねが}いします。",
+     "en": "Please change money only while the bus is stopped."
+    },
+    {
+     "jp": "バスが{止|と}まってから、{席|せき}をお{立|た}ちください。",
+     "en": "Please wait until the bus stops before standing up."
+    }
+   ]
+  },
+  {
+   "title": "Linking a story together",
+   "title_jp": "{話|はなし}をつなぐことば",
+   "intro": "Small words that turn a list of events into a story.",
+   "items": [
+    {
+     "jp": "そしたら",
+     "en": "and then (what happened was)",
+     "note": "Casual; very common when telling a story to friends."
+    },
+    {
+     "jp": "〜ているうちに",
+     "en": "while I was (busy) doing ~",
+     "note": "Something happened before you noticed: {寝|ね}ているうちに{着|つ}いた."
+    },
+    {
+     "jp": "{結局|けっきょく|in the end}",
+     "en": "in the end, after all"
+    },
+    {
+     "jp": "{実|じつ}は",
+     "en": "actually, the truth is",
+     "note": "Opens a surprise or a confession."
+    }
+   ]
+  }
+ ]
+}
