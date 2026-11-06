@@ -136,6 +136,21 @@ def glasses(shape, color):
         return (f'<g fill="none" stroke="{color}" stroke-width="1.6"><circle cx="{L}" cy="{EY+.5}" r="8.2"/><circle cx="{R}" cy="{EY+.5}" r="8.2"/>'
                 f'<path d="M{L+8} {EY-.5} Q50 {EY-3} {R-8} {EY-.5} M{L-8.2} {EY-1} L23 {EY-3} M{R+8.2} {EY-1} L77 {EY-3}"/></g>'
                 f'<path d="M{L-5} {EY-4} l3 -2.4 M{R-5} {EY-4} l3 -2.4" stroke="#fff" stroke-width="1.2" stroke-linecap="round" opacity=".8"/>')
+    if shape in ("bold", "tort", "browline"):
+        top = shade(color, .6)
+        g = [f'<g fill="none" stroke="{color}" stroke-width="2.5" stroke-linejoin="round">'
+             f'<rect x="{L-8.8}" y="{EY-6.8}" width="17.6" height="13.4" rx="3.6"/><rect x="{R-8.8}" y="{EY-6.8}" width="17.6" height="13.4" rx="3.6"/>'
+             f'<path d="M{L+8.8} {EY-2} Q50 {EY-4.4} {R-8.8} {EY-2}"/><path d="M{L-8.8} {EY-3} L23 {EY-4.6} M{R+8.8} {EY-3} L77 {EY-4.6}" stroke-width="2"/></g>']
+        if shape == "tort":
+            g.append(f'<g fill="none" stroke="#c9873f" stroke-width="1" stroke-dasharray="1.6 2.4" opacity=".75"><rect x="{L-8.8}" y="{EY-6.8}" width="17.6" height="13.4" rx="3.6"/><rect x="{R-8.8}" y="{EY-6.8}" width="17.6" height="13.4" rx="3.6"/></g>')
+        if shape == "browline":
+            g.append(f'<path d="M{L-9.4} {EY-5.4} Q{L} {EY-8.6} {L+9.4} {EY-5.4} M{R-9.4} {EY-5.4} Q{R} {EY-8.6} {R+9.4} {EY-5.4}" stroke="{top}" stroke-width="3.6" fill="none" stroke-linecap="round"/>')
+        g.append(f'<path d="M{L-5.4} {EY-3} l3 -2.2 M{R-5.4} {EY-3} l3 -2.2" stroke="#fff" stroke-width="1.2" stroke-linecap="round" opacity=".8"/>')
+        return "".join(g)
+    if shape == "thin":
+        return (f'<g fill="none" stroke="{color}" stroke-width="1.1"><ellipse cx="{L}" cy="{EY+.5}" rx="8.4" ry="6.8"/><ellipse cx="{R}" cy="{EY+.5}" rx="8.4" ry="6.8"/>'
+                f'<path d="M{L+8.4} {EY-.6} Q50 {EY-2.6} {R-8.4} {EY-.6} M{L-8.4} {EY-1} L23 {EY-3} M{R+8.4} {EY-1} L77 {EY-3}"/></g>'
+                f'<path d="M{L-5} {EY-3} l2.6 -2 M{R-5} {EY-3} l2.6 -2" stroke="#fff" stroke-width="1.1" stroke-linecap="round" opacity=".8"/>')
     # rounded rectangle
     return (f'<g fill="none" stroke="{color}" stroke-width="1.7"><rect x="{L-8.6}" y="{EY-6.6}" width="17.2" height="13.6" rx="4.4"/>'
             f'<rect x="{R-8.6}" y="{EY-6.6}" width="17.2" height="13.6" rx="4.4"/>'
@@ -165,6 +180,48 @@ def svg(cid, bg, iris, layers, deco=""):
 def sparkles(color="#fff", op=.85):
     return (f'<g fill="{color}" opacity="{op}"><path d="M13 24 l1.6 -4.6 l1.6 4.6 l4.6 1.6 l-4.6 1.6 l-1.6 4.6 l-1.6 -4.6 l-4.6 -1.6Z"/>'
             f'<path d="M86 66 l1.1 -3.2 l1.1 3.2 l3.2 1.1 l-3.2 1.1 l-1.1 3.2 l-1.1 -3.2 l-3.2 -1.1Z"/><circle cx="84" cy="22" r="1.3"/><circle cx="14" cy="70" r="1"/></g>')
+
+
+# Your look (the learner). Change and rerun to update icons/cast/you.svg.
+YOU = {"hair": "messy", "gl": "bold", "hr": "#3a2518"}
+
+YOU_HAIR = {
+    # short crop, natural hairline with a slight dip at the temples
+    "crop": ('M23 46 C22 29 32 18 50 18 C68 18 78 29 77 46 C76 40 74 36 70.5 33.5 C68 31.5 66 29 63 27.6 C58.5 28.6 54 30 50 30.6 C46 30 41.5 28.6 37 27.6 C34 29 32 31.5 29.5 33.5 C26 36 24 40 23 46Z', ""),
+    # short with a side parting, swept to the right
+    "part": ('M23 46 C22 28 32 17 50 17 C68 17 79 28 77 46 C75 39 72 34 67 32 C60 30.5 52 30 45 30.4 L40 25 C37 28.4 33 32 30 34.4 C26.6 37.4 24.4 41 23 46Z',
+             '<path d="M40 25 C41 22 43 19.6 45 18.4" stroke="{d}" stroke-width="1.2" fill="none"/><path d="M47 22 C55 21 64 23 70 28" stroke="{d}" stroke-width="1" fill="none" opacity=".6"/>'),
+    # textured quiff pushed up at the front
+    "quiff": ('M23 46 C21 29 29 17 41 13.4 C49 11 61 11.4 68 16 C76 21 79 32 77 46 C75 39 72 34.4 67.4 31.6 C60 29.6 52 30 46 30.4 C40 30.6 35 31.4 31 33.4 C27 36 24.4 41 23 46Z',
+              '<path d="M40 15.6 C46 13 54 13 60 15.4 M38 21 C45 18 55 18 63 21" stroke="{d}" stroke-width="1" fill="none" opacity=".6"/>'),
+    # soft fringe swept across the forehead
+    "fringe": ('M23 46 C22 28 33 17 50 17 C67 17 78 27 77 46 C75 38.4 71 33.6 64 31 C57 35.6 45 39 34 39.4 C29.6 39.8 25.6 42 23 46Z',
+               '<path d="M62 31.4 C55 34.6 46 36.8 38 37.6 M58 27 C52 30 45 32 38 33" stroke="{d}" stroke-width="1" fill="none" opacity=".6"/>'),
+    # messy textured top
+    "messy": ('M23 46 C21.5 31 28 21.5 37 19 L39 16 L43 18.4 L47 15.4 L51 18 L56 15.6 L59 18.6 L64 17 C73 21 79 31 77 46 C76 40.5 74 37 70.5 34 C67.5 31 64.5 28 61.5 27 L57.5 28.6 L53.5 26.4 L49.5 28.8 L45.5 26.6 L41.5 28.4 L38.5 26.4 C35 27.6 32 30.6 29.5 33 C26 36 24 40 23 46Z', ""),
+    # very short buzz cut
+    "buzz": ('M24 44 C23 29 34 20 50 20 C66 20 77 29 76 44 C74.6 37.6 71.6 32.6 66.6 30.6 C60 29.4 40 29.4 33.4 30.6 C28.4 32.6 25.4 37.6 24 44Z',
+             '<g fill="{d}" opacity=".35"><circle cx="40" cy="25" r=".6"/><circle cx="46" cy="23.4" r=".6"/><circle cx="53" cy="23.4" r=".6"/><circle cx="60" cy="25" r=".6"/><circle cx="35" cy="28" r=".6"/><circle cx="65" cy="28" r=".6"/><circle cx="50" cy="26.4" r=".6"/></g>'),
+}
+
+
+def make_you(hair="crop", gl="rect", hr="#5b3b26"):
+    """You (the learner): from Spain, clean-shaven, glasses."""
+    sk, d = "#ecc4a0", shade(hr, .72)
+    path, extra = YOU_HAIR[hair]
+    gcol = {"thin": "#8a6d3b", "bold": "#6b4226", "tort": "#5a3418", "browline": "#7a4a2a"}.get(gl, "#2b2230")
+    return svg("you", "#bff0d2", "#5a3a22",
+        body("#1e7a52", sk,
+             '<path d="M40 78 L50 88 L60 78Z" fill="#f4efe6" stroke="#d9d2c4" stroke-width="1"/><path d="M36 79 L44 90 L41 79Z M64 79 L56 90 L59 79Z" fill="#17603f"/>'
+             '<path d="M50 88 V104" stroke="#17603f" stroke-width="1.2"/><circle cx="58" cy="95" r="1.2" fill="#d9e8df"/>')
+        + head(sk)
+        + f'<path d="{path}" fill="{hr}" stroke="{d}" stroke-width="1" stroke-linejoin="round"/>'
+        + extra.replace("{d}", d)
+        + f'<path d="M23 46 C23 50 24 53 25 55 L27 53 C26 50 26 47 27 44Z M77 46 C77 50 76 53 75 55 L73 53 C74 50 74 47 73 44Z" fill="{hr}"/>'
+        + hair_shine("M36 22 Q42 19.4 48 19.8")
+        + eye_open(EX[0], "#7a4a28") + eye_open(EX[1], "#7a4a28") + brows("soft", shade(hr, .8))
+        + glasses(gl, gcol) + nose(sk) + mouth("smile") + blush(.3),
+        sparkles())
 
 
 def build():
@@ -341,19 +398,7 @@ def build():
 
     # ---------------- You: from Spain, short thinning hair, glasses, clean-shaven ----------------
     sk, hr = "#ecc4a0", "#5b3b26"
-    A["you"] = svg("you", "#bff0d2", "#5a3a22",
-        body("#1e7a52", sk,
-             '<path d="M40 78 L50 88 L60 78Z" fill="#f4efe6" stroke="#d9d2c4" stroke-width="1"/><path d="M36 79 L44 90 L41 79Z M64 79 L56 90 L59 79Z" fill="#17603f"/>'
-             '<path d="M50 88 V104" stroke="#17603f" stroke-width="1.2"/><circle cx="58" cy="95" r="1.2" fill="#d9e8df"/>')
-        + head(sk)
-        # short crop with a higher, slightly M-shaped hairline (less hair on top)
-        + f'<path d="M23 46 C22 29 32 18 50 18 C68 18 78 29 77 46 C76 40 74 36 70.5 33.5 C68 31.5 66 29 63 27.6 C58.5 28.6 54 30 50 30.6 C46 30 41.5 28.6 37 27.6 C34 29 32 31.5 29.5 33.5 C26 36 24 40 23 46Z" fill="{hr}" stroke="#432a19" stroke-width="1"/>'
-        + f'<path d="M33 23 Q42 19.6 50 20.4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".3"/>'
-        + f'<path d="M23 46 C23 50 24 53 25 55 L27 53 C26 50 26 47 27 44Z M77 46 C77 50 76 53 75 55 L73 53 C74 50 74 47 73 44Z" fill="{hr}"/>'
-        + '<path d="M36 24 Q42 21 48 21.4" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".3"/>'
-        + eye_open(EX[0], "#7a4a28") + eye_open(EX[1], "#7a4a28") + brows("soft", "#4a2f1e")
-        + glasses("rect", "#2b2230") + nose(sk) + mouth("smile") + blush(.3),
-        sparkles())
+    A["you"] = make_you(**YOU)
     return A
 
 
