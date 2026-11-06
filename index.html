@@ -231,7 +231,7 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
 .chat-head{font-size:13px;font-weight:700;text-align:center;color:var(--muted);padding:2px 0 4px}
 .chat .line{flex-direction:row;align-items:flex-end;gap:6px}
 .chat .line.me{flex-direction:row-reverse}
-.chat .line .ava{width:28px;height:28px;font-size:12px;align-self:flex-start;background:var(--card)}
+.chat .line .ava{width:36px;height:36px;font-size:13px;align-self:flex-start;background:var(--card)}
 .chat .stack{display:flex;flex-direction:column;gap:2px;min-width:0;max-width:82%}
 .chat .line.me .stack{align-items:flex-end}
 .chat .bubble{max-width:100%;border-radius:16px 16px 16px 4px}
@@ -268,11 +268,11 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
 /* avatars */
 img.ava{object-fit:cover;padding:0;background:var(--soft)}
 .who{display:inline-flex;align-items:center;gap:6px}
-.lines .who img.ava{width:24px;height:24px}
+.lines .who img.ava{width:30px;height:30px}
 .tellers{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .tellers img.ava{width:28px;height:28px}
 .story .para-who{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-top:2px}
-.story .para-who img.ava{width:20px;height:20px}
+.story .para-who img.ava{width:26px;height:26px}
 .cast .ava{width:44px;height:44px}
 
 /* kanji by kanji */
@@ -711,9 +711,10 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
     const id = c ? c.id : n.split(/[\s-]/)[0];
     return PORTRAITS.has(id) ? id : "";
   };
-  const avatar = (name, me) => {
+  // chibi portraits everywhere; in LINE chats, their LINE profile picture (icons/line/<id>.svg)
+  const avatar = (name, me, line) => {
     const id = portraitId(name, me);
-    return id ? `<img class="ava" src="icons/cast/${id}.svg" alt="">` : `<span class="ava">${initial(name)}</span>`;
+    return id ? `<img class="ava" src="icons/${line ? "line" : "cast"}/${id}.svg" alt="">` : `<span class="ava">${initial(name)}</span>`;
   };
   function castCard(L){
     const people = (L.cast || []).map(id => castById[id]).filter(Boolean);
@@ -741,7 +742,7 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
       return `<div class="step">${setting}
         <div class="chat"><div class="chat-head">${esc(others.join(", ") || "LINE")}</div>
         ${L.dialogue.map((d, i) => `<div class="line ${d.me ? "me" : ""}">
-          ${d.me ? "" : avatar(d.speaker)}
+          ${d.me ? "" : avatar(d.speaker, false, true)}
           <div class="stack">
             ${d.me ? "" : `<span class="who" style="padding:0 4px">${esc(d.speaker)}</span>`}
             <div class="bubble" data-show="${i}" role="button" tabindex="0" aria-label="Show English">

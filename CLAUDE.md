@@ -43,7 +43,7 @@ Make the combination feel like one real moment, not a checklist: "Yuki tells you
 - **Ren's storyline** follows his `arc` beats in order, one beat every few appearances, no faster. It's warm and real, like a TV drama: feelings, shyness, misunderstandings, being discreet in a small town. Nothing sexual.
 - **Mio** (16): always school or group settings; no romance topics involving the learner.
 - **Guests**: when status says a guest is due, invent a new one-off character (name, age, one clear speech style) who fits the field, and put `"guest": {"name", "name_jp", "role"}` in the lesson. Never reuse a guest's name.
-- Portraits: the app shows a drawn avatar for each cast member, Keiko and You (`icons/cast/<id>.svg`), matched by the speaker name, so always use the character's exact `name` as `speaker` (`Tanaka-san`, `Hana-obāchan`, `Keiko`). Guests and staff get their initial.
+- Portraits: the app shows a chibi portrait for each cast member, Keiko and You (`icons/cast/<id>.svg`, drawn by `scripts/chibi.py`), and in LINE chats their LINE profile picture instead (`icons/line/<id>.svg`). Both are matched by the speaker name, so always use the character's exact `name` as `speaker` (`Tanaka-san`, `Hana-obāchan`, `Keiko`). Guests and staff get their initial.
 - The learner is "You" (`"me": true`). Characters address him by the name in the task prompt, as described in `world.you`.
 
 ## Formats
