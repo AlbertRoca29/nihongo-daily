@@ -347,8 +347,8 @@ def build():
              '<path d="M50 88 V104" stroke="#17603f" stroke-width="1.2"/><circle cx="58" cy="95" r="1.2" fill="#d9e8df"/>')
         + head(sk)
         # short crop with a higher, slightly M-shaped hairline (less hair on top)
-        + f'<path d="M23 46 C22 30 32 19.5 50 19.5 C68 19.5 78 30 77 46 C76 40 74 35.5 70.5 32.5 C67.5 30.5 65.5 26.5 62.5 25 C58.5 25.6 54 27.4 50 28.2 C46 27.4 41.5 25.6 37.5 25 C34.5 26.5 32.5 30.5 29.5 32.5 C26 35.5 24 40 23 46Z" fill="{hr}" stroke="#432a19" stroke-width="1"/>'
-        + f'<path d="M34 23.6 Q50 21 66 23.6" stroke="{hr}" stroke-width="1" fill="none" opacity=".5"/>'
+        + f'<path d="M23 46 C22 29 32 18 50 18 C68 18 78 29 77 46 C76 40 74 36 70.5 33.5 C68 31.5 66 29 63 27.6 C58.5 28.6 54 30 50 30.6 C46 30 41.5 28.6 37 27.6 C34 29 32 31.5 29.5 33.5 C26 36 24 40 23 46Z" fill="{hr}" stroke="#432a19" stroke-width="1"/>'
+        + f'<path d="M33 23 Q42 19.6 50 20.4" stroke="#fff" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".3"/>'
         + f'<path d="M23 46 C23 50 24 53 25 55 L27 53 C26 50 26 47 27 44Z M77 46 C77 50 76 53 75 55 L73 53 C74 50 74 47 73 44Z" fill="{hr}"/>'
         + '<path d="M36 24 Q42 21 48 21.4" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".3"/>'
         + eye_open(EX[0], "#7a4a28") + eye_open(EX[1], "#7a4a28") + brows("soft", "#4a2f1e")
