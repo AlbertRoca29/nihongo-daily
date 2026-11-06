@@ -261,20 +261,87 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
 
 .empty{display:flex;flex-direction:column;gap:10px;align-items:flex-start;padding-top:20px}
 .empty h2{margin:0;font-size:22px;font-weight:700}
+
+/* home + pages */
+:where(.app) a{text-decoration:none;color:inherit}
+.top-l{display:flex;align-items:center;gap:6px;min-width:0}
+.icon-btn{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--card);color:var(--ink)}
+.icon-btn svg{width:17px;height:17px}
+.home,.page{flex:1;overflow-y:auto;min-height:0;-webkit-overflow-scrolling:touch;padding-block:6px 20px;display:flex;flex-direction:column;gap:12px}
+.home-head{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;padding-top:6px}
+.home-head h1{margin:0;font-family:var(--mincho);font-size:28px;line-height:1.2}
+.home-head .note{margin:0}
+.streak{display:flex;flex-direction:column;gap:12px}
+.streak-top{display:flex;align-items:center;gap:14px}
+.flame{flex:none;display:grid;place-items:center;width:54px;height:54px;border-radius:16px;background:var(--soft);font-size:28px;line-height:1}
+.flame.cold{filter:grayscale(1);opacity:.55}
+.streak-n{font-size:30px;font-weight:700;line-height:1.1;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.streak-n small{font-size:15px;font-weight:600;color:var(--muted);letter-spacing:0}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}
+.week .d{display:flex;flex-direction:column;align-items:center;gap:5px;font-size:11px;font-weight:600;color:var(--muted)}
+.week .d i{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--ghost);font-style:normal;font-size:13px;color:transparent}
+.week .d.on i{background:var(--grad);color:#fff}
+.week .d.today{color:var(--ink)}
+.week .d.today:not(.on) i{background:var(--card);box-shadow:inset 0 0 0 2px var(--accent)}
+.hero{display:block;width:100%;box-sizing:border-box;text-align:left;padding:16px;border-radius:24px}
+.hero .board-title{font-size:clamp(21px,6vw,26px);margin-top:4px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;position:relative;z-index:1}
+.hero-meta span{font-size:12px;font-weight:600;background:rgba(255,255,255,.18);padding:3px 9px;border-radius:999px}
+.hero-go{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;position:relative;z-index:1}
+.hero-go b{background:#fff;color:#2b2bd9;border-radius:999px;padding:9px 18px;font-size:15px}
+.hero-bar{flex:1;height:5px;border-radius:3px;background:rgba(255,255,255,.25);overflow:hidden}
+.hero-bar i{display:block;height:100%;background:#fff;border-radius:3px}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tile{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;background:var(--card);border-radius:20px;padding:14px;min-height:96px;position:relative}
+.tile .tk{font-family:var(--mincho);font-size:24px;line-height:1.1;margin-bottom:auto;color:var(--accent)}
+.tile b{font-size:16px;margin-top:8px}
+.tile span{font-size:13px;color:var(--muted);font-weight:500}
+.tile .badge{position:absolute;top:12px;right:12px;min-width:22px;height:22px;padding:0 7px;box-sizing:border-box;border-radius:999px;background:var(--stamp);color:#fff;font-size:12px;font-weight:700;display:grid;place-items:center}
+.sec-h{display:flex;align-items:center;justify-content:space-between;margin-top:4px}
+.link{font-size:14px;font-weight:700;color:var(--accent);padding:4px 0}
+.lrow{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:11px 0;border-bottom:1px solid var(--rule)}
+.lrow:last-child{border-bottom:0;padding-bottom:0}
+.lrow:first-child{padding-top:0}
+.lrow .st{flex:none;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--ghost);font-size:13px;font-weight:700;color:var(--muted)}
+.lrow .st.done{background:var(--good);color:#fff}
+.lrow .st.half{background:var(--soft);color:var(--accent);box-shadow:inset 0 0 0 2px var(--accent)}
+.lrow .tx{flex:1;min-width:0}
+.lrow .tx div{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lrow .tx small{display:block;color:var(--muted);font-size:12.5px}
+.page-head{display:flex;align-items:center;gap:10px;padding-top:2px}
+.page-head h2{margin:0;font-size:22px;font-weight:700;flex:1;min-width:0}
+.page-head .jp{font-family:var(--mincho);color:var(--muted);font-size:16px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chips button{font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;background:var(--card);color:var(--muted)}
+.chips button[aria-pressed="true"]{background:var(--btn);color:var(--on-btn)}
+.srow{display:flex;gap:10px;align-items:flex-start;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--rule)}
+.srow:last-child{border-bottom:0;padding-bottom:0}
+.srow:first-child{padding-top:0}
+.kgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px}
+.kcell{background:var(--card);border-radius:16px;padding:10px 8px;text-align:center;display:flex;flex-direction:column;gap:2px}
+.kcell .k{font-family:var(--mincho);font-size:36px;line-height:1.2}
+.kcell .m{font-size:13px;font-weight:600;line-height:1.25}
+.kcell .r{font-family:var(--jp);font-size:11px;color:var(--muted);line-height:1.3}
 </style>
 
 </head>
 <body>
 <div class="app" id="app">
-  <div class="top">
-    <button class="date-btn" id="dateBtn" aria-label="Choose a lesson">
-      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>
-      <span id="dateLabel">Loading…</span>
-    </button>
+  <main class="home" id="home"><div class="empty step"><h2>にほんご線</h2><p class="note">Loading…</p></div></main>
+  <main class="page" id="page" hidden></main>
+
+  <div class="top" id="top" hidden>
+    <div class="top-l">
+      <a class="icon-btn" href="#" id="homeBtn" aria-label="Home"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="M2 7.2 8 2l6 5.2M3.8 6v7.5h8.4V6"/></svg></a>
+      <button class="date-btn" id="dateBtn" aria-label="Choose a lesson">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="3" width="12" height="11" rx="2"/><path d="M2 6.5h12M5.5 1.5v3M10.5 1.5v3"/></svg>
+        <span id="dateLabel">Loading…</span>
+      </button>
+    </div>
     <button class="toggle" id="furiBtn" aria-pressed="true"><span>ふりがな</span><span class="pill"></span></button>
   </div>
 
-  <div class="board" id="board">
+  <div class="board" id="board" hidden>
     <div class="board-main">
       <div class="board-kicker" id="kicker">Today's stop</div>
       <div class="board-title" id="bTitle">にほんご線</div>
@@ -282,9 +349,9 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
     </div>
     <div class="band"><div class="prev" id="bPrev"></div><div class="num" id="bNum">--</div><div class="next" id="bNext"></div></div>
   </div>
-  <div class="stops" id="stops"><div class="fill" id="fill"></div></div>
+  <div class="stops" id="stops" hidden><div class="fill" id="fill"></div></div>
 
-  <main class="stage" id="stage">
+  <main class="stage" id="stage" hidden>
     <div class="empty step">
       <h2>Your lessons are on their way</h2>
       <p class="note">Each morning a new lesson appears here. Loading the latest one…</p>
@@ -521,6 +588,7 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
     x.due = addDays(todayStr(), ok ? INTERVALS[x.box] : 1);
     x.seen = todayStr();
     saveDeck(d);
+    logDay("r", 1);
   }
   const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--){ const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 
@@ -814,16 +882,18 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
       </div>`;
     }
     if (st.type === "done"){
+      markDone(L.id);
       h = `<div class="step">
         <div class="card" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
           <span class="hanko">済</span>
           <h3 style="margin:0;font-size:20px">お{疲|つか}れ{様|さま}でした！</h3>
           <p style="margin:0">You reached the last stop. ${savedOn(todayStr()) ? `<b>${savedOn(todayStr())} saved today.</b> They start in tomorrow's warm-up.` : "Nothing saved today. Go back and tap ☆ on what you want to review."}</p>
-          <p class="note" style="margin:0">Review deck: ${Object.keys(getDeck()).length} cards. Quick look at today's phrases:</p>
+          <p class="note" style="margin:0">${streakLine()} Review deck: ${Object.keys(getDeck()).length} cards. Quick look at today's phrases:</p>
         </div>
         <div class="card" style="display:flex;flex-direction:column;gap:12px">
           ${(L.phrases||[]).map(p => `<div><div class="jp-mid">${ruby(p.jp)}</div><div class="note">${esc(p.en)}</div></div>`).join("")}
         </div>
+        <a class="btn primary" href="#">Back to home</a>
         <button class="btn ghost" id="restart">Ride again from the start</button>
       </div>`;
       h = h.replace("お{疲|つか}れ{様|さま}でした！", ruby("お{疲|つか}れ{様|さま}でした！"));
@@ -833,7 +903,7 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
     wireStep(st);
     renderBoard();
     $("back").disabled = idx === 0;
-    $("next").textContent = idx === steps.length - 1 ? "Done" : (idx === 0 ? "Start" : "Next");
+    $("next").textContent = idx === steps.length - 1 ? "Home" : (idx === 0 ? "Start" : "Next");
     $("nav").hidden = false;
     store.set("pos:" + lesson.id, idx);
   }
@@ -882,8 +952,10 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
   }
 
   /* ---------- warm-up ---------- */
-  function wireWarm(){
-    const box = $("warm"), W = warmState, queue = W.queue, again = W.again;
+  function wireWarm(){ runCards($("warm"), warmState, "Warm-up"); }
+  /* W = {queue, qi, ok, again:Set, practice?}; practice runs don't change the schedule */
+  function runCards(box, W, title, onFinish){
+    const queue = W.queue, again = W.again;
     const kseen = seenKanji();
     const front = c => {
       if (c.kind === "kanji") return `<div class="qprompt k">${esc(c.kanji)}</div>
@@ -910,26 +982,30 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
     };
     const show = () => {
       if (W.qi >= queue.length){
+        const n = queue.length - again.size;
         box.innerHTML = `<div class="card" style="display:flex;flex-direction:column;gap:8px;align-items:flex-start">
-          <span class="hanko">復</span><h3 style="margin:0;font-size:20px">Warm-up done</h3>
-          <p style="margin:0">${W.ok} of ${queue.length - again.size} remembered first time. Cards you missed come back tomorrow.</p></div>`;
+          <span class="hanko">復</span><h3 style="margin:0;font-size:20px">${esc(title)} done</h3>
+          <p style="margin:0">${W.ok} of ${n} remembered first time. ${W.practice ? "Practice doesn't change your schedule." : again.size ? "Cards you missed come back tomorrow." : "Nice."}</p></div>`;
+        if (W.practice && !W.logged){ W.logged = true; logDay("r", n); }
+        if (onFinish) onFinish(box);
         return;
       }
       const c = queue[W.qi];
-      box.innerHTML = `<div class="row"><span class="label">Warm-up</span><span class="count">${W.qi+1}/${queue.length}</span></div>
+      box.innerHTML = `<div class="row"><span class="label">${esc(title)}</span><span class="count">${W.qi+1}/${queue.length}</span></div>
         <div class="card" style="display:flex;flex-direction:column;gap:10px">${front(c)}</div>
         <button class="reveal" id="wrev">Tap to check</button>
         <div id="wback" class="card" hidden style="display:flex;flex-direction:column;gap:8px"></div>
         <div class="grade" id="wgrade" hidden><button class="btn ghost" id="wagain">Again</button><button class="btn good" id="wgot">Got it</button></div>`;
+      const sc = box.closest(".stage,.page"); if (sc) sc.scrollTop = 0;
       $("wrev").onclick = () => {
         $("wrev").hidden = true; $("wback").innerHTML = back(c); $("wback").hidden = false; $("wgrade").hidden = false;
       };
       $("wagain").onclick = () => {
-        if (!again.has(c.k)){ grade(c, false); again.add(c.k); queue.push(c); }
+        if (!again.has(c.k)){ if (!W.practice) grade(c, false); again.add(c.k); queue.push(c); }
         W.qi++; show();
       };
       $("wgot").onclick = () => {
-        if (!again.has(c.k)){ grade(c, true); W.ok++; }
+        if (!again.has(c.k)){ if (!W.practice) grade(c, true); W.ok++; }
         W.qi++; show();
       };
     };
@@ -1055,7 +1131,7 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
   $("back").onclick = () => { if (idx > 0){ idx--; renderStep(); } };
   $("next").onclick = () => {
     if (idx < steps.length - 1){ idx++; renderStep(); }
-    else { idx = 0; renderStep(); }
+    else goHome();
   };
   let sx = null, sy = null;
   $("stage").addEventListener("touchstart", e => { const t = e.touches[0]; sx = t.clientX; sy = t.clientY; }, {passive:true});
@@ -1082,7 +1158,7 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
   };
   $("drawer").onclick = e => {
     const b = e.target.closest("[data-id]");
-    if (b){ open(b.dataset.id); }
+    if (b){ location.hash = b.dataset.id; }
     if (b || e.target === $("drawer")) $("drawer").hidden = true;
   };
 
@@ -1091,28 +1167,206 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
     if (!meta) return;
     let L;
     try{ L = await loadLesson(meta.id); }catch{ showEmpty("Can't load this lesson", "Check your connection and try again."); return; }
-    const changed = !lesson || lesson.id !== L.id;
+    setMode("lesson");
     lesson = L; steps = buildSteps(L);
     $("dateLabel").innerHTML = esc(fmtDate(L.id)) + (L.id === lessons[lessons.length-1].id ? ' <span class="today-dot">Today</span>' : "");
-    if (changed){ idx = Math.min(store.get("pos:" + L.id, 0), steps.length - 1); }
-    // Latest lesson keeps the bare URL, so a home-screen shortcut always opens "today"
-    try{
-      const isLatest = L.id === lessons[lessons.length - 1].id;
-      const want = isLatest ? "" : "#" + L.id;
-      if (location.hash !== want) history.replaceState(null, "", location.pathname + location.search + want);
-    }catch{}
+    idx = Math.max(0, Math.min(store.get("pos:" + L.id, 0), steps.length - 1));
     renderStep();
   }
 
   function showEmpty(title, body){
+    setMode("lesson"); $("nav").hidden = true;
     $("stage").innerHTML = `<div class="empty step"><h2>${esc(title)}</h2><p class="note">${esc(body)}</p></div>`;
     $("dateLabel").textContent = "No lesson yet";
   }
 
-  window.addEventListener("hashchange", () => {
-    const id = location.hash.slice(1) || (lessons.length ? lessons[lessons.length - 1].id : "");
-    if (id && lessons.some(l => l.id === id) && (!lesson || lesson.id !== id)) open(id);
-  });
+  window.addEventListener("hashchange", route);
+
+  /* ---------- streak: a day counts when you finish a lesson or review cards (saved on this device) ---------- */
+  const fieldName = {};
+  const fieldOf = id => fieldName[id] || String(id || "").replace(/-/g, " ").replace(/^./, c => c.toUpperCase());
+  function activity(){
+    let a = store.get("act", null);
+    if (!a){
+      // First run with the home screen: rebuild past study days from what this device already holds.
+      a = {};
+      const add = d => { if (/^\d{4}-\d{2}-\d{2}$/.test(d || "") && d <= todayStr()) a[d] = a[d] || {l:[], r:0}; };
+      Object.values(getDeck()).forEach(c => { add(c.added); add(c.seen); });
+      try{ for (let i = 0; i < localStorage.length; i++){
+        const m = /^pos:(\d{4}-\d{2}-\d{2})$/.exec(localStorage.key(i) || "");
+        if (m && store.get(m[0], 0) > 0) add(m[1]);
+      } }catch{}
+      store.set("act", a);
+    }
+    return a;
+  }
+  function logDay(kind, v){
+    const a = activity(), t = todayStr(), d = a[t] = a[t] || {l:[], r:0};
+    if (kind === "l"){ if (!d.l.includes(v)) d.l.push(v); } else d.r += v;
+    store.set("act", a);
+  }
+  const doneMap = () => store.get("done", {});
+  function markDone(id){
+    const m = doneMap();
+    if (!m[id]){ m[id] = todayStr(); store.set("done", m); }
+    logDay("l", id);
+  }
+  function streak(){
+    const a = activity(), t = todayStr();
+    let cur = 0, d = a[t] ? t : addDays(t, -1);
+    while (a[d]){ cur++; d = addDays(d, -1); }
+    let best = 0, run = 0, prev = null;
+    Object.keys(a).sort().forEach(x => { run = prev && addDays(prev, 1) === x ? run + 1 : 1; best = Math.max(best, run); prev = x; });
+    return {cur, best, today:!!a[t], a};
+  }
+  const streakLine = () => { const s = streak(); return s.cur ? `🔥 ${s.cur}-day streak.` : ""; };
+  const allDue = () => { const t = todayStr(); return Object.values(getDeck()).filter(c => c.due <= t && c.added < t).sort((a, b) => a.due < b.due ? -1 : a.due > b.due ? 1 : a.box - b.box); };
+
+  /* ---------- views ---------- */
+  function setMode(m){
+    ["top", "board", "stops", "stage"].forEach(id => { $(id).hidden = m !== "lesson"; });
+    if (m !== "lesson") $("nav").hidden = true;
+    $("home").hidden = m !== "home";
+    $("page").hidden = m !== "page";
+    $("drawer").hidden = true;
+  }
+  const goHome = () => { if (location.hash && location.hash !== "#") location.hash = ""; else route(); };
+  function route(){
+    hideGloss(); stopAll();
+    const h = decodeURIComponent(location.hash.slice(1));
+    if (lessons.some(l => l.id === h)) return open(h);
+    if (h === "review") return renderReview();
+    if (h === "saved") return renderSaved();
+    if (h === "kanji") return renderKanji();
+    if (h === "lessons") return renderLessons();
+    renderHome();
+  }
+  const greeting = () => { const h = new Date().getHours(); return h < 5 ? "こんばんは" : h < 11 ? "おはよう" : h < 18 ? "こんにちは" : "こんばんは"; };
+  const lessonStatus = id => {
+    if (doneMap()[id]) return {cls:"done", mark:"✓", label:"Done"};
+    if (store.get("pos:" + id, 0) > 0) return {cls:"half", mark:"…", label:"In progress"};
+    return {cls:"", mark:"", label:"New"};
+  };
+  const lessonRow = l => {
+    const s = lessonStatus(l.id);
+    return `<a class="lrow" href="#${esc(l.id)}"><span class="st ${s.cls}">${s.mark}</span>
+      <span class="tx"><div>${esc(l.topic)}</div><small>${esc(fmtDate(l.id))} · ${esc(l.category === "news" ? "News" : fieldOf(l.category))}</small></span></a>`;
+  };
+  function renderHome(){
+    setMode("home");
+    const el = $("home"), t = todayStr();
+    if (!lessons.length){
+      el.innerHTML = `<div class="empty step"><h2>Your first lesson arrives tomorrow morning</h2><p class="note">A new lesson lands here every morning.</p></div>`;
+      return;
+    }
+    const latest = lessons[lessons.length - 1], isToday = latest.id === t;
+    const s = streak(), due = allDue().length, deckN = Object.keys(getDeck()).length, kN = Object.keys(seenKanji()).length;
+    const days = [...Array(7)].map((_, i) => addDays(t, i - 6));
+    const dn = d => new Date(d + "T12:00:00").toLocaleDateString("en-GB", {weekday:"narrow"});
+    const st = lessonStatus(latest.id);
+    const earlier = lessons.slice(0, -1).reverse().slice(0, 4);
+    el.innerHTML = `<div class="step" style="gap:12px">
+      <div class="home-head"><div><p class="note">${esc(greeting())} · ${esc(new Date().toLocaleDateString("en-GB", {weekday:"long", day:"numeric", month:"long"}))}</p><h1>にほんご線</h1></div></div>
+
+      <div class="card streak">
+        <div class="streak-top">
+          <span class="flame ${s.today ? "" : "cold"}">🔥</span>
+          <div style="flex:1;min-width:0">
+            <div class="streak-n">${s.cur} <small>day${s.cur === 1 ? "" : "s"} in a row</small></div>
+            <div class="note">${s.today ? "Today counts. お疲れ様！" : s.cur ? "Finish a lesson or a review today to keep it going." : "Finish a lesson or a review to start a streak."}</div>
+          </div>
+          ${s.best > 1 ? `<div style="text-align:right;flex:none"><div class="label">Best</div><div style="font-weight:700;font-size:18px">${s.best}</div></div>` : ""}
+        </div>
+        <div class="week">${days.map(d => `<div class="d ${s.a[d] ? "on" : ""} ${d === t ? "today" : ""}"><i>✓</i>${esc(dn(d))}</div>`).join("")}</div>
+      </div>
+
+      <a class="board hero" href="#${esc(latest.id)}" id="hero">
+        <div class="board-kicker">${isToday ? (latest.category === "news" ? "ニュース · Today's news lesson" : "今日 · Today's lesson") : "Latest lesson · " + esc(fmtDate(latest.id))}</div>
+        <div class="board-title" id="heroTitle">${esc(latest.topic)}</div>
+        <div class="board-en" id="heroEn" style="white-space:normal">${esc(latest.topic)}</div>
+        <div class="hero-meta">${latest.category ? `<span>${esc(fieldOf(latest.category))}</span>` : ""}${latest.format && FMT[latest.format] ? `<span>${esc(FMT[latest.format].chip)}</span>` : ""}<span id="heroGram" hidden></span></div>
+        <div class="hero-go"><div class="hero-bar" id="heroBar"><i style="width:${st.cls === "done" ? 100 : 0}%"></i></div><b>${st.cls === "done" ? "Done ✓ · Open" : st.cls === "half" ? "Continue" : "Start"}</b></div>
+      </a>
+
+      <div class="tiles">
+        <a class="tile" href="#review">${due ? `<span class="badge">${due}</span>` : ""}<span class="tk">復習</span><b>Review</b><span>${due ? `${due} card${due === 1 ? "" : "s"} due` : deckN ? "All caught up" : "Star words to start"}</span></a>
+        <a class="tile" href="#saved"><span class="tk">★</span><b>Saved</b><span>${deckN} card${deckN === 1 ? "" : "s"}</span></a>
+        <a class="tile" href="#kanji"><span class="tk">漢字</span><b>Kanji</b><span>${kN} learned</span></a>
+        <a class="tile" href="#lessons"><span class="tk">線</span><b>All lessons</b><span>${lessons.length} so far · ${Object.keys(doneMap()).length} done</span></a>
+      </div>
+
+      ${earlier.length ? `<div class="sec-h"><span class="label">Earlier lessons</span>${lessons.length > 5 ? `<a class="link" href="#lessons">See all</a>` : ""}</div>
+      <div class="card">${earlier.map(lessonRow).join("")}</div>` : ""}
+    </div>`;
+    $("home").scrollTop = 0;
+    // fill the hero with the lesson's Japanese title and progress
+    loadLesson(latest.id).then(L => {
+      if ($("home").hidden || !$("heroTitle")) return;
+      $("heroTitle").innerHTML = ruby(L.title_jp || L.topic);
+      if (L.grammar && L.grammar.pattern){ $("heroGram").hidden = false; $("heroGram").textContent = "文法 " + plain(L.grammar.pattern); }
+      if (st.cls === "half"){
+        const n = buildSteps(L).length;
+        $("heroBar").firstElementChild.style.width = Math.min(95, Math.round(100 * store.get("pos:" + L.id, 0) / Math.max(n - 1, 1))) + "%";
+      }
+    }).catch(() => {});
+  }
+  function page(title, jp, body){
+    setMode("page");
+    $("page").innerHTML = `<div class="step" style="gap:12px">
+      <div class="page-head"><a class="icon-btn" href="#" aria-label="Home"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3 5 8l5 5"/></svg></a><h2>${esc(title)}</h2><span class="jp">${esc(jp)}</span></div>
+      ${body}</div>`;
+    $("page").scrollTop = 0;
+  }
+  function renderReview(){
+    const due = allDue(), deck = Object.values(getDeck());
+    page("Review", "復習", `<div id="rv" style="display:flex;flex-direction:column;gap:10px"></div>`);
+    const box = $("rv");
+    const after = b => b.insertAdjacentHTML("beforeend", `<a class="btn primary" href="#" style="width:100%;box-sizing:border-box;margin-top:4px">Back to home</a>`);
+    const practice = () => runCards(box, {queue:shuffle(deck).slice(0, 10), qi:0, ok:0, again:new Set(), practice:true}, "Practice", after);
+    if (due.length){
+      runCards(box, {queue:due.slice(0, 20), qi:0, ok:0, again:new Set()}, "Review", after);
+      return;
+    }
+    const next = deck.map(c => c.due).filter(d => d > todayStr()).sort()[0];
+    box.innerHTML = `<div class="card" style="display:flex;flex-direction:column;gap:8px;align-items:flex-start">
+      <span class="hanko">${deck.length ? "済" : "☆"}</span>
+      <h3 style="margin:0;font-size:20px">${deck.length ? "All caught up" : "Nothing saved yet"}</h3>
+      <p style="margin:0">${deck.length ? `Nothing is due today.${next ? ` Next card comes back ${esc(fmtDate(next))}.` : ""}` : "Tap ☆ on phrases, lines, words and kanji in a lesson. They come back here the next day."}</p></div>
+      ${deck.length ? `<button class="btn ghost" id="prac" style="width:100%">Practice ${Math.min(10, deck.length)} random cards anyway</button>` : ""}`;
+    if ($("prac")) $("prac").onclick = practice;
+  }
+  function renderSaved(){
+    const KINDS = [["all", "All"], ["word", "Words"], ["line", "Lines"], ["kanji", "Kanji"], ["grammar", "Grammar"]];
+    let kind = "all";
+    page("Saved", "保存", `<div class="chips" id="sk">${KINDS.map(([k, n]) => `<button data-k="${k}" aria-pressed="${k === kind}">${n}</button>`).join("")}</div><div id="sl"></div>`);
+    const row = c => {
+      let main = "";
+      if (c.kind === "kanji") main = `<div class="row" style="justify-content:flex-start;gap:12px"><span class="kbig" style="font-size:40px">${esc(c.kanji)}</span><div><div style="font-weight:600">${esc(c.meaning)}</div><div class="note" style="font-family:var(--jp)">${esc([c.on, c.kun].filter(Boolean).join(" · "))}</div></div></div>`;
+      else if (c.kind === "line") main = `<div class="jp-mid" style="font-size:17px">${ruby(c.sent)}</div><div class="note">${esc(c.sentEn)}</div>`;
+      else if (c.kind === "grammar") main = `<div class="jp-mid" style="font-weight:700">${ruby(c.pattern)}</div><div style="font-size:15px">${esc(c.meaning)}</div>`;
+      else main = `<div class="row" style="justify-content:flex-start;gap:10px"><span class="jp-mid" style="line-height:1.8">${ruby(c.word)}</span><span style="font-size:15px">${esc(c.en)}</span></div>${c.sent ? `<div class="src" style="font-family:var(--jp);font-size:13px;color:var(--muted)">${highlight(c.sent, c.surface)}</div>` : ""}`;
+      const when = c.due <= todayStr() && c.added < todayStr() ? "Due now" : "Next " + fmtDate(c.due);
+      return `<div class="srow"><div style="min-width:0;flex:1">${main}<div class="note" style="font-size:12px;margin-top:2px">${esc(when)}${c.lesson ? ` · <a href="#${esc(c.lesson)}" style="color:inherit">from ${esc(fmtDate(c.lesson))}</a>` : ""}</div></div>${starBtn(c.k, c)}</div>`;
+    };
+    const draw = () => {
+      const cards = Object.values(getDeck()).filter(c => kind === "all" || (c.kind || "word") === kind).sort((a, b) => a.added < b.added ? 1 : a.added > b.added ? -1 : 0);
+      $("sl").innerHTML = cards.length ? `<div class="card">${cards.map(row).join("")}</div>` : `<p class="note">Nothing here yet. Tap ☆ in a lesson to save it.</p>`;
+    };
+    $("sk").onclick = e => { const b = e.target.closest("[data-k]"); if (!b) return; kind = b.dataset.k; $("sk").querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", String(x === b))); draw(); };
+    draw();
+  }
+  function renderKanji(){
+    const ks = Object.entries(seenKanji());
+    page("Kanji", "漢字", ks.length
+      ? `<p class="note" style="margin:0">${ks.length} kanji studied so far. ☆ them in a lesson to drill them in review.</p>
+         <div class="kgrid">${ks.reverse().map(([k, v]) => `<div class="kcell"><div class="k">${esc(k)}</div><div class="m">${esc(v.meaning)}</div><div class="r">${esc([v.on, v.kun].filter(Boolean).join(" · "))}</div></div>`).join("")}</div>`
+      : `<p class="note">Kanji show up here after you reach the "Today's kanji" stop in a lesson.</p>`);
+  }
+  function renderLessons(){
+    const byMonth = {};
+    lessons.slice().reverse().forEach(l => { const m = new Date(l.id + "T12:00:00").toLocaleDateString("en-GB", {month:"long", year:"numeric"}); (byMonth[m] = byMonth[m] || []).push(l); });
+    page("All lessons", "線", Object.entries(byMonth).map(([m, ls]) => `<div class="label">${esc(m)}</div><div class="card">${ls.map(lessonRow).join("")}</div>`).join(""));
+  }
 
   /* ---------- data: static files ---------- */
   const cache = {};
@@ -1130,13 +1384,15 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
         const cr = await fetch("cast.json", {cache: "no-cache"});
         if (cr.ok) (await cr.json()).cast.forEach(c => { castById[c.id] = c; });
       }catch{}
+      try{
+        const tr = await fetch("topics.json", {cache: "no-cache"});
+        if (tr.ok){ const T = await tr.json(); ["fields", "special", "legacy"].forEach(k => (T[k] || []).forEach(f => { fieldName[f.id] = f.name; })); }
+      }catch{}
       const r = await fetch("lessons/index.json", {cache: "no-cache"});
       const list = await r.json();
       const today = todayStr();
       lessons = list.filter(l => l.id && l.topic && l.id <= today).sort((a, b) => a.id < b.id ? -1 : 1);
-      if (!lessons.length){ showEmpty("Your first lesson arrives tomorrow morning", "A new lesson lands here every day at 7:41."); return; }
-      const want = location.hash.slice(1);
-      await open(lessons.some(l => l.id === want) ? want : lessons[lessons.length - 1].id);
+      route();
     }catch{
       showEmpty("Can't load lessons", "Check your connection and reopen the app.");
     }
