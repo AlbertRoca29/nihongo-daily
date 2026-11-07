@@ -183,7 +183,7 @@ def sparkles(color="#fff", op=.85):
 
 
 # Your look (the learner). Change and rerun to update icons/cast/you.svg.
-YOU = {"hair": "messy", "gl": "bold", "hr": "#3a2518"}
+YOU = {"hair": "messy", "gl": "rect", "hr": "#3a2518"}
 
 YOU_HAIR = {
     # short crop, natural hairline with a slight dip at the temples
