@@ -2,7 +2,8 @@
 """Draws the chibi character portraits -> icons/cast/<id>.svg
 
 Original flat-vector chibi portraits (big head, small body, big eyes), one per
-cast member, Keiko and You. Run: python3 scripts/chibi.py
+cast member, Keiko and You. These are the base drawings: the app's icons are
+made from them by scripts/portraits.py (run that one, not this).
 """
 import os
 
@@ -403,8 +404,5 @@ def build():
 
 
 if __name__ == "__main__":
-    os.makedirs(OUT, exist_ok=True)
-    A = build()
-    for k, v in A.items():
-        open(os.path.join(OUT, k + ".svg"), "w").write(v)
-    print("wrote", len(A))
+    import runpy
+    runpy.run_path(os.path.join(os.path.dirname(os.path.abspath(__file__)), "portraits.py"), run_name="__main__")
