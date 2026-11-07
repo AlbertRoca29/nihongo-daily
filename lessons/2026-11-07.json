@@ -1,0 +1,198 @@
+{
+ "topic": "Love talk on the first reception shift",
+ "category": "love-relationships",
+ "function": "comparing",
+ "format": "dialogue",
+ "cast": ["kenta"],
+ "title_jp": "はじめてのシフトで{恋|こい}バナ",
+ "context": "Saturday: your first reception shift at Guesthouse Kaze, where you finally meet Kenta from Osaka. In the quiet hour after check-in he skips the small talk and goes straight to love, so you end up comparing dating in Japan and Spain.",
+ "phrases": [
+  {
+   "jp": "スペインと{比|くら|to compare}べて、{日本|にほん}の{恋愛|れんあい|romance, love life}ってどう？",
+   "en": "Compared with Spain, what's dating like in Japan?",
+   "register": "casual",
+   "note": "AとBを{比|くら}べると / Aと{比|くら}べて = compared with A. Polite: 〜と{比|くら}べて、どうですか。"
+  },
+  {
+   "jp": "{告白|こくはく|confessing your feelings}されたこと、ある？",
+   "en": "Has anyone ever confessed their feelings to you?",
+   "register": "casual",
+   "note": "{告白|こくはく}する = tell someone you like them and ask them out. {告白|こくはく}される = be asked out (passive)."
+  },
+  {
+   "jp": "{返事|へんじ|reply}は、なるべく{早|はや}く{返|かえ|to give back, reply}すようにしています。",
+   "en": "I try to reply as soon as I can.",
+   "register": "polite",
+   "note": "{返事|へんじ}を{返|かえ}す / {返信|へんしん}する = reply to a message. なるべく = as ~ as possible."
+  },
+  {
+   "jp": "{遠距離恋愛|えんきょりれんあい|long-distance relationship}って、{大変|たいへん}じゃない？",
+   "en": "Isn't a long-distance relationship hard?",
+   "register": "casual",
+   "note": "Everyone shortens it to {遠距離|えんきょり} or even {遠恋|えんれん}."
+  },
+  {
+   "jp": "{都会|とかい|big city}より{田舎|いなか|the countryside}のほうが{落|お}ち{着|つ|to feel calm, settle}く。",
+   "en": "I feel more at ease in the countryside than in the city.",
+   "register": "casual",
+   "note": "AよりBのほうが〜 = B is more ~ than A: the most common way to compare two things."
+  }
+ ],
+ "dialogue_setting": "Guesthouse Kaze reception desk, Saturday afternoon, after the last hikers have checked in.",
+ "dialogue": [
+  {
+   "speaker": "Kenta",
+   "jp": "アルバートやんな？{俺|おれ}、{健太|けんた}。よろしゅう！で、いきなりやけど、{恋人|こいびと|boyfriend or girlfriend, partner}おるん？",
+   "en": "You're Albert, right? I'm Kenta. Nice to meet you! So, straight to it: got a partner?",
+   "register": "dialect",
+   "note": "Kansai-ben: やんな = だよね, よろしゅう = よろしく, やけど = だけど, おるん？ = いるの？"
+  },
+  {
+   "speaker": "You",
+   "me": true,
+   "jp": "いきなり！？いないよ。ねえ、スペインと{比|くら|to compare}べて、{日本|にほん}ではどうやって{付き合|つきあ|to go out with, date}い{始|はじ}めるの？",
+   "en": "Straight away?! No, I don't. Hey, compared with Spain, how do people start going out in Japan?"
+  },
+  {
+   "speaker": "Kenta",
+   "jp": "{日本|にほん}はな、まず「{告白|こくはく|confessing your feelings}」すんねん。「{好|す}きです、{付き合|つきあ|to go out with, date}ってください」って。そこから{恋人|こいびと|partner}になるんや。",
+   "en": "In Japan, first you do a 'kokuhaku'. 'I like you, please go out with me.' From that moment you're a couple.",
+   "register": "dialect",
+   "note": "すんねん = するんだ, なるんや = なるんだ (Kansai). The standard version: まず{告白|こくはく}するんだ。"
+  },
+  {
+   "speaker": "You",
+   "me": true,
+   "jp": "へえ。スペインは{告白|こくはく|confessing your feelings}より、{何回|なんかい}か{会|あ}って{自然|しぜん|naturally}に{付き合|つきあ}うことが{多|おお}いかな。メッセージの{返事|へんじ|reply}が{遅|おそ}くても、あんまり{気|き}にしないし。",
+   "en": "Huh. In Spain it's less about confessing: you meet a few times and it just happens. And nobody worries much if a reply to a message is slow."
+  },
+  {
+   "speaker": "Kenta",
+   "jp": "そこはめっちゃ{違|ちが}うな。{俺|おれ}の{彼女|かのじょ}、{長野市|ながのし}で{看護師|かんごし|nurse}やねん。{遠距離|えんきょり|long distance}ってほどやないけど、{会|あ}えへん{分|ぶん|to make up for}、{毎晩|まいばん}{電話|でんわ}するようにしてんねん。",
+   "en": "That's a big difference. My girlfriend's a nurse in Nagano city. It's not exactly long-distance, but since we can't meet, I make a point of calling every night.",
+   "register": "dialect",
+   "note": "めっちゃ = とても, やねん = なんだ, 〜ほどやない = 〜ほどじゃない (not as much as), {会|あ}えへん = {会|あ}えない, してんねん = しているんだ."
+  },
+  {
+   "speaker": "You",
+   "me": true,
+   "jp": "えらいね。{僕|ぼく}も{家族|かぞく}に、{週|しゅう}に{一回|いっかい}は{連絡|れんらく|getting in touch}するようにしてる。でも{田舎|いなか|the countryside}って、{都会|とかい|big city}ほど{出会|であ|chance to meet people}いがなさそうだね。",
+   "en": "Good for you. I make sure to contact my family at least once a week too. But it looks like the countryside doesn't have as many chances to meet people as the city."
+  }
+ ],
+ "grammar": {
+  "id": "n4-you-ni-suru",
+  "pattern": "〜ようにする",
+  "level": "N4",
+  "meaning": "make an effort to, make a habit of",
+  "form": "{動詞|どうし}{辞書形|じしょけい} + ようにする ({毎晩|まいばん}{電話|でんわ}するようにする) · {動詞|どうし}ない{形|けい} + ようにする ({遅|おく}れないようにする)",
+  "explanation": "Use it for something you consciously try to do, or try not to do, again and again. 〜ようにしている describes a habit you already keep up; 〜ようにする is a resolution from now on. Don't mix it up with 〜ことにする (a one-off decision) or 〜ようになる (a change that happens to you, like becoming able to read kanji).",
+  "src": ["d4", "d5", "p2"],
+  "examples": [
+   {
+    "jp": "{毎日|まいにち}{少|すこ}しでも{日本語|にほんご}で{話|はな}すようにしています。",
+    "en": "I try to speak Japanese every day, even just a little."
+   },
+   {
+    "jp": "{夜|よる}は{甘|あま}いものを{食|た}べないようにしてる。",
+    "en": "I make a point of not eating sweets at night."
+   },
+   {
+    "jp": "{明日|あした}から、{朝|あさ}5{時|じ}に{起|お}きるようにします。",
+    "en": "From tomorrow I'll make sure to get up at 5."
+   }
+  ],
+  "quiz": {
+   "question": "{健康|けんこう|health}のために、{毎朝|まいあさ}{野菜|やさい}を＿＿ようにしている。",
+   "en": "For my health, I make a habit of eating vegetables every morning.",
+   "options": ["{食|た}べる", "{食|た}べた", "{食|た}べて", "{食|た}べよう"],
+   "explain": "ようにする / ようにしている comes after the dictionary form (or the ない form): {食|た}べるようにしている."
+  }
+ },
+ "kanji": {
+  "kanji": "縁結び",
+  "reading": "えんむすび",
+  "romaji": "enmusubi",
+  "meaning": "matchmaking; tying the knot of fate",
+  "where": "Written on charms (お守り) and wooden prayer plaques at shrines, and on posters for shrines famous for finding you a partner.",
+  "related": "{縁結|えんむす}びのお{守|まも}り = a charm for finding love.",
+  "breakdown": "{縁結|えんむす}び: 縁 bond, fate + 結び tying → 'tying people's fates together'."
+ },
+ "tip": {
+  "mark": "告",
+  "title": "Why the 'kokuhaku' matters",
+  "body": "In Japan a relationship usually starts with a clear {告白|こくはく|confessing your feelings}: before it you're just people going out to eat; after it you're officially a couple. Couples often count the days from that moment and celebrate {付き合|つきあ}って1か{月|げつ} or 3か{月|げつ}. Coming from Spain, where things just drift into a relationship, it's worth asking yourself what the other person thinks you are."
+ },
+ "challenge": {
+  "prompt": "Kenta grins: 「せやったら、アプリでも{入|い}れてみたら？こっちはみんな{使|つこ}うてるで。」 (= それなら、アプリでも入れてみたら？こっちはみんな使ってるよ。) Say you'll try it, but you'll make a point of meeting people in a café at first. Use 〜ようにする.",
+  "hint": "{入|い}れてみる · {最初|さいしょ}は · カフェで{会|あ}う",
+  "model_answer": "じゃあ、{入|い}れてみる！でも、{最初|さいしょ}はカフェで{会|あ}うようにするよ。",
+  "explanation": "{入|い}れてみる = I'll try installing it (〜てみる = try and see). {会|あ}うようにする is a resolution from now on: dictionary form + ようにする. Casual speech fits a coworker your age; よ softens it into reassurance."
+ },
+ "vocab": [
+  {"jp": "{恋人|こいびと}", "reading": "こいびと", "en": "boyfriend or girlfriend, partner", "level": "N3", "src": "d0", "surface": "恋人", "note": "Gender-neutral. In speech people often say {彼氏|かれし} / {彼女|かのじょ} instead."},
+  {"jp": "{比|くら}べる", "reading": "くらべる", "en": "to compare", "level": "N3", "src": "d1", "surface": "比べて"},
+  {"jp": "{付き合|つきあ}う", "reading": "つきあう", "en": "to go out with, date; to keep someone company", "level": "N3", "src": "d1", "surface": "付き合い", "note": "{付き合|つきあ}ってください = Please go out with me. Also: {買|か}い{物|もの}に{付き合|つきあ}う = come shopping with someone."},
+  {"jp": "{告白|こくはく}", "reading": "こくはく", "en": "confessing your feelings, asking someone out", "level": "N3", "src": "d2", "surface": "告白"},
+  {"jp": "{返事|へんじ}", "reading": "へんじ", "en": "reply, answer", "level": "N4", "src": "d3", "surface": "返事"},
+  {"jp": "{看護師|かんごし}", "reading": "かんごし", "en": "nurse", "level": "N3", "src": "d4", "surface": "看護師"},
+  {"jp": "{連絡|れんらく}", "reading": "れんらく", "en": "contact, getting in touch", "level": "N3", "src": "d5", "surface": "連絡", "note": "{連絡|れんらく}するね = I'll get in touch / message you."},
+  {"jp": "{都会|とかい}", "reading": "とかい", "en": "big city", "level": "N3", "src": "d5", "surface": "都会"},
+  {"jp": "{出会|であ}い", "reading": "であい", "en": "meeting people, encounter", "level": "N3", "src": "d5", "surface": "出会い", "note": "{出会|であ}いがない = 'no chance to meet anyone', the classic complaint."},
+  {"jp": "{遠距離恋愛|えんきょりれんあい}", "reading": "えんきょりれんあい", "en": "long-distance relationship", "level": "N2", "src": "p3", "surface": "遠距離恋愛"}
+ ],
+ "kanji_study": [
+  {
+   "kanji": "恋",
+   "track": "lesson",
+   "on": "レン",
+   "kun": "こい・こい(しい)",
+   "meaning": "romantic love",
+   "words": [
+    {"jp": "{恋人|こいびと}", "reading": "こいびと", "en": "partner, boyfriend or girlfriend"},
+    {"jp": "{恋愛|れんあい}", "reading": "れんあい", "en": "romance, love life"},
+    {"jp": "{初恋|はつこい}", "reading": "はつこい", "en": "first love"}
+   ],
+   "decoys": {"meanings": ["change", "friendship", "heart, mind"], "readings": ["れんじん", "こいにん", "こいひと"]}
+  },
+  {
+   "kanji": "返",
+   "track": "n3",
+   "on": "ヘン",
+   "kun": "かえ(す)・かえ(る)",
+   "meaning": "return, give back",
+   "words": [
+    {"jp": "{返事|へんじ}", "reading": "へんじ", "en": "reply, answer"},
+    {"jp": "{返|かえ}す", "reading": "かえす", "en": "to give back, return"},
+    {"jp": "{返信|へんしん}", "reading": "へんしん", "en": "reply (to a message)"}
+   ],
+   "decoys": {"meanings": ["send", "near", "pass by"], "readings": ["かえじ", "へんごと", "はんじ"]}
+  }
+ ],
+ "extras": [
+  {
+   "title": "Comparing things",
+   "title_jp": "{比|くら}べる{言|い}い{方|かた}",
+   "intro": "Today's comparing patterns side by side.",
+   "items": [
+    {"jp": "AよりBのほうが{好|す}き", "en": "I like B more than A", "note": "The everyday workhorse."},
+    {"jp": "AはBほど{寒|さむ}くない", "en": "A isn't as cold as B", "note": "ほど always goes with a negative."},
+    {"jp": "Aと{比|くら|to compare}べて、Bは{静|しず}かだ", "en": "Compared with A, B is quiet"},
+    {"jp": "AとBは{同|おな}じくらい", "en": "A and B are about the same"},
+    {"jp": "AとBはぜんぜん{違|ちが}う", "en": "A and B are completely different"}
+   ]
+  },
+  {
+   "title": "Words for love talk",
+   "title_jp": "{恋|こい}バナの{言葉|ことば}",
+   "intro": "{恋|こい}バナ (from {恋|こい}の{話|はなし}) is chatting about love. These come up in every one.",
+   "items": [
+    {"jp": "{片思|かたおも|one-sided love}い", "en": "a crush that isn't returned"},
+    {"jp": "{両思|りょうおも|mutual love}い", "en": "liking each other"},
+    {"jp": "{一目惚|ひとめぼ|love at first sight}れ", "en": "love at first sight"},
+    {"jp": "{振|ふ|to dump, turn down}られた", "en": "I got turned down / dumped"},
+    {"jp": "{元|もと}カレ・{元|もと}カノ", "en": "ex-boyfriend / ex-girlfriend", "note": "{元|もと} = former. Casual."}
+   ]
+  }
+ ]
+}
