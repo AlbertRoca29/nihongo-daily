@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" id="themeColor" content="#f2f3f5">
-<script>(function(){var m=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)");function set(){var t=document.documentElement.getAttribute("data-theme");var dark=t?t==="dark":!!(m&&m.matches);document.getElementById("themeColor").setAttribute("content",dark?"#000000":"#f2f3f5");}set();if(m&&m.addEventListener)m.addEventListener("change",set);})();</script>
+<script>(function(){var R=document.documentElement;function g(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}}var th=g("set:theme"),fo=g("set:font");if(th==="light"||th==="dark")R.setAttribute("data-theme",th);if(fo&&fo!=="kaku")R.setAttribute("data-font",fo);var m=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)");function set(){var t=R.getAttribute("data-theme");var dark=t?t==="dark":!!(m&&m.matches);document.getElementById("themeColor").setAttribute("content",dark?"#000000":"#f2f3f5");}window.__themeColor=set;set();if(m&&m.addEventListener)m.addEventListener("change",set);})();</script>
 <meta name="mobile-web-app-capable" content="yes">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
-<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);box-sizing:border-box;height:100%}html{background:#f2f3f5}@media (prefers-color-scheme:dark){html{background:#000}}body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);box-sizing:border-box;height:100%}html{background:#f2f3f5}@media (prefers-color-scheme:dark){html{background:#000}}html[data-theme="dark"]{background:#000}html[data-theme="light"]{background:#f2f3f5}body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
 <title>Nihongo Line</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho+B1:wght@700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&family=M+PLUS+1p:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700&display=swap">
 <style>
 /* Layout: one-screen phone app. Gradient "station board" hero card, a slim progress line of stops, big rounded cards on a soft canvas, pill buttons in the thumb zone. Fintech-clean, bold type. */
 :root{
@@ -36,6 +36,15 @@
   --accent:#7c74ff; --accent-2:#5b8cff; --on-accent:#ffffff;
   --btn:#f5f6f8; --on-btn:#000000; --ghost:#24262c;
   --stamp:#ff6369; --polite:#7aa2ff; --casual:#ff8a4c; color-scheme:dark}
+
+/* font setting (Settings on the home screen) */
+:root[data-font="round"]{--ui:"Inter Tight","Zen Maru Gothic","Hiragino Maru Gothic ProN",system-ui,sans-serif; --jp:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Noto Sans JP",system-ui,sans-serif}
+:root[data-font="plus"]{--ui:"M PLUS 1p","Hiragino Sans",system-ui,sans-serif; --jp:"M PLUS 1p","Hiragino Sans","Noto Sans JP",system-ui,sans-serif}
+:root[data-font="mincho"]{--jp:"Shippori Mincho B1","Hiragino Mincho ProN","Noto Serif JP",serif}
+:root[data-font="system"]{--ui:system-ui,-apple-system,"Segoe UI",Roboto,"Hiragino Sans","Noto Sans JP",sans-serif; --jp:"Hiragino Sans","Noto Sans CJK JP","Noto Sans JP",system-ui,sans-serif}
+/* scroll without a visible bar */
+*{scrollbar-width:none}
+*::-webkit-scrollbar{display:none;width:0;height:0}
 
 html,body{height:100%}
 body{background:var(--paper);color:var(--ink);font-family:var(--ui);font-size:16px;line-height:1.5;-webkit-tap-highlight-color:transparent;-webkit-font-smoothing:antialiased}
@@ -304,6 +313,27 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
 .icon-btn{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--card);color:var(--ink)}
 .icon-btn svg{width:17px;height:17px}
 .home,.page{flex:1;overflow-y:auto;min-height:0;-webkit-overflow-scrolling:touch;padding-block:6px 20px;display:flex;flex-direction:column;gap:12px}
+.faces{flex:none;display:flex;align-items:center;min-width:34px}
+.faces img.ava,.faces .ava{width:34px;height:34px;box-shadow:0 0 0 2px var(--card)}
+.faces > * + *{margin-left:-12px}
+.faces .emo{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--soft);font-size:19px;line-height:1}
+.lrow .tx div{font-family:var(--jp)}
+.lrow .st{width:22px;height:22px;font-size:11px}
+.lrow .st:empty{background:transparent}
+.week .d{font-family:var(--jp);font-size:12.5px}
+.set-row{display:flex;flex-direction:column;gap:8px;padding:12px 0;border-bottom:1px solid var(--rule)}
+.set-row:first-of-type{padding-top:4px}
+.set-row:last-child{border-bottom:0;padding-bottom:0}
+.set-row .lab{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-weight:600}
+.set-row .lab span{font-family:var(--mincho);color:var(--muted);font-size:14px;font-weight:700}
+.seg{display:flex;gap:4px;background:var(--soft);border-radius:14px;padding:4px;flex-wrap:wrap}
+.seg button{flex:1;min-width:0;padding:8px 6px;border-radius:10px;font-size:13px;font-weight:600;color:var(--muted);white-space:nowrap}
+.seg button[aria-pressed="true"]{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.fontgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:6px}
+.fontgrid button{display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 4px;border-radius:14px;background:var(--soft);color:var(--muted)}
+.fontgrid button b{font-size:22px;line-height:1.3;color:var(--ink);font-weight:500}
+.fontgrid button small{font-size:12px;font-weight:600;font-family:var(--ui)}
+.fontgrid button[aria-pressed="true"]{background:var(--card);box-shadow:inset 0 0 0 2px var(--accent);color:var(--accent)}
 .home-head{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;padding-top:6px}
 .home-head h1{margin:0;font-family:var(--mincho);font-size:28px;line-height:1.2}
 .home-head .note{margin:0}
@@ -701,6 +731,16 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
     const c = Object.values(castById).find(x => x.name === n);
     return esc([...plain((c && c.name_jp) || n || "?")][0] || "?");
   };
+  /* a picture for each field: shown for lessons and speakers without a cast portrait */
+  const FIELD_EMOJI = {"getting-around":"🚌","shops-eating-out":"🛍️","health-body":"🩺","home-admin":"📮","work-volunteering":"🧑‍🌾","safety":"⚠️",
+    "food-cooking":"🍳","feelings":"💭","love-relationships":"💞","family-childhood":"👨‍👩‍👧","school-youth":"🏫","nature-seasons":"🍁","traditions":"⛩️",
+    "history-samurai":"⚔️","entertainment":"🎮","tech-internet":"📱","money-work":"💴","society-opinions":"🗣️","language":"💬","hobbies":"🎨",
+    review:"🔁", news:"📰", konbini:"🏪", trains:"🚃", directions:"🧭", restaurant:"🍜", "hostel-checkin":"🛎️", "meeting-host":"🤝",
+    "work-instructions":"📋", "asking-ok":"🙋", pharmacy:"💊", "station-signs":"🚉", supermarket:"🛒", "small-talk":"☕", farm:"🌾",
+    "hostel-work":"🛎️", classroom:"✏️", "house-rules":"🗑️", "friends-plans":"📅", apologizing:"🙇", "lost-item":"🔎", izakaya:"🍶",
+    onsen:"♨️", "post-office":"📮", "rural-bus":"🚌", "room-problem":"🛏️", "phone-reservations":"📞", shopping:"🛍️",
+    emergencies:"🚑", "goodbye-host":"👋", culture:"🎎"};
+  const fieldEmoji = id => FIELD_EMOJI[id] || "📖";
   /* character portraits: icons/cast/<id>.svg (drawn for the main cast, Keiko and you); others get their initial */
   const PORTRAITS = new Set(["tanaka","yuki","kenta","sato","hana","ren","sota","mio","hayato","keiko","you"]);
   const portraitId = (name, me) => {
@@ -714,7 +754,9 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
   // chibi portraits everywhere; in LINE chats, their LINE profile picture (icons/line/<id>.svg)
   const avatar = (name, me, line) => {
     const id = portraitId(name, me);
-    return id ? `<img class="ava" src="icons/${line ? "line" : "cast"}/${id}.svg" alt="">` : `<span class="ava">${initial(name)}</span>`;
+    if (id) return `<img class="ava" src="icons/${line ? "line" : "cast"}/${id}.svg" alt="">`;
+    const isGuest = lesson && lesson.guest && [lesson.guest.name, plain(lesson.guest.name_jp || "")].includes(name);
+    return !isGuest && lesson && !(lesson.cast || []).length ? `<span class="ava" style="font-size:18px">${fieldEmoji(lesson.category)}</span>` : `<span class="ava">${initial(name)}</span>`;
   };
   function castCard(L){
     const people = (L.cast || []).map(id => castById[id]).filter(Boolean);
@@ -1315,14 +1357,16 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
   }, {passive:true});
 
   /* ---------- lessons list ---------- */
+  const WD = "日月火水木金土";
   const fmtDate = id => {
     const d = new Date(id + "T12:00:00");
-    return isNaN(d) ? id : d.toLocaleDateString("en-GB", {weekday:"short", day:"numeric", month:"short"});
+    return isNaN(d) ? id : `${d.getMonth() + 1}月${d.getDate()}日（${WD[d.getDay()]}）`;
   };
   $("dateBtn").onclick = () => {
     if (!lessons.length) return;
     $("list").innerHTML = lessons.slice().reverse().map(l =>
-      `<button class="lesson-item ${lesson && l.id === lesson.id ? "cur" : ""}" data-id="${esc(l.id)}"><span>${esc(l.topic)}</span><small>${esc(fmtDate(l.id))}</small></button>`).join("");
+      `<button class="lesson-item ${lesson && l.id === lesson.id ? "cur" : ""}" data-id="${esc(l.id)}"><span data-jt="${esc(l.id)}" style="font-family:var(--jp)">${esc(l.topic)}</span><small>${esc(fmtDate(l.id))}</small></button>`).join("");
+    fillTitles($("list"));
     $("drawer").hidden = false;
   };
   $("drawer").onclick = e => {
@@ -1338,7 +1382,7 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
     try{ L = await loadLesson(meta.id); }catch{ showEmpty("Can't load this lesson", "Check your connection and try again."); return; }
     setMode("lesson");
     lesson = L; steps = buildSteps(L);
-    $("dateLabel").innerHTML = esc(fmtDate(L.id)) + (L.id === lessons[lessons.length-1].id ? ' <span class="today-dot">Today</span>' : "");
+    $("dateLabel").innerHTML = esc(fmtDate(L.id)) + (L.id === lessons[lessons.length-1].id ? ' <span class="today-dot">今日</span>' : "");
     idx = Math.max(0, Math.min(store.get("pos:" + L.id, 0), steps.length - 1));
     renderStep();
   }
@@ -1418,9 +1462,53 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
   };
   const lessonRow = l => {
     const s = lessonStatus(l.id);
-    return `<a class="lrow" href="#${esc(l.id)}"><span class="st ${s.cls}">${s.mark}</span>
-      <span class="tx"><div>${esc(l.topic)}</div><small>${esc(fmtDate(l.id))} · ${esc(l.category === "news" ? "News" : fieldOf(l.category))}</small></span></a>`;
+    return `<a class="lrow" href="#${esc(l.id)}"><span class="faces" data-faces="${esc(l.id)}"><span class="emo">${fieldEmoji(l.category)}</span></span>
+      <span class="tx"><div data-jt="${esc(l.id)}">${esc(l.topic)}</div><small>${esc(fmtDate(l.id))} · ${esc(l.topic)}</small></span><span class="st ${s.cls}" title="${s.label}">${s.mark}</span></a>`;
   };
+  // swap in each lesson's Japanese title and the portraits of who's in it, once its file has loaded
+  function fillTitles(root){
+    root.querySelectorAll("[data-jt],[data-faces]").forEach(el => {
+      const id = el.dataset.jt || el.dataset.faces;
+      getJSON(id).then(L => {
+        if (el.dataset.jt){ if (L.title_jp) el.textContent = plain(L.title_jp); return; }
+        const faces = (L.cast || []).filter(c => PORTRAITS.has(c)).slice(0, 3).map(c => `<img class="ava" src="icons/cast/${c}.svg" alt="${esc((castById[c] || {}).name || c)}">`);
+        if (L.guest && faces.length < 3) faces.push(`<span class="ava">${esc([...plain(L.guest.name_jp || L.guest.name || "?")][0])}</span>`);
+        if (faces.length) el.innerHTML = faces.join("");
+      }).catch(() => {});
+    });
+  }
+  /* settings, saved on this device */
+  const THEMES = [["auto", "Auto"], ["light", "Light ☀︎"], ["dark", "Dark ☾"]];
+  const FONTS = [["kaku", "Gothic", '"Zen Kaku Gothic New"'], ["round", "Rounded", '"Zen Maru Gothic"'], ["plus", "M+", '"M PLUS 1p"'],
+    ["mincho", "Mincho", '"Shippori Mincho B1"'], ["system", "Phone", 'system-ui,sans-serif']];
+  function applySettings(){
+    const R = document.documentElement, th = store.get("set:theme", "auto"), fo = store.get("set:font", "kaku");
+    if (th === "auto") R.removeAttribute("data-theme"); else R.setAttribute("data-theme", th);
+    if (fo === "kaku") R.removeAttribute("data-font"); else R.setAttribute("data-font", fo);
+    if (window.__themeColor) window.__themeColor();
+  }
+  const settingsCard = () => {
+    const th = store.get("set:theme", "auto"), fo = store.get("set:font", "kaku");
+    return `<div class="sec-h"><span class="label">Settings</span></div>
+      <div class="card" id="settings">
+        <div class="set-row"><div class="lab">Theme<span>画面</span></div>
+          <div class="seg" data-set="theme">${THEMES.map(([k, n]) => `<button data-v="${k}" aria-pressed="${k === th}">${n}</button>`).join("")}</div></div>
+        <div class="set-row"><div class="lab">Font<span>書体</span></div>
+          <div class="fontgrid" data-set="font">${FONTS.map(([k, n, f]) => `<button data-v="${k}" aria-pressed="${k === fo}"><b style="font-family:${esc(f)}">日本語</b><small>${n}</small></button>`).join("")}</div></div>
+        <div class="set-row"><div class="lab">Furigana<span>ふりがな</span></div>
+          <div class="seg" data-set="furi"><button data-v="on" aria-pressed="${furi}">Show</button><button data-v="off" aria-pressed="${!furi}">Hide (tap to peek)</button></div></div>
+      </div>`;
+  };
+  function bindSettings(){
+    const box = $("settings"); if (!box) return;
+    box.onclick = e => {
+      const b = e.target.closest("[data-v]"), g = b && b.closest("[data-set]"); if (!b || !g) return;
+      const k = g.dataset.set, v = b.dataset.v;
+      if (k === "furi"){ furi = v === "on"; store.set("furi", furi); applyFuri(); }
+      else { store.set("set:" + k, v); applySettings(); }
+      g.querySelectorAll("[data-v]").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+    };
+  }
   function renderHome(){
     setMode("home");
     const el = $("home"), t = todayStr();
@@ -1431,12 +1519,10 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
     const latest = lessons[lessons.length - 1], isToday = latest.id === t;
     const s = streak(), due = allDue().length, deckN = Object.keys(getDeck()).length, kN = Object.keys(seenKanji()).length;
     const days = [...Array(7)].map((_, i) => addDays(t, i - 6));
-    const dn = d => new Date(d + "T12:00:00").toLocaleDateString("en-GB", {weekday:"narrow"});
+    const dn = d => WD[new Date(d + "T12:00:00").getDay()];
     const st = lessonStatus(latest.id);
     const earlier = lessons.slice(0, -1).reverse().slice(0, 4);
     el.innerHTML = `<div class="step" style="gap:12px">
-      <div class="home-head"><div><p class="note">${esc(greeting())} · ${esc(new Date().toLocaleDateString("en-GB", {weekday:"long", day:"numeric", month:"long"}))}</p><h1>にほんご線</h1></div></div>
-
       <div class="card streak">
         <div class="streak-top">
           <span class="flame ${s.today ? "" : "cold"}">🔥</span>
@@ -1450,7 +1536,7 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
       </div>
 
       <a class="board hero" href="#${esc(latest.id)}" id="hero">
-        <div class="board-kicker">${isToday ? (latest.category === "news" ? "ニュース · Today's news lesson" : "今日 · Today's lesson") : "Latest lesson · " + esc(fmtDate(latest.id))}</div>
+        <div class="board-kicker">${isToday ? (latest.category === "news" ? "ニュース · Today's news lesson" : "今日 · Today's lesson") : "最新 · " + esc(fmtDate(latest.id))}</div>
         <div class="board-title" id="heroTitle">${esc(latest.topic)}</div>
         <div class="board-en" id="heroEn" style="white-space:normal">${esc(latest.topic)}</div>
         <div class="hero-meta">${latest.category ? `<span>${esc(fieldOf(latest.category))}</span>` : ""}${latest.format && FMT[latest.format] ? `<span>${esc(FMT[latest.format].chip)}</span>` : ""}<span id="heroGram" hidden></span></div>
@@ -1466,8 +1552,11 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
 
       ${earlier.length ? `<div class="sec-h"><span class="label">Earlier lessons</span>${lessons.length > 5 ? `<a class="link" href="#lessons">See all</a>` : ""}</div>
       <div class="card">${earlier.map(lessonRow).join("")}</div>` : ""}
+
+      ${settingsCard()}
     </div>`;
     $("home").scrollTop = 0;
+    fillTitles(el); bindSettings();
     // fill the hero with the lesson's Japanese title and progress
     loadLesson(latest.id).then(L => {
       if ($("home").hidden || !$("heroTitle")) return;
@@ -1533,17 +1622,20 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
   }
   function renderLessons(){
     const byMonth = {};
-    lessons.slice().reverse().forEach(l => { const m = new Date(l.id + "T12:00:00").toLocaleDateString("en-GB", {month:"long", year:"numeric"}); (byMonth[m] = byMonth[m] || []).push(l); });
-    page("All lessons", "線", Object.entries(byMonth).map(([m, ls]) => `<div class="label">${esc(m)}</div><div class="card">${ls.map(lessonRow).join("")}</div>`).join(""));
+    lessons.slice().reverse().forEach(l => { const d = new Date(l.id + "T12:00:00"), m = `${d.getFullYear()}年${d.getMonth() + 1}月`; (byMonth[m] = byMonth[m] || []).push(l); });
+    page("All lessons", "線", Object.entries(byMonth).map(([m, ls]) => `<div class="label" style="font-family:var(--jp)">${esc(m)}</div><div class="card">${ls.map(lessonRow).join("")}</div>`).join(""));
+    fillTitles($("page"));
   }
 
   /* ---------- data: static files ---------- */
-  const cache = {};
+  const cache = {}, raw = {};
+  const getJSON = id => raw[id] || (raw[id] = fetch("lessons/" + id + ".json", {cache: "no-cache"})
+    .then(r => { if (!r.ok) throw new Error("missing"); return r.json(); })
+    .then(L => { L.id = id; return L; })
+    .catch(e => { delete raw[id]; throw e; }));
   async function loadLesson(id){
     if (cache[id]) return cache[id];
-    const r = await fetch("lessons/" + id + ".json", {cache: "no-cache"});
-    if (!r.ok) throw new Error("missing");
-    const L = await r.json(); L.id = id; cache[id] = L;
+    const L = await getJSON(id); cache[id] = L;
     await loadAudio(id);
     return L;
   }
