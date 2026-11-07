@@ -16,26 +16,31 @@
 <style>
 /* Layout: one-screen phone app. Gradient "station board" hero card, a slim progress line of stops, big rounded cards on a soft canvas, pill buttons in the thumb zone. Fintech-clean, bold type. */
 :root{
-  --paper:#f2f3f5; --card:#ffffff; --ink:#111316; --muted:#6b717c; --rule:#e3e5e9; --soft:#eef1f6;
-  --accent:#4f46e5; --accent-2:#2563eb; --on-accent:#ffffff; --good:#0ea56b;
-  --grad:linear-gradient(135deg,#2b59ff 0%,#6d3cf5 55%,#d946ef 100%);
+  --paper:#f2f3f5; --card:#ffffff; --ink:#111316; --muted:#5f6570; --rule:#e3e5e9; --soft:#eef1f6;
+  --accent:#4f46e5; --accent-2:#2563eb; --on-accent:#ffffff; --good:#087a4f; --on-good:#ffffff;
+  --grad:linear-gradient(135deg,#2b59ff 0%,#6d3cf5 55%,#a21caf 100%); --grad-ink:#2b2bd9;
   --btn:#111316; --on-btn:#ffffff; --ghost:#e6e8ec;
-  --stamp:#e5484d; --polite:#2563eb; --casual:#d9480f;
+  --stamp:#d92d35; --stamp-fill:#d92d35; --polite:#2563eb; --casual:#c2410c;
+  --slang:#a21caf; --archaic:#92400e; --star:#b45309; --line-green:#06c755; --pop:#ffffff;
   --ui:"Inter Tight","Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",system-ui,sans-serif;
   --jp:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",system-ui,sans-serif;
   --mincho:"Kaisei Tokumin","Hiragino Mincho ProN","Noto Serif JP",serif;
   --line:var(--accent); --line-ink:var(--on-accent);
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --paper:#000000; --card:#16171b; --ink:#f5f6f8; --muted:#9298a3; --rule:#26282e; --soft:#1e2028;
-  --accent:#7c74ff; --accent-2:#5b8cff; --on-accent:#ffffff;
+  --paper:#000000; --card:#16171b; --ink:#f5f6f8; --muted:#848a95; --rule:#26282e; --soft:#1e2028;
+  --accent:#8b84ff; --accent-2:#5b8cff; --on-accent:#ffffff; --good:#34d399; --on-good:#000000;
+  --grad:linear-gradient(135deg,#2747d6 0%,#5a32d0 55%,#8e1f9e 100%); --grad-ink:#3a2fd0;
   --btn:#f5f6f8; --on-btn:#000000; --ghost:#24262c;
-  --stamp:#ff6369; --polite:#7aa2ff; --casual:#ff8a4c; color-scheme:dark}}
+  --stamp:#ff6369; --stamp-fill:#d92d35; --polite:#7aa2ff; --casual:#ff8a4c;
+  --slang:#e879f9; --archaic:#eab308; --star:#f5a524; --pop:#26282f; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --paper:#000000; --card:#16171b; --ink:#f5f6f8; --muted:#9298a3; --rule:#26282e; --soft:#1e2028;
-  --accent:#7c74ff; --accent-2:#5b8cff; --on-accent:#ffffff;
+  --paper:#000000; --card:#16171b; --ink:#f5f6f8; --muted:#848a95; --rule:#26282e; --soft:#1e2028;
+  --accent:#8b84ff; --accent-2:#5b8cff; --on-accent:#ffffff; --good:#34d399; --on-good:#000000;
+  --grad:linear-gradient(135deg,#2747d6 0%,#5a32d0 55%,#8e1f9e 100%); --grad-ink:#3a2fd0;
   --btn:#f5f6f8; --on-btn:#000000; --ghost:#24262c;
-  --stamp:#ff6369; --polite:#7aa2ff; --casual:#ff8a4c; color-scheme:dark}
+  --stamp:#ff6369; --stamp-fill:#d92d35; --polite:#7aa2ff; --casual:#ff8a4c;
+  --slang:#e879f9; --archaic:#eab308; --star:#f5a524; --pop:#26282f; color-scheme:dark}
 
 /* font setting (Settings on the home screen) */
 /* never fake a bold: Brush and Bold title fonts come in one weight */
@@ -61,6 +66,8 @@ button:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outl
 .pill{width:40px;height:24px;border-radius:12px;background:var(--ghost);position:relative;transition:background .2s}
 .pill::after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .2s}
 .toggle[aria-pressed="true"] .pill{background:var(--accent)}
+/* small phones: the date keeps its 今日 badge, the switch keeps only its pill */
+@media (max-width:359px){.toggle-t{display:none}}
 .toggle[aria-pressed="true"] .pill::after{transform:translateX(16px)}
 
 /* station board = gradient hero card */
@@ -70,12 +77,13 @@ button:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outl
 .board-kicker{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;opacity:.8}
 .board-title{font-family:var(--ui);font-size:clamp(18px,5.2vw,22px);font-weight:700;line-height:1.25;letter-spacing:-.01em;text-wrap:balance;margin-top:2px}
 .board-title rt{color:rgba(255,255,255,.75)}
+.board-title:not(:has(rt)){padding-top:5px}
 .board-en{font-size:12px;opacity:.85;margin-top:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .band{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:5px 10px 9px;font-size:12px;font-weight:600;position:relative;z-index:1}
 .band .prev,.band .next{display:flex;min-width:0;flex:1}
 .band .next{justify-content:flex-end}
 .band span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:rgba(255,255,255,.18);padding:3px 8px;border-radius:999px;max-width:100%}
-.band .num{flex:none;background:#fff;color:#2b2bd9;font-weight:700;border-radius:999px;padding:3px 9px;font-variant-numeric:tabular-nums;font-size:12px}
+.band .num{flex:none;background:#fff;color:var(--grad-ink);font-weight:700;border-radius:999px;padding:3px 9px;font-variant-numeric:tabular-nums;font-size:12px}
 
 /* progress line */
 .stops{--edge:8px;display:flex;align-items:center;height:16px;margin-top:6px;position:relative}
@@ -94,7 +102,7 @@ button:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outl
 .label{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
 .card{background:var(--card);border-radius:20px;padding:16px}
 
-ruby{ruby-position:over}
+ruby{ruby-position:over;ruby-align:center}
 rt{font-size:.5em;color:var(--muted);font-weight:500;letter-spacing:0;transition:opacity .15s}
 .furi-off rt{opacity:0}
 .furi-off ruby.peek rt{opacity:1}
@@ -105,7 +113,7 @@ rt{font-size:.5em;color:var(--muted);font-weight:500;letter-spacing:0;transition
 .gl:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .line.me .gl{border-bottom-color:rgba(255,255,255,.8)}
 .line.me .gl.gl-on{background:rgba(255,255,255,.22)}
-.gpop{position:fixed;z-index:60;box-sizing:border-box;background:var(--card);color:var(--ink);border-radius:16px;padding:12px 14px;box-shadow:0 10px 30px rgba(0,0,0,.18),0 0 0 1px var(--rule);display:flex;flex-direction:column;gap:4px;animation:in .15s ease}
+.gpop{position:fixed;z-index:60;box-sizing:border-box;background:var(--pop);color:var(--ink);border-radius:16px;padding:12px 14px;box-shadow:0 10px 30px rgba(0,0,0,.18),0 0 0 1px var(--rule);display:flex;flex-direction:column;gap:4px;animation:in .15s ease}
 .gpop-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
 .gpop-w{font-family:var(--jp);font-size:22px;font-weight:700;line-height:1.3}
 .gpop-r{font-family:var(--jp);font-size:14px;color:var(--muted)}
@@ -116,7 +124,7 @@ rt{font-size:.5em;color:var(--muted);font-weight:500;letter-spacing:0;transition
 .row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
 .chip{font-size:12px;font-weight:700;letter-spacing:.02em;padding:5px 12px;border-radius:999px;background:var(--soft);text-transform:capitalize}
 .chip.polite{color:var(--polite)} .chip.casual{color:var(--casual)} .chip.neutral{color:var(--muted)}
-.chip.dialect{color:var(--good)} .chip.slang{color:#c026d3} .chip.archaic{color:#a16207}
+.chip.dialect{color:var(--good)} .chip.slang{color:var(--slang)} .chip.archaic{color:var(--archaic)}
 .say{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--ink);padding:8px 13px;border-radius:999px;background:var(--ghost)}
 .say svg{width:15px;height:15px}
 .reveal{width:100%;text-align:left;border-radius:16px;padding:13px 16px;color:var(--muted);font-size:15px;font-weight:600;background:var(--card);border:1.5px dashed var(--ghost)}
@@ -193,7 +201,7 @@ textarea:focus{border-color:var(--accent);outline:none}
 
 /* review: stars, cards, quiz */
 .star{flex:none;display:grid;place-items:center;width:36px;height:36px;border-radius:50%;font-size:19px;line-height:1;color:var(--muted);background:var(--ghost)}
-.star.on{color:#f5a524}
+.star.on{color:var(--star)}
 .line.me .star{background:rgba(255,255,255,.22);color:#fff}
 .line.me .star.on{color:#ffd166}
 mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;font-weight:700}
@@ -224,7 +232,7 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
 .qprompt{font-family:var(--jp);font-size:clamp(24px,7vw,30px);font-weight:700;line-height:1.5;text-align:center;padding:6px 0}
 .qprompt.k{font-family:var(--mincho);font-size:60px}
 .grade{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.btn.good{background:var(--good);color:#fff}
+.btn.good{background:var(--good);color:var(--on-good)}
 .wsent{font-family:var(--jp);font-size:21px;font-weight:500;line-height:1.9;overflow-wrap:anywhere}
 
 /* cast */
@@ -242,7 +250,14 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
 .chat .stack{display:flex;flex-direction:column;gap:2px;min-width:0;max-width:82%}
 .chat .line.me .stack{align-items:flex-end}
 .chat .bubble{max-width:100%;border-radius:16px 16px 16px 4px}
-.chat .line.me .bubble{background:#06c755;border-radius:16px 16px 4px 16px}
+.chat .line.me .bubble{background:var(--line-green);color:#06210f;border-radius:16px 16px 4px 16px}
+.chat .line.me .bubble rt{color:rgba(6,33,15,.68)}
+.chat .line.me .bubble .en{color:rgba(6,33,15,.8);border-top-color:rgba(6,33,15,.18)}
+.chat .line.me .bubble .en.hid{background:rgba(6,33,15,.14)}
+.chat .line.me .gl{border-bottom-color:rgba(6,33,15,.6)} .chat .line.me .gl.gl-on{background:rgba(6,33,15,.12)}
+.chat .line.me .play,.chat .line.me .star{background:rgba(6,33,15,.14);color:#06210f}
+.chat .line.me .star.on{background:#06210f;color:#ffd166}
+.chat .line.me .mini{color:#06210f} .chat .line.me mark{background:rgba(6,33,15,.14);color:#06210f}
 .chat .time{font-size:10.5px;color:var(--muted);flex:none;padding-bottom:2px}
 
 /* story */
@@ -379,7 +394,7 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
 .hero-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;position:relative;z-index:1}
 .hero-meta span{font-size:12px;font-weight:600;background:rgba(255,255,255,.18);padding:3px 9px;border-radius:999px}
 .hero-go{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;position:relative;z-index:1}
-.hero-go b{background:#fff;color:#2b2bd9;border-radius:999px;padding:9px 18px;font-size:15px}
+.hero-go b{background:#fff;color:var(--grad-ink);border-radius:999px;padding:9px 18px;font-size:15px}
 .hero-bar{flex:1;height:5px;border-radius:3px;background:rgba(255,255,255,.25);overflow:hidden}
 .hero-bar i{display:block;height:100%;background:#fff;border-radius:3px}
 .tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -387,17 +402,17 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
 .tile .tk{font-family:var(--mincho);font-size:24px;line-height:1.1;margin-bottom:auto;color:var(--accent)}
 .tile b{font-size:16px;margin-top:8px}
 .tile span{font-size:13px;color:var(--muted);font-weight:500}
-.tile .badge{position:absolute;top:12px;right:12px;min-width:22px;height:22px;padding:0 7px;box-sizing:border-box;border-radius:999px;background:var(--stamp);color:#fff;font-size:12px;font-weight:700;display:grid;place-items:center}
+.tile .badge{position:absolute;top:12px;right:12px;min-width:22px;height:22px;padding:0 7px;box-sizing:border-box;border-radius:999px;background:var(--stamp-fill);color:#fff;font-size:12px;font-weight:700;display:grid;place-items:center}
 .sec-h{display:flex;align-items:center;justify-content:space-between;margin-top:4px}
 .link{font-size:14px;font-weight:700;color:var(--accent);padding:4px 0}
 .lrow{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:11px 0;border-bottom:1px solid var(--rule)}
 .lrow:last-child{border-bottom:0;padding-bottom:0}
 .lrow:first-child{padding-top:0}
 .lrow .st{flex:none;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--ghost);font-size:13px;font-weight:700;color:var(--muted)}
-.lrow .st.done{background:var(--good);color:#fff}
+.lrow .st.done{background:var(--good);color:var(--on-good)}
 .lrow .st.half{background:var(--soft);color:var(--accent);box-shadow:inset 0 0 0 2px var(--accent)}
 .lrow .tx{flex:1;min-width:0}
-.lrow .tx div{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lrow .tx div{font-weight:600;overflow-wrap:anywhere}
 .lrow .tx small{display:block;color:var(--muted);font-size:12.5px}
 .page-head{display:flex;align-items:center;gap:10px;padding-top:2px}
 .page-head h2{margin:0;font-size:22px;font-weight:700;flex:1;min-width:0}
@@ -429,7 +444,7 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
         <span id="dateLabel">Loading…</span>
       </button>
     </div>
-    <button class="toggle" id="furiBtn" aria-pressed="true"><span>ふりがな</span><span class="pill"></span></button>
+    <button class="toggle" id="furiBtn" aria-pressed="true" aria-label="Furigana"><span class="toggle-t">ふりがな</span><span class="pill"></span></button>
   </div>
 
   <div class="board" id="board" hidden>
@@ -1019,8 +1034,8 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
     if (st.type === "kstudy"){
       h = `<div class="step">${L.kanji_study.map(k => `
         <div class="card" style="display:flex;flex-direction:column;gap:10px">
-          <div class="row" style="align-items:flex-start">
-            <div style="display:flex;gap:14px;align-items:center">
+          <div class="row" style="align-items:flex-start;flex-wrap:nowrap">
+            <div style="display:flex;gap:14px;align-items:center;min-width:0">
               <div class="kbig">${esc(k.kanji)}</div>
               <div><div style="font-size:18px;font-weight:700">${esc(k.meaning)}</div>
               <span class="lvl ${k.track === "n3" ? "N3" : ""}">${k.track === "n3" ? "N3 track" : "From today's words"}</span></div>
@@ -1692,7 +1707,7 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
     };
     const draw = () => {
       const cards = Object.values(getDeck()).filter(c => kind === "all" || (c.kind || "word") === kind).sort((a, b) => a.added < b.added ? 1 : a.added > b.added ? -1 : 0);
-      $("sl").innerHTML = cards.length ? `<div class="card">${cards.map(row).join("")}</div>` : `<p class="note">Nothing here yet. Tap ☆ in a lesson to save it.</p>`;
+      $("sl").innerHTML = cards.length ? `<div class="card">${cards.map(row).join("")}</div>` : (kind === "all" ? `<div class="card" style="display:flex;flex-direction:column;gap:8px;align-items:flex-start"><span class="hanko">☆</span><h3 style="margin:0;font-size:20px">Nothing saved yet</h3><p style="margin:0">Tap ☆ on phrases, lines, words and kanji in a lesson to keep them here.</p></div>` : `<p class="note" style="margin:0">Nothing saved here yet.</p>`);
     };
     $("sk").onclick = e => { const b = e.target.closest("[data-k]"); if (!b) return; kind = b.dataset.k; $("sk").querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", String(x === b))); draw(); };
     draw();
@@ -1702,7 +1717,7 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
     page("Kanji", "漢字", ks.length
       ? `<p class="note" style="margin:0">${ks.length} kanji studied so far. ☆ them in a lesson to drill them in review.</p>
          <div class="kgrid">${ks.reverse().map(([k, v]) => `<div class="kcell"><div class="k">${esc(k)}</div><div class="m">${esc(v.meaning)}</div><div class="r">${esc([v.on, v.kun].filter(Boolean).join(" · "))}</div></div>`).join("")}</div>`
-      : `<p class="note">Kanji show up here after you reach the "Today's kanji" stop in a lesson.</p>`);
+      : `<div class="card" style="display:flex;flex-direction:column;gap:8px;align-items:flex-start"><span class="hanko">漢</span><h3 style="margin:0;font-size:20px">No kanji yet</h3><p style="margin:0">Kanji show up here after you reach the "Today's kanji" stop in a lesson.</p></div>`);
   }
   function renderLessons(){
     const byMonth = {};
