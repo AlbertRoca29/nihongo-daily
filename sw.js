@@ -1,4 +1,4 @@
-const SHELL = "nihongo-shell-v9";
+const SHELL = "nihongo-shell-v10";
 const FONTS = "nihongo-fonts-v1";
 const FILES = ["./", "index.html", "manifest.webmanifest", "icons/icon-192.png"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(SHELL).then(c => c.addAll(FILES))); self.skipWaiting(); });
