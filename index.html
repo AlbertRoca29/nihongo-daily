@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" id="themeColor" content="#f2f3f5">
-<script>(function(){var R=document.documentElement;function g(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}}var th=g("set:theme"),fo=g("set:font");if(th==="light"||th==="dark")R.setAttribute("data-theme",th);if(fo&&fo!=="kaku")R.setAttribute("data-font",fo);var df=g("set:dfont");if(df&&df!=="mincho")R.setAttribute("data-dfont",df);var m=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)");function set(){var t=R.getAttribute("data-theme");var dark=t?t==="dark":!!(m&&m.matches);document.getElementById("themeColor").setAttribute("content",dark?"#000000":"#f2f3f5");}window.__themeColor=set;set();if(m&&m.addEventListener)m.addEventListener("change",set);})();</script>
+<script>(function(){var R=document.documentElement;function g(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}}var th=g("set:theme");if(th==="light"||th==="dark")R.setAttribute("data-theme",th);var cs=g("set:css");if(cs&&cs.vars){for(var k in cs.vars)R.style.setProperty(k,cs.vars[k]);(cs.links||[]).forEach(function(q){document.write('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?'+q+'&display=swap" data-f="https://fonts.googleapis.com/css2?'+q+'&display=swap">')})}var m=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)");function set(){var t=R.getAttribute("data-theme");var dark=t?t==="dark":!!(m&&m.matches);document.getElementById("themeColor").setAttribute("content",dark?"#000000":"#f2f3f5");}window.__themeColor=set;set();if(m&&m.addEventListener)m.addEventListener("change",set);})();</script>
 <meta name="mobile-web-app-capable" content="yes">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon-192.png">
@@ -12,7 +12,7 @@
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);box-sizing:border-box;height:100%}html{background:#f2f3f5}@media (prefers-color-scheme:dark){html{background:#000}}html[data-theme="dark"]{background:#000}html[data-theme="light"]{background:#f2f3f5}body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
 <title>Nihongo Line</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&family=M+PLUS+1p:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700&family=Klee+One:wght@400;600&family=Yuji+Syuku&family=Dela+Gothic+One&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700&display=swap">
 <style>
 /* Layout: one-screen phone app. Gradient "station board" hero card, a slim progress line of stops, big rounded cards on a soft canvas, pill buttons in the thumb zone. Fintech-clean, bold type. */
 :root{
@@ -38,15 +38,6 @@
   --stamp:#ff6369; --polite:#7aa2ff; --casual:#ff8a4c; color-scheme:dark}
 
 /* font setting (Settings on the home screen) */
-:root[data-font="round"]{--ui:"Inter Tight","Zen Maru Gothic","Hiragino Maru Gothic ProN",system-ui,sans-serif; --jp:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Noto Sans JP",system-ui,sans-serif}
-:root[data-font="plus"]{--ui:"M PLUS 1p","Hiragino Sans",system-ui,sans-serif; --jp:"M PLUS 1p","Hiragino Sans","Noto Sans JP",system-ui,sans-serif}
-:root[data-font="mincho"]{--jp:"Shippori Mincho B1","Hiragino Mincho ProN","Noto Serif JP",serif}
-:root[data-dfont="klee"]{--mincho:"Klee One","Hiragino Mincho ProN",serif}
-:root[data-dfont="brush"]{--mincho:"Yuji Syuku","Hiragino Mincho ProN",serif}
-:root[data-dfont="round"]{--mincho:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif}
-:root[data-dfont="bold"]{--mincho:"Dela Gothic One","Hiragino Sans",sans-serif}
-:root[data-dfont="same"]{--mincho:var(--jp)}
-:root[data-font="system"]{--ui:system-ui,-apple-system,"Segoe UI",Roboto,"Hiragino Sans","Noto Sans JP",sans-serif; --jp:"Hiragino Sans","Noto Sans CJK JP","Noto Sans JP",system-ui,sans-serif}
 /* never fake a bold: Brush and Bold title fonts come in one weight */
 html{font-synthesis-weight:none}
 /* scroll without a visible bar */
@@ -343,6 +334,16 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
 .fontgrid.titles{grid-template-columns:1fr 1fr}
 .fontgrid.titles b{font-size:20px;white-space:nowrap}
 .fontgrid.titles small{font-weight:500;text-align:center}
+.fgroup{font-size:11.5px;font-weight:600;color:var(--muted);margin:6px 0 -2px;letter-spacing:.03em}
+.fontgrid button i{font-style:normal;font-family:inherit;font-size:14px;margin-left:3px;color:var(--muted)}
+.fontgrid[data-set="font"] button b{font-size:19px;white-space:nowrap}
+.preview{position:sticky;top:-6px;z-index:5;background:var(--card);border-radius:20px;padding:14px 16px;box-shadow:0 6px 18px rgba(0,0,0,.08);display:flex;flex-direction:column;gap:4px}
+.pv-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.pv-title{font-family:var(--mincho);font-weight:700;font-size:26px;line-height:1.2}
+.pv-sub{font-family:var(--jp);font-size:12px;color:var(--muted)}
+.pv-k{font-family:var(--mincho);font-size:44px;line-height:1;color:var(--accent);flex:none}
+.pv-line{font-family:var(--jp);font-size:18px;font-weight:500;line-height:1.95;margin-top:4px}
+.pv-en{font-size:13px;color:var(--muted)}
 .fontgrid button[aria-pressed="true"]{background:var(--card);box-shadow:inset 0 0 0 2px var(--accent);color:var(--accent)}
 .home-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:8px}
 .home-head .sub{margin:2px 0 0;font-size:12.5px;color:var(--muted);font-family:var(--jp);letter-spacing:.04em}
@@ -1491,35 +1492,96 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
       }).catch(() => {});
     });
   }
-  /* settings, saved on this device */
+  /* settings, saved on this device. Fonts load from Google Fonts only when chosen (or previewed in Settings). */
   const THEMES = [["auto", "Auto"], ["light", "Light ☀︎"], ["dark", "Dark ☾"]];
-  const FONTS = [["kaku", "Gothic", '"Zen Kaku Gothic New"'], ["round", "Rounded", '"Zen Maru Gothic"'], ["plus", "M+", '"M PLUS 1p"'],
-    ["mincho", "Mincho", '"Shippori Mincho B1"'], ["system", "Phone", 'system-ui,sans-serif']];
+  const TITLES = [
+    ["mainichi", "毎日にほんご", "まいにち にほんご", "Japanese every day"], ["mainichi2", "毎日日本語", "まいにち にほんご", "Japanese every day (all kanji)"],
+    ["mainichi3", "まいにち日本語", "まいにち にほんご", "Japanese every day (soft)"], ["kyou", "今日の日本語", "きょう の にほんご", "Today's Japanese"],
+    ["kyoumo", "今日も日本語", "きょう も にほんご", "Japanese again today"], ["asa", "朝の日本語", "あさ の にほんご", "Morning Japanese"],
+    ["hibi", "日々の日本語", "ひび の にほんご", "Japanese, day by day"], ["himekuri", "日めくり日本語", "ひめくり にほんご", "Tear-off calendar Japanese"],
+    ["biyori", "日本語日和", "にほんご びより", "A fine day for Japanese"], ["kotobabiyori", "ことば日和", "ことば びより", "A fine day for words"],
+    ["aru", "日本語のある毎日", "にほんご の ある まいにち", "Days with Japanese in them"], ["kurashi", "にほんご暮らし", "にほんご ぐらし", "Living in Japanese"],
+    ["sanpo", "日本語さんぽ", "にほんご さんぽ", "A stroll through Japanese"], ["nikki", "日本語日記", "にほんご にっき", "Japanese diary"],
+    ["jikan", "日本語の時間", "にほんご の じかん", "Japanese time"], ["ippo", "一日一歩", "いちにち いっぽ", "One step a day"],
+    ["ichiwa", "一日一話", "いちにち いちわ", "One story a day"], ["kotonoha", "言の葉", "こと の は", "Words (poetic: 'leaves of speech')"],
+    ["mainichikotoba", "毎日ことば", "まいにち ことば", "Words every day"], ["mado", "日本語の窓", "にほんご の まど", "A window into Japanese"],
+    ["takanohara", "鷹ノ原日記", "たかのはら にっき", "Takanohara diary (the story's town)"], ["tabi", "ことばの旅", "ことば の たび", "A journey in words"],
+    ["sen", "にほんご線", "にほんご せん", "The Nihongo Line"], ["sen2", "日本語線", "にほんご せん", "The Nihongo Line (kanji)"]];
+  // [id, label, Google family, weights to load ("" = the only one), CSS fallback]
+  const SERIF = '"Hiragino Mincho ProN","Noto Serif JP",serif', SANS = '"Hiragino Sans","Noto Sans JP",system-ui,sans-serif', MARU = '"Hiragino Maru Gothic ProN",' + SANS;
+  const DFONT_GROUPS = [
+    ["Mincho · classic", [["mincho", "Shippori", "Shippori Mincho B1", "700", SERIF], ["zenold", "Zen Old", "Zen Old Mincho", "700", SERIF], ["notoserif", "Noto Serif", "Noto Serif JP", "700", SERIF],
+      ["tokumin", "Tokumin", "Kaisei Tokumin", "700", SERIF], ["decol", "Decol", "Kaisei Decol", "700", SERIF], ["opti", "Opti", "Kaisei Opti", "700", SERIF],
+      ["bizmin", "BIZ Mincho", "BIZ UDPMincho", "700", SERIF], ["hina", "Hina", "Hina Mincho", "", SERIF], ["sawamin", "Sawarabi", "Sawarabi Mincho", "", SERIF],
+      ["antique", "Antique", "Zen Antique", "", SERIF], ["shantique", "Shippori Antique", "Shippori Antique", "", SANS]]],
+    ["Brush · handwritten", [["klee", "Textbook", "Klee One", "600", SERIF], ["brush", "Syuku", "Yuji Syuku", "", SERIF], ["boku", "Boku", "Yuji Boku", "", SERIF],
+      ["mai", "Mai", "Yuji Mai", "", SERIF], ["tegomin", "Tegomin", "New Tegomin", "", SERIF], ["yusei", "Magic marker", "Yusei Magic", "", SANS],
+      ["yomogi", "Yomogi", "Yomogi", "", SANS], ["kurenaido", "Kurenaido", "Zen Kurenaido", "", SANS]]],
+    ["Rounded · soft", [["round", "Zen Maru", "Zen Maru Gothic", "700", MARU], ["mplusr", "M+ Rounded", "M PLUS Rounded 1c", "700", MARU], ["tsukimi", "Tsukimi", "Tsukimi Rounded", "700", MARU],
+      ["kiwi", "Kiwi", "Kiwi Maru", "500", MARU], ["kosugimaru", "Kosugi Maru", "Kosugi Maru", "", MARU], ["hachi", "Hachi Pop", "Hachi Maru Pop", "", MARU]]],
+    ["Gothic · bold · fun", [["kaku", "Zen Kaku", "Zen Kaku Gothic New", "700", SANS], ["notosans", "Noto Sans", "Noto Sans JP", "800", SANS], ["mplus1", "M+ 1", "M PLUS 1", "800", SANS],
+      ["murecho", "Murecho", "Murecho", "700", SANS], ["bold", "Dela", "Dela Gothic One", "", SANS], ["mochiy", "Mochiy Pop", "Mochiy Pop One", "", SANS],
+      ["potta", "Potta", "Potta One", "", SANS], ["rocknroll", "RocknRoll", "RocknRoll One", "", SANS], ["reggae", "Reggae", "Reggae One", "", SANS],
+      ["rampart", "Rampart", "Rampart One", "", SANS], ["train", "Train", "Train One", "", SANS], ["stick", "Stick", "Stick", "", SANS],
+      ["dot", "Pixel", "DotGothic16", "", SANS], ["daruma", "Daruma", "Darumadrop One", "", SANS], ["same", "Same as text", "", "", ""]]]];
+  const TFONT_GROUPS = [
+    ["Gothic · clean", [["kaku", "Zen Kaku", "Zen Kaku Gothic New", "400;500;700", SANS], ["kakuant", "Zen Kaku Antique", "Zen Kaku Gothic Antique", "400;500;700", SANS],
+      ["notosans", "Noto Sans", "Noto Sans JP", "400;500;700", SANS], ["mplus1p", "M+ 1p", "M PLUS 1p", "400;500;700", SANS], ["mplus1", "M+ 1", "M PLUS 1", "400;500;700", SANS],
+      ["plex", "IBM Plex", "IBM Plex Sans JP", "400;500;700", SANS], ["murecho", "Murecho", "Murecho", "400;500;700", SANS], ["bizgot", "BIZ Gothic", "BIZ UDPGothic", "400;700", SANS],
+      ["sawagot", "Sawarabi", "Sawarabi Gothic", "", SANS], ["kosugi", "Kosugi", "Kosugi", "", SANS], ["system", "Phone", "", "", SANS]]],
+    ["Rounded · soft", [["round", "Zen Maru", "Zen Maru Gothic", "400;500;700", MARU], ["mplusr", "M+ Rounded", "M PLUS Rounded 1c", "400;500;700", MARU],
+      ["tsukimi", "Tsukimi", "Tsukimi Rounded", "400;500;700", MARU], ["kiwi", "Kiwi", "Kiwi Maru", "400;500", MARU], ["kosugimaru", "Kosugi Maru", "Kosugi Maru", "", MARU]]],
+    ["Mincho · bookish", [["mincho", "Shippori", "Shippori Mincho B1", "400;500;700", SERIF], ["zenold", "Zen Old", "Zen Old Mincho", "400;500;700", SERIF],
+      ["notoserif", "Noto Serif", "Noto Serif JP", "400;500;700", SERIF], ["opti", "Opti", "Kaisei Opti", "400;500;700", SERIF], ["bizmin", "BIZ Mincho", "BIZ UDPMincho", "400;700", SERIF]]],
+    ["Handwritten", [["klee", "Textbook", "Klee One", "400;600", SERIF], ["yomogi", "Yomogi", "Yomogi", "", SANS], ["kurenaido", "Kurenaido", "Zen Kurenaido", "", SANS]]]];
+  const UIFONTS = [["inter", "Inter (now)"], ["match", "Same as Japanese"]];
+  const findFont = (groups, id) => { for (const [, fs] of groups) for (const f of fs) if (f[0] === id) return f; return groups[0][1][0]; };
+  const LEGACY = {plus:"mplus1p"};
+  const gq = (fam, w) => "family=" + fam.replace(/ /g, "+") + (w ? ":wght@" + w : "");
+  const stackOf = f => f[2] ? `"${f[2]}",${f[4]}` : f[4];
+  function loadFontCss(q, extra){
+    const href = "https://fonts.googleapis.com/css2?" + q + (extra || "") + "&display=swap";
+    if (document.querySelector(`link[data-f="${CSS.escape(href)}"]`)) return;
+    const l = document.createElement("link"); l.rel = "stylesheet"; l.href = href; l.dataset.f = href; document.head.appendChild(l);
+  }
   function applySettings(){
-    const R = document.documentElement, th = store.get("set:theme", "auto"), fo = store.get("set:font", "kaku");
+    const R = document.documentElement, th = store.get("set:theme", "auto");
     if (th === "auto") R.removeAttribute("data-theme"); else R.setAttribute("data-theme", th);
-    if (fo === "kaku") R.removeAttribute("data-font"); else R.setAttribute("data-font", fo);
-    const df = store.get("set:dfont", "mincho");
-    if (df === "mincho") R.removeAttribute("data-dfont"); else R.setAttribute("data-dfont", df);
+    const tId = store.get("set:font", "kaku"), dId = store.get("set:dfont", "mincho"), ui = store.get("set:uifont", "inter");
+    const t = findFont(TFONT_GROUPS, LEGACY[tId] || tId), d = findFont(DFONT_GROUPS, dId);
+    const jp = t[0] === "system" ? '"Hiragino Sans","Noto Sans CJK JP",system-ui,sans-serif' : stackOf(t);
+    const vars = {"--jp": jp, "--ui": ui === "match" ? jp : '"Inter Tight",' + jp, "--mincho": d[0] === "same" ? jp : stackOf(d)};
+    const links = [t, d].filter(f => f[2] && !["kaku", "mincho"].includes(f[0])).map(f => gq(f[2], f[3]));
+    // the default fonts are already in the page; only add what's different
+    Object.entries(vars).forEach(([k, v]) => R.style.setProperty(k, v));
+    links.forEach(q => loadFontCss(q));
+    store.set("set:css", {vars, links});
     if (window.__themeColor) window.__themeColor();
   }
-  const TITLES = [["mainichi", "毎日にほんご", "まいにち にほんご", "Japanese every day"], ["biyori", "日本語日和", "にほんご びより", "A fine day for Japanese"],
-    ["kyou", "今日の日本語", "きょう の にほんご", "Today's Japanese"], ["hibi", "日々の日本語", "ひび の にほんご", "Japanese, day by day"],
-    ["aru", "日本語のある毎日", "にほんご の ある まいにち", "Days with Japanese in them"], ["sen", "にほんご線", "にほんご せん", "The Nihongo Line"]];
-  const DFONTS = [["mincho", "Mincho"], ["klee", "Textbook"], ["brush", "Brush"], ["round", "Rounded"], ["bold", "Bold"], ["same", "Same as text"]];
-  const DFONT_CSS = {mincho:'"Shippori Mincho B1"', klee:'"Klee One"', brush:'"Yuji Syuku"', round:'"Zen Maru Gothic"', bold:'"Dela Gothic One"', same:"var(--jp)"};
   const appTitle = () => TITLES.find(t => t[0] === store.get("set:title", "mainichi")) || TITLES[0];
   function renderSettings(){
-    const th = store.get("set:theme", "auto"), fo = store.get("set:font", "kaku"), df = store.get("set:dfont", "mincho"), ti = appTitle()[0];
-    page("Settings", "設定", `<div class="card" id="settings">
+    const th = store.get("set:theme", "auto"), tId = LEGACY[store.get("set:font", "kaku")] || store.get("set:font", "kaku"),
+      dId = store.get("set:dfont", "mincho"), ui = store.get("set:uifont", "inter"), ti = appTitle()[0];
+    // load every candidate for the previews (Google splits each font in slices: only the characters shown are downloaded)
+    DFONT_GROUPS.forEach(([, fs]) => fs.forEach(f => f[2] && loadFontCss(gq(f[2], f[3]))));
+    TFONT_GROUPS.forEach(([, fs]) => fs.forEach(f => f[2] && loadFontCss(gq(f[2], f[3]))));
+    const grid = (key, groups, cur, sample, weight) => groups.map(([gname, fs]) => `<div class="fgroup">${esc(gname)}</div>
+      <div class="fontgrid" data-set="${key}">${fs.map(f => `<button data-v="${f[0]}" aria-pressed="${f[0] === cur}"><b style="font-family:${f[0] === "same" ? "var(--jp)" : f[0] === "system" ? "system-ui,sans-serif" : esc(`"${f[2]}"`)};font-weight:${weight}">${sample}</b><small>${esc(f[1])}</small></button>`).join("")}</div>`).join("");
+    const T = appTitle();
+    page("Settings", "設定", `<div class="preview" id="preview">
+        <div class="pv-top"><div style="min-width:0"><div class="pv-title" id="pvTitle">${T[1]}</div><div class="pv-sub" id="pvSub">${esc(T[2])}</div></div><div class="pv-k">語</div></div>
+        <div class="pv-line">${ruby("{今日|きょう}はいい{天気|てんき}ですね。{散歩|さんぽ}する？")}</div>
+        <div class="pv-en">Lovely weather today. Want to go for a walk?</div>
+      </div>
+      <div class="card" id="settings">
         <div class="set-row"><div class="lab">Theme<span>画面</span></div>
           <div class="seg" data-set="theme">${THEMES.map(([k, n]) => `<button data-v="${k}" aria-pressed="${k === th}">${n}</button>`).join("")}</div></div>
         <div class="set-row"><div class="lab">App title<span>題名</span></div>
           <div class="fontgrid titles" data-set="title">${TITLES.map(([k, jp, r, en]) => `<button data-v="${k}" aria-pressed="${k === ti}"><b style="font-family:var(--mincho);font-weight:700">${jp}</b><small>${esc(en)}</small></button>`).join("")}</div></div>
-        <div class="set-row"><div class="lab">Titles &amp; big kanji<span>見出し</span></div>
-          <div class="fontgrid" data-set="dfont">${DFONTS.map(([k, n]) => `<button data-v="${k}" aria-pressed="${k === df}"><b style="font-family:${esc(DFONT_CSS[k])};font-weight:700">漢字</b><small>${n}</small></button>`).join("")}</div></div>
-        <div class="set-row"><div class="lab">Text<span>本文</span></div>
-          <div class="fontgrid" data-set="font">${FONTS.map(([k, n, f]) => `<button data-v="${k}" aria-pressed="${k === fo}"><b style="font-family:${esc(f)}">日本語</b><small>${n}</small></button>`).join("")}</div></div>
+        <div class="set-row"><div class="lab">Titles &amp; big kanji<span>見出し</span></div>${grid("dfont", DFONT_GROUPS, dId, "漢字", 700)}</div>
+        <div class="set-row"><div class="lab">Text<span>本文</span></div>${grid("font", TFONT_GROUPS, tId, "日本語<i>Aa</i>", 400)}</div>
+        <div class="set-row"><div class="lab">English letters<span>英字</span></div>
+          <div class="seg" data-set="uifont">${UIFONTS.map(([k, n]) => `<button data-v="${k}" aria-pressed="${k === ui}">${n}</button>`).join("")}</div></div>
         <div class="set-row"><div class="lab">Furigana<span>ふりがな</span></div>
           <div class="seg" data-set="furi"><button data-v="on" aria-pressed="${furi}">Show</button><button data-v="off" aria-pressed="${!furi}">Hide (tap to peek)</button></div></div>
       </div>`);
@@ -1532,7 +1594,9 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
       const k = g.dataset.set, v = b.dataset.v;
       if (k === "furi"){ furi = v === "on"; store.set("furi", furi); applyFuri(); }
       else { store.set("set:" + k, v); applySettings(); }
-      g.querySelectorAll("[data-v]").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+      if (k === "title"){ const T = appTitle(); $("pvTitle").textContent = T[1]; $("pvSub").textContent = T[2]; }
+      // a font group is split over several grids: clear them all
+      box.querySelectorAll(`[data-set="${k}"] [data-v]`).forEach(x => x.setAttribute("aria-pressed", String(x === b)));
     };
   }
   function renderHome(){
@@ -1667,6 +1731,7 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
     await loadAudio(id);
     return L;
   }
+  applySettings();
   (async () => {
     try{
       try{
