@@ -267,10 +267,20 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
 .gline{font-family:var(--jp);font-size:17px;line-height:1.9}
 .gsec p{line-height:2.1}
 .gsec p ruby{line-height:1}
-.gform{display:flex;flex-direction:column;gap:4px;margin:0;padding:0;list-style:none}
-.gform li{font-family:var(--jp);font-size:16.5px;line-height:2.1;padding-left:16px;position:relative}
-.gform li ruby{line-height:1}
-.gform li::before{content:"";position:absolute;left:3px;top:1.05em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.gform{display:grid;grid-template-columns:max-content 1fr;column-gap:12px;margin:2px 0 0;padding:0;list-style:none}
+.gform li{display:contents}
+.gform .fl,.gform .fb{padding:10px 0;border-top:1px solid var(--rule)}
+.gform li:first-child .fl,.gform li:first-child .fb{border-top:0;padding-top:2px}
+.gform .fl{align-self:start}
+.gform .fl span{display:inline-block;font-family:var(--jp);font-size:13px;font-weight:700;line-height:1.2;padding:5px 9px;border-radius:999px;background:var(--soft);color:var(--ink);white-space:nowrap}
+.gform .fl ruby rt{font-size:8px}
+.gform .fb{min-width:0}
+.gform li.nolab .fb{grid-column:1 / -1}
+.gform .fr{font-family:var(--jp);font-size:18px;font-weight:700;line-height:1.7}
+.gform .fx{display:flex;flex-direction:column;gap:0;margin-top:-4px}
+.gform .fx div{font-family:var(--jp);font-size:15px;line-height:1.9;color:var(--muted)}
+.gform ruby{line-height:1}
+.gform .ar{color:var(--accent);font-weight:700;margin:0 .3em}
 
 /* avatars */
 img.ava{object-fit:cover;padding:0;background:var(--soft)}
@@ -847,10 +857,24 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
     const line = lineOf(L, (G.src || [])[0]) || (G.examples || [])[0] || {};
     return {kind:"grammar", pattern:G.pattern, meaning:G.meaning, form:G.form || "", level:G.level || "", sent:line.jp || "", sentEn:line.en || "", lesson:L.id};
   };
-  // "う-verbs: … · る-verbs: … · する → させる" reads better one rule per line
+  // Each rule of grammar.form ("う-verbs: -a + れる (頼む → 頼まれる, 怒る → 怒られる)") becomes a row:
+  // a label chip (what you start from), the rule in bold, and its examples underneath, one per line.
+  const arrows = h => h.replace(/\s*(→|⇒|->)\s*/g, '<span class="ar">→</span>');
+  const formRule = part => {
+    let rest = part.trim(), ex = [], lab = "";
+    const m = rest.match(/^(.*?)\s*[（(]([^()（）]*)[)）]\s*$/);
+    if (m && m[1]){ rest = m[1].trim(); ex = m[2].split(/\s*[,，、]\s*/).filter(Boolean); }
+    const c = rest.match(/^([^:：{}]{1,24}|(?:[^:：]*?\{[^}]*\}[^:：]*?)):\s*(.+)$/);
+    if (c){ lab = c[1].trim(); rest = c[2].trim(); }
+    else {
+      const a = rest.split(/\s*(?:→|⇒|->)\s*/);
+      if (a.length === 2 && plain(a[0]).length <= 8){ lab = a[0]; rest = a[1]; }
+    }
+    return `<li class="${lab ? "" : "nolab"}">${lab ? `<div class="fl"><span>${ruby(lab)}</span></div>` : ""}<div class="fb"><div class="fr">${arrows(ruby(rest))}</div>${ex.length ? `<div class="fx">${ex.map(e => `<div>${arrows(ruby(e))}</div>`).join("")}</div>` : ""}</div></li>`;
+  };
   const formList = form => {
     const parts = String(form || "").split(/\s+[·・;；]\s+|\n/).map(s => s.trim()).filter(Boolean);
-    return parts.length > 1 ? `<ul class="gform">${parts.map(p => `<li>${ruby(p)}</li>`).join("")}</ul>` : `<div class="gline">${ruby(form)}</div>`;
+    return parts.length ? `<ul class="gform">${parts.map(formRule).join("")}</ul>` : "";
   };
   function renderGrammar(L){
     const G = L.grammar, inLesson = (G.src || []).map(r => lineOf(L, r)).filter(Boolean);

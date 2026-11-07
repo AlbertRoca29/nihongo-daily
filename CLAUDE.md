@@ -105,7 +105,7 @@ When status allows: `"category": "review"`, a new scene with the cast that reuse
 
 `grammar`: `{id, pattern, level, meaning, form, explanation, src, examples, quiz}`
 - `id`, `pattern`, `level`, `meaning`: from `curriculum/grammar.json` (the `pattern` may get furigana markup).
-- `form`: how to build it, e.g. `{動詞|どうし}た{形|けい} + ばかり`, with a mini example. When there are several rules (by verb group, by word type), separate them with ` · ` (space, middle dot, space): the app shows each rule on its own line.
+- `form`: how to build it, one rule per case, rules separated by ` · ` (space, middle dot, space). Write each rule as `label: rule (example, example)`: the app shows the label as a chip, the rule in bold and each example on its own line under it. E.g. `う-verbs: -a + れる ({頼|たの}む → {頼|たの}まれる, {怒|おこ}る → {怒|おこ}られる) · る-verbs: + られる ({見|み}る → {見|み}られる) · する → される · {来|く}る → {来|こ}られる`. Short labels (`う-verbs`, `い-adj`, `noun`, `{動詞|どうし}ない{形|けい}`); an irregular can be just `する → される` (shown as chip + result). With a single rule the label can go: `{動詞|どうし}た{形|けい} + ばかり ({食|た}べたばかり)`. Examples are short forms, 1–3 per rule, no full sentences (those go in `examples`).
 - `explanation`: 2–3 plain English sentences: when people use it, the nuance, the classic mistake, how it differs from the similar point learners confuse it with.
 - `src`: the lines of today's lesson that use it (`["d2", "p1"]`), at least one.
 - `examples`: 1–3 extra `{jp, en}` sentences in other situations, so the pattern isn't tied to one scene.
