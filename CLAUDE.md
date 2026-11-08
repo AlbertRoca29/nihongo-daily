@@ -138,9 +138,10 @@ Each: `{kanji, track, on, kun, meaning, words, decoys}`
 ## Audio (voices)
 
 A GitHub automation reads every line with Google voices after each push (`scripts/tts.py`, casting in `voices.json`). Don't run it yourself; just give it what it needs:
-- Cast members, `You` and `text`-format parts get their voice automatically.
+- Cast members, `You` and `text`-format parts get their voice automatically. A `text` written by a character (Sōta's school essay, Yuki's blog post, a note from Hana) is read in their voice: add `"reader": "<cast id>"` to the lesson (or `"reader": "Keiko"` for a side character in `others`). Without it, the narrator reads it.
 - Any other speaker (a guest, `Staff`, a shopkeeper) needs a gender: `"voice": "f"` or `"m"` on the guest object, or on each of their lines. Without it they get the narrator's voice.
 - A side character who will come back (like Keiko) gets a fixed voice: add them to `others` in `voices.json` with a voice from the `pool` (remove it from the pool).
+- An entry in `voices.json` is either a plain voice name (Chirp 3 HD) or a directed voice `{"voice", "model", "prompt"}`, where `prompt` describes the person (age, mood, accent). Don't change the casting unless the user asks.
 - Names of people and places are read from their furigana automatically. If a line has another word the engine might misread (a rare reading, 今日 meaning こんにち), add `"tts"` to that line: the whole line as it should be read, with that word in kana.
 
 ## Furigana markup

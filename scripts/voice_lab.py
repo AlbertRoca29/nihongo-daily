@@ -298,10 +298,13 @@ def main():
 
 def write_page(results):
     e = html.escape
-    secs = []
+    secs, waiting = [], 0
     for cid, r in results.items():
         rows = []
         for c in r["cands"]:
+            if not any(c["clips"]):
+                waiting += 1
+                continue
             if c["engine"] == "chirp" and c.get("now"):
                 what, kind = f"{c['voice']}", "now · Chirp 3 HD (no direction)"
             elif c["engine"] == "chirp":
@@ -331,6 +334,8 @@ def write_page(results):
                     f'<details><summary>Direction given to Gemini</summary><p>{e(r["prompt"])}</p></details>'
                     f'{"".join(rows)}</section>')
     nav = " · ".join(f'<a href="#{cid}">{e(r["label"].split(" · ")[0])}</a>' for cid, r in results.items())
+    wait = (f'<p class=err>{waiting} directed Gemini voices are not shown yet: the Google project needs the '
+            'Agent Platform (Vertex AI) API enabled. They appear here after the next run.</p>') if waiting else ""
     page = f"""<!doctype html><html lang=ja><head><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <title>Voice lab</title><style>
@@ -352,7 +357,7 @@ footer{{color:var(--mut);font-size:12px;margin:30px 0}}
 the app uses now. “Directed” voices were given a description of the character (age, mood, accent) to act from.
 Pick your favourite per character and send the tags (e.g. <b>sota-C, hana-B</b>). Gemini voices act a little differently
 each time, so the same pick can sound slightly different line to line.</p>
-<nav>{nav}</nav>{"".join(secs)}
+{wait}<nav>{nav}</nav>{"".join(secs)}
 <footer>VOICEVOX voices: VOICEVOX:白上虎太郎, VOICEVOX:ちび式じい, VOICEVOX:春日部つむぎ.</footer></body></html>"""
     with open(f"{OUT}/index.html", "w", encoding="utf-8") as fh:
         fh.write(page)
