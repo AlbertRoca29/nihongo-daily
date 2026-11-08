@@ -1,0 +1,127 @@
+[
+ {
+  "keyword": "少年",
+  "total": 0,
+  "keys": [
+   "total",
+   "aivm_models"
+  ],
+  "names": []
+ },
+ {
+  "keyword": "男の子",
+  "total": 0,
+  "keys": [
+   "total",
+   "aivm_models"
+  ],
+  "names": []
+ },
+ {
+  "keyword": "子供",
+  "total": 0,
+  "keys": [
+   "total",
+   "aivm_models"
+  ],
+  "names": []
+ },
+ {
+  "keyword": "ショタ",
+  "total": 0,
+  "keys": [
+   "total",
+   "aivm_models"
+  ],
+  "names": []
+ },
+ {
+  "keyword": "おばあちゃん",
+  "total": 0,
+  "keys": [
+   "total",
+   "aivm_models"
+  ],
+  "names": []
+ },
+ {
+  "keyword": "おばあさん",
+  "total": 0,
+  "keys": [
+   "total",
+   "aivm_models"
+  ],
+  "names": []
+ },
+ {
+  "keyword": "老婆",
+  "total": 0,
+  "keys": [
+   "total",
+   "aivm_models"
+  ],
+  "names": []
+ },
+ {
+  "keyword": "老人",
+  "total": 1,
+  "keys": [
+   "total",
+   "aivm_models"
+  ],
+  "names": [
+   "ろてじん（長老ボイス）"
+  ]
+ },
+ {
+  "keyword": "おじいちゃん",
+  "total": 0,
+  "keys": [
+   "total",
+   "aivm_models"
+  ],
+  "names": []
+ },
+ {
+  "keyword": "おじいさん",
+  "total": 0,
+  "keys": [
+   "total",
+   "aivm_models"
+  ],
+  "names": []
+ },
+ {
+  "keyword": "高齢",
+  "total": 0,
+  "keys": [
+   "total",
+   "aivm_models"
+  ],
+  "names": []
+ },
+ {
+  "keyword": "シニア",
+  "total": 0,
+  "keys": [
+   "total",
+   "aivm_models"
+  ],
+  "names": []
+ },
+ {
+  "keyword": "老年",
+  "total": 0,
+  "keys": [
+   "total",
+   "aivm_models"
+  ],
+  "names": []
+ },
+ {
+  "model": "ろてじん（長老ボイス）",
+  "uuid": "696c98a2-c0b7-4fe7-8cf2-c7e9b8a9bd82",
+  "keyword": "老人",
+  "installed": true
+ }
+]
