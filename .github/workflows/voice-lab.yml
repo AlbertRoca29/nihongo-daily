@@ -22,7 +22,7 @@ concurrency:
 jobs:
   lab:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - name: Start VOICEVOX engine
@@ -32,11 +32,15 @@ jobs:
           pip install --quiet librosa
           for i in $(seq 1 60); do curl -sf http://127.0.0.1:50021/version && break; sleep 5; done || true
       - name: Make samples
+        timeout-minutes: 50
+        continue-on-error: true
         env:
           GOOGLE_TTS_KEY: ${{ secrets.GOOGLE_TTS_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python3 scripts/voice_lab.py ${{ github.event.inputs.chars || 'yuki kenta ren sato hayato keiko you' }}
+          GEMINI_LEAN: "1"
+        run: python3 scripts/voice_lab.py ${{ github.event.inputs.chars || 'kenta yuki ren sato hayato keiko you' }}
       - name: Commit samples
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

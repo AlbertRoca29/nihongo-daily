@@ -13,7 +13,7 @@ Writes samples/lab/index.html (+ results.json with the measured pitch).
   python3 scripts/voice_lab.py sota hana  # just these characters
 Needs GOOGLE_TTS_KEY. VOICEVOX rows are skipped if no engine is running.
 """
-import base64, html, json, os, subprocess, sys, time, urllib.error, urllib.parse, urllib.request
+import base64, html, json, os, re, subprocess, sys, time, urllib.error, urllib.parse, urllib.request
 
 KEY = os.environ.get("GOOGLE_TTS_KEY", "").strip()
 API = "https://texttospeech.googleapis.com/v1/text:synthesize"
@@ -161,8 +161,9 @@ def google(text, voice, model=None, prompt=None, rate=1.0, shift=1.0, fx=""):
 
 GKEY = os.environ.get("GEMINI_API_KEY", "").strip() or KEY
 GAPI = "https://generativelanguage.googleapis.com/v1beta/models"
-GMODELS = {NEW: ["gemini-3.1-flash-tts-preview", "gemini-2.5-flash-preview-tts"],
-           PRO: ["gemini-2.5-pro-preview-tts", "gemini-2.5-flash-preview-tts"]}
+GMODELS = {NEW: ["gemini-2.5-flash-preview-tts"], PRO: ["gemini-2.5-pro-preview-tts"]}
+PACE = float(os.environ.get("GEMINI_PACE", "21"))  # seconds between requests (free tier is a few per minute)
+_last = [0.0]
 
 
 def gemini_api(text, voice, model, prompt):
@@ -174,18 +175,27 @@ def gemini_api(text, voice, model, prompt):
                                      "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}}}}
         req = urllib.request.Request(f"{GAPI}/{m}:generateContent?key={GKEY}", json.dumps(body).encode(),
                                      {"Content-Type": "application/json"})
-        for attempt in range(4):
+        for attempt in range(3):
+            wait = _last[0] + PACE - time.time()
+            if wait > 0:
+                time.sleep(wait)
+            _last[0] = time.time()
             try:
-                with urllib.request.urlopen(req, timeout=180) as r:
+                with urllib.request.urlopen(req, timeout=120) as r:
                     data = json.load(r)
                 pcm = base64.b64decode(data["candidates"][0]["content"]["parts"][0]["inlineData"]["data"])
                 p = subprocess.run(["ffmpeg", "-loglevel", "error", "-f", "s16le", "-ar", "24000", "-ac", "1",
                                     "-i", "-", "-f", "mp3", "-b:a", "64k", "-"], input=pcm, capture_output=True)
                 return p.stdout, None
             except urllib.error.HTTPError as e:
-                err = f"gemini-api {m} {e.code}: {e.read().decode()[:250]}"
-                if e.code in (429, 500, 503) and attempt < 3:
-                    time.sleep(2 ** attempt * 8)
+                txt = e.read().decode()
+                err = f"gemini-api {m} {e.code}: {txt[:400]}"
+                print(err[:300], flush=True)
+                if e.code == 429 and ("limit: 0" in txt or "PerDay" in txt):
+                    break  # no free quota for this model, or today's quota is used up
+                if e.code in (429, 500, 503) and attempt < 2:
+                    m2 = re.search(r'"retryDelay":\s*"(\d+)', txt)
+                    time.sleep(min(int(m2.group(1)) + 2 if m2 else 30, 70))
                     continue
                 break
             except Exception as e:
@@ -304,9 +314,10 @@ def main():
             cands.append(dict(engine="chirp", voice=cur, now=True))
         for v, rate, shift, *fx in c.get("chirp", []):
             cands.append(dict(engine="chirp", voice=v, rate=rate, shift=shift, fx=(fx[0] if fx else "")))
-        for i, v in enumerate(c["gemini"]):
+        lean = os.environ.get("GEMINI_LEAN") == "1"
+        for i, v in enumerate(c["gemini"][:2] if lean else c["gemini"]):
             cands.append(dict(engine="gemini", voice=v, model=NEW))
-            if i == 0:
+            if i == 0 and not lean:
                 cands.append(dict(engine="gemini", voice=v, model=PRO))
         for name, style in c["voicevox"]:
             if speakers:
@@ -337,13 +348,18 @@ def main():
             print(cid, cand["tag"], cand["engine"], cand["voice"], cand.get("model", ""),
                   "pitch", cand["pitch"], "ERR " + cand["errors"][0] if cand["errors"] else "")
         results[cid] = dict(label=c["label"], prompt=c["prompt"], lines=c["lines"], cands=cands)
+        save(results)
+    save(results)
+
+
+def save(results):
     old = {}
     if os.path.exists(f"{OUT}/results.json") and sys.argv[1:]:
         old = json.load(open(f"{OUT}/results.json", encoding="utf-8"))
     old.update(results)
-    results = {k: old[k] for k in CHARS if k in old}
-    json.dump(results, open(f"{OUT}/results.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    write_page(results)
+    merged = {k: old[k] for k in CHARS if k in old}
+    json.dump(merged, open(f"{OUT}/results.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    write_page(merged)
 
 
 def write_page(results):
@@ -366,7 +382,7 @@ def write_page(results):
                 what, kind = c["voice"], "Chirp 3 HD · " + (", ".join(tweaks) or "as is")
             elif c["engine"] == "gemini":
                 what = c["voice"]
-                kind = "Gemini 3.1 Flash TTS · directed" if c["model"] == NEW else "Gemini 2.5 Pro TTS · directed"
+                kind = "Gemini 2.5 Flash TTS · directed (free tier)" if c["model"] == NEW else "Gemini 2.5 Pro TTS · directed"
             else:
                 what, kind = c["voice"], "VOICEVOX"
             clips = "".join(
