@@ -1,0 +1,38 @@
+{
+  "hana": {
+    "voice": "voice_ki5kyf5hv87a",
+    "description": "A frail, warm 84-year-old Japanese grandmother from a rural mountain village in Nagano. Thin, soft, slightly husky and a little shaky old woman's voice, slow and gentle, with a smile in it. Native Japanese."
+  },
+  "tanaka": {
+    "voice": "voice_mnuekr0hqcp6",
+    "description": "A 67-year-old Japanese apple farmer from rural Nagano. Low, gravelly, weathered older man's voice, few words, gruff but kind, relaxed rural intonation. Native Japanese."
+  },
+  "keiko": {
+    "voice": "voice_nlyabte9tajq",
+    "description": "A cheerful Japanese farmer's wife in her early sixties. Warm, chatty, motherly mature woman's voice, brisk and a bit teasing. Native Japanese."
+  },
+  "yuki": {
+    "voice": "voice_6ixh68rfj5h4",
+    "description": "A 25-year-old Tokyo office worker and anime fan. Lively, bubbly young woman's voice, fast casual Tokyo speech, lots of energy. Native Japanese."
+  },
+  "kenta": {
+    "voice": "voice_fy8oio1yurjl",
+    "description": "A 24-year-old man from Osaka. Loud, friendly, funny young man's voice with a strong natural Osaka Kansai-ben accent and Kansai pitch accent, quick tempo. Native Japanese."
+  },
+  "ren": {
+    "voice": "voice_vptdjdqttl3i",
+    "description": "A 26-year-old Japanese graphic designer. Soft, calm, gentle young man's voice, slightly low and warm, a bit shy and quiet. Native Japanese."
+  },
+  "sato": {
+    "voice": "voice_q8ebkcksc90a",
+    "description": "A 41-year-old Japanese high-school teacher. Clear, composed, precise mature woman's voice, polite and formal, neat articulation. Native Japanese."
+  },
+  "hayato": {
+    "voice": "voice_y5oast0i9by4",
+    "description": "A samurai in his thirties from a classic Japanese period drama. Deep, strong, resonant, dignified male voice, theatrical and proud. Native Japanese."
+  },
+  "you": {
+    "voice": "voice_c4fcfvc38ess",
+    "description": "A friendly 23-year-old young man. Warm, open, cheerful voice, clear and natural, casual. Native Japanese."
+  }
+}

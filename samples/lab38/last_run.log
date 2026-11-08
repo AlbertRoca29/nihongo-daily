@@ -1,88 +1,25 @@
 sota 400: {
   "error": {
     "code": 400,
-    "message": "Unknown parameter 'voice.displayName'. Did you mean 'display_name'?",
+    "message": "Voice prompt was blocked by safety policies.",
     "status": "INVALID_ARGUMENT"
   }
 }
 
-hana 400: {
-  "error": {
-    "code": 400,
-    "message": "Unknown parameter 'voice.displayName'. Did you mean 'display_name'?",
-    "status": "INVALID_ARGUMENT"
-  }
-}
-
-tanaka 400: {
-  "error": {
-    "code": 400,
-    "message": "Unknown parameter 'voice.displayName'. Did you mean 'display_name'?",
-    "status": "INVALID_ARGUMENT"
-  }
-}
-
-keiko 400: {
-  "error": {
-    "code": 400,
-    "message": "Unknown parameter 'voice.displayName'. Did you mean 'display_name'?",
-    "status": "INVALID_ARGUMENT"
-  }
-}
-
+hana voice_ki5kyf5hv87a
+tanaka voice_mnuekr0hqcp6
+keiko voice_nlyabte9tajq
 mio 400: {
   "error": {
     "code": 400,
-    "message": "Unknown parameter 'voice.displayName'. Did you mean 'display_name'?",
+    "message": "Voice prompt was blocked by safety policies.",
     "status": "INVALID_ARGUMENT"
   }
 }
 
-yuki 400: {
-  "error": {
-    "code": 400,
-    "message": "Unknown parameter 'voice.displayName'. Did you mean 'display_name'?",
-    "status": "INVALID_ARGUMENT"
-  }
-}
-
-kenta 400: {
-  "error": {
-    "code": 400,
-    "message": "Unknown parameter 'voice.displayName'. Did you mean 'display_name'?",
-    "status": "INVALID_ARGUMENT"
-  }
-}
-
-ren 400: {
-  "error": {
-    "code": 400,
-    "message": "Unknown parameter 'voice.displayName'. Did you mean 'display_name'?",
-    "status": "INVALID_ARGUMENT"
-  }
-}
-
-sato 400: {
-  "error": {
-    "code": 400,
-    "message": "Unknown parameter 'voice.displayName'. Did you mean 'display_name'?",
-    "status": "INVALID_ARGUMENT"
-  }
-}
-
-hayato 400: {
-  "error": {
-    "code": 400,
-    "message": "Unknown parameter 'voice.displayName'. Did you mean 'display_name'?",
-    "status": "INVALID_ARGUMENT"
-  }
-}
-
-you 400: {
-  "error": {
-    "code": 400,
-    "message": "Unknown parameter 'voice.displayName'. Did you mean 'display_name'?",
-    "status": "INVALID_ARGUMENT"
-  }
-}
-
+yuki voice_6ixh68rfj5h4
+kenta voice_fy8oio1yurjl
+ren voice_vptdjdqttl3i
+sato voice_q8ebkcksc90a
+hayato voice_y5oast0i9by4
+you voice_c4fcfvc38ess
