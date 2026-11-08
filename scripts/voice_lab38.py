@@ -18,6 +18,8 @@ PACE = float(os.environ.get("GEMINI_PACE", "0"))
 sys.path.insert(0, "scripts")
 from voice_lab import CHARS  # same characters and lines as the first lab  # noqa: E402
 
+# Google refuses to design voices of minors, so Sōta (11) and Mio (16) stay on VOICEVOX.
+NO_DESIGN = {"sota", "mio"}
 # Permanent traits go in the designed voice; mood goes in the per-line style (Google's advice).
 DESIGN = {
     "sota": "A real 11-year-old Japanese boy from Nagano, before his voice has broken: high, light, bright and a "
@@ -103,6 +105,8 @@ def design():
     saved = json.load(open(path, encoding="utf-8")) if os.path.exists(path) else {}
     log = {}
     for cid, desc in DESIGN.items():
+        if cid in NO_DESIGN:
+            continue
         if cid in saved and saved[cid].get("description") == desc:
             continue
         d, err = call("voices", {"voice": {"type": "prompted", "model": FLASH, "display_name": f"nihongo-{cid}",
@@ -143,7 +147,7 @@ def samples(only):
     picks = json.load(open(f"{OUT}/library_picks.json", encoding="utf-8")) if os.path.exists(f"{OUT}/library_picks.json") else {}
     res_path = f"{OUT}/results.json"
     results = json.load(open(res_path, encoding="utf-8")) if os.path.exists(res_path) else {}
-    for cid in only or list(DESIGN):
+    for cid in only or [c for c in DESIGN if c != "sota"]:
         cands = []
         if cid in designed:
             cands += [("designed", designed[cid]["voice"], FLASH), ("designed", designed[cid]["voice"], LITE)]
