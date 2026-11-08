@@ -1,0 +1,764 @@
+[
+ {
+  "uuid": "a59cb814-0083-4369-8542-f51a29e72af7",
+  "name": "まお",
+  "description": "いたずらっ子な小悪魔ボイス。卯畑まお（©Oz Chat/Trippy）（CV: ねゆたろ / https://x.com/___neyu_zzz）\nクレジットして頂ける際は「AivisSpeech: まお」をご利用ください。",
+  "tags": [
+   "オズチャット"
+  ],
+  "speakers": "まお ",
+  "downloads": 74588,
+  "license": null
+ },
+ {
+  "uuid": "22e8ed77-94fe-4ef2-871f-a86f94e9a579",
+  "name": "コハク",
+  "description": "子猫のような甘い声。猫音コハク（©Oz Chat/Trippy）（CV: ねゆたろ / https://x.com/___neyu_zzz）\nクレジットして頂ける際は「AivisSpeech: コハク」をご利用ください。",
+  "tags": [
+   "オズチャット"
+  ],
+  "speakers": "コハク ",
+  "downloads": 61627,
+  "license": null
+ },
+ {
+  "uuid": "47e53151-a378-46f3-abee-ce13aa07feb1",
+  "name": "阿井田 茂",
+  "description": "阿井田 茂（あいだ しげる）　\nCV：古山キリヲ\n\n通称：モアイさん\nバリトンボイスの朗らかおじさん",
+  "tags": [
+   "文化系心臓部"
+  ],
+  "speakers": "阿井田 茂 ",
+  "downloads": 26236,
+  "license": null
+ },
+ {
+  "uuid": "6d11c6c2-f4a4-4435-887e-23dd60f8b8dd",
+  "name": "にせ",
+  "description": "研究開発用の試作音声合成モデル。自由に使用可",
+  "tags": [
+   "自分の将来に不安を抱えている感じ"
+  ],
+  "speakers": "にせ ",
+  "downloads": 22699,
+  "license": null
+ },
+ {
+  "uuid": "e9339137-2ae3-4d41-9394-fb757a7e61e6",
+  "name": "まい",
+  "description": "研究開発用の試作音声合成モデル。自由に使用可",
+  "tags": [
+   "妖艶な女性"
+  ],
+  "speakers": "まい ",
+  "downloads": 18494,
+  "license": null
+ },
+ {
+  "uuid": "71e72188-2726-4739-9aa9-39567396fb2a",
+  "name": "fumifumi",
+  "description": "落ち着いた青年をイメージして作成したボイスモデルです。\n\n制作 黒神(https://x.com/kokushing)\n声 サガワフミヤ(https://x.com/fumi_sagawa)",
+  "tags": [],
+  "speakers": "fumifumi ",
+  "downloads": 17861,
+  "license": null
+ },
+ {
+  "uuid": "baaae3c0-7b22-4605-8ba5-80c959b41a48",
+  "name": "morioki",
+  "description": "一般的な女性の声として使用できるボイスモデルです。\n\nボイス提供：もりおき (X：@morioki_5)\nモデル作成：yuki (X：@ai_shirohana)",
+  "tags": [
+   "「え？これ、ピアスじゃないの！？」",
+   "実は…樹脂ノンホールピアスなんです。"
+  ],
+  "speakers": "morioki ",
+  "downloads": 17780,
+  "license": null
+ },
+ {
+  "uuid": "a670e6b8-0852-45b2-8704-1bc9862f2fe6",
+  "name": "花音",
+  "description": "研究開発用の試作音声合成モデル。自由に使用可",
+  "tags": [
+   "Aivis",
+   "Cloud",
+   "API",
+   "は、高速かつ高品質な日本語音声合成をクラウドで利用できる音声合成",
+   "です。"
+  ],
+  "speakers": "花音 ",
+  "downloads": 14474,
+  "license": null
+ },
+ {
+  "uuid": "f5017410-fbb5-49e1-97cb-e785f42e15f5",
+  "name": "凛音エル",
+  "description": "電脳天使工業のAIキャラクター「凛音エル」のボイスモデルです。",
+  "tags": [
+   "1日目",
+   "6月12日",
+   "台湾到着",
+   "📍牛老大涮牛肉",
+   "台湾で人気の牛肉火鍋を堪能"
+  ],
+  "speakers": "凛音エル ",
+  "downloads": 13840,
+  "license": null
+ },
+ {
+  "uuid": "696c98a2-c0b7-4fe7-8cf2-c7e9b8a9bd82",
+  "name": "ろてじん（長老ボイス）",
+  "description": "老人の声を意識した演技でセリフ収録したボイスモデルです。",
+  "tags": [],
+  "speakers": "ろてじん（長老ボイス） ",
+  "downloads": 12114,
+  "license": null
+ },
+ {
+  "uuid": "4f281e78-eba6-495a-8e50-5c322d02b5b1",
+  "name": "るな",
+  "description": "研究開発用の試作音声合成モデル。自由に使用可",
+  "tags": [
+   "大好きだよ"
+  ],
+  "speakers": "るな ",
+  "downloads": 9073,
+  "license": null
+ },
+ {
+  "uuid": "1b2830f4-8cf1-4184-a0d9-3a1bace3a844",
+  "name": "みちのくあいり",
+  "description": "こずかた学園プロジェクト「みちのくあいり」の音声合成モデルです。\n落ち着きのあるかわいらしい女性ボイスです。\n\n声：上戸恵里（ https://x.com/agato_eri )",
+  "tags": [
+   "みちのくあいり"
+  ],
+  "speakers": "みちのくあいり ",
+  "downloads": 7168,
+  "license": null
+ },
+ {
+  "uuid": "59f96896-64d2-4378-830a-4d5feb3d81aa",
+  "name": "ほのか(~現実20代女子AIボイチェン~リアボVC公式モデル)",
+  "description": "🌸現実20代女子に声変わり無料最新AIボイチェンソフト「リアボVC」搭載モデルほのかです🌸\n入手→ poipoipoi.booth.pm\n[声は(x.com/dopoiro)のAI]等とクレジット表記お願いします\n声提供アルバイト一般女性から権利購入&マージ済み&顔画像はAI",
+  "tags": [],
+  "speakers": "ほのか(~現実20代女子AIボイチェン~リアボVC公式モデル) ",
+  "downloads": 6830,
+  "license": null
+ },
+ {
+  "uuid": "9107b8b6-1ed1-43f5-bebe-0de4df4d229d",
+  "name": "中2",
+  "description": "研究開発用の試作音声合成モデル。自由に使用可",
+  "tags": [],
+  "speakers": "中2 ",
+  "downloads": 6798,
+  "license": null
+ },
+ {
+  "uuid": "3328da9a-8124-4619-a853-f7fc2f37889f",
+  "name": "桜音",
+  "description": "研究開発用の試作音声合成モデル。自由に使用可",
+  "tags": [
+   "ウェクェq"
+  ],
+  "speakers": "桜音 ",
+  "downloads": 6638,
+  "license": null
+ },
+ {
+  "uuid": "9f36ec0d-8dac-42dc-aff4-149c5f99faad",
+  "name": "らせつん",
+  "description": "こずかた学園プロジェクト「らせつん」の音声合成モデルです。\n親しみやすさのある中性ボイスです。\n\n声：上戸恵里（ https://x.com/agato_eri )",
+  "tags": [
+   "はじめまして"
+  ],
+  "speakers": "らせつん ",
+  "downloads": 6352,
+  "license": null
+ },
+ {
+  "uuid": "70a875a9-feae-41e6-a586-8cf9e47c6c0b",
+  "name": "猩々博士 (雑談ボイス)",
+  "description": "Vtuber 猩々博士の配信音声から作成したボイスモデルです",
+  "tags": [
+   "test"
+  ],
+  "speakers": "猩々博士 (雑談ボイス) ",
+  "downloads": 5240,
+  "license": null
+ },
+ {
+  "uuid": "2e1fdde8-d089-42d7-b64f-cf89952b1bdc",
+  "name": "澤原 玄二郎",
+  "description": "澤原 玄二郎（さわばる げんじろう）\nCV：古山キリヲ\n\nせっかちでヤンチャな猫ヤロー\n好物はピッツァ\nノイズ強めなのは仕様です　\nちゃんと出力後にノイズ除去かけてあげてね",
+  "tags": [
+   "けものフレンズアブリッジ"
+  ],
+  "speakers": "澤原 玄二郎 ",
+  "downloads": 5015,
+  "license": null
+ },
+ {
+  "uuid": "ed47c952-c253-405e-adba-1172399816a1",
+  "name": "観測症",
+  "description": "滑舌がそんなに良くないので、頑張って出した声です。\n頑張った結果、少しマイクが近かったかもしれません。",
+  "tags": [],
+  "speakers": "観測症 ",
+  "downloads": 4923,
+  "license": null
+ },
+ {
+  "uuid": "470a41e2-863f-4bf2-8a20-bf7cde0d8f7b",
+  "name": "TANAKA",
+  "description": "YouTubeの自動字幕読上げナレーション用に自作してみました。\nまだ未完成なところは、少しずつ改善していきたいと思います。",
+  "tags": [
+   "はい、どーもー。おとんです"
+  ],
+  "speakers": "TANAKA ",
+  "downloads": 4101,
+  "license": null
+ },
+ {
+  "uuid": "098d4e66-2faf-4a00-889c-a1d2f05bde78",
+  "name": "Shinjou Tomoharu",
+  "description": "落ち着いた中年男性のモデルです。",
+  "tags": [
+   "あああああ"
+  ],
+  "speakers": "Shinjou Tomoharu ",
+  "downloads": 4058,
+  "license": null
+ },
+ {
+  "uuid": "d1a7446f-230d-4077-afdf-923eddabe53c",
+  "name": "M2",
+  "description": "Style-Bert-VITS2に付属のデフォルト男性２モデル\nボイスサンプル：スタイルの強さ2.0\n\nCC BY-SA 4.0のため再配布",
+  "tags": [
+   "あなたの",
+   "血をください"
+  ],
+  "speakers": "M2 ",
+  "downloads": 3885,
+  "license": null
+ },
+ {
+  "uuid": "18972473-ca36-4e06-a33a-5cc14adba0c4",
+  "name": "かりん(現実20代女子AIボイチェン@リアボVC公式モデル)",
+  "description": "🌸現実20代女子に声変わり無料最新AIボイチェンソフト「リアボVC」搭載モデルかりんです🌸\n入手→ poipoipoi.booth.pm\n[声は(x.com/dopoiro)のAI]等とクレジット表記お願いします\n声提供アルバイト一般女性から権利購入&マージ済み&顔画像はAI",
+  "tags": [],
+  "speakers": "かりん(現実20代女子AIボイチェン@リアボVC公式モデル) ",
+  "downloads": 3803,
+  "license": null
+ },
+ {
+  "uuid": "0f6821f4-9f86-4da1-a41a-fbe6fff9ca88",
+  "name": "天深シノ",
+  "description": "人の世界で生活をするために人の格好をしている天使。\n優しい声で話します。",
+  "tags": [],
+  "speakers": "天深シノ ",
+  "downloads": 3696,
+  "license": null
+ },
+ {
+  "uuid": "7fc08a41-b64d-456d-8b22-8e1284674775",
+  "name": "zonoko",
+  "description": "OpenGameArtのCC0英語ボイスから音声クローンツールZonosを使用して生成した日本語ボイスを学習させたものです。\n元ボイスのライセンスを継承してcc0とします\n",
+  "tags": [],
+  "speakers": "zonoko ",
+  "downloads": 3626,
+  "license": null
+ },
+ {
+  "uuid": "3dabea2b-cc10-41da-955b-4618ce84e716",
+  "name": "Lux",
+  "description": "Lux（ルクス）はStyle-Bert-VITS2 JP-Extra対応TTSモデル。96kHz/16bit録音のプロ音声（ノイズ・反響除去済）とITAコーパス424文で学習済み。",
+  "tags": [],
+  "speakers": "Lux ",
+  "downloads": 3591,
+  "license": null
+ },
+ {
+  "uuid": "f83c385c-829b-40c4-8c11-639027e61636",
+  "name": "わかな(現実20代女子AIボイチェン@リアボVC公式モデル)",
+  "description": "🌸現実20代女子に声変わり無料最新AIボイチェンソフト「リアボVC」搭載モデルわかなです🌸\n入手→ poipoipoi.booth.pm\n[声は(x.com/dopoiro)のAI]等とクレジット表記お願いします\n声提供アルバイト一般女性から権利購入&マージ済み&顔画像はAI",
+  "tags": [
+   "来月の食堂、お菓子を焼いて持っていこうかな"
+  ],
+  "speakers": "わかな(現実20代女子AIボイチェン@リアボVC公式モデル) ",
+  "downloads": 3320,
+  "license": null
+ },
+ {
+  "uuid": "1f04a608-916c-4d9e-bf6e-b9da5c176f85",
+  "name": "yukyu",
+  "description": "男声の音声モデルです\n\n作成者 : yukyu \n連絡先\nx: @yukyu30",
+  "tags": [],
+  "speakers": "yukyu ",
+  "downloads": 3038,
+  "license": null
+ },
+ {
+  "uuid": "55696911-05cb-4cd2-bdb9-dbc8bfe6e5c7",
+  "name": "水巻咲_T2モデル",
+  "description": "水巻咲　みずまきさき　Mizumaki Saki　(CodeName:MIZUMAKI_SAKI)",
+  "tags": [
+   "朝の電車で、",
+   "ため息を飲み込んでいるお前,,,,オウは",
+   "よく知っている。"
+  ],
+  "speakers": "水巻咲_T2モデル ",
+  "downloads": 2927,
+  "license": null
+ },
+ {
+  "uuid": "b1b8072f-809f-4c6d-9ba1-2ca94d9c3663",
+  "name": "れな(現実20代女子AIボイチェン@リアボVC公式モデル)",
+  "description": "🌸現実20代女子に声変わり無料最新AIボイチェンソフト「リアボVC」搭載モデルれなです🌸\n入手→ poipoipoi.booth.pm\n[声は(x.com/dopoiro)のAI]等とクレジット表記お願いします\n声提供アルバイト一般女性から権利購入&マージ済み&顔画像はAI",
+  "tags": [],
+  "speakers": "れな(現実20代女子AIボイチェン@リアボVC公式モデル) ",
+  "downloads": 2801,
+  "license": null
+ },
+ {
+  "uuid": "21d8d535-f206-462d-a3bb-05f8252dede7",
+  "name": "さつき(現実20代女子AIボイチェン@リアボVC公式モデル)",
+  "description": "🌸現実20代女子に声変わり無料最新AIボイチェンソフト「リアボVC」搭載モデルさつきです🌸\n入手→ poipoipoi.booth.pm\n[声は(x.com/dopoiro)のAI]等とクレジット表記お願いします\n声提供アルバイト一般女性から権利購入&マージ済み&顔画像はAI",
+  "tags": [],
+  "speakers": "さつき(現実20代女子AIボイチェン@リアボVC公式モデル) ",
+  "downloads": 2593,
+  "license": null
+ },
+ {
+  "uuid": "9a7feb22-b6f3-4f79-92d9-26849e063fa1",
+  "name": "もえ(現実20代女子AIボイチェン@リアボVC公式モデル)",
+  "description": "🌸現実20代女子に声変わり無料最新AIボイチェンソフト「リアボVC」搭載モデルもえです🌸\n入手→ poipoipoi.booth.pm\n[声は(x.com/dopoiro)のAI]等とクレジット表記お願いします\n声提供アルバイト一般女性から権利購入&マージ済み&顔画像はAI",
+  "tags": [],
+  "speakers": "もえ(現実20代女子AIボイチェン@リアボVC公式モデル) ",
+  "downloads": 2485,
+  "license": null
+ },
+ {
+  "uuid": "baa6d55a-d751-49b8-bafb-b3a6555a100c",
+  "name": "七日週_T2モデル",
+  "description": "七日週　なのかめぐる　Nanoka Meguru　(CodeName:NANOKA_MEGURU)",
+  "tags": [],
+  "speakers": "七日週_T2モデル ",
+  "downloads": 2349,
+  "license": null
+ },
+ {
+  "uuid": "d6bfe943-6903-491f-8d01-454ad8f88c14",
+  "name": "様子ヶ丘シイナ",
+  "description": "およそ水素の声から生まれた合成音声です。\nちょっと低めで鼻声気味な一般女性声でしゃべるよ\n\n各種連絡先:\nメール:umiduki.nike@gmail.com\nX(Twitter):@umiduki_nike",
+  "tags": [],
+  "speakers": "様子ヶ丘シイナ ",
+  "downloads": 2124,
+  "license": null
+ },
+ {
+  "uuid": "d7255c2c-ddd0-425a-808c-662cd94c7f41",
+  "name": "M1",
+  "description": "Style-Bert-VITS2に付属のデフォルト男性１モデル\nボイスサンプル：スタイルの強さ2.0\n\nCC BY-SA 4.0のため再配布",
+  "tags": [],
+  "speakers": "M1 ",
+  "downloads": 2115,
+  "license": null
+ },
+ {
+  "uuid": "fb04b883-13cb-40ef-b0ea-fad060a408e8",
+  "name": "大日椛_T2モデル",
+  "description": "大日椛　だいにちもみじ　Dainichi Momiji　(CodeName:DAINIC^I_MOMIZ^I)",
+  "tags": [],
+  "speakers": "大日椛_T2モデル ",
+  "downloads": 2041,
+  "license": null
+ },
+ {
+  "uuid": "80fe2db4-5891-4550-a3f3-dff9a91c0946",
+  "name": "ろてじん（匿名インタビュー風）",
+  "description": "匿名インタビュー風の演技でセリフ収録したボイスモデルです。\nピッチシフターで声を加工しています。",
+  "tags": [],
+  "speakers": "ろてじん（匿名インタビュー風） ",
+  "downloads": 1935,
+  "license": null
+ },
+ {
+  "uuid": "d0471c7d-3adc-4c99-b7b7-0e91c4d9d96f",
+  "name": "木角空_T2モデル",
+  "description": "木角空　きずみそら　Kizumi Sora　(CodeName:KIZUMI_SORA)",
+  "tags": [],
+  "speakers": "木角空_T2モデル ",
+  "downloads": 1919,
+  "license": null
+ },
+ {
+  "uuid": "b2bee8fc-3f65-4c99-9607-a1075a10066b",
+  "name": "立神ケイ",
+  "description": "中の人が頑張って出した低い声から生まれました、ちょっとボソついた声で喋ります\nスタイル追加予定(へにょへにょスタイル)\n\n各種連絡先:\nメール:umiduki.nike@gmail.com\nX(Twitter):@umiduki_nike",
+  "tags": [
+   "ぼくは・丈ちゃん、です"
+  ],
+  "speakers": "立神ケイ ",
+  "downloads": 1881,
+  "license": null
+ },
+ {
+  "uuid": "25b39db7-5757-47ef-9fe4-2b7aff328a18",
+  "name": "F2",
+  "description": "Style-Bert-VITS2に付属のデフォルト女性２モデル\nボイスサンプル：スタイルの強さ1.3\n\nCC BY-SA 4.0のため再配布",
+  "tags": [],
+  "speakers": "F2 ",
+  "downloads": 1810,
+  "license": null
+ },
+ {
+  "uuid": "e40d5b99-8cde-4442-a45b-0ebec9167506",
+  "name": "kokuren_voice",
+  "description": "kokuren(@wangoroge333)のボイスモデルです。",
+  "tags": [
+   "サンプル"
+  ],
+  "speakers": "kokuren_voice ",
+  "downloads": 1715,
+  "license": null
+ },
+ {
+  "uuid": "2ff1c526-27d4-4eeb-b069-4207ae5fe259",
+  "name": "すみれ(現実20代女子AIボイチェン@リアボVC公式モデル)",
+  "description": "🌸現実20代女子に声変わり無料最新AIボイチェンソフト「リアボVC」搭載モデルすみれです🌸\n入手→ poipoipoi.booth.pm\n[声は(x.com/dopoiro)のAI]等とクレジット表記お願いします\n声提供アルバイト一般女性から権利購入&マージ済み&顔画像はAI",
+  "tags": [],
+  "speakers": "すみれ(現実20代女子AIボイチェン@リアボVC公式モデル) ",
+  "downloads": 1711,
+  "license": null
+ },
+ {
+  "uuid": "6acf95e8-11a9-414e-aa9c-6dbebf9113ca",
+  "name": "F1",
+  "description": "Style-Bert-VITS2に付属のデフォルト女性１モデル\nボイスサンプル：スタイルの強さ2.0\n\nCC BY-SA 4.0のため再配布",
+  "tags": [],
+  "speakers": "F1 ",
+  "downloads": 1698,
+  "license": null
+ },
+ {
+  "uuid": "00f29eb2-e12b-4f64-a5e8-4188be62de33",
+  "name": "宗周定昌",
+  "description": "なんとなくアニメのだれかっぽい声",
+  "tags": [
+   "だる気",
+   "やる気のない"
+  ],
+  "speakers": "宗周定昌 ",
+  "downloads": 1566,
+  "license": null
+ },
+ {
+  "uuid": "9e9f84bd-05cd-4476-b47e-ad34264b2a03",
+  "name": "亜空マオ",
+  "description": "人の世界で生活をするために人の格好をしている堕天使。\n優しい声で話します。",
+  "tags": [
+   "お疲れ様です"
+  ],
+  "speakers": "亜空マオ ",
+  "downloads": 1520,
+  "license": null
+ },
+ {
+  "uuid": "446d2053-14ca-4b68-897c-380faf555b59",
+  "name": "リダ / Lida（感情表現モデル）",
+  "description": "※このモデルはカスタムライセンスが適応されます。必ずご確認下さい。\nVTuberリダの公式音声合成モデルです。\n\n利用の際は「リダ」と以下のURLを明記して下さい。\nhttps://youtube.com/channel/UC2tX473Zo09ZCnhAUNdAvjA/join",
+  "tags": [],
+  "speakers": "リダ / Lida（感情表現モデル） ",
+  "downloads": 1374,
+  "license": null
+ },
+ {
+  "uuid": "734c12b6-eaf2-4dbd-8596-8663c72d2afa",
+  "name": "黄金笑_T2モデル",
+  "description": "黄金笑　こがねえみ　Kogane Emi　(CodeName:KOGANE_EMI)",
+  "tags": [],
+  "speakers": "黄金笑_T2モデル ",
+  "downloads": 1267,
+  "license": null
+ },
+ {
+  "uuid": "1a322ad9-6b7e-4a6d-8d0b-c4cd264538dc",
+  "name": "金苗(かなえ)",
+  "description": "https://aoto002.booth.pm/items/4373936\nこちらで配布されているITAコーパス音声を元に\n作られたモデルです。スタイル分けされています。\n「AI声優-金苗ITAコーパス」\n音声提供　琴香　@kotoka_11_28",
+  "tags": [
+   "鹿児島の旅行割、終わったと思ったら…次の旅行割がある？"
+  ],
+  "speakers": "金苗(かなえ) ",
+  "downloads": 1234,
+  "license": null
+ },
+ {
+  "uuid": "052bb693-112b-45be-b498-8e05aa9d6e5e",
+  "name": "銀芽(ぎんが)",
+  "description": "https://aoto002.booth.pm/items/4373936\nこちらで配布されているITAコーパス音声を元に\n作られたモデルです。スタイル分けされています。\n「AI声優-銀芽ITAコーパス」\n音声提供　バッハ a.k.a Mao　@bach_Channel　",
+  "tags": [],
+  "speakers": "銀芽(ぎんが) ",
+  "downloads": 1218,
+  "license": null
+ },
+ {
+  "uuid": "eefe1fbd-d15a-49ae-bc83-fc4aaad680e1",
+  "name": "蒼月ハヤテ",
+  "description": "キャラクター「蒼月ハヤテ」のボイスモデルです。\n",
+  "tags": [],
+  "speakers": "蒼月ハヤテ ",
+  "downloads": 1174,
+  "license": null
+ },
+ {
+  "uuid": "f13c2ec8-1069-403f-a23e-503b3a270c57",
+  "name": "矢月舞_T2モデル",
+  "description": "矢月舞　やつきまい　Yatsuki Mai　(CodeName:YACUKI_MAI)",
+  "tags": [],
+  "speakers": "矢月舞_T2モデル ",
+  "downloads": 1109,
+  "license": null
+ },
+ {
+  "uuid": "70ad7e84-6a10-48d6-8f9a-8dac4bba3c0b",
+  "name": "はきみて れく(瞭魅推 れく)",
+  "description": "技術属性モンスター(偽)VTuberの\nはきみて れく(瞭魅推 れく)です\n\n公序良俗に反しなければ、ライセンス通り自由に使っていいよ",
+  "tags": [
+   "VTuber",
+   "技術属性",
+   "モンスター"
+  ],
+  "speakers": "はきみて れく(瞭魅推 れく) ",
+  "downloads": 938,
+  "license": null
+ },
+ {
+  "uuid": "d200a39c-7c0f-4e03-a947-b3f0cb8d3d6b",
+  "name": "葉土此_T2モデル",
+  "description": "葉土此　はつちこの　Hatsuchi Kono　(CodeName:HACUC^I_KONO)",
+  "tags": [],
+  "speakers": "葉土此_T2モデル ",
+  "downloads": 903,
+  "license": null
+ },
+ {
+  "uuid": "e4ee047d-3af4-4936-90eb-29a3c9104709",
+  "name": "火山夢_T2モデル",
+  "description": "火山夢　ひやまゆめ　Hiyama Yume　(CodeName:F^IYAMA_YUME)",
+  "tags": [],
+  "speakers": "火山夢_T2モデル ",
+  "downloads": 877,
+  "license": null
+ },
+ {
+  "uuid": "6e60c40a-6d0f-4d86-9d97-61c11402058a",
+  "name": "オレンジ",
+  "description": "ResoniteやVRChatで活動しているクリエイター「オレンジ」のボイスモデルです。",
+  "tags": [],
+  "speakers": "オレンジ ",
+  "downloads": 754,
+  "license": null
+ },
+ {
+  "uuid": "76a774e4-cc4d-4d8c-879e-8d2be3d30dad",
+  "name": "Flow",
+  "description": "フロウの声をStyle-Bert-VITS2(JP-Extra)によって学習させた音声合成モデルです。\n\nスタイルの強さ: 0.95~1.30がおすすめ。ささやき・気だるげは滑舌が悪くなりやすい。\nテンポの緩急: 0.90~1.60がおすすめ。好みによると思う。",
+  "tags": [],
+  "speakers": "Flow ",
+  "downloads": 733,
+  "license": null
+ },
+ {
+  "uuid": "0e8ea44c-d904-467d-a0e6-81d52b1db098",
+  "name": "楽町音穏_T3モデル",
+  "description": "楽町音穏　らくまちねおん　Rakumachi Neon　(CodeName:RAKUMAC^I_NEON)",
+  "tags": [],
+  "speakers": "楽町音穏_T3モデル ",
+  "downloads": 641,
+  "license": null
+ },
+ {
+  "uuid": "b79c40e4-8a5e-4f20-802c-2c0eba2f0983",
+  "name": "結亜ナル",
+  "description": "オナラとケツを叩く音から産まれた合成音声です。\nWTFPLライセンス、及びにそれに類するパブリックドメインの下に配布されております。\n同ライセンスの下、著作権放棄された立ち絵も配布中です。\n興味がございましたら検索して頂ければ幸いです。",
+  "tags": [],
+  "speakers": "結亜ナル ",
+  "downloads": 537,
+  "license": null
+ },
+ {
+  "uuid": "83f2930e-4697-4265-822c-04d7337b3047",
+  "name": "G59",
+  "description": "VRの住人「G59」のボイスモデルです。",
+  "tags": [],
+  "speakers": "G59 ",
+  "downloads": 511,
+  "license": null
+ },
+ {
+  "uuid": "f493ab6c-1ffa-4534-9bbd-2ba398f17cd5",
+  "name": "すきやき馬太郎",
+  "description": "すきやき馬太郎は、落ち着いた話し方が特徴のAI音声合成モデルです。学習量が少ないため、発音にはところどころ粗さがありますが、陰キャ風の少しぼそぼそとした控えめな話し方も含めて、このモデルならではの味わいがあります。",
+  "tags": [],
+  "speakers": "すきやき馬太郎 ",
+  "downloads": 499,
+  "license": null
+ },
+ {
+  "uuid": "3bef4d35-124e-4ddd-93d3-75f292732195",
+  "name": "kokuren_3rd",
+  "description": "",
+  "tags": [],
+  "speakers": "kokuren_3rd ",
+  "downloads": 475,
+  "license": null
+ },
+ {
+  "uuid": "9badaf1f-f664-47de-9754-51ad6936d693",
+  "name": "地良谷詩_T3モデル",
+  "description": "地良谷詩　ちらたにうたい　Chiratani Utai　(CodeName:C^IRATANI_UTAI)",
+  "tags": [],
+  "speakers": "地良谷詩_T3モデル ",
+  "downloads": 454,
+  "license": null
+ },
+ {
+  "uuid": "ebd755af-392e-44ac-a523-53a1b1fa1377",
+  "name": "kuroike ai",
+  "description": "",
+  "tags": [],
+  "speakers": "kuroike ai ",
+  "downloads": 451,
+  "license": null
+ },
+ {
+  "uuid": "ed0f793d-786c-4fde-8561-e8bbac7bfe1d",
+  "name": "六弦エレキ",
+  "description": "六弦エレキのAivisSpeech用合成音声モデルです。\nHP: https://lenskkpb.wixsite.com/len-sakaki-official\nX(旧Twitter): https://x.com/len_sakaki",
+  "tags": [
+   "無生物"
+  ],
+  "speakers": "六弦エレキ ",
+  "downloads": 443,
+  "license": null
+ },
+ {
+  "uuid": "33090ea6-7696-491b-afb9-86fdbc4c2e51",
+  "name": "鰻川叶恵_T3モデル",
+  "description": "鰻川叶恵　うなかわかなえ　Unakawa Kanae　(CodeName:UNAKAWA_KANAE)",
+  "tags": [],
+  "speakers": "鰻川叶恵_T3モデル ",
+  "downloads": 435,
+  "license": null
+ },
+ {
+  "uuid": "ddbea2e2-e51f-48da-ace1-197b2c6a77bb",
+  "name": "Amene Lila",
+  "description": "ライラは親切で遊び心のある若い女性で、歌うことに加えて、従弟のタイヴィと一緒に時間を過ごすのが大好きです。",
+  "tags": [],
+  "speakers": "Amene Lila ",
+  "downloads": 429,
+  "license": null
+ },
+ {
+  "uuid": "f79e73ab-3320-473b-8e3f-713c30c39ed1",
+  "name": "MarkN",
+  "description": "VRプラットフォームResoniteで活動するクリエイター「MarkN」のボイスモデル\nクレジット（任意）を載せる場合は AivisSpeech:MarkN\n作者のリンク（任意）を載せる場合は https://markn2000.com",
+  "tags": [],
+  "speakers": "MarkN ",
+  "downloads": 406,
+  "license": null
+ },
+ {
+  "uuid": "7ac45cff-1e2f-4545-91bb-e7b2cc67649b",
+  "name": "蝶舞和香_T3モデル",
+  "description": "蝶舞和香　ちょうぶのどか　Choubu Nodoka　(CodeName:C^O^BU_NODOKA)",
+  "tags": [],
+  "speakers": "蝶舞和香_T3モデル ",
+  "downloads": 333,
+  "license": null
+ },
+ {
+  "uuid": "657f4f16-3cf5-4048-9a98-00987038ebf0",
+  "name": "RakumaYue",
+  "description": "音声合成キャラクター「楽間勇笑」のモデルです。\n\nCV：ワライト/凱旋勇進\n学習：ニッケル\n絵：黄鏡博人",
+  "tags": [
+   "楽間勇笑"
+  ],
+  "speakers": "RakumaYue ",
+  "downloads": 320,
+  "license": null
+ },
+ {
+  "uuid": "37e49039-522f-4608-b8d6-fc6716ada80e",
+  "name": "雪降白華_T3モデル",
+  "description": "雪降白華　ゆきふりしろか　Yukifuri Shiroka　(CodeName:YUKIP^URI_S^IROKA)",
+  "tags": [],
+  "speakers": "雪降白華_T3モデル ",
+  "downloads": 302,
+  "license": null
+ },
+ {
+  "uuid": "0c032c2d-272a-4030-a75c-74dc6f7662ad",
+  "name": "natto-z",
+  "description": "",
+  "tags": [],
+  "speakers": "natto-z ",
+  "downloads": 270,
+  "license": null
+ },
+ {
+  "uuid": "1112959e-bb11-4a61-8c07-ebea8ea568cc",
+  "name": "akiRAM",
+  "description": "VRの住人「akiRAM」のボイスモデルです。\nアキラム・ザ・マッチメイカーの異名を持ち、VRの世界で孤独な人々同士をマッチングさせる活動を行っているらしい。",
+  "tags": [],
+  "speakers": "akiRAM ",
+  "downloads": 252,
+  "license": null
+ },
+ {
+  "uuid": "9f0d1fba-3acd-439a-8446-ea94e8ca6985",
+  "name": "騾馬原杏_T3モデル",
+  "description": "騾馬原杏　らばはらあんず　Rabahara Anzu　(CodeName:RABAHARA_ANZU)",
+  "tags": [],
+  "speakers": "騾馬原杏_T3モデル ",
+  "downloads": 191,
+  "license": null
+ },
+ {
+  "uuid": "53c4bdca-992e-4289-8cf7-1338b11eb567",
+  "name": "夢咲舞空_T3モデル",
+  "description": "夢咲舞空　ゆめさきまそら　Yumesaki Masora　(CodeName:YUMESAKI_MASORA)",
+  "tags": [],
+  "speakers": "夢咲舞空_T3モデル ",
+  "downloads": 173,
+  "license": null
+ },
+ {
+  "uuid": "1f677b65-741e-4ba4-b029-d5525deb82b8",
+  "name": "梅𡵅弓哥_T3モデル",
+  "description": "梅𡵅弓哥　うめほきゆみか　Umehoki Yumika　(CodeName:UMEHOKI_YUMIKA)",
+  "tags": [],
+  "speakers": "梅𡵅弓哥_T3モデル ",
+  "downloads": 173,
+  "license": null
+ },
+ {
+  "uuid": "01a7121c-a96f-4809-8925-f5f7359be09e",
+  "name": "AI Maid K1-3486",
+  "description": "Voice model for AI Maid. K1 series, No. 3486. Style-Bert-VITS2 JP-Extra, trained on a synthetic corpus made with Irodori-TTS v4.1 small.",
+  "tags": [],
+  "speakers": "AI Maid K1-3486 ",
+  "downloads": 116,
+  "license": null
+ },
+ {
+  "uuid": "16d1e9be-9ea2-4c8e-a73e-89b97a003705",
+  "name": "AI Maid K2-3481",
+  "description": "Voice model for AI Maid. K2 series, No. 3481. Style-Bert-VITS2 JP-Extra, trained on a synthetic corpus made with Irodori-TTS v4.1 small.",
+  "tags": [],
+  "speakers": "AI Maid K2-3481 ",
+  "downloads": 59,
+  "license": null
+ }
+]

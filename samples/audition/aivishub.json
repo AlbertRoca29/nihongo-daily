@@ -1,127 +1,37 @@
 [
  {
-  "keyword": "少年",
-  "total": 0,
-  "keys": [
-   "total",
-   "aivm_models"
-  ],
-  "names": []
+  "page": 1,
+  "got": 24,
+  "total": 77
  },
  {
-  "keyword": "男の子",
-  "total": 0,
-  "keys": [
-   "total",
-   "aivm_models"
-  ],
-  "names": []
+  "page": 2,
+  "got": 24,
+  "total": 77
  },
  {
-  "keyword": "子供",
-  "total": 0,
-  "keys": [
-   "total",
-   "aivm_models"
-  ],
-  "names": []
+  "page": 3,
+  "got": 24,
+  "total": 77
  },
  {
-  "keyword": "ショタ",
-  "total": 0,
-  "keys": [
-   "total",
-   "aivm_models"
-  ],
-  "names": []
+  "page": 4,
+  "got": 5,
+  "total": 77
  },
  {
-  "keyword": "おばあちゃん",
-  "total": 0,
-  "keys": [
-   "total",
-   "aivm_models"
-  ],
-  "names": []
- },
- {
-  "keyword": "おばあさん",
-  "total": 0,
-  "keys": [
-   "total",
-   "aivm_models"
-  ],
-  "names": []
- },
- {
-  "keyword": "老婆",
-  "total": 0,
-  "keys": [
-   "total",
-   "aivm_models"
-  ],
-  "names": []
- },
- {
-  "keyword": "老人",
-  "total": 1,
-  "keys": [
-   "total",
-   "aivm_models"
-  ],
-  "names": [
-   "ろてじん（長老ボイス）"
+  "catalogue": 77,
+  "hits": [
+   [
+    "ろてじん（長老ボイス）",
+    "老人/長老"
+   ]
   ]
- },
- {
-  "keyword": "おじいちゃん",
-  "total": 0,
-  "keys": [
-   "total",
-   "aivm_models"
-  ],
-  "names": []
- },
- {
-  "keyword": "おじいさん",
-  "total": 0,
-  "keys": [
-   "total",
-   "aivm_models"
-  ],
-  "names": []
- },
- {
-  "keyword": "高齢",
-  "total": 0,
-  "keys": [
-   "total",
-   "aivm_models"
-  ],
-  "names": []
- },
- {
-  "keyword": "シニア",
-  "total": 0,
-  "keys": [
-   "total",
-   "aivm_models"
-  ],
-  "names": []
- },
- {
-  "keyword": "老年",
-  "total": 0,
-  "keys": [
-   "total",
-   "aivm_models"
-  ],
-  "names": []
  },
  {
   "model": "ろてじん（長老ボイス）",
   "uuid": "696c98a2-c0b7-4fe7-8cf2-c7e9b8a9bd82",
-  "keyword": "老人",
+  "keyword": "老人/長老",
   "installed": true
  }
 ]
