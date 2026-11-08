@@ -23,7 +23,7 @@ ROLES = {
 KEYWORDS = ["少年", "男の子", "子供", "ショタ", "おばあちゃん", "おばあさん", "老婆", "老人",
             "おじいちゃん", "おじいさん", "高齢", "シニア", "老年"]
 PER_KEYWORD = 3
-MAX_MODELS = 18
+MAX_MODELS = 24
 
 
 def http(url, data=None, method=None, headers=None, timeout=300):
@@ -58,6 +58,48 @@ def pitch(path):
         return round(float(np.median(f))) if len(f) else None
     except Exception:
         return None
+
+
+import re
+WANT = re.compile(r"少年|男の子|男児|ショタ|子ども|子供|こども|キッズ|小学生|幼い|幼児|園児|おばあ|お婆|婆|祖母|ばあば|老婆|老女|お年寄り|"
+                  r"高齢|シニア|老人|老年|長老|おじい|お爺|爺|祖父|じいじ|老紳士|初老|熟年|嗄れ|しわがれ|ハスキー|"
+                  r"おかん|おかあ|母|主婦|関西|大阪|方言", re.I)
+
+
+def hub_catalogue(log):
+    """Every public AivisHub model (paged), then the ones whose name/description/tags fit our roles."""
+    allm, seen = [], set()
+    for page in range(1, 40):
+        url = f"{HUB}/aivm-models/search?" + urllib.parse.urlencode(
+            {"sort": "download", "page_size": 30, "page": page})
+        try:
+            data = json.loads(http(url, timeout=30))
+        except Exception as e:
+            log.append({"page": page, "error": str(e)[:200]})
+            break
+        ms = data.get("aivm_models") or []
+        new = [m for m in ms if m.get("aivm_model_uuid") not in seen]
+        if not new:
+            break
+        for m in new:
+            seen.add(m.get("aivm_model_uuid"))
+            tags = [t.get("name", t) if isinstance(t, dict) else t for t in m.get("tags", [])]
+            spk = " ".join(f'{x.get("name","")} {x.get("description","") if isinstance(x, dict) else ""}'
+                           for x in (m.get("speakers") or []) if isinstance(x, dict))
+            allm.append(dict(uuid=m.get("aivm_model_uuid"), name=m.get("name", "?"),
+                             description=(m.get("description") or "")[:400], tags=tags,
+                             speakers=spk[:300], downloads=m.get("total_download_count"),
+                             license=m.get("license_type")))
+        log.append({"page": page, "got": len(new), "total": data.get("total")})
+    json.dump(allm, open(f"{OUT}/aivishub_catalogue.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    hits = []
+    for m in allm:
+        blob = " ".join([m["name"], m["description"], " ".join(map(str, m["tags"])), m["speakers"]])
+        found = WANT.findall(blob)
+        if found:
+            hits.append((m["uuid"], m["name"], m["description"][:160], m["tags"], "/".join(sorted(set(found)))))
+    log.append({"catalogue": len(allm), "hits": [(h[1], h[4]) for h in hits]})
+    return hits[:MAX_MODELS]
 
 
 def hub_models(log):
@@ -124,19 +166,21 @@ def styles(base):
 
 def main():
     os.makedirs(OUT, exist_ok=True)
+    keep_vv = os.environ.get("AIVIS_ONLY") == "1"
+    prev = json.load(open(f"{OUT}/results.json", encoding="utf-8")) if keep_vv and os.path.exists(f"{OUT}/results.json") else {}
     for f in os.listdir(OUT):
-        if f.endswith(".mp3"):
+        if f.endswith(".mp3") and not (keep_vv and "_V" in f):
             os.remove(os.path.join(OUT, f))
     log, voices = [], []
-    if up(VV):
+    if not keep_vv and up(VV):
         for sid, sp, st, _ in styles(VV):
             voices.append(dict(engine="VOICEVOX", base=VV, sid=sid, name=sp, style=st))
-    else:
+    elif not keep_vv:
         log.append("VOICEVOX not running")
     hub = []
     if up(AV):
         before = {x[3] for x in styles(AV)}
-        hub = hub_models(log)
+        hub = hub_catalogue(log) or hub_models(log)
         for uid, name, desc, tags, kw in hub:
             ok = install(uid, log)
             log.append({"model": name, "uuid": uid, "keyword": kw, "installed": ok})
@@ -164,6 +208,8 @@ def main():
             with open(os.path.join(OUT, fn), "wb") as fh:
                 fh.write(audio)
             rows.append(dict({k: v[k] for k in v if k != "base"}, file=fn, hz=pitch(os.path.join(OUT, fn))))
+        if keep_vv and rid in prev:
+            rows += [x for x in prev[rid]["rows"] if x["engine"] == "VOICEVOX"]
         print(rid, len(rows))
         results[rid] = dict(label=label, text=text, rows=rows)
     json.dump(results, open(f"{OUT}/results.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
