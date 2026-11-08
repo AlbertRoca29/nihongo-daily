@@ -36,5 +36,12 @@
   "category": "love-relationships",
   "function": "comparing",
   "format": "dialogue"
+ },
+ {
+  "id": "2026-11-08",
+  "topic": "颯太's essay about Grandpa",
+  "category": "family-childhood",
+  "function": "opinions",
+  "format": "text"
  }
 ]

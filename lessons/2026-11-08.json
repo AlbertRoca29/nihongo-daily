@@ -1,0 +1,186 @@
+{
+ "topic": "颯太's essay about Grandpa",
+ "category": "family-childhood",
+ "function": "opinions",
+ "format": "text",
+ "cast": ["sota"],
+ "title_jp": "{颯太|そうた}の{作文|さくぶん}",
+ "context": "Sunday at the farm. 田中さん's grandson 颯太 (11) is here from Nagano city for the weekend, and he shyly hands you his homework: an essay about the person he respects most. He wants your opinion before his teacher sees it.",
+ "phrases": [
+  {
+   "jp": "{私|わたし}の{意見|いけん|opinion}を{言|い}ってもいいですか。",
+   "en": "May I say what I think?",
+   "register": "polite",
+   "note": "A gentle way in before giving an opinion, at work or with someone older. Casual: {意見|いけん}、{言|い}ってもいい？"
+  },
+  {
+   "jp": "{確|たし|true, certainly}かに、そうですね。でも…",
+   "en": "That's true. But…",
+   "register": "polite",
+   "note": "The Japanese way to disagree: agree with part of it first, then add your でも. Going straight to 'no' sounds harsh."
+  },
+  {
+   "jp": "それはちょっと{違|ちが}うと{思|おも}うな。",
+   "en": "I think that's not quite right.",
+   "register": "casual",
+   "note": "ちょっと and 〜と{思|おも}う soften a disagreement; you'll rarely hear a flat {違|ちが}う！ except between close friends or kids."
+  },
+  {
+   "jp": "{漢字|かんじ}が{少|すこ}しずつ{読|よ}めるようになってきた。",
+   "en": "I'm gradually getting able to read kanji.",
+   "register": "casual",
+   "note": "〜ようになってきた = has been slowly coming to (a change still in progress)."
+  },
+  {
+   "jp": "おじいちゃん、{孫|まご|grandchild}にはほんとに{甘|あま|soft on, indulgent}いね。",
+   "en": "Grandpa's really soft on his grandkid, isn't he?",
+   "register": "casual",
+   "note": "{甘|あま}い = sweet, but also 'too soft, indulgent' with people: {子|こ}どもに{甘|あま}い{親|おや}."
+  }
+ ],
+ "dialogue_setting": "The Tanaka living room, Sunday afternoon: 颯太's essay, written in pencil on squared essay paper.",
+ "text_title": "{作文|さくぶん|school essay}「ぼくのおじいちゃん」　5{年|ねん}2{組|くみ}　{颯太|そうた}",
+ "dialogue": [
+  {
+   "speaker": "Opening",
+   "jp": "ぼくの{祖父|そふ|grandfather}は、{鷹ノ原町|たかのはらまち}でりんごを{育|そだ|to grow, raise}てている。ぼくは、{家族|かぞく}の{中|なか}でおじいちゃんを{一番|いちばん}{尊敬|そんけい|respect}している。",
+   "en": "My grandfather grows apples in Takanohara. Of everyone in my family, I respect Grandpa the most."
+  },
+  {
+   "speaker": "Every morning",
+   "jp": "おじいちゃんは{毎朝|まいあさ}5{時|じ}に{起|お}きて、{一本|いっぽん}{一本|いっぽん}の{木|き}を{心|こころ}を{込|こ|to put into (feelings)}めて{世話|せわ|care, looking after}する。{口数|くちかず|how much someone talks}は{少|すく}ないけれど、ぼくは、それが{本当|ほんとう}のやさしさだと{思|おも}う。",
+   "en": "Grandpa gets up at 5 every morning and looks after every single tree with all his heart. He doesn't say much, but I think that is real kindness."
+  },
+  {
+   "speaker": "Then and now",
+   "jp": "{小|ちい}さいころ、ぼくはりんごが{苦手|にがて|not keen on, bad with}だった。でも、おじいちゃんの{畑|はたけ|field, orchard}で{とれたて||freshly picked}を{食|た}べてから{大好|だいす}きになって、{今|いま}では{木|き}に{登|のぼ|to climb}って{自分|じぶん}でとれるようになった。",
+   "en": "When I was little I didn't like apples. But after eating one fresh from Grandpa's orchard I loved them, and now I can climb the trees and pick them myself."
+  },
+  {
+   "speaker": "My opinion",
+   "jp": "{母|はは}は「おじいちゃんはもう{年|とし|old age}だから、{畑|はたけ|field, orchard}をやめたほうがいい」と{言|い}う。でも、ぼくの{意見|いけん|opinion}は{反対|はんたい|the opposite, against}だ。{畑|はたけ}にいるときのおじいちゃんが、{一番|いちばん}{元気|げんき}だからだ。",
+   "en": "My mum says, 'Grandpa is getting old, so he should give up the orchard.' But my opinion is the opposite. Grandpa is at his liveliest when he's in the orchard."
+  },
+  {
+   "speaker": "This year",
+   "jp": "{今年|ことし}は、スペインから{来|き}たアルバートさんが{手伝|てつだ}ってくれている。おじいちゃんは{最近|さいきん}、{前|まえ}よりよく{笑|わら}うようになった。ぼくは、アルバートさんのおかげだと{思|おも}う。",
+   "en": "This year, アルバートさん from Spain is helping us. Lately Grandpa has started laughing more than before. I think it's thanks to アルバートさん."
+  },
+  {
+   "speaker": "Ending",
+   "jp": "{将来|しょうらい|the future}はサッカー{選手|せんしゅ|(sports) player}になりたいけど、いつかおじいちゃんの{畑|はたけ}も{継|つ|to take over (a family business)}ぎたい。おじいちゃんは、ぼくの{自慢|じまん|pride, something to boast about}だ。",
+   "en": "In the future I want to be a footballer, but one day I also want to take over Grandpa's orchard. Grandpa is my pride."
+  }
+ ],
+ "grammar": {
+  "id": "n4-you-ni-naru",
+  "pattern": "〜ようになる",
+  "level": "N4",
+  "meaning": "come to be able to / start doing",
+  "form": "{可能形|かのうけい}: + ようになる ({読|よ}める → {読|よ}めるようになる, とれる → とれるようになる) · {辞書形|じしょけい}: + ようになる ({笑|わら}う → {笑|わら}うようになる) · no longer: ない → なくなる ({泣|な}かない → {泣|な}かなくなる)",
+  "explanation": "Use it for a change that came with time: something you can now do (potential form + ようになる) or a new habit that has appeared (dictionary form + ようになる). It describes a result, not a choice: a resolution is 〜ようにする, a decision is 〜ことにする. With nouns and adjectives just use になる: {好|す}きになった, never 好きようになった.",
+  "src": ["d2", "d4", "p3"],
+  "examples": [
+   {
+    "jp": "{日本|にほん}に{来|き}てから、{納豆|なっとう|natto, fermented soybeans}が{食|た}べられるようになった。",
+    "en": "Since coming to Japan, I've become able to eat natto."
+   },
+   {
+    "jp": "{最近|さいきん}、{父|ちち}は{毎日|まいにち}{散歩|さんぽ}するようになりました。",
+    "en": "Lately my father has started going for a walk every day."
+   }
+  ],
+  "quiz": {
+   "question": "{毎日|まいにち}{練習|れんしゅう}したので、{一人|ひとり}で{自転車|じてんしゃ}に＿＿ようになった。",
+   "en": "I practised every day, so now I can ride a bike on my own.",
+   "options": ["{乗|の}れる", "{乗|の}れて", "{乗|の}れた", "{乗|の}ろう"],
+   "explain": "'Became able to' = potential form in the dictionary shape ({乗|の}れる) + ようになる; the past goes on なる, not on the verb."
+  }
+ },
+ "kanji": {
+  "kanji": "原稿用紙",
+  "reading": "げんこうようし",
+  "romaji": "genkō yōshi",
+  "meaning": "squared essay paper",
+  "where": "Printed on the pads of squared paper Japanese pupils write every essay on, one character per square.",
+  "related": "{作文|さくぶん} = a school essay.",
+  "breakdown": "{原稿用紙|げんこうようし}: 原稿 manuscript, draft + 用紙 paper for a purpose → 'paper for writing a draft on'."
+ },
+ "tip": {
+  "mark": "祖",
+  "title": "Whose grandpa is it?",
+  "body": "Speaking about your own family to outsiders, or in writing, you use the plain words: {祖父|そふ}, {母|はは}, {父|ちち}. For someone else's family you use おじいさん, お{母|かあ}さん. That's why 颯太's essay starts with ぼくの{祖父|そふ} and then slips into おじいちゃん, like every child does. Inside a family, people often name each other from the youngest child's point of view: 恵子さん may well call her husband おじいちゃん when 颯太 is around."
+ },
+ "challenge": {
+  "prompt": "颯太 looks up at you: 「ねえねえ、アルバートくんはどう{思|おも}う？おじいちゃん、{畑|はたけ|field, orchard}やめたほうがいいと{思|おも}う？」 Give your opinion (you agree with him), and say that you've become able to help a little. Use 〜ようになる.",
+  "hint": "やめないほうがいい · {少|すこ}し{手伝|てつだ}える · 〜し",
+  "model_answer": "ううん、やめないほうがいいと{思|おも}う。{僕|ぼく}も{少|すこ}し{手伝|てつだ}えるようになったし、{一緒|いっしょ}にがんばるよ！",
+  "explanation": "やめないほうがいいと{思|おも}う gives your opinion softly (ない form + ほうがいい = it's better not to). {手伝|てつだ}えるようになった = potential form + ようになった, 'I've become able to help'. 〜し adds a reason, and plain casual speech fits talking to a kid."
+ },
+ "vocab": [
+  {"jp": "{祖父|そふ}", "reading": "そふ", "en": "grandfather (your own, formal)", "level": "N3", "src": "d0", "surface": "祖父", "note": "Used in writing and about your own family to others. Spoken at home: おじいちゃん."},
+  {"jp": "{育|そだ}てる", "reading": "そだてる", "en": "to grow (plants), to raise (children)", "level": "N4", "src": "d0", "surface": "育てて"},
+  {"jp": "{尊敬|そんけい}する", "reading": "そんけいする", "en": "to respect, look up to", "level": "N3", "src": "d0", "surface": "尊敬して", "note": "{尊敬|そんけい}する{人|ひと} = the person you look up to: a classic essay and interview question."},
+  {"jp": "{込|こ}める", "reading": "こめる", "en": "to put (feelings) into", "level": "N3", "src": "d1", "surface": "込めて", "note": "{心|こころ}を{込|こ}めて = with all your heart, wholeheartedly."},
+  {"jp": "{苦手|にがて}", "reading": "にがて", "en": "not keen on; bad at", "level": "N3", "src": "d2", "surface": "苦手", "note": "A softer way to say you dislike something: {納豆|なっとう}が{苦手|にがて}です."},
+  {"jp": "{登|のぼ}る", "reading": "のぼる", "en": "to climb", "level": "N4", "src": "d2", "surface": "登って"},
+  {"jp": "{意見|いけん}", "reading": "いけん", "en": "opinion", "level": "N3", "src": "d3", "surface": "意見"},
+  {"jp": "{反対|はんたい}", "reading": "はんたい", "en": "the opposite; being against", "level": "N3", "src": "d3", "surface": "反対", "note": "{反対|はんたい}する = to oppose. The opposite: {賛成|さんせい} (agreeing)."},
+  {"jp": "{自慢|じまん}", "reading": "じまん", "en": "pride; something to boast about", "level": "N3", "src": "d5", "surface": "自慢", "note": "{自慢|じまん}の{孫|まご} = a grandchild you're proud of. {自慢|じまん}する can also mean 'to show off'."},
+  {"jp": "{孫|まご}", "reading": "まご", "en": "grandchild", "level": "N3", "src": "p4", "surface": "孫"}
+ ],
+ "kanji_study": [
+  {
+   "kanji": "苦",
+   "track": "lesson",
+   "on": "ク",
+   "kun": "くる(しい)・にが(い)",
+   "meaning": "suffering; bitter",
+   "words": [
+    {"jp": "{苦手|にがて}", "reading": "にがて", "en": "not keen on; bad at"},
+    {"jp": "{苦|くる}しい", "reading": "くるしい", "en": "painful, hard to bear"},
+    {"jp": "{苦労|くろう}", "reading": "くろう", "en": "hardship, trouble"}
+   ],
+   "decoys": {"meanings": ["sweet", "hard, firm", "sad"], "readings": ["くて", "にがしゅ", "くしゅ"]}
+  },
+  {
+   "kanji": "込",
+   "track": "n3",
+   "on": "",
+   "kun": "こ(む)・こ(める)",
+   "meaning": "crowded; put into",
+   "words": [
+    {"jp": "{込|こ}む", "reading": "こむ", "en": "to be crowded"},
+    {"jp": "{申|もう}し{込|こ}む", "reading": "もうしこむ", "en": "to apply, sign up"},
+    {"jp": "{込|こ}める", "reading": "こめる", "en": "to put (feelings) into"}
+   ],
+   "decoys": {"meanings": ["enter", "pull out", "wrap"], "readings": ["ごむ", "はいむ", "いれむ"]}
+  }
+ ],
+ "extras": [
+  {
+   "title": "My family, your family",
+   "title_jp": "{家族|かぞく}の{呼|よ}び{方|かた}",
+   "intro": "Left: your own family, when talking to outsiders or writing. Right: someone else's family.",
+   "items": [
+    {"jp": "{祖父|そふ|grandfather (mine)} → おじいさん", "en": "grandfather"},
+    {"jp": "{祖母|そぼ|grandmother (mine)} → おばあさん", "en": "grandmother"},
+    {"jp": "{両親|りょうしん|parents} → ご{両親|りょうしん}", "en": "parents"},
+    {"jp": "{兄|あに} → お{兄|にい}さん", "en": "older brother"},
+    {"jp": "{孫|まご|grandchild} → お{孫|まご}さん", "en": "grandchild", "note": "Neighbours like ハナおばあちゃん will ask: お{孫|まご}さん、{来|き}てるの？"}
+   ]
+  },
+  {
+   "title": "Agreeing and disagreeing",
+   "title_jp": "{賛成|さんせい}・{反対|はんたい}",
+   "intro": "From warm agreement to soft disagreement.",
+   "items": [
+    {"jp": "{賛成|さんせい|agreed, I'm for it}！", "en": "Agreed! / I'm for it!"},
+    {"jp": "それな！", "en": "So true!", "note": "Slang, very common with young people."},
+    {"jp": "{人|ひと}によると{思|おも}う。", "en": "I think it depends on the person."},
+    {"jp": "うーん、どうかな。", "en": "Hmm, I'm not so sure.", "note": "The polite non-answer: often means 'no'."},
+    {"jp": "{私|わたし}はちょっと{反対|はんたい|against}かな。", "en": "I'm a bit against it, I guess."}
+   ]
+  }
+ ]
+}
