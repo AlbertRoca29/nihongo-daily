@@ -1,0 +1,43 @@
+name: Voice lab
+
+# Compares directed Gemini-TTS voices, VOICEVOX and the current voices per character.
+# Writes samples/lab/ (see scripts/voice_lab.py). Optional input: character ids.
+on:
+  push:
+    branches: [master]
+    paths: ["scripts/voice_lab.py", ".github/workflows/voice-lab.yml"]
+  workflow_dispatch:
+    inputs:
+      chars:
+        description: "Character ids (blank = all)"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: voice-lab
+  cancel-in-progress: true
+
+jobs:
+  lab:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Start VOICEVOX engine
+        run: |
+          docker run -d --name vv -p 50021:50021 voicevox/voicevox_engine:cpu-latest || true
+          pip install --quiet librosa
+          for i in $(seq 1 60); do curl -sf http://127.0.0.1:50021/version && break; sleep 5; done || true
+      - name: Make samples
+        env:
+          GOOGLE_TTS_KEY: ${{ secrets.GOOGLE_TTS_KEY }}
+        run: python3 scripts/voice_lab.py ${{ github.event.inputs.chars }}
+      - name: Commit samples
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add samples/lab
+          git commit -m "Voice lab samples" || exit 0
+          for i in 1 2 3; do git pull --rebase origin master && git push origin HEAD:master && break; sleep 5; done
