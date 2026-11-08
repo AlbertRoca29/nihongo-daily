@@ -1041,7 +1041,7 @@
     "errors": [],
     "pitch": [
      154,
-     125
+     135
     ]
    },
    {
@@ -1054,8 +1054,8 @@
      null
     ],
     "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
+     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL || gemini-api gemini-2.5-flash-preview-tts 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Requests to this API generativelanguage.googleapis.com method google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent are blocked.\",\n    \"status\": \"PERMISSION_DENIED\",\n    \"details\": [\n   ",
+     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL || gemini-api gemini-2.5-flash-preview-tts 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Gemini API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=626"
     ],
     "pitch": [
      null,
@@ -1072,8 +1072,8 @@
      null
     ],
     "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-2.5-pro-tts' (or it may not exist). Remediate access with this Troubleshooter URL or share ",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-2.5-pro-tts' (or it may not exist). Remediate access with this Troubleshooter URL or share "
+     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-2.5-pro-tts' (or it may not exist). Remediate access with this Troubleshooter URL or share  || gemini-api gemini-2.5-flash-preview-tts 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission denied on the service.\",\n    \"status\": \"PERMISSION_DENIED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_DENIED\",\n        \"d",
+     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-2.5-pro-tts' (or it may not exist). Remediate access with this Troubleshooter URL or share  || gemini-api gemini-2.5-flash-preview-tts 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Gemini API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=626"
     ],
     "pitch": [
      null,
@@ -1090,8 +1090,8 @@
      null
     ],
     "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
+     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL || gemini-api gemini-2.5-flash-preview-tts 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Gemini API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=626",
+     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL || gemini-api gemini-2.5-flash-preview-tts 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission denied on the service.\",\n    \"status\": \"PERMISSION_DENIED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_DENIED\",\n        \"d"
     ],
     "pitch": [
      null,
@@ -1108,8 +1108,8 @@
      null
     ],
     "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
+     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL || gemini-api gemini-2.5-flash-preview-tts 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Gemini API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=626",
+     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL || gemini-api gemini-2.5-flash-preview-tts 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Requests to this API generativelanguage.googleapis.com method google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent are blocked.\",\n    \"status\": \"PERMISSION_DENIED\",\n    \"details\": [\n   "
     ],
     "pitch": [
      null,
@@ -1126,8 +1126,8 @@
      null
     ],
     "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
+     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL || gemini-api gemini-2.5-flash-preview-tts 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Requests to this API generativelanguage.googleapis.com method google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent are blocked.\",\n    \"status\": \"PERMISSION_DENIED\",\n    \"details\": [\n   ",
+     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL || gemini-api gemini-2.5-flash-preview-tts 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Requests to this API generativelanguage.googleapis.com method google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent are blocked.\",\n    \"status\": \"PERMISSION_DENIED\",\n    \"details\": [\n   "
     ],
     "pitch": [
      null,
