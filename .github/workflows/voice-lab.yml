@@ -34,7 +34,8 @@ jobs:
       - name: Make samples
         env:
           GOOGLE_TTS_KEY: ${{ secrets.GOOGLE_TTS_KEY }}
-        run: python3 scripts/voice_lab.py ${{ github.event.inputs.chars || 'yuki kenta ren sato hayato keiko you' }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python3 scripts/voice_lab.py ${{ github.event.inputs.chars || 'kenta' }}
       - name: Commit samples
         run: |
           git config user.name "github-actions[bot]"

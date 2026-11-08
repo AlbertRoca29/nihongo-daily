@@ -159,7 +159,52 @@ def google(text, voice, model=None, prompt=None, rate=1.0, shift=1.0, fx=""):
     return audio, err
 
 
+GKEY = os.environ.get("GEMINI_API_KEY", "").strip() or KEY
+GAPI = "https://generativelanguage.googleapis.com/v1beta/models"
+GMODELS = {NEW: ["gemini-3.1-flash-tts-preview", "gemini-2.5-flash-preview-tts"],
+           PRO: ["gemini-2.5-pro-preview-tts", "gemini-2.5-flash-preview-tts"]}
+
+
+def gemini_api(text, voice, model, prompt):
+    """Same voices through the Gemini API (works with a plain API key, has a free tier). PCM -> MP3."""
+    err = None
+    for m in GMODELS.get(model, [model]):
+        body = {"contents": [{"parts": [{"text": f"{prompt}\n\n{text}"}]}],
+                "generationConfig": {"responseModalities": ["AUDIO"],
+                                     "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}}}}
+        req = urllib.request.Request(f"{GAPI}/{m}:generateContent?key={GKEY}", json.dumps(body).encode(),
+                                     {"Content-Type": "application/json"})
+        for attempt in range(4):
+            try:
+                with urllib.request.urlopen(req, timeout=180) as r:
+                    data = json.load(r)
+                pcm = base64.b64decode(data["candidates"][0]["content"]["parts"][0]["inlineData"]["data"])
+                p = subprocess.run(["ffmpeg", "-loglevel", "error", "-f", "s16le", "-ar", "24000", "-ac", "1",
+                                    "-i", "-", "-f", "mp3", "-b:a", "64k", "-"], input=pcm, capture_output=True)
+                return p.stdout, None
+            except urllib.error.HTTPError as e:
+                err = f"gemini-api {m} {e.code}: {e.read().decode()[:250]}"
+                if e.code in (429, 500, 503) and attempt < 3:
+                    time.sleep(2 ** attempt * 8)
+                    continue
+                break
+            except Exception as e:
+                err = f"gemini-api {m}: {str(e)[:200]}"
+                break
+    return None, err
+
+
 def _google(text, voice, model=None, prompt=None, rate=1.0):
+    if model:
+        audio, err = _cloud(text, voice, model, prompt, rate)
+        if audio:
+            return audio, None
+        audio, err2 = gemini_api(text, voice, model, prompt)
+        return (audio, None) if audio else (None, f"{err} || {err2}")
+    return _cloud(text, voice, model, prompt, rate)
+
+
+def _cloud(text, voice, model=None, prompt=None, rate=1.0):
     v = {"languageCode": "ja-JP"}
     inp = {"text": text}
     if model:
@@ -328,7 +373,7 @@ def write_page(results):
             ps = [p for p in c["pitch"] if p]
             hz = f'<span class=hz>~{round(sum(ps)/len(ps))} Hz</span>' if ps else ""
             msg = c["errors"][0] if c["errors"] else ""
-            if "aiplatform" in msg or "Agent Platform" in msg:
+            if ("aiplatform" in msg or "Agent Platform" in msg) and "gemini-api" not in msg:
                 msg = "Not available yet: the Google project needs the Agent Platform (Vertex AI) API enabled."
             err = f'<div class=err>{e(msg)}</div>' if msg else ""
             rows.append(f'<div class="cand{" now" if c.get("now") else ""}"><div class=hd>'
