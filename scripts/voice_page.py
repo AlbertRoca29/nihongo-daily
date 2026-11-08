@@ -64,7 +64,7 @@ ENGINES = [
          runs="Google's servers, through the Gemini API with your key GEMINI_API_KEY.",
          price="Flash TTS: $0.50 per million text tokens + $9 per million audio tokens (≈ $0.0135 per minute) until 31 Dec "
                "2026, then $1 + $18 (≈ $0.027/min). Flash-Lite TTS: $0.50 + $6 (≈ $0.009/min), then $1 + $12 (≈ $0.018/min). "
-               "Free tier without billing: 10 clips a day per model.",
+               "Free tier without billing: 10 clips a day per model; with billing (Tier 1): 100 clips a day per model, plenty for a daily lesson.",
          you="Not used in the app yet. Designed voices for 9 characters are stored in your Google project (voices38.json); "
              "samples are in each character's comparison below, marked “3.8”.",
          cost="paid"),
@@ -276,7 +276,7 @@ A budget alert in Google Cloud can cap any surprise.</p></div>"""
                     kind = f"{model} · Japanese voice library: {info.get('description', w['voice'])} · {price}"
                     name = "Library voice"
                 clips = "".join(f'<audio controls preload="none" src="../lab38/{e(f)}"></audio>' if f else
-                                '<div class=miss>(line not made yet: daily free quota)</div>' for f in w["clips"])
+                                '<div class=miss>(line made tomorrow: daily limit)</div>' for f in w["clips"])
                 tag = w["tag"].replace("-", "-38")
                 rows.append(f'<div class="cand g38"><b class=tag>{tag}</b> <b>{e(name)}</b> <span class="badge paid">3.8</span>'
                             f'<div class=kind>{e(kind)}</div>{clips}</div>')
@@ -289,7 +289,7 @@ A budget alert in Google Cloud can cap any surprise.</p></div>"""
         else:
             lines_extra = ""
         if waiting38:
-            lines_extra += f'<p class=mut style="font-size:13px">{waiting38} more Gemini 3.8 candidates wait for the free daily quota (or billing).</p>'
+            lines_extra += f'<p class=mut style="font-size:13px">{waiting38} more Gemini 3.8 candidates are made tomorrow (100 clips a day per model).</p>'
         note = (f'<p class=mut style="font-size:13px">{missing} more directed voices wait for quota (free tier: 10 clips a day).</p>'
                 if missing else "")
         now = describe(v) if v else None
