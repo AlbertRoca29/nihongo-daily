@@ -39,6 +39,7 @@ CHARS = {
         lines=["ねえねえ、アルちゃん！カブトムシって、なんで夜しか出てこないの？",
                "すげー！じゃあさ、いつか一緒にバルセロナの試合、見に行こうよ！"],
         gemini=["Leda", "Autonoe", "Fenrir", "Puck"],
+        chirp=[("Leda", 1.1, 1.0), ("Autonoe", 1.1, 1.0), ("Puck", 1.05, 1.35), ("Fenrir", 1.0, 1.4)],
         voicevox=[("白上虎太郎", "わーい"), ("白上虎太郎", "ふつう")]),
     "hana": dict(
         label="ハナおばあちゃん Hana · 84, grandma",
@@ -49,6 +50,7 @@ CHARS = {
         lines=["停留所に、背の高い外国の子がおってのう。時刻表をじーっと見て、困った顔をしとったんじゃ。",
                "子どもの頃は、毎日この坂を歩かされたもんじゃよ。"],
         gemini=["Gacrux", "Sulafat", "Vindemiatrix", "Achernar"],
+        chirp=[("Gacrux", 0.85, 1.0), ("Sulafat", 0.85, 1.0), ("Vindemiatrix", 0.85, 0.95)],
         voicevox=[]),
     "tanaka": dict(
         label="田中さん Tanaka-san · 67, farmer",
@@ -59,6 +61,7 @@ CHARS = {
         lines=["鷹ノ原のりんごは甘いずら。遠慮しないで食べな。",
                "明日は五時に起きるぞ。遅れたら妻に怒られるからな。"],
         gemini=["Algenib", "Charon", "Schedar", "Rasalgethi"],
+        chirp=[("Algenib", 0.9, 1.0), ("Charon", 0.9, 0.93)],
         voicevox=[("ちび式じい", "")]),
     "keiko": dict(
         label="恵子 Keiko · Tanaka's wife",
@@ -78,6 +81,7 @@ CHARS = {
         lines=["え、マジで？それウケるんだけど！",
                "明日の数学のテスト、ガチでやばい…もう無理すぎ。"],
         gemini=["Leda", "Zephyr", "Laomedeia", "Achernar"],
+        chirp=[("Leda", 1.08, 1.0), ("Zephyr", 1.08, 1.0)],
         voicevox=[("春日部つむぎ", "")]),
     "yuki": dict(
         label="由紀 Yuki · 25, Tokyo office worker",
@@ -141,7 +145,18 @@ def current_voice(cid):
     return CURRENT["cast"].get(cid) or CURRENT.get("others", {}).get(cid.capitalize())
 
 
-def google(text, voice, model=None, prompt=None):
+def google(text, voice, model=None, prompt=None, rate=1.0, shift=1.0):
+    audio, err = _google(text, voice, model, prompt, rate)
+    if audio and shift != 1.0:
+        # raise/lower pitch and formants together (a smaller/larger voice), keep the tempo
+        p = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", "-", "-af",
+                            f"aresample=24000,asetrate=24000*{shift},aresample=24000,atempo={1/shift:.4f}",
+                            "-f", "mp3", "-b:a", "64k", "-"], input=audio, capture_output=True)
+        audio = p.stdout if p.returncode == 0 else audio
+    return audio, err
+
+
+def _google(text, voice, model=None, prompt=None, rate=1.0):
     v = {"languageCode": "ja-JP"}
     inp = {"text": text}
     if model:
@@ -149,7 +164,10 @@ def google(text, voice, model=None, prompt=None):
         inp["prompt"] = prompt
     else:
         v["name"] = f"ja-JP-Chirp3-HD-{voice}"
-    body = {"input": inp, "voice": v, "audioConfig": {"audioEncoding": "MP3"}}
+    cfg = {"audioEncoding": "MP3"}
+    if rate != 1.0:
+        cfg["speakingRate"] = rate
+    body = {"input": inp, "voice": v, "audioConfig": cfg}
     req = urllib.request.Request(f"{API}?key={KEY}", json.dumps(body).encode(),
                                  {"Content-Type": "application/json"})
     for attempt in range(5):
@@ -219,6 +237,10 @@ def main():
     if not KEY:
         sys.exit("GOOGLE_TTS_KEY is not set.")
     os.makedirs(OUT, exist_ok=True)
+    if not sys.argv[1:]:
+        for f in os.listdir(OUT):
+            if f.endswith(".mp3"):
+                os.remove(os.path.join(OUT, f))
     want = sys.argv[1:] or list(CHARS)
     speakers = vv_speakers()
     print("VOICEVOX:", "running" if speakers else "not running")
@@ -230,6 +252,8 @@ def main():
         cur = current_voice(cid)
         if cur:
             cands.append(dict(engine="chirp", voice=cur, now=True))
+        for v, rate, shift in c.get("chirp", []):
+            cands.append(dict(engine="chirp", voice=v, rate=rate, shift=shift))
         for i, v in enumerate(c["gemini"]):
             cands.append(dict(engine="gemini", voice=v, model=NEW))
             if i == 0:
@@ -249,7 +273,8 @@ def main():
                 elif cand["engine"] == "gemini":
                     audio, err = google(text, cand["voice"], cand["model"], prompt)
                 else:
-                    audio, err = google(text, cand["voice"])
+                    audio, err = google(text, cand["voice"], rate=cand.get("rate", 1.0),
+                                        shift=cand.get("shift", 1.0))
                 if audio:
                     with open(os.path.join(OUT, fn), "wb") as fh:
                         fh.write(audio)
@@ -277,8 +302,13 @@ def write_page(results):
     for cid, r in results.items():
         rows = []
         for c in r["cands"]:
-            if c["engine"] == "chirp":
+            if c["engine"] == "chirp" and c.get("now"):
                 what, kind = f"{c['voice']}", "now · Chirp 3 HD (no direction)"
+            elif c["engine"] == "chirp":
+                tweaks = [f"speed ×{c['rate']}"] if c.get("rate", 1) != 1 else []
+                if c.get("shift", 1) != 1:
+                    tweaks.append(("higher" if c["shift"] > 1 else "deeper") + f" voice ×{c['shift']}")
+                what, kind = c["voice"], "Chirp 3 HD · " + (", ".join(tweaks) or "as is")
             elif c["engine"] == "gemini":
                 what = c["voice"]
                 kind = "Gemini 3.1 Flash TTS · directed" if c["model"] == NEW else "Gemini 2.5 Pro TTS · directed"
@@ -286,10 +316,13 @@ def write_page(results):
                 what, kind = c["voice"], "VOICEVOX"
             clips = "".join(
                 f'<audio controls preload="none" src="{e(f)}"></audio>' if f else
-                '<div class=err>failed</div>' for f in c["clips"])
+                '' for f in c["clips"])
             ps = [p for p in c["pitch"] if p]
             hz = f'<span class=hz>~{round(sum(ps)/len(ps))} Hz</span>' if ps else ""
-            err = f'<div class=err>{e(c["errors"][0])}</div>' if c["errors"] else ""
+            msg = c["errors"][0] if c["errors"] else ""
+            if "aiplatform" in msg or "Agent Platform" in msg:
+                msg = "Not available yet: the Google project needs the Agent Platform (Vertex AI) API enabled."
+            err = f'<div class=err>{e(msg)}</div>' if msg else ""
             rows.append(f'<div class="cand{" now" if c.get("now") else ""}"><div class=hd>'
                         f'<b class=tag>{cid}-{c["tag"]}</b> <b>{e(what)}</b> {hz}'
                         f'<div class=kind>{e(kind)}</div></div>{clips}{err}</div>')

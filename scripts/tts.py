@@ -55,6 +55,11 @@ def spoken(text, lesson, override=None):
     return re.sub(r"\s+", " ", s).strip()
 
 
+def spec(v):
+    """A voices.json entry: "Leda" (Chirp 3 HD) or {"voice", "model", "prompt"} (directed Gemini-TTS)."""
+    return v if isinstance(v, dict) else {"voice": v}
+
+
 def pick(pool, name):
     return pool[int(hashlib.md5(name.encode()).hexdigest(), 16) % len(pool)]
 
@@ -65,6 +70,11 @@ def voice_for(line, lesson):
     if line.get("me") or sp == "You":
         return VOICES["you"]
     if lesson.get("format") == "text":
+        r = lesson.get("reader")  # a text written by a character is read in their voice
+        if r in VOICES["cast"]:
+            return VOICES["cast"][r]
+        if r in VOICES.get("others", {}):
+            return VOICES["others"][r]
         return VOICES["narrator"]
     if sp in VOICES.get("others", {}):
         return VOICES["others"][sp]
@@ -104,20 +114,33 @@ def items(lesson):
 
 
 def synth(text, voice):
-    body = {"input": {"text": text},
-            "voice": {"languageCode": "ja-JP", "name": f"ja-JP-{VOICES['model']}-{voice}"},
-            "audioConfig": {"audioEncoding": "MP3"}}
+    v = spec(voice)
+    inp = {"text": text}
+    if v.get("model"):  # Gemini-TTS: same voice names, steered by a description of the speaker
+        sel = {"languageCode": "ja-JP", "name": v["voice"], "modelName": v["model"]}
+        inp["prompt"] = VOICES.get("direction", "") + v.get("prompt", "")
+    else:
+        sel = {"languageCode": "ja-JP", "name": f"ja-JP-{VOICES['model']}-{v['voice']}"}
+    body = {"input": inp, "voice": sel, "audioConfig": {"audioEncoding": "MP3"}}
     req = urllib.request.Request(f"{API}?key={KEY}", json.dumps(body).encode(),
                                  {"Content-Type": "application/json"})
-    for attempt in range(4):
+    for attempt in range(5):
         try:
-            with urllib.request.urlopen(req, timeout=60) as r:
+            with urllib.request.urlopen(req, timeout=120) as r:
                 return base64.b64decode(json.load(r)["audioContent"])
         except urllib.error.HTTPError as e:
-            if e.code in (429, 500, 503) and attempt < 3:
-                time.sleep(2 ** attempt * 3)
+            if e.code in (429, 500, 503) and attempt < 4:
+                time.sleep(2 ** attempt * 4)
                 continue
-            raise SystemExit(f"Google TTS error {e.code} for {voice}: {e.read().decode()[:300]}")
+            raise SystemExit(f"Google TTS error {e.code} for {v['voice']}: {e.read().decode()[:300]}")
+
+
+def tag(voice):
+    """What identifies a voice in the file name (unchanged for plain Chirp voices)."""
+    v = spec(voice)
+    if not v.get("model"):
+        return f"{VOICES['model']}|{v['voice']}"
+    return f"{v['model']}|{v['voice']}|{VOICES.get('direction', '')}{v.get('prompt', '')}"
 
 
 def build(lid):
@@ -126,7 +149,7 @@ def build(lid):
     os.makedirs(folder, exist_ok=True)
     mp, made = {}, 0
     for key, text, voice in items(lesson):
-        h = hashlib.sha1(f"{VOICES['model']}|{voice}|{text}".encode()).hexdigest()[:12]
+        h = hashlib.sha1(f"{tag(voice)}|{text}".encode()).hexdigest()[:12]
         path = f"{folder}/{h}.mp3"
         if not os.path.exists(path):
             with open(path, "wb") as fh:
