@@ -23,15 +23,55 @@
   "catalogue": 77,
   "hits": [
    [
+    "阿井田 茂",
+    "おじさん/バリトン"
+   ],
+   [
     "ろてじん（長老ボイス）",
     "老人/長老"
+   ],
+   [
+    "澤原 玄二郎",
+    "せっかち"
+   ],
+   [
+    "TANAKA",
+    "おとん"
+   ],
+   [
+    "Shinjou Tomoharu",
+    "中年"
    ]
   ]
+ },
+ {
+  "model": "阿井田 茂",
+  "uuid": "47e53151-a378-46f3-abee-ce13aa07feb1",
+  "keyword": "おじさん/バリトン",
+  "installed": true
  },
  {
   "model": "ろてじん（長老ボイス）",
   "uuid": "696c98a2-c0b7-4fe7-8cf2-c7e9b8a9bd82",
   "keyword": "老人/長老",
+  "installed": true
+ },
+ {
+  "model": "澤原 玄二郎",
+  "uuid": "2e1fdde8-d089-42d7-b64f-cf89952b1bdc",
+  "keyword": "せっかち",
+  "installed": true
+ },
+ {
+  "model": "TANAKA",
+  "uuid": "470a41e2-863f-4bf2-8a20-bf7cde0d8f7b",
+  "keyword": "おとん",
+  "installed": true
+ },
+ {
+  "model": "Shinjou Tomoharu",
+  "uuid": "098d4e66-2faf-4a00-889c-a1d2f05bde78",
+  "keyword": "中年",
   "installed": true
  }
 ]

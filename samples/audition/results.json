@@ -5,6 +5,84 @@
   "rows": [
    {
     "engine": "AivisSpeech",
+    "sid": 562825248,
+    "name": "Shinjou Tomoharu",
+    "style": "ノーマル",
+    "about": "落ち着いた中年男性のモデルです。",
+    "tags": [
+     "あああああ"
+    ],
+    "keyword": "中年",
+    "file": "sota_A562825248.mp3",
+    "hz": 211
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1628969216,
+    "name": "TANAKA",
+    "style": "ノーマル",
+    "about": "YouTubeの自動字幕読上げナレーション用に自作してみました。\nまだ未完成なところは、少しずつ改善していきたいと思います。",
+    "tags": [
+     "はい、どーもー。おとんです"
+    ],
+    "keyword": "おとん",
+    "file": "sota_A1628969216.mp3",
+    "hz": 111
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1628969217,
+    "name": "TANAKA",
+    "style": "Anger",
+    "about": "YouTubeの自動字幕読上げナレーション用に自作してみました。\nまだ未完成なところは、少しずつ改善していきたいと思います。",
+    "tags": [
+     "はい、どーもー。おとんです"
+    ],
+    "keyword": "おとん",
+    "file": "sota_A1628969217.mp3",
+    "hz": 117
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1628969218,
+    "name": "TANAKA",
+    "style": "Happy",
+    "about": "YouTubeの自動字幕読上げナレーション用に自作してみました。\nまだ未完成なところは、少しずつ改善していきたいと思います。",
+    "tags": [
+     "はい、どーもー。おとんです"
+    ],
+    "keyword": "おとん",
+    "file": "sota_A1628969218.mp3",
+    "hz": 119
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1628969219,
+    "name": "TANAKA",
+    "style": "Silly",
+    "about": "YouTubeの自動字幕読上げナレーション用に自作してみました。\nまだ未完成なところは、少しずつ改善していきたいと思います。",
+    "tags": [
+     "はい、どーもー。おとんです"
+    ],
+    "keyword": "おとん",
+    "file": "sota_A1628969219.mp3",
+    "hz": 113
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1628969220,
+    "name": "TANAKA",
+    "style": "surprise",
+    "about": "YouTubeの自動字幕読上げナレーション用に自作してみました。\nまだ未完成なところは、少しずつ改善していきたいと思います。",
+    "tags": [
+     "はい、どーもー。おとんです"
+    ],
+    "keyword": "おとん",
+    "file": "sota_A1628969220.mp3",
+    "hz": 109
+   },
+   {
+    "engine": "AivisSpeech",
     "sid": 888753760,
     "name": "まお",
     "style": "ノーマル",
@@ -12,7 +90,7 @@
     "tags": [],
     "keyword": "bundled",
     "file": "sota_A888753760.mp3",
-    "hz": 425
+    "hz": 413
    },
    {
     "engine": "AivisSpeech",
@@ -23,7 +101,7 @@
     "tags": [],
     "keyword": "bundled",
     "file": "sota_A888753761.mp3",
-    "hz": 413
+    "hz": 420
    },
    {
     "engine": "AivisSpeech",
@@ -34,7 +112,7 @@
     "tags": [],
     "keyword": "bundled",
     "file": "sota_A888753762.mp3",
-    "hz": 411
+    "hz": 413
    },
    {
     "engine": "AivisSpeech",
@@ -45,7 +123,7 @@
     "tags": [],
     "keyword": "bundled",
     "file": "sota_A888753763.mp3",
-    "hz": 413
+    "hz": 424
    },
    {
     "engine": "AivisSpeech",
@@ -56,7 +134,7 @@
     "tags": [],
     "keyword": "bundled",
     "file": "sota_A888753764.mp3",
-    "hz": 423
+    "hz": 431
    },
    {
     "engine": "AivisSpeech",
@@ -67,7 +145,7 @@
     "tags": [],
     "keyword": "bundled",
     "file": "sota_A888753765.mp3",
-    "hz": 424
+    "hz": 418
    },
    {
     "engine": "AivisSpeech",
@@ -89,7 +167,7 @@
     "tags": [],
     "keyword": "bundled",
     "file": "sota_A1878365376.mp3",
-    "hz": 401
+    "hz": 399
    },
    {
     "engine": "AivisSpeech",
@@ -100,7 +178,7 @@
     "tags": [],
     "keyword": "bundled",
     "file": "sota_A1878365377.mp3",
-    "hz": 408
+    "hz": 401
    },
    {
     "engine": "AivisSpeech",
@@ -111,7 +189,7 @@
     "tags": [],
     "keyword": "bundled",
     "file": "sota_A1878365378.mp3",
-    "hz": 399
+    "hz": 404
    },
    {
     "engine": "AivisSpeech",
@@ -123,6 +201,162 @@
     "keyword": "bundled",
     "file": "sota_A1878365379.mp3",
     "hz": 404
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 2029042368,
+    "name": "澤原 玄二郎",
+    "style": "ノーマル",
+    "about": "澤原 玄二郎（さわばる げんじろう）\nCV：古山キリヲ\n\nせっかちでヤンチャな猫ヤロー\n好物はピッツァ\nノイズ強めなのは仕様です　\nちゃんと出力後にノイズ除去かけてあげてね",
+    "tags": [
+     "けものフレンズアブリッジ"
+    ],
+    "keyword": "せっかち",
+    "file": "sota_A2029042368.mp3",
+    "hz": 250
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 2029042369,
+    "name": "澤原 玄二郎",
+    "style": "close",
+    "about": "澤原 玄二郎（さわばる げんじろう）\nCV：古山キリヲ\n\nせっかちでヤンチャな猫ヤロー\n好物はピッツァ\nノイズ強めなのは仕様です　\nちゃんと出力後にノイズ除去かけてあげてね",
+    "tags": [
+     "けものフレンズアブリッジ"
+    ],
+    "keyword": "せっかち",
+    "file": "sota_A2029042369.mp3",
+    "hz": 248
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 2029042370,
+    "name": "澤原 玄二郎",
+    "style": "close-shout",
+    "about": "澤原 玄二郎（さわばる げんじろう）\nCV：古山キリヲ\n\nせっかちでヤンチャな猫ヤロー\n好物はピッツァ\nノイズ強めなのは仕様です　\nちゃんと出力後にノイズ除去かけてあげてね",
+    "tags": [
+     "けものフレンズアブリッジ"
+    ],
+    "keyword": "せっかち",
+    "file": "sota_A2029042370.mp3",
+    "hz": 266
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 2029042371,
+    "name": "澤原 玄二郎",
+    "style": "far",
+    "about": "澤原 玄二郎（さわばる げんじろう）\nCV：古山キリヲ\n\nせっかちでヤンチャな猫ヤロー\n好物はピッツァ\nノイズ強めなのは仕様です　\nちゃんと出力後にノイズ除去かけてあげてね",
+    "tags": [
+     "けものフレンズアブリッジ"
+    ],
+    "keyword": "せっかち",
+    "file": "sota_A2029042371.mp3",
+    "hz": 271
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 2029042372,
+    "name": "澤原 玄二郎",
+    "style": "far-shout",
+    "about": "澤原 玄二郎（さわばる げんじろう）\nCV：古山キリヲ\n\nせっかちでヤンチャな猫ヤロー\n好物はピッツァ\nノイズ強めなのは仕様です　\nちゃんと出力後にノイズ除去かけてあげてね",
+    "tags": [
+     "けものフレンズアブリッジ"
+    ],
+    "keyword": "せっかち",
+    "file": "sota_A2029042372.mp3",
+    "hz": 256
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1310138976,
+    "name": "阿井田 茂",
+    "style": "ノーマル",
+    "about": "阿井田 茂（あいだ しげる）　\nCV：古山キリヲ\n\n通称：モアイさん\nバリトンボイスの朗らかおじさん",
+    "tags": [
+     "文化系心臓部"
+    ],
+    "keyword": "おじさん/バリトン",
+    "file": "sota_A1310138976.mp3",
+    "hz": 207
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1310138977,
+    "name": "阿井田 茂",
+    "style": "Calm",
+    "about": "阿井田 茂（あいだ しげる）　\nCV：古山キリヲ\n\n通称：モアイさん\nバリトンボイスの朗らかおじさん",
+    "tags": [
+     "文化系心臓部"
+    ],
+    "keyword": "おじさん/バリトン",
+    "file": "sota_A1310138977.mp3",
+    "hz": 209
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1310138978,
+    "name": "阿井田 茂",
+    "style": "Far",
+    "about": "阿井田 茂（あいだ しげる）　\nCV：古山キリヲ\n\n通称：モアイさん\nバリトンボイスの朗らかおじさん",
+    "tags": [
+     "文化系心臓部"
+    ],
+    "keyword": "おじさん/バリトン",
+    "file": "sota_A1310138978.mp3",
+    "hz": 205
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1310138979,
+    "name": "阿井田 茂",
+    "style": "Heavy",
+    "about": "阿井田 茂（あいだ しげる）　\nCV：古山キリヲ\n\n通称：モアイさん\nバリトンボイスの朗らかおじさん",
+    "tags": [
+     "文化系心臓部"
+    ],
+    "keyword": "おじさん/バリトン",
+    "file": "sota_A1310138979.mp3",
+    "hz": 205
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1310138980,
+    "name": "阿井田 茂",
+    "style": "Mid",
+    "about": "阿井田 茂（あいだ しげる）　\nCV：古山キリヲ\n\n通称：モアイさん\nバリトンボイスの朗らかおじさん",
+    "tags": [
+     "文化系心臓部"
+    ],
+    "keyword": "おじさん/バリトン",
+    "file": "sota_A1310138980.mp3",
+    "hz": 210
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1310138981,
+    "name": "阿井田 茂",
+    "style": "Shout",
+    "about": "阿井田 茂（あいだ しげる）　\nCV：古山キリヲ\n\n通称：モアイさん\nバリトンボイスの朗らかおじさん",
+    "tags": [
+     "文化系心臓部"
+    ],
+    "keyword": "おじさん/バリトン",
+    "file": "sota_A1310138981.mp3",
+    "hz": 228
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1310138982,
+    "name": "阿井田 茂",
+    "style": "Surprise",
+    "about": "阿井田 茂（あいだ しげる）　\nCV：古山キリヲ\n\n通称：モアイさん\nバリトンボイスの朗らかおじさん",
+    "tags": [
+     "文化系心臓部"
+    ],
+    "keyword": "おじさん/バリトン",
+    "file": "sota_A1310138982.mp3",
+    "hz": 211
    },
    {
     "engine": "VOICEVOX",
@@ -1156,6 +1390,84 @@
   "rows": [
    {
     "engine": "AivisSpeech",
+    "sid": 562825248,
+    "name": "Shinjou Tomoharu",
+    "style": "ノーマル",
+    "about": "落ち着いた中年男性のモデルです。",
+    "tags": [
+     "あああああ"
+    ],
+    "keyword": "中年",
+    "file": "hana_A562825248.mp3",
+    "hz": 129
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1628969216,
+    "name": "TANAKA",
+    "style": "ノーマル",
+    "about": "YouTubeの自動字幕読上げナレーション用に自作してみました。\nまだ未完成なところは、少しずつ改善していきたいと思います。",
+    "tags": [
+     "はい、どーもー。おとんです"
+    ],
+    "keyword": "おとん",
+    "file": "hana_A1628969216.mp3",
+    "hz": 110
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1628969217,
+    "name": "TANAKA",
+    "style": "Anger",
+    "about": "YouTubeの自動字幕読上げナレーション用に自作してみました。\nまだ未完成なところは、少しずつ改善していきたいと思います。",
+    "tags": [
+     "はい、どーもー。おとんです"
+    ],
+    "keyword": "おとん",
+    "file": "hana_A1628969217.mp3",
+    "hz": 111
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1628969218,
+    "name": "TANAKA",
+    "style": "Happy",
+    "about": "YouTubeの自動字幕読上げナレーション用に自作してみました。\nまだ未完成なところは、少しずつ改善していきたいと思います。",
+    "tags": [
+     "はい、どーもー。おとんです"
+    ],
+    "keyword": "おとん",
+    "file": "hana_A1628969218.mp3",
+    "hz": 114
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1628969219,
+    "name": "TANAKA",
+    "style": "Silly",
+    "about": "YouTubeの自動字幕読上げナレーション用に自作してみました。\nまだ未完成なところは、少しずつ改善していきたいと思います。",
+    "tags": [
+     "はい、どーもー。おとんです"
+    ],
+    "keyword": "おとん",
+    "file": "hana_A1628969219.mp3",
+    "hz": 106
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1628969220,
+    "name": "TANAKA",
+    "style": "surprise",
+    "about": "YouTubeの自動字幕読上げナレーション用に自作してみました。\nまだ未完成なところは、少しずつ改善していきたいと思います。",
+    "tags": [
+     "はい、どーもー。おとんです"
+    ],
+    "keyword": "おとん",
+    "file": "hana_A1628969220.mp3",
+    "hz": 104
+   },
+   {
+    "engine": "AivisSpeech",
     "sid": 888753760,
     "name": "まお",
     "style": "ノーマル",
@@ -1163,7 +1475,7 @@
     "tags": [],
     "keyword": "bundled",
     "file": "hana_A888753760.mp3",
-    "hz": 411
+    "hz": 413
    },
    {
     "engine": "AivisSpeech",
@@ -1174,7 +1486,7 @@
     "tags": [],
     "keyword": "bundled",
     "file": "hana_A888753761.mp3",
-    "hz": 404
+    "hz": 415
    },
    {
     "engine": "AivisSpeech",
@@ -1185,7 +1497,7 @@
     "tags": [],
     "keyword": "bundled",
     "file": "hana_A888753762.mp3",
-    "hz": 406
+    "hz": 397
    },
    {
     "engine": "AivisSpeech",
@@ -1196,7 +1508,7 @@
     "tags": [],
     "keyword": "bundled",
     "file": "hana_A888753763.mp3",
-    "hz": 411
+    "hz": 408
    },
    {
     "engine": "AivisSpeech",
@@ -1207,7 +1519,7 @@
     "tags": [],
     "keyword": "bundled",
     "file": "hana_A888753764.mp3",
-    "hz": 408
+    "hz": 406
    },
    {
     "engine": "AivisSpeech",
@@ -1229,7 +1541,7 @@
     "tags": [],
     "keyword": "老人/長老",
     "file": "hana_A391794336.mp3",
-    "hz": 256
+    "hz": 254
    },
    {
     "engine": "AivisSpeech",
@@ -1240,7 +1552,7 @@
     "tags": [],
     "keyword": "bundled",
     "file": "hana_A1878365376.mp3",
-    "hz": 404
+    "hz": 406
    },
    {
     "engine": "AivisSpeech",
@@ -1251,7 +1563,7 @@
     "tags": [],
     "keyword": "bundled",
     "file": "hana_A1878365377.mp3",
-    "hz": 406
+    "hz": 407
    },
    {
     "engine": "AivisSpeech",
@@ -1262,7 +1574,7 @@
     "tags": [],
     "keyword": "bundled",
     "file": "hana_A1878365378.mp3",
-    "hz": 401
+    "hz": 404
    },
    {
     "engine": "AivisSpeech",
@@ -1273,7 +1585,163 @@
     "tags": [],
     "keyword": "bundled",
     "file": "hana_A1878365379.mp3",
-    "hz": 404
+    "hz": 408
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 2029042368,
+    "name": "澤原 玄二郎",
+    "style": "ノーマル",
+    "about": "澤原 玄二郎（さわばる げんじろう）\nCV：古山キリヲ\n\nせっかちでヤンチャな猫ヤロー\n好物はピッツァ\nノイズ強めなのは仕様です　\nちゃんと出力後にノイズ除去かけてあげてね",
+    "tags": [
+     "けものフレンズアブリッジ"
+    ],
+    "keyword": "せっかち",
+    "file": "hana_A2029042368.mp3",
+    "hz": 161
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 2029042369,
+    "name": "澤原 玄二郎",
+    "style": "close",
+    "about": "澤原 玄二郎（さわばる げんじろう）\nCV：古山キリヲ\n\nせっかちでヤンチャな猫ヤロー\n好物はピッツァ\nノイズ強めなのは仕様です　\nちゃんと出力後にノイズ除去かけてあげてね",
+    "tags": [
+     "けものフレンズアブリッジ"
+    ],
+    "keyword": "せっかち",
+    "file": "hana_A2029042369.mp3",
+    "hz": 170
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 2029042370,
+    "name": "澤原 玄二郎",
+    "style": "close-shout",
+    "about": "澤原 玄二郎（さわばる げんじろう）\nCV：古山キリヲ\n\nせっかちでヤンチャな猫ヤロー\n好物はピッツァ\nノイズ強めなのは仕様です　\nちゃんと出力後にノイズ除去かけてあげてね",
+    "tags": [
+     "けものフレンズアブリッジ"
+    ],
+    "keyword": "せっかち",
+    "file": "hana_A2029042370.mp3",
+    "hz": 171
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 2029042371,
+    "name": "澤原 玄二郎",
+    "style": "far",
+    "about": "澤原 玄二郎（さわばる げんじろう）\nCV：古山キリヲ\n\nせっかちでヤンチャな猫ヤロー\n好物はピッツァ\nノイズ強めなのは仕様です　\nちゃんと出力後にノイズ除去かけてあげてね",
+    "tags": [
+     "けものフレンズアブリッジ"
+    ],
+    "keyword": "せっかち",
+    "file": "hana_A2029042371.mp3",
+    "hz": 178
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 2029042372,
+    "name": "澤原 玄二郎",
+    "style": "far-shout",
+    "about": "澤原 玄二郎（さわばる げんじろう）\nCV：古山キリヲ\n\nせっかちでヤンチャな猫ヤロー\n好物はピッツァ\nノイズ強めなのは仕様です　\nちゃんと出力後にノイズ除去かけてあげてね",
+    "tags": [
+     "けものフレンズアブリッジ"
+    ],
+    "keyword": "せっかち",
+    "file": "hana_A2029042372.mp3",
+    "hz": 162
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1310138976,
+    "name": "阿井田 茂",
+    "style": "ノーマル",
+    "about": "阿井田 茂（あいだ しげる）　\nCV：古山キリヲ\n\n通称：モアイさん\nバリトンボイスの朗らかおじさん",
+    "tags": [
+     "文化系心臓部"
+    ],
+    "keyword": "おじさん/バリトン",
+    "file": "hana_A1310138976.mp3",
+    "hz": 161
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1310138977,
+    "name": "阿井田 茂",
+    "style": "Calm",
+    "about": "阿井田 茂（あいだ しげる）　\nCV：古山キリヲ\n\n通称：モアイさん\nバリトンボイスの朗らかおじさん",
+    "tags": [
+     "文化系心臓部"
+    ],
+    "keyword": "おじさん/バリトン",
+    "file": "hana_A1310138977.mp3",
+    "hz": 148
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1310138978,
+    "name": "阿井田 茂",
+    "style": "Far",
+    "about": "阿井田 茂（あいだ しげる）　\nCV：古山キリヲ\n\n通称：モアイさん\nバリトンボイスの朗らかおじさん",
+    "tags": [
+     "文化系心臓部"
+    ],
+    "keyword": "おじさん/バリトン",
+    "file": "hana_A1310138978.mp3",
+    "hz": 158
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1310138979,
+    "name": "阿井田 茂",
+    "style": "Heavy",
+    "about": "阿井田 茂（あいだ しげる）　\nCV：古山キリヲ\n\n通称：モアイさん\nバリトンボイスの朗らかおじさん",
+    "tags": [
+     "文化系心臓部"
+    ],
+    "keyword": "おじさん/バリトン",
+    "file": "hana_A1310138979.mp3",
+    "hz": 149
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1310138980,
+    "name": "阿井田 茂",
+    "style": "Mid",
+    "about": "阿井田 茂（あいだ しげる）　\nCV：古山キリヲ\n\n通称：モアイさん\nバリトンボイスの朗らかおじさん",
+    "tags": [
+     "文化系心臓部"
+    ],
+    "keyword": "おじさん/バリトン",
+    "file": "hana_A1310138980.mp3",
+    "hz": 149
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1310138981,
+    "name": "阿井田 茂",
+    "style": "Shout",
+    "about": "阿井田 茂（あいだ しげる）　\nCV：古山キリヲ\n\n通称：モアイさん\nバリトンボイスの朗らかおじさん",
+    "tags": [
+     "文化系心臓部"
+    ],
+    "keyword": "おじさん/バリトン",
+    "file": "hana_A1310138981.mp3",
+    "hz": 172
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1310138982,
+    "name": "阿井田 茂",
+    "style": "Surprise",
+    "about": "阿井田 茂（あいだ しげる）　\nCV：古山キリヲ\n\n通称：モアイさん\nバリトンボイスの朗らかおじさん",
+    "tags": [
+     "文化系心臓部"
+    ],
+    "keyword": "おじさん/バリトン",
+    "file": "hana_A1310138982.mp3",
+    "hz": 161
    },
    {
     "engine": "VOICEVOX",
@@ -2307,6 +2775,84 @@
   "rows": [
    {
     "engine": "AivisSpeech",
+    "sid": 562825248,
+    "name": "Shinjou Tomoharu",
+    "style": "ノーマル",
+    "about": "落ち着いた中年男性のモデルです。",
+    "tags": [
+     "あああああ"
+    ],
+    "keyword": "中年",
+    "file": "tanaka_A562825248.mp3",
+    "hz": 146
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1628969216,
+    "name": "TANAKA",
+    "style": "ノーマル",
+    "about": "YouTubeの自動字幕読上げナレーション用に自作してみました。\nまだ未完成なところは、少しずつ改善していきたいと思います。",
+    "tags": [
+     "はい、どーもー。おとんです"
+    ],
+    "keyword": "おとん",
+    "file": "tanaka_A1628969216.mp3",
+    "hz": 155
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1628969217,
+    "name": "TANAKA",
+    "style": "Anger",
+    "about": "YouTubeの自動字幕読上げナレーション用に自作してみました。\nまだ未完成なところは、少しずつ改善していきたいと思います。",
+    "tags": [
+     "はい、どーもー。おとんです"
+    ],
+    "keyword": "おとん",
+    "file": "tanaka_A1628969217.mp3",
+    "hz": 124
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1628969218,
+    "name": "TANAKA",
+    "style": "Happy",
+    "about": "YouTubeの自動字幕読上げナレーション用に自作してみました。\nまだ未完成なところは、少しずつ改善していきたいと思います。",
+    "tags": [
+     "はい、どーもー。おとんです"
+    ],
+    "keyword": "おとん",
+    "file": "tanaka_A1628969218.mp3",
+    "hz": 135
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1628969219,
+    "name": "TANAKA",
+    "style": "Silly",
+    "about": "YouTubeの自動字幕読上げナレーション用に自作してみました。\nまだ未完成なところは、少しずつ改善していきたいと思います。",
+    "tags": [
+     "はい、どーもー。おとんです"
+    ],
+    "keyword": "おとん",
+    "file": "tanaka_A1628969219.mp3",
+    "hz": 127
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1628969220,
+    "name": "TANAKA",
+    "style": "surprise",
+    "about": "YouTubeの自動字幕読上げナレーション用に自作してみました。\nまだ未完成なところは、少しずつ改善していきたいと思います。",
+    "tags": [
+     "はい、どーもー。おとんです"
+    ],
+    "keyword": "おとん",
+    "file": "tanaka_A1628969220.mp3",
+    "hz": 132
+   },
+   {
+    "engine": "AivisSpeech",
     "sid": 888753760,
     "name": "まお",
     "style": "ノーマル",
@@ -2314,7 +2860,7 @@
     "tags": [],
     "keyword": "bundled",
     "file": "tanaka_A888753760.mp3",
-    "hz": 428
+    "hz": 418
    },
    {
     "engine": "AivisSpeech",
@@ -2325,7 +2871,7 @@
     "tags": [],
     "keyword": "bundled",
     "file": "tanaka_A888753761.mp3",
-    "hz": 418
+    "hz": 434
    },
    {
     "engine": "AivisSpeech",
@@ -2336,7 +2882,7 @@
     "tags": [],
     "keyword": "bundled",
     "file": "tanaka_A888753762.mp3",
-    "hz": 408
+    "hz": 434
    },
    {
     "engine": "AivisSpeech",
@@ -2347,7 +2893,7 @@
     "tags": [],
     "keyword": "bundled",
     "file": "tanaka_A888753763.mp3",
-    "hz": 434
+    "hz": 419
    },
    {
     "engine": "AivisSpeech",
@@ -2358,7 +2904,7 @@
     "tags": [],
     "keyword": "bundled",
     "file": "tanaka_A888753764.mp3",
-    "hz": 438
+    "hz": 414
    },
    {
     "engine": "AivisSpeech",
@@ -2369,7 +2915,7 @@
     "tags": [],
     "keyword": "bundled",
     "file": "tanaka_A888753765.mp3",
-    "hz": 404
+    "hz": 406
    },
    {
     "engine": "AivisSpeech",
@@ -2380,7 +2926,7 @@
     "tags": [],
     "keyword": "老人/長老",
     "file": "tanaka_A391794336.mp3",
-    "hz": 204
+    "hz": 210
    },
    {
     "engine": "AivisSpeech",
@@ -2391,7 +2937,7 @@
     "tags": [],
     "keyword": "bundled",
     "file": "tanaka_A1878365376.mp3",
-    "hz": 381
+    "hz": 374
    },
    {
     "engine": "AivisSpeech",
@@ -2413,7 +2959,7 @@
     "tags": [],
     "keyword": "bundled",
     "file": "tanaka_A1878365378.mp3",
-    "hz": 367
+    "hz": 374
    },
    {
     "engine": "AivisSpeech",
@@ -2424,7 +2970,163 @@
     "tags": [],
     "keyword": "bundled",
     "file": "tanaka_A1878365379.mp3",
-    "hz": 377
+    "hz": 383
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 2029042368,
+    "name": "澤原 玄二郎",
+    "style": "ノーマル",
+    "about": "澤原 玄二郎（さわばる げんじろう）\nCV：古山キリヲ\n\nせっかちでヤンチャな猫ヤロー\n好物はピッツァ\nノイズ強めなのは仕様です　\nちゃんと出力後にノイズ除去かけてあげてね",
+    "tags": [
+     "けものフレンズアブリッジ"
+    ],
+    "keyword": "せっかち",
+    "file": "tanaka_A2029042368.mp3",
+    "hz": 170
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 2029042369,
+    "name": "澤原 玄二郎",
+    "style": "close",
+    "about": "澤原 玄二郎（さわばる げんじろう）\nCV：古山キリヲ\n\nせっかちでヤンチャな猫ヤロー\n好物はピッツァ\nノイズ強めなのは仕様です　\nちゃんと出力後にノイズ除去かけてあげてね",
+    "tags": [
+     "けものフレンズアブリッジ"
+    ],
+    "keyword": "せっかち",
+    "file": "tanaka_A2029042369.mp3",
+    "hz": 179
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 2029042370,
+    "name": "澤原 玄二郎",
+    "style": "close-shout",
+    "about": "澤原 玄二郎（さわばる げんじろう）\nCV：古山キリヲ\n\nせっかちでヤンチャな猫ヤロー\n好物はピッツァ\nノイズ強めなのは仕様です　\nちゃんと出力後にノイズ除去かけてあげてね",
+    "tags": [
+     "けものフレンズアブリッジ"
+    ],
+    "keyword": "せっかち",
+    "file": "tanaka_A2029042370.mp3",
+    "hz": 173
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 2029042371,
+    "name": "澤原 玄二郎",
+    "style": "far",
+    "about": "澤原 玄二郎（さわばる げんじろう）\nCV：古山キリヲ\n\nせっかちでヤンチャな猫ヤロー\n好物はピッツァ\nノイズ強めなのは仕様です　\nちゃんと出力後にノイズ除去かけてあげてね",
+    "tags": [
+     "けものフレンズアブリッジ"
+    ],
+    "keyword": "せっかち",
+    "file": "tanaka_A2029042371.mp3",
+    "hz": 189
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 2029042372,
+    "name": "澤原 玄二郎",
+    "style": "far-shout",
+    "about": "澤原 玄二郎（さわばる げんじろう）\nCV：古山キリヲ\n\nせっかちでヤンチャな猫ヤロー\n好物はピッツァ\nノイズ強めなのは仕様です　\nちゃんと出力後にノイズ除去かけてあげてね",
+    "tags": [
+     "けものフレンズアブリッジ"
+    ],
+    "keyword": "せっかち",
+    "file": "tanaka_A2029042372.mp3",
+    "hz": 176
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1310138976,
+    "name": "阿井田 茂",
+    "style": "ノーマル",
+    "about": "阿井田 茂（あいだ しげる）　\nCV：古山キリヲ\n\n通称：モアイさん\nバリトンボイスの朗らかおじさん",
+    "tags": [
+     "文化系心臓部"
+    ],
+    "keyword": "おじさん/バリトン",
+    "file": "tanaka_A1310138976.mp3",
+    "hz": 159
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1310138977,
+    "name": "阿井田 茂",
+    "style": "Calm",
+    "about": "阿井田 茂（あいだ しげる）　\nCV：古山キリヲ\n\n通称：モアイさん\nバリトンボイスの朗らかおじさん",
+    "tags": [
+     "文化系心臓部"
+    ],
+    "keyword": "おじさん/バリトン",
+    "file": "tanaka_A1310138977.mp3",
+    "hz": 148
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1310138978,
+    "name": "阿井田 茂",
+    "style": "Far",
+    "about": "阿井田 茂（あいだ しげる）　\nCV：古山キリヲ\n\n通称：モアイさん\nバリトンボイスの朗らかおじさん",
+    "tags": [
+     "文化系心臓部"
+    ],
+    "keyword": "おじさん/バリトン",
+    "file": "tanaka_A1310138978.mp3",
+    "hz": 167
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1310138979,
+    "name": "阿井田 茂",
+    "style": "Heavy",
+    "about": "阿井田 茂（あいだ しげる）　\nCV：古山キリヲ\n\n通称：モアイさん\nバリトンボイスの朗らかおじさん",
+    "tags": [
+     "文化系心臓部"
+    ],
+    "keyword": "おじさん/バリトン",
+    "file": "tanaka_A1310138979.mp3",
+    "hz": 161
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1310138980,
+    "name": "阿井田 茂",
+    "style": "Mid",
+    "about": "阿井田 茂（あいだ しげる）　\nCV：古山キリヲ\n\n通称：モアイさん\nバリトンボイスの朗らかおじさん",
+    "tags": [
+     "文化系心臓部"
+    ],
+    "keyword": "おじさん/バリトン",
+    "file": "tanaka_A1310138980.mp3",
+    "hz": 171
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1310138981,
+    "name": "阿井田 茂",
+    "style": "Shout",
+    "about": "阿井田 茂（あいだ しげる）　\nCV：古山キリヲ\n\n通称：モアイさん\nバリトンボイスの朗らかおじさん",
+    "tags": [
+     "文化系心臓部"
+    ],
+    "keyword": "おじさん/バリトン",
+    "file": "tanaka_A1310138981.mp3",
+    "hz": 161
+   },
+   {
+    "engine": "AivisSpeech",
+    "sid": 1310138982,
+    "name": "阿井田 茂",
+    "style": "Surprise",
+    "about": "阿井田 茂（あいだ しげる）　\nCV：古山キリヲ\n\n通称：モアイさん\nバリトンボイスの朗らかおじさん",
+    "tags": [
+     "文化系心臓部"
+    ],
+    "keyword": "おじさん/バリトン",
+    "file": "tanaka_A1310138982.mp3",
+    "hz": 167
    },
    {
     "engine": "VOICEVOX",
