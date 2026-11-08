@@ -55,6 +55,19 @@ ENGINES = [
                "minute. Free tier on an AI Studio key without billing: 10 clips a day, too few for daily lessons.",
          you="Not used in the app yet. Tested here on the free tier (cards marked “directed”).",
          cost="paid"),
+    dict(id="gemini38", name="Google Gemini 3.8 Flash TTS / Flash-Lite TTS", tag="Newest (Sept 2026) · voice design",
+         what="Google's newest speech models. Besides directing a voice, they can DESIGN a brand-new voice from a "
+              "description (age, timbre, accent) and keep it as a reusable voice id, and they have a library of 115 "
+              "native Japanese voices with age and accent (Tokyo, Osaka, Fukuoka; ages 21–74, no children). Flash = best "
+              "acting; Flash-Lite = cheaper and faster. Google refuses to design voices of minors, so Sōta and Mio can't "
+              "get one.",
+         runs="Google's servers, through the Gemini API with your key GEMINI_API_KEY.",
+         price="Flash TTS: $0.50 per million text tokens + $9 per million audio tokens (≈ $0.0135 per minute) until 31 Dec "
+               "2026, then $1 + $18 (≈ $0.027/min). Flash-Lite TTS: $0.50 + $6 (≈ $0.009/min), then $1 + $12 (≈ $0.018/min). "
+               "Free tier without billing: 10 clips a day per model.",
+         you="Not used in the app yet. Designed voices for 9 characters are stored in your Google project (voices38.json); "
+             "samples are in each character's comparison below, marked “3.8”.",
+         cost="paid"),
     dict(id="aivis", name="AivisSpeech + AivisHub", tag="Free, open source (Japan)",
          what="A newer free Japanese engine with very natural voices made by the community (AivisHub has 77). "
               "Scanned all of them: no child or grandmother, a few middle-aged men.",
@@ -138,7 +151,7 @@ th{font-size:12px;color:var(--mut);font-weight:600}
 .lines{margin:6px 0;padding-left:20px} .lines li{margin:2px 0}
 details{font-size:13px;color:var(--mut);margin:4px 0 8px}
 .cand{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;margin:8px 0}
-.cand.inuse{border:2px solid var(--acc)} .cand.before{opacity:.8;border-style:dashed}
+.cand.inuse{border:2px solid var(--acc)} .cand.g38{background:var(--soft)} .cand.before{opacity:.8;border-style:dashed}
 .tag{color:var(--acc);font-family:ui-monospace,monospace;font-weight:700}
 .kind{font-size:12px;color:var(--mut)} .hz{float:right;font-size:12px;color:var(--mut)}
 audio{width:100%;height:36px;display:block;margin:5px 0 0}
@@ -197,11 +210,19 @@ Estimate from your {nles} lessons so far.</p></div>
 <table><tr><th>Option</th><th>Speech a month</th><th>Cost</th></tr>
 <tr><td>Only Kenta (Osaka accent)</td><td>~2 min</td><td>≈ $0.05</td></tr>
 <tr><td>Everyone not on VOICEVOX (Kenta, Yuki, Ren, Sato, Hayato, Keiko, you)</td><td>~23 min</td><td>≈ ${gem_all:.2f}</td></tr>
-<tr><td>Same with Gemini 3.1 Flash / 2.5 Pro TTS</td><td>~23 min</td><td>≈ ${gem_all * 2:.2f}</td></tr></table>
+<tr><td>Same with Gemini 3.1 Flash / 2.5 Pro TTS</td><td>~23 min</td><td>≈ ${gem_all * 2:.2f}</td></tr>
+<tr><td><b>Gemini 3.8 Flash-Lite</b>, designed voices for the 9 adults</td><td>~30 min</td><td>≈ $0.27 (≈ $0.54 from 2027)</td></tr>
+<tr><td><b>Gemini 3.8 Flash</b>, designed voices for the 9 adults</td><td>~30 min</td><td>≈ $0.41 (≈ $0.81 from 2027)</td></tr></table>
 <p class=mut style="font-size:13px">Without billing, an AI Studio key gives 10 clips a day: enough to test here, not for daily lessons.
 A budget alert in Google Cloud can cap any surprise.</p></div>"""
 
-    # 4 · compare per character
+    # 4 · compare per character (+ Gemini 3.8 samples from samples/lab38)
+    lab38 = {}
+    if os.path.exists("samples/lab38/results.json"):
+        lab38 = json.load(open("samples/lab38/results.json", encoding="utf-8"))
+    lib = {}
+    if os.path.exists("samples/lab38/library.json"):
+        lib = {x["id"]: x for x in json.load(open("samples/lab38/library.json", encoding="utf-8")) if isinstance(x, dict)}
     secs = []
     for cid, r in results.items():
         jp, sub = PEOPLE.get(cid, (r["label"], ""))
@@ -237,7 +258,38 @@ A budget alert in Google Cloud can cap any surprise.</p></div>"""
             mark = '<span class="badge use">in use</span>' if use else ""
             rows.append(f'<div class="cand {cls}"><b class=tag>{cid}-{c["tag"]}</b> <b>{e(c["voice"])}</b>{mark}{hz}'
                         f'<div class=kind>{e(kind)}</div>{clips}</div>')
+        g = lab38.get(cid)
+        waiting38 = 0
+        if g:
+            for w in g["rows"]:
+                if not any(w["clips"]):
+                    waiting38 += 1
+                    continue
+                lite = "lite" in w["model"]
+                model = "Gemini 3.8 Flash-Lite TTS" if lite else "Gemini 3.8 Flash TTS"
+                price = "≈ $0.009/min" if lite else "≈ $0.0135/min"
+                if w["kind"] == "designed":
+                    kind = f"{model} · voice designed from the description below · {price}"
+                    name = "Designed voice"
+                else:
+                    info = lib.get(w["voice"], {})
+                    kind = f"{model} · Japanese voice library: {info.get('description', w['voice'])} · {price}"
+                    name = "Library voice"
+                clips = "".join(f'<audio controls preload="none" src="../lab38/{e(f)}"></audio>' if f else
+                                '<div class=miss>(line not made yet: daily free quota)</div>' for f in w["clips"])
+                tag = w["tag"].replace("-", "-38")
+                rows.append(f'<div class="cand g38"><b class=tag>{tag}</b> <b>{e(name)}</b> <span class="badge paid">3.8</span>'
+                            f'<div class=kind>{e(kind)}</div>{clips}</div>')
         lines = "".join(f"<li>{e(l)}</li>" for l in r["lines"])
+        if g:
+            lines_extra = (f'<details><summary>Voice design description (Gemini 3.8)</summary><p>{e(g["design"])}</p>'
+                           f'<p>Style per line: {e(g["style"])}</p></details>')
+        elif cid in ("sota", "mio"):
+            lines_extra = '<p class=mut style="font-size:13px">Gemini 3.8 refuses to design voices of minors, so no designed voice here.</p>'
+        else:
+            lines_extra = ""
+        if waiting38:
+            lines_extra += f'<p class=mut style="font-size:13px">{waiting38} more Gemini 3.8 candidates wait for the free daily quota (or billing).</p>'
         note = (f'<p class=mut style="font-size:13px">{missing} more directed voices wait for quota (free tier: 10 clips a day).</p>'
                 if missing else "")
         now = describe(v) if v else None
@@ -245,7 +297,7 @@ A budget alert in Google Cloud can cap any surprise.</p></div>"""
         secs.append(f'<section class=char id={cid} style="border-top:1px solid var(--line);margin-top:26px;padding-top:14px"><div class=chead><img src="{ICON.format(cid)}" alt="">'
                     f'<div><h3 style="font-size:18px">{e(jp)}</h3><div class=mut style="font-size:13px">{e(sub)}</div></div></div>'
                     f'{nowline}<ol class=lines>{lines}</ol><details><summary>Description given to the directed voices</summary>'
-                    f'<p>{e(r["prompt"])}</p></details>{"".join(rows)}{note}</section>')
+                    f'<p>{e(r["prompt"])}</p></details>{lines_extra}{"".join(rows)}{note}</section>')
     nav = "".join(f'<a href="#{cid}">{e(PEOPLE.get(cid, (cid,))[0])}</a>' for cid in results)
 
     return f"""<!doctype html><html lang=ja><head><meta charset=utf-8>
@@ -274,7 +326,7 @@ To change a voice, send the tag (e.g. <b>kenta-B</b>).</p>
 {"".join(secs)}
 
 <footer>Prices: <a href="https://cloud.google.com/text-to-speech/pricing">Google Cloud Text-to-Speech pricing</a> ·
-<a href="https://ai.google.dev/gemini-api/docs/pricing">Gemini API pricing</a> · <a href="https://voicevox.hiroshiba.jp/">VOICEVOX</a> ·
+<a href="https://ai.google.dev/gemini-api/docs/pricing">Gemini API pricing</a> · <a href="https://ai.google.dev/gemini-api/docs/voice-design">Gemini voice design</a> · <a href="https://voicevox.hiroshiba.jp/">VOICEVOX</a> ·
 <a href="https://hub.aivis-project.com/">AivisHub</a>.<br>VOICEVOX:白上虎太郎 · VOICEVOX:ちび式じい · VOICEVOX:春日部つむぎ</footer>
 </body></html>"""
 
