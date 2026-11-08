@@ -10,34 +10,34 @@
  "context": "Your first full day on the Tanaka farm started at 5 a.m. Tonight Yuki, your friend in Tokyo, messages you on LINE to ask how it went. Today: describing how you feel and what people around you are like.",
  "phrases": [
   {
-   "jp": "{慣|な|to get used to}れない{生活|せいかつ|daily life}で、ちょっと{疲|つか}れ{気味|ぎみ|a bit, slightly (so)}です。",
+   "jp": "{慣れない|なれない|to get used to|3}{生活|せいかつ|daily life|3}で、ちょっと{疲|つか}れ{気味|ぎみ|a bit, slightly (so)|2}です。",
    "en": "This new life I'm not used to has left me a bit tired.",
    "register": "polite",
    "note": "〜{気味|ぎみ} = a touch of: {疲|つか}れ{気味|ぎみ}, {風邪|かぜ}{気味|ぎみ} (a bit of a cold). Softer than just {疲|つか}れました."
   },
   {
-   "jp": "{家族|かぞく}のことを{思い出|おもいだ|to remember, recall}して、{寂|さび|lonely}しくなった。",
+   "jp": "{家族|かぞく}のことを{思い出して|おもいだして|to remember, recall|3}、{寂しく|さびしく|lonely|3}なった。",
    "en": "I thought of my family and got lonely.",
    "register": "casual",
    "note": "〜くなる = became: {寂|さび}しくなった describes a feeling that came over you, not a permanent state."
   },
   {
-   "jp": "{緊張|きんちょう|nervousness, tension}して、{何|なに}も{言|い}えなかった。",
+   "jp": "{緊張|きんちょう|nervousness, tension|3}して、{何|なに}も{言|い}えなかった。",
    "en": "I was so nervous I couldn't say anything.",
    "register": "casual",
-   "note": "{緊張|きんちょう}する is the everyday word for nervous (before a meeting, a test, a first date). Not {心配|しんぱい|worry}, which is worry."
+   "note": "{緊張|きんちょう}する is the everyday word for nervous (before a meeting, a test, a first date). Not {心配|しんぱい|worry|4}, which is worry."
   },
   {
-   "jp": "{田中|たなか}さんは{無口|むくち|quiet, of few words}だけど、{温|あたた}かい{人|ひと}です。",
+   "jp": "{田中|たなか}さんは{無口|むくち|quiet, of few words|2}だけど、{温|あたた}かい{人|ひと}です。",
    "en": "Tanaka-san doesn't say much, but he's a warm person.",
    "register": "polite",
    "note": "Describing someone: [trait]だけど[trait]. {無口|むくち} is neutral, not rude: just a person of few words."
   },
   {
-   "jp": "{親|おや}を{心配|しんぱい|worry}させたくないから、{毎週|まいしゅう}{電話|でんわ}してる。",
+   "jp": "{親|おや}を{心配|しんぱい|worry|4}させたくないから、{毎週|まいしゅう}{電話|でんわ}してる。",
    "en": "I don't want to make my parents worry, so I call every week.",
    "register": "casual",
-   "note": "{心配|しんぱい|worry}させる = make someone worry (causative). Very common with family: {親|おや}を{心配|しんぱい|worry}させないで！"
+   "note": "{心配|しんぱい|worry|4}させる = make someone worry (causative). Very common with family: {親|おや}を{心配|しんぱい|worry|4}させないで！"
   }
  ],
  "dialogue_setting": "A LINE chat at night: you're under the kotatsu in your upstairs room, Yuki is on the train home in Tokyo.",
@@ -45,13 +45,13 @@
   {
    "speaker": "Yuki",
    "time": "21:02",
-   "jp": "アル〜！{農家|のうか|farm, farming family}{生活|せいかつ|daily life}{一日目|いちにちめ}、どうだった？？",
+   "jp": "アル〜！{農家|のうか|farm, farming family|2}{生活|せいかつ|daily life|3}{一日目|いちにちめ}、どうだった？？",
    "en": "Al~! Day one of farm life, how was it??"
   },
   {
    "speaker": "You",
    "time": "21:05",
-   "jp": "{疲|つか}れた〜ｗ 5{時|じ}に{起|お}きて、{一日中|いちにちじゅう|all day long}りんご{畑|ばたけ|field (farm)}にいた。でも{景色|けしき|view, scenery}がめっちゃきれい。{山|やま}が{真っ赤|まっか|bright red}だよ",
+   "jp": "{疲|つか}れた〜ｗ 5{時|じ}に{起|お}きて、{一日中|いちにちじゅう|all day long|3}りんご{畑|ばたけ|field (farm)|2}にいた。でも{景色|けしき|view, scenery|3}がめっちゃきれい。{山|やま}が{真っ赤|まっか|bright red|3}だよ",
    "me": true,
    "en": "So tired lol. Up at 5, in the apple orchard all day. But the view is amazing. The mountains are bright red."
   },
@@ -64,33 +64,33 @@
   {
    "speaker": "You",
    "time": "21:09",
-   "jp": "{無口|むくち|quiet, of few words}だけど{優|やさ}しいよ。{今日|きょう}、{畑|はたけ|field (farm)}で{軽|けい|軽トラ = mini truck}トラを{運転|うんてん|driving}させてくれた！",
+   "jp": "{無口|むくち|quiet, of few words|2}だけど{優|やさ}しいよ。{今日|きょう}、{畑|はたけ|field (farm)|2}で{軽|けい|軽トラ = mini truck|2}トラを{運転|うんてん|driving|3}させてくれた！",
    "me": true,
    "en": "He doesn't talk much but he's kind. Today he let me drive the kei truck in the field!"
   },
   {
    "speaker": "Yuki",
    "time": "21:10",
-   "jp": "マジ！？いい{人|ひと}じゃん。でも{夜|よる}とか{寂|さび|lonely}しくない？",
+   "jp": "マジ！？いい{人|ひと}じゃん。でも{夜|よる}とか{寂しくない|さびしくない|lonely|3}？",
    "en": "Seriously!? He sounds great. But don't you get lonely, like at night?"
   },
   {
    "speaker": "You",
    "time": "21:14",
-   "jp": "ちょっとね。{静|しず}かすぎて、スペインの{家族|かぞく}を{思い出|おもいだ|to remember, recall}す。まだ{慣|な|to get used to}れないけど、がんばる",
+   "jp": "ちょっとね。{静|しず}かすぎて、スペインの{家族|かぞく}を{思い出す|おもいだす|to remember, recall|3}。まだ{慣れない|なれない|to get used to|3}けど、がんばる",
    "me": true,
    "en": "A little. It's so quiet I keep thinking of my family in Spain. Not used to it yet, but I'll hang in there."
   },
   {
    "speaker": "Yuki",
    "time": "21:15",
-   "jp": "えらい！{家族|かぞく}を{心配|しんぱい|worry}させないように、{写真|しゃしん}{送|おく}ってあげなよ（スタンプ：ファイト！）",
+   "jp": "えらい！{家族|かぞく}を{心配|しんぱい|worry|4}させないように、{写真|しゃしん}{送|おく}ってあげなよ（スタンプ：ファイト！）",
    "en": "Good on you! Send them some photos so they don't worry (sticker: You got this!)"
   },
   {
    "speaker": "You",
    "time": "21:16",
-   "jp": "うん、{明日|あした}{送|おく}る！{おやすみ||good night}（スタンプ：ねこがおじぎ）",
+   "jp": "うん、{明日|あした}{送|おく}る！{おやすみ||good night|4}（スタンプ：ねこがおじぎ）",
    "me": true,
    "en": "Yeah, I'll send them tomorrow! Night (sticker: cat bowing)"
   }
@@ -101,7 +101,7 @@
   "level": "N4",
   "meaning": "make / let someone do",
   "form": "う-verbs: -a + せる ({行|い}く → {行|い}かせる) · る-verbs: + させる ({食|た}べる → {食|た}べさせる) · する → させる ({運転|うんてん}させる) · {来|く}る → {来|こ}させる",
-  "explanation": "The causer is the subject and the person made or allowed to act gets に (or を with intransitive verbs): {親|おや}を{心配|しんぱい|worry}させる. Alone it often sounds like forcing; add てくれる / てもらう and it becomes kind permission: {運転|うんてん|driving}させてくれた = he let me drive. Don't mix it up with the passive (〜られる, something done to you) or the causative-passive (〜させられる, being made to do it).",
+  "explanation": "The causer is the subject and the person made or allowed to act gets に (or を with intransitive verbs): {親|おや}を{心配|しんぱい|worry|4}させる. Alone it often sounds like forcing; add てくれる / てもらう and it becomes kind permission: {運転|うんてん|driving|3}させてくれた = he let me drive. Don't mix it up with the passive (〜られる, something done to you) or the causative-passive (〜させられる, being made to do it).",
   "src": [
    "d3",
    "d6",
@@ -117,7 +117,7 @@
     "en": "Please let me think about it a little."
    },
    {
-    "jp": "{冗談|じょうだん|joke}を{言|い}って、みんなを{笑|わら}わせた。",
+    "jp": "{冗談|じょうだん|joke|3}を{言|い}って、みんなを{笑|わら}わせた。",
     "en": "I told a joke and made everyone laugh."
    }
   ],
@@ -145,12 +145,12 @@
  "tip": {
   "mark": "寂",
   "title": "There's no one word for 'homesick'",
-  "body": "Japanese mostly borrows ホームシック: ホームシックになった. Among friends you can say {寂|さび}しい freely, but with your host family it can sound like you're unhappy with them and make them worry. Gentler: {家族|かぞく}にちょっと{会|あ}いたくなりました, or simply スペインが{恋|こい|恋しい = to miss (someone)}しいです (I miss Spain)."
+  "body": "Japanese mostly borrows ホームシック: ホームシックになった. Among friends you can say {寂|さび}しい freely, but with your host family it can sound like you're unhappy with them and make them worry. Gentler: {家族|かぞく}にちょっと{会|あ}いたくなりました, or simply スペインが{恋しい|こいしい|恋しい = to miss (someone)|2}です (I miss Spain)."
  },
  "challenge": {
-  "prompt": "Yuki replies: 「{明日|あした}も5{時|じ}{起|お}き？{今|いま}の{気持|きも}ち、{一言|ひとこと|in a word}で！」 Tell her how you feel and one thing the Tanakas let you do, with 〜させてくれた.",
+  "prompt": "Yuki replies: 「{明日|あした}も5{時|じ}{起|お}き？{今|いま}の{気持|きも}ち、{一言|ひとこと|in a word|2}で！」 Tell her how you feel and one thing the Tanakas let you do, with 〜させてくれた.",
   "hint": "{眠|ねむ}い · {楽|たの}しい · {仕事|しごと}をやらせてくれた",
-  "model_answer": "ちょっと{眠|ねむ}いけど、{楽|たの}しい！ケイコさんが{台所|だいどころ|kitchen}で{料理|りょうり}を{手伝|てつだ|to help}わせてくれたよ。",
+  "model_answer": "ちょっと{眠|ねむ}いけど、{楽|たの}しい！ケイコさんが{台所|だいどころ|kitchen|3}で{料理|りょうり}を{手伝わせて|てつだわせて|to help|3}くれたよ。",
   "explanation": "ちょっと{眠|ねむ}いけど、{楽|たの}しい！ answers 'in a word' with a contrast (けど = but). {手伝|てつだ}わせてくれた = {手伝|てつだ}う → causative {手伝|てつだ}わせる (let me help) + てくれた (as a kindness to me): 'Keiko let me help with the cooking.' The final よ is friendly LINE tone."
  },
  "vocab": [
@@ -320,7 +320,7 @@
      "en": "to be excited, looking forward to it"
     },
     {
-     "jp": "{落|お}ち{込|こ|to feel down}む",
+     "jp": "{落ち込む|おちこむ|to feel down|3}",
      "en": "to feel down",
      "note": "{落|お}ち{込|こ}んでる？ = are you feeling down?"
     },
@@ -330,7 +330,7 @@
      "note": "Said the moment worry disappears."
     },
     {
-     "jp": "{懐|なつ|nostalgic}かしい",
+     "jp": "{懐かしい|なつかしい|nostalgic|4}",
      "en": "brings back memories",
      "note": "A happy feeling about the past, not sadness."
     }
@@ -346,16 +346,16 @@
      "en": "Cheerful and easy to talk to."
     },
     {
-     "jp": "{真面目|まじめ|serious, earnest}な{人|ひと}。",
+     "jp": "{真面目|まじめ|serious, earnest|3}な{人|ひと}。",
      "en": "A serious, hardworking person."
     },
     {
-     "jp": "ちょっと{人見知り|ひとみしり|shy with strangers}。",
+     "jp": "ちょっと{人見知り|ひとみしり|shy with strangers|3}。",
      "en": "A bit shy with new people.",
      "note": "Very common self-description; no single English word."
     },
     {
-     "jp": "{面倒見|めんどうみ|caring for others}がいい。",
+     "jp": "{面倒見|めんどうみ|caring for others|2}がいい。",
      "en": "Good at looking after people."
     }
    ]

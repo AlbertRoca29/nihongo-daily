@@ -107,8 +107,15 @@ rt{font-size:.5em;color:var(--muted);font-weight:500;letter-spacing:0;transition
 .furi-off rt{opacity:0}
 .furi-off ruby.peek rt{opacity:1}
 .furi-off ruby{cursor:pointer;border-bottom:1px dotted var(--muted)}
+.furi-off .gl ruby{border-bottom:0}
 /* hard words: underlined, tap for meaning */
-.gl,.furi-off ruby.gl{cursor:pointer;border-bottom:2px dotted color-mix(in srgb,var(--accent) 70%,transparent);border-radius:2px;-webkit-tap-highlight-color:transparent;transition:background .15s}
+.gl{cursor:pointer;border-bottom:2px dotted color-mix(in srgb,var(--accent) 70%,transparent);border-radius:2px;-webkit-tap-highlight-color:transparent;transition:background .15s}
+.fq{display:inline-flex;align-items:flex-end;gap:2px;height:12px;flex:none}
+.fq i{display:block;width:4px;border-radius:1px;background:color-mix(in srgb,var(--muted) 30%,transparent)}
+.fq i:nth-child(1){height:4px}.fq i:nth-child(2){height:7px}.fq i:nth-child(3){height:10px}.fq i:nth-child(4){height:12px}
+.fq i.on{background:var(--accent)}
+.gpop-f{display:flex;align-items:center;gap:8px;margin-top:6px;font-size:13px;color:var(--muted)}
+.fqchip{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--soft);color:var(--muted)}
 .gl.gl-on{background:color-mix(in srgb,var(--accent) 16%,transparent);border-bottom-style:solid}
 .gl:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .line.me .gl{border-bottom-color:rgba(255,255,255,.8)}
@@ -481,16 +488,44 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
 (() => {
   const $ = id => document.getElementById(id);
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-  /* Markup: {漢字|かんじ} = furigana; {漢字|かんじ|meaning} or {かな||meaning} = a hard word you can tap for its meaning. */
-  const MARK = /\{([^|{}]+)\|([^|{}]*)(?:\|([^{}]+))?\}/g;
+  /* Markup: {漢字|かんじ} = furigana; {漢字|かんじ|meaning|N} or {かな||meaning|N} = a hard word you can tap for its meaning.
+     The base can hold the whole word with its okurigana ({寂しくない|さびしくない|lonely|3}): furigana goes over the kanji only.
+     N = how common the word is in everyday Japanese: 4 everyday · 3 common · 2 occasional · 1 rare/regional/formal. */
+  const MARK = /\{([^|{}]+)\|([^|{}]*)(?:\|([^|{}]+)(?:\|([1-4]))?)?\}/g;
+  const FREQ = {4:"Everyday · you'll hear it all the time", 3:"Common · comes up regularly", 2:"Occasional · specific situations or more formal", 1:"Rare · regional, old-fashioned or very formal"};
+  const FREQ_SHORT = {4:"Everyday", 3:"Common", 2:"Occasional", 1:"Rare"};
+  const freqBars = f => `<span class="fq fq${f}" aria-label="${FREQ_SHORT[f]}">${[1,2,3,4].map(i => `<i class="${i <= f ? "on" : ""}"></i>`).join("")}</span>`;
+  // furigana over the kanji only: 寂しくない / さびしくない → <ruby>寂<rt>さび</rt></ruby>しくない
+  const KANA_RUN = /[ぁ-ゖゝゞー]+/g;
+  const rubyWord = (b, r) => {
+    if (!r) return b;
+    const segs = b.match(/[ぁ-ゖゝゞー]+|[^ぁ-ゖゝゞー]+/g) || [b];
+    if (segs.length > 1){
+      const kana = s => /^[ぁ-ゖゝゞー]+$/.test(s);
+      const re = new RegExp("^" + segs.map(s => kana(s) ? s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") : "(.+?)").join("") + "$");
+      const m = re.exec(r);
+      if (m){
+        let g = 1;
+        return segs.map(s => kana(s) ? s : `<ruby>${s}<rt>${m[g++]}</rt></ruby>`).join("");
+      }
+    }
+    return `<ruby>${b}<rt>${r}</rt></ruby>`;
+  };
   const glossSrc = [];   // the source sentence of each rendered string, so a tapped word can be saved with its sentence
   const ruby = s => {
     const raw = String(s ?? ""), si = raw.includes("|") ? glossSrc.push(raw) - 1 : -1;
-    return esc(raw).replace(MARK, (m, b, r, g) => {
-      if (!g) return r ? `<ruby>${b}<rt>${r}</rt></ruby>` : m;
-      const a = `class="gl" tabindex="0" role="button" data-gl="${g}" data-r="${r}" data-si="${si}"`;
-      return r ? `<ruby ${a}>${b}<rt>${r}</rt></ruby>` : `<span ${a}>${b}</span>`;
+    return esc(raw).replace(MARK, (m, b, r, g, f) => {
+      if (!g) return r ? rubyWord(b, r) : m;
+      return `<span class="gl" tabindex="0" role="button" data-b="${b}" data-gl="${g}" data-r="${r}" data-f="${f || ""}" data-si="${si}">${rubyWord(b, r)}</span>`;
     });
+  };
+  // commonness of a vocab word: taken from its gloss in the line it comes from
+  const freqOf = (L, v) => {
+    const line = lineOf(L, v.src); if (!line) return "";
+    const sf = v.surface || plain(v.jp);
+    for (const m of String(line.jp || "").matchAll(MARK))
+      if (m[3] && m[4] && (m[1] === sf || m[1].includes(sf) || sf.includes(m[1]))) return m[4];
+    return "";
   };
   const plain = s => String(s ?? "").replace(MARK, "$1");
   const store = {
@@ -537,9 +572,10 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
   const showGloss = el => {
     if (gFor === el){ hideGloss(); return; }
     hideGloss();
-    const base = el.tagName === "RUBY" ? Array.from(el.childNodes).filter(n => n.nodeName !== "RT").map(n => n.textContent).join("") : el.textContent;
-    const r = el.dataset.r || "", g = el.dataset.gl || "", src = glossSrc[+el.dataset.si] || "";
-    const v = lesson && (lesson.vocab || []).find(x => plain(x.jp) === base || x.surface === base);
+    const base = el.dataset.b || el.textContent;
+    const r = el.dataset.r || "", g = el.dataset.gl || "", f = el.dataset.f || "", src = glossSrc[+el.dataset.si] || "";
+    const v = lesson && (lesson.vocab || []).find(x => plain(x.jp) === base || x.surface === base)
+      || lesson && (lesson.vocab || []).find(x => x.surface && x.surface.length > 1 && (base.startsWith(x.surface) || x.surface.startsWith(base)));
     const word = r ? `{${base}|${r}}` : base;
     const line = lesson && [...(lesson.phrases || []), ...(lesson.dialogue || [])].find(x => x.jp === src);
     const key = "w:" + (v ? plain(v.jp) : base);
@@ -548,7 +584,7 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
     gpop.innerHTML = `<div class="gpop-top"><div style="min-width:0">
         <div class="gpop-w">${esc(base)}</div>${r ? `<div class="gpop-r">${esc(r)}</div>` : ""}
       </div>${starBtn(key, def)}</div>
-      <div class="gpop-m">${esc(g)}</div>${v && v.note ? `<div class="note">${ruby(v.note)}</div>` : ""}<div class="gpop-k" hidden></div>`;
+      <div class="gpop-m">${esc(g)}</div>${f ? `<div class="gpop-f">${freqBars(f)}<span>${esc(FREQ[f])}</span></div>` : ""}${v && v.note ? `<div class="note">${ruby(v.note)}</div>` : ""}<div class="gpop-k" hidden></div>`;
     gpop.hidden = false; gFor = el; el.classList.add("gl-on");
     // each kanji in the word, with its own meaning (helps it stick)
     const ks = kanjiOf(base);
@@ -1020,7 +1056,7 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
       h = `<div class="step">
         <div class="card">${L.vocab.map((v, i) => `<div class="vrow">
             <div style="min-width:0;flex:1">
-              <div class="row" style="justify-content:flex-start;gap:8px"><span class="jp-mid" style="line-height:1.8">${ruby(v.jp)}</span><span class="lvl ${esc(v.level)}">${esc(v.level)}</span></div>
+              <div class="row" style="justify-content:flex-start;gap:8px"><span class="jp-mid" style="line-height:1.8">${ruby(v.jp)}</span><span class="lvl ${esc(v.level)}">${esc(v.level)}</span>${freqOf(L, v) ? `<span class="fqchip" title="${esc(FREQ[freqOf(L, v)])}">${freqBars(freqOf(L, v))}${FREQ_SHORT[freqOf(L, v)]}</span>` : ""}</div>
               <div style="font-size:15px">${esc(v.en)}</div>
               ${v.note ? `<div class="note">${ruby(v.note)}</div>` : ""}
               ${lineOf(L, v.src) ? `<div class="src">${highlight(lineOf(L, v.src).jp, v.surface)}</div>` : ""}

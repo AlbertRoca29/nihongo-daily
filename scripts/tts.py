@@ -15,7 +15,7 @@ import base64, glob, hashlib, json, os, re, sys, time, urllib.error, urllib.requ
 
 KEY = os.environ.get("GOOGLE_TTS_KEY", "").strip()
 API = "https://texttospeech.googleapis.com/v1/text:synthesize"
-MARK = re.compile(r"\{([^|{}]+)\|([^|{}]*)(?:\|([^{}]+))?\}")  # same as index.html
+MARK = re.compile(r"\{([^|{}]+)\|([^|{}]*)(?:\|([^|{}]+)(?:\|([1-4]))?)?\}")  # same as index.html
 VOICES = json.load(open("voices.json", encoding="utf-8"))
 CAST = json.load(open("cast.json", encoding="utf-8"))["cast"]
 BY_NAME = {c["name"]: c for c in CAST}

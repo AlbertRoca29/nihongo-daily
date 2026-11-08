@@ -30,7 +30,11 @@ PRACTICAL_EVERY = 3       # one regular lesson in three is on a practical field
 GUEST_EVERY = 8           # lessons since the last guest before a new guest is due
 FORMAT_CYCLE = ["dialogue", "line", "story", "dialogue", "text", "line"]
 
-RUBY = re.compile(r"\{([^|{}]+)\|([^|{}]*)(?:\|([^{}]+))?\}")  # {base|reading} or {base|reading|gloss}
+RUBY = re.compile(r"\{([^|{}]+)\|([^|{}]*)(?:\|([^|{}]+)(?:\|([^|{}]*))?)?\}")  # {base|reading} or {base|reading|gloss|freq}
+FREQS = {"1", "2", "3", "4"}  # how common the glossed word is: 4 everyday ... 1 rare
+# a gloss that stops at the kanji while the word goes on in kana: {寂|さび|lonely}しい, {頼|たの|to ask}まれて
+STEM_ONLY = re.compile(r"^(?:い(?![぀-ゟ])|いな|く[てな]|かっ|しい|しく|しかっ|しさ)")
+PARTICLE = re.compile(r"^(?:を|が|は|に|の|も|と|や|へ|か[らな]|けど|って)")
 KANJI = re.compile(r"[\u3400-\u9fff々]")
 # Where tap-to-see glosses are not allowed (the word itself is being taught or quizzed there)
 NO_GLOSS = re.compile(r"^(vocab|kanji_study|kanji\.|grammar\.(quiz\.options|pattern|form))")
@@ -320,7 +324,15 @@ def check_lesson(lid, L, topic_ids, errs):
         rest = RUBY.sub("", s)
         if re.search(r"[{}|]", rest):
             errs.append(f"{lid}: broken furigana markup in {path}: {s[:60]}")
-        for base, reading, gloss in RUBY.findall(s):
+        for m in RUBY.finditer(s):
+            base, reading, gloss, freq = m.groups()
+            if gloss and freq not in FREQS:
+                errs.append(f"{lid}: gloss '{base}' in {path} needs a commonness level 1-4 at the end: {{{base}|{reading}|{gloss}|3}}")
+            after = s[m.end():m.end() + 3]
+            verb = gloss and gloss.startswith("to ") and re.match(r"[\u3040-\u309f]", after) and not PARTICLE.match(after)
+            if gloss and KANJI.search(base[-1:]) and (verb or STEM_ONLY.match(after)):
+                errs.append(f"{lid}: gloss '{base}' in {path} covers only part of the word; put the whole word in the block: "
+                            f"{{{base}{s[m.end():m.end() + 2]}…|{reading}…|{gloss}|{freq}}}")
             if gloss and NO_GLOSS.match(path):
                 errs.append(f"{lid}: no gloss allowed in {path} ('{base}')")
             if not reading:

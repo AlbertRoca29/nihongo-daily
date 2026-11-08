@@ -8,31 +8,31 @@
  "context": "Saturday: your first reception shift at Guesthouse Kaze, where you finally meet Kenta from Osaka. In the quiet hour after check-in he skips the small talk and goes straight to love, so you end up comparing dating in Japan and Spain.",
  "phrases": [
   {
-   "jp": "スペインと{比|くら|to compare}べて、{日本|にほん}の{恋愛|れんあい|romance, love life}ってどう？",
+   "jp": "スペインと{比べて|くらべて|to compare|3}、{日本|にほん}の{恋愛|れんあい|romance, love life|3}ってどう？",
    "en": "Compared with Spain, what's dating like in Japan?",
    "register": "casual",
    "note": "AとBを{比|くら}べると / Aと{比|くら}べて = compared with A. Polite: 〜と{比|くら}べて、どうですか。"
   },
   {
-   "jp": "{告白|こくはく|confessing your feelings}されたこと、ある？",
+   "jp": "{告白|こくはく|confessing your feelings|3}されたこと、ある？",
    "en": "Has anyone ever confessed their feelings to you?",
    "register": "casual",
    "note": "{告白|こくはく}する = tell someone you like them and ask them out. {告白|こくはく}される = be asked out (passive)."
   },
   {
-   "jp": "{返事|へんじ|reply}は、なるべく{早|はや}く{返|かえ|to give back, reply}すようにしています。",
+   "jp": "{返事|へんじ|reply|3}は、なるべく{早|はや}く{返す|かえす|to give back, reply|3}ようにしています。",
    "en": "I try to reply as soon as I can.",
    "register": "polite",
    "note": "{返事|へんじ}を{返|かえ}す / {返信|へんしん}する = reply to a message. なるべく = as ~ as possible."
   },
   {
-   "jp": "{遠距離恋愛|えんきょりれんあい|long-distance relationship}って、{大変|たいへん}じゃない？",
+   "jp": "{遠距離恋愛|えんきょりれんあい|long-distance relationship|2}って、{大変|たいへん}じゃない？",
    "en": "Isn't a long-distance relationship hard?",
    "register": "casual",
    "note": "Everyone shortens it to {遠距離|えんきょり} or even {遠恋|えんれん}."
   },
   {
-   "jp": "{都会|とかい|big city}より{田舎|いなか|the countryside}のほうが{落|お}ち{着|つ|to feel calm, settle}く。",
+   "jp": "{都会|とかい|big city|3}より{田舎|いなか|the countryside|3}のほうが{落ち着く|おちつく|to feel calm, settle|4}。",
    "en": "I feel more at ease in the countryside than in the city.",
    "register": "casual",
    "note": "AよりBのほうが〜 = B is more ~ than A: the most common way to compare two things."
@@ -42,7 +42,7 @@
  "dialogue": [
   {
    "speaker": "Kenta",
-   "jp": "アルバートやんな？{俺|おれ}、{健太|けんた}。よろしゅう！で、いきなりやけど、{恋人|こいびと|boyfriend or girlfriend, partner}おるん？",
+   "jp": "アルバートやんな？{俺|おれ}、{健太|けんた}。よろしゅう！で、いきなりやけど、{恋人|こいびと|boyfriend or girlfriend, partner|3}おるん？",
    "en": "You're Albert, right? I'm Kenta. Nice to meet you! So, straight to it: got a partner?",
    "register": "dialect",
    "note": "Kansai-ben: やんな = だよね, よろしゅう = よろしく, やけど = だけど, おるん？ = いるの？"
@@ -50,12 +50,12 @@
   {
    "speaker": "You",
    "me": true,
-   "jp": "いきなり！？いないよ。ねえ、スペインと{比|くら|to compare}べて、{日本|にほん}ではどうやって{付き合|つきあ|to go out with, date}い{始|はじ}めるの？",
+   "jp": "いきなり！？いないよ。ねえ、スペインと{比べて|くらべて|to compare|3}、{日本|にほん}ではどうやって{付き合い|つきあい|to go out with, date|4}{始|はじ}めるの？",
    "en": "Straight away?! No, I don't. Hey, compared with Spain, how do people start going out in Japan?"
   },
   {
    "speaker": "Kenta",
-   "jp": "{日本|にほん}はな、まず「{告白|こくはく|confessing your feelings}」すんねん。「{好|す}きです、{付き合|つきあ|to go out with, date}ってください」って。そこから{恋人|こいびと|partner}になるんや。",
+   "jp": "{日本|にほん}はな、まず「{告白|こくはく|confessing your feelings|3}」すんねん。「{好|す}きです、{付き合って|つきあって|to go out with, date|4}ください」って。そこから{恋人|こいびと|partner|3}になるんや。",
    "en": "In Japan, first you do a 'kokuhaku'. 'I like you, please go out with me.' From that moment you're a couple.",
    "register": "dialect",
    "note": "すんねん = するんだ, なるんや = なるんだ (Kansai). The standard version: まず{告白|こくはく}するんだ。"
@@ -63,12 +63,12 @@
   {
    "speaker": "You",
    "me": true,
-   "jp": "へえ。スペインは{告白|こくはく|confessing your feelings}より、{何回|なんかい}か{会|あ}って{自然|しぜん|naturally}に{付き合|つきあ}うことが{多|おお}いかな。メッセージの{返事|へんじ|reply}が{遅|おそ}くても、あんまり{気|き}にしないし。",
+   "jp": "へえ。スペインは{告白|こくはく|confessing your feelings|3}より、{何回|なんかい}か{会|あ}って{自然|しぜん|naturally|3}に{付き合|つきあ}うことが{多|おお}いかな。メッセージの{返事|へんじ|reply|3}が{遅|おそ}くても、あんまり{気|き}にしないし。",
    "en": "Huh. In Spain it's less about confessing: you meet a few times and it just happens. And nobody worries much if a reply to a message is slow."
   },
   {
    "speaker": "Kenta",
-   "jp": "そこはめっちゃ{違|ちが}うな。{俺|おれ}の{彼女|かのじょ}、{長野市|ながのし}で{看護師|かんごし|nurse}やねん。{遠距離|えんきょり|long distance}ってほどやないけど、{会|あ}えへん{分|ぶん|to make up for}、{毎晩|まいばん}{電話|でんわ}するようにしてんねん。",
+   "jp": "そこはめっちゃ{違|ちが}うな。{俺|おれ}の{彼女|かのじょ}、{長野市|ながのし}で{看護師|かんごし|nurse|2}やねん。{遠距離|えんきょり|long distance|2}ってほどやないけど、{会|あ}えへん{分|ぶん|to make up for|2}、{毎晩|まいばん}{電話|でんわ}するようにしてんねん。",
    "en": "That's a big difference. My girlfriend's a nurse in Nagano city. It's not exactly long-distance, but since we can't meet, I make a point of calling every night.",
    "register": "dialect",
    "note": "めっちゃ = とても, やねん = なんだ, 〜ほどやない = 〜ほどじゃない (not as much as), {会|あ}えへん = {会|あ}えない, してんねん = しているんだ."
@@ -76,7 +76,7 @@
   {
    "speaker": "You",
    "me": true,
-   "jp": "えらいね。{僕|ぼく}も{家族|かぞく}に、{週|しゅう}に{一回|いっかい}は{連絡|れんらく|getting in touch}するようにしてる。でも{田舎|いなか|the countryside}って、{都会|とかい|big city}ほど{出会|であ|chance to meet people}いがなさそうだね。",
+   "jp": "えらいね。{僕|ぼく}も{家族|かぞく}に、{週|しゅう}に{一回|いっかい}は{連絡|れんらく|getting in touch|4}するようにしてる。でも{田舎|いなか|the countryside|3}って、{都会|とかい|big city|3}ほど{出会い|であい|chance to meet people|3}がなさそうだね。",
    "en": "Good for you. I make sure to contact my family at least once a week too. But it looks like the countryside doesn't have as many chances to meet people as the city."
   }
  ],
@@ -103,7 +103,7 @@
    }
   ],
   "quiz": {
-   "question": "{健康|けんこう|health}のために、{毎朝|まいあさ}{野菜|やさい}を＿＿ようにしている。",
+   "question": "{健康|けんこう|health|3}のために、{毎朝|まいあさ}{野菜|やさい}を＿＿ようにしている。",
    "en": "For my health, I make a habit of eating vegetables every morning.",
    "options": ["{食|た}べる", "{食|た}べた", "{食|た}べて", "{食|た}べよう"],
    "explain": "ようにする / ようにしている comes after the dictionary form (or the ない form): {食|た}べるようにしている."
@@ -121,7 +121,7 @@
  "tip": {
   "mark": "告",
   "title": "Why the 'kokuhaku' matters",
-  "body": "In Japan a relationship usually starts with a clear {告白|こくはく|confessing your feelings}: before it you're just people going out to eat; after it you're officially a couple. Couples often count the days from that moment and celebrate {付き合|つきあ}って1か{月|げつ} or 3か{月|げつ}. Coming from Spain, where things just drift into a relationship, it's worth asking yourself what the other person thinks you are."
+  "body": "In Japan a relationship usually starts with a clear {告白|こくはく|confessing your feelings|3}: before it you're just people going out to eat; after it you're officially a couple. Couples often count the days from that moment and celebrate {付き合|つきあ}って1か{月|げつ} or 3か{月|げつ}. Coming from Spain, where things just drift into a relationship, it's worth asking yourself what the other person thinks you are."
  },
  "challenge": {
   "prompt": "Kenta grins: 「せやったら、アプリでも{入|い}れてみたら？こっちはみんな{使|つこ}うてるで。」 (= それなら、アプリでも入れてみたら？こっちはみんな使ってるよ。) Say you'll try it, but you'll make a point of meeting people in a café at first. Use 〜ようにする.",
@@ -177,7 +177,7 @@
    "items": [
     {"jp": "AよりBのほうが{好|す}き", "en": "I like B more than A", "note": "The everyday workhorse."},
     {"jp": "AはBほど{寒|さむ}くない", "en": "A isn't as cold as B", "note": "ほど always goes with a negative."},
-    {"jp": "Aと{比|くら|to compare}べて、Bは{静|しず}かだ", "en": "Compared with A, B is quiet"},
+    {"jp": "Aと{比べて|くらべて|to compare|3}、Bは{静|しず}かだ", "en": "Compared with A, B is quiet"},
     {"jp": "AとBは{同|おな}じくらい", "en": "A and B are about the same"},
     {"jp": "AとBはぜんぜん{違|ちが}う", "en": "A and B are completely different"}
    ]
@@ -187,10 +187,10 @@
    "title_jp": "{恋|こい}バナの{言葉|ことば}",
    "intro": "{恋|こい}バナ (from {恋|こい}の{話|はなし}) is chatting about love. These come up in every one.",
    "items": [
-    {"jp": "{片思|かたおも|one-sided love}い", "en": "a crush that isn't returned"},
-    {"jp": "{両思|りょうおも|mutual love}い", "en": "liking each other"},
-    {"jp": "{一目惚|ひとめぼ|love at first sight}れ", "en": "love at first sight"},
-    {"jp": "{振|ふ|to dump, turn down}られた", "en": "I got turned down / dumped"},
+    {"jp": "{片思い|かたおもい|one-sided love|2}", "en": "a crush that isn't returned"},
+    {"jp": "{両思い|りょうおもい|mutual love|2}", "en": "liking each other"},
+    {"jp": "{一目惚れ|ひとめぼれ|love at first sight|2}", "en": "love at first sight"},
+    {"jp": "{振られた|ふられた|to dump, turn down|3}", "en": "I got turned down / dumped"},
     {"jp": "{元|もと}カレ・{元|もと}カノ", "en": "ex-boyfriend / ex-girlfriend", "note": "{元|もと} = former. Casual."}
    ]
   }

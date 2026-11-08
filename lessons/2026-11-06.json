@@ -10,25 +10,25 @@
  "context": "Tanaka-san sent you alone on the town bus to post a parcel to your family in Spain. It didn't go to plan, and an old lady on the bus saw the whole thing. Today you and she each tell what happened: narrating, and being made to do things.",
  "phrases": [
   {
-   "jp": "すみません、{郵便局|ゆうびんきょく}{行|い}きのバスは、どの{停留所|ていりゅうじょ|bus stop}から{出|で}ますか。",
+   "jp": "すみません、{郵便局|ゆうびんきょく}{行|い}きのバスは、どの{停留所|ていりゅうじょ|bus stop|2}から{出|で}ますか。",
    "en": "Excuse me, which stop does the bus to the post office leave from?",
    "register": "polite",
    "note": "〜{行|い}き = bound for. In town people say バス{停|てい} for a bus stop; {停留所|ていりゅうじょ} is the official word on signs and announcements."
   },
   {
-   "jp": "{千円札|せんえんさつ|1,000-yen note}を{両替|りょうがえ|changing into coins}したいんですが…",
+   "jp": "{千円札|せんえんさつ|1,000-yen note|2}を{両替|りょうがえ|changing into coins|2}したいんですが…",
    "en": "I'd like to change a 1000-yen note...",
    "register": "polite",
    "note": "On a rural bus, say this to the driver while the bus is stopped. The fare box has a slot that turns a 1000-yen note into coins."
   },
   {
-   "jp": "やばい、{乗り越|のりこ|to ride past one's stop}しちゃった！",
+   "jp": "やばい、{乗り越しちゃった|のりこしちゃった|to ride past one's stop|1}！",
    "en": "Oh no, I've gone past my stop!",
    "register": "casual",
    "note": "〜ちゃった = 〜てしまった: something happened that you didn't want. Works for trains too: {寝|ね}て{乗り越|のりこ}しちゃった (fell asleep and missed my stop)."
   },
   {
-   "jp": "{時刻表|じこくひょう|timetable}を{見|み}たら、{次|つぎ}のバスは{40分後|よんじゅっぷんご}だって。",
+   "jp": "{時刻表|じこくひょう|timetable|2}を{見|み}たら、{次|つぎ}のバスは{40分後|よんじゅっぷんご}だって。",
    "en": "I checked the timetable: the next bus is in 40 minutes.",
    "register": "casual",
    "note": "〜たら here = when I did X, I found Y. 〜だって = apparently / it says: you're reporting what the timetable told you."
@@ -45,38 +45,38 @@
   {
    "speaker": "You",
    "me": true,
-   "jp": "{今日|きょう}は{田中|たなか}さんに、{一人|ひとり}でバスに{乗|の}って{郵便局|ゆうびんきょく}まで{行|い}かされた。スペインの{家族|かぞく}に、{写真|しゃしん}と{小包|こづつみ|parcel, package}を{送|おく}るためだ。",
+   "jp": "{今日|きょう}は{田中|たなか}さんに、{一人|ひとり}でバスに{乗|の}って{郵便局|ゆうびんきょく}まで{行|い}かされた。スペインの{家族|かぞく}に、{写真|しゃしん}と{小包|こづつみ|parcel, package|2}を{送|おく}るためだ。",
    "en": "Today Tanaka-san made me take the bus to the post office on my own. I had to send photos and a parcel to my family in Spain."
   },
   {
    "speaker": "Hana-obāchan",
-   "jp": "{停留所|ていりゅうじょ|bus stop}に、{背|せ|height (背が高い = tall)}の{高|たか}い{外国|がいこく}の{子|こ}が{おって||(dialect) = いて, was there}のう。{時刻表|じこくひょう|timetable}をじーっと{見|み}て、{困|こま|to be in trouble, at a loss}った{顔|かお}を{しとった||(dialect) = していた}んじゃ。",
+   "jp": "{停留所|ていりゅうじょ|bus stop|2}に、{背|せ|height (背が高い = tall)|3}の{高|たか}い{外国|がいこく}の{子|こ}が{おって||(dialect) = いて, was there|1}のう。{時刻表|じこくひょう|timetable|2}をじーっと{見|み}て、{困った|こまった|to be in trouble, at a loss|4}{顔|かお}を{しとった||(dialect) = していた|1}んじゃ。",
    "en": "There was a tall foreign lad at the bus stop, you see. He was staring and staring at the timetable with such a lost face.",
    "note": "おって = いて, しとった = していた, 〜のう and 〜じゃ = old-fashioned よ / だ. Understand them; don't copy them."
   },
   {
    "speaker": "You",
    "me": true,
-   "jp": "バスは{約|やく|about, approximately}{1時間|いちじかん}に{1本|いっぽん}。そのおばあさんが「{運賃|うんちん|fare}は{降|お}りるときに{払|はら}うんじゃよ」と{教|おし}えてくれた。",
+   "jp": "バスは{約|やく|about, approximately|2}{1時間|いちじかん}に{1本|いっぽん}。そのおばあさんが「{運賃|うんちん|fare|2}は{降|お}りるときに{払|はら}うんじゃよ」と{教|おし}えてくれた。",
    "en": "There's only about one bus an hour. The old lady told me: 'You pay the fare when you get off.'",
    "note": "In the quote, 払うんじゃよ is Hana's old-style 払うんだよ."
   },
   {
    "speaker": "You",
    "me": true,
-   "jp": "でも{千円札|せんえんさつ|1,000-yen note}しかなくて、{両替|りょうがえ|changing into coins}で{慌|あわ|to panic, get flustered}てているうちに、{郵便局前|ゆうびんきょくまえ}を{乗り越|のりこ|to ride past one's stop}してしまった。",
+   "jp": "でも{千円札|せんえんさつ|1,000-yen note|2}しかなくて、{両替|りょうがえ|changing into coins|2}で{慌て|あわて|to panic, get flustered|3}ているうちに、{郵便局前|ゆうびんきょくまえ}を{乗り越して|のりこして|to ride past one's stop|1}しまった。",
    "en": "But I only had a 1000-yen note, and while I was panicking over the change, I rode right past the Post Office stop."
   },
   {
    "speaker": "Hana-obāchan",
-   "jp": "{仕方|しかた|仕方ない = it can’t be helped}ないから、あたしも{一緒|いっしょ}に{降|お}りて、{坂|さか|slope, hill}をてくてく{歩|ある}いて{戻|もど|to go back}ったんじゃ。{子|こ}どもの{頃|ころ}は、{毎日|まいにち}この{坂|さか|slope, hill}を{歩|ある}かされたもんじゃよ。",
+   "jp": "{仕方ない|しかたない|仕方ない = it can’t be helped|4}から、あたしも{一緒|いっしょ}に{降|お}りて、{坂|さか|slope, hill|3}をてくてく{歩|ある}いて{戻った|もどった|to go back|4}んじゃ。{子|こ}どもの{頃|ころ}は、{毎日|まいにち}この{坂|さか|slope, hill|3}を{歩|ある}かされたもんじゃよ。",
    "en": "Nothing for it, so I got off with him and we plodded back up the slope. When I was a girl, they made me walk this slope every single day.",
    "note": "てくてく = the sound of walking a long way on foot. 〜たもんじゃ = 〜たものだ: 'I used to...' when remembering the past."
   },
   {
    "speaker": "You",
    "me": true,
-   "jp": "{郵便局|ゆうびんきょく}が{閉|し|to close}まる{前|まえ}に、なんとか{間に合|まにあ|to make it in time}った。そのおばあさんは、{田中|たなか}さんの{隣|となり|next door}に{住|す}んでいるハナさんだった！",
+   "jp": "{郵便局|ゆうびんきょく}が{閉まる|しまる|to close|3}{前|まえ}に、なんとか{間に合った|まにあった|to make it in time|4}。そのおばあさんは、{田中|たなか}さんの{隣|となり|next door|3}に{住|す}んでいるハナさんだった！",
    "en": "I somehow made it before the post office closed. And the old lady turned out to be Hana-san, who lives next door to the Tanakas!"
   }
  ],
@@ -94,11 +94,11 @@
   ],
   "examples": [
    {
-    "jp": "{子|こ}どもの{頃|ころ}、{嫌|きら|disliked, hated}いなピーマンを{食|た}べさせられた。",
+    "jp": "{子|こ}どもの{頃|ころ}、{嫌い|きらい|disliked, hated|4}なピーマンを{食|た}べさせられた。",
     "en": "As a kid, I was made to eat green peppers I hated."
    },
    {
-    "jp": "{会議|かいぎ}で、いきなり{英語|えいご}で{発表|はっぴょう|presentation}させられた。",
+    "jp": "{会議|かいぎ}で、いきなり{英語|えいご}で{発表|はっぴょう|presentation|3}させられた。",
     "en": "At the meeting I was suddenly made to present in English."
    },
    {
@@ -130,12 +130,12 @@
  "tip": {
   "mark": "降",
   "title": "How a country bus really works",
-  "body": "Get on at the back and take a {整理券|せいりけん|numbered boarding ticket} (or touch your IC card, if it works on that line: many rural buses don't take Suica). When you hear your stop, press the button and 「{次|つぎ}、{止|と}まります」 lights up. Pay at the front as you get off, in exact coins: change notes only while the bus is stopped, never at the last second, or you'll end up like today."
+  "body": "Get on at the back and take a {整理券|せいりけん|numbered boarding ticket|1} (or touch your IC card, if it works on that line: many rural buses don't take Suica). When you hear your stop, press the button and 「{次|つぎ}、{止|と}まります」 lights up. Pay at the front as you get off, in exact coins: change notes only while the bus is stopped, never at the last second, or you'll end up like today."
  },
  "challenge": {
   "prompt": "At dinner Tanaka-san asks: 「バス、{大丈夫|だいじょうぶ}だったずら？」 Tell him what happened in two short sentences, using one 〜させられた (or 〜された) form.",
   "hint": "{乗り越|のりこ}す · {歩|ある}かされた · ハナさんが{助|たす}けてくれた",
-  "model_answer": "{乗り越|のりこ|to ride past one's stop}しちゃって、{坂|さか|slope, hill}を{30分|さんじゅっぷん}も{歩|ある}かされました。でも、ハナさんが{助|たす}けてくれたから{大丈夫|だいじょうぶ}でした！",
+  "model_answer": "{乗り越しちゃって|のりこしちゃって|to ride past one's stop|1}、{坂|さか|slope, hill|3}を{30分|さんじゅっぷん}も{歩|ある}かされました。でも、ハナさんが{助|たす}けてくれたから{大丈夫|だいじょうぶ}でした！",
   "explanation": "{乗り越|のりこ}しちゃって = {乗り越|のりこ}してしまって, the casual 'I ended up riding past my stop' (with regret). {歩|ある}かされました is causative-passive: I was made to walk; も after {30分|さんじゅっぷん} stresses 'a whole 30 minutes'. {助|たす}けてくれたから gives the reason it ended well."
  },
  "vocab": [
@@ -314,7 +314,7 @@
      "note": "Polite keigo: お{降|お}りの{方|かた} = people getting off."
     },
     {
-     "jp": "{両替|りょうがえ|changing into coins}は、{停車中|ていしゃちゅう|while stopped}にお{願|ねが}いします。",
+     "jp": "{両替|りょうがえ|changing into coins|2}は、{停車中|ていしゃちゅう|while stopped|1}にお{願|ねが}いします。",
      "en": "Please change money only while the bus is stopped."
     },
     {
@@ -339,11 +339,11 @@
      "note": "Something happened before you noticed: {寝|ね}ているうちに{着|つ}いた."
     },
     {
-     "jp": "{結局|けっきょく|in the end}",
+     "jp": "{結局|けっきょく|in the end|4}",
      "en": "in the end, after all"
     },
     {
-     "jp": "{実|じつ|実は = actually, truth is}は",
+     "jp": "{実は|じつは|実は = actually, truth is|4}",
      "en": "actually, the truth is",
      "note": "Opens a surprise or a confession."
     }
