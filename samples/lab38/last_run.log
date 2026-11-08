@@ -1,25 +1,234 @@
-sota 400: {
+hana ja-jp-csagent-4 gemini-3.8-flash-tts 429: {
   "error": {
-    "code": 400,
-    "message": "Voice prompt was blocked by safety policies.",
-    "status": "INVALID_ARGUMENT"
-  }
-}
-
-hana voice_ki5kyf5hv87a
-tanaka voice_mnuekr0hqcp6
-keiko voice_nlyabte9tajq
-mio 400: {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+hana done
+tanaka voice_mnuekr0hqcp6 gemini-3.8-flash-tts 429: {
   "error": {
-    "code": 400,
-    "message": "Voice prompt was blocked by safety policies.",
-    "status": "INVALID_ARGUMENT"
-  }
-}
-
-yuki voice_6ixh68rfj5h4
-kenta voice_fy8oio1yurjl
-ren voice_vptdjdqttl3i
-sato voice_q8ebkcksc90a
-hayato voice_y5oast0i9by4
-you voice_c4fcfvc38ess
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+tanaka voice_mnuekr0hqcp6 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+tanaka ja-jp-podcaster-7 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+tanaka ja-jp-podcaster-7 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+tanaka ja-jp-training-4 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+tanaka ja-jp-training-4 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+tanaka done
+keiko voice_nlyabte9tajq gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+keiko voice_nlyabte9tajq gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+keiko ja-jp-training-12 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+keiko ja-jp-training-12 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+keiko ja-jp-training-10 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+keiko ja-jp-training-10 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+keiko done
+mio ja-jp-csagent-8 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+mio ja-jp-csagent-8 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+mio done
+yuki voice_6ixh68rfj5h4 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+yuki voice_6ixh68rfj5h4 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+yuki ja-jp-commercial-6 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+yuki ja-jp-commercial-6 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+yuki ja-jp-advisor-5 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+yuki ja-jp-advisor-5 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+yuki done
+kenta voice_fy8oio1yurjl gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+kenta voice_fy8oio1yurjl gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+kenta ja-jp-tutor-7 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+kenta ja-jp-tutor-7 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+kenta ja-jp-storyteller-2 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+kenta ja-jp-storyteller-2 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+kenta done
+ren voice_vptdjdqttl3i gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+ren voice_vptdjdqttl3i gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+ren voice_vptdjdqttl3i gemini-3.8-flash-lite-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+ren ja-jp-storyteller-12 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+ren ja-jp-storyteller-12 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+ren ja-jp-storyteller-5 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+ren ja-jp-storyteller-5 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+ren done
+sato voice_q8ebkcksc90a gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+sato voice_q8ebkcksc90a gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+sato voice_q8ebkcksc90a gemini-3.8-flash-lite-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+sato voice_q8ebkcksc90a gemini-3.8-flash-lite-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+sato ja-jp-tutor-1 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+sato ja-jp-tutor-1 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+sato ja-jp-advisor-7 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+sato ja-jp-advisor-7 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+sato done
+hayato voice_y5oast0i9by4 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+hayato voice_y5oast0i9by4 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+hayato voice_y5oast0i9by4 gemini-3.8-flash-lite-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+hayato ja-jp-concierge-4 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+hayato ja-jp-concierge-4 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+hayato ja-jp-advisor-3 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+hayato ja-jp-advisor-3 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+hayato done
+you voice_c4fcfvc38ess gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+you voice_c4fcfvc38ess gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+you voice_c4fcfvc38ess gemini-3.8-flash-lite-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+you ja-jp-commercial-4 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+you ja-jp-commercial-4 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+you ja-jp-assistant-10 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+you ja-jp-assistant-10 gemini-3.8-flash-tts 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.c
+you done

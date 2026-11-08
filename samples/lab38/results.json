@@ -1,0 +1,595 @@
+{
+ "hana": {
+  "lines": [
+   "停留所に、背の高い外国の子がおってのう。時刻表をじーっと見て、困った顔をしとったんじゃ。",
+   "子どもの頃は、毎日この坂を歩かされたもんじゃよ。"
+  ],
+  "design": "A frail, warm 84-year-old Japanese grandmother from a rural mountain village in Nagano. Thin, soft, slightly husky and a little shaky old woman's voice, slow and gentle, with a smile in it. Native Japanese.",
+  "style": "slow, gentle, amused, storytelling",
+  "rows": [
+   {
+    "tag": "hana-A",
+    "kind": "designed",
+    "voice": "voice_ki5kyf5hv87a",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     "hana_0_0.mp3",
+     "hana_0_1.mp3"
+    ],
+    "errors": []
+   },
+   {
+    "tag": "hana-B",
+    "kind": "designed",
+    "voice": "voice_ki5kyf5hv87a",
+    "model": "gemini-3.8-flash-lite-tts",
+    "clips": [
+     "hana_1_0.mp3",
+     "hana_1_1.mp3"
+    ],
+    "errors": []
+   },
+   {
+    "tag": "hana-C",
+    "kind": "library",
+    "voice": "ja-jp-assistant-6",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     "hana_2_0.mp3",
+     "hana_2_1.mp3"
+    ],
+    "errors": []
+   },
+   {
+    "tag": "hana-D",
+    "kind": "library",
+    "voice": "ja-jp-csagent-4",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     "hana_3_1.mp3"
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   }
+  ]
+ },
+ "tanaka": {
+  "lines": [
+   "鷹ノ原のりんごは甘いずら。遠慮しないで食べな。",
+   "明日は五時に起きるぞ。遅れたら妻に怒られるからな。"
+  ],
+  "design": "A 67-year-old Japanese apple farmer from rural Nagano. Low, gravelly, weathered older man's voice, few words, gruff but kind, relaxed rural intonation. Native Japanese.",
+  "style": "gruff, dry, unhurried",
+  "rows": [
+   {
+    "tag": "tanaka-A",
+    "kind": "designed",
+    "voice": "voice_mnuekr0hqcp6",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier.",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   },
+   {
+    "tag": "tanaka-B",
+    "kind": "designed",
+    "voice": "voice_mnuekr0hqcp6",
+    "model": "gemini-3.8-flash-lite-tts",
+    "clips": [
+     "tanaka_1_0.mp3",
+     "tanaka_1_1.mp3"
+    ],
+    "errors": []
+   },
+   {
+    "tag": "tanaka-C",
+    "kind": "library",
+    "voice": "ja-jp-podcaster-7",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier.",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   },
+   {
+    "tag": "tanaka-D",
+    "kind": "library",
+    "voice": "ja-jp-training-4",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier.",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   }
+  ]
+ },
+ "keiko": {
+  "lines": [
+   "主人に頼まれて、今日はりんご鍋にしたのよ。",
+   "ほら、遠慮しないで。たくさん食べなきゃ、畑で倒れちゃうわよ。"
+  ],
+  "design": "A cheerful Japanese farmer's wife in her early sixties. Warm, chatty, motherly mature woman's voice, brisk and a bit teasing. Native Japanese.",
+  "style": "cheerful, chatty",
+  "rows": [
+   {
+    "tag": "keiko-A",
+    "kind": "designed",
+    "voice": "voice_nlyabte9tajq",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier.",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   },
+   {
+    "tag": "keiko-B",
+    "kind": "designed",
+    "voice": "voice_nlyabte9tajq",
+    "model": "gemini-3.8-flash-lite-tts",
+    "clips": [
+     "keiko_1_0.mp3",
+     "keiko_1_1.mp3"
+    ],
+    "errors": []
+   },
+   {
+    "tag": "keiko-C",
+    "kind": "library",
+    "voice": "ja-jp-training-12",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier.",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   },
+   {
+    "tag": "keiko-D",
+    "kind": "library",
+    "voice": "ja-jp-training-10",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier.",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   }
+  ]
+ },
+ "mio": {
+  "lines": [
+   "え、マジで？それウケるんだけど！",
+   "明日の数学のテスト、ガチでやばい…もう無理すぎ。"
+  ],
+  "design": "A 16-year-old Japanese high-school girl. Bright, quick, expressive teenage girl's voice, a little dramatic, casual and playful. Native Japanese.",
+  "style": "playful, dramatic",
+  "rows": [
+   {
+    "tag": "mio-A",
+    "kind": "library",
+    "voice": "ja-jp-csagent-8",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier.",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   }
+  ]
+ },
+ "yuki": {
+  "lines": [
+   "アル〜！農家生活一日目、どうだった？？",
+   "マジ！？いい人じゃん。でも夜とか寂しくない？"
+  ],
+  "design": "A 25-year-old Tokyo office worker and anime fan. Lively, bubbly young woman's voice, fast casual Tokyo speech, lots of energy. Native Japanese.",
+  "style": "bubbly, teasing",
+  "rows": [
+   {
+    "tag": "yuki-A",
+    "kind": "designed",
+    "voice": "voice_6ixh68rfj5h4",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier.",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   },
+   {
+    "tag": "yuki-B",
+    "kind": "designed",
+    "voice": "voice_6ixh68rfj5h4",
+    "model": "gemini-3.8-flash-lite-tts",
+    "clips": [
+     "yuki_1_0.mp3",
+     "yuki_1_1.mp3"
+    ],
+    "errors": []
+   },
+   {
+    "tag": "yuki-C",
+    "kind": "library",
+    "voice": "ja-jp-commercial-6",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier.",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   },
+   {
+    "tag": "yuki-D",
+    "kind": "library",
+    "voice": "ja-jp-advisor-5",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier.",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   }
+  ]
+ },
+ "kenta": {
+  "lines": [
+   "日本はな、まず「告白」すんねん。「好きです、付き合ってください」って。そこから恋人になるんや。",
+   "そこはめっちゃ違うな。俺の彼女、長野市で看護師やねん。"
+  ],
+  "design": "A 24-year-old man from Osaka. Loud, friendly, funny young man's voice with a strong natural Osaka Kansai-ben accent and Kansai pitch accent, quick tempo. Native Japanese.",
+  "style": "joking, loud, fast",
+  "rows": [
+   {
+    "tag": "kenta-A",
+    "kind": "designed",
+    "voice": "voice_fy8oio1yurjl",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier.",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   },
+   {
+    "tag": "kenta-B",
+    "kind": "designed",
+    "voice": "voice_fy8oio1yurjl",
+    "model": "gemini-3.8-flash-lite-tts",
+    "clips": [
+     "kenta_1_0.mp3",
+     "kenta_1_1.mp3"
+    ],
+    "errors": []
+   },
+   {
+    "tag": "kenta-C",
+    "kind": "library",
+    "voice": "ja-jp-tutor-7",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier.",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   },
+   {
+    "tag": "kenta-D",
+    "kind": "library",
+    "voice": "ja-jp-storyteller-2",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier.",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   }
+  ]
+ },
+ "ren": {
+  "lines": [
+   "あ、ごめん、返事遅くなって。…今度の土曜日、空いてる？",
+   "今日、フィルムで紅葉を撮ってきたんだ。アルちゃんにも見せたいな。"
+  ],
+  "design": "A 26-year-old Japanese graphic designer. Soft, calm, gentle young man's voice, slightly low and warm, a bit shy and quiet. Native Japanese.",
+  "style": "soft, a little shy",
+  "rows": [
+   {
+    "tag": "ren-A",
+    "kind": "designed",
+    "voice": "voice_vptdjdqttl3i",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier.",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   },
+   {
+    "tag": "ren-B",
+    "kind": "designed",
+    "voice": "voice_vptdjdqttl3i",
+    "model": "gemini-3.8-flash-lite-tts",
+    "clips": [
+     "ren_1_0.mp3",
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-lite-tts, description: Generate content requests per day limit exceeded on Free "
+    ]
+   },
+   {
+    "tag": "ren-C",
+    "kind": "library",
+    "voice": "ja-jp-storyteller-12",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier.",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   },
+   {
+    "tag": "ren-D",
+    "kind": "library",
+    "voice": "ja-jp-storyteller-5",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier.",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   }
+  ]
+ },
+ "sato": {
+  "lines": [
+   "おはようございます。本日の職員会議は、三時半からでございます。",
+   "校長先生がお見えになりましたら、ご挨拶をお願いいたします。"
+  ],
+  "design": "A 41-year-old Japanese high-school teacher. Clear, composed, precise mature woman's voice, polite and formal, neat articulation. Native Japanese.",
+  "style": "polite, composed",
+  "rows": [
+   {
+    "tag": "sato-A",
+    "kind": "designed",
+    "voice": "voice_q8ebkcksc90a",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier.",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   },
+   {
+    "tag": "sato-B",
+    "kind": "designed",
+    "voice": "voice_q8ebkcksc90a",
+    "model": "gemini-3.8-flash-lite-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-lite-tts, description: Generate content requests per day limit exceeded on Free ",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-lite-tts, description: Generate content requests per day limit exceeded on Free "
+    ]
+   },
+   {
+    "tag": "sato-C",
+    "kind": "library",
+    "voice": "ja-jp-tutor-1",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier.",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   },
+   {
+    "tag": "sato-D",
+    "kind": "library",
+    "voice": "ja-jp-advisor-7",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier.",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   }
+  ]
+ },
+ "hayato": {
+  "lines": [
+   "拙者、くろがねはやとと申す。この峠は、拙者が命に代えても守り申す！",
+   "かたじけない…そばの一杯で、生き返ったでござる。"
+  ],
+  "design": "A samurai in his thirties from a classic Japanese period drama. Deep, strong, resonant, dignified male voice, theatrical and proud. Native Japanese.",
+  "style": "proud, theatrical",
+  "rows": [
+   {
+    "tag": "hayato-A",
+    "kind": "designed",
+    "voice": "voice_y5oast0i9by4",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier.",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   },
+   {
+    "tag": "hayato-B",
+    "kind": "designed",
+    "voice": "voice_y5oast0i9by4",
+    "model": "gemini-3.8-flash-lite-tts",
+    "clips": [
+     "hayato_1_0.mp3",
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-lite-tts, description: Generate content requests per day limit exceeded on Free "
+    ]
+   },
+   {
+    "tag": "hayato-C",
+    "kind": "library",
+    "voice": "ja-jp-concierge-4",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier.",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   },
+   {
+    "tag": "hayato-D",
+    "kind": "library",
+    "voice": "ja-jp-advisor-3",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier.",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   }
+  ]
+ },
+ "you": {
+  "lines": [
+   "疲れた〜。5時に起きて、一日中りんご畑にいた。でも景色がめっちゃきれい。",
+   "すみません、松本まで行きたいんですが。"
+  ],
+  "design": "A friendly 23-year-old young man. Warm, open, cheerful voice, clear and natural, casual. Native Japanese.",
+  "style": "friendly, relaxed",
+  "rows": [
+   {
+    "tag": "you-A",
+    "kind": "designed",
+    "voice": "voice_c4fcfvc38ess",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier.",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   },
+   {
+    "tag": "you-B",
+    "kind": "designed",
+    "voice": "voice_c4fcfvc38ess",
+    "model": "gemini-3.8-flash-lite-tts",
+    "clips": [
+     null,
+     "you_1_1.mp3"
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-lite-tts, description: Generate content requests per day limit exceeded on Free "
+    ]
+   },
+   {
+    "tag": "you-C",
+    "kind": "library",
+    "voice": "ja-jp-commercial-4",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier.",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   },
+   {
+    "tag": "you-D",
+    "kind": "library",
+    "voice": "ja-jp-assistant-10",
+    "model": "gemini-3.8-flash-tts",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier.",
+     "429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.8-flash-tts, description: Generate content requests per day limit exceeded on Free Tier."
+    ]
+   }
+  ]
+ }
+}
