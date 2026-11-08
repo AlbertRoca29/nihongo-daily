@@ -184,20 +184,20 @@ def page(results):
     # 3 · costs
     gem_all = 23 * 0.015  # ~45 s of directed speech per lesson x 30 days ≈ 23 min
     costs = f"""
-<div class=card><div class=mut>What you pay now</div><div class=total>€0 a month</div>
+<div class=card><div class=mut>What you pay now</div><div class=total>$0 a month</div>
 <table><tr><th>Part</th><th>Your use</th><th>Cost</th></tr>
 <tr><td>Google Chirp 3 HD</td><td>~{cpl} characters a lesson × 30 ≈ {month_chars:,} a month
- ({month_chars / 10000:.1f}% of the free million)</td><td>€0</td></tr>
-<tr><td>VOICEVOX</td><td>Sōta, Tanaka-san, Mio</td><td>€0</td></tr>
-<tr><td>GitHub Actions + Pages</td><td>the audio workflow (~3 min a day) and hosting</td><td>€0 (public repo)</td></tr>
-<tr><td>Gemini-TTS</td><td>not used in lessons</td><td>€0</td></tr></table>
+ ({month_chars / 10000:.1f}% of the free million)</td><td>$0</td></tr>
+<tr><td>VOICEVOX</td><td>Sōta, Tanaka-san, Mio</td><td>$0</td></tr>
+<tr><td>GitHub Actions + Pages</td><td>the audio workflow (~3 min a day) and hosting</td><td>$0 (public repo)</td></tr>
+<tr><td>Gemini-TTS</td><td>not used in lessons</td><td>$0</td></tr></table>
 <p class=mut style="font-size:13px">Audio is made once per line and kept in the repo, so lessons you re-open cost nothing.
 Estimate from your {nles} lessons so far.</p></div>
 <div class=card><div class=mut>If you add directed Gemini voices (2.5 Flash TTS, billing on)</div>
 <table><tr><th>Option</th><th>Speech a month</th><th>Cost</th></tr>
-<tr><td>Only Kenta (Osaka accent)</td><td>~2 min</td><td>≈ €0.05</td></tr>
-<tr><td>Everyone not on VOICEVOX (Kenta, Yuki, Ren, Sato, Hayato, Keiko, you)</td><td>~23 min</td><td>≈ €{gem_all:.2f}</td></tr>
-<tr><td>Same with Gemini 3.1 Flash / 2.5 Pro TTS</td><td>~23 min</td><td>≈ €{gem_all * 2:.2f}</td></tr></table>
+<tr><td>Only Kenta (Osaka accent)</td><td>~2 min</td><td>≈ $0.05</td></tr>
+<tr><td>Everyone not on VOICEVOX (Kenta, Yuki, Ren, Sato, Hayato, Keiko, you)</td><td>~23 min</td><td>≈ ${gem_all:.2f}</td></tr>
+<tr><td>Same with Gemini 3.1 Flash / 2.5 Pro TTS</td><td>~23 min</td><td>≈ ${gem_all * 2:.2f}</td></tr></table>
 <p class=mut style="font-size:13px">Without billing, an AI Studio key gives 10 clips a day: enough to test here, not for daily lessons.
 A budget alert in Google Cloud can cap any surprise.</p></div>"""
 
@@ -223,7 +223,7 @@ A budget alert in Google Cloud can cap any surprise.</p></div>"""
                     t.append("age tremor")
                 kind, cls = "Chirp 3 HD · " + (", ".join(t) or "as is") + " · free", ""
             elif c["engine"] == "gemini":
-                kind, cls = "Gemini 2.5 Flash TTS · directed by the description above · ≈ €0.015/min", ""
+                kind, cls = "Gemini 2.5 Flash TTS · directed by the description above · ≈ $0.015/min", ""
             else:
                 kind, cls = "VOICEVOX · free · credit line needed", ""
             if use:
