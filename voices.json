@@ -1,17 +1,32 @@
 {
-  "_about": "Who speaks with which Google voice. All are Chirp 3 HD Japanese voices (ja-JP-Chirp3-HD-<name>). Change a name here and the audio is remade on the next run. Picked by measured pitch, liveliness and pace to fit each character.",
+  "_about": "Who speaks with which voice. A plain name is a Google Chirp 3 HD voice (ja-JP-Chirp3-HD-<name>). An object can set a speed (rate), a directed Gemini-TTS voice (model + prompt), or a VOICEVOX voice (engine voicevox, speaker, style; free, run inside the workflow; needs the credit line shown in Settings). Change an entry and the audio is remade on the next run. Picked by ear in samples/lab and samples/audition.",
   "model": "Chirp3-HD",
   "you": "Achird",
   "narrator": "Kore",
   "cast": {
-    "tanaka": "Charon",
+    "tanaka": {
+      "engine": "voicevox",
+      "speaker": "ちび式じい",
+      "style": "ノーマル"
+    },
     "yuki": "Leda",
     "kenta": "Puck",
     "sato": "Gacrux",
-    "hana": "Vindemiatrix",
+    "hana": {
+      "voice": "Vindemiatrix",
+      "rate": 0.92
+    },
     "ren": "Algieba",
-    "sota": "Fenrir",
-    "mio": "Achernar",
+    "sota": {
+      "engine": "voicevox",
+      "speaker": "白上虎太郎",
+      "style": "ふつう"
+    },
+    "mio": {
+      "engine": "voicevox",
+      "speaker": "春日部つむぎ",
+      "style": "ノーマル"
+    },
     "hayato": "Algenib"
   },
   "others": {
@@ -37,5 +52,10 @@
       "Enceladus",
       "Sadaltager"
     ]
-  }
+  },
+  "credits": [
+    "VOICEVOX:白上虎太郎",
+    "VOICEVOX:ちび式じい",
+    "VOICEVOX:春日部つむぎ"
+  ]
 }

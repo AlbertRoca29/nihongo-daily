@@ -11,7 +11,7 @@ Files are named by voice + text, so unchanged lines are never remade.
   python3 scripts/tts.py 2026-11-05  # just these lessons
 Needs GOOGLE_TTS_KEY in the environment.
 """
-import base64, glob, hashlib, json, os, re, sys, time, urllib.error, urllib.request
+import base64, glob, hashlib, json, os, re, subprocess, sys, time, urllib.error, urllib.parse, urllib.request
 
 KEY = os.environ.get("GOOGLE_TTS_KEY", "").strip()
 API = "https://texttospeech.googleapis.com/v1/text:synthesize"
@@ -55,9 +55,34 @@ def spoken(text, lesson, override=None):
     return re.sub(r"\s+", " ", s).strip()
 
 
+VV = os.environ.get("VOICEVOX_URL", "http://127.0.0.1:50021")
+_VV_IDS = {}
+
+
 def spec(v):
-    """A voices.json entry: "Leda" (Chirp 3 HD) or {"voice", "model", "prompt"} (directed Gemini-TTS)."""
+    """A voices.json entry. "Leda" = Chirp 3 HD; {"voice", "rate"} = Chirp at another speed;
+    {"voice", "model", "prompt"} = directed Gemini-TTS; {"engine": "voicevox", "speaker", "style"} = VOICEVOX."""
     return v if isinstance(v, dict) else {"voice": v}
+
+
+def voicevox(text, v):
+    """Synthesize with a local VOICEVOX engine (started by the workflow), as MP3."""
+    if not _VV_IDS:
+        with urllib.request.urlopen(VV + "/speakers", timeout=60) as r:
+            for sp in json.load(r):
+                for st in sp["styles"]:
+                    _VV_IDS[(sp["name"], st["name"])] = st["id"]
+    sid = _VV_IDS.get((v["speaker"], v.get("style", "ノーマル")))
+    if sid is None:
+        raise SystemExit(f"VOICEVOX voice not found: {v['speaker']} / {v.get('style')}")
+    post = lambda url, data: urllib.request.urlopen(urllib.request.Request(
+        url, data, {"Content-Type": "application/json"}, method="POST"), timeout=300).read()
+    q = json.loads(post(f"{VV}/audio_query?text={urllib.parse.quote(text)}&speaker={sid}", b""))
+    q["speedScale"] = v.get("rate", 1.0)
+    wav = post(f"{VV}/synthesis?speaker={sid}", json.dumps(q).encode())
+    p = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", "-", "-f", "mp3", "-b:a", "64k", "-"],
+                       input=wav, capture_output=True, check=True)
+    return p.stdout
 
 
 def pick(pool, name):
@@ -115,13 +140,18 @@ def items(lesson):
 
 def synth(text, voice):
     v = spec(voice)
+    if v.get("engine") == "voicevox":
+        return voicevox(text, v)
     inp = {"text": text}
     if v.get("model"):  # Gemini-TTS: same voice names, steered by a description of the speaker
         sel = {"languageCode": "ja-JP", "name": v["voice"], "modelName": v["model"]}
         inp["prompt"] = VOICES.get("direction", "") + v.get("prompt", "")
     else:
         sel = {"languageCode": "ja-JP", "name": f"ja-JP-{VOICES['model']}-{v['voice']}"}
-    body = {"input": inp, "voice": sel, "audioConfig": {"audioEncoding": "MP3"}}
+    cfg = {"audioEncoding": "MP3"}
+    if v.get("rate") and not v.get("model"):
+        cfg["speakingRate"] = v["rate"]
+    body = {"input": inp, "voice": sel, "audioConfig": cfg}
     req = urllib.request.Request(f"{API}?key={KEY}", json.dumps(body).encode(),
                                  {"Content-Type": "application/json"})
     for attempt in range(5):
@@ -138,8 +168,10 @@ def synth(text, voice):
 def tag(voice):
     """What identifies a voice in the file name (unchanged for plain Chirp voices)."""
     v = spec(voice)
+    if v.get("engine") == "voicevox":
+        return f"voicevox|{v['speaker']}|{v.get('style', '')}|{v.get('rate', 1.0)}"
     if not v.get("model"):
-        return f"{VOICES['model']}|{v['voice']}"
+        return f"{VOICES['model']}|{v['voice']}" + (f"|{v['rate']}" if v.get("rate") else "")
     return f"{v['model']}|{v['voice']}|{VOICES.get('direction', '')}{v.get('prompt', '')}"
 
 

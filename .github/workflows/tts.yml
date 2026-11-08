@@ -22,6 +22,13 @@ jobs:
       - uses: actions/checkout@v4
       - name: Stroke order for new kanji
         run: python3 scripts/strokes.py || true
+      - name: Start VOICEVOX (free voices used in voices.json)
+        run: |
+          if grep -q voicevox voices.json; then
+            docker run -d -p 50021:50021 voicevox/voicevox_engine:cpu-latest
+            sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+            for i in $(seq 1 60); do curl -sf http://127.0.0.1:50021/version && break; sleep 5; done
+          fi
       - name: Make audio
         env:
           GOOGLE_TTS_KEY: ${{ secrets.GOOGLE_TTS_KEY }}

@@ -1628,7 +1628,8 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
           <div class="seg" data-set="uifont">${UIFONTS.map(([k, n]) => `<button data-v="${k}" aria-pressed="${k === ui}">${n}</button>`).join("")}</div></div>
         <div class="set-row"><div class="lab">Furigana<span>ふりがな</span></div>
           <div class="seg" data-set="furi"><button data-v="on" aria-pressed="${furi}">Show</button><button data-v="off" aria-pressed="${!furi}">Hide (tap to peek)</button></div></div>
-      </div>`);
+      </div>
+      <p style="font-size:12px;opacity:.6;margin:14px 4px">Voices: Google Cloud Text-to-Speech · VOICEVOX:白上虎太郎 · VOICEVOX:ちび式じい · VOICEVOX:春日部つむぎ</p>`);
     bindSettings();
   }
   function bindSettings(){
