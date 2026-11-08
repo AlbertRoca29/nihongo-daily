@@ -1,0 +1,39 @@
+name: Voice audition
+
+# Every free Japanese voice (VOICEVOX + AivisSpeech with AivisHub models) reads one line per role.
+on:
+  push:
+    branches: [master]
+    paths: ["scripts/voice_audition.py", ".github/workflows/voice-audition.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: voice-audition
+  cancel-in-progress: true
+
+jobs:
+  audition:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - name: Start engines
+        run: |
+          docker run -d --name vv -p 50021:50021 voicevox/voicevox_engine:cpu-latest || true
+          docker run -d --name av -p 10101:10101 ghcr.io/aivis-project/aivisspeech-engine:cpu-latest || true
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          pip install --quiet librosa
+          for i in $(seq 1 90); do curl -sf http://127.0.0.1:50021/version >/dev/null && curl -sf http://127.0.0.1:10101/version >/dev/null && break; sleep 5; done || true
+          curl -s http://127.0.0.1:10101/version; echo; docker logs av 2>&1 | tail -20
+      - name: Audition
+        run: python3 scripts/voice_audition.py
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add samples/audition
+          git commit -m "Voice audition samples" || exit 0
+          for i in 1 2 3; do git pull --rebase origin master && git push origin HEAD:master && break; sleep 5; done
