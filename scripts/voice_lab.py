@@ -195,6 +195,8 @@ def gemini_api(text, voice, model, prompt):
 
 
 def _google(text, voice, model=None, prompt=None, rate=1.0):
+    if model and os.environ.get("GEMINI_API_KEY"):
+        return gemini_api(text, voice, model, prompt)  # free tier key: skip the Cloud route
     if model:
         audio, err = _cloud(text, voice, model, prompt, rate)
         if audio:
