@@ -1,1 +1,88 @@
-115 ja-JP voices
+sota 400: {
+  "error": {
+    "code": 400,
+    "message": "Unknown parameter 'voice.displayName'. Did you mean 'display_name'?",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+hana 400: {
+  "error": {
+    "code": 400,
+    "message": "Unknown parameter 'voice.displayName'. Did you mean 'display_name'?",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+tanaka 400: {
+  "error": {
+    "code": 400,
+    "message": "Unknown parameter 'voice.displayName'. Did you mean 'display_name'?",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+keiko 400: {
+  "error": {
+    "code": 400,
+    "message": "Unknown parameter 'voice.displayName'. Did you mean 'display_name'?",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+mio 400: {
+  "error": {
+    "code": 400,
+    "message": "Unknown parameter 'voice.displayName'. Did you mean 'display_name'?",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+yuki 400: {
+  "error": {
+    "code": 400,
+    "message": "Unknown parameter 'voice.displayName'. Did you mean 'display_name'?",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+kenta 400: {
+  "error": {
+    "code": 400,
+    "message": "Unknown parameter 'voice.displayName'. Did you mean 'display_name'?",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+ren 400: {
+  "error": {
+    "code": 400,
+    "message": "Unknown parameter 'voice.displayName'. Did you mean 'display_name'?",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+sato 400: {
+  "error": {
+    "code": 400,
+    "message": "Unknown parameter 'voice.displayName'. Did you mean 'display_name'?",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+hayato 400: {
+  "error": {
+    "code": 400,
+    "message": "Unknown parameter 'voice.displayName'. Did you mean 'display_name'?",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
+you 400: {
+  "error": {
+    "code": 400,
+    "message": "Unknown parameter 'voice.displayName'. Did you mean 'display_name'?",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+
