@@ -646,8 +646,8 @@
     ],
     "errors": [],
     "pitch": [
-     224,
-     303
+     243,
+     259
     ]
    },
    {
@@ -660,26 +660,8 @@
      null
     ],
     "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
-    ],
-    "pitch": [
-     null,
-     null
-    ]
-   },
-   {
-    "engine": "gemini",
-    "voice": "Sulafat",
-    "model": "gemini-2.5-pro-tts",
-    "tag": "C",
-    "clips": [
-     null,
-     null
-    ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-2.5-pro-tts' (or it may not exist). Remediate access with this Troubleshooter URL or share ",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-2.5-pro-tts' (or it may not exist). Remediate access with this Troubleshooter URL or share "
+     "gemini-api gemini-2.5-flash-preview-tts 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, mode",
+     "gemini-api gemini-2.5-flash-preview-tts 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, mode"
     ],
     "pitch": [
      null,
@@ -690,50 +672,14 @@
     "engine": "gemini",
     "voice": "Callirrhoe",
     "model": "gemini-3.1-flash-tts-preview",
-    "tag": "D",
+    "tag": "C",
     "clips": [
      null,
      null
     ],
     "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
-    ],
-    "pitch": [
-     null,
-     null
-    ]
-   },
-   {
-    "engine": "gemini",
-    "voice": "Gacrux",
-    "model": "gemini-3.1-flash-tts-preview",
-    "tag": "E",
-    "clips": [
-     null,
-     null
-    ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
-    ],
-    "pitch": [
-     null,
-     null
-    ]
-   },
-   {
-    "engine": "gemini",
-    "voice": "Vindemiatrix",
-    "model": "gemini-3.1-flash-tts-preview",
-    "tag": "F",
-    "clips": [
-     null,
-     null
-    ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
+     "gemini-api gemini-2.5-flash-preview-tts 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, mode",
+     "gemini-api gemini-2.5-flash-preview-tts 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, mode"
     ],
     "pitch": [
      null,
@@ -925,8 +871,8 @@
     ],
     "errors": [],
     "pitch": [
-     219,
-     234
+     268,
+     250
     ]
    },
    {
@@ -935,33 +881,14 @@
     "model": "gemini-3.1-flash-tts-preview",
     "tag": "B",
     "clips": [
-     null,
+     "yuki_B_0.mp3",
      null
     ],
     "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
+     "gemini-api gemini-2.5-flash-preview-tts 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, mode"
     ],
     "pitch": [
-     null,
-     null
-    ]
-   },
-   {
-    "engine": "gemini",
-    "voice": "Laomedeia",
-    "model": "gemini-2.5-pro-tts",
-    "tag": "C",
-    "clips": [
-     null,
-     null
-    ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-2.5-pro-tts' (or it may not exist). Remediate access with this Troubleshooter URL or share ",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-2.5-pro-tts' (or it may not exist). Remediate access with this Troubleshooter URL or share "
-    ],
-    "pitch": [
-     null,
+     220,
      null
     ]
    },
@@ -969,50 +896,14 @@
     "engine": "gemini",
     "voice": "Aoede",
     "model": "gemini-3.1-flash-tts-preview",
-    "tag": "D",
+    "tag": "C",
     "clips": [
      null,
      null
     ],
     "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
-    ],
-    "pitch": [
-     null,
-     null
-    ]
-   },
-   {
-    "engine": "gemini",
-    "voice": "Zephyr",
-    "model": "gemini-3.1-flash-tts-preview",
-    "tag": "E",
-    "clips": [
-     null,
-     null
-    ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
-    ],
-    "pitch": [
-     null,
-     null
-    ]
-   },
-   {
-    "engine": "gemini",
-    "voice": "Leda",
-    "model": "gemini-3.1-flash-tts-preview",
-    "tag": "F",
-    "clips": [
-     null,
-     null
-    ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
+     "gemini-api gemini-2.5-flash-preview-tts 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, mode",
+     "gemini-api gemini-2.5-flash-preview-tts 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, mode"
     ],
     "pitch": [
      null,
@@ -1040,8 +931,8 @@
     ],
     "errors": [],
     "pitch": [
-     154,
-     135
+     138,
+     144
     ]
    },
    {
@@ -1050,87 +941,29 @@
     "model": "gemini-3.1-flash-tts-preview",
     "tag": "B",
     "clips": [
-     null,
-     null
+     "kenta_B_0.mp3",
+     "kenta_B_1.mp3"
     ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL || gemini-api gemini-2.5-flash-preview-tts 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Requests to this API generativelanguage.googleapis.com method google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent are blocked.\",\n    \"status\": \"PERMISSION_DENIED\",\n    \"details\": [\n   ",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL || gemini-api gemini-2.5-flash-preview-tts 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Gemini API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=626"
-    ],
+    "errors": [],
     "pitch": [
-     null,
-     null
-    ]
-   },
-   {
-    "engine": "gemini",
-    "voice": "Puck",
-    "model": "gemini-2.5-pro-tts",
-    "tag": "C",
-    "clips": [
-     null,
-     null
-    ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-2.5-pro-tts' (or it may not exist). Remediate access with this Troubleshooter URL or share  || gemini-api gemini-2.5-flash-preview-tts 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission denied on the service.\",\n    \"status\": \"PERMISSION_DENIED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_DENIED\",\n        \"d",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-2.5-pro-tts' (or it may not exist). Remediate access with this Troubleshooter URL or share  || gemini-api gemini-2.5-flash-preview-tts 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Gemini API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=626"
-    ],
-    "pitch": [
-     null,
-     null
+     132,
+     155
     ]
    },
    {
     "engine": "gemini",
     "voice": "Fenrir",
     "model": "gemini-3.1-flash-tts-preview",
-    "tag": "D",
+    "tag": "C",
     "clips": [
-     null,
+     "kenta_C_0.mp3",
      null
     ],
     "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL || gemini-api gemini-2.5-flash-preview-tts 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Gemini API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=626",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL || gemini-api gemini-2.5-flash-preview-tts 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission denied on the service.\",\n    \"status\": \"PERMISSION_DENIED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_DENIED\",\n        \"d"
+     "gemini-api gemini-2.5-flash-preview-tts 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, mode"
     ],
     "pitch": [
-     null,
-     null
-    ]
-   },
-   {
-    "engine": "gemini",
-    "voice": "Sadachbia",
-    "model": "gemini-3.1-flash-tts-preview",
-    "tag": "E",
-    "clips": [
-     null,
-     null
-    ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL || gemini-api gemini-2.5-flash-preview-tts 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Gemini API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/generativelanguage.googleapis.com/overview?project=626",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL || gemini-api gemini-2.5-flash-preview-tts 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Requests to this API generativelanguage.googleapis.com method google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent are blocked.\",\n    \"status\": \"PERMISSION_DENIED\",\n    \"details\": [\n   "
-    ],
-    "pitch": [
-     null,
-     null
-    ]
-   },
-   {
-    "engine": "gemini",
-    "voice": "Zubenelgenubi",
-    "model": "gemini-3.1-flash-tts-preview",
-    "tag": "F",
-    "clips": [
-     null,
-     null
-    ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL || gemini-api gemini-2.5-flash-preview-tts 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Requests to this API generativelanguage.googleapis.com method google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent are blocked.\",\n    \"status\": \"PERMISSION_DENIED\",\n    \"details\": [\n   ",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL || gemini-api gemini-2.5-flash-preview-tts 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Requests to this API generativelanguage.googleapis.com method google.ai.generativelanguage.v1beta.GenerativeService.GenerateContent are blocked.\",\n    \"status\": \"PERMISSION_DENIED\",\n    \"details\": [\n   "
-    ],
-    "pitch": [
-     null,
+     124,
      null
     ]
    }
@@ -1155,8 +988,8 @@
     ],
     "errors": [],
     "pitch": [
-     144,
-     129
+     129,
+     102
     ]
    },
    {
@@ -1166,83 +999,28 @@
     "tag": "B",
     "clips": [
      null,
-     null
+     "ren_B_1.mp3"
     ],
     "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
+     "gemini-api gemini-2.5-flash-preview-tts 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, mode"
     ],
     "pitch": [
      null,
-     null
-    ]
-   },
-   {
-    "engine": "gemini",
-    "voice": "Algieba",
-    "model": "gemini-2.5-pro-tts",
-    "tag": "C",
-    "clips": [
-     null,
-     null
-    ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-2.5-pro-tts' (or it may not exist). Remediate access with this Troubleshooter URL or share ",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-2.5-pro-tts' (or it may not exist). Remediate access with this Troubleshooter URL or share "
-    ],
-    "pitch": [
-     null,
-     null
+     90
     ]
    },
    {
     "engine": "gemini",
     "voice": "Enceladus",
     "model": "gemini-3.1-flash-tts-preview",
-    "tag": "D",
+    "tag": "C",
     "clips": [
      null,
      null
     ],
     "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
-    ],
-    "pitch": [
-     null,
-     null
-    ]
-   },
-   {
-    "engine": "gemini",
-    "voice": "Umbriel",
-    "model": "gemini-3.1-flash-tts-preview",
-    "tag": "E",
-    "clips": [
-     null,
-     null
-    ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
-    ],
-    "pitch": [
-     null,
-     null
-    ]
-   },
-   {
-    "engine": "gemini",
-    "voice": "Iapetus",
-    "model": "gemini-3.1-flash-tts-preview",
-    "tag": "F",
-    "clips": [
-     null,
-     null
-    ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
+     "gemini-api gemini-2.5-flash-preview-tts 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, mode",
+     "gemini-api gemini-2.5-flash-preview-tts 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, mode"
     ],
     "pitch": [
      null,
@@ -1270,7 +1048,7 @@
     ],
     "errors": [],
     "pitch": [
-     197,
+     186,
      173
     ]
    },
@@ -1284,26 +1062,8 @@
      null
     ],
     "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
-    ],
-    "pitch": [
-     null,
-     null
-    ]
-   },
-   {
-    "engine": "gemini",
-    "voice": "Kore",
-    "model": "gemini-2.5-pro-tts",
-    "tag": "C",
-    "clips": [
-     null,
-     null
-    ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-2.5-pro-tts' (or it may not exist). Remediate access with this Troubleshooter URL or share ",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-2.5-pro-tts' (or it may not exist). Remediate access with this Troubleshooter URL or share "
+     "gemini-api gemini-2.5-flash-preview-tts 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, mode",
+     "gemini-api gemini-2.5-flash-preview-tts 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, mode"
     ],
     "pitch": [
      null,
@@ -1314,50 +1074,14 @@
     "engine": "gemini",
     "voice": "Erinome",
     "model": "gemini-3.1-flash-tts-preview",
-    "tag": "D",
+    "tag": "C",
     "clips": [
      null,
      null
     ],
     "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
-    ],
-    "pitch": [
-     null,
-     null
-    ]
-   },
-   {
-    "engine": "gemini",
-    "voice": "Despina",
-    "model": "gemini-3.1-flash-tts-preview",
-    "tag": "E",
-    "clips": [
-     null,
-     null
-    ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
-    ],
-    "pitch": [
-     null,
-     null
-    ]
-   },
-   {
-    "engine": "gemini",
-    "voice": "Gacrux",
-    "model": "gemini-3.1-flash-tts-preview",
-    "tag": "F",
-    "clips": [
-     null,
-     null
-    ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
+     "gemini-api gemini-2.5-flash-preview-tts 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, mode",
+     "gemini-api gemini-2.5-flash-preview-tts 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, mode"
     ],
     "pitch": [
      null,
@@ -1385,8 +1109,8 @@
     ],
     "errors": [],
     "pitch": [
-     124,
-     104
+     119,
+     105
     ]
    },
    {
@@ -1399,26 +1123,8 @@
      null
     ],
     "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
-    ],
-    "pitch": [
-     null,
-     null
-    ]
-   },
-   {
-    "engine": "gemini",
-    "voice": "Alnilam",
-    "model": "gemini-2.5-pro-tts",
-    "tag": "C",
-    "clips": [
-     null,
-     null
-    ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-2.5-pro-tts' (or it may not exist). Remediate access with this Troubleshooter URL or share ",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-2.5-pro-tts' (or it may not exist). Remediate access with this Troubleshooter URL or share "
+     "gemini-api gemini-2.5-flash-preview-tts 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, mode",
+     "gemini-api gemini-2.5-flash-preview-tts 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, mode"
     ],
     "pitch": [
      null,
@@ -1429,50 +1135,14 @@
     "engine": "gemini",
     "voice": "Orus",
     "model": "gemini-3.1-flash-tts-preview",
-    "tag": "D",
+    "tag": "C",
     "clips": [
      null,
      null
     ],
     "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
-    ],
-    "pitch": [
-     null,
-     null
-    ]
-   },
-   {
-    "engine": "gemini",
-    "voice": "Algenib",
-    "model": "gemini-3.1-flash-tts-preview",
-    "tag": "E",
-    "clips": [
-     null,
-     null
-    ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
-    ],
-    "pitch": [
-     null,
-     null
-    ]
-   },
-   {
-    "engine": "gemini",
-    "voice": "Charon",
-    "model": "gemini-3.1-flash-tts-preview",
-    "tag": "F",
-    "clips": [
-     null,
-     null
-    ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
+     "gemini-api gemini-2.5-flash-preview-tts 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, mode",
+     "gemini-api gemini-2.5-flash-preview-tts 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, mode"
     ],
     "pitch": [
      null,
@@ -1500,8 +1170,8 @@
     ],
     "errors": [],
     "pitch": [
-     148,
-     141
+     121,
+     130
     ]
    },
    {
@@ -1514,26 +1184,8 @@
      null
     ],
     "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
-    ],
-    "pitch": [
-     null,
-     null
-    ]
-   },
-   {
-    "engine": "gemini",
-    "voice": "Achird",
-    "model": "gemini-2.5-pro-tts",
-    "tag": "C",
-    "clips": [
-     null,
-     null
-    ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-2.5-pro-tts' (or it may not exist). Remediate access with this Troubleshooter URL or share ",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-2.5-pro-tts' (or it may not exist). Remediate access with this Troubleshooter URL or share "
+     "gemini-api gemini-2.5-flash-preview-tts 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, mode",
+     "gemini-api gemini-2.5-flash-preview-tts 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, mode"
     ],
     "pitch": [
      null,
@@ -1544,50 +1196,14 @@
     "engine": "gemini",
     "voice": "Umbriel",
     "model": "gemini-3.1-flash-tts-preview",
-    "tag": "D",
+    "tag": "C",
     "clips": [
      null,
      null
     ],
     "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
-    ],
-    "pitch": [
-     null,
-     null
-    ]
-   },
-   {
-    "engine": "gemini",
-    "voice": "Iapetus",
-    "model": "gemini-3.1-flash-tts-preview",
-    "tag": "E",
-    "clips": [
-     null,
-     null
-    ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
-    ],
-    "pitch": [
-     null,
-     null
-    ]
-   },
-   {
-    "engine": "gemini",
-    "voice": "Puck",
-    "model": "gemini-3.1-flash-tts-preview",
-    "tag": "F",
-    "clips": [
-     null,
-     null
-    ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Permission 'aiplatform.endpoints.predict' denied on resource '//aiplatform.googleapis.com/projects/626889339543/locations/global/publishers/google/models/gemini-3.1-flash-tts-preview' (or it may not exist). Remediate access with this Troubleshooter URL"
+     "gemini-api gemini-2.5-flash-preview-tts 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, mode",
+     "gemini-api gemini-2.5-flash-preview-tts 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, mode"
     ],
     "pitch": [
      null,
