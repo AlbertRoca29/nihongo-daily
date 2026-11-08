@@ -154,10 +154,15 @@ def samples(only):
         for lv in picks.get(cid, []):
             cands.append(("library", lv, FLASH))
         rows = []
+        prev = {(w["voice"], w["model"]): w for w in results.get(cid, {}).get("rows", [])}
         for n, (kind, voice, model) in enumerate(cands):
             clips, errs = [], []
+            old = prev.get((voice, model), {}).get("clips", [])
             for li, text in enumerate(CHARS[cid]["lines"]):
                 fn = f"{cid}_{n}_{li}.mp3"
+                if li < len(old) and old[li] and os.path.exists(f"{OUT}/{old[li]}"):
+                    clips.append(old[li])  # already made: don't spend quota again
+                    continue
                 audio, err = speak(text, voice, model, STYLE[cid])
                 if audio:
                     open(f"{OUT}/{fn}", "wb").write(audio)
