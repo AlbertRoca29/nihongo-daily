@@ -1,36 +1,75 @@
 {
-  "_about": "Who speaks with which voice. A plain name is a Google Chirp 3 HD voice (ja-JP-Chirp3-HD-<name>). An object can set a speed (rate), a directed Gemini-TTS voice (model + prompt), or a VOICEVOX voice (engine voicevox, speaker, style; free, run inside the workflow; needs the credit line shown in Settings). Change an entry and the audio is remade on the next run. Picked by ear in samples/lab and samples/audition.",
+  "_about": "Who speaks with which voice. A plain name is a Google Chirp 3 HD voice (ja-JP-Chirp3-HD-<name>), used for the narrator and guests. {engine: gemini, voice, model, style} is Gemini 3.8 TTS through the Gemini API (GEMINI_API_KEY): voice is a Japanese library voice (ja-jp-…) or a voice designed for the character (voice_…, see voices38.json); style is the delivery. {engine: voicevox, speaker, style} is VOICEVOX (free, credit line in Settings). Change an entry and the audio is remade on the next run. Picked by ear on samples/lab.",
   "model": "Chirp3-HD",
-  "you": "Achird",
+  "you": {
+    "engine": "gemini",
+    "voice": "voice_c4fcfvc38ess",
+    "model": "gemini-3.8-flash-lite-tts",
+    "style": "friendly, relaxed"
+  },
   "narrator": "Kore",
   "cast": {
     "tanaka": {
-      "engine": "voicevox",
-      "speaker": "ちび式じい",
-      "style": "ノーマル"
+      "engine": "gemini",
+      "voice": "ja-jp-podcaster-7",
+      "model": "gemini-3.8-flash-tts",
+      "style": "gruff, dry, unhurried"
     },
-    "yuki": "Leda",
-    "kenta": "Puck",
-    "sato": "Gacrux",
+    "yuki": {
+      "engine": "gemini",
+      "voice": "ja-jp-commercial-6",
+      "model": "gemini-3.8-flash-tts",
+      "style": "bubbly, teasing"
+    },
+    "kenta": {
+      "engine": "gemini",
+      "voice": "voice_fy8oio1yurjl",
+      "model": "gemini-3.8-flash-tts",
+      "style": "joking, loud, fast"
+    },
+    "sato": {
+      "engine": "gemini",
+      "voice": "voice_q8ebkcksc90a",
+      "model": "gemini-3.8-flash-tts",
+      "style": "polite, composed"
+    },
     "hana": {
-      "voice": "Vindemiatrix",
-      "rate": 0.92
+      "engine": "gemini",
+      "voice": "ja-jp-csagent-4",
+      "model": "gemini-3.8-flash-tts",
+      "style": "slow, gentle, amused, storytelling"
     },
-    "ren": "Algieba",
+    "ren": {
+      "engine": "gemini",
+      "voice": "ja-jp-storyteller-12",
+      "model": "gemini-3.8-flash-tts",
+      "style": "soft, a little shy"
+    },
     "sota": {
       "engine": "voicevox",
       "speaker": "白上虎太郎",
       "style": "ふつう"
     },
     "mio": {
-      "engine": "voicevox",
-      "speaker": "春日部つむぎ",
-      "style": "ノーマル"
+      "engine": "gemini",
+      "voice": "ja-jp-csagent-8",
+      "model": "gemini-3.8-flash-tts",
+      "style": "playful, dramatic"
     },
-    "hayato": "Algenib"
+    "hayato": {
+      "engine": "gemini",
+      "voice": "voice_y5oast0i9by4",
+      "model": "gemini-3.8-flash-tts",
+      "style": "proud, theatrical"
+    }
   },
   "others": {
-    "Keiko": "Callirrhoe"
+    "Keiko": {
+      "engine": "gemini",
+      "voice": "ja-jp-training-10",
+      "model": "gemini-3.8-flash-tts",
+      "style": "cheerful, chatty"
+    }
   },
   "pool": {
     "f": [
@@ -54,8 +93,6 @@
     ]
   },
   "credits": [
-    "VOICEVOX:白上虎太郎",
-    "VOICEVOX:ちび式じい",
-    "VOICEVOX:春日部つむぎ"
+    "VOICEVOX:白上虎太郎"
   ]
 }

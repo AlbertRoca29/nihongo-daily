@@ -56,6 +56,53 @@ def spoken(text, lesson, override=None):
 
 
 VV = os.environ.get("VOICEVOX_URL", "http://127.0.0.1:50021")
+GKEY = os.environ.get("GEMINI_API_KEY", "").strip()
+GAPI = "https://generativelanguage.googleapis.com/v1beta/models"
+
+
+class Later(Exception):
+    """Gemini daily limit / credits: keep the old audio for this line and try again next run."""
+
+
+_gemini_off = []
+
+
+def gemini(text, v):
+    """Gemini 3.8 TTS (Gemini API): a library or designed voice id, plus a delivery style. WAV -> MP3."""
+    if _gemini_off or not GKEY:
+        raise Later("gemini unavailable")
+    part = {"text": text}
+    if v.get("style"):
+        part["speech_metadata"] = {"style": v["style"]}
+    body = {"contents": [{"role": "user", "parts": [part]}],
+            "generationConfig": {"responseModalities": ["AUDIO"],
+                                 "speechConfig": {"voiceConfig": {"voice": v["voice"]}}}}
+    req = urllib.request.Request(f"{GAPI}/{v['model']}:generateContent", json.dumps(body).encode(),
+                                 {"Content-Type": "application/json", "x-goog-api-key": GKEY})
+    for attempt in range(4):
+        try:
+            with urllib.request.urlopen(req, timeout=180) as r:
+                p = json.load(r)["candidates"][0]["content"]["parts"][0]["inlineData"]
+            raw = base64.b64decode(p["data"])
+            pcm = "wav" not in p.get("mimeType", "wav").lower()
+            out = subprocess.run(["ffmpeg", "-loglevel", "error"] + (["-f", "s16le", "-ar", "24000", "-ac", "1"] if pcm else [])
+                                 + ["-i", "-", "-f", "mp3", "-b:a", "64k", "-"], input=raw, capture_output=True, check=True)
+            return out.stdout
+        except urllib.error.HTTPError as e:
+            txt = e.read().decode()
+            if e.code == 402 or (e.code == 429 and ("per_day" in txt or "PerDay" in txt or "limit: 0" in txt)):
+                _gemini_off.append(1)
+                print(f"Gemini stopped for today ({e.code}): {txt[:200]}")
+                raise Later(txt[:100])
+            if e.code in (429, 500, 503) and attempt < 3:
+                time.sleep(2 ** attempt * 5)
+                continue
+            raise SystemExit(f"Gemini TTS error {e.code} for {v['voice']}: {txt[:300]}")
+        except (KeyError, IndexError):
+            if attempt < 3:
+                time.sleep(3)
+                continue
+            raise Later("empty answer")
 _VV_IDS = {}
 
 
@@ -142,6 +189,8 @@ def synth(text, voice):
     v = spec(voice)
     if v.get("engine") == "voicevox":
         return voicevox(text, v)
+    if v.get("engine") == "gemini":
+        return gemini(text, v)
     inp = {"text": text}
     if v.get("model"):  # Gemini-TTS: same voice names, steered by a description of the speaker
         sel = {"languageCode": "ja-JP", "name": v["voice"], "modelName": v["model"]}
@@ -170,6 +219,8 @@ def tag(voice):
     v = spec(voice)
     if v.get("engine") == "voicevox":
         return f"voicevox|{v['speaker']}|{v.get('style', '')}|{v.get('rate', 1.0)}"
+    if v.get("engine") == "gemini":
+        return f"gemini|{v['model']}|{v['voice']}|{v.get('style', '')}"
     if not v.get("model"):
         return f"{VOICES['model']}|{v['voice']}" + (f"|{v['rate']}" if v.get("rate") else "")
     return f"{v['model']}|{v['voice']}|{VOICES.get('direction', '')}{v.get('prompt', '')}"
@@ -179,13 +230,23 @@ def build(lid):
     lesson = json.load(open(f"lessons/{lid}.json", encoding="utf-8"))
     folder = f"audio/{lid}"
     os.makedirs(folder, exist_ok=True)
-    mp, made = {}, 0
+    old = {}
+    if os.path.exists(f"audio/{lid}.json"):
+        old = json.load(open(f"audio/{lid}.json", encoding="utf-8"))
+    mp, made, later = {}, 0, 0
     for key, text, voice in items(lesson):
         h = hashlib.sha1(f"{tag(voice)}|{text}".encode()).hexdigest()[:12]
         path = f"{folder}/{h}.mp3"
         if not os.path.exists(path):
+            try:
+                audio = synth(text, voice)
+            except Later:
+                later += 1
+                if old.get(key) and os.path.exists(old[key]):
+                    mp[key] = old[key]  # keep the previous voice until the next run
+                continue
             with open(path, "wb") as fh:
-                fh.write(synth(text, voice))
+                fh.write(audio)
             made += 1
         mp[key] = path
     keep = set(mp.values())
@@ -194,7 +255,7 @@ def build(lid):
             os.remove(f)
     with open(f"audio/{lid}.json", "w", encoding="utf-8") as fh:
         json.dump(mp, fh, ensure_ascii=False, indent=0, sort_keys=True)
-    print(f"{lid}: {len(mp)} lines, {made} new")
+    print(f"{lid}: {len(mp)} lines, {made} new" + (f", {later} left for the next run" if later else ""))
 
 
 def main():
