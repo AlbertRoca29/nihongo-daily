@@ -105,7 +105,7 @@ def design():
     for cid, desc in DESIGN.items():
         if cid in saved and saved[cid].get("description") == desc:
             continue
-        d, err = call("voices", {"voice": {"type": "prompted", "model": FLASH, "displayName": f"nihongo-{cid}",
+        d, err = call("voices", {"voice": {"type": "prompted", "model": FLASH, "display_name": f"nihongo-{cid}",
                                            "prompted": {"input": desc}}, "store": True})
         if err:
             log[cid] = err
