@@ -1,0 +1,13 @@
+{
+ "sota": [],
+ "hana": ["ja-jp-assistant-6", "ja-jp-csagent-4"],
+ "tanaka": ["ja-jp-podcaster-7", "ja-jp-training-4"],
+ "keiko": ["ja-jp-training-12", "ja-jp-training-10"],
+ "mio": ["ja-jp-csagent-8"],
+ "yuki": ["ja-jp-commercial-6", "ja-jp-advisor-5"],
+ "kenta": ["ja-jp-tutor-7", "ja-jp-storyteller-2"],
+ "ren": ["ja-jp-storyteller-12", "ja-jp-storyteller-5"],
+ "sato": ["ja-jp-tutor-1", "ja-jp-advisor-7"],
+ "hayato": ["ja-jp-concierge-4", "ja-jp-advisor-3"],
+ "you": ["ja-jp-commercial-4", "ja-jp-assistant-10"]
+}
