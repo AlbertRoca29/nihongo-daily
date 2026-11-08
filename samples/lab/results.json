@@ -18,8 +18,8 @@
     ],
     "errors": [],
     "pitch": [
-     124,
-     123
+     122,
+     132
     ]
    },
    {
@@ -27,6 +27,7 @@
     "voice": "Leda",
     "rate": 1.1,
     "shift": 1.0,
+    "fx": "",
     "tag": "B",
     "clips": [
      "sota_B_0.mp3",
@@ -34,8 +35,8 @@
     ],
     "errors": [],
     "pitch": [
-     232,
-     211
+     233,
+     248
     ]
    },
    {
@@ -43,6 +44,7 @@
     "voice": "Autonoe",
     "rate": 1.1,
     "shift": 1.0,
+    "fx": "",
     "tag": "C",
     "clips": [
      "sota_C_0.mp3",
@@ -50,15 +52,16 @@
     ],
     "errors": [],
     "pitch": [
-     225,
-     201
+     227,
+     223
     ]
    },
    {
     "engine": "chirp",
-    "voice": "Puck",
-    "rate": 1.05,
-    "shift": 1.35,
+    "voice": "Leda",
+    "rate": 1.08,
+    "shift": 1.12,
+    "fx": "",
     "tag": "D",
     "clips": [
      "sota_D_0.mp3",
@@ -66,15 +69,16 @@
     ],
     "errors": [],
     "pitch": [
-     164,
-     70
+     306,
+     266
     ]
    },
    {
     "engine": "chirp",
-    "voice": "Fenrir",
-    "rate": 1.0,
-    "shift": 1.4,
+    "voice": "Autonoe",
+    "rate": 1.08,
+    "shift": 1.15,
+    "fx": "",
     "tag": "E",
     "clips": [
      "sota_E_0.mp3",
@@ -82,49 +86,47 @@
     ],
     "errors": [],
     "pitch": [
-     170,
-     190
+     276,
+     219
     ]
    },
    {
-    "engine": "gemini",
-    "voice": "Leda",
-    "model": "gemini-3.1-flash-tts-preview",
+    "engine": "chirp",
+    "voice": "Laomedeia",
+    "rate": 1.08,
+    "shift": 1.14,
+    "fx": "",
     "tag": "F",
     "clips": [
-     null,
-     null
+     "sota_F_0.mp3",
+     "sota_F_1.mp3"
     ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Agent Platform API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=626889339543 then retry. If you enabled this API rece",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Agent Platform API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=626889339543 then retry. If you enabled this API rece"
-    ],
+    "errors": [],
     "pitch": [
-     null,
-     null
+     232,
+     256
+    ]
+   },
+   {
+    "engine": "chirp",
+    "voice": "Puck",
+    "rate": 1.05,
+    "shift": 1.35,
+    "fx": "",
+    "tag": "G",
+    "clips": [
+     "sota_G_0.mp3",
+     "sota_G_1.mp3"
+    ],
+    "errors": [],
+    "pitch": [
+     273,
+     177
     ]
    },
    {
     "engine": "gemini",
     "voice": "Leda",
-    "model": "gemini-2.5-pro-tts",
-    "tag": "G",
-    "clips": [
-     null,
-     null
-    ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Agent Platform API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=626889339543 then retry. If you enabled this API rece",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Agent Platform API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=626889339543 then retry. If you enabled this API rece"
-    ],
-    "pitch": [
-     null,
-     null
-    ]
-   },
-   {
-    "engine": "gemini",
-    "voice": "Autonoe",
     "model": "gemini-3.1-flash-tts-preview",
     "tag": "H",
     "clips": [
@@ -142,9 +144,45 @@
    },
    {
     "engine": "gemini",
+    "voice": "Leda",
+    "model": "gemini-2.5-pro-tts",
+    "tag": "I",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Agent Platform API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=626889339543 then retry. If you enabled this API rece",
+     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Agent Platform API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=626889339543 then retry. If you enabled this API rece"
+    ],
+    "pitch": [
+     null,
+     null
+    ]
+   },
+   {
+    "engine": "gemini",
+    "voice": "Autonoe",
+    "model": "gemini-3.1-flash-tts-preview",
+    "tag": "J",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Agent Platform API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=626889339543 then retry. If you enabled this API rece",
+     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Agent Platform API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=626889339543 then retry. If you enabled this API rece"
+    ],
+    "pitch": [
+     null,
+     null
+    ]
+   },
+   {
+    "engine": "gemini",
     "voice": "Fenrir",
     "model": "gemini-3.1-flash-tts-preview",
-    "tag": "I",
+    "tag": "K",
     "clips": [
      null,
      null
@@ -162,7 +200,7 @@
     "engine": "gemini",
     "voice": "Puck",
     "model": "gemini-3.1-flash-tts-preview",
-    "tag": "J",
+    "tag": "L",
     "clips": [
      null,
      null
@@ -180,10 +218,10 @@
     "engine": "voicevox",
     "voice": "白上虎太郎（わーい）",
     "sid": 32,
-    "tag": "K",
+    "tag": "M",
     "clips": [
-     "sota_K_0.mp3",
-     "sota_K_1.mp3"
+     "sota_M_0.mp3",
+     "sota_M_1.mp3"
     ],
     "errors": [],
     "pitch": [
@@ -195,14 +233,14 @@
     "engine": "voicevox",
     "voice": "白上虎太郎（ふつう）",
     "sid": 12,
-    "tag": "L",
+    "tag": "N",
     "clips": [
-     "sota_L_0.mp3",
-     "sota_L_1.mp3"
+     "sota_N_0.mp3",
+     "sota_N_1.mp3"
     ],
     "errors": [],
     "pitch": [
-     149,
+     153,
      154
     ]
    }
@@ -227,8 +265,8 @@
     ],
     "errors": [],
     "pitch": [
-     248,
-     299
+     228,
+     220
     ]
    },
    {
@@ -236,6 +274,7 @@
     "voice": "Gacrux",
     "rate": 0.85,
     "shift": 1.0,
+    "fx": "",
     "tag": "B",
     "clips": [
      "hana_B_0.mp3",
@@ -243,8 +282,8 @@
     ],
     "errors": [],
     "pitch": [
-     199,
-     198
+     185,
+     201
     ]
    },
    {
@@ -252,6 +291,7 @@
     "voice": "Sulafat",
     "rate": 0.85,
     "shift": 1.0,
+    "fx": "",
     "tag": "C",
     "clips": [
      "hana_C_0.mp3",
@@ -259,15 +299,16 @@
     ],
     "errors": [],
     "pitch": [
-     248,
-     226
+     262,
+     225
     ]
    },
    {
     "engine": "chirp",
-    "voice": "Vindemiatrix",
-    "rate": 0.85,
-    "shift": 0.95,
+    "voice": "Gacrux",
+    "rate": 0.8,
+    "shift": 0.96,
+    "fx": "vibrato=f=5.5:d=0.12",
     "tag": "D",
     "clips": [
      "hana_D_0.mp3",
@@ -275,67 +316,64 @@
     ],
     "errors": [],
     "pitch": [
-     218,
-     250
+     181,
+     196
     ]
    },
    {
-    "engine": "gemini",
-    "voice": "Gacrux",
-    "model": "gemini-3.1-flash-tts-preview",
+    "engine": "chirp",
+    "voice": "Sulafat",
+    "rate": 0.8,
+    "shift": 0.95,
+    "fx": "vibrato=f=5:d=0.1",
     "tag": "E",
     "clips": [
-     null,
-     null
+     "hana_E_0.mp3",
+     "hana_E_1.mp3"
     ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Agent Platform API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=626889339543 then retry. If you enabled this API rece",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Agent Platform API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=626889339543 then retry. If you enabled this API rece"
-    ],
+    "errors": [],
     "pitch": [
-     null,
-     null
+     247,
+     230
+    ]
+   },
+   {
+    "engine": "chirp",
+    "voice": "Vindemiatrix",
+    "rate": 0.8,
+    "shift": 0.94,
+    "fx": "vibrato=f=6:d=0.14",
+    "tag": "F",
+    "clips": [
+     "hana_F_0.mp3",
+     "hana_F_1.mp3"
+    ],
+    "errors": [],
+    "pitch": [
+     204,
+     248
+    ]
+   },
+   {
+    "engine": "chirp",
+    "voice": "Achernar",
+    "rate": 0.8,
+    "shift": 0.95,
+    "fx": "vibrato=f=5.5:d=0.1",
+    "tag": "G",
+    "clips": [
+     "hana_G_0.mp3",
+     "hana_G_1.mp3"
+    ],
+    "errors": [],
+    "pitch": [
+     273,
+     265
     ]
    },
    {
     "engine": "gemini",
     "voice": "Gacrux",
-    "model": "gemini-2.5-pro-tts",
-    "tag": "F",
-    "clips": [
-     null,
-     null
-    ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Agent Platform API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=626889339543 then retry. If you enabled this API rece",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Agent Platform API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=626889339543 then retry. If you enabled this API rece"
-    ],
-    "pitch": [
-     null,
-     null
-    ]
-   },
-   {
-    "engine": "gemini",
-    "voice": "Sulafat",
-    "model": "gemini-3.1-flash-tts-preview",
-    "tag": "G",
-    "clips": [
-     null,
-     null
-    ],
-    "errors": [
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Agent Platform API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=626889339543 then retry. If you enabled this API rece",
-     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Agent Platform API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=626889339543 then retry. If you enabled this API rece"
-    ],
-    "pitch": [
-     null,
-     null
-    ]
-   },
-   {
-    "engine": "gemini",
-    "voice": "Vindemiatrix",
     "model": "gemini-3.1-flash-tts-preview",
     "tag": "H",
     "clips": [
@@ -353,9 +391,63 @@
    },
    {
     "engine": "gemini",
+    "voice": "Gacrux",
+    "model": "gemini-2.5-pro-tts",
+    "tag": "I",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Agent Platform API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=626889339543 then retry. If you enabled this API rece",
+     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Agent Platform API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=626889339543 then retry. If you enabled this API rece"
+    ],
+    "pitch": [
+     null,
+     null
+    ]
+   },
+   {
+    "engine": "gemini",
+    "voice": "Sulafat",
+    "model": "gemini-3.1-flash-tts-preview",
+    "tag": "J",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Agent Platform API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=626889339543 then retry. If you enabled this API rece",
+     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Agent Platform API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=626889339543 then retry. If you enabled this API rece"
+    ],
+    "pitch": [
+     null,
+     null
+    ]
+   },
+   {
+    "engine": "gemini",
+    "voice": "Vindemiatrix",
+    "model": "gemini-3.1-flash-tts-preview",
+    "tag": "K",
+    "clips": [
+     null,
+     null
+    ],
+    "errors": [
+     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Agent Platform API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=626889339543 then retry. If you enabled this API rece",
+     "403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Agent Platform API has not been used in project 626889339543 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/aiplatform.googleapis.com/overview?project=626889339543 then retry. If you enabled this API rece"
+    ],
+    "pitch": [
+     null,
+     null
+    ]
+   },
+   {
+    "engine": "gemini",
     "voice": "Achernar",
     "model": "gemini-3.1-flash-tts-preview",
-    "tag": "I",
+    "tag": "L",
     "clips": [
      null,
      null
@@ -390,8 +482,8 @@
     ],
     "errors": [],
     "pitch": [
-     115,
-     81
+     116,
+     114
     ]
    },
    {
@@ -399,6 +491,7 @@
     "voice": "Algenib",
     "rate": 0.9,
     "shift": 1.0,
+    "fx": "",
     "tag": "B",
     "clips": [
      "tanaka_B_0.mp3",
@@ -406,8 +499,8 @@
     ],
     "errors": [],
     "pitch": [
-     154,
-     139
+     144,
+     118
     ]
    },
    {
@@ -415,6 +508,7 @@
     "voice": "Charon",
     "rate": 0.9,
     "shift": 0.93,
+    "fx": "",
     "tag": "C",
     "clips": [
      "tanaka_C_0.mp3",
@@ -422,8 +516,8 @@
     ],
     "errors": [],
     "pitch": [
-     111,
-     105
+     130,
+     99
     ]
    },
    {
@@ -552,7 +646,7 @@
     ],
     "errors": [],
     "pitch": [
-     220,
+     232,
      325
     ]
    },
@@ -667,7 +761,7 @@
     ],
     "errors": [],
     "pitch": [
-     198,
+     259,
      260
     ]
    },
@@ -676,6 +770,7 @@
     "voice": "Leda",
     "rate": 1.08,
     "shift": 1.0,
+    "fx": "",
     "tag": "B",
     "clips": [
      "mio_B_0.mp3",
@@ -683,8 +778,8 @@
     ],
     "errors": [],
     "pitch": [
-     270,
-     263
+     313,
+     292
     ]
    },
    {
@@ -692,6 +787,7 @@
     "voice": "Zephyr",
     "rate": 1.08,
     "shift": 1.0,
+    "fx": "",
     "tag": "C",
     "clips": [
      "mio_C_0.mp3",
@@ -700,7 +796,7 @@
     "errors": [],
     "pitch": [
      210,
-     248
+     246
     ]
    },
    {
@@ -805,7 +901,7 @@
     "errors": [],
     "pitch": [
      326,
-     364
+     366
     ]
    }
   ]
@@ -829,8 +925,8 @@
     ],
     "errors": [],
     "pitch": [
-     219,
-     281
+     233,
+     234
     ]
    },
    {
@@ -944,8 +1040,8 @@
     ],
     "errors": [],
     "pitch": [
-     124,
-     147
+     106,
+     137
     ]
    },
    {
@@ -1059,7 +1155,7 @@
     ],
     "errors": [],
     "pitch": [
-     97,
+     137,
      103
     ]
    },
@@ -1174,8 +1270,8 @@
     ],
     "errors": [],
     "pitch": [
-     207,
-     158
+     216,
+     159
     ]
    },
    {
@@ -1289,8 +1385,8 @@
     ],
     "errors": [],
     "pitch": [
-     140,
-     115
+     131,
+     120
     ]
    },
    {
@@ -1404,8 +1500,8 @@
     ],
     "errors": [],
     "pitch": [
-     116,
-     130
+     173,
+     139
     ]
    },
    {
