@@ -39,7 +39,8 @@ CHARS = {
         lines=["ねえねえ、アルちゃん！カブトムシって、なんで夜しか出てこないの？",
                "すげー！じゃあさ、いつか一緒にバルセロナの試合、見に行こうよ！"],
         gemini=["Leda", "Autonoe", "Fenrir", "Puck"],
-        chirp=[("Leda", 1.1, 1.0), ("Autonoe", 1.1, 1.0), ("Puck", 1.05, 1.35), ("Fenrir", 1.0, 1.4)],
+        chirp=[("Leda", 1.1, 1.0), ("Autonoe", 1.1, 1.0), ("Leda", 1.08, 1.12), ("Autonoe", 1.08, 1.15),
+               ("Laomedeia", 1.08, 1.14), ("Puck", 1.05, 1.35)],
         voicevox=[("白上虎太郎", "わーい"), ("白上虎太郎", "ふつう")]),
     "hana": dict(
         label="ハナおばあちゃん Hana · 84, grandma",
@@ -50,7 +51,9 @@ CHARS = {
         lines=["停留所に、背の高い外国の子がおってのう。時刻表をじーっと見て、困った顔をしとったんじゃ。",
                "子どもの頃は、毎日この坂を歩かされたもんじゃよ。"],
         gemini=["Gacrux", "Sulafat", "Vindemiatrix", "Achernar"],
-        chirp=[("Gacrux", 0.85, 1.0), ("Sulafat", 0.85, 1.0), ("Vindemiatrix", 0.85, 0.95)],
+        chirp=[("Gacrux", 0.85, 1.0), ("Sulafat", 0.85, 1.0),
+               ("Gacrux", 0.8, 0.96, "vibrato=f=5.5:d=0.12"), ("Sulafat", 0.8, 0.95, "vibrato=f=5:d=0.1"),
+               ("Vindemiatrix", 0.8, 0.94, "vibrato=f=6:d=0.14"), ("Achernar", 0.8, 0.95, "vibrato=f=5.5:d=0.1")],
         voicevox=[]),
     "tanaka": dict(
         label="田中さん Tanaka-san · 67, farmer",
@@ -145,12 +148,12 @@ def current_voice(cid):
     return CURRENT["cast"].get(cid) or CURRENT.get("others", {}).get(cid.capitalize())
 
 
-def google(text, voice, model=None, prompt=None, rate=1.0, shift=1.0):
+def google(text, voice, model=None, prompt=None, rate=1.0, shift=1.0, fx=""):
     audio, err = _google(text, voice, model, prompt, rate)
-    if audio and shift != 1.0:
+    if audio and (shift != 1.0 or fx):
         # raise/lower pitch and formants together (a smaller/larger voice), keep the tempo
         p = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", "-", "-af",
-                            f"aresample=24000,asetrate=24000*{shift},aresample=24000,atempo={1/shift:.4f}",
+                            f"aresample=24000,asetrate=24000*{shift},aresample=24000,atempo={1/shift:.4f}" + (f",{fx}" if fx else ""),
                             "-f", "mp3", "-b:a", "64k", "-"], input=audio, capture_output=True)
         audio = p.stdout if p.returncode == 0 else audio
     return audio, err
@@ -252,8 +255,8 @@ def main():
         cur = current_voice(cid)
         if cur:
             cands.append(dict(engine="chirp", voice=cur, now=True))
-        for v, rate, shift in c.get("chirp", []):
-            cands.append(dict(engine="chirp", voice=v, rate=rate, shift=shift))
+        for v, rate, shift, *fx in c.get("chirp", []):
+            cands.append(dict(engine="chirp", voice=v, rate=rate, shift=shift, fx=(fx[0] if fx else "")))
         for i, v in enumerate(c["gemini"]):
             cands.append(dict(engine="gemini", voice=v, model=NEW))
             if i == 0:
@@ -274,7 +277,7 @@ def main():
                     audio, err = google(text, cand["voice"], cand["model"], prompt)
                 else:
                     audio, err = google(text, cand["voice"], rate=cand.get("rate", 1.0),
-                                        shift=cand.get("shift", 1.0))
+                                        shift=cand.get("shift", 1.0), fx=cand.get("fx", ""))
                 if audio:
                     with open(os.path.join(OUT, fn), "wb") as fh:
                         fh.write(audio)
@@ -310,7 +313,9 @@ def write_page(results):
             elif c["engine"] == "chirp":
                 tweaks = [f"speed ×{c['rate']}"] if c.get("rate", 1) != 1 else []
                 if c.get("shift", 1) != 1:
-                    tweaks.append(("higher" if c["shift"] > 1 else "deeper") + f" voice ×{c['shift']}")
+                    tweaks.append(("smaller, higher" if c["shift"] > 1 else "deeper") + f" voice ×{c['shift']}")
+                if c.get("fx"):
+                    tweaks.append("age tremor")
                 what, kind = c["voice"], "Chirp 3 HD · " + (", ".join(tweaks) or "as is")
             elif c["engine"] == "gemini":
                 what = c["voice"]
