@@ -363,73 +363,12 @@ def save(results):
 
 
 def write_page(results):
-    e = html.escape
-    secs, waiting = [], 0
-    for cid, r in results.items():
-        rows = []
-        for c in r["cands"]:
-            if not any(c["clips"]):
-                waiting += 1
-                continue
-            if c["engine"] == "chirp" and c.get("now"):
-                what, kind = f"{c['voice']}", "now · Chirp 3 HD (no direction)"
-            elif c["engine"] == "chirp":
-                tweaks = [f"speed ×{c['rate']}"] if c.get("rate", 1) != 1 else []
-                if c.get("shift", 1) != 1:
-                    tweaks.append(("smaller, higher" if c["shift"] > 1 else "deeper") + f" voice ×{c['shift']}")
-                if c.get("fx"):
-                    tweaks.append("age tremor")
-                what, kind = c["voice"], "Chirp 3 HD · " + (", ".join(tweaks) or "as is")
-            elif c["engine"] == "gemini":
-                what = c["voice"]
-                kind = "Gemini 2.5 Flash TTS · directed (free tier)" if c["model"] == NEW else "Gemini 2.5 Pro TTS · directed"
-            else:
-                what, kind = c["voice"], "VOICEVOX"
-            clips = "".join(
-                f'<audio controls preload="none" src="{e(f)}"></audio>' if f else
-                '' for f in c["clips"])
-            ps = [p for p in c["pitch"] if p]
-            hz = f'<span class=hz>~{round(sum(ps)/len(ps))} Hz</span>' if ps else ""
-            msg = c["errors"][0] if c["errors"] else ""
-            if ("aiplatform" in msg or "Agent Platform" in msg) and "gemini-api" not in msg:
-                msg = "Not available yet: the Google project needs the Agent Platform (Vertex AI) API enabled."
-            err = f'<div class=err>{e(msg)}</div>' if msg else ""
-            rows.append(f'<div class="cand{" now" if c.get("now") else ""}"><div class=hd>'
-                        f'<b class=tag>{cid}-{c["tag"]}</b> <b>{e(what)}</b> {hz}'
-                        f'<div class=kind>{e(kind)}</div></div>{clips}{err}</div>')
-        lines = "".join(f"<li>{e(l)}</li>" for l in r["lines"])
-        secs.append(f'<section id={cid}><h2>{e(r["label"])}</h2><ol class=lines>{lines}</ol>'
-                    f'<details><summary>Direction given to Gemini</summary><p>{e(r["prompt"])}</p></details>'
-                    f'{"".join(rows)}</section>')
-    nav = " · ".join(f'<a href="#{cid}">{e(r["label"].split(" · ")[0])}</a>' for cid, r in results.items())
-    wait = (f'<p class=err>{waiting} directed Gemini voices are not shown yet: the Google project needs the '
-            'Agent Platform (Vertex AI) API enabled. They appear here after the next run.</p>') if waiting else ""
-    page = f"""<!doctype html><html lang=ja><head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>Voice lab</title><style>
-:root{{--bg:#faf7f2;--fg:#222;--mut:#777;--line:#e5dfd5;--card:#fff;--acc:#c0392b}}
-@media (prefers-color-scheme:dark){{:root{{--bg:#16161a;--fg:#eee;--mut:#999;--line:#333;--card:#202026;--acc:#ff7b6b}}}}
-body{{background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,sans-serif;margin:0 auto;padding:16px;max-width:760px}}
-h1{{font-size:21px;margin:0 0 6px}} h2{{font-size:18px;margin:28px 0 6px}}
-.intro{{color:var(--mut)}} nav{{font-size:13px;line-height:2}} a{{color:var(--acc)}}
-.lines{{margin:0 0 6px;padding-left:22px;font-size:15px}}
-details{{font-size:13px;color:var(--mut);margin-bottom:8px}}
-.cand{{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;margin:8px 0}}
-.cand.now{{border-style:dashed;opacity:.85}}
-.hd{{margin-bottom:6px}} .tag{{color:var(--acc);font-family:ui-monospace,monospace}}
-.kind{{font-size:12px;color:var(--mut)}} .hz{{font-size:12px;color:var(--mut);float:right}}
-audio{{width:100%;height:36px;display:block;margin:4px 0}} .err{{color:var(--acc);font-size:12px}}
-footer{{color:var(--mut);font-size:12px;margin:30px 0}}
-</style></head><body><h1>Voice lab · Nihongo Line</h1>
-<p class=intro>Each character reads the same two lines (in order) with several voices. The dashed card is the voice
-the app uses now. “Directed” voices were given a description of the character (age, mood, accent) to act from.
-Pick your favourite per character and send the tags (e.g. <b>sota-C, hana-B</b>). Gemini voices act a little differently
-each time, so the same pick can sound slightly different line to line.</p>
-{wait}<nav>{nav}</nav>{"".join(secs)}
-<footer>VOICEVOX voices: VOICEVOX:白上虎太郎, VOICEVOX:ちび式じい, VOICEVOX:春日部つむぎ.</footer></body></html>"""
-    with open(f"{OUT}/index.html", "w", encoding="utf-8") as fh:
-        fh.write(page)
-    print("->", f"{OUT}/index.html")
+    """The page lives in scripts/voice_page.py (engines, prices, who uses what, comparisons)."""
+    import importlib.util
+    sp = importlib.util.spec_from_file_location("voice_page", "scripts/voice_page.py")
+    m = importlib.util.module_from_spec(sp)
+    sp.loader.exec_module(m)
+    m.write(results)
 
 
 if __name__ == "__main__":

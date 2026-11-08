@@ -227,7 +227,7 @@ def write_page(results):
             f'<span class=hz>{x["hz"] or "?"} Hz</span><div class=k>{e(x["engine"])}'
             f'{(" · " + e(x.get("about", ""))) if x.get("about") else ""}</div></div>'
             f'<audio controls preload="none" src="{e(x["file"])}"></audio></div>' for x in rows)
-        secs.append(f'<section id={rid}><h2>{e(r["label"])}</h2><p class=line>{e(r["text"])}</p>'
+        secs.append(f'<section id={rid}><h2><img src="../../icons/cast/{rid}.svg" alt="" class=pic>{e(r["label"])}</h2><p class=line>{e(r["text"])}</p>'
                     f'<p class=k>{len(rows)} voices, from lowest to highest pitch.</p>{items}</section>')
     nav = " · ".join(f'<a href="#{rid}">{e(r["label"].split(" · ")[0])}</a>' for rid, r in results.items())
     page = f"""<!doctype html><html lang=ja><head><meta charset=utf-8>
@@ -239,9 +239,9 @@ h1{{font-size:21px;margin:0 0 6px}} h2{{font-size:18px;margin:28px 0 4px}} a{{co
 .line{{font-size:17px;margin:4px 0}} .k{{font-size:12px;color:var(--mut)}}
 .c{{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin:6px 0}}
 .tag{{color:var(--acc);font-family:ui-monospace,monospace}} .st{{color:var(--mut);font-size:13px}}
-.hz{{float:right;font-size:12px;color:var(--mut)}} audio{{width:100%;height:34px;display:block;margin-top:4px}}
+.hz{{float:right;font-size:12px;color:var(--mut)}} .pic{{width:44px;height:44px;border-radius:50%;vertical-align:middle;margin-right:8px}} audio{{width:100%;height:34px;display:block;margin-top:4px}}
 </style></head><body><h1>Voice audition · free engines</h1>
-<p class=k>Every voice of VOICEVOX and of AivisSpeech (with child / elderly models found on AivisHub) reads one line per role.
+<p class=k><a href="../lab/">← Voices guide: what's in use, engines and prices</a></p><p class=k>Every voice of VOICEVOX and of AivisSpeech (with child / elderly models found on AivisHub) reads one line per role.
 Sorted by pitch: a real 11-year-old boy is roughly 220–300 Hz; an elderly woman roughly 160–220 Hz; an older man 90–140 Hz.
 Send the tags you like (e.g. sota-V12). VOICEVOX voices need a credit line (VOICEVOX:name) in the app; AivisHub models follow their own licence.</p>
 <nav>{nav}</nav>{"".join(secs)}</body></html>"""
