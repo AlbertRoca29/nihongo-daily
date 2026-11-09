@@ -1,0 +1,409 @@
+{
+ "topic": "Sold-out potatoes and a beeping self-checkout",
+ "category": "shops-eating-out",
+ "function": "feelings",
+ "format": "line",
+ "cast": [
+  "kenta"
+ ],
+ "title_jp": "{売り切れ|うりきれ}とセルフレジ",
+ "context": "Monday evening. アルちゃん wants to thank the 田中s by cooking them a Spanish tortilla, but the supermarket on the shopping street doesn't go to plan. He messages 健太 on LINE from the shop. Today: saying how you feel when things go wrong (and right) while shopping.",
+ "phrases": [
+  {
+   "jp": "{せっかく||going to the trouble|4}{来|き}たのに、{売り切れ|うりきれ|sold out|3}で{残念|ざんねん|a shame, disappointing|4}でした。",
+   "en": "I came all this way, but it was sold out. What a shame.",
+   "register": "polite",
+   "note": "せっかく〜のに = all that effort, for nothing. {残念|ざんねん}です is the polite way to show disappointment; with friends you'd say がっかりした."
+  },
+  {
+   "jp": "セルフレジで{失敗|しっぱい|messing up, failure|3}して、{恥ずかしかった|はずかしかった|embarrassed|4}。",
+   "en": "I messed up at the self-checkout and it was embarrassing.",
+   "register": "casual",
+   "note": "{恥|は}ずかしい = embarrassed or shy (in public, in front of someone). It's light and everyday, not 'ashamed' in a heavy sense."
+  },
+  {
+   "jp": "{使い方|つかいかた|how to use|4}がわからなくて、ちょっと{不安|ふあん|anxious, uneasy|3}でした。",
+   "en": "I didn't know how to use it, so I felt a bit uneasy.",
+   "register": "polite",
+   "note": "{不安|ふあん} = a vague unease about what's ahead; {心配|しんぱい} = worrying about something or someone specific."
+  },
+  {
+   "jp": "レジ{袋|ぶくろ}は{有料|ゆうりょう|paid, costs money|3}だから、エコバッグを{持ち歩く|もちあるく|to carry around|3}ことにした。",
+   "en": "Plastic bags cost money, so I've decided to carry an eco bag around.",
+   "register": "casual",
+   "note": "Since 2020 shop bags cost a few yen. At the till you'll hear レジ{袋|ぶくろ}はご{利用|りよう}ですか？ (Do you need a bag?) — answer {大丈夫|だいじょうぶ}です to say no."
+  },
+  {
+   "jp": "{店員|てんいん|shop staff|4}さんが{優|やさ}しくて、ほっとしました。",
+   "en": "The shop assistant was kind, so I was relieved.",
+   "register": "polite",
+   "note": "ほっとする = the tension leaves you: relieved. Add さん to {店員|てんいん} when you talk about them; calling out to staff, say すみません."
+  }
+ ],
+ "dialogue_setting": "A LINE chat at about 17:40: アルちゃん is standing by the supermarket exit on the shopping street, 健太 is on a quiet reception shift at Guesthouse Kaze.",
+ "dialogue": [
+  {
+   "speaker": "You",
+   "time": "17:41",
+   "jp": "{健太|けんた}、ちょっと{聞|き}いて！{田中|たなか}さんたちに{お礼|おれい|thanks, a thank-you|4}がしたくて、{今夜|こんや}スペインのトルティーヤを{作|つく}ることにした！",
+   "en": "健太, listen! I wanted to thank the 田中s, so I've decided to make them a Spanish tortilla tonight!",
+   "me": true
+  },
+  {
+   "speaker": "健太",
+   "time": "17:42",
+   "jp": "{ええやん||(Kansai) = いいじゃん, nice!|2}！アルちゃん{料理|りょうり}できるんや。で、なんでそんな{焦って|あせって|to be flustered, rushed|3}んの？ｗ",
+   "en": "Nice! So you can cook, アルちゃん. So why so flustered? lol",
+   "voice": "m"
+  },
+  {
+   "speaker": "You",
+   "time": "17:45",
+   "jp": "スーパー{行|い}ったら、じゃがいもが{全部|ぜんぶ}{売り切れ|うりきれ|sold out|3}で、めっちゃ{がっかり||disappointed|4}した…。しかもセルフレジがピーピー{鳴って|なって|to ring, beep|3}、{店員|てんいん|shop staff|4}さんが{来|き}ちゃって{恥ずかしかった|はずかしかった|embarrassed|4}",
+   "en": "I went to the supermarket and the potatoes were all sold out. So disappointing… And then the self-checkout kept beeping and a staff member came over. So embarrassing.",
+   "me": true
+  },
+  {
+   "speaker": "健太",
+   "time": "17:46",
+   "jp": "セルフレジ{あるある||(slang) a classic, happens to everyone|3}やｗ {気|き}にせんでええって。てか、{田中|たなか}さんち{農家|のうか|farming family|2}やん？じゃがいもぐらいあるやろ",
+   "en": "Classic self-checkout moment lol. Don't worry about it. Anyway, the 田中s are farmers, right? They'll have potatoes, surely.",
+   "voice": "m"
+  },
+  {
+   "speaker": "You",
+   "time": "17:48",
+   "jp": "あ、{確かに|たしかに|true, indeed|4}！じゃあ、{恵子|けいこ}さんに{聞|き}いてみることにする。{卵|たまご}と、2{割引|わりびき|discount|3}の{玉ねぎ|たまねぎ|onion|4}だけ{買|か}って{帰|かえ}るね",
+   "en": "Oh, true! Then I'll ask 恵子さん. I'll just buy eggs and some 20%-off onions and head home.",
+   "me": true
+  },
+  {
+   "speaker": "健太",
+   "time": "17:49",
+   "jp": "それがええわ。{失敗|しっぱい|messing up, failure|3}しても{大丈夫|だいじょうぶ}。{恵子|けいこ}さんら、{絶対|ぜったい|definitely|4}{喜ぶ|よろこぶ|to be happy, pleased|3}で",
+   "en": "Good call. Even if it flops, it's fine. 恵子さん and the others will definitely be happy.",
+   "voice": "m"
+  },
+  {
+   "speaker": "You",
+   "time": "17:51",
+   "jp": "ありがとう。ちょっと{不安|ふあん|anxious, uneasy|3}だったけど、{安心|あんしん|relief, peace of mind|4}した（スタンプ：うさぎがペコリ）",
+   "en": "Thanks. I was a bit anxious, but now I feel better (sticker: bunny bowing)",
+   "me": true
+  },
+  {
+   "speaker": "健太",
+   "time": "17:52",
+   "jp": "{今度|こんど}{俺|おれ}にも{作|つく}ってや！{大阪|おおさか}のお{好み焼き|このみやき|okonomiyaki|4}と{勝負|しょうぶ|a showdown, contest|3}やｗ",
+   "en": "Make me one next time too! It'll be a showdown with Osaka okonomiyaki lol",
+   "voice": "m"
+  }
+ ],
+ "grammar": {
+  "id": "n4-koto-ni-suru",
+  "pattern": "〜ことにする",
+  "level": "N4",
+  "meaning": "decide to",
+  "form": "{辞書形|じしょけい}: + ことにする ({作|つく}る → {作|つく}ることにする) · ない{形|けい}: + ことにする ({買|か}う → {買|か}わないことにする) · decided: ことにした ({聞|き}いてみることにした) · a rule you keep: ことにしている ({毎朝|まいあさ}{走|はし}ることにしている)",
+  "explanation": "Use it when you yourself make a choice: ことにした = I've decided (done), ことにする = I'll go with that (deciding right now), ことにしている = a personal rule you stick to. The classic mix-up is ことになる (the next point), where the decision comes from others or circumstances: {転勤|てんきん}することになった sounds like the company decided, not you.",
+  "src": [
+   "d0",
+   "d4",
+   "p3"
+  ],
+  "examples": [
+   {
+    "jp": "{健康|けんこう|health|3}のために、お{酒|さけ}を{飲|の}まないことにしました。",
+    "en": "For my health, I've decided not to drink."
+   },
+   {
+    "jp": "{寝|ね}る{前|まえ}は、スマホを{見|み}ないことにしている。",
+    "en": "I make a rule of not looking at my phone before bed."
+   },
+   {
+    "jp": "{雪|ゆき}がひどいから、{旅行|りょこう}は{来月|らいげつ}にすることにした。",
+    "en": "The snow is bad, so we decided to do the trip next month."
+   }
+  ],
+  "quiz": {
+   "question": "{雨|あめ}だから、{今日|きょう}は{出|で}かけない＿＿。",
+   "en": "It's raining, so I've decided not to go out today.",
+   "options": [
+    "ことにした",
+    "ことになった",
+    "ようにした",
+    "ことがある"
+   ],
+   "explain": "It's your own decision, so ことにした. ことになった = it was decided for you; ようにした = made an effort to; ことがある = sometimes happens."
+  }
+ },
+ "kanji": {
+  "kanji": "半額",
+  "reading": "はんがく",
+  "romaji": "hangaku",
+  "meaning": "half price",
+  "where": "Red or yellow stickers on bento, sushi and fresh food in the supermarket, usually from about 7 p.m. until closing.",
+  "related": "Smaller discounts are written in tenths: 2{割引|わりびき} = 20% off, 3{割引|わりびき} = 30% off.",
+  "breakdown": "{半額|はんがく}: 半 half + 額 amount (of money) → 'half the price'."
+ },
+ "tip": {
+  "mark": "割",
+  "title": "割 counts in tenths, not percent",
+  "body": "Supermarket stickers use tenths: 1{割引|いちわりびき} is 10% off, 3{割引|さんわりびき} is 30% off, and {半額|はんがく} is half price. People talk this way too: それ、2{割引|にわりびき}だった！ The same kanji is in {割り勘|わりかん} (splitting the bill), so watch for it at the izakaya."
+ },
+ "challenge": {
+  "prompt": "{恵子|けいこ}さん sees your shopping bag in the kitchen and asks: 「あら、{何|なに}を{作|つく}るの？」 Tell her what you've decided to make and how you feel about it, using 〜ことにしました.",
+  "hint": "お{礼|れい}に · スペインの{料理|りょうり} · ちょっと{不安|ふあん|anxious|3}だけど",
+  "model_answer": "お{礼|れい|thanks|4}に、スペインのトルティーヤを{作|つく}ることにしました。ちょっと{不安|ふあん|anxious, uneasy|3}ですけど、{楽|たの}しみです！",
+  "explanation": "お{礼|れい}に = as a thank-you. {作|つく}ることにしました is your own decision in polite past (ことにしました), right for talking to your host's wife. ちょっと{不安|ふあん}ですけど、{楽|たの}しみです puts the worry first and the positive feeling last, which sounds warm and modest."
+ },
+ "vocab": [
+  {
+   "jp": "お{礼|れい}",
+   "reading": "おれい",
+   "en": "thanks, a thank-you (gift)",
+   "level": "N4",
+   "src": "d0",
+   "surface": "お礼",
+   "note": "お{礼|れい}に〜 = as a thank-you; お{礼|れい}を{言|い}う = to say thanks."
+  },
+  {
+   "jp": "{焦|あせ}る",
+   "reading": "あせる",
+   "en": "to be flustered, in a rush",
+   "level": "N2",
+   "src": "d1",
+   "surface": "焦って",
+   "note": "{焦|あせ}った！ = 'that was close / I panicked'. Very common in speech."
+  },
+  {
+   "jp": "{売り切れ|うりきれ}",
+   "reading": "うりきれ",
+   "en": "sold out",
+   "level": "N3",
+   "src": "d2",
+   "surface": "売り切れ",
+   "note": "On signs often 売切 or {品切れ|しなぎれ}."
+  },
+  {
+   "jp": "がっかりする",
+   "reading": "がっかりする",
+   "en": "to be disappointed",
+   "level": "N3",
+   "src": "d2",
+   "surface": "がっかり"
+  },
+  {
+   "jp": "{鳴|な}る",
+   "reading": "なる",
+   "en": "to ring, sound, beep",
+   "level": "N3",
+   "src": "d2",
+   "surface": "鳴って",
+   "note": "Phones, alarms, bells: {電話|でんわ}が{鳴|な}ってる (your phone's ringing)."
+  },
+  {
+   "jp": "{店員|てんいん}",
+   "reading": "てんいん",
+   "en": "shop assistant, staff",
+   "level": "N4",
+   "src": "d2",
+   "surface": "店員"
+  },
+  {
+   "jp": "{恥|は}ずかしい",
+   "reading": "はずかしい",
+   "en": "embarrassed, embarrassing; shy",
+   "level": "N4",
+   "src": "d2",
+   "surface": "恥ずかしかった"
+  },
+  {
+   "jp": "{割引|わりびき}",
+   "reading": "わりびき",
+   "en": "discount",
+   "level": "N3",
+   "src": "d4",
+   "surface": "割引",
+   "note": "2{割引|わりびき} = 20% off."
+  },
+  {
+   "jp": "{不安|ふあん}",
+   "reading": "ふあん",
+   "en": "anxious, uneasy; anxiety",
+   "level": "N3",
+   "src": "d6",
+   "surface": "不安"
+  },
+  {
+   "jp": "{有料|ゆうりょう}",
+   "reading": "ゆうりょう",
+   "en": "paid, charged for",
+   "level": "N3",
+   "src": "p3",
+   "surface": "有料",
+   "note": "Opposite: {無料|むりょう} (free of charge)."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "割",
+   "track": "lesson",
+   "on": "カツ",
+   "kun": "わ(る)・わ(れる)・わり",
+   "meaning": "divide, split; tenths (in discounts)",
+   "words": [
+    {
+     "jp": "{割引|わりびき}",
+     "reading": "わりびき",
+     "en": "discount"
+    },
+    {
+     "jp": "{割り勘|わりかん}",
+     "reading": "わりかん",
+     "en": "splitting the bill"
+    },
+    {
+     "jp": "{時間割|じかんわり}",
+     "reading": "じかんわり",
+     "en": "school timetable"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "add, increase",
+     "borrow",
+     "pay back"
+    ],
+    "readings": [
+     "かつびき",
+     "わりいん",
+     "さきびき"
+    ]
+   }
+  },
+  {
+   "kanji": "宿",
+   "track": "n3",
+   "on": "シュク",
+   "kun": "やど",
+   "meaning": "inn, lodging; stay",
+   "words": [
+    {
+     "jp": "{宿題|しゅくだい}",
+     "reading": "しゅくだい",
+     "en": "homework"
+    },
+    {
+     "jp": "{宿|やど}",
+     "reading": "やど",
+     "en": "inn, place to stay"
+    },
+    {
+     "jp": "{民宿|みんしゅく}",
+     "reading": "みんしゅく",
+     "en": "family-run guesthouse"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "temple",
+     "harbour",
+     "market"
+    ],
+    "readings": [
+     "しゅうだい",
+     "やどだい",
+     "しゅくたい"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Supermarket signs",
+   "title_jp": "スーパーの{表示|ひょうじ}",
+   "intro": "What you'll read on shelves and stickers in any Japanese supermarket.",
+   "items": [
+    {
+     "jp": "{半額|はんがく|half price|3}",
+     "en": "half price",
+     "note": "Evening stickers; the boxes go fast."
+    },
+    {
+     "jp": "{本日|ほんじつ|today (formal)|2}の{特売|とくばい|special sale|2}",
+     "en": "today's special offers"
+    },
+    {
+     "jp": "お{一人様|ひとりさま|per person (polite)|2}1{点|てん}まで",
+     "en": "limit one per customer"
+    },
+    {
+     "jp": "{国産|こくさん|made in Japan|3}",
+     "en": "domestic (grown or made in Japan)",
+     "note": "Next to it you'll often see the {産地|さんち|place of origin|2}: {長野県産|ながのけんさん|from Nagano|2}."
+    },
+    {
+     "jp": "{品切れ|しなぎれ|out of stock|2}",
+     "en": "out of stock",
+     "note": "Same idea as {売り切れ|うりきれ|sold out|3}, a bit more formal."
+    }
+   ]
+  },
+  {
+   "title": "When shopping goes wrong",
+   "title_jp": "こんな{時|とき}の{気持|きも}ち",
+   "intro": "Short, real reactions for small daily disasters.",
+   "items": [
+    {
+     "jp": "ショック！",
+     "en": "Oh no! / What a blow!",
+     "note": "Light, for small things like a sold-out item."
+    },
+    {
+     "jp": "{悔しい|くやしい|frustrated, galling|3}！",
+     "en": "Argh, so frustrating!",
+     "note": "When you just missed something: the last one sold a minute ago."
+    },
+    {
+     "jp": "{気まずかった|きまずかった|awkward|3}。",
+     "en": "That was awkward."
+    },
+    {
+     "jp": "{助かった|たすかった|that saved me|4}！",
+     "en": "You saved me! / What a help!",
+     "note": "Thanks for help that came at the right moment."
+    }
+   ]
+  },
+  {
+   "title": "健太's Kansai-ben",
+   "title_jp": "{関西弁|かんさいべん}",
+   "intro": "The Osaka forms in today's chat, with standard Japanese.",
+   "items": [
+    {
+     "jp": "ええやん",
+     "en": "= いいじゃん (nice!)"
+    },
+    {
+     "jp": "{気|き}にせんでええ",
+     "en": "= {気|き}にしなくていい (don't worry about it)",
+     "note": "せん = しない, ええ = いい."
+    },
+    {
+     "jp": "あるやろ",
+     "en": "= あるだろう (there must be)"
+    },
+    {
+     "jp": "{喜|よろこ}ぶで",
+     "en": "= {喜|よろこ}ぶよ (they'll be happy)",
+     "note": "Sentence-final で works like よ."
+    },
+    {
+     "jp": "{作|つく}ってや",
+     "en": "= {作|つく}ってよ (make it, OK?)"
+    }
+   ]
+  }
+ ]
+}

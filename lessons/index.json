@@ -43,5 +43,12 @@
   "category": "family-childhood",
   "function": "opinions",
   "format": "text"
+ },
+ {
+  "id": "2026-11-09",
+  "topic": "Sold-out potatoes and a beeping self-checkout",
+  "category": "shops-eating-out",
+  "function": "feelings",
+  "format": "line"
  }
 ]

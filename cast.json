@@ -97,7 +97,7 @@
    ],
    "fixed": [
     "Mio is one of her students.",
-    "Calls you アルベルトさん, never by a nickname."
+    "Calls you アルちゃん (the name everyone in the story uses for him)."
    ]
   },
   {
@@ -279,12 +279,25 @@
    "cast": [
     "sota"
    ],
-   "summary": "Sunday: you meet 颯太, 田中さん's grandson, at the farm for the weekend. He asks your opinion on his school essay 'ぼくのおじいちゃん': he respects Grandpa most, disagrees with his mum who wants Grandpa to give up the orchard, and writes that Grandpa has started laughing more since アルバート came.",
+   "summary": "Sunday: you meet 颯太, 田中さん's grandson, at the farm for the weekend. He asks your opinion on his school essay 'ぼくのおじいちゃん': he respects Grandpa most, disagrees with his mum who wants Grandpa to give up the orchard, and writes that Grandpa has started laughing more since アルちゃん came.",
    "new_facts": [
-    "You first met 颯太 on the weekend of 7–8 Nov; he calls you アルバートくん.",
+    "You first met 颯太 on the weekend of 7–8 Nov; he calls you アルちゃん.",
     "颯太 disliked apples as a small child; now he can climb the trees and pick them himself.",
     "颯太's mum (由美) thinks 田中さん should give up the orchard because of his age; 颯太 disagrees.",
     "颯太 wants to be a footballer, but also to take over the orchard one day."
+   ]
+  },
+  {
+   "date": "2026-11-09",
+   "cast": [
+    "kenta"
+   ],
+   "summary": "Monday evening: アルちゃん decides to cook a Spanish tortilla for the 田中s as a thank-you, but the supermarket's potatoes are sold out and the self-checkout beeps until staff come over. On LINE, 健太 laughs it off and says farmers will surely have potatoes, so アルちゃん buys only eggs and discounted onions and decides to ask 恵子さん.",
+   "new_facts": [
+    "アルちゃん cooked (or is cooking) a Spanish tortilla for the 田中s on the evening of 9 Nov as a thank-you.",
+    "The shopping-street supermarket has self-checkouts; アルちゃん got flustered using one.",
+    "健太 calls him アルちゃん.",
+    "健太 wants アルちゃん to make him a tortilla too, as a 'showdown' with Osaka okonomiyaki."
    ]
   }
  ]
