@@ -82,7 +82,7 @@
   },
   {
    "id": "sato",
-   "name": "Sato-sensei",
+   "name": "佐藤先生",
    "name_jp": "{佐藤|さとう}{先生|せんせい}",
    "age": 41,
    "role": "English teacher at Takanohara High, your supervisor there.",
@@ -123,7 +123,7 @@
   },
   {
    "id": "ren",
-   "name": "Ren",
+   "name": "レン",
    "name_jp": "{蓮|れん}",
    "age": 26,
    "role": "A guy you meet and start dating.",
@@ -167,7 +167,7 @@
   },
   {
    "id": "mio",
-   "name": "Mio",
+   "name": "澪",
    "name_jp": "{澪|みお}",
    "age": 16,
    "role": "A 2nd-year student at Takanohara High.",
@@ -187,7 +187,7 @@
   },
   {
    "id": "hayato",
-   "name": "Kurogane Hayato",
+   "name": "黒鉄隼人",
    "name_jp": "{黒鉄隼人|くろがねはやと}",
    "age": "about 30 in his legends",
    "role": "A fictional samurai of the Takanohara domain, around 1790 (Edo period).",
@@ -298,6 +298,20 @@
     "The shopping-street supermarket has self-checkouts; アルちゃん got flustered using one.",
     "健太 calls him アルちゃん.",
     "健太 wants アルちゃん to make him a tortilla too, as a 'showdown' with Osaka okonomiyaki."
+   ]
+  },
+  {
+   "date": "2026-11-10",
+   "cast": [
+    "sato",
+    "mio"
+   ],
+   "summary": "Tuesday: アルちゃん's first day helping in English class at 鷹ノ原高校. 佐藤先生 introduces him; in 'what if' question time 澪 learns he'd join the brass band (her club), then asks what he'd do if he failed an exam, and he tells her he once failed one too but it worked out.",
+   "new_facts": [
+    "アルちゃん helps in 佐藤先生's English class every Tuesday (4th period), starting 10 Nov; 澪 is in class 2-3.",
+    "澪 plays trumpet in the brass band club (吹奏楽部) and takes university entrance exams next year.",
+    "アルちゃん once failed an exam before coming to Japan, and told the class so.",
+    "澪 calls him アルちゃん."
    ]
   }
  ]

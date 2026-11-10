@@ -1,0 +1,186 @@
+{
+ "topic": "What if you fail the exam?",
+ "category": "school-youth",
+ "function": "hypotheticals",
+ "format": "dialogue",
+ "cast": ["sato", "mio"],
+ "title_jp": "もし{試験|しけん}に{落|お}ちたら？",
+ "context": "Tuesday: アルちゃん's first day helping in the English class at 鷹ノ原高校. 佐藤先生 introduces him, and the class does a 'what if…' question time. A 2nd-year student, 澪, nervous about next year's entrance exams, asks him the question she really cares about.",
+ "phrases": [
+  {
+   "jp": "もし{生まれ変わったら|うまれかわったら|to be reborn|3}、{何|なに}になりたい？",
+   "en": "If you were reborn, what would you want to be?",
+   "register": "casual",
+   "note": "A classic 'what if' question between friends. もし just warns 'a hypothesis is coming'; 〜たら does the real work."
+  },
+  {
+   "jp": "{私|わたし}だったら、{先生|せんせい}に{相談|そうだん|asking for advice|4}すると{思|おも}います。",
+   "en": "If it were me, I think I'd ask a teacher for advice.",
+   "register": "polite",
+   "note": "{私|わたし}だったら = 'if I were you': the gentlest way to give advice without telling someone what to do."
+  },
+  {
+   "jp": "{来月|らいげつ}、{東京|とうきょう}に{引っ越す|ひっこす|to move house|4}ことになりました。",
+   "en": "It's been decided that I'm moving to Tokyo next month.",
+   "register": "polite",
+   "note": "The standard way to announce news at work or school: ことになりました makes it sound decided by circumstances, not just by you."
+  },
+  {
+   "jp": "{試験|しけん}に{受かったら|うかったら|to pass (an exam)|3}、{何|なに}する？",
+   "en": "What will you do if you pass the exam?",
+   "register": "casual",
+   "note": "Spoken: {受|う}かる. Written and formal: {合格|ごうかく}する. The opposite is {落|お}ちる."
+  },
+  {
+   "jp": "{修学旅行|しゅうがくりょこう|school trip|3}、どこに{泊まった|とまった|to stay overnight|4}の？",
+   "en": "Where did you stay on your school trip?",
+   "register": "casual",
+   "note": "Almost every Japanese adult has a 修学旅行 story (often Kyoto or Nara): an easy small-talk question."
+  }
+ ],
+ "dialogue_setting": "Classroom 2-3 at 鷹ノ原高校, 4th period English. 佐藤先生 at the front, アルちゃん beside her, 30 students staring at him.",
+ "dialogue": [
+  {
+   "speaker": "佐藤先生",
+   "jp": "みなさん、{今日|きょう}から{毎週|まいしゅう}{火曜日|かようび}に、アルちゃんが{授業|じゅぎょう|class, lesson|4}を{手伝って|てつだって|to help|4}くれることになりました。{今日|きょう}は「もし〜たら」の{質問|しつもん}タイムです。どうぞ。",
+   "en": "Everyone, from today アルちゃん will be helping with our class every Tuesday. Today is 'what if…' question time. Go ahead."
+  },
+  {
+   "speaker": "澪",
+   "jp": "あの、{質問|しつもん}してもいいですか。もし{日本|にほん}の{高校生|こうこうせい}だったら、{部活|ぶかつ|school club|4}は{何|なに}に{入りますか|はいりますか|to join|4}？",
+   "en": "Um, may I ask something? If you were a Japanese high-school student, which club would you join?"
+  },
+  {
+   "speaker": "You",
+   "me": true,
+   "jp": "うーん、もし{入れる|はいれる}なら、{吹奏楽部|すいそうがくぶ|brass band club|2}かな。{楽器|がっき|musical instrument|3}は{何|なに}もできないけど…。",
+   "en": "Hmm, if I could join, the brass band, I guess. Though I can't play any instrument…"
+  },
+  {
+   "speaker": "澪",
+   "jp": "え、{ガチ||(slang) = 本当, seriously|3}ですか！{私|わたし}、{吹奏楽部|すいそうがくぶ|brass band club|2}でトランペット{吹いて|ふいて|to blow, play (wind instrument)|3}ます！…じゃあ、もし{試験|しけん}に{落ちたら|おちたら|to fail (an exam)|4}、どうしますか？{私|わたし}、{来年|らいねん}{受験|じゅけん|taking entrance exams|3}なんで…。",
+   "en": "Wait, seriously? I play trumpet in the brass band! …OK, then: what would you do if you failed an exam? I've got entrance exams next year, so…",
+   "note": "ガチ is teen slang for 本当に / マジ. Teens drop it into polite speech too: ガチですか."
+  },
+  {
+   "speaker": "You",
+   "me": true,
+   "jp": "{僕|ぼく}も{前|まえ}に{試験|しけん}に{落ちた|おちた|to fail (an exam)|4}ことがあるよ。でも、もう{一回|いっかい}がんばって、{結局|けっきょく|in the end|4}{日本|にほん}に{来る|くる}ことになった。{落ちても|おちても}、{終わり|おわり}じゃないよ。",
+   "en": "I've failed an exam before too. But I tried again, and in the end it turned out I came to Japan. Failing isn't the end."
+  },
+  {
+   "speaker": "佐藤先生",
+   "jp": "いいお{話|はなし}ですね。じゃあ{澪|みお}さん、もし{東京|とうきょう}の{大学|だいがく}に{合格|ごうかく|passing (an exam)|3}したら、{何|なに}がしたいですか。{英語|えいご}で{答えて|こたえて}みましょう。",
+   "en": "What a nice story. So, 澪さん: if you get into a university in Tokyo, what do you want to do? Let's try answering in English."
+  }
+ ],
+ "grammar": {
+  "id": "n4-koto-ni-naru",
+  "pattern": "〜ことになる",
+  "level": "N4",
+  "meaning": "it's been decided that / it turns out that",
+  "form": "{辞書形|じしょけい}: + ことになる ({手伝|てつだ}う → {手伝|てつだ}うことになる, {来|く}る → {来|く}ることになる) · ない{形|けい}: + ことになる ({行|い}かない → {行|い}かないことになる) · announcement: ことになりました ({引|ひ}っ{越|こ}すことになりました)",
+  "explanation": "Use it when something was decided by someone else or by circumstances, or simply 'turned out' that way: the speaker presents it as an outcome, not a personal choice. Its partner 〜ことにする (taught last lesson) is 'I decided'. Japanese often prefer ことになりました even for their own decisions, because it sounds modest: 'it has come about that…'.",
+  "src": ["d0", "d4", "p2"],
+  "examples": [
+   {
+    "jp": "{来週|らいしゅう}から{夜|よる}のシフトに{入る|はいる}ことになった。",
+    "en": "It's been decided I'll do night shifts from next week."
+   },
+   {
+    "jp": "{雨|あめ}のため、{運動会|うんどうかい|sports day|3}は{中止|ちゅうし|cancelled|3}することになりました。",
+    "en": "Because of the rain, sports day has been cancelled."
+   }
+  ],
+  "quiz": {
+   "question": "{会社|かいしゃ}の{命令|めいれい|order (from above)|3}で、{来月|らいげつ}{大阪|おおさか}に＿＿ことになった。",
+   "en": "On the company's orders, I'm to go to Osaka next month.",
+   "options": ["{行|い}く", "{行|い}った", "{行|い}こう", "{行|い}って"],
+   "explain": "ことになる takes the dictionary form, even for future events; the past goes on なる (なった). And because the company decided, it's ことになる, not ことにする."
+  }
+ },
+ "kanji": {
+  "kanji": "進路指導室",
+  "reading": "しんろしどうしつ",
+  "romaji": "shinro shidōshitsu",
+  "meaning": "career guidance room",
+  "where": "The sign on a door in every Japanese high school: where students talk with teachers about exams, university and jobs.",
+  "related": "{進路|しんろ} = your path after school; {受験生|じゅけんせい} = a student taking entrance exams.",
+  "breakdown": "{進路指導室|しんろしどうしつ}: 進路 path ahead (進 advance + 路 road) + 指導 guidance + 室 room → 'the room where they guide your path'."
+ },
+ "tip": {
+  "mark": "受",
+  "title": "Words you don't say to a 受験生",
+  "body": "Around students preparing for entrance exams, people avoid 落ちる (to fall/fail) and すべる (to slip, slang for failing): even dropping something becomes a bad omen. Instead they give lucky things: a 合格お{守|まも}り from a shrine, or a KitKat, because キットカット sounds like きっと{勝|か}つ, 'you'll surely win'. 澪 asked the question herself, so アルちゃん's honest 落ちた was fine."
+ },
+ "challenge": {
+  "prompt": "{澪|みお}, back in Japanese: 「アルちゃん、もしスペインに{帰る|かえる}ことになったら、{日本|にほん}の{何|なに}が{一番|いちばん}{恋しく|こいしく|to miss, long for|3}なると{思|おも}いますか？」 Answer her (politely, it's class) and say what you'd miss most.",
+  "hint": "もし〜ことになったら · 〜が{一番|いちばん}{恋|こい}しくなる · 〜と{思|おも}います",
+  "model_answer": "もしスペインに{帰る|かえる}ことになったら、{田中|たなか}さんのりんごが{一番|いちばん}{恋しく|こいしく|to miss, long for|3}なると{思|おも}います。",
+  "explanation": "{帰|かえ}ることになったら = 'if it turns out I have to go back': ことになる (not your choice) inside a 〜たら condition. {恋|こい}しい + なる = 'come to miss'. です・ます because you're speaking in front of the class."
+ },
+ "vocab": [
+  {"jp": "{授業|じゅぎょう}", "reading": "じゅぎょう", "en": "class, lesson", "level": "N4", "src": "d0", "surface": "授業", "note": "A class you attend. The subject itself is {科目|かもく}."},
+  {"jp": "{手伝|てつだ}う", "reading": "てつだう", "en": "to help", "level": "N4", "src": "d0", "surface": "手伝って"},
+  {"jp": "{部活|ぶかつ}", "reading": "ぶかつ", "en": "school club (activities)", "level": "N3", "src": "d1", "surface": "部活", "note": "Short for {部活動|ぶかつどう}. Clubs train almost every day, weekends too: a big part of school life."},
+  {"jp": "{楽器|がっき}", "reading": "がっき", "en": "musical instrument", "level": "N3", "src": "d2", "surface": "楽器"},
+  {"jp": "{吹|ふ}く", "reading": "ふく", "en": "to blow; to play (a wind instrument)", "level": "N3", "src": "d3", "surface": "吹いて", "note": "Also used for wind: {風|かぜ}が{吹|ふ}く. Piano and guitar use {弾|ひ}く instead."},
+  {"jp": "{落|お}ちる", "reading": "おちる", "en": "to fall; to fail (an exam)", "level": "N3", "src": "d3", "surface": "落ちたら", "note": "{試験|しけん}に{落|お}ちる = to fail an exam. Opposite: {受|う}かる."},
+  {"jp": "{受験|じゅけん}", "reading": "じゅけん", "en": "taking entrance exams", "level": "N3", "src": "d3", "surface": "受験", "note": "{受験生|じゅけんせい} = a student in exam year. A whole season of Japanese life."},
+  {"jp": "{結局|けっきょく}", "reading": "けっきょく", "en": "in the end, after all", "level": "N3", "src": "d4", "surface": "結局"},
+  {"jp": "{合格|ごうかく}", "reading": "ごうかく", "en": "passing (an exam), getting in", "level": "N3", "src": "d5", "surface": "合格", "note": "{合格|ごうかく}する = to pass. On notices you'll see {合格発表|ごうかくはっぴょう}: the day results are posted."}
+ ],
+ "kanji_study": [
+  {
+   "kanji": "落",
+   "track": "lesson",
+   "on": "ラク",
+   "kun": "お(ちる)・お(とす)",
+   "meaning": "fall, drop",
+   "words": [
+    {"jp": "{落|お}ちる", "reading": "おちる", "en": "to fall; to fail (an exam)"},
+    {"jp": "{落|お}とし{物|もの}", "reading": "おとしもの", "en": "lost item"},
+    {"jp": "{落語|らくご}", "reading": "らくご", "en": "rakugo, comic storytelling"}
+   ],
+   "decoys": {"meanings": ["leaf", "float", "pass through"], "readings": ["らちる", "おりる", "ふちる"]}
+  },
+  {
+   "kanji": "泊",
+   "track": "n3",
+   "on": "ハク・パク",
+   "kun": "と(まる)・と(める)",
+   "meaning": "stay overnight",
+   "words": [
+    {"jp": "{泊|と}まる", "reading": "とまる", "en": "to stay overnight"},
+    {"jp": "{一泊|いっぱく}", "reading": "いっぱく", "en": "one night (stay)"},
+    {"jp": "{宿泊|しゅくはく}", "reading": "しゅくはく", "en": "lodging, accommodation"}
+   ],
+   "decoys": {"meanings": ["stop, halt", "white", "lake shore"], "readings": ["はくまる", "しまる", "どまる"]}
+  }
+ ],
+ "extras": [
+  {
+   "title": "School life words",
+   "title_jp": "{学校生活|がっこうせいかつ}のことば",
+   "intro": "Words every Japanese teenager uses, and you'll hear in the staff room.",
+   "items": [
+    {"jp": "{文化祭|ぶんかさい|school festival|3}", "en": "school (culture) festival", "note": "Classes run cafés and haunted houses; open to the town."},
+    {"jp": "{修学旅行|しゅうがくりょこう|school trip|3}", "en": "school trip", "note": "Usually in the 2nd year of high school."},
+    {"jp": "{期末|きまつ|end of term|2}テスト", "en": "end-of-term exams"},
+    {"jp": "{先輩|せんぱい|senior (at school or work)|4}・{後輩|こうはい|junior|3}", "en": "senior / junior student", "note": "Decided by year, not age; club life runs on it."},
+    {"jp": "{進路|しんろ|path after school|3}", "en": "your path after graduating", "note": "{進路|しんろ}{面談|めんだん} = the talk with your teacher about it."}
+   ]
+  },
+  {
+   "title": "Ways to say 'what if'",
+   "title_jp": "「もし」のいろいろ",
+   "intro": "Four conditionals you'll hear, from most everyday to most 'imaginary'.",
+   "items": [
+    {"jp": "{雨|あめ}だったら、{行|い}かない。", "en": "If it rains, I won't go.", "note": "〜たら: the all-rounder in speech."},
+    {"jp": "{行|い}くなら、{教|おし}えて。", "en": "If you're going, tell me.", "note": "〜なら: reacting to what someone else said or plans."},
+    {"jp": "{安|やす}ければ{買|か}う。", "en": "If it's cheap, I'll buy it.", "note": "〜ば: the condition itself matters most."},
+    {"jp": "{宝|たから}くじが{当|あ}たったとしたら？", "en": "Suppose you won the lottery?", "note": "〜としたら: pure imagination, 'suppose that…'."}
+   ]
+  }
+ ]
+}

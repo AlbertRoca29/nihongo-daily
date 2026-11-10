@@ -50,5 +50,12 @@
   "category": "shops-eating-out",
   "function": "feelings",
   "format": "line"
+ },
+ {
+  "id": "2026-11-10",
+  "topic": "What if you fail the exam?",
+  "category": "school-youth",
+  "function": "hypotheticals",
+  "format": "dialogue"
  }
 ]
