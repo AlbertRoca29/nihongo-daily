@@ -1,0 +1,37 @@
+name: Voice lab Flash vs Lite
+
+# Same lines in Gemini 3.8 Flash TTS and Flash-Lite TTS (scripts/lite_lab.py). Runs when samples/lite/run.txt changes.
+on:
+  push:
+    branches: [master]
+    paths: ["samples/lite/run.txt"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: lite-lab
+  cancel-in-progress: false
+
+jobs:
+  lab:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: Run
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python3 scripts/lite_lab.py 2>&1 | tee samples/lite/last_run.log
+      - name: Commit
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add samples/lite
+          git commit -m "Voice lab: Flash vs Lite samples [skip ci]" || exit 0
+          for i in 1 2 3; do git pull --rebase origin master && git push origin HEAD:master && break; sleep 5; done
