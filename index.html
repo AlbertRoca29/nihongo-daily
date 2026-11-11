@@ -574,6 +574,45 @@ details.more summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--a
 .slots span.s{min-width:56px;border-bottom:2px solid var(--ink);text-align:center;padding:0 3px;min-height:30px}
 .slots span.s.star{border-bottom-color:var(--stamp)}
 </style>
+<style>
+/* ===== r3: less text. One screen per step, Japanese first, English on tap, one thing per card ===== */
+.scene{display:flex;gap:12px;align-items:center}
+.scene p{margin:0;font-size:16px;line-height:1.45}
+.scene .faces{display:flex;flex:none}
+.scene .faces > *{margin-right:-8px}
+.prev-line{display:flex;justify-content:space-between;gap:8px;align-items:center}
+.prev-line span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.prev-line.open span{white-space:normal}
+.dots{display:flex;gap:5px;justify-content:center;padding:2px 0}
+.dots i{width:7px;height:7px;border-radius:4px;background:var(--rule);transition:width .2s}
+.dots i.on{width:18px;background:var(--ink)}
+.phr1{display:flex;flex-direction:column;gap:14px;min-height:min(52vh,420px);justify-content:center}
+.phr1 .icons{justify-content:center}
+.phr-nav{display:flex;gap:8px}
+.phr-nav .btn{min-height:44px}
+.phr-nav .btn:first-child{flex:none;width:64px;padding:0}
+.phr-nav .btn:last-child{flex:1}
+.phr-nav .btn:disabled{opacity:.35}
+.seg{display:flex;gap:3px;background:var(--ghost);border-radius:999px;padding:3px}
+.seg button{flex:1;border-radius:999px;padding:7px 0;font-family:var(--jp);font-size:13.5px;font-weight:700;color:var(--muted);white-space:nowrap}
+.seg button[aria-selected="true"]{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.gpanel{display:flex;flex-direction:column;gap:12px}
+.tapen{cursor:pointer}
+.tapen .en{font-size:13.5px;color:var(--muted);margin-top:2px}
+.fold{text-align:left;font-weight:700;font-size:14px;color:var(--accent);padding:4px 0}
+.wlist{padding-top:4px;padding-bottom:4px}
+.wrow{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--rule);cursor:pointer}
+.wrow:last-child{border-bottom:0}
+.wrow .w{flex:none;min-width:5.2em;font-family:var(--jp);font-size:calc(19px * var(--fs));font-weight:700;line-height:1.75}
+.wrow .m{flex:1;min-width:0;font-size:14.5px;line-height:1.3}
+.wopen{display:flex;flex-direction:column;gap:6px;padding:0 0 12px;border-bottom:1px solid var(--rule)}
+.wopen .row{justify-content:flex-start;gap:8px}
+.done-c{display:flex;flex-direction:column;gap:10px;align-items:center;text-align:center;padding:26px 16px}
+.done-c .hanko{width:64px;height:64px;font-size:30px;border-radius:18px}
+.btn-row{display:flex;gap:8px}
+.btn-row .btn{flex:1;min-height:44px;padding:0 12px;font-size:15px}
+.card .agenda-row span{background:var(--soft)}
+</style>
 
 </head>
 <body>
@@ -1050,18 +1089,30 @@ details.more summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--a
   }
 
   /* ---- phrases on one screen ---- */
-  function renderPhrases(L){
-    const beta = store.get("set:speak", false);
-    return `<div class="step">${(L.phrases || []).map((p, i) => {
-      const reg = (p.register || "neutral").toLowerCase();
-      return `<div class="card" style="display:flex;flex-direction:column;gap:8px">
-        <div class="row"><span class="chip ${esc(reg)}">${esc(reg)}</span><span class="count">${i + 1}/5</span></div>
+  let phrIdx = 0;
+  function phraseCard(L, i){
+    const p = L.phrases[i], n = L.phrases.length, reg = (p.register || "neutral").toLowerCase(), beta = store.get("set:speak", false);
+    return `<div class="dots">${L.phrases.map((_, j) => `<i class="${j === i ? "on" : ""}"></i>`).join("")}</div>
+      <div class="card phr1">
+        <div class="row"><span class="chip ${esc(reg)}">${esc(reg)}</span><span class="count">${i + 1}/${n}</span></div>
         <div class="jp-big">${ruby(p.jp)}</div>
-        <div class="row" style="justify-content:flex-start;flex-wrap:nowrap"><div class="icons"><button data-play="p${i}|${esc(plain(p.jp))}" aria-label="Play">▶</button><button data-play="p${i}|${esc(plain(p.jp))}" data-slow="1" aria-label="Slow">🐢</button>${starBtn("l:" + L.id + ":p" + i, lineDef(L, p, "p" + i))}${beta ? `<button data-mic="${i}" aria-label="Say it">🎤</button>` : ""}</div></div>
+        <div class="icons"><button data-play="p${i}|${esc(plain(p.jp))}" aria-label="Play">▶</button><button data-play="p${i}|${esc(plain(p.jp))}" data-slow="1" aria-label="Slow">🐢</button>${starBtn("l:" + L.id + ":p" + i, lineDef(L, p, "p" + i))}${beta ? `<button data-mic="${i}" aria-label="Say it">🎤</button>` : ""}</div>
         <div data-micout="${i}"></div>
-        <button class="reveal" data-rev="${i}">Tap to see the meaning</button>
+        <button class="reveal" data-rev="${i}">What does it mean?</button>
         ${p.note ? `<p class="note" data-pnote="${i}" hidden style="margin:0">${ruby(p.note)}</p>` : ""}
-      </div>`; }).join("")}</div>`;
+      </div>
+      <div class="phr-nav"><button class="btn ghost" data-pn="-1" ${i === 0 ? "disabled" : ""} aria-label="Previous phrase">‹</button><button class="btn ghost" data-pn="1">${i < n - 1 ? "Next phrase ›" : "From the top ↺"}</button></div>`;
+  }
+  function renderPhrases(L){ phrIdx = Math.min(phrIdx, L.phrases.length - 1); return `<div class="step" id="phrBox">${phraseCard(L, phrIdx)}</div>`; }
+  function wirePhrases(L){
+    const box = $("phrBox"); if (!box) return;
+    box.onclick = e => {
+      const r = e.target.closest("[data-rev]");
+      if (r){ const i = +r.dataset.rev; r.classList.add("open"); r.textContent = L.phrases[i].en; const nt = box.querySelector(`[data-pnote="${i}"]`); if (nt) nt.hidden = false; return; }
+      const m = e.target.closest("[data-mic]"); if (m){ listenMic(L.phrases[+m.dataset.mic].jp, box.querySelector(`[data-micout="${m.dataset.mic}"]`), m); return; }
+      const nb = e.target.closest("[data-pn]");
+      if (nb){ const n = L.phrases.length; phrIdx = (phrIdx + +nb.dataset.pn + n) % n; stopAll(); box.innerHTML = phraseCard(L, phrIdx); }
+    };
   }
   // D5 beta: speech recognition, compared with the phrase
   const charDiff = (a, b) => {
@@ -1098,16 +1149,41 @@ details.more summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--a
     return `<li class="${lab ? "" : "nolab"}">${lab ? `<div class="fl"><span>${ruby(lab)}</span></div>` : ""}<div class="fb"><div class="fr">${arrows(ruby(rest))}</div>${ex.length ? `<div class="fx">${ex.map(e => `<div>${arrows(ruby(e))}</div>`).join("")}</div>` : ""}</div></li>`;
   };
   const formList = form => { const parts = String(form || "").split(/\s+[·・;；]\s+|\n/).map(s => s.trim()).filter(Boolean); return parts.length ? `<ul class="gform">${parts.map(formRule).join("")}</ul>` : ""; };
+  const G_TABS = ["意味", "作り方", "今日の文", "チェック"];
+  let gTab = 0;
+  const tapLine = (key, jp, en) => `<div class="tapen" data-tapen><div class="bubble-row"><div class="gline">${ruby(jp)}</div>${key !== null ? `<button class="play" data-play="${key ? key + "|" : ""}${esc(plain(jp))}" aria-label="Play">${ICON_SAY}</button>` : ""}</div><div class="en" hidden>${esc(en)}</div></div>`;
+  function grammarPanel(L, i){
+    const G = L.grammar, next = i < 3 ? `<button class="btn ghost" data-gt="${i + 1}" style="width:100%">${G_TABS[i + 1]} ›</button>` : "";
+    if (i === 0) return `<div class="card gsec" style="gap:10px"><div class="row"><span class="lvl ${esc(G.level)}">${esc(G.level)}</span>${starBtn("g:" + G.id, grammarDef(L, G))}</div>
+        <div class="gpat">${ruby(G.pattern)}</div><div style="font-size:17px;font-weight:600">${esc(G.meaning)}</div>
+        ${G.explanation ? `<p style="margin:0;font-size:15px;line-height:1.6">${ruby(G.explanation)}</p>` : ""}</div>${next}`;
+    if (i === 1) return `<div class="card gsec">${formList(G.form)}</div>${next}`;
+    if (i === 2){
+      const inLesson = (G.src || []).map(r => [r, lineOf(L, r)]).filter(x => x[1]).slice(0, 2);
+      return `<div class="card gsec" style="gap:12px">${inLesson.map(([r, x]) => tapLine(r, x.jp, x.en)).join("")}
+          <p class="note" style="margin:0">Tap a line for English.</p></div>
+        ${(G.examples || []).length ? `<button class="fold" data-gfold>▸ ${G.examples.length} more example${G.examples.length > 1 ? "s" : ""}</button><div class="card gsec" id="gex" hidden style="gap:12px">${G.examples.map(x => tapLine("", x.jp, x.en)).join("")}</div>` : ""}${next}`;
+    }
+    return `<div id="gquiz"></div>`;
+  }
   function renderGrammar(L){
-    const G = L.grammar, inLesson = (G.src || []).map(r => [r, lineOf(L, r)]).filter(x => x[1]);
-    return `<div class="step">
-      <div class="card gsec" style="gap:8px"><div class="row"><span class="lvl ${esc(G.level)}">${esc(G.level)} grammar</span>${starBtn("g:" + G.id, grammarDef(L, G))}</div>
-        <div class="gpat">${ruby(G.pattern)}</div><div style="font-size:17px;font-weight:600">${esc(G.meaning)}</div></div>
-      <div class="card gsec"><div class="label">How to make it</div>${formList(G.form)}</div>
-      <div class="card gsec"><div class="label">How it works</div><p style="margin:0">${ruby(G.explanation)}</p></div>
-      ${inLesson.length ? `<div class="card gsec"><div class="label">In today's lesson</div>${inLesson.map(([r, x]) => `<div><div class="bubble-row"><div class="gline">${ruby(x.jp)}</div><button class="play" data-play="${r}|${esc(plain(x.jp))}" aria-label="Play">${ICON_SAY}</button></div><div class="note">${esc(x.en)}</div></div>`).join("")}</div>` : ""}
-      ${(G.examples || []).length ? `<div class="card gsec"><div class="label">More examples</div>${G.examples.map(x => `<div><div class="bubble-row"><div class="gline">${ruby(x.jp)}</div><button class="play" data-play="${esc(plain(x.jp))}" aria-label="Play">${ICON_SAY}</button></div><div class="note">${esc(x.en)}</div></div>`).join("")}</div>` : ""}
-      <div id="gquiz">${G.quiz ? `<button class="btn ghost" id="ggo" style="width:100%">Quick check · fill the gap</button>` : ""}</div></div>`;
+    gTab = 0;
+    return `<div class="step"><div class="seg" role="tablist">${G_TABS.map((x, i) => `<button role="tab" data-gt="${i}" aria-selected="${i === 0}">${x}</button>`).join("")}</div>
+      <div class="gpanel" id="gpanel">${grammarPanel(L, 0)}</div></div>`;
+  }
+  function showGrammarTab(L, i){
+    gTab = i; stopAll();
+    document.querySelectorAll(".seg [data-gt]").forEach(b => b.setAttribute("aria-selected", String(+b.dataset.gt === i)));
+    $("gpanel").innerHTML = grammarPanel(L, i); $("stage").scrollTop = 0;
+    if (i === 3){ if (L.grammar.quiz) runGrammarQuiz(); else $("gquiz").innerHTML = `<p class="note">No quiz for this one.</p>`; }
+  }
+  function wireGrammar(L){
+    $("stage").onclick = e => {
+      const tb = e.target.closest("[data-gt]"); if (tb){ showGrammarTab(L, +tb.dataset.gt); return; }
+      if (e.target.closest("[data-gfold]")){ const ex = $("gex"), b = e.target.closest("[data-gfold]"); ex.hidden = !ex.hidden; b.textContent = (ex.hidden ? "▸ " : "▾ ") + b.textContent.slice(2); return; }
+      if (e.target.closest("[data-play],[data-star],.gl,ruby")) return;
+      const tl = e.target.closest("[data-tapen]"); if (tl){ const en = tl.querySelector(".en"); en.hidden = !en.hidden; }
+    };
   }
   function runGrammarQuiz(){
     const L = lesson, G = L.grammar, q = G.quiz, key = "g:" + G.id;
@@ -1119,15 +1195,29 @@ details.more summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--a
   }
 
   /* ---- words ---- */
+  const shortEn = en => { let s = String(en || "").split(";")[0].trim(); if (s.length > 24 && s.includes(",")) s = s.split(",")[0].trim(); return s; };
   function renderWords(L){
-    return `<div class="step"><div class="card">${L.vocab.map(v => { const f = freqOf(L, v); return `<div class="vrow">
-        <div style="min-width:0;flex:1">
-          <div class="row" style="justify-content:flex-start;gap:8px"><span class="jp-mid" style="line-height:1.8">${ruby(v.jp)}</span><span class="lvl ${esc(v.level)}">${esc(v.level)}</span>${f ? `<span class="fqchip">${freqBars(f)}${FREQ_SHORT[f]}</span>` : ""}</div>
-          <div style="font-size:15px">${esc(v.en)}</div>${v.note ? `<div class="note">${ruby(v.note)}</div>` : ""}
-          ${lineOf(L, v.src) ? `<div class="src">${highlight(lineOf(L, v.src).jp, v.surface)}</div>` : ""}
-        </div><div style="display:flex;flex-direction:column;gap:6px">${starBtn("w:" + plain(v.jp), wordDef(L, v))}<button class="star" data-play="w:${esc(plain(v.jp))}" aria-label="Play">${ICON_SAY}</button></div></div>`; }).join("")}</div>
-      <p class="note" style="margin:0">They all come back in review (except rare ones). ☆ = show me this one more.</p>
+    return `<div class="step"><div class="card wlist">${L.vocab.map((v, i) => { const f = freqOf(L, v); return `
+        <div class="wrow" data-wi="${i}"><span class="w">${ruby(v.jp)}</span><span class="m">${esc(shortEn(v.en))}</span>${starBtn("w:" + plain(v.jp), wordDef(L, v))}</div>
+        <div class="wopen" data-wo="${i}" hidden>
+          <div class="row"><button class="play" style="margin:0" data-play="w:${esc(plain(v.jp))}" aria-label="Play">${ICON_SAY}</button><span class="lvl ${esc(v.level)}">${esc(v.level)}</span>${f ? `<span class="fqchip">${freqBars(f)}${FREQ_SHORT[f]}</span>` : ""}<span class="note" style="font-family:var(--jp)">${esc(v.reading)}</span></div>
+          ${shortEn(v.en) !== v.en ? `<div style="font-size:15px">${esc(v.en)}</div>` : ""}
+          ${v.note ? `<div class="note">${ruby(v.note)}</div>` : ""}
+        </div>`; }).join("")}</div>
+      <p class="note" style="margin:0">Tap a word for more. ☆ = show me this one more.</p>
       <div id="vquiz"><button class="btn ghost" id="vgo" style="width:100%">Quick check · ${Math.min(4, L.vocab.length)} questions</button></div></div>`;
+  }
+  function wireWords(L){
+    $("vgo").onclick = runVocabQuiz;
+    const list = document.querySelector(".wlist");
+    list.onclick = e => {
+      if (e.target.closest("[data-star],[data-play],.gl")) return;
+      const r = e.target.closest("[data-wi]"); if (!r) return;
+      const box = list.querySelector(`[data-wo="${r.dataset.wi}"]`), open = box.hidden;
+      list.querySelectorAll("[data-wo]").forEach(x => x.hidden = true);
+      box.hidden = !open;
+      if (open) play(L.id, ["w:" + plain(L.vocab[+r.dataset.wi].jp)]);
+    };
   }
   const highlight = (sent, surface) => { const p = esc(plain(sent)), w = esc(surface || ""), i = w ? p.indexOf(w) : -1; return i < 0 ? p : p.slice(0, i) + "<mark>" + w + "</mark>" + p.slice(i + w.length); };
   function runVocabQuiz(){
@@ -1323,6 +1413,15 @@ details.more summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--a
 
   /* ---- render a step ---- */
   const dateJP = id => { const d = new Date(id + "T12:00:00"); return isNaN(d) ? id : `${d.getMonth() + 1}月${d.getDate()}日（${"日月火水木金土"[d.getDay()]}）`; };
+  /* ---- r3: start page = one line of scene + faces ---- */
+  const firstSentence = s => { const m = String(s || "").match(/^.*?[.!?](?=\s|$)/); return m ? m[0] : String(s || ""); };
+  function introScene(L){
+    const ids = [...new Set([...(L.cast || []), ...(L.dialogue || []).map(d => d.who)])].filter(id => id && id !== "you" && id !== "guest" && id !== "extra" && person(id));
+    const faces = ids.slice(0, 3).map(id => avatar(id, person(id).name)).join("") + (L.guest ? `<span class="ava">${initial(L.guest.name)}</span>` : "");
+    const who = [...ids.slice(0, 3).map(id => person(id).name), ...(L.guest ? [L.guest.name + (L.guest.role ? "" : "")] : [])].join(" · ");
+    const text = L.news ? L.context : (L.scene || firstSentence(L.context));
+    return `<div class="card scene">${faces ? `<span class="faces">${faces}</span>` : ""}<div style="min-width:0"><p>${esc(text)}</p>${who ? `<div class="note" style="font-family:var(--jp);margin-top:2px">${esc(who)}</div>` : ""}</div></div>`;
+  }
   function renderTop(){
     const st = steps[idx];
     $("ptab").textContent = st.tab; $("pstep").textContent = st.jp && st.jp !== st.tab ? "· " + st.jp : "";
@@ -1337,10 +1436,9 @@ details.more summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--a
       h = `<div class="step">
         <div class="board hero" style="display:block"><div class="board-kicker">${L.news ? "ニュース · News" : L.format === "mock" ? "模試 · Monthly mock" : esc(dateJP(L.id))}</div><div class="board-title">${ruby(L.title_jp || L.topic)}</div><div class="board-en" style="white-space:normal">${esc(L.topic)}</div>
           ${audioMaps[L.id] && audioMaps[L.id]._radio ? `<div class="hero-go"><span></span><b role="button" data-radio="${esc(L.id)}">🎧 Radio</b></div>` : ""}</div>
-        ${log ? `<div class="card" style="display:flex;flex-direction:column;gap:4px"><div class="label">前回 · last time</div><p style="margin:0;font-size:15px">${esc(log)}</p></div>` : ""}
-        <div class="card" style="display:flex;flex-direction:column;gap:8px"><div class="label">Situation</div><p style="margin:0;font-size:16px">${esc(L.context)}</p></div>
-        ${castCard(L)}
-        <div class="agenda-row">${L.news ? `<span>📰 News</span>` : ""}${warmQueue.length ? `<span>Warm-up · ${warmQueue.length}</span>` : ""}${L.format !== "mock" ? `<span>${FMT[fmtOf(L)].en}</span>` : ""}${L.listening ? `<span style="font-family:var(--jp)">${esc(LIST_JP[L.listening.type] || "")}</span>` : ""}${L.grammar ? `<span style="font-family:var(--jp)">${esc(plain(L.grammar.pattern))}</span>` : ""}${L.kanji_study?.length ? `<span style="font-family:var(--jp)">${esc(L.kanji_study.map(k => k.kanji).join(" "))}</span>` : ""}</div>
+        ${introScene(L)}
+        <div class="card" style="display:flex;flex-direction:column;gap:8px"><div class="label">Today</div><div class="agenda-row">${L.news ? `<span>📰 News</span>` : ""}${warmQueue.length ? `<span>Warm-up · ${warmQueue.length}</span>` : ""}${L.format !== "mock" ? `<span>${FMT[fmtOf(L)].en}</span>` : ""}${L.listening ? `<span style="font-family:var(--jp)">${esc(LIST_JP[L.listening.type] || "")}</span>` : ""}${L.grammar ? `<span style="font-family:var(--jp)">${esc(plain(L.grammar.pattern))}</span>` : ""}${L.vocab?.length ? `<span>${L.vocab.length} words</span>` : ""}${L.kanji_study?.length ? `<span style="font-family:var(--jp)">${esc(L.kanji_study.map(k => k.kanji).join(" "))}</span>` : ""}</div></div>
+        ${log ? `<button class="reveal prev-line" id="prevLine"><span><b style="color:var(--ink)">前回</b> · ${esc(log)}</span><span aria-hidden="true">›</span></button>` : ""}
       </div>`;
     }
     if (st.type === "warm") h = `<div class="step"><div id="warm" style="display:flex;flex-direction:column;gap:10px"></div></div>`;
@@ -1361,15 +1459,16 @@ details.more summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--a
       markDone(L.id);
       const added = addLessonToDeck(L);
       if (L.kanji_study) markKanji(L.kanji_study, "seen");
+      const keep = (Array.isArray(L.keep) && L.keep.length ? L.keep : ["p0"]).map(r => [r, lineOf(L, r)]).filter(x => x[1]).slice(0, 2);
+      const radio = audioMaps[L.id] && audioMaps[L.id]._radio, more = steps[idx + 1];
       h = `<div class="step">
-        <div class="card" style="display:flex;flex-direction:column;gap:10px;align-items:flex-start"><span class="hanko">済</span>
-          <h3 style="margin:0;font-size:20px">${ruby("お{疲|つか}れ{様|さま}でした！")}</h3>
-          <p style="margin:0">${added ? `<b>${added} new cards</b> go into review from tomorrow.` : "Everything from today is in your review deck."}</p>
-          <p class="note" style="margin:0">${streakLine()}</p></div>
-        ${audioMaps[L.id] && audioMaps[L.id]._radio ? `<button class="btn ghost" data-radio="${esc(L.id)}">🎧 Listen again as radio</button>` : ""}
-        ${L.phrases ? `<div class="card" style="display:flex;flex-direction:column;gap:12px"><div class="label">Today's phrases</div>${L.phrases.map(p => `<div><div class="jp-mid">${ruby(p.jp)}</div><div class="note">${esc(p.en)}</div></div>`).join("")}</div>` : ""}
-        <a class="btn primary" href="#">Back to home</a>
-        ${steps[idx + 1] ? `<button class="btn ghost" id="moreBtn">+ Tip and extras</button>` : ""}
+        <div class="card done-c"><span class="hanko">済</span>
+          <h3 style="margin:0;font-size:22px">${ruby("お{疲|つか}れ{様|さま}でした！")}</h3>
+          <p style="margin:0">${added ? `<b>${added} cards</b> from tomorrow` : "All in your review deck"}${streakLine() ? ` · ${streakLine().replace(/-day streak\./, " day")}` : ""}</p></div>
+        ${keep.length ? `<div class="card" style="display:flex;flex-direction:column;gap:10px"><div class="label">${keep.length > 1 ? "Two to keep" : "One to keep"}</div>
+          ${keep.map(([r, p]) => `<div class="tapen" data-tapen><div class="jp-mid">${ruby(p.jp)}</div><div class="en" hidden>${esc(p.en)}</div>
+            <div class="icons" style="margin-top:4px"><button data-play="${r}|${esc(plain(p.jp))}" aria-label="Play">▶</button>${starBtn("l:" + L.id + ":" + r, lineDef(L, p, r))}</div></div>`).join("")}</div>` : ""}
+        ${radio || more ? `<div class="btn-row">${radio ? `<button class="btn ghost" data-radio="${esc(L.id)}">🎧 Radio</button>` : ""}${more ? `<button class="btn ghost" id="moreBtn">おまけ</button>` : ""}</div>` : ""}
       </div>`;
     }
     el.innerHTML = h; el.scrollTop = 0; el.onclick = null;
@@ -1384,12 +1483,9 @@ details.more summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--a
     if (st.type === "warm") runCards($("warm"), {queue:warmQueue.slice(), qi:0, ok:0, again:new Set()}, "Warm-up");
     if (st.type === "dialogue") wireMain(L);
     if (st.type === "listening") wireListening(L);
-    if (st.type === "phrases"){
-      document.querySelectorAll("[data-rev]").forEach(b => b.onclick = () => { const i = +b.dataset.rev; b.classList.add("open"); b.textContent = L.phrases[i].en; const n = document.querySelector(`[data-pnote="${i}"]`); if (n) n.hidden = false; });
-      document.querySelectorAll("[data-mic]").forEach(b => b.onclick = () => listenMic(L.phrases[+b.dataset.mic].jp, document.querySelector(`[data-micout="${b.dataset.mic}"]`), b));
-    }
-    if (st.type === "grammar" && $("ggo")) $("ggo").onclick = runGrammarQuiz;
-    if (st.type === "words") $("vgo").onclick = runVocabQuiz;
+    if (st.type === "phrases") wirePhrases(L);
+    if (st.type === "grammar") wireGrammar(L);
+    if (st.type === "words") wireWords(L);
     if (st.type === "kanji"){
       markKanji(L.kanji_study, "seen");
       const kr = $("krev"); if (kr) kr.onclick = e => {
@@ -1401,7 +1497,9 @@ details.more summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--a
     }
     if (st.type === "challenge") wireChallenge(L);
     if (st.type === "mock") runMock(L);
-    if (st.type === "done"){ const m = $("moreBtn"); if (m) m.onclick = () => go(1); }
+    if (st.type === "done"){ const m = $("moreBtn"); if (m) m.onclick = () => go(1);
+      $("stage").onclick = e => { if (e.target.closest("[data-play],[data-star],[data-radio],.gl,ruby,button")) return; const tl = e.target.closest("[data-tapen]"); if (tl){ const en = tl.querySelector(".en"); en.hidden = !en.hidden; } }; }
+    if (st.type === "intro"){ const pl = $("prevLine"); if (pl) pl.onclick = () => pl.classList.toggle("open"); }
   }
   const go = d => { const n = idx + d; if (n >= 0 && n < steps.length){ idx = n; stopAll(); renderStep(); } };
 

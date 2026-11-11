@@ -12,6 +12,14 @@ Write **only today's lesson**. Never write lessons for future dates: each lesson
 - Assume N5 is known and N4 mostly known. Treat every N3 word and kanji as new: furigana everywhere, explained the first time.
 - Keep it short. N3 does not mean long or formal sentences.
 
+## Keep it short (the check enforces this)
+
+He reads on a phone, often tired. Less text is better than more explanation. Limits count characters without furigana:
+- **LINE bubble ≤ 40 字**. A longer message becomes two or three bubbles from the same person (same `time` is fine), the way people really type. Spoken line ≤ 50 字, story or text line ≤ 60 字.
+- **`scene` ≤ 30 words**: one English line for the start page.
+- **Vocab `note` ≤ 20 words**, **grammar `explanation` ≤ 50 words**, **tip** 2–3 sentences.
+- Cut filler, not the learning: keep the vocab, the grammar lines and the story beat; drop repeated greetings, side remarks and second explanations.
+
 ## The daily run
 
 1. `python3 scripts/lessons.py status` and follow its DECISION line. It gives: whether today's lesson exists, news and review state, today's **field**, **function** and **format**, the next **grammar** point, the next N3 kanji, which characters appeared when, whether a **guest** is due, the **story so far**, canon facts, and every kanji and word already taught.
@@ -56,7 +64,7 @@ All four keep their lines in `dialogue`, so vocab `src` (`d0`, `d1`…) works th
 | Format | Lines | Rules |
 |---|---|---|
 | `dialogue` | 4–6 | Spoken conversation. `speaker` is the character's Japanese `name` (or `アルちゃん` with `"me": true` and `"who": "you"` on the learner's lines). |
-| `line` | 4–8 | A LINE thread. Short written messages, casual written style (abbreviations, ｗ, emoji words). Optional `time` per line (`"21:04"`). At least one `"me": true`. Stickers and voice messages: see below. |
+| `line` | 4–10 | A LINE thread. Short written messages (each bubble ≤ 40 字), casual written style (abbreviations, ｗ, emoji words). Optional `time` per line (`"21:04"`). At least one `"me": true`. Stickers and voice messages: see below. |
 | `story` | 4–6 | One or two narrators tell something: a memory, a legend, yesterday's disaster. Each line is 1–2 sentences, plain or です/ます past narration. No `me` needed. |
 | `text` | 4–8 | A written text to decode: notice, menu, flyer, school letter, museum panel, shop sign, social media post, email. `speaker` is the part's label (`Title`, `Rule 1`, `Price`, `Note`). Add `"text_title"` (shown as the header, with furigana markup). No `me` needed. |
 
@@ -120,7 +128,9 @@ When status allows: `"category": "review"`, a new scene with the cast that reuse
 | `cast` | List of character ids from `cast.json` (`cast` or `others`) |
 | `guest` | Optional `{name, name_jp, role}` |
 | `title_jp` | Short Japanese title |
-| `context` | 1–2 English sentences setting today's scene in the story |
+| `context` | 1–2 English sentences setting today's scene in the story (used by the radio and the story log) |
+| `scene` | The start page's one line: the situation in at most 30 English words, e.g. `Day off tomorrow. You ask 千夏さん, a hiker you met at the guesthouse, for tips.` |
+| `keep` | Optional: 1–2 phrase refs (`["p4"]`) shown on the お疲れ様 screen as the phrase(s) to keep. Default: the first phrase. Use two only when they belong together |
 | `phrases` | Exactly 5 × `{jp, en, register, note?}`; register is `polite`, `casual`, `neutral`, `dialect`, `slang` or `archaic`. The mix follows the scene: casual with friends, polite with strangers and at work |
 | `dialogue_setting` | One English line: where/how this happens |
 | `dialogue` | The main text in today's format (see Formats). Each line: `{who, speaker, jp, en}` (+ `me`, `time`, `register`, `note`, `sticker`, `kind`) |
@@ -128,7 +138,7 @@ When status allows: `"category": "review"`, a new scene with the cast that reuse
 | `text_title` | Only for `text` format |
 | `grammar` | Today's grammar point (see below) |
 | `kanji` | `{kanji, reading, romaji, meaning, where, breakdown, related?}`: a word you'd really see written in this world (sign, label, menu, scroll, app screen). `breakdown`: one line on how its kanji build the meaning, e.g. `{既読|きどく}: 既 already + 読 read → 'already read'.` (the app also shows each kanji's dictionary meaning; for a single kanji, say what its parts hint at) |
-| `tip` | `{mark, title, body}`: `mark` is one kanji shown as a stamp; body is 2–4 sentences textbooks don't teach |
+| `tip` | `{mark, title, body}`: `mark` is one kanji shown as a stamp; body is 2–3 sentences textbooks don't teach |
 | `challenge` | `{type, prompt, model_answer, explanation, ...}` (see Challenge types): a short task, ideally replying to a character. `explanation`: 2–3 English sentences (furigana markup allowed) that walk through the model answer: which grammar does what, why that word or form, the register |
 | `vocab` | 8–10 words from today's phrases and main text |
 | `kanji_study` | Exactly 2 kanji to learn |
@@ -140,8 +150,8 @@ When status allows: `"category": "review"`, a new scene with the cast that reuse
 `grammar`: `{id, pattern, level, meaning, form, explanation, src, examples, quiz}`
 - `id`, `pattern`, `level`, `meaning`: from `curriculum/grammar.json` (the `pattern` may get furigana markup).
 - `form`: how to build it, one rule per case, rules separated by ` · ` (space, middle dot, space). Write each rule as `label: rule (example, example)`: the app shows the label as a chip, the rule in bold and each example on its own line under it. E.g. `う-verbs: -a + れる ({頼|たの}む → {頼|たの}まれる, {怒|おこ}る → {怒|おこ}られる) · る-verbs: + られる ({見|み}る → {見|み}られる) · する → される · {来|く}る → {来|こ}られる`. Short labels (`う-verbs`, `い-adj`, `noun`, `{動詞|どうし}ない{形|けい}`); an irregular can be just `する → される` (shown as chip + result). With a single rule the label can go: `{動詞|どうし}た{形|けい} + ばかり ({食|た}べたばかり)`. Examples are short forms, 1–3 per rule, no full sentences (those go in `examples`).
-- `explanation`: 2–3 plain English sentences: when people use it, the nuance, the classic mistake, how it differs from the similar point learners confuse it with.
-- `src`: the lines of today's lesson that use it (`["d2", "p1"]`), at least one.
+- `explanation`: at most 50 words, 2–3 plain English sentences: when people use it, the nuance, and the classic mistake (or how it differs from the point learners confuse it with).
+- `src`: the lines of today's lesson that use it (`["d2", "p1"]`), at least one. Put the clearest first: the app shows the first two.
 - `examples`: 1–3 extra `{jp, en}` sentences in other situations, so the pattern isn't tied to one scene.
 - `quiz`: `{question, en, options, explain}`. `question` is a Japanese sentence with `＿＿` where the answer goes; `en` its translation; `options` 4 forms, **the right one first** (the app shuffles), the wrong ones plausible (wrong conjugation, the similar pattern); `explain` one line on why.
 - Never teach the same grammar point twice (the check refuses it), except in review lessons.
@@ -151,6 +161,8 @@ When status allows: `"category": "review"`, a new scene with the cast that reuse
 Every vocab word, both kanji and the grammar point go into his review deck automatically (words rated commonness 1 stay out); stars mark the ones he wants more often. Cards come back inside their sentence, and as audio-only and fill-the-gap cards, so every word must come from a real line of today's lesson.
 
 Each item: `{jp, reading, en, level, src, surface, note?}`
+- `en`: the meaning, shortest form first (`to get lost; to hesitate`): the app's word list shows the part before the first `;` or `,`.
+- `note`: at most 20 words, only what helps him remember or use it: how its kanji build it (`重ねる pile up + 着る wear`), if it's casual, polite or slang, a common pair (`道に迷う`). Don't repeat the lesson's sentence: the app no longer shows it on the word list.
 - `jp`: dictionary form with furigana, e.g. `{渡|わた}る`. `reading`: the whole word in kana.
 - `level`: `N5`–`N1`. Mostly `N3` (at least half), the rest `N4`. `N5` only if truly key. An `N2` word is fine when the field needs it (history, feelings), at most one.
 - `src`: the line it comes from, `p0`–`p4` (phrases) or `d0`… (main text lines).

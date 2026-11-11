@@ -24,3 +24,11 @@ Live: https://albertroca29.github.io/nihongo-daily/
 - Characters, the world and the story so far: `cast.json`.
 - How lessons are written: `CLAUDE.md`.
 - Edits can be made straight from GitHub; the next morning's run picks them up.
+
+## Page rules (for anyone changing the app)
+
+He reads on a phone, so every lesson step follows these:
+1. **One page ≈ one screen.** A step fits without scrolling (a little over is fine). Anything more goes behind a tap.
+2. **Japanese first, English on tap.** English shows only where he needs it to act (a quiz question, the task); translations and notes open on tap.
+3. **One thing per card.** A card has one job: a word, a rule, a question.
+Whole sentences only: never show half a line of the lesson.

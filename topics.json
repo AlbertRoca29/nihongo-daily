@@ -303,7 +303,7 @@
    "name": "LINE chat",
    "lines": [
     4,
-    8
+    10
    ],
    "me": true,
    "about": "A LINE message thread; casual written Japanese, short messages, an optional time per message."

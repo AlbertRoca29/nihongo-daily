@@ -478,6 +478,43 @@ def check_v2(lid, L, errs):
             errs.append(f"{lid}: challenge sticker needs 3-4 different ids from stickers.json, the right one first")
     if t == "write" and not c.get("hint"):
         errs.append(f"{lid}: a write challenge needs a hint")
+    check_length(lid, L, errs)
+
+
+# Length limits (from V2_FROM on): lessons must stay short and easy to read on a phone.
+LINE_MAX = {"line": 40, "dialogue": 50, "story": 60, "text": 60}
+SCENE_WORDS, NOTE_WORDS, GRAMMAR_WORDS = 30, 20, 50
+FMT_LINE = {"line": "a LINE bubble", "dialogue": "a spoken line", "story": "a story line", "text": "a text part"}
+
+
+def nwords(s):
+    return len(plain(str(s or "")).split())
+
+
+def check_length(lid, L, errs):
+    fmt = L.get("format")
+    cap = LINE_MAX.get(fmt)
+    for i, d in enumerate(L.get("dialogue") or []):
+        if cap and isinstance(d, dict) and not d.get("sticker"):
+            n = len(plain(str(d.get("jp", ""))))
+            if n > cap:
+                errs.append(f"{lid}: dialogue[{i}] is {n} characters; {FMT_LINE[fmt]} has at most {cap}" + (" (split it into two bubbles)" if fmt == "line" else ""))
+    sc = L.get("scene")
+    if not isinstance(sc, str) or not sc.strip():
+        errs.append(f"{lid}: scene missing: one English line (at most {SCENE_WORDS} words) shown on the start page")
+    elif nwords(sc) > SCENE_WORDS:
+        errs.append(f"{lid}: scene is {nwords(sc)} words; at most {SCENE_WORDS}")
+    for i, v in enumerate(L.get("vocab") or []):
+        if isinstance(v, dict) and nwords(v.get("note")) > NOTE_WORDS:
+            errs.append(f"{lid}: vocab[{i}] note is {nwords(v.get('note'))} words; at most {NOTE_WORDS}")
+    g = L.get("grammar") or {}
+    if nwords(g.get("explanation")) > GRAMMAR_WORDS:
+        errs.append(f"{lid}: grammar.explanation is {nwords(g.get('explanation'))} words; at most {GRAMMAR_WORDS}")
+    k = L.get("keep")
+    if k is not None:
+        n = len(L.get("phrases") or [])
+        if not isinstance(k, list) or not 1 <= len(k) <= 2 or not all(isinstance(x, str) and re.fullmatch(r"p\d", x) and int(x[1:]) < n for x in k):
+            errs.append(f"{lid}: keep must be 1-2 phrase refs like [\"p2\"]")
 
 
 def check_mock(lid, L, errs):
