@@ -1,4 +1,4 @@
-# Nihongo Line
+# 一日一歩 (Nihongo Line)
 
 Daily Japanese micro-lessons for life in Japan, as an installable phone web app: one situation a day at N3 level, step by step, with toggleable furigana, audio, a vocab and kanji quiz and a short challenge. Star what you want to learn and it comes back in a quick spaced-repetition warm-up the next day.
 
@@ -11,7 +11,12 @@ Live: https://albertroca29.github.io/nihongo-daily/
 - A recurring cast lives in a small mountain town in Nagano, defined in [`cast.json`](cast.json): Tanaka-san your host, Yuki in Tokyo, Kenta at the guesthouse, Sato-sensei and Mio at the high school, Hana-obāchan, Sōta, Ren, and the samurai Kurogane Hayato in the legends. Its `log` is the story so far, so the story moves on day by day. About one lesson in eight brings a one-off guest.
 - Each lesson teaches one grammar point from the ordered N4 + N3 track in [`curriculum/grammar.json`](curriculum/grammar.json), 8–10 words from its own sentences, and 2 kanji: one from those words, one from the N3 track in [`curriculum/n3-kanji.json`](curriculum/n3-kanji.json). About three times a month it's built around a real recent news story instead.
 - The app opens on a **home screen**: your study streak (a day counts when you finish a lesson or review cards), today's lesson, and tiles for Review (due cards any time, or a practice round), Saved cards, Kanji learned and All lessons. Earlier lessons show their Japanese title, date and who's in them; The gear on the top right opens Settings, with a live preview: theme, font for titles and big kanji, text font, English letters, furigana. The app title is 一日一歩. Fonts load from Google Fonts only when chosen. New features go in as new tiles.
-- Your stars, review schedule and streak are saved in the app on your phone (browser storage), not in the repo.
+- Each lesson: the scene (a LINE chat plays out live), a listening activity, the 5 phrases, grammar, words, kanji, and a challenge (one tap most days, free writing on Tuesdays and Saturdays, always skippable). Once a month, on the first Saturday, a JLPT-style mock exam.
+- Everything a lesson teaches goes into a review deck (☆ = more often): audio-only, reading, fill-the-gap and English→Japanese cards, spaced by how well you know each one (at most 8 new and 40 reviews a day).
+- Audio: every sound is a Gemini 3.8 Flash-Lite voice (颯太: VOICEVOX), including single words for review, slow versions and a radio track per lesson. A ledger in `audio/_ledger.json` caps spending at $3 a month; past that, Google's free Chirp voice.
+- Furigana can be adaptive: it disappears on N5/N4 kanji whose reading you got right 3 times in a row.
+- Works offline: the last 7 lessons and their audio are kept on the phone. Fonts are self-hosted in `fonts/`.
+- Your stars, review schedule and streak are saved in the app on your phone (browser storage), not in the repo. Settings → Your data exports a backup.
 - [`scripts/lessons.py`](scripts/lessons.py) keeps it safe: `status` says what today's run should do, `check` validates every lesson before a push, `bump` moves a lesson to a later day.
 
 ## Changing what you learn

@@ -327,6 +327,15 @@
    ],
    "me": false,
    "about": "A written text to decode: a notice, menu, sign, flyer, school letter, museum panel, post. Each line is one part of it; speaker is the part's label."
+  },
+  {
+   "id": "mock",
+   "lines": [
+    0,
+    0
+   ],
+   "me": false,
+   "about": "Monthly mock exam: questions in 'mock', no main text."
   }
  ],
  "special": [
@@ -339,6 +348,11 @@
    "id": "news",
    "name": "News",
    "notes": "Written on the day from real recent news. Only when status says so."
+  },
+  {
+   "id": "mock",
+   "name": "Monthly mock exam",
+   "about": "First Saturday of each month: a 10-question JLPT-style mock built only from what has been taught."
   }
  ],
  "legacy": [

@@ -38,7 +38,10 @@
    ],
    "aliases": [
     "Tanaka-san"
-   ]
+   ],
+   "color": "#c0392b",
+   "status": "{今年|ことし}のりんごは{甘い|あまい}ぞ",
+   "where": "{鷹ノ原|たかのはら} · {畑|はたけ}"
   },
   {
    "id": "yuki",
@@ -63,7 +66,10 @@
    ],
    "aliases": [
     "Yuki"
-   ]
+   ],
+   "color": "#80c241",
+   "status": "カラオケ{行きたい|いきたい}…",
+   "where": "{東京|とうきょう}"
   },
   {
    "id": "kenta",
@@ -87,7 +93,10 @@
    ],
    "aliases": [
     "Kenta"
-   ]
+   ],
+   "color": "#f39800",
+   "status": "トルティーヤ{対決|たいけつ}、いつにする？",
+   "where": "ゲストハウス{風|かぜ}"
   },
   {
    "id": "sato",
@@ -108,7 +117,10 @@
     "Mio is one of her students.",
     "Calls you アルちゃん (the name everyone in the story uses for him)."
    ],
-   "aliases": []
+   "aliases": [],
+   "color": "#1f3a8a",
+   "status": "",
+   "where": "{鷹ノ原高校|たかのはらこうこう}"
   },
   {
    "id": "hana",
@@ -132,7 +144,10 @@
    ],
    "aliases": [
     "Hana-obāchan"
-   ]
+   ],
+   "color": "#8e4b6e",
+   "status": "おはぎ{作りすぎた|つくりすぎた}",
+   "where": "{田中|たなか}さんの{隣|となり}"
   },
   {
    "id": "ren",
@@ -156,7 +171,10 @@
     "Lives in Nagano city, so dates happen there or he visits Takanohara on weekends.",
     "Has a younger sister {葵|あおい} (22)."
    ],
-   "aliases": []
+   "aliases": [],
+   "color": "#2c4f86",
+   "status": "",
+   "where": "{長野市|ながのし}"
   },
   {
    "id": "sota",
@@ -180,7 +198,10 @@
    ],
    "aliases": [
     "Sōta"
-   ]
+   ],
+   "color": "#2f7d32",
+   "status": "クワガタ{見つけた|みつけた}！",
+   "where": "{長野市|ながのし} · {週末|しゅうまつ}は{畑|はたけ}"
   },
   {
    "id": "mio",
@@ -201,7 +222,10 @@
    "fixed": [
     "Interactions are always in a school or public setting (class, club, school festival, a group event). Teacher-student boundaries are kept: no private one-to-one meetups, no romance topics involving the learner."
    ],
-   "aliases": []
+   "aliases": [],
+   "color": "#c9a227",
+   "status": "{吹奏楽|すいそうがく}がんばる🎺",
+   "where": "{鷹ノ原高校|たかのはらこうこう}"
   },
   {
    "id": "hayato",
@@ -222,7 +246,10 @@
     "Only appears in story lessons: a legend told by Hana-obāchan, a museum panel at the castle ruins, the festival play, a picture book read to Sōta. He never speaks with the learner directly.",
     "Real historical facts mentioned with him must be accurate."
    ],
-   "aliases": []
+   "aliases": [],
+   "color": "#374151",
+   "status": "",
+   "where": "{伝説|でんせつ}"
   }
  ],
  "guests": {
@@ -355,7 +382,10 @@
    "aliases": [
     "Keiko",
     "恵子"
-   ]
+   ],
+   "color": "#e07a3f",
+   "status": "",
+   "where": "{鷹ノ原|たかのはら} · {畑|はたけ}"
   }
  ]
 }

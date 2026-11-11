@@ -2,7 +2,7 @@
 
 You add one short Japanese lesson per day to this app. The learner is studying for JLPT N3 and, in the story, lives for a few months in a small Japanese mountain town (see `cast.json`). His personal profile comes from the task prompt: it is private, never write it into the repo (lessons may use his name). He wants to learn **all of Japanese**, not only survival phrases: practical situations are one day in three, the rest covers every part of life, feelings, culture and ideas. The task prompt may add goals; follow it if it does.
 
-Only touch `lessons/` and `cast.json` (the story log), and `topics.json` when a new angle is truly needed. Never change `index.html`, `sw.js`, the manifest, icons or `curriculum/` unless the user asks.
+Only touch `lessons/` and `cast.json` (the story log), and `topics.json` when a new angle is truly needed. Never change `index.html`, `sw.js`, the manifest, icons, `stickers.json` or `curriculum/` unless the user asks.
 
 Write **only today's lesson**. Never write lessons for future dates: each lesson follows the kanji and grammar tracks, the story log, and avoids words already taught, so it must be written on the day.
 
@@ -17,7 +17,7 @@ Write **only today's lesson**. Never write lessons for future dates: each lesson
 1. `python3 scripts/lessons.py status` and follow its DECISION line. It gives: whether today's lesson exists, news and review state, today's **field**, **function** and **format**, the next **grammar** point, the next N3 kanji, which characters appeared when, whether a **guest** is due, the **story so far**, canon facts, and every kanji and word already taught.
 2. Read `cast.json` (the characters and world) and the last ~5 lessons, so you continue the story and don't repeat phrases.
 3. Write the lesson (rules below) as `lessons/YYYY-MM-DD.json`. Add `{"id", "topic", "category", "function", "format"}` to `lessons/index.json`, keeping it sorted.
-4. Append today's entry to `log` in `cast.json`: `{"date", "cast": [ids], "summary": "one or two sentences of what happened", "new_facts": ["anything you invented that must stay true"]}`. Add `"guest": "Name (role)"` when there was one.
+4. Append today's entry to `log` in `cast.json` (and update a character's `status` if something changed for them): `{"date", "cast": [ids], "summary": "one or two sentences of what happened", "new_facts": ["anything you invented that must stay true"]}`. Add `"guest": "Name (role)"` when there was one.
 5. `python3 scripts/lessons.py check` must print `OK`. Never push while it fails: a broken `index.json` takes down the whole app.
 6. Commit `Lesson YYYY-MM-DD: <topic>` and push to `master`. If the push is rejected, `git pull --rebase origin master` and push again.
 7. Report the topic, field, function, format, grammar point and who was in it.
@@ -43,8 +43,11 @@ Make the combination feel like one real moment, not a checklist: "Yuki tells you
 - **Ren's storyline** follows his `arc` beats in order, one beat every few appearances, no faster. It's warm and real, like a TV drama: feelings, shyness, misunderstandings, being discreet in a small town. Nothing sexual.
 - **Mio** (16): always school or group settings; no romance topics involving the learner.
 - **Guests**: when status says a guest is due, invent a new one-off character (name, age, one clear speech style) who fits the field, and put `"guest": {"name", "name_jp", "role"}` in the lesson. Never reuse a guest's name.
-- Portraits: the app shows a chibi portrait for each cast member, Keiko and You (`icons/cast/<id>.svg`), and in LINE chats their LINE profile picture instead, a selfie in their world (`icons/line/<id>.svg`). Both are drawn by `scripts/portraits.py` (on top of the base drawings in `scripts/chibi.py`). Both are matched by the speaker name, so always use the character's exact `name` as `speaker` (`Tanaka-san`, `Hana-obāchan`, `Keiko`). Guests and staff get their initial.
-- The learner is "You" (`"me": true`). Characters address him by the name in the task prompt, as described in `world.you`.
+- **Who speaks**: every line of a `dialogue`, `line` or `story` has `"who"`: a character id from cast.json (`cast` or `others`, e.g. `"kenta"`, `"keiko"`), `"you"` for the learner, `"guest"` for today's guest, or `"extra"` for staff, a shopkeeper, a passer-by (with `"voice": "f"` or `"m"`). Voice, portrait and LINE icon all come from `who`.
+- **Speaker labels are Japanese**: `speaker` is exactly the character's `name` in cast.json (`田中さん`, `健太`, `ハナおばあちゃん`, `恵子さん`), the guest's `name`, or a Japanese label for extras (`店員さん`, `駅員さん`). Never romaji. The learner's lines: `"speaker": "アルちゃん", "who": "you", "me": true`. The check refuses anything else.
+- Portraits: chibi portraits (`icons/cast/<id>.svg`) and LINE profile pictures (`icons/line/<id>.svg`) exist for the cast, 恵子さん and the learner; guests and extras get their initial.
+- **Status messages**: each character in cast.json has a LINE `status` (a short Japanese line with furigana markup, like a real LINE profile) shown in the app's People page. When something changes for a character in today's lesson, update their `status` (and `where` if they moved). Keep it in their voice.
+- Characters address the learner as described in `world.you` and the task prompt.
 
 ## Formats
 
@@ -52,10 +55,40 @@ All four keep their lines in `dialogue`, so vocab `src` (`d0`, `d1`…) works th
 
 | Format | Lines | Rules |
 |---|---|---|
-| `dialogue` | 4–6 | Spoken conversation. `speaker` is the character's `name` or `You`; `"me": true` on the learner's lines. |
-| `line` | 4–8 | A LINE thread. Short written messages, casual written style (abbreviations, ｗ, emoji words, stamps written as （スタンプ：…）). Optional `time` per line (`"21:04"`). At least one `"me": true`. |
+| `dialogue` | 4–6 | Spoken conversation. `speaker` is the character's Japanese `name` (or `アルちゃん` with `"me": true` and `"who": "you"` on the learner's lines). |
+| `line` | 4–8 | A LINE thread. Short written messages, casual written style (abbreviations, ｗ, emoji words). Optional `time` per line (`"21:04"`). At least one `"me": true`. Stickers and voice messages: see below. |
 | `story` | 4–6 | One or two narrators tell something: a memory, a legend, yesterday's disaster. Each line is 1–2 sentences, plain or です/ます past narration. No `me` needed. |
 | `text` | 4–8 | A written text to decode: notice, menu, flyer, school letter, museum panel, shop sign, social media post, email. `speaker` is the part's label (`Title`, `Rule 1`, `Price`, `Note`). Add `"text_title"` (shown as the header, with furigana markup). No `me` needed. |
+
+### LINE extras: stickers and voice messages
+
+- **Stickers**: a line can be a sticker: `{"who": "kenta", "speaker": "健太", "sticker": "nandeyanen", "jp": "なんでやねん", "en": "Why on earth?!", "time": "21:05"}`. `sticker` is an id from `stickers.json` (status lists them) and `jp` is exactly that sticker's text. Use 0–2 per chat, where a real person would. Never write stickers as text (（スタンプ：…）): the check refuses it. Characters prefer their signature stickers (`who` in stickers.json). A sticker line gets no audio and no vocab.
+- **Voice message**: at most one line per chat can be `"kind": "voice"`: the app shows a voice-message bubble and hides the text until he taps. Use it for a line worth hearing (a character outside, in a hurry, laughing). It's read in the character's voice like any line.
+
+## Listening (every lesson)
+
+`listening`: one short activity after the main text, type given by status (`LISTENING type`), always in the story's world:
+- `voicemail`: someone leaves a 留守電 (1–3 lines). Give `question` (Japanese, furigana markup), `options` (4, right one first, plain Japanese), `explain` (one English line).
+- `announcement`: a school, station, town or shop announcement (`title`, `place`), same question/options/explain.
+- `dictation`: 1–2 short lines (40 characters at most in total) he types out.
+- `ladder`: exactly one line he hears slow, then normal, then reads.
+Fields: `{"type", "intro" (one English line), "who" (main speaker id), "lines": [{"who", "jp", "en"}], ...}`. Lines follow the same furigana and gloss rules and may reuse today's words; they're voiced automatically. An announcement by a stranger uses `"who": "extra"` with `"voice"`.
+
+## Challenge types
+
+`challenge.type` comes from status (`CHALLENGE type`): free writing only on Tuesdays and Saturdays, one-tap types the other days, because most days he won't write. Every type keeps `prompt` (the situation, ideally a character's message to reply to), `model_answer` and `explanation`.
+- `pick`: `options`: 3–4 `{jp, ok, why}` replies, exactly one `ok: true`. The wrong ones are plausible mistakes (wrong register, the similar pattern, wrong tense). `why` is one English line.
+- `order`: `pieces`: 3–6 chunks of the model answer in the right order (the app shuffles); joined they must equal the model answer, punctuation aside.
+- `fix`: `parts`: 3–6 chunks of a reply "he" wrote, exactly one `{"jp", "wrong": true, "why"}` with a typical learner mistake; the model answer is the fixed reply.
+- `sticker`: `stickers`: 3–4 ids from stickers.json, the right one first; the prompt makes clear which feeling to send.
+- `write`: as before, with a `hint`.
+
+## Monthly mock (first Saturday of the month)
+
+When status says so, the lesson is a mock exam instead: `"format": "mock"`, `"category": "mock"`, `function` any id, `topic` (`Mock exam: December`), `title_jp` (`12月の模試`), `context` (one line), a `listening` section (its lines are what the 聴解 questions play), and `mock.questions`: 8–12 questions using **only** words, kanji and grammar already taught (status lists them), in JLPT N3 style, each with `section`:
+- `漢字読み`, `表記`, `文脈規定`, `言い換え`, `読解` (with `text`), `聴解` (with `"listen": "l0"`): `{section, prompt, options (4, right first), explain}`.
+- `文法 ★`: `{section, prompt?, order: {before, pieces (4, in the right order), after, star (0–3, which slot has the ★)}, explain}`.
+Add the log entry as usual (the summary can be one line). No vocab, kanji study, grammar or challenge on mock days.
 
 ## News lessons
 
@@ -84,18 +117,19 @@ When status allows: `"category": "review"`, a new scene with the cast that reuse
 | `category` | The field id (or `news` / `review`), same as in index.json |
 | `function` | A function id from `topics.json` |
 | `format` | `dialogue`, `line`, `story` or `text` |
-| `cast` | List of character ids from `cast.json` |
+| `cast` | List of character ids from `cast.json` (`cast` or `others`) |
 | `guest` | Optional `{name, name_jp, role}` |
 | `title_jp` | Short Japanese title |
 | `context` | 1–2 English sentences setting today's scene in the story |
 | `phrases` | Exactly 5 × `{jp, en, register, note?}`; register is `polite`, `casual`, `neutral`, `dialect`, `slang` or `archaic`. The mix follows the scene: casual with friends, polite with strangers and at work |
 | `dialogue_setting` | One English line: where/how this happens |
-| `dialogue` | The main text in today's format (see Formats) |
+| `dialogue` | The main text in today's format (see Formats). Each line: `{who, speaker, jp, en}` (+ `me`, `time`, `register`, `note`, `sticker`, `kind`) |
+| `listening` | Today's listening activity (see Listening) |
 | `text_title` | Only for `text` format |
 | `grammar` | Today's grammar point (see below) |
 | `kanji` | `{kanji, reading, romaji, meaning, where, breakdown, related?}`: a word you'd really see written in this world (sign, label, menu, scroll, app screen). `breakdown`: one line on how its kanji build the meaning, e.g. `{既読|きどく}: 既 already + 読 read → 'already read'.` (the app also shows each kanji's dictionary meaning; for a single kanji, say what its parts hint at) |
 | `tip` | `{mark, title, body}`: `mark` is one kanji shown as a stamp; body is 2–4 sentences textbooks don't teach |
-| `challenge` | `{prompt, hint, model_answer, explanation}`: a short task to answer in Japanese, ideally replying to a character. `explanation`: 2–3 English sentences (furigana markup allowed) that walk through the model answer: which grammar does what, why that word or form, the register. Shown with the model answer |
+| `challenge` | `{type, prompt, model_answer, explanation, ...}` (see Challenge types): a short task, ideally replying to a character. `explanation`: 2–3 English sentences (furigana markup allowed) that walk through the model answer: which grammar does what, why that word or form, the register |
 | `vocab` | 8–10 words from today's phrases and main text |
 | `kanji_study` | Exactly 2 kanji to learn |
 | `extras` | Optional bonus sections `{title, title_jp, intro, items: [{jp, en, note?}]}`; 2–3 of them |
@@ -114,7 +148,7 @@ When status allows: `"category": "review"`, a new scene with the cast that reuse
 
 ## Vocab
 
-The learner stars the words he wants; starred words come back in the app's warm-up, inside their sentence. So every word must come from a real line of today's lesson.
+Every vocab word, both kanji and the grammar point go into his review deck automatically (words rated commonness 1 stay out); stars mark the ones he wants more often. Cards come back inside their sentence, and as audio-only and fill-the-gap cards, so every word must come from a real line of today's lesson.
 
 Each item: `{jp, reading, en, level, src, surface, note?}`
 - `jp`: dictionary form with furigana, e.g. `{渡|わた}る`. `reading`: the whole word in kana.
@@ -137,11 +171,10 @@ Each: `{kanji, track, on, kun, meaning, words, decoys}`
 
 ## Audio (voices)
 
-A GitHub automation reads every line with Google voices after each push (`scripts/tts.py`, casting in `voices.json`). Don't run it yourself; just give it what it needs:
-- Cast members, `You` and `text`-format parts get their voice automatically. A `text` written by a character (Sōta's school essay, Yuki's blog post, a note from Hana) is read in their voice: add `"reader": "<cast id>"` to the lesson (or `"reader": "Keiko"` for a side character in `others`). Without it, the narrator reads it.
-- Any other speaker (a guest, `Staff`, a shopkeeper) needs a gender: `"voice": "f"` or `"m"` on the guest object, or on each of their lines. Without it they get the narrator's voice.
-- A side character who will come back (like Keiko) gets a fixed voice: add them to `others` in `voices.json` with a voice from the `pool` (remove it from the pool).
-- An entry in `voices.json` is either a plain voice name (Chirp 3 HD) or a directed voice `{"voice", "model", "prompt"}`, where `prompt` describes the person (age, mood, accent). Don't change the casting unless the user asks.
+A GitHub automation voices everything after each push (`scripts/tts.py`, Gemini 3.8 Flash-Lite TTS, casting in `voices.json`): every line, phrase, example and extra, plus each vocab word, the model answer, slow versions and a radio track. Don't run it yourself; just give it what it needs:
+- Voices go by `who`. A `text` written by a character (颯太's essay, 由紀's blog post) is read in their voice: add `"reader": "<id>"` to the lesson. Without it, the narrator reads it.
+- The guest object needs `"voice": "f"` or `"m"` and `"age"` (a number): the app picks a Gemini library voice of that gender and age. Extras need `"voice"` on their lines (and may give `"age"`).
+- A side character who will come back (like 恵子さん) goes in cast.json `others` and gets a fixed voice in `voices.json` `others` (keyed by id). Don't change the casting unless the user asks.
 - Names of people and places are read from their furigana automatically. If a line has another word the engine might misread (a rare reading, 今日 meaning こんにち), add `"tts"` to that line: the whole line as it should be read, with that word in kana.
 
 ## Furigana markup

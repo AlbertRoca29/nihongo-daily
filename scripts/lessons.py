@@ -45,6 +45,12 @@ KANA = re.compile(r"^[\u3040-\u30ff・ー（）()\s]+$")
 HIRA = re.compile(r"^[\u3040-\u309fー（）()・\s]+$")
 KATA = re.compile(r"^[\u30a0-\u30ff・\s]+$")
 SRC = re.compile(r"^([pd])(\d+)$")
+V2_FROM = "2026-11-12"   # lessons from this date on use the v2 rules below (who, listening, challenge types, stickers)
+CHALLENGE_TYPES = ["pick", "order", "fix", "sticker"]   # rotate on most days; "write" on Tuesdays and Saturdays
+WRITE_DAYS = {1, 5}                                     # Monday=0: Tuesday, Saturday
+LISTENING_TYPES = ["voicemail", "announcement", "dictation", "ladder"]
+STICKERS = ROOT / "stickers.json"
+LATIN = re.compile(r"[A-Za-z]")
 
 
 def load_topics():
@@ -277,6 +283,15 @@ def check_lesson(lid, L, topic_ids, errs):
             if not isinstance(obj, dict) or not isinstance(obj.get(k), str) or not obj[k].strip():
                 errs.append(f"{lid}: {where}.{k} missing or empty")
 
+    if L.get("format") == "mock":
+        need(L, ["topic", "title_jp", "context", "category"], "lesson")
+        if L.get("category") != "mock":
+            errs.append(f"{lid}: a mock lesson needs category 'mock'")
+        check_mock(lid, L, errs)
+        return
+    if lid >= V2_FROM:
+        check_v2(lid, L, errs)
+
     need(L, ["topic", "title_jp", "context", "dialogue_setting", "category"], "lesson")
     if L.get("category") not in topic_ids:
         errs.append(f"{lid}: category '{L.get('category')}' is not in topics.json")
@@ -357,6 +372,138 @@ def check_lesson(lid, L, topic_ids, errs):
         glossed = [m.group(1) for m in RUBY.finditer(str(line.get("jp", ""))) if m.group(3)]
         if not any(b and (b in sf or sf in b) for b in glossed):
             errs.append(f"{lid}: vocab '{sf}' is not glossed in {v.get('src')} (add {{word|reading|meaning}} there)")
+
+
+def people():
+    C = load_cast()
+    return {c["id"]: c for c in C.get("cast", []) + C.get("others", [])}
+
+
+def sticker_ids():
+    try:
+        return {x["id"]: x for x in load_json(STICKERS)["stickers"]}
+    except Exception:
+        return {}
+
+
+def check_v2(lid, L, errs):
+    """Rules for lessons written from V2_FROM on: who speaks, stickers, voice messages, listening, challenge types."""
+    P, S, fmt = people(), sticker_ids(), L.get("format")
+    g = L.get("guest") or {}
+    voices = 0
+    for i, d in enumerate(L.get("dialogue") or []):
+        if not isinstance(d, dict):
+            continue
+        where = f"dialogue[{i}]"
+        if fmt == "text":
+            continue
+        who, sp = d.get("who"), str(d.get("speaker", ""))
+        if who == "you" or d.get("me"):
+            if who != "you" or not d.get("me"):
+                errs.append(f"{lid}: {where}: the learner's lines need both \"me\": true and \"who\": \"you\"")
+            if sp != "アルちゃん":
+                errs.append(f"{lid}: {where}: the learner's speaker label is アルちゃん")
+        elif who in P:
+            if sp != P[who]["name"]:
+                errs.append(f"{lid}: {where}: speaker must be {P[who]['name']} (cast.json name for '{who}')")
+        elif who == "guest":
+            if not g or sp != g.get("name"):
+                errs.append(f"{lid}: {where}: a guest line needs the lesson's guest and speaker = guest.name")
+        elif who == "extra":
+            if d.get("voice") not in ("f", "m"):
+                errs.append(f"{lid}: {where}: an 'extra' speaker (staff, shopkeeper) needs \"voice\": \"f\" or \"m\"")
+        else:
+            errs.append(f"{lid}: {where}: \"who\" must be a cast/others id from cast.json, \"you\", \"guest\" or \"extra\"")
+        if LATIN.search(sp):
+            errs.append(f"{lid}: {where}: speaker '{sp}' has romaji; use the Japanese name")
+        if "スタンプ" in str(d.get("jp", "")):
+            errs.append(f"{lid}: {where}: stickers are no longer written as text; use \"sticker\": \"<id>\" from stickers.json")
+        if d.get("sticker") is not None:
+            st = S.get(d["sticker"])
+            if not st:
+                errs.append(f"{lid}: {where}: sticker '{d['sticker']}' is not in stickers.json")
+            elif plain(str(d.get("jp", ""))) != st["text"]:
+                errs.append(f"{lid}: {where}: a sticker line's jp must be the sticker's text: {st['text']}")
+        if d.get("kind") == "voice":
+            voices += 1
+            if fmt != "line":
+                errs.append(f"{lid}: {where}: voice messages only exist in LINE chats")
+    if voices > 1:
+        errs.append(f"{lid}: at most one voice message per chat")
+    X = L.get("listening")
+    if not isinstance(X, dict) or X.get("type") not in LISTENING_TYPES:
+        errs.append(f"{lid}: listening section missing (type one of {', '.join(LISTENING_TYPES)}; status says which)")
+    else:
+        lines = X.get("lines")
+        if not isinstance(lines, list) or not 1 <= len(lines) <= 3 or not all(isinstance(x, dict) and x.get("jp") and x.get("en") and x.get("who") for x in lines):
+            errs.append(f"{lid}: listening.lines needs 1-3 {{who, jp, en}} lines")
+            lines = []
+        for x in lines:
+            if x.get("who") not in set(P) | {"you", "guest", "extra"}:
+                errs.append(f"{lid}: listening line who '{x.get('who')}' is not a cast id, you, guest or extra")
+            if x.get("who") == "extra" and x.get("voice") not in ("f", "m"):
+                errs.append(f"{lid}: listening 'extra' line needs \"voice\": \"f\" or \"m\"")
+        if X["type"] in ("voicemail", "announcement"):
+            opts = X.get("options")
+            if not X.get("question") or not isinstance(opts, list) or len(opts) != 4 or len(set(opts)) != 4 or not X.get("explain"):
+                errs.append(f"{lid}: listening {X['type']} needs question, 4 different options (right one first) and explain")
+        if X["type"] == "dictation" and sum(len(plain(x.get("jp", ""))) for x in lines) > 40:
+            errs.append(f"{lid}: dictation must be short (40 characters at most)")
+        if X["type"] == "ladder" and len(lines) != 1:
+            errs.append(f"{lid}: a ladder listening has exactly one line")
+    c = L.get("challenge") or {}
+    t = c.get("type")
+    if t not in CHALLENGE_TYPES + ["write"]:
+        errs.append(f"{lid}: challenge.type must be one of pick, order, fix, sticker, write (status says which)")
+    elif t == "pick":
+        o = c.get("options")
+        if not isinstance(o, list) or not 3 <= len(o) <= 4 or sum(1 for x in o if isinstance(x, dict) and x.get("ok") is True) != 1 or not all(isinstance(x, dict) and x.get("jp") and x.get("why") for x in o):
+            errs.append(f"{lid}: challenge pick needs 3-4 options {{jp, ok, why}}, exactly one with ok: true")
+    elif t == "order":
+        pc = c.get("pieces")
+        strip = lambda s: re.sub(r"[。！？!?、\s]", "", plain(s))
+        if not isinstance(pc, list) or not 3 <= len(pc) <= 6 or len(set(map(plain, pc))) != len(pc):
+            errs.append(f"{lid}: challenge order needs 3-6 different pieces, in the right order")
+        elif strip("".join(pc)) != strip(c.get("model_answer", "")):
+            errs.append(f"{lid}: challenge order pieces joined must equal the model answer (punctuation aside)")
+    elif t == "fix":
+        pt = c.get("parts")
+        if not isinstance(pt, list) or not 3 <= len(pt) <= 6 or sum(1 for x in pt if isinstance(x, dict) and x.get("wrong")) != 1:
+            errs.append(f"{lid}: challenge fix needs 3-6 parts {{jp}}, exactly one with wrong: true and a why")
+        elif not next(x for x in pt if x.get("wrong")).get("why"):
+            errs.append(f"{lid}: challenge fix: the wrong part needs a why")
+    elif t == "sticker":
+        st = c.get("stickers")
+        if not isinstance(st, list) or not 3 <= len(st) <= 4 or len(set(st)) != len(st) or not all(x in S for x in st):
+            errs.append(f"{lid}: challenge sticker needs 3-4 different ids from stickers.json, the right one first")
+    if t == "write" and not c.get("hint"):
+        errs.append(f"{lid}: a write challenge needs a hint")
+
+
+def check_mock(lid, L, errs):
+    M = L.get("mock") or {}
+    Q = M.get("questions")
+    if not isinstance(Q, list) or not 8 <= len(Q) <= 12:
+        errs.append(f"{lid}: mock.questions needs 8-12 questions")
+        return
+    lines = (L.get("listening") or {}).get("lines") or []
+    for i, q in enumerate(Q):
+        w = f"mock.questions[{i}]"
+        if not isinstance(q, dict) or not q.get("section"):
+            errs.append(f"{lid}: {w} needs a section (漢字読み, 文脈規定, 言い換え, 文法 ★, 読解, 聴解)")
+            continue
+        if q.get("order"):
+            o = q["order"]
+            if not isinstance(o.get("pieces"), list) or len(o["pieces"]) != 4 or o.get("star") not in (0, 1, 2, 3):
+                errs.append(f"{lid}: {w}.order needs 4 pieces in the right order and star 0-3")
+            continue
+        opts = q.get("options")
+        if not q.get("prompt") or not isinstance(opts, list) or len(opts) != 4 or len(set(opts)) != 4 or not q.get("explain"):
+            errs.append(f"{lid}: {w} needs prompt, 4 different options (right one first) and explain")
+        if q.get("listen"):
+            m = re.match(r"^l(\d+)$", str(q["listen"]))
+            if not m or int(m.group(1)) >= len(lines):
+                errs.append(f"{lid}: {w}.listen must point to a listening line (l0, l1…)")
 
 
 def cmd_check(args):
@@ -480,7 +627,7 @@ def cmd_status(args):
     # --- field: one in three regular lessons is practical (legacy topics all count as practical)
     fields = T["fields"]
     practical_ids = {f["id"] for f in fields if f["practical"]} | {x["id"] for x in T.get("legacy", [])}
-    regular = [e for e in before if e.get("category") not in ("news", "review")]
+    regular = [e for e in before if e.get("category") not in ("news", "review", "mock")]
     recent = regular[-(PRACTICAL_EVERY - 1):]
     practical_due = len(recent) == PRACTICAL_EVERY - 1 and not any(e.get("category") in practical_ids for e in recent)
     last_field = {}
@@ -501,6 +648,16 @@ def cmd_status(args):
     last_fmt = new_before[-1]["format"] if new_before else None
     if fmt == last_fmt:
         fmt = FORMAT_CYCLE[(len(new_before) + 1) % len(FORMAT_CYCLE)]
+
+    # --- v2: challenge type, listening type, monthly mock
+    v2_before = [e for e in before if e["id"] >= V2_FROM and e.get("category") != "mock"]
+    wd = dt.date.fromisoformat(today).weekday()
+    ch_type = "write" if wd in WRITE_DAYS else CHALLENGE_TYPES[len(v2_before) % len(CHALLENGE_TYPES)]
+    li_type = LISTENING_TYPES[len(v2_before) % len(LISTENING_TYPES)]
+    d0 = dt.date.fromisoformat(today)
+    first_sat = d0.weekday() == 5 and d0.day <= 7
+    mock_month = any(e.get("category") == "mock" and e["id"][:7] == today[:7] for e in idx)
+    mock_due = first_sat and not mock_month and not today_entry
 
     # --- what's been taught
     track = load_track()
@@ -541,6 +698,9 @@ def cmd_status(args):
     nxt = [c for c in track if c not in taught_k]
     print(f"N3 kanji track: {len(track) - len(nxt)}/{len(track)} taught. Next n3 kanji: {nxt[0] if nxt else 'track finished'}"
           + (f" (then {''.join(nxt[1:6])})" if len(nxt) > 1 else ""))
+    print(f"CHALLENGE type: {ch_type}" + (" (Tuesday/Saturday: free writing)" if ch_type == "write" else " (one tap; free writing is only on Tuesdays and Saturdays)"))
+    print(f"LISTENING type: {li_type}")
+    print("STICKERS (ids for \"sticker\" lines and sticker challenges): " + ", ".join(f"{k} {v['text']}" for k, v in sticker_ids().items()))
     print()
     print("CAST last appearances: " + ", ".join(f"{c['id']} ({appear.get(c['id'], 'not met yet')})" for c in cast_data.get("cast", [])))
     print(f"GUEST: {'DUE: bring a new one-off guest today' if guest_due else 'not today'} ({since_guest} lessons since the last guest)."
@@ -556,8 +716,10 @@ def cmd_status(args):
     print("Kanji already taught (never teach again): " + ("".join(taught_k) or "none"))
     print(f"Vocab already taught ({len(taught_v)}, never list again): " + ("、".join(taught_v) or "none"))
     print()
-    regular_pick = f"field '{group[0]['id']}', function '{fns[0]['id']}', format '{fmt}'"
-    if news_state == "DUE":
+    regular_pick = f"field '{group[0]['id']}', function '{fns[0]['id']}', format '{fmt}', challenge '{ch_type}', listening '{li_type}'"
+    if mock_due:
+        print(f"DECISION: first Saturday of the month: write the MONTHLY MOCK for {today} (format 'mock', category 'mock'; see CLAUDE.md). No regular lesson or news today.")
+    elif news_state == "DUE":
         if today_entry:
             print(f"DECISION: write a NEWS lesson for {today}. First run: python3 scripts/lessons.py bump {today}")
         else:

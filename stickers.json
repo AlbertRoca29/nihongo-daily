@@ -1,0 +1,358 @@
+{
+ "_about": "LINE stickers for chats. Images: Microsoft Fluent Emoji (MIT licence, icons/stickers/LICENSE-fluentui-emoji.txt). A chat line uses one with \"sticker\": \"<id>\"; its jp is the sticker's text. 'who' marks a character's signature sticker. To add one, add an entry here (and its image).",
+ "stickers": [
+  {
+   "id": "ryokai",
+   "img": "icons/stickers/saluting_face.svg",
+   "text": "了解！",
+   "reading": "りょうかい",
+   "en": "Got it!",
+   "register": "casual"
+  },
+  {
+   "id": "ryo",
+   "img": "icons/stickers/thumbs_up.svg",
+   "text": "りょ",
+   "reading": "りょ",
+   "en": "k (short for 了解)",
+   "register": "slang"
+  },
+  {
+   "id": "shochi",
+   "img": "icons/stickers/person_bowing.svg",
+   "text": "承知しました",
+   "reading": "しょうちしました",
+   "en": "Understood (polite, at work)",
+   "register": "polite"
+  },
+  {
+   "id": "arigato",
+   "img": "icons/stickers/smiling_face_with_hearts.svg",
+   "text": "ありがとう〜",
+   "reading": "ありがとう",
+   "en": "Thank youuu",
+   "register": "casual"
+  },
+  {
+   "id": "arigatou-gozaimasu",
+   "img": "icons/stickers/folded_hands.svg",
+   "text": "ありがとうございます",
+   "reading": "ありがとうございます",
+   "en": "Thank you very much",
+   "register": "polite"
+  },
+  {
+   "id": "gomen",
+   "img": "icons/stickers/face_holding_back_tears.svg",
+   "text": "ごめん！",
+   "reading": "ごめん",
+   "en": "Sorry!",
+   "register": "casual"
+  },
+  {
+   "id": "sumimasen",
+   "img": "icons/stickers/person_bowing.svg",
+   "text": "すみません…",
+   "reading": "すみません",
+   "en": "Sorry / excuse me (polite)",
+   "register": "polite"
+  },
+  {
+   "id": "pien",
+   "img": "icons/stickers/pleading_face.svg",
+   "text": "ぴえん",
+   "reading": "ぴえん",
+   "en": "boo-hoo (cute, half-joking sad)",
+   "register": "slang"
+  },
+  {
+   "id": "kusa",
+   "img": "icons/stickers/face_with_tears_of_joy.svg",
+   "text": "草",
+   "reading": "くさ",
+   "en": "lol (ｗｗｗ looks like grass)",
+   "register": "slang"
+  },
+  {
+   "id": "maji",
+   "img": "icons/stickers/astonished_face.svg",
+   "text": "え、マジ？",
+   "reading": "え、まじ",
+   "en": "Wait, seriously?",
+   "register": "slang"
+  },
+  {
+   "id": "oyasumi",
+   "img": "icons/stickers/sleeping_face.svg",
+   "text": "おやすみ",
+   "reading": "おやすみ",
+   "en": "Good night",
+   "register": "casual"
+  },
+  {
+   "id": "tanoshimi",
+   "img": "icons/stickers/partying_face.svg",
+   "text": "楽しみ！",
+   "reading": "たのしみ",
+   "en": "Can't wait!",
+   "register": "casual"
+  },
+  {
+   "id": "toutoi",
+   "img": "icons/stickers/star-struck.svg",
+   "text": "尊い…",
+   "reading": "とうとい",
+   "en": "Too precious… (otaku)",
+   "register": "slang",
+   "who": "yuki"
+  },
+  {
+   "id": "samui",
+   "img": "icons/stickers/cold_face.svg",
+   "text": "寒すぎ",
+   "reading": "さむすぎ",
+   "en": "Way too cold",
+   "register": "casual"
+  },
+  {
+   "id": "aseru",
+   "img": "icons/stickers/grinning_face_with_sweat.svg",
+   "text": "焦った〜",
+   "reading": "あせった",
+   "en": "Phew, I panicked",
+   "register": "casual"
+  },
+  {
+   "id": "tokeru",
+   "img": "icons/stickers/melting_face.svg",
+   "text": "溶ける…",
+   "reading": "とける",
+   "en": "I'm melting (tired / embarrassed)",
+   "register": "casual"
+  },
+  {
+   "id": "otsukare",
+   "img": "icons/stickers/hot_beverage.svg",
+   "text": "おつかれ〜",
+   "reading": "おつかれ",
+   "en": "Good work / rest up",
+   "register": "casual"
+  },
+  {
+   "id": "otsukaresama",
+   "img": "icons/stickers/person_bowing.svg",
+   "text": "お疲れ様です",
+   "reading": "おつかれさまです",
+   "en": "Thank you for your work (polite)",
+   "register": "polite",
+   "who": "sato"
+  },
+  {
+   "id": "donmai",
+   "img": "icons/stickers/hugging_face.svg",
+   "text": "ドンマイ",
+   "reading": "どんまい",
+   "en": "Never mind (from 'don't mind')",
+   "register": "casual"
+  },
+  {
+   "id": "fight",
+   "img": "icons/stickers/fire.svg",
+   "text": "ファイト！",
+   "reading": "ふぁいと",
+   "en": "You can do it!",
+   "register": "casual"
+  },
+  {
+   "id": "sorena",
+   "img": "icons/stickers/smirking_face.svg",
+   "text": "それな",
+   "reading": "それな",
+   "en": "So true / exactly",
+   "register": "slang",
+   "who": "mio"
+  },
+  {
+   "id": "nandeyanen",
+   "img": "icons/stickers/exploding_head.svg",
+   "text": "なんでやねん",
+   "reading": "なんでやねん",
+   "en": "Why on earth?! (Kansai comeback)",
+   "register": "dialect",
+   "who": "kenta"
+  },
+  {
+   "id": "ookini",
+   "img": "icons/stickers/beaming_face_with_smiling_eyes.svg",
+   "text": "おおきに",
+   "reading": "おおきに",
+   "en": "Thanks (Kansai)",
+   "register": "dialect",
+   "who": "kenta"
+  },
+  {
+   "id": "ou",
+   "img": "icons/stickers/neutral_face.svg",
+   "text": "おう",
+   "reading": "おう",
+   "en": "Yeah. (gruff OK)",
+   "register": "casual",
+   "who": "tanaka"
+  },
+  {
+   "id": "tabena",
+   "img": "icons/stickers/red_apple.svg",
+   "text": "食べな",
+   "reading": "たべな",
+   "en": "Eat up (gruff)",
+   "register": "casual",
+   "who": "tanaka"
+  },
+  {
+   "id": "arigataya",
+   "img": "icons/stickers/smiling_face_with_halo.svg",
+   "text": "ありがたや",
+   "reading": "ありがたや",
+   "en": "How grateful (old-fashioned)",
+   "register": "neutral",
+   "who": "hana"
+  },
+  {
+   "id": "sugee",
+   "img": "icons/stickers/party_popper.svg",
+   "text": "すげー！",
+   "reading": "すげー",
+   "en": "Awesome! (boyish)",
+   "register": "slang",
+   "who": "sota"
+  },
+  {
+   "id": "un-un",
+   "img": "icons/stickers/relieved_face.svg",
+   "text": "うんうん",
+   "reading": "うんうん",
+   "en": "Mm-hm, I see",
+   "register": "casual"
+  },
+  {
+   "id": "uun",
+   "img": "icons/stickers/thinking_face.svg",
+   "text": "うーん…",
+   "reading": "うーん",
+   "en": "Hmm…",
+   "register": "casual"
+  },
+  {
+   "id": "yatta",
+   "img": "icons/stickers/clapping_hands.svg",
+   "text": "やった！",
+   "reading": "やった",
+   "en": "Yay! I did it!",
+   "register": "casual"
+  },
+  {
+   "id": "omedeto",
+   "img": "icons/stickers/party_popper.svg",
+   "text": "おめでとう！",
+   "reading": "おめでとう",
+   "en": "Congratulations!",
+   "register": "casual"
+  },
+  {
+   "id": "hazukashii",
+   "img": "icons/stickers/flushed_face.svg",
+   "text": "恥ずかしい…",
+   "reading": "はずかしい",
+   "en": "So embarrassing…",
+   "register": "casual"
+  },
+  {
+   "id": "kowai",
+   "img": "icons/stickers/face_screaming_in_fear.svg",
+   "text": "怖い…",
+   "reading": "こわい",
+   "en": "Scary…",
+   "register": "casual"
+  },
+  {
+   "id": "furueru",
+   "img": "icons/stickers/weary_cat.svg",
+   "text": "ふるえる…",
+   "reading": "ふるえる",
+   "en": "*shivering*",
+   "register": "casual"
+  },
+  {
+   "id": "hai",
+   "img": "icons/stickers/waving_hand.svg",
+   "text": "はーい",
+   "reading": "はーい",
+   "en": "Okaay! / Coming!",
+   "register": "casual"
+  },
+  {
+   "id": "yoroshiku",
+   "img": "icons/stickers/winking_face.svg",
+   "text": "よろしく！",
+   "reading": "よろしく",
+   "en": "Count on you / nice to meet you",
+   "register": "casual"
+  },
+  {
+   "id": "ii-ne",
+   "img": "icons/stickers/thumbs_up.svg",
+   "text": "いいね！",
+   "reading": "いいね",
+   "en": "Nice!",
+   "register": "casual"
+  },
+  {
+   "id": "daisuki",
+   "img": "icons/stickers/red_heart.svg",
+   "text": "大好き",
+   "reading": "だいすき",
+   "en": "Love it / love you",
+   "register": "casual"
+  },
+  {
+   "id": "gaan",
+   "img": "icons/stickers/disappointed_face.svg",
+   "text": "ガーン",
+   "reading": "がーん",
+   "en": "*shock* (bad news)",
+   "register": "slang"
+  },
+  {
+   "id": "nemui",
+   "img": "icons/stickers/yawning_face.svg",
+   "text": "眠い…",
+   "reading": "ねむい",
+   "en": "So sleepy…",
+   "register": "casual"
+  },
+  {
+   "id": "hara-heta",
+   "img": "icons/stickers/rice_ball.svg",
+   "text": "お腹すいた",
+   "reading": "おなかすいた",
+   "en": "I'm hungry",
+   "register": "casual"
+  },
+  {
+   "id": "kouyou",
+   "img": "icons/stickers/maple_leaf.svg",
+   "text": "紅葉きれい",
+   "reading": "こうようきれい",
+   "en": "The leaves are beautiful",
+   "register": "casual"
+  },
+  {
+   "id": "neko-ok",
+   "img": "icons/stickers/grinning_cat.svg",
+   "text": "オッケー",
+   "reading": "おっけー",
+   "en": "OK!",
+   "register": "casual"
+  }
+ ]
+}

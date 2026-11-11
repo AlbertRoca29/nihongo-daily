@@ -1,0 +1,1 @@
+Fonts: Zen Kaku Gothic New, Kaisei Tokumin, Zen Maru Gothic, Inter Tight. All SIL Open Font License 1.1 (https://openfontlicense.org), from github.com/google/fonts, subset to kana and ~3,200 kanji with pyftsubset.
