@@ -196,7 +196,7 @@ textarea:focus{border-color:var(--accent);outline:none}
 
 /* nav */
 .nav{display:grid;grid-template-columns:1fr 2fr;gap:10px;padding-block:8px 12px}
-.nav .btn{width:100%}
+.nav .btn{width:100%} .nav.solo{grid-template-columns:1fr} .nav [hidden]{display:none}
 
 /* drawer */
 .drawer{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:flex-end;z-index:20}
@@ -741,7 +741,8 @@ rt{font-size:max(.5em,9.5px)}
 .pwho b{display:block;font-family:var(--jp);font-size:15px;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .pwho small{display:block;font-size:12px;font-weight:600;color:var(--muted);line-height:1.2}
 .furi3{color:var(--ink);min-height:36px}
-.furi3[data-m="on"]{color:var(--ink)}
+.furi3[aria-pressed="true"]{color:var(--ink)}
+.furi3[aria-pressed="false"]{text-decoration:line-through;color:var(--muted)}
 
 /* chats: on the paper, friend in white, me in a light red tint */
 .chat{background:transparent;padding:0}
@@ -937,13 +938,15 @@ rt{font-size:max(.5em,9.5px)}
 
   /* ---------- furigana mode: on / adaptive / off ---------- */
   let furiMode = store.get("furiMode", store.get("furi", true) ? "on" : "off");
-  const FURI_LABEL = {on:"ふりがな", adaptive:"ふりがな · 自動", off:"ふりがな off"};
+  // header switch is just on/off (filled = on, struck through = off); "adaptive" is chosen in Settings and counts as on
+  let furiLast = store.get("furiLast", furiMode === "off" ? "on" : furiMode);
   const applyFuri = () => {
     document.body.classList.toggle("furi-off", furiMode === "off");
     document.body.classList.toggle("furi-ad", furiMode === "adaptive");
-    $("furiBtn").dataset.m = furiMode; $("furiBtn").textContent = FURI_LABEL[furiMode];
+    $("furiBtn").dataset.m = furiMode; $("furiBtn").textContent = "ふりがな"; $("furiBtn").setAttribute("aria-pressed", String(furiMode !== "off"));
+    if (furiMode !== "off"){ furiLast = furiMode; store.set("furiLast", furiMode); }
   };
-  $("furiBtn").onclick = () => { furiMode = {on:"adaptive", adaptive:"off", off:"on"}[furiMode]; store.set("furiMode", furiMode); applyFuri(); toast(furiMode === "adaptive" ? "Furigana hides on easy kanji you've got right 3 times in a row" : FURI_LABEL[furiMode]); };
+  $("furiBtn").onclick = () => { furiMode = furiMode === "off" ? furiLast : "off"; store.set("furiMode", furiMode); applyFuri(); };
   document.addEventListener("click", e => { const r = e.target.closest("ruby"); if (r && furiMode !== "on") r.classList.toggle("peek"); });
   applyFuri();
 
@@ -1168,9 +1171,14 @@ rt{font-size:max(.5em,9.5px)}
 
   /* ---------- multiple-choice runner ---------- */
   function runQuiz(box, qs, done){
-    let qi = 0, right = 0;
+    let qi = 0, right = 0, answered = false;
+    // inside a lesson the bottom Next moves on once a question is answered (no second Next on the page)
+    const inLesson = !!box.closest("#stage");
+    const Q = {box, next:() => { if (!answered) return false; qi++; show(); return true; }};
+    if (inLesson) activeQuiz = Q;
     const show = () => {
-      if (qi >= qs.length){ done(right, qs.length); return; }
+      answered = false;
+      if (qi >= qs.length){ if (activeQuiz === Q) activeQuiz = null; done(right, qs.length); return; }
       const q = qs[qi], opts = shuffle(q.options.map((o, i) => ({o, ok:i === 0})));
       box.innerHTML = `<div class="card" style="display:flex;flex-direction:column;gap:10px">
           ${q.ask || qs.length > 1 ? `<div class="row"><span class="label">${esc(q.ask)}</span>${qs.length > 1 ? `<span class="count">${qi+1}/${qs.length}</span>` : ""}</div>` : ""}
@@ -1180,8 +1188,10 @@ rt{font-size:max(.5em,9.5px)}
         const pick = opts[+b.dataset.o];
         box.querySelectorAll("[data-o]").forEach((bb, i) => { bb.disabled = true; if (opts[i].ok) bb.classList.add("right"); });
         if (pick.ok){ right++; if (q.onRight) q.onRight(); } else { b.classList.add("wrong"); if (q.onWrong) q.onWrong(); }
-        box.querySelector(".qafter").innerHTML = `${q.note ? `<p class="note" style="margin:4px 0 0">${q.note}</p>` : ""}${!pick.ok && q.wrongNote ? `<p class="note" style="margin:4px 0 0">${q.wrongNote}</p>` : ""}${pick.ok && q.rightNote ? `<p class="note" style="margin:4px 0 0">${q.rightNote}</p>` : ""}<button class="btn primary" style="width:100%;margin-top:8px">${qi === qs.length - 1 ? "Finish" : "Next question"}</button>`;
-        box.querySelector(".qafter .btn").onclick = () => { qi++; show(); };
+        box.querySelector(".qafter").innerHTML = `${q.note ? `<p class="note" style="margin:4px 0 0">${q.note}</p>` : ""}${!pick.ok && q.wrongNote ? `<p class="note" style="margin:4px 0 0">${q.wrongNote}</p>` : ""}${pick.ok && q.rightNote ? `<p class="note" style="margin:4px 0 0">${q.rightNote}</p>` : ""}${inLesson ? "" : `<button class="btn primary" style="width:100%;margin-top:8px">${qi === qs.length - 1 ? "Finish" : "Next question"}</button>`}`;
+        answered = true;
+        if (inLesson){ const st = $("stage"); const qa = box.querySelector(".qafter"); if (st && qa) qa.scrollIntoView({block:"nearest", behavior:"smooth"}); }
+        else box.querySelector(".qafter .btn").onclick = () => { qi++; show(); };
       });
     };
     show();
@@ -1224,7 +1234,6 @@ rt{font-size:max(.5em,9.5px)}
     if (L.kanji || L.kanji_study?.length) s.push({type:"kanji", tab:"覚える", jp:"漢字"});
     if (L.challenge) s.push({type:"challenge", tab:"使う", jp:"チャレンジ"});
     s.push({type:"done", tab:"終点", jp:"お疲れ様"});
-    if (L.tip || (L.extras || []).length) s.push({type:"more", tab:"おまけ", jp:"ヒントとおまけ"});
     return s;
   }
   function castCard(L){
@@ -1237,7 +1246,7 @@ rt{font-size:max(.5em,9.5px)}
       </div>`).join("")}</div>`;
   }
 
-  /* ---- main text: tap = ▶ 🐢 ☆ under the line, double-tap = English ---- */
+  /* ---- main text: tap a line = its English + ▶ 🐢 ☆ ---- */
   const iconRow = (L, i, line) => `<div class="icons">${line.sticker ? "" : `<button data-play="d${i}|${esc(plain(line.jp))}" aria-label="Play">▶</button><button data-play="d${i}|${esc(plain(line.jp))}" data-slow="1" aria-label="Slow">🐢</button>`}${starBtn("l:" + L.id + ":d" + i, lineDef(L, line, "d" + i)).replace('class="star', 'class="star sm')}</div>`;
   const wave = () => `<span class="wave">${[8,14,20,12,18,22,10,16,20,9,14,18,12,7,15].map(h => `<i style="height:${h}px"></i>`).join("")}</span>`;
   function lineInner(L, d, i){
@@ -1261,7 +1270,7 @@ rt{font-size:max(.5em,9.5px)}
   };
   function renderMain(L){
     const f = fmtOf(L), setting = L.dialogue_setting ? `<p class="note" style="margin:0">${ruby(L.dialogue_setting)}</p>` : "";
-    const hint = `<p class="note" style="margin:0">Tap a line for ▶ 🐢 ☆. Double-tap for English.</p>`;
+    const hint = "";
     if (f === "line"){
       const others = [...new Set(L.dialogue.filter(d => !d.me).map(d => d.who))];
       const head = others.length === 1 ? `${avatar(others[0], L.dialogue.find(d => !d.me).speaker, false, true, 26)}<span>${esc(L.dialogue.find(d => !d.me).speaker)}</span>` : esc([...new Set(L.dialogue.filter(d => !d.me).map(d => d.speaker))].join(", "));
@@ -1296,7 +1305,6 @@ rt{font-size:max(.5em,9.5px)}
         <button class="btn ghost" id="playAll">${ICON_SAY} Play whole dialogue</button>${hint}
       </div>`;
   }
-  let lastTap = {i:-1, t:0};
   function wireMain(L){
     const stage = $("stage");
     stage.onclick = e => {
@@ -1304,57 +1312,44 @@ rt{font-size:max(.5em,9.5px)}
       const vt = e.target.closest("[data-vtx]");
       if (vt){ const b = stage.querySelector(`.bubble[data-show="${vt.dataset.vtx}"]`); b.hidden = false; vt.remove(); return; }
       const bub = e.target.closest(".bubble[data-show]"); if (!bub) return;
-      const i = +bub.dataset.show, now = Date.now();
-      if (lastTap.i === i && now - lastTap.t < 330){ stage.querySelector(`[data-en="${i}"]`)?.classList.toggle("hid"); lastTap = {i:-1, t:0}; return; }
-      lastTap = {i, t:now};
+      // one tap: English + ▶ 🐢 ☆ under the line; tap again to close
+      const i = +bub.dataset.show;
       const line = bub.closest("[data-li]"), slot = line.querySelector(".icons-slot"), open = bub.classList.contains("sel");
       stage.querySelectorAll(".bubble.sel").forEach(x => x.classList.remove("sel"));
       stage.querySelectorAll(".icons-slot").forEach(x => { x.innerHTML = ""; });
-      if (!open){ bub.classList.add("sel"); slot.innerHTML = iconRow(L, i, L.dialogue[i]); }
+      stage.querySelectorAll("[data-en]").forEach(x => x.classList.add("hid"));
+      if (!open){ bub.classList.add("sel"); slot.innerHTML = iconRow(L, i, L.dialogue[i]); stage.querySelector(`[data-en="${i}"]`)?.classList.remove("hid"); }
     };
     const pa = $("playAll"); if (pa) pa.onclick = () => playChain(L.id, L.dialogue.filter(d => !d.sticker).map(d => [`d${L.dialogue.indexOf(d)}`, plain(d.jp)]));
     if (fmtOf(L) === "line") initChat(L);
   }
-  /* LINE chat: step by step (tap for each new message, silent unless you ask), auto, or listen to all */
-  const CHAT_MODES = {step:"Step by step", auto:"Auto", listen:"Listen to all"};
-  const CHAT_HINT = {step:"Tap Next for each new message. No sound unless you tap ▶ on a bubble (or turn 🔊 on).", auto:"Messages arrive on their own, silently. Pause any time.", listen:"Messages arrive on their own with every voice, yours too."};
+  /* LINE chat: the first message is already there; the bottom Next brings the next one, ↑ sends yours. Silent unless 🔊 is on. */
   let CH = null;
-  const chatMode = () => CHAT_MODES[store.get("chatMode", "step")] ? store.get("chatMode", "step") : "step";
   const chatSound = () => !!store.get("chatSound", false);
   function initChat(L){
     CH = {L, i:0, token:0, busy:false};
     const done = store.get("chat:" + L.id, false);
-    if (done) chatShowAll(L, false); else chatIdle(L, false);
+    if (done) chatShowAll(L, false);
+    else if (L.dialogue[0].me) chatStepCtl(L);   // he speaks first: his line waits in the composer
+    else chatStep(L, true);
     $("chatCtl").onclick = e => {
       const b = e.target.closest("button"); if (!b || !CH || CH.L !== L) return;
-      if (b.dataset.cm){ store.set("chatMode", b.dataset.cm); chatIdle(L, CH.i >= L.dialogue.length); return; }
-      if (b.hasAttribute("data-cgo")){ chatStart(L, chatMode()); return; }
-      if (b.hasAttribute("data-call")){ chatShowAll(L, true); return; }
       if (b.hasAttribute("data-cnext")){ chatStep(L); return; }
-      if (b.hasAttribute("data-cpause")){ CH.token++; stopAll(); CH.busy = false; chatStepCtl(L); return; }
-      if (b.hasAttribute("data-cauto")){ chatAuto(L, b.dataset.cauto); return; }
       if (b.hasAttribute("data-csnd")){ store.set("chatSound", !chatSound()); chatStepCtl(L); return; }
       if (b.hasAttribute("data-call-read")){ playChain(L.id, L.dialogue.map((d, i) => d.sticker ? null : [`d${i}`, plain(d.jp)]).filter(Boolean)); return; }
     };
+    sub = {next:() => { if (!CH || CH.L !== L || CH.i >= L.dialogue.length) return false; chatStep(L); return true; }};
   }
   const chatCtl = (html, live) => { const c = $("chatCtl"); if (c){ c.innerHTML = html; c.classList.toggle("live", !!live); } };
-  const modePick = () => `<div class="seg" role="tablist" aria-label="How the chat plays">${Object.entries(CHAT_MODES).map(([k, v]) => `<button role="tab" data-cm="${k}" aria-selected="${chatMode() === k}">${v}</button>`).join("")}</div>`;
-  function chatIdle(L, done){
-    const m = chatMode();
-    chatCtl(`${modePick()}<p class="note" style="margin:0;text-align:center">${CHAT_HINT[m]}</p>
-      <div class="row" style="gap:8px;justify-content:center"><button class="btn primary" data-cgo>${done ? "↺ Replay" : "▶ Start the chat"}</button>${done ? `<button class="btn ghost" data-call-read>${ICON_SAY} Read aloud</button>` : `<button class="btn ghost" data-call>Show all</button>`}</div>`);
+  function chatIdle(L){
+    chatCtl(`<div class="row" style="justify-content:center"><button class="btn ghost" data-call-read>${ICON_SAY} Listen to all</button></div>`);
   }
   function chatShowAll(L, save){
     if (CH) CH.token++; stopAll();
     if (save) store.set("chat:" + L.id, true);
     const body = $("chatBody"); if (!body) return;
     body.innerHTML = L.dialogue.map((d, i) => chatLine(L, d, i, {read:true})).join("");
-    CH.i = L.dialogue.length; chatIdle(L, true);
-  }
-  function chatStart(L, mode){
-    CH.token++; stopAll(); CH.i = 0; CH.busy = false;
-    const body = $("chatBody"); if (body) body.innerHTML = "";
-    if (mode === "step") chatStepCtl(L); else chatAuto(L, mode);
+    CH.i = L.dialogue.length; chatIdle(L);
   }
   const chatScroll = () => { const st = $("stage"); if (st) st.scrollTop = st.scrollHeight; };
   const chatWait = ms => new Promise(r => setTimeout(r, ms));
@@ -1371,71 +1366,51 @@ rt{font-size:max(.5em,9.5px)}
     CH.i = i + 1;
     return true;
   }
-  const chatFinished = L => { store.set("chat:" + L.id, true); chatIdle(L, true); };
+  const chatFinished = L => { store.set("chat:" + L.id, true); chatIdle(L); };
   const chatAudio = (L, i) => { const d = L.dialogue[i]; return d.sticker ? null : [`d${i}`, plain(d.jp)]; };
+  // under the chat: your next message waiting in the composer (↑ sends it), and the sound switch
   function chatStepCtl(L){
     if (CH.i >= L.dialogue.length){ chatFinished(L); return; }
     const d = L.dialogue[CH.i], snd = chatSound();
     const mine = d.me ? `<div class="composer reply"><div class="jp-mid" style="flex:1;min-width:0;padding:6px 4px">${d.sticker && STK[d.sticker] ? `<img src="${esc(STK[d.sticker].img)}" alt="" style="height:44px">` : ruby(d.jp)}</div><button class="send" data-cnext aria-label="Send">↑</button></div>` : "";
-    chatCtl(`${mine}<div class="row" style="gap:8px;justify-content:center;flex-wrap:nowrap">
-        ${d.me ? "" : `<button class="btn primary" data-cnext style="flex:1">Next message ›</button>`}
-        <button class="btn ghost" data-csnd aria-pressed="${snd}" aria-label="${snd ? "Sound on" : "Sound off"}" title="Play each new message">${snd ? "🔊" : "🔇"}</button>
-        <button class="btn ghost" data-cauto="auto" aria-label="Play the rest automatically">Auto ▶</button>
-      </div><p class="note" style="margin:0;text-align:center">${CH.i}/${L.dialogue.length}${d.me ? " · your turn: tap ↑ to send" : ""}</p>`, true);
+    chatCtl(`${mine}<div class="row" style="justify-content:flex-end"><button class="btn ghost" data-csnd aria-pressed="${snd}" aria-label="${snd ? "Sound on" : "Sound off"}" style="min-width:52px;padding:0 14px">${snd ? "🔊" : "🔇"}</button></div>`, true);
   }
-  async function chatStep(L){
+  async function chatStep(L, first){
     if (CH.busy || CH.i >= L.dialogue.length) return;
     CH.busy = true; const tok = ++CH.token, i = CH.i;
     stopAll();
-    const ok = await chatReveal(L, i, tok, 550);
+    const ok = await chatReveal(L, i, tok, first ? 0 : 550);
     CH.busy = false;
     if (!ok) return;
     chatStepCtl(L);
     if (chatSound()){ const k = chatAudio(L, i); if (k) play(L.id, k); }
-  }
-  async function chatAuto(L, mode){
-    CH.token++; stopAll(); const tok = CH.token; CH.busy = true;
-    chatCtl(`<div class="row" style="gap:8px;justify-content:center"><button class="btn ghost" data-cpause>⏸ Pause</button><button class="btn ghost" data-call>Show all</button></div><p class="note" style="margin:0;text-align:center">${mode === "listen" ? "Listening to everything" : "Auto"} · pause to go step by step</p>`, true);
-    const listen = mode === "listen";
-    while (CH.i < L.dialogue.length){
-      if (tok !== CH.token || !$("chatBody")) return;
-      const i = CH.i, d = L.dialogue[i], len = plain(d.jp || "").length;
-      const typing = d.me ? 0 : listen ? 800 : Math.min(2200, 600 + 30 * len);
-      if (d.me) await chatWait(listen ? 450 : 700);
-      if (tok !== CH.token) return;
-      if (!await chatReveal(L, i, tok, typing)) return;
-      const k = chatAudio(L, i);
-      if (listen && k){ const run = (stopAll(), playRun); await playOne(L.id, k, false, run); if (run !== playRun){ if (tok === CH.token){ CH.token++; CH.busy = false; chatStepCtl(L); } return; } await chatWait(350); }
-      else await chatWait(Math.min(4200, 1200 + 70 * len));
-    }
-    if (tok === CH.token){ CH.busy = false; chatFinished(L); }
   }
 
   /* ---- phrases on one screen ---- */
   let phrIdx = 0;
   function phraseCard(L, i){
     const p = L.phrases[i], n = L.phrases.length, reg = (p.register || "neutral").toLowerCase(), beta = store.get("set:speak", false);
-    return `<div class="dots">${L.phrases.map((_, j) => `<i class="${j === i ? "on" : ""}"></i>`).join("")}</div>
+    return `<div class="dots">${L.phrases.map((_, j) => `<i class="${j === i ? "on" : ""}" data-pd="${j}"></i>`).join("")}</div>
       <div class="card phr1">
-        <div class="row"><span class="chip ${esc(reg)}">${esc(reg)}</span><span class="count">${i + 1}/${n}</span></div>
+        <div class="row"><span class="chip ${esc(reg)}">${esc(reg)}</span></div>
         <div class="jp-big">${ruby(p.jp)}</div>
         <div class="icons"><button data-play="p${i}|${esc(plain(p.jp))}" aria-label="Play">▶</button><button data-play="p${i}|${esc(plain(p.jp))}" data-slow="1" aria-label="Slow">🐢</button>${starBtn("l:" + L.id + ":p" + i, lineDef(L, p, "p" + i))}${beta ? `<button data-mic="${i}" aria-label="Say it">🎤</button>` : ""}</div>
         <div data-micout="${i}"></div>
         <button class="reveal" data-rev="${i}">What does it mean?</button>
         ${p.note ? `<p class="note" data-pnote="${i}" hidden style="margin:0">${ruby(p.note)}</p>` : ""}
-      </div>
-      <div class="phr-nav"><button class="btn ghost" data-pn="-1" ${i === 0 ? "disabled" : ""} aria-label="Previous phrase">‹</button><button class="btn ghost" data-pn="1">${i < n - 1 ? "Next phrase ›" : "From the top ↺"}</button></div>`;
+      </div>`;
   }
-  function renderPhrases(L){ phrIdx = Math.min(phrIdx, L.phrases.length - 1); return `<div class="step" id="phrBox">${phraseCard(L, phrIdx)}</div>`; }
+  function renderPhrases(L){ phrIdx = fromEnd ? L.phrases.length - 1 : 0; return `<div class="step" id="phrBox">${phraseCard(L, phrIdx)}</div>`; }
   function wirePhrases(L){
     const box = $("phrBox"); if (!box) return;
     box.onclick = e => {
       const r = e.target.closest("[data-rev]");
       if (r){ const i = +r.dataset.rev; r.classList.add("open"); r.textContent = L.phrases[i].en; const nt = box.querySelector(`[data-pnote="${i}"]`); if (nt) nt.hidden = false; return; }
       const m = e.target.closest("[data-mic]"); if (m){ listenMic(L.phrases[+m.dataset.mic].jp, box.querySelector(`[data-micout="${m.dataset.mic}"]`), m); return; }
-      const nb = e.target.closest("[data-pn]");
-      if (nb){ const n = L.phrases.length; phrIdx = (phrIdx + +nb.dataset.pn + n) % n; stopAll(); box.innerHTML = phraseCard(L, phrIdx); }
+      const dot = e.target.closest("[data-pd]"); if (dot) show(+dot.dataset.pd);
     };
+    const show = i => { phrIdx = i; stopAll(); box.innerHTML = phraseCard(L, i); $("stage").scrollTop = 0; };
+    sub = {next:() => phrIdx < L.phrases.length - 1 ? (show(phrIdx + 1), true) : false, back:() => phrIdx > 0 ? (show(phrIdx - 1), true) : false};
   }
   // D5 beta: speech recognition, compared with the phrase
   const charDiff = (a, b) => {
@@ -1487,7 +1462,7 @@ rt{font-size:max(.5em,9.5px)}
   };
   const tapLine = (key, jp, en, hl) => `<div class="tapen" data-tapen><div class="bubble-row"><div class="gline">${ruby(jp, hl ? {hl} : null)}</div>${key !== null ? `<button class="play" data-play="${key ? key + "|" : ""}${esc(plain(jp))}" aria-label="Play">${ICON_SAY}</button>` : ""}</div><div class="en" hidden>${esc(en)}</div></div>`;
   function grammarPanel(L, i){
-    const G = L.grammar, next = i < 3 ? `<button class="btn ghost" data-gt="${i + 1}" style="width:100%">${G_TABS[i + 1]} ›</button>` : "";
+    const G = L.grammar, next = "";
     if (i === 0) return `<div class="card gsec" style="gap:10px"><div class="row"><span class="lvl ${esc(G.level)}">${esc(G.level)}</span>${starBtn("g:" + G.id, grammarDef(L, G))}</div>
         <div class="gpat">${ruby(G.pattern)}</div><div style="font-size:17px;font-weight:600">${esc(G.meaning)}</div>
         ${G.explanation ? `<p style="margin:0;font-size:15px;line-height:1.6">${ruby(G.explanation)}</p>` : ""}</div>${next}`;
@@ -1495,16 +1470,16 @@ rt{font-size:max(.5em,9.5px)}
     if (i === 2){
       const hl = gMarks(G), all = (G.src || []).map(r => [r, lineOf(L, r)]).filter(x => x[1]), inLesson = all.slice(0, 2);
       const more = [...all.slice(2).map(([r, x]) => [r, x]), ...(G.examples || []).map(x => ["", x])];
-      return `<div class="card gsec" style="gap:12px"><div class="row" style="justify-content:flex-start;gap:8px"><mark class="gm">${ruby(G.pattern)}</mark><span class="note">is highlighted. Tap a line for English.</span></div>
+      return `<div class="card gsec" style="gap:12px"><div class="row" style="justify-content:flex-start;gap:8px"><mark class="gm">${ruby(G.pattern)}</mark></div>
           ${inLesson.map(([r, x]) => tapLine(r, x.jp, x.en, hl)).join("")}</div>
         ${more.length ? `<button class="fold" data-gfold>▸ ${more.length} more example${more.length > 1 ? "s" : ""}</button><div class="card gsec" id="gex" hidden style="gap:12px">${more.map(([r, x]) => tapLine(r, x.jp, x.en, hl)).join("")}</div>` : ""}${next}`;
     }
     return `<div id="gquiz"></div>`;
   }
   function renderGrammar(L){
-    gTab = 0;
-    return `<div class="step"><div class="seg" role="tablist">${G_TABS.map((x, i) => `<button role="tab" data-gt="${i}" aria-selected="${i === 0}">${x}</button>`).join("")}</div>
-      <div class="gpanel" id="gpanel">${grammarPanel(L, 0)}</div></div>`;
+    gTab = fromEnd ? 3 : 0;
+    return `<div class="step"><div class="seg" role="tablist">${G_TABS.map((x, i) => `<button role="tab" data-gt="${i}" aria-selected="${i === gTab}">${x}</button>`).join("")}</div>
+      <div class="gpanel" id="gpanel">${grammarPanel(L, gTab)}</div></div>`;
   }
   function showGrammarTab(L, i){
     gTab = i; stopAll();
@@ -1513,6 +1488,8 @@ rt{font-size:max(.5em,9.5px)}
     if (i === 3){ if (L.grammar.quiz) runGrammarQuiz(); else $("gquiz").innerHTML = `<p class="note">No quiz for this one.</p>`; }
   }
   function wireGrammar(L){
+    if (gTab === 3) showGrammarTab(L, 3);
+    sub = {next:() => gTab < 3 ? (showGrammarTab(L, gTab + 1), true) : false, back:() => gTab > 0 ? (showGrammarTab(L, gTab - 1), true) : false};
     $("stage").onclick = e => {
       const tb = e.target.closest("[data-gt]"); if (tb){ showGrammarTab(L, +tb.dataset.gt); return; }
       if (e.target.closest("[data-gfold]")){ const ex = $("gex"), b = e.target.closest("[data-gfold]"); ex.hidden = !ex.hidden; b.textContent = (ex.hidden ? "▸ " : "▾ ") + b.textContent.slice(2); return; }
@@ -1543,11 +1520,17 @@ rt{font-size:max(.5em,9.5px)}
           ${shortEn(v.en) !== v.en ? `<div style="font-size:15px">${esc(v.en)}</div>` : ""}
           ${v.note ? `<div class="note">${ruby(v.note)}</div>` : ""}
         </div>`; }).join("")}</div>
-      <p class="note" style="margin:0">Tap a word for more. ☆ = show me this one more.</p>
-      <div id="vquiz"><button class="btn ghost" id="vgo" style="width:100%">Quick check · ${Math.min(4, L.vocab.length)} questions</button></div></div>`;
+</div>`;
   }
   function wireWords(L){
-    $("vgo").onclick = runVocabQuiz;
+    // page 2 of this step: the quick check, opened by the bottom Next
+    const step = $("stage").querySelector(".step"), listHTML = step.innerHTML;
+    let page = 0;
+    const toQuiz = () => { page = 1; stopAll(); step.innerHTML = `<div id="vquiz" style="display:flex;flex-direction:column;gap:10px"></div>`; $("stage").scrollTop = 0; runVocabQuiz(); };
+    const toList = () => { page = 0; activeQuiz = null; step.innerHTML = listHTML; wireList(); };
+    sub = {next:() => page === 0 && L.vocab.length >= 2 ? (toQuiz(), true) : false, back:() => page === 1 ? (toList(), true) : false};
+    if (fromEnd && L.vocab.length >= 2) toQuiz(); else wireList();
+    function wireList(){
     const list = document.querySelector(".wlist");
     list.onclick = e => {
       if (e.target.closest("[data-star],[data-play],.gl")) return;
@@ -1557,6 +1540,7 @@ rt{font-size:max(.5em,9.5px)}
       box.hidden = !open;
       if (open) play(L.id, ["w:" + plain(L.vocab[+r.dataset.wi].jp)]);
     };
+    }
   }
   const highlight = (sent, surface) => { const p = esc(plain(sent)), w = esc(surface || ""), i = w ? p.indexOf(w) : -1; return i < 0 ? p : p.slice(0, i) + "<mark>" + w + "</mark>" + p.slice(i + w.length); };
   function runVocabQuiz(){
@@ -1570,8 +1554,8 @@ rt{font-size:max(.5em,9.5px)}
   function renderKanji(L){
     const k = L.kanji;
     return `<div class="step">
-      ${k ? `<div class="sign"><div class="sign-top"><div class="sign-k">${esc(k.kanji)}</div><div class="sign-r" id="kr">tap below to reveal</div></div></div>
-      <button class="reveal" id="krev">What does it mean? Tap to reveal</button>
+      ${k ? `<div class="sign"><div class="sign-top"><div class="sign-k">${esc(k.kanji)}</div><div class="sign-r" id="kr">？</div></div></div>
+      <button class="reveal" id="krev">What does it mean?</button>
       <div class="card" id="kwhere" hidden style="display:flex;flex-direction:column;gap:8px"><div class="label">Where you'll see it</div><p style="margin:0">${ruby(k.where)}</p>${k.related ? `<p class="note" style="margin:0">${ruby(k.related)}</p>` : ""}
         <div class="kparts"></div>${k.breakdown ? `<p style="margin:0">${ruby(k.breakdown)}</p>` : ""}</div>` : ""}
       ${(L.kanji_study || []).map(x => `<div class="card" style="display:flex;flex-direction:column;gap:10px">
@@ -1580,7 +1564,7 @@ rt{font-size:max(.5em,9.5px)}
         <div class="kread">${x.on ? `<b>On</b><span style="font-family:var(--jp)">${esc(x.on)}</span>` : ""}${x.kun ? `<b>Kun</b><span style="font-family:var(--jp)">${esc(x.kun)}</span>` : ""}</div>
         <div style="display:flex;flex-direction:column;gap:6px">${(x.words || []).map(w => `<div class="row" style="justify-content:flex-start;gap:10px;flex-wrap:nowrap"><button class="play" data-play="w:${esc(plain(w.jp))}" aria-label="Play" style="margin:0">${ICON_SAY}</button><span class="jp-mid" style="line-height:1.8">${ruby(w.jp)}</span><span class="note">${esc(w.en)}</span></div>`).join("")}</div>
       </div>`).join("")}
-      ${(L.kanji_study || []).length ? `<div id="kq"><button class="btn ghost" id="kgo" style="width:100%">Kanji quiz</button></div>` : ""}</div>`;
+</div>`;
   }
   function runKanjiQuiz(){
     const L = lesson, ks = L.kanji_study, qs = [];
@@ -1598,7 +1582,7 @@ rt{font-size:max(.5em,9.5px)}
     runQuiz($("kq"), qs, (r, n) => {
       markKanji(ks.filter(k => passed[k.kanji]), "quiz");
       $("kq").innerHTML = `<div class="card" style="display:flex;flex-direction:column;gap:8px;align-items:flex-start"><span class="hanko">漢</span><h3 style="margin:0;font-size:20px">${r}/${n} right</h3>
-        <p style="margin:0">${r === n ? "Both kanji are now 読めた." : "Missed kanji are starred for review."}</p><button class="btn ghost" id="kgo">Try the quiz again</button></div>`;
+        <p style="margin:0">${r === n ? "Both kanji are now 読めた." : "Missed kanji are starred for review."}</p><button class="btn ghost" id="kgo">↺ Again</button></div>`;
       $("kgo").onclick = runKanjiQuiz;
     });
   }
@@ -1668,14 +1652,14 @@ rt{font-size:max(.5em,9.5px)}
     if (t === "fix") body = `<div class="line me" style="align-items:flex-end"><div class="bubble" style="background:var(--me);color:var(--me-ink)"><div class="jp-mid">${(c.parts || []).map((p, i) => `<span class="fixbit" data-fx="${i}">${ruby(p.jp)}</span>`).join("")}</div></div></div>`;
     if (t === "sticker") body = `<div class="sgrid">${shuffle((c.stickers || []).map((id, i) => ({id, i}))).map(x => STK[x.id] ? `<button data-sk="${x.i}"><img src="${esc(STK[x.id].img)}" alt=""><b>${esc(STK[x.id].text)}</b></button>` : "").join("")}</div>`;
     if (t === "write") body = `${c.hint ? `<button class="reveal" id="hint" style="font-size:14px">Need a hint?</button>` : ""}<div class="composer"><textarea id="answer" lang="ja" aria-label="Your answer" placeholder="${fmtOf(L) === "line" ? "返信…" : "ここに日本語で…"}"></textarea><button class="send" id="send" aria-label="Send">↑</button></div>`;
-    return `<div class="step">${challengeHead(L)}${body}<div id="chOut" style="display:flex;flex-direction:column;gap:10px"></div><button class="skip" id="skip">今日はパス · skip</button></div>`;
+    return `<div class="step">${challengeHead(L)}${body}<div id="chOut" style="display:flex;flex-direction:column;gap:10px"></div></div>`;
   }
   function wireChallenge(L){
     const c = L.challenge, t = c.type || "write", out = $("chOut");
-    const finish = (ok, extra) => { store.set("chal:" + L.id, ok ? "ok" : "done"); $("skip").hidden = true;
+    const finish = (ok, extra) => { store.set("chal:" + L.id, ok ? "ok" : "done");
       out.innerHTML = `${ok != null ? `<div class="card" style="border-left:4px solid ${ok ? "var(--good)" : "var(--stamp)"}"><b style="color:${ok ? "var(--good)" : "var(--stamp)"}">${ok ? "正解！" : "おしい！"}</b> ${extra || ""}</div>` : ""}${modelBox(c)}
         <button class="btn ghost" id="share">Ask Claude to check my Japanese</button>`; wireShare(L); };
-    $("skip").onclick = () => { store.set("chal:" + L.id, "skip"); go(1); };
+    sub = {next:() => { if (!store.get("chal:" + L.id, null)) store.set("chal:" + L.id, "skip"); return false; }};   // Next without answering = skip
     if (t === "pick") document.querySelectorAll("[data-pk]").forEach(b => b.onclick = () => {
       const o = c.options[+b.dataset.pk]; document.querySelectorAll("[data-pk]").forEach(x => { x.disabled = true; if (c.options[+x.dataset.pk].ok) x.classList.add("right"); });
       if (!o.ok) b.classList.add("wrong"); finish(!!o.ok, o.why ? ruby(o.why) : ""); });
@@ -1770,6 +1754,10 @@ rt{font-size:max(.5em,9.5px)}
     if (one) $("pwho").innerHTML = `${one.face}<span style="min-width:0"><b>${ruby(one.name)}</b>${one.role ? `<small>${esc(one.role)}</small>` : ""}</span>`;
     $("pfill").style.width = (steps.length > 1 ? 100 * idx / (steps.length - 1) : 0) + "%";
   }
+  // tips and extras: opened from the finish screen (おまけ), outside the lesson's step count
+  const moreHTML = L => `<div class="step">${L.tip ? `<div class="card tip" style="display:flex;flex-direction:column;gap:12px"><span class="hanko">${esc(L.tip.mark || "技")}</span><h3>${ruby(L.tip.title)}</h3><p>${ruby(L.tip.body)}</p></div>` : ""}
+        ${(L.extras || []).map(x => `<div class="label" style="font-family:var(--jp)">${ruby(x.title_jp || "")} · ${esc(x.title || "")}</div>${x.intro ? `<p class="note" style="margin:0">${ruby(x.intro)}</p>` : ""}
+          <div class="card" style="display:flex;flex-direction:column;gap:14px">${(x.items || []).map(it => `<div style="display:flex;flex-direction:column;gap:2px"><div class="bubble-row"><div class="jp-mid">${ruby(it.jp)}</div><button class="play" data-play="${esc(plain(it.jp))}" aria-label="Play">${ICON_SAY}</button></div><div style="font-size:15px">${ruby(it.en)}</div>${it.note ? `<div class="note">${ruby(it.note)}</div>` : ""}</div>`).join("")}</div>`).join("")}</div>`;
   function renderStep(){
     const st = steps[idx], L = lesson, el = $("stage");
     let h = "";
@@ -1792,17 +1780,12 @@ rt{font-size:max(.5em,9.5px)}
     if (st.type === "kanji") h = renderKanji(L);
     if (st.type === "challenge") h = renderChallenge(L);
     if (st.type === "mock") h = renderMock(L);
-    if (st.type === "more"){
-      h = `<div class="step">${L.tip ? `<div class="card tip" style="display:flex;flex-direction:column;gap:12px"><span class="hanko">${esc(L.tip.mark || "技")}</span><h3>${ruby(L.tip.title)}</h3><p>${ruby(L.tip.body)}</p></div>` : ""}
-        ${(L.extras || []).map(x => `<div class="label" style="font-family:var(--jp)">${ruby(x.title_jp || "")} · ${esc(x.title || "")}</div>${x.intro ? `<p class="note" style="margin:0">${ruby(x.intro)}</p>` : ""}
-          <div class="card" style="display:flex;flex-direction:column;gap:14px">${(x.items || []).map(it => `<div style="display:flex;flex-direction:column;gap:2px"><div class="bubble-row"><div class="jp-mid">${ruby(it.jp)}</div><button class="play" data-play="${esc(plain(it.jp))}" aria-label="Play">${ICON_SAY}</button></div><div style="font-size:15px">${ruby(it.en)}</div>${it.note ? `<div class="note">${ruby(it.note)}</div>` : ""}</div>`).join("")}</div>`).join("")}</div>`;
-    }
     if (st.type === "done"){
       markDone(L.id);
       const added = addLessonToDeck(L);
       if (L.kanji_study) markKanji(L.kanji_study, "seen");
       const keep = (Array.isArray(L.keep) && L.keep.length ? L.keep : ["p0"]).map(r => [r, lineOf(L, r)]).filter(x => x[1]).slice(0, 2);
-      const radio = audioMaps[L.id] && audioMaps[L.id]._radio, more = steps[idx + 1];
+      const radio = audioMaps[L.id] && audioMaps[L.id]._radio, more = L.tip || (L.extras || []).length;
       h = `<div class="step">
         <div class="card done-c"><span class="hanko">済</span>
           <h3 style="margin:0;font-size:22px">${ruby("お{疲|つか}れ{様|さま}でした！")}</h3>
@@ -1813,9 +1796,9 @@ rt{font-size:max(.5em,9.5px)}
         ${radio || more ? `<div class="btn-row">${radio ? `<button class="btn ghost" data-radio="${esc(L.id)}">🎧 Radio</button>` : ""}${more ? `<button class="btn ghost" id="moreBtn">おまけ</button>` : ""}</div>` : ""}
       </div>`;
     }
-    el.innerHTML = h; el.scrollTop = 0; el.onclick = null;
-    wireStep(st); renderTop();
-    $("back").disabled = idx === 0;
+    el.innerHTML = h; el.scrollTop = 0; el.onclick = null; sub = null; activeQuiz = null;
+    wireStep(st); renderTop(); fromEnd = false;
+    $("back").hidden = idx === 0; $("nav").classList.toggle("solo", idx === 0);
     $("next").textContent = st.type === "done" || idx === steps.length - 1 ? "Home" : idx === 0 ? "Start" : "Next";
     $("nav").hidden = false;
     store.set("pos:" + lesson.id, idx);
@@ -1835,15 +1818,28 @@ rt{font-size:max(.5em,9.5px)}
         play(L.id, [k.reading]);
         kdLoad.then(() => { const box = document.querySelector("#kwhere .kparts"); if (box) box.innerHTML = [...new Set([...plain(k.kanji)].filter(isKanji))].filter(ch => KD[ch]).map(ch => `<div class="kpart"><div class="kc">${esc(ch)}</div><div style="min-width:0"><div class="km">${esc(KD[ch][0])}</div><div class="kr">${esc([KD[ch][1], KD[ch][2]].filter(Boolean).join(" · "))}</div></div></div>`).join(""); });
       };
-      const kg = $("kgo"); if (kg) kg.onclick = runKanjiQuiz;
+      const sg = document.querySelector("#stage .sign"); if (sg && kr) sg.onclick = () => { if (!kr.classList.contains("open")) kr.click(); };
+      // page 2 of this step: the kanji quiz, opened by the bottom Next
+      const step = $("stage").querySelector(".step"), pageHTML = step.innerHTML, hasQ = (L.kanji_study || []).length;
+      let page = 0;
+      const toQuiz = () => { page = 1; stopAll(); step.innerHTML = `<div id="kq" style="display:flex;flex-direction:column;gap:10px"></div>`; $("stage").scrollTop = 0; runKanjiQuiz(); };
+      const toPage = () => { page = 0; activeQuiz = null; step.innerHTML = pageHTML; wireStep(st); };
+      sub = {next:() => page === 0 && hasQ ? (toQuiz(), true) : false, back:() => page === 1 ? (toPage(), true) : false};
+      if (fromEnd && hasQ) toQuiz();
     }
     if (st.type === "challenge") wireChallenge(L);
     if (st.type === "mock") runMock(L);
-    if (st.type === "done"){ const m = $("moreBtn"); if (m) m.onclick = () => go(1);
+    if (st.type === "done"){ const m = $("moreBtn"); if (m) m.onclick = () => openSheet(`<div class="row"><b style="font-family:var(--jp);font-size:18px">おまけ</b><button class="icon-btn" data-close aria-label="Close">✕</button></div>${moreHTML(L)}`);
       $("stage").onclick = e => { if (e.target.closest("[data-play],[data-star],[data-radio],.gl,ruby,button")) return; const tl = e.target.closest("[data-tapen]"); if (tl){ const en = tl.querySelector(".en"); en.hidden = !en.hidden; } }; }
     if (st.type === "intro"){ const pl = $("prevLine"); if (pl) pl.onclick = () => pl.classList.toggle("open"); }
   }
-  const go = d => { const n = idx + d; if (n >= 0 && n < steps.length){ idx = n; stopAll(); renderStep(); } };
+  // one way forward: the bottom Next walks a step's own pages (chat messages, phrases, grammar tabs, quiz questions) before the next step; Back does the reverse
+  let sub = null, fromEnd = false, activeQuiz = null;
+  const go = d => {
+    if (d > 0 && activeQuiz && activeQuiz.box.isConnected && activeQuiz.next()) return;
+    if (sub && (d > 0 ? sub.next && sub.next() : sub.back && sub.back())) return;
+    const n = idx + d; if (n >= 0 && n < steps.length){ idx = n; fromEnd = d < 0; stopAll(); renderStep(); }
+  };
 
   /* ---------- review cards: four kinds, auto-graded where possible ---------- */
   const CTYPE = {listen:"聞く · listen", read:"読む · read", cloze:"穴埋め · fill the gap", reverse:"逆 · English → Japanese", meaning:"意味 · meaning", self:"思い出す · recall"};
