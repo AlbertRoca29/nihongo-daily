@@ -308,6 +308,7 @@ def check_lesson(lid, L, topic_ids, errs):
         return
     if lid >= V2_FROM:
         check_v2(lid, L, errs)
+        check_furigana(lid, L, errs)
 
     need(L, ["topic", "title_jp", "context", "dialogue_setting", "category"], "lesson")
     if L.get("category") not in topic_ids:
@@ -496,6 +497,41 @@ def check_v2(lid, L, errs):
     if t == "write" and not c.get("hint"):
         errs.append(f"{lid}: a write challenge needs a hint")
     check_length(lid, L, errs)
+
+
+# Furigana on hard kanji (from V2_FROM on): every kanji above N4 that the learner sees must sit inside a
+# {base|reading} block, also inside English fields (en, context, notes, explanations, tip, roles).
+# Exempt: fields that test or show the kanji itself (kanji, kanji_study, vocab jp/surface, quiz options, marks)
+# and name/label fields that must match cast.json.
+KANJI_LEVEL = None
+FURI_SKIP_KEYS = {"id", "date", "category", "function", "format", "cast", "who", "voice", "register", "speaker", "kind",
+                  "type", "surface", "mark", "tts", "src", "reading", "kanji", "name", "name_jp", "options", "answer",
+                  "level", "pattern", "form", "stickers", "img", "sticker", "romaji"}
+FURI_SKIP_PATH = re.compile(r"^(kanji\b|kanji_study|grammar\.mark|vocab\[\d+\]\.(jp|surface))")
+
+
+def hard_kanji(ch):
+    global KANJI_LEVEL
+    if KANJI_LEVEL is None:
+        KANJI_LEVEL = {k: v[4] for k, v in load_json(ROOT / "data" / "kanji.json")["k"].items()}
+    return bool(re.match(r"[\u3400-\u9fff]", ch)) and KANJI_LEVEL.get(ch, 0) not in (4, 5)
+
+
+def check_furigana(lid, L, errs):
+    def walk(o, path, key):
+        if isinstance(o, dict):
+            for k, v in o.items():
+                walk(v, f"{path}.{k}" if path else k, k)
+        elif isinstance(o, list):
+            for i, v in enumerate(o):
+                walk(v, f"{path}[{i}]", key)
+        elif isinstance(o, str):
+            if key in FURI_SKIP_KEYS or FURI_SKIP_PATH.match(path):
+                return
+            bare = "".join(sorted({c for c in RUBY.sub("", o) if hard_kanji(c)}))
+            if bare:
+                errs.append(f"{lid}: {path} has kanji without furigana ({bare}): write {{漢字|かんじ}} for every word above N4, English fields included")
+    walk(L, "", None)
 
 
 # Length limits (from V2_FROM on): lessons must stay short and easy to read on a phone.

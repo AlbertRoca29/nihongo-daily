@@ -194,6 +194,9 @@ A GitHub automation voices everything after each push (`scripts/tts.py`, Gemini 
 ## Furigana markup
 
 Every Japanese string (except `kanji.kanji` and `kanji.reading`) marks each kanji word with its reading: `{漢字|かんじ}`.
+- **Every kanji above simple N5/N4 gets furigana, wherever the learner sees it**: not only the Japanese lines but also Japanese words inside English fields (`en` translations, `context`, `scene`, `dialogue_setting`, notes, explanations, `explain`, `tip`, `intro`, guest `role`, LINE `status`). Write `I'm going up {鷹見岳|たかみだけ}`, `{千夏|ちなつ}さん said…`, `from {松本|まつもと}`. Names and place names count too. When unsure whether a kanji is simple N4, add the furigana.
+- The only places without furigana are the ones that test or show the kanji itself: `kanji`, `kanji_study`, vocab `jp`/`surface`, `grammar.mark`, `tip.mark`, quiz `options`, and `speaker`/`name` labels (they must match cast.json). In a mock exam, only the reading questions go bare.
+- `python3 scripts/lessons.py check` refuses any kanji above N4 outside a `{…|…}` block in the other fields.
 - Okurigana stays outside: `{乗|の}り{換|か}え`, `{行|い}きます`.
 - Readings are in kana. Kana, katakana, numbers and Latin letters need no markup.
 - Counters can be one block: `{3日分|みっかぶん}`.

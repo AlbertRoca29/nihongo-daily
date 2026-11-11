@@ -1,4 +1,4 @@
-const SHELL = "nihongo-shell-v17";
+const SHELL = "nihongo-shell-v18";
 const FONTS = "nihongo-fonts-v2";
 const OFFLINE = "nihongo-offline-v1";   // the last 7 lessons and their audio, refreshed by the app on wifi
 const FILES = ["./", "index.html", "manifest.webmanifest", "icons/icon-192.png"];

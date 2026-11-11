@@ -1242,8 +1242,8 @@ rt{font-size:max(.5em,9.5px)}
   const wave = () => `<span class="wave">${[8,14,20,12,18,22,10,16,20,9,14,18,12,7,15].map(h => `<i style="height:${h}px"></i>`).join("")}</span>`;
   function lineInner(L, d, i){
     if (d.sticker && STK[d.sticker]) return sticker(d.sticker);
-    if (d.kind === "voice") return `<div class="vmsg"><button class="star" data-play="d${i}|${esc(plain(d.jp))}" aria-label="Play">▶</button>${wave()}<button class="mini" data-vtx="${i}">文字にする</button></div><div class="bubble" data-show="${i}" hidden><div class="jp-mid">${ruby(d.jp)}</div><div class="en hid" data-en="${i}">${esc(d.en)}</div></div>`;
-    return `<div class="bubble" data-show="${i}" role="button" tabindex="0"><div class="jp-mid">${ruby(d.jp)}</div><div class="en hid" data-en="${i}">${esc(d.en)}</div></div>`;
+    if (d.kind === "voice") return `<div class="vmsg"><button class="star" data-play="d${i}|${esc(plain(d.jp))}" aria-label="Play">▶</button>${wave()}<button class="mini" data-vtx="${i}">文字にする</button></div><div class="bubble" data-show="${i}" hidden><div class="jp-mid">${ruby(d.jp)}</div><div class="en hid" data-en="${i}">${ruby(d.en)}</div></div>`;
+    return `<div class="bubble" data-show="${i}" role="button" tabindex="0"><div class="jp-mid">${ruby(d.jp)}</div><div class="en hid" data-en="${i}">${ruby(d.en)}</div></div>`;
   }
   function chatLine(L, d, i, opts = {}){
     const first = !d.me && (i === 0 || L.dialogue[i - 1].me || L.dialogue[i - 1].speaker !== d.speaker);
@@ -1276,14 +1276,14 @@ rt{font-size:max(.5em,9.5px)}
         <div class="card story"><div class="tellers">${L.dialogue.filter((d, i, a) => a.findIndex(x => x.speaker === d.speaker) === i).map(d => avatar(d.who, d.speaker, d.me)).join("")}<span class="label">Told by ${esc(tellers.join(" & "))}</span></div>
         ${L.dialogue.map((d, i) => `<div class="para line" data-li="${i}">
           ${tellers.length > 1 && (i === 0 || L.dialogue[i-1].speaker !== d.speaker) ? `<div class="para-who">${avatar(d.who, d.speaker, d.me)}${esc(d.speaker)}</div>` : ""}
-          <div class="bubble" data-show="${i}" style="background:none;padding:0;max-width:100%"><div class="jp-mid">${ruby(d.jp)}</div><div class="en hid" data-en="${i}">${esc(d.en)}</div></div><div class="icons-slot"></div></div>`).join("")}</div>
+          <div class="bubble" data-show="${i}" style="background:none;padding:0;max-width:100%"><div class="jp-mid">${ruby(d.jp)}</div><div class="en hid" data-en="${i}">${ruby(d.en)}</div></div><div class="icons-slot"></div></div>`).join("")}</div>
         <button class="btn ghost" id="playAll">${ICON_SAY} Listen to the whole story</button>${hint}</div>`;
     }
     if (f === "text"){
       return `<div class="step">${setting}
         <div class="notice"><div class="notice-head">${ruby(L.text_title || "お知らせ")}</div>
         ${L.dialogue.map((d, i) => `<div class="part line" data-li="${i}"><span class="plabel">${esc(d.speaker)}</span>
-          <div class="bubble" data-show="${i}" style="background:none;padding:0;max-width:100%"><div class="jp-mid">${ruby(d.jp)}</div><div class="en hid" data-en="${i}">${esc(d.en)}</div></div><div class="icons-slot"></div></div>`).join("")}</div>
+          <div class="bubble" data-show="${i}" style="background:none;padding:0;max-width:100%"><div class="jp-mid">${ruby(d.jp)}</div><div class="en hid" data-en="${i}">${ruby(d.en)}</div></div><div class="icons-slot"></div></div>`).join("")}</div>
         <button class="btn ghost" id="playAll">${ICON_SAY} Read it aloud</button>${hint}</div>`;
     }
     return `<div class="step">${setting}
@@ -1525,7 +1525,7 @@ rt{font-size:max(.5em,9.5px)}
     const list = [G.quiz, ...(Array.isArray(G.quiz_more) ? G.quiz_more : [])].filter(q => q && q.question && (q.options || []).length >= 2);
     const keys = list.map((q, i) => i ? "quiz" + i : "quiz");
     const filled = q => q.question.replace("＿＿", q.options[0]);
-    runQuiz($("gquiz"), list.map((q, i) => ({ask:"Fill the gap", prompt:`<span style="font-size:20px;font-weight:600">${ruby(q.question)}</span><div class="note" style="font-weight:500;margin-top:6px">${esc(q.en)}</div>`,
+    runQuiz($("gquiz"), list.map((q, i) => ({ask:"Fill the gap", prompt:`<span style="font-size:20px;font-weight:600">${ruby(q.question)}</span><div class="note" style="font-weight:500;margin-top:6px">${ruby(q.en)}</div>`,
       options:q.options, fmt:o => ruby(o), jpo:true, onWrong:() => { putCard(key, grammarDef(L, G), true); paintStars(key); },
       note:`<span class="jp-mid" style="font-size:16px">${ruby(filled(q), {hl:[plain(q.options[0])]})}</span> ${pbtn([keys[i]], ICON_SAY)}`, wrongNote:`${ruby(q.explain)} Starred for review.`, rightNote:ruby(q.explain)})), (r, n) => {
       $("gquiz").innerHTML = `<div class="card" style="display:flex;flex-direction:column;gap:6px"><b>${r === n ? "正解！ All right." : `${r}/${n} right. Starred for review.`}</b><button class="btn ghost" id="ggo">Try again</button></div>`;
@@ -1612,7 +1612,7 @@ rt{font-size:max(.5em,9.5px)}
     let body = "";
     if (t === "voicemail" || t === "announcement"){
       body = `<div class="card lcard"><span class="ic">${head[0]}</span><div style="flex:1;min-width:0"><b style="font-family:var(--jp)">${esc(head[1])}</b><div class="note">${head[2]}</div></div><button class="bigplay" id="lplay" aria-label="Play">▶</button></div>
-        ${X.question ? `<div id="lq"></div>` : ""}<button class="reveal" id="ltx">Show what was said</button><div class="card" id="ltext" hidden style="display:flex;flex-direction:column;gap:8px">${(X.lines || []).map(li => `<div><div class="jp-mid">${ruby(li.jp)}</div><div class="note">${esc(li.en)}</div></div>`).join("")}</div>`;
+        ${X.question ? `<div id="lq"></div>` : ""}<button class="reveal" id="ltx">Show what was said</button><div class="card" id="ltext" hidden style="display:flex;flex-direction:column;gap:8px">${(X.lines || []).map(li => `<div><div class="jp-mid">${ruby(li.jp)}</div><div class="note">${ruby(li.en)}</div></div>`).join("")}</div>`;
     } else if (t === "dictation"){
       body = `<div class="card lcard"><span class="ic">${head[0]}</span><div style="flex:1"><b style="font-family:var(--jp)">${head[1]}</b><div class="note">${head[2]}</div></div><button class="bigplay" id="lplay" aria-label="Play">▶</button></div>
         <div class="icons"><button class="g" id="lslow">🐢 Slow</button></div>
@@ -1643,7 +1643,7 @@ rt{font-size:max(.5em,9.5px)}
         lad.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(+b.dataset.step === s)));
         if (s === 1){ box.innerHTML = `<div style="display:flex;gap:12px;align-items:center"><button class="bigplay" id="l1">🐢</button><div><b>Slow first.</b><div class="note">How much did you catch?</div></div></div>${rate(1)}`; $("l1").onclick = () => { stopAll(); (async () => { const run = playRun; for (const k of keys){ if (run !== playRun) return; await playOne(L.id, k, true, run); } })(); }; }
         if (s === 2){ box.innerHTML = `<div style="display:flex;gap:12px;align-items:center"><button class="bigplay" id="l2">▶</button><div><b>Now at normal speed.</b><div class="note">And now?</div></div></div>${rate(2)}`; $("l2").onclick = () => playChain(L.id, keys); }
-        if (s === 3) box.innerHTML = (X.lines || []).map((li, i) => `<div><div class="bubble-row"><div class="jp-mid">${ruby(li.jp)}</div><button class="play" data-play="${keys[i].join("|")}">${ICON_SAY}</button></div><div class="note">${esc(li.en)}</div></div>`).join("");
+        if (s === 3) box.innerHTML = (X.lines || []).map((li, i) => `<div><div class="bubble-row"><div class="jp-mid">${ruby(li.jp)}</div><button class="play" data-play="${keys[i].join("|")}">${ICON_SAY}</button></div><div class="note">${ruby(li.en)}</div></div>`).join("");
         box.querySelectorAll(".rate button").forEach(b => b.onclick = () => { b.parentNode.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", String(x === b))); setTimeout(() => show(s + 1), 300); });
       };
       lad.onclick = e => { const b = e.target.closest("[data-step]"); if (b) show(+b.dataset.step); };
@@ -1759,7 +1759,7 @@ rt{font-size:max(.5em,9.5px)}
     const faces = ids.slice(0, 3).map(id => avatar(id, person(id).name)).join("") + (L.guest ? `<span class="ava">${initial(L.guest.name)}</span>` : "");
     const who = [...ids.slice(0, 3).map(id => person(id).name), ...(L.guest ? [L.guest.name + (L.guest.role ? "" : "")] : [])].join(" · ");
     const text = L.news ? L.context : (L.scene || firstSentence(L.context));
-    return `<div class="card scene">${faces ? `<span class="faces">${faces}</span>` : ""}<div style="min-width:0"><p>${esc(text)}</p>${who ? `<div class="note" style="font-family:var(--jp);margin-top:2px">${esc(who)}</div>` : ""}</div></div>`;
+    return `<div class="card scene">${faces ? `<span class="faces">${faces}</span>` : ""}<div style="min-width:0"><p>${ruby(text)}</p>${who ? `<div class="note" style="font-family:var(--jp);margin-top:2px">${esc(who)}</div>` : ""}</div></div>`;
   }
   function renderTop(){
     const st = steps[idx];
@@ -1795,7 +1795,7 @@ rt{font-size:max(.5em,9.5px)}
     if (st.type === "more"){
       h = `<div class="step">${L.tip ? `<div class="card tip" style="display:flex;flex-direction:column;gap:12px"><span class="hanko">${esc(L.tip.mark || "技")}</span><h3>${ruby(L.tip.title)}</h3><p>${ruby(L.tip.body)}</p></div>` : ""}
         ${(L.extras || []).map(x => `<div class="label" style="font-family:var(--jp)">${ruby(x.title_jp || "")} · ${esc(x.title || "")}</div>${x.intro ? `<p class="note" style="margin:0">${ruby(x.intro)}</p>` : ""}
-          <div class="card" style="display:flex;flex-direction:column;gap:14px">${(x.items || []).map(it => `<div style="display:flex;flex-direction:column;gap:2px"><div class="bubble-row"><div class="jp-mid">${ruby(it.jp)}</div><button class="play" data-play="${esc(plain(it.jp))}" aria-label="Play">${ICON_SAY}</button></div><div style="font-size:15px">${esc(it.en)}</div>${it.note ? `<div class="note">${ruby(it.note)}</div>` : ""}</div>`).join("")}</div>`).join("")}</div>`;
+          <div class="card" style="display:flex;flex-direction:column;gap:14px">${(x.items || []).map(it => `<div style="display:flex;flex-direction:column;gap:2px"><div class="bubble-row"><div class="jp-mid">${ruby(it.jp)}</div><button class="play" data-play="${esc(plain(it.jp))}" aria-label="Play">${ICON_SAY}</button></div><div style="font-size:15px">${ruby(it.en)}</div>${it.note ? `<div class="note">${ruby(it.note)}</div>` : ""}</div>`).join("")}</div>`).join("")}</div>`;
     }
     if (st.type === "done"){
       markDone(L.id);
@@ -1808,7 +1808,7 @@ rt{font-size:max(.5em,9.5px)}
           <h3 style="margin:0;font-size:22px">${ruby("お{疲|つか}れ{様|さま}でした！")}</h3>
           <p style="margin:0">${added ? `<b>${added} cards</b> from tomorrow` : "All in your review deck"}${streakLine() ? ` · ${streakLine().replace(/-day streak\./, " day")}` : ""}</p></div>
         ${keep.length ? `<div class="card" style="display:flex;flex-direction:column;gap:10px"><div class="label">${keep.length > 1 ? "Two to keep" : "One to keep"}</div>
-          ${keep.map(([r, p]) => `<div class="tapen" data-tapen><div class="jp-mid">${ruby(p.jp)}</div><div class="en" hidden>${esc(p.en)}</div>
+          ${keep.map(([r, p]) => `<div class="tapen" data-tapen><div class="jp-mid">${ruby(p.jp)}</div><div class="en" hidden>${ruby(p.en)}</div>
             <div class="icons" style="margin-top:4px"><button data-play="${r}|${esc(plain(p.jp))}" aria-label="Play">▶</button>${starBtn("l:" + L.id + ":" + r, lineDef(L, p, r))}</div></div>`).join("")}</div>` : ""}
         ${radio || more ? `<div class="btn-row">${radio ? `<button class="btn ghost" data-radio="${esc(L.id)}">🎧 Radio</button>` : ""}${more ? `<button class="btn ghost" id="moreBtn">おまけ</button>` : ""}</div>` : ""}
       </div>`;
@@ -2015,11 +2015,11 @@ rt{font-size:max(.5em,9.5px)}
     const latest = lessons[lessons.length - 1], isToday = latest.id === t;
     const s = streak(), due = dueToday().length, deck = Object.values(getDeck()), ks = Object.values(kstate()), kN = ks.filter(v => kLevel(v) === 2).length;
     const days = [...Array(7)].map((_, i) => addDays(t, i - 6)), st = lessonStatus(latest.id), earlier = lessons.slice(0, -1).reverse().slice(0, 4);
-    const off = store.get("offline", null), sk = sekki(t), starN = deck.filter(c => c.star).length;
+    const off = store.get("offline", null), starN = deck.filter(c => c.star).length;
     const friends = Object.values(castById).filter(c => PORTRAITS.has(c.id) && c.id !== "you").slice(0, 3);
     const kicker = isToday ? (latest.category === "news" ? "今日のニュース" : latest.format === "mock" ? "今月の模試" : "今日のレッスン") : "最新のレッスン";
     el.innerHTML = `<div class="step" style="gap:12px">
-      <div class="home-head"><div style="min-width:0"><h1>${APP_TITLE[0]}</h1><p class="sub">${esc(dateJP(t))} · <b>${sk[2]}</b> ${sk[3]}</p></div>
+      <div class="home-head"><div style="min-width:0"><h1>${APP_TITLE[0]}</h1><p class="sub">${esc(dateJP(t))}</p></div>
         <div style="display:flex;gap:8px;align-items:center">${off ? `<span class="offline" title="${off.n} lessons saved for offline">オフライン ✓</span>` : ""}<a class="icon-btn" href="#settings" aria-label="Settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></svg></a></div></div>
       <a class="board hero hero2" href="#${esc(latest.id)}" id="hero">
         <div class="h-who"><span id="heroFace"><span class="ava">${latest.format === "mock" ? "模" : "今"}</span></span><span style="min-width:0"><b>${kicker}</b><small id="heroWho">${isToday ? "Today" : esc(dateJP(latest.id))} · ${esc((FMT[latest.format] || FMT.dialogue).en)}</small></span></div>
