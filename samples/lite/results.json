@@ -1,0 +1,722 @@
+{
+ "kenta_flash": {
+  "scenario": "kenta",
+  "what": "Kansai-ben, fast and joking (designed voice)",
+  "voice": "voice_fy8oio1yurjl",
+  "style": "joking, loud, fast",
+  "text": "セルフレジあるあるや。気にせんでええって。てか、たなかさんち農家やん？じゃがいもぐらいあるやろ",
+  "model": "gemini-3.8-flash-tts",
+  "error": null,
+  "usage": {
+   "promptTokenCount": 34,
+   "candidatesTokenCount": 143,
+   "totalTokenCount": 177,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 34
+    }
+   ],
+   "candidatesTokensDetails": [
+    {
+     "modality": "AUDIO",
+     "tokenCount": 143
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "wait": 3.7,
+  "file": "kenta_flash.mp3",
+  "seconds": 5.78
+ },
+ "kenta_lite": {
+  "scenario": "kenta",
+  "what": "Kansai-ben, fast and joking (designed voice)",
+  "voice": "voice_fy8oio1yurjl",
+  "style": "joking, loud, fast",
+  "text": "セルフレジあるあるや。気にせんでええって。てか、たなかさんち農家やん？じゃがいもぐらいあるやろ",
+  "model": "gemini-3.8-flash-lite-tts",
+  "error": null,
+  "usage": {
+   "promptTokenCount": 34,
+   "candidatesTokenCount": 152,
+   "totalTokenCount": 186,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 34
+    }
+   ],
+   "candidatesTokensDetails": [
+    {
+     "modality": "AUDIO",
+     "tokenCount": 152
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "wait": 2.0,
+  "file": "kenta_lite.mp3",
+  "seconds": 6.14
+ },
+ "hana_flash": {
+  "scenario": "hana",
+  "what": "84-year-old, old rural speech, slow storytelling",
+  "voice": "ja-jp-csagent-4",
+  "style": "slow, gentle, amused, storytelling",
+  "text": "仕方ないから、あたしも一緒に降りて、坂をてくてく歩いて戻ったんじゃ。子どもの頃は、毎日この坂を歩かされたもんじゃよ。",
+  "model": "gemini-3.8-flash-tts",
+  "error": null,
+  "usage": {
+   "promptTokenCount": 39,
+   "candidatesTokenCount": 345,
+   "totalTokenCount": 384,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 39
+    }
+   ],
+   "candidatesTokensDetails": [
+    {
+     "modality": "AUDIO",
+     "tokenCount": 345
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "wait": 4.8,
+  "file": "hana_flash.mp3",
+  "seconds": 13.85
+ },
+ "hana_lite": {
+  "scenario": "hana",
+  "what": "84-year-old, old rural speech, slow storytelling",
+  "voice": "ja-jp-csagent-4",
+  "style": "slow, gentle, amused, storytelling",
+  "text": "仕方ないから、あたしも一緒に降りて、坂をてくてく歩いて戻ったんじゃ。子どもの頃は、毎日この坂を歩かされたもんじゃよ。",
+  "model": "gemini-3.8-flash-lite-tts",
+  "error": null,
+  "usage": {
+   "promptTokenCount": 39,
+   "candidatesTokenCount": 301,
+   "totalTokenCount": 340,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 39
+    }
+   ],
+   "candidatesTokensDetails": [
+    {
+     "modality": "AUDIO",
+     "tokenCount": 301
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "wait": 2.9,
+  "file": "hana_lite.mp3",
+  "seconds": 12.1
+ },
+ "tanaka_flash": {
+  "scenario": "tanaka",
+  "what": "Gruff farmer, Nagano dialect, short",
+  "voice": "ja-jp-podcaster-7",
+  "style": "gruff, dry, unhurried",
+  "text": "たかのはらのりんごは甘いずら。遠慮しないで食べな。",
+  "model": "gemini-3.8-flash-tts",
+  "error": null,
+  "usage": {
+   "promptTokenCount": 18,
+   "candidatesTokenCount": 127,
+   "totalTokenCount": 145,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 18
+    }
+   ],
+   "candidatesTokensDetails": [
+    {
+     "modality": "AUDIO",
+     "tokenCount": 127
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "wait": 2.4,
+  "file": "tanaka_flash.mp3",
+  "seconds": 5.14
+ },
+ "tanaka_lite": {
+  "scenario": "tanaka",
+  "what": "Gruff farmer, Nagano dialect, short",
+  "voice": "ja-jp-podcaster-7",
+  "style": "gruff, dry, unhurried",
+  "text": "たかのはらのりんごは甘いずら。遠慮しないで食べな。",
+  "model": "gemini-3.8-flash-lite-tts",
+  "error": null,
+  "usage": {
+   "promptTokenCount": 18,
+   "candidatesTokenCount": 134,
+   "totalTokenCount": 152,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 18
+    }
+   ],
+   "candidatesTokensDetails": [
+    {
+     "modality": "AUDIO",
+     "tokenCount": 134
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "wait": 2.3,
+  "file": "tanaka_lite.mp3",
+  "seconds": 5.42
+ },
+ "ren_flash": {
+  "scenario": "ren",
+  "what": "Soft and shy, emotional",
+  "voice": "ja-jp-storyteller-12",
+  "style": "soft, a little shy",
+  "text": "今日は、ありがとう。…また、会えるかな。",
+  "model": "gemini-3.8-flash-tts",
+  "error": null,
+  "usage": {
+   "promptTokenCount": 12,
+   "candidatesTokenCount": 127,
+   "totalTokenCount": 139,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 12
+    }
+   ],
+   "candidatesTokensDetails": [
+    {
+     "modality": "AUDIO",
+     "tokenCount": 127
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "wait": 2.9,
+  "file": "ren_flash.mp3",
+  "seconds": 5.14
+ },
+ "ren_lite": {
+  "scenario": "ren",
+  "what": "Soft and shy, emotional",
+  "voice": "ja-jp-storyteller-12",
+  "style": "soft, a little shy",
+  "text": "今日は、ありがとう。…また、会えるかな。",
+  "model": "gemini-3.8-flash-lite-tts",
+  "error": null,
+  "usage": {
+   "promptTokenCount": 12,
+   "candidatesTokenCount": 138,
+   "totalTokenCount": 150,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 12
+    }
+   ],
+   "candidatesTokensDetails": [
+    {
+     "modality": "AUDIO",
+     "tokenCount": 138
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "wait": 1.9,
+  "file": "ren_lite.mp3",
+  "seconds": 5.57
+ },
+ "sato_flash": {
+  "scenario": "sato",
+  "what": "Keigo, classroom announcement (designed voice)",
+  "voice": "voice_q8ebkcksc90a",
+  "style": "polite, composed",
+  "text": "みなさん、今日から毎週火曜日に、アルちゃんが授業を手伝ってくれることになりました。今日は「もし〜たら」の質問タイムです。",
+  "model": "gemini-3.8-flash-tts",
+  "error": null,
+  "usage": {
+   "promptTokenCount": 33,
+   "candidatesTokenCount": 280,
+   "totalTokenCount": 313,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 33
+    }
+   ],
+   "candidatesTokensDetails": [
+    {
+     "modality": "AUDIO",
+     "tokenCount": 280
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "wait": 4.2,
+  "file": "sato_flash.mp3",
+  "seconds": 11.26
+ },
+ "sato_lite": {
+  "scenario": "sato",
+  "what": "Keigo, classroom announcement (designed voice)",
+  "voice": "voice_q8ebkcksc90a",
+  "style": "polite, composed",
+  "text": "みなさん、今日から毎週火曜日に、アルちゃんが授業を手伝ってくれることになりました。今日は「もし〜たら」の質問タイムです。",
+  "model": "gemini-3.8-flash-lite-tts",
+  "error": null,
+  "usage": {
+   "promptTokenCount": 33,
+   "candidatesTokenCount": 250,
+   "totalTokenCount": 283,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 33
+    }
+   ],
+   "candidatesTokensDetails": [
+    {
+     "modality": "AUDIO",
+     "tokenCount": 250
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "wait": 2.4,
+  "file": "sato_lite.mp3",
+  "seconds": 10.01
+ },
+ "you_flash": {
+  "scenario": "you",
+  "what": "Your voice, polite, numbers and times",
+  "voice": "voice_c4fcfvc38ess",
+  "style": "friendly, relaxed",
+  "text": "わかりました！帰りのバスの便も少ないので、7時に出て、3時までに下りることにします。",
+  "model": "gemini-3.8-flash-tts",
+  "error": null,
+  "usage": {
+   "promptTokenCount": 26,
+   "candidatesTokenCount": 169,
+   "totalTokenCount": 195,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 26
+    }
+   ],
+   "candidatesTokensDetails": [
+    {
+     "modality": "AUDIO",
+     "tokenCount": 169
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "wait": 3.7,
+  "file": "you_flash.mp3",
+  "seconds": 6.82
+ },
+ "you_lite": {
+  "scenario": "you",
+  "what": "Your voice, polite, numbers and times",
+  "voice": "voice_c4fcfvc38ess",
+  "style": "friendly, relaxed",
+  "text": "わかりました！帰りのバスの便も少ないので、7時に出て、3時までに下りることにします。",
+  "model": "gemini-3.8-flash-lite-tts",
+  "error": null,
+  "usage": {
+   "promptTokenCount": 26,
+   "candidatesTokenCount": 143,
+   "totalTokenCount": 169,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 26
+    }
+   ],
+   "candidatesTokensDetails": [
+    {
+     "modality": "AUDIO",
+     "tokenCount": 143
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "wait": 2.9,
+  "file": "you_lite.mp3",
+  "seconds": 5.78
+ },
+ "guest_flash": {
+  "scenario": "guest",
+  "what": "Guest from the voice library (59-year-old woman), long LINE message",
+  "voice": "ja-jp-csagent-12",
+  "style": "warm, caring, a bit teasing",
+  "text": "この辺は出ることもあるよ。私も去年、道に迷っちゃって焦ったの。行き先はたなかさんに伝えておいてね。",
+  "model": "gemini-3.8-flash-tts",
+  "error": null,
+  "usage": {
+   "promptTokenCount": 32,
+   "candidatesTokenCount": 253,
+   "totalTokenCount": 285,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 32
+    }
+   ],
+   "candidatesTokensDetails": [
+    {
+     "modality": "AUDIO",
+     "tokenCount": 253
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "wait": 4.0,
+  "file": "guest_flash.mp3",
+  "seconds": 10.18
+ },
+ "guest_lite": {
+  "scenario": "guest",
+  "what": "Guest from the voice library (59-year-old woman), long LINE message",
+  "voice": "ja-jp-csagent-12",
+  "style": "warm, caring, a bit teasing",
+  "text": "この辺は出ることもあるよ。私も去年、道に迷っちゃって焦ったの。行き先はたなかさんに伝えておいてね。",
+  "model": "gemini-3.8-flash-lite-tts",
+  "error": null,
+  "usage": {
+   "promptTokenCount": 32,
+   "candidatesTokenCount": 242,
+   "totalTokenCount": 274,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 32
+    }
+   ],
+   "candidatesTokensDetails": [
+    {
+     "modality": "AUDIO",
+     "tokenCount": 242
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "wait": 2.6,
+  "file": "guest_lite.mp3",
+  "seconds": 9.74
+ },
+ "narrator_flash": {
+  "scenario": "narrator",
+  "what": "Narrator for grammar examples (library voice)",
+  "voice": "ja-jp-podcaster-10",
+  "style": "calm, clear, like a teacher reading an example",
+  "text": "電車で寝てしまって、終点まで行っちゃった。",
+  "model": "gemini-3.8-flash-tts",
+  "error": null,
+  "usage": {
+   "promptTokenCount": 15,
+   "candidatesTokenCount": 107,
+   "totalTokenCount": 122,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 15
+    }
+   ],
+   "candidatesTokensDetails": [
+    {
+     "modality": "AUDIO",
+     "tokenCount": 107
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "wait": 2.9,
+  "file": "narrator_flash.mp3",
+  "seconds": 4.34
+ },
+ "narrator_lite": {
+  "scenario": "narrator",
+  "what": "Narrator for grammar examples (library voice)",
+  "voice": "ja-jp-podcaster-10",
+  "style": "calm, clear, like a teacher reading an example",
+  "text": "電車で寝てしまって、終点まで行っちゃった。",
+  "model": "gemini-3.8-flash-lite-tts",
+  "error": null,
+  "usage": {
+   "promptTokenCount": 15,
+   "candidatesTokenCount": 103,
+   "totalTokenCount": 118,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 15
+    }
+   ],
+   "candidatesTokensDetails": [
+    {
+     "modality": "AUDIO",
+     "tokenCount": 103
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "wait": 1.5,
+  "file": "narrator_lite.mp3",
+  "seconds": 4.18
+ },
+ "word_flash": {
+  "scenario": "word",
+  "what": "One word alone, with two possible readings (こうよう / もみじ)",
+  "voice": "ja-jp-podcaster-10",
+  "style": "clear, neutral",
+  "text": "紅葉",
+  "model": "gemini-3.8-flash-tts",
+  "error": null,
+  "usage": {
+   "promptTokenCount": 3,
+   "candidatesTokenCount": 33,
+   "totalTokenCount": 36,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 3
+    }
+   ],
+   "candidatesTokensDetails": [
+    {
+     "modality": "AUDIO",
+     "tokenCount": 33
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "wait": 1.9,
+  "file": "word_flash.mp3",
+  "seconds": 1.37
+ },
+ "word_lite": {
+  "scenario": "word",
+  "what": "One word alone, with two possible readings (こうよう / もみじ)",
+  "voice": "ja-jp-podcaster-10",
+  "style": "clear, neutral",
+  "text": "紅葉",
+  "model": "gemini-3.8-flash-lite-tts",
+  "error": null,
+  "usage": {
+   "promptTokenCount": 3,
+   "candidatesTokenCount": 31,
+   "totalTokenCount": 34,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 3
+    }
+   ],
+   "candidatesTokensDetails": [
+    {
+     "modality": "AUDIO",
+     "tokenCount": 31
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "wait": 1.2,
+  "file": "word_lite.mp3",
+  "seconds": 1.3
+ },
+ "strip_flash": {
+  "scenario": "strip",
+  "what": "Five vocab words in one request (to cut apart later)",
+  "voice": "ja-jp-podcaster-10",
+  "style": "read each word clearly, with a long pause between words",
+  "text": "紅葉。　出発。　重ね着。　熊鈴。　絶対。",
+  "model": "gemini-3.8-flash-tts",
+  "error": null,
+  "usage": {
+   "promptTokenCount": 26,
+   "candidatesTokenCount": 202,
+   "totalTokenCount": 228,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 26
+    }
+   ],
+   "candidatesTokensDetails": [
+    {
+     "modality": "AUDIO",
+     "tokenCount": 202
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "wait": 3.4,
+  "file": "strip_flash.mp3",
+  "seconds": 8.14
+ },
+ "strip_lite": {
+  "scenario": "strip",
+  "what": "Five vocab words in one request (to cut apart later)",
+  "voice": "ja-jp-podcaster-10",
+  "style": "read each word clearly, with a long pause between words",
+  "text": "紅葉。　出発。　重ね着。　熊鈴。　絶対。",
+  "model": "gemini-3.8-flash-lite-tts",
+  "error": null,
+  "usage": {
+   "promptTokenCount": 26,
+   "candidatesTokenCount": 323,
+   "totalTokenCount": 349,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 26
+    }
+   ],
+   "candidatesTokensDetails": [
+    {
+     "modality": "AUDIO",
+     "tokenCount": 323
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "wait": 2.2,
+  "file": "strip_lite.mp3",
+  "seconds": 12.98
+ },
+ "slow_flash": {
+  "scenario": "slow",
+  "what": "Slow on purpose: a phrase read slowly for a learner",
+  "voice": "voice_c4fcfvc38ess",
+  "style": "slowly and clearly, like reading to a language learner, with natural intonation",
+  "text": "無理しないで、疲れたら引き返したほうがいいよ。",
+  "model": "gemini-3.8-flash-tts",
+  "error": null,
+  "usage": {
+   "promptTokenCount": 14,
+   "candidatesTokenCount": 140,
+   "totalTokenCount": 154,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 14
+    }
+   ],
+   "candidatesTokensDetails": [
+    {
+     "modality": "AUDIO",
+     "tokenCount": 140
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "wait": 4.0,
+  "file": "slow_flash.mp3",
+  "seconds": 5.66
+ },
+ "slow_lite": {
+  "scenario": "slow",
+  "what": "Slow on purpose: a phrase read slowly for a learner",
+  "voice": "voice_c4fcfvc38ess",
+  "style": "slowly and clearly, like reading to a language learner, with natural intonation",
+  "text": "無理しないで、疲れたら引き返したほうがいいよ。",
+  "model": "gemini-3.8-flash-lite-tts",
+  "error": null,
+  "usage": {
+   "promptTokenCount": 14,
+   "candidatesTokenCount": 130,
+   "totalTokenCount": 144,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 14
+    }
+   ],
+   "candidatesTokensDetails": [
+    {
+     "modality": "AUDIO",
+     "tokenCount": 130
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "wait": 2.5,
+  "file": "slow_lite.mp3",
+  "seconds": 5.26
+ },
+ "normal_flash": {
+  "scenario": "normal",
+  "what": "Same phrase at normal speed (to compare with slow)",
+  "voice": "voice_c4fcfvc38ess",
+  "style": "friendly, relaxed",
+  "text": "無理しないで、疲れたら引き返したほうがいいよ。",
+  "model": "gemini-3.8-flash-tts",
+  "error": null,
+  "usage": {
+   "promptTokenCount": 14,
+   "candidatesTokenCount": 84,
+   "totalTokenCount": 98,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 14
+    }
+   ],
+   "candidatesTokensDetails": [
+    {
+     "modality": "AUDIO",
+     "tokenCount": 84
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "wait": 2.5,
+  "file": "normal_flash.mp3",
+  "seconds": 3.41
+ },
+ "normal_lite": {
+  "scenario": "normal",
+  "what": "Same phrase at normal speed (to compare with slow)",
+  "voice": "voice_c4fcfvc38ess",
+  "style": "friendly, relaxed",
+  "text": "無理しないで、疲れたら引き返したほうがいいよ。",
+  "model": "gemini-3.8-flash-lite-tts",
+  "error": null,
+  "usage": {
+   "promptTokenCount": 14,
+   "candidatesTokenCount": 87,
+   "totalTokenCount": 101,
+   "promptTokensDetails": [
+    {
+     "modality": "TEXT",
+     "tokenCount": 14
+    }
+   ],
+   "candidatesTokensDetails": [
+    {
+     "modality": "AUDIO",
+     "tokenCount": 87
+    }
+   ],
+   "serviceTier": "standard"
+  },
+  "wait": 1.7,
+  "file": "normal_lite.mp3",
+  "seconds": 3.53
+ }
+}
