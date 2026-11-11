@@ -1,0 +1,206 @@
+{
+ "topic": "Hiking advice for the autumn leaves",
+ "category": "nature-seasons",
+ "function": "advice",
+ "format": "line",
+ "cast": [],
+ "guest": {"name": "千夏さん", "name_jp": "{大野千夏|おおのちなつ}", "role": "Veteran hiker from 松本 who stayed at ゲストハウス風", "voice": "f"},
+ "title_jp": "{紅葉|こうよう}を{見|み}に{行|い}くなら",
+ "context": "Wednesday evening: the apple harvest is nearly done, so 田中さん has given アルちゃん tomorrow off. He wants to climb 鷹見岳 above the town to see the autumn leaves, and messages 千夏さん, a 58-year-old hiker who stayed at ゲストハウス風 last weekend and told him to ask her anything about Nagano's mountains.",
+ "phrases": [
+  {
+   "jp": "{山|やま}の{天気|てんき}は{変わりやすい|かわりやすい|changeable|3}から、{雨具|あまぐ|rain gear|2}を{持って|もって}いったほうがいいですよ。",
+   "en": "Mountain weather changes easily, so you'd better take rain gear.",
+   "register": "polite",
+   "note": "〜たほうがいい is the standard friendly advice: 'you'd better…'. Stronger than 〜といい, softer than 〜なきゃ."
+  },
+  {
+   "jp": "{紅葉|こうよう|autumn leaves|3}、もう{散っちゃった|ちっちゃった|to scatter, fall (leaves)|3}かな。",
+   "en": "I wonder if the autumn leaves have already fallen.",
+   "register": "casual",
+   "note": "散っちゃった = 散ってしまった: the leaves are gone, and that's a pity. 〜かな = 'I wonder', said half to yourself."
+  },
+  {
+   "jp": "{日|ひ}が{短く|みじかく}なったね。まだ5{時|じ}なのに{真っ暗|まっくら|pitch dark|3}だ。",
+   "en": "The days have got shorter. It's only 5 o'clock and it's already pitch dark.",
+   "register": "casual",
+   "note": "{日|ひ}が{短|みじか}い / {日|ひ}が{長|なが}い = short / long days. A favourite seasonal small-talk line in November."
+  },
+  {
+   "jp": "{うっかり||carelessly, by mistake|4}{手袋|てぶくろ|gloves|3}を{忘れて|わすれて}しまいました。",
+   "en": "I carelessly forgot my gloves.",
+   "register": "polite",
+   "note": "うっかり + 〜てしまう is the classic 'oops' combination. In casual speech: うっかり{忘|わす}れちゃった."
+  },
+  {
+   "jp": "{無理|むり|overdoing it|4}しないで、{疲れたら|つかれたら}{引き返した|ひきかえした|to turn back|2}ほうがいいよ。",
+   "en": "Don't push yourself: if you get tired, you'd better turn back.",
+   "register": "casual",
+   "note": "{無理|むり}しないで = 'don't overdo it', the caring line you'll hear constantly from older people in Japan."
+  }
+ ],
+ "dialogue_setting": "LINE, Wednesday evening. アルちゃん in his upstairs room at the 田中 house, under the kotatsu; 千夏さん at home in 松本.",
+ "dialogue": [
+  {
+   "speaker": "You",
+   "me": true,
+   "time": "19:12",
+   "jp": "{千夏|ちなつ}さん、こんばんは！ゲストハウス{風|かぜ}のアルちゃんです。{明日|あした}{休み|やすみ}なので、{鷹見岳|たかみだけ}に{紅葉|こうよう|autumn leaves|3}を{見|み}に{行こう|いこう}と{思って|おもって}るんですが、アドバイスもらえますか？",
+   "en": "千夏さん, good evening! It's アルちゃん from ゲストハウス風. I've got tomorrow off, so I'm thinking of going up 鷹見岳 to see the autumn leaves. Could you give me some advice?"
+  },
+  {
+   "speaker": "千夏さん",
+   "time": "19:20",
+   "jp": "アルちゃん！{覚えてる|おぼえてる}よ〜！いいね、{今|いま}がちょうど{見頃|みごろ|the best time to see|3}！でも、この{時期|じき|time of year|4}は{日|ひ}が{短い|みじかい}から、{朝|あさ}{早く|はやく}{出発|しゅっぱつ|departure, setting off|4}したほうがいいよ。4{時半|じはん}にはもう{暗く|くらく}なっちゃうからね！",
+   "en": "アルちゃん! Of course I remember you! Nice, right now is the best time to see them! But the days are short this time of year, so you'd better set off early in the morning. It gets dark by 4:30!",
+   "note": "なっちゃう = なってしまう: it gets dark (whether you like it or not)."
+  },
+  {
+   "speaker": "You",
+   "me": true,
+   "time": "19:22",
+   "jp": "え、そんなに{早く|はやく}？{昼|ひる}から{行く|いく}つもりでした…。{山|やま}の{上|うえ}は{寒い|さむい}ですか？",
+   "en": "Huh, that early? I was planning to go in the afternoon… Is it cold up the mountain?"
+  },
+  {
+   "speaker": "千夏さん",
+   "time": "19:25",
+   "jp": "{寒い|さむい}{寒い|さむい}！{上|うえ}はもう{霜|しも|frost|2}が{降りてる|おりてる}はず。{重ね着|かさねぎ|wearing layers|2}して、{温かい|あたたかい}{飲み物|のみもの}も{持って|もって}いくといいよ。あと、{熊鈴|くますず|bear bell|2}は{絶対|ぜったい|definitely, no matter what|4}ね！",
+   "en": "Freezing! There'll be frost up top already. Wear layers, and it's a good idea to take a hot drink too. Oh, and a bear bell, no matter what!",
+   "note": "〜といいよ = 'it's good to…': the softest way to give advice, like a tip rather than an order."
+  },
+  {
+   "speaker": "You",
+   "me": true,
+   "time": "19:27",
+   "jp": "クマ…{出る|でる}んですか？{怖い|こわい|scary, scared|4}…（スタンプ：ふるえるネコ）",
+   "en": "Bears… there are bears? That's scary… (sticker: shivering cat)"
+  },
+  {
+   "speaker": "千夏さん",
+   "time": "19:31",
+   "jp": "この{辺|へん}は{出る|でる}こともあるよ。{私|わたし}も{去年|きょねん}、{道|みち}に{迷っちゃって|まよっちゃって|to get lost|4}{焦った|あせった|to panic|3}の。{行き先|いきさき|where you're going|3}は{田中|たなか}さんに{伝えて|つたえて|to tell, pass on|4}おいてね。{電波|でんぱ|phone signal|3}が{届かない|とどかない|to reach|3}{所|ところ}もあるから、{地図|ちず}もダウンロードしておくと{安心|あんしん|peace of mind|4}よ！",
+   "en": "They do show up around here sometimes. Last year I got lost myself and panicked. Tell 田中さん where you're going. And there are places with no signal, so download the map too: you'll feel safer!",
+   "note": "迷っちゃって = 迷ってしまって: she got lost, and regrets it."
+  },
+  {
+   "speaker": "You",
+   "me": true,
+   "time": "19:34",
+   "jp": "わかりました！{帰り|かえり}のバスの{便|びん|(bus) service, run|2}も{少ない|すくない}ので、7{時|じ}に{出て|でて}、3{時|じ}までに{下りる|おりる}ことにします。ありがとうございます！",
+   "en": "Got it! There aren't many buses back either, so I'll leave at 7 and be down by 3. Thank you so much!"
+  },
+  {
+   "speaker": "千夏さん",
+   "time": "19:36",
+   "jp": "{偉い|えらい|good for you, well done|4}！{紅葉|こうよう|autumn leaves|3}は{雨|あめ}が{降|ふ}ったらすぐ{散っちゃう|ちっちゃう|to scatter, fall (leaves)|3}から、{明日|あした}{晴れて|はれて}よかったね。{写真|しゃしん}{送って|おくって}ね！（スタンプ：{山|やま}とピース）",
+   "en": "Good for you! The leaves fall right away once it rains, so lucky it's sunny tomorrow. Send me photos! (sticker: mountain and peace sign)",
+   "note": "{偉|えら}い literally means 'great, important', but to someone who does the sensible thing it means 'well done!'."
+  }
+ ],
+ "grammar": {
+  "id": "n4-te-shimau",
+  "pattern": "〜てしまう / 〜ちゃう",
+  "level": "N4",
+  "meaning": "end up doing, do completely (often with regret)",
+  "form": "{動詞|どうし}て{形|けい}: + しまう ({忘|わす}れる → {忘|わす}れてしまう, {迷|まよ}う → {迷|まよ}ってしまう) · casual て: てしまう → ちゃう ({散|ち}っちゃう, {暗|くら}くなっちゃう) · casual で: でしまう → じゃう ({飲|の}んじゃう, {読|よ}んじゃった)",
+  "explanation": "It has two jobs: something is completely finished (全部食べてしまった), or something happened that you didn't want or regret (道に迷ってしまった). In speech and on LINE you'll almost always hear ちゃう / じゃう; てしまう sounds more careful. The classic mistake is attaching it to the wrong form: it's always the て-form, so 飲む → 飲んじゃう, never 飲むちゃう.",
+  "src": ["d1", "d5", "d7", "p1", "p3"],
+  "examples": [
+   {"jp": "{夜中|よなか|middle of the night|3}にケーキを{全部|ぜんぶ}{食|た}べちゃった。", "en": "I ate the whole cake in the middle of the night (oops)."},
+   {"jp": "{電車|でんしゃ}で{寝|ね}てしまって、{終点|しゅうてん|last stop, terminus|3}まで{行|い}っちゃった。", "en": "I fell asleep on the train and ended up going all the way to the last stop."},
+   {"jp": "{宿題|しゅくだい}はもうやってしまいました。", "en": "I've already finished all my homework."}
+  ],
+  "quiz": {
+   "question": "{傘|かさ}を{電車|でんしゃ}に＿＿。{最悪|さいあく|the worst|4}…",
+   "en": "I left my umbrella on the train. The worst…",
+   "options": ["{忘|わす}れちゃった", "{忘|わす}れるちゃった", "{忘|わす}れておいた", "{忘|わす}れちゃおう"],
+   "explain": "A past mistake you regret: 忘れて + しまった → 忘れちゃった, built on the て-form. 〜ておいた means you did it on purpose in advance."
+  }
+ },
+ "kanji": {
+  "kanji": "熊出没注意",
+  "reading": "くましゅつぼつちゅうい",
+  "romaji": "kuma shutsubotsu chūi",
+  "meaning": "Warning: bears in this area",
+  "where": "The yellow sign at almost every mountain trailhead in Nagano, often with a bear silhouette.",
+  "related": "{熊鈴|くますず} = bear bell; {登山口|とざんぐち} = trailhead.",
+  "breakdown": "{熊出没注意|くましゅつぼつちゅうい}: 熊 bear + 出没 appearing (出 come out + 没 sink, vanish → 'comes and goes') + 注意 caution → 'caution: bears come and go here'."
+ },
+ "tip": {
+  "mark": "熊",
+  "title": "Autumn is bear season",
+  "body": "In autumn, Japan's black bears eat as much as they can before winter, and in poor acorn years they come down close to villages. That's why hikers hang a 熊鈴 on their backpack, talk loudly or play a radio on quiet trails: bears usually avoid people they can hear. Local news and town loudspeakers announce sightings as クマの{目撃|もくげき}{情報|じょうほう}, 'bear sighting reports': check them before you go."
+ },
+ "challenge": {
+  "prompt": "{千夏|ちなつ}さん adds one more message: 「あ、{手袋|てぶくろ|gloves|3}は{持って|もって}る？{上|うえ}は{指|ゆび}が{痛い|いたい}くらい{寒い|さむい}よ！」 Tell her that, oops, you left your gloves in Spain, and ask where you could buy some.",
+  "hint": "スペインに{置|お}いてくる · 〜ちゃいました · どこで{買|か}えばいいですか",
+  "model_answer": "{実|じつ}は、スペインに{置いて|おいて}きちゃいました…。どこで{買|か}えばいいですか？",
+  "explanation": "{置|お}いてくる = 'leave behind (and come here)'; adding しまう in its casual form, {置|お}いてきちゃいました, says 'oops, I went and left them'. ちゃいました keeps the ちゃう regret but stays polite, which fits writing to an older acquaintance. {買|か}えばいいですか is the usual way to ask for advice: 'where should I buy them?'."
+ },
+ "vocab": [
+  {"jp": "{紅葉|こうよう}", "reading": "こうよう", "en": "autumn leaves, autumn colours", "level": "N3", "src": "d0", "surface": "紅葉", "note": "The same kanji also read もみじ = Japanese maple. Going to look at them is {紅葉狩|もみじが}り."},
+  {"jp": "{出発|しゅっぱつ}", "reading": "しゅっぱつ", "en": "departure, setting off", "level": "N3", "src": "d1", "surface": "出発", "note": "{出発|しゅっぱつ}する = to set off. On boards at stations and bus stops you'll see 出発 next to {到着|とうちゃく}, arrival."},
+  {"jp": "{重|かさ}ね{着|ぎ}", "reading": "かさねぎ", "en": "wearing layers", "level": "N2", "src": "d3", "surface": "重ね着", "note": "{重|かさ}ねる (to pile up) + {着|き}る. Every weather forecast in late autumn says it."},
+  {"jp": "{怖|こわ}い", "reading": "こわい", "en": "scary; scared", "level": "N4", "src": "d4", "surface": "怖い", "note": "Both 'this is scary' and 'I'm scared'. Also used for strict people: {怖|こわ}い{先生|せんせい}."},
+  {"jp": "{迷|まよ}う", "reading": "まよう", "en": "to get lost; to hesitate", "level": "N3", "src": "d5", "surface": "迷っちゃって", "note": "{道|みち}に{迷|まよ}う = to lose your way. Alone it also means 'can't decide': どっちにするか{迷|まよ}う."},
+  {"jp": "{伝|つた}える", "reading": "つたえる", "en": "to tell, pass on (a message)", "level": "N3", "src": "d5", "surface": "伝えて", "note": "Passing information to someone: {田中|たなか}さんに{伝|つた}えて = let 田中さん know. Also {気持|きも}ちを{伝|つた}える, to put your feelings into words."},
+  {"jp": "{届|とど}く", "reading": "とどく", "en": "to reach; to arrive (a delivery)", "level": "N3", "src": "d5", "surface": "届かない", "note": "{電波|でんぱ}が{届|とど}かない = no signal. Also {荷物|にもつ}が{届|とど}いた = the parcel arrived."},
+  {"jp": "{安心|あんしん}", "reading": "あんしん", "en": "peace of mind, relief", "level": "N3", "src": "d5", "surface": "安心", "note": "〜しておくと{安心|あんしん} = 'do it beforehand and you won't have to worry'. Opposite: {不安|ふあん}."},
+  {"jp": "{散|ち}る", "reading": "ちる", "en": "to scatter, fall (leaves, petals)", "level": "N3", "src": "d7", "surface": "散っちゃう", "note": "Used for leaves and cherry blossoms. {散|ち}る has a sad, beautiful feel in Japanese poetry and songs."}
+ ],
+ "kanji_study": [
+  {
+   "kanji": "迷",
+   "track": "lesson",
+   "on": "メイ",
+   "kun": "まよ(う)",
+   "meaning": "lost, astray, hesitate",
+   "words": [
+    {"jp": "{迷|まよ}う", "reading": "まよう", "en": "to get lost; to hesitate"},
+    {"jp": "{迷子|まいご}", "reading": "まいご", "en": "lost child"},
+    {"jp": "{迷惑|めいわく}", "reading": "めいわく", "en": "trouble, nuisance"}
+   ],
+   "decoys": {"meanings": ["path, road", "rice field", "wander for pleasure"], "readings": ["めいう", "まどう", "さまう"]}
+  },
+  {
+   "kanji": "便",
+   "track": "n3",
+   "on": "ベン・ビン",
+   "kun": "たよ(り)",
+   "meaning": "convenience; mail; transport service",
+   "words": [
+    {"jp": "{便利|べんり}", "reading": "べんり", "en": "convenient"},
+    {"jp": "{不便|ふべん}", "reading": "ふべん", "en": "inconvenient"},
+    {"jp": "{郵便|ゆうびん}", "reading": "ゆうびん", "en": "post, mail"}
+   ],
+   "decoys": {"meanings": ["hard, difficult", "toilet only", "letter, character"], "readings": ["びんり", "へんり", "べんい"]}
+  }
+ ],
+ "extras": [
+  {
+   "title": "Autumn in the mountains",
+   "title_jp": "{秋|あき}の{山|やま}のことば",
+   "intro": "Words you'll see on trail signs, forecasts and in small talk this month.",
+   "items": [
+    {"jp": "{紅葉狩り|もみじがり|going to see autumn leaves|3}", "en": "going to see autumn leaves", "note": "'Maple hunting': nobody picks anything, you just look."},
+    {"jp": "{見頃|みごろ|the best time to see|3}", "en": "the best time to see (leaves, flowers)", "note": "News shows a map of where leaves are {見頃|みごろ} each week."},
+    {"jp": "{登山口|とざんぐち|trailhead|2}", "en": "trailhead", "note": "Often with a box for your {登山届|とざんとどけ|hiking plan form|1}: write your route there."},
+    {"jp": "{初雪|はつゆき|first snow of the year|3}", "en": "the first snow of the season"},
+    {"jp": "{山小屋|やまごや|mountain hut|2}", "en": "mountain hut", "note": "Most close for winter in early November."}
+   ]
+  },
+  {
+   "title": "Giving advice, soft to strong",
+   "title_jp": "アドバイスの{言い方|いいかた}",
+   "intro": "From a gentle tip to 'you must'. 千夏さん used the first two.",
+   "items": [
+    {"jp": "{温かい|あたたかい}{飲み物|のみもの}を{持って|もって}いくといいよ。", "en": "It's good to take a hot drink.", "note": "〜といい: a friendly tip."},
+    {"jp": "{朝|あさ}{早く|はやく}{出た|でた}ほうがいいよ。", "en": "You'd better leave early.", "note": "〜たほうがいい: clear advice."},
+    {"jp": "{熊鈴|くますず|bear bell|2}、{買ったら|かったら}どう？", "en": "Why don't you buy a bear bell?", "note": "〜たらどう？: a suggestion, casual."},
+    {"jp": "{一人|ひとり}で{山|やま}に{入らない|はいらない}ほうがいい。", "en": "You'd better not go into the mountains alone.", "note": "〜ないほうがいい: advice against."},
+    {"jp": "{行き先|いきさき|where you're going|3}は{言わなきゃ|いわなきゃ}だめだよ。", "en": "You have to tell someone where you're going.", "note": "〜なきゃだめ: the strongest, almost a rule."}
+   ]
+  }
+ ]
+}

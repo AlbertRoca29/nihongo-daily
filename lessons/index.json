@@ -57,5 +57,12 @@
   "category": "school-youth",
   "function": "hypotheticals",
   "format": "dialogue"
+ },
+ {
+  "id": "2026-11-11",
+  "topic": "Hiking advice for the autumn leaves",
+  "category": "nature-seasons",
+  "function": "advice",
+  "format": "line"
  }
 ]
