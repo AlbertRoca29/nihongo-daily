@@ -90,16 +90,16 @@
   {
    "speaker": "由紀",
    "time": "21:15",
-   "jp": "えらい！{家族|かぞく}を{心配|しんぱい|worry|4}させないように、{写真|しゃしん}{送|おく}ってあげなよ（スタンプ：ファイト！）",
-   "en": "Good on you! Send them some photos so they don't worry (sticker: You got this!)",
+   "jp": "えらい！{家族|かぞく}を{心配|しんぱい|worry|4}させないように、{写真|しゃしん}{送|おく}ってあげなよ",
+   "en": "Good on you! Send them some photos so they don't worry",
    "who": "yuki"
   },
   {
    "speaker": "アルちゃん",
    "time": "21:16",
-   "jp": "うん、{明日|あした}{送|おく}る！{おやすみ||good night|4}（スタンプ：ねこがおじぎ）",
+   "jp": "うん、{明日|あした}{送|おく}る！{おやすみ||good night|4}",
    "me": true,
-   "en": "Yeah, I'll send them tomorrow! Night (sticker: cat bowing)",
+   "en": "Yeah, I'll send them tomorrow! Night",
    "who": "you"
   }
  ],
@@ -139,7 +139,39 @@
     "{読|よ}めた"
    ],
    "explain": "{読|よ}む → {読|よ}ませる: the teacher (subject) makes the students (に) read. {読|よ}まれた is passive, {読|よ}ませられた is being made to read, {読|よ}めた is could read."
-  }
+  },
+  "mark": [
+   "運転させて",
+   "心配させない",
+   "心配させたく",
+   "食べさせた",
+   "考えさせて",
+   "笑わせた"
+  ],
+  "quiz_more": [
+   {
+    "question": "{部長|ぶちょう|department head|3}は{新人|しんじん|new employee|3}にコピーを＿＿。",
+    "en": "The manager made the new employee do the copying.",
+    "options": [
+     "させた",
+     "された",
+     "させられた",
+     "できた"
+    ],
+    "explain": "Making someone do something: する → させる, and the person made to do it takes に."
+   },
+   {
+    "question": "{子|こ}どもたちを{公園|こうえん}で{自由|じゆう|freely|3}に＿＿。",
+    "en": "I let the kids play freely in the park.",
+    "options": [
+     "{遊|あそ}ばせた",
+     "{遊|あそ}ばれた",
+     "{遊|あそ}ばせられた",
+     "{遊|あそ}べた"
+    ],
+    "explain": "う-verb: 遊ぶ → 遊ばせる. When it's something they want to do, the causative means 'let them'."
+   }
+  ]
  },
  "kanji": {
   "kanji": "既読",

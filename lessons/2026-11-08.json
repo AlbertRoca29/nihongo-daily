@@ -107,7 +107,38 @@
     "{乗|の}ろう"
    ],
    "explain": "'Became able to' = potential form in the dictionary shape ({乗|の}れる) + ようになる; the past goes on なる, not on the verb."
-  }
+  },
+  "mark": [
+   "とれるようになった",
+   "笑うようになった",
+   "読めるようになってきた",
+   "食べられるようになった",
+   "散歩するようになりました"
+  ],
+  "quiz_more": [
+   {
+    "question": "{日本語|にほんご}のニュースが{少|すこ}し＿＿ようになってきた。",
+    "en": "I've started to be able to understand the Japanese news a little.",
+    "options": [
+     "わかる",
+     "わかった",
+     "わかって",
+     "わかろう"
+    ],
+    "explain": "ようになる follows the dictionary (or potential) form: わかるようになる = 'come to understand'."
+   },
+   {
+    "question": "{毎日|まいにち}{練習|れんしゅう}したので、{泳|およ}げる＿＿。",
+    "en": "I practised every day, so now I can swim.",
+    "options": [
+     "ようになった",
+     "ようにした",
+     "ことにした",
+     "ことになった"
+    ],
+    "explain": "A change in ability over time = ようになった. ようにした is your own effort, ことにした a decision."
+   }
+  ]
  },
  "kanji": {
   "kanji": "原稿用紙",

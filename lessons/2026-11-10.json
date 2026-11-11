@@ -115,7 +115,38 @@
     "{行|い}って"
    ],
    "explain": "ことになる takes the dictionary form, even for future events; the past goes on なる (なった). And because the company decided, it's ことになる, not ことにする."
-  }
+  },
+  "mark": [
+   "手伝ってくれることになりました",
+   "来ることになった",
+   "引っ越すことになりました",
+   "入ることになった",
+   "中止することになりました"
+  ],
+  "quiz_more": [
+   {
+    "question": "{会議|かいぎ}の{結果|けっか|result|4}、{新|あたら}しい{店|みせ}を{出|だ}す＿＿。",
+    "en": "After the meeting, it was decided that we'll open a new shop.",
+    "options": [
+     "ことになった",
+     "ことにした",
+     "ようになった",
+     "ことがある"
+    ],
+    "explain": "Decided by the meeting, not by you alone: ことになった. ことにした sounds like your own personal choice."
+   },
+   {
+    "question": "{来月|らいげつ}から、{寮|りょう|dormitory|3}に＿＿ことになりました。",
+    "en": "From next month, I'll be living in the dorm (it's been arranged).",
+    "options": [
+     "{住|す}む",
+     "{住|す}んだ",
+     "{住|す}んで",
+     "{住|す}もう"
+    ],
+    "explain": "ことになる follows the dictionary form: 住むことになった."
+   }
+  ]
  },
  "kanji": {
   "kanji": "進路指導室",

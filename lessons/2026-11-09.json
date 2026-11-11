@@ -93,8 +93,8 @@
   {
    "speaker": "アルちゃん",
    "time": "17:51",
-   "jp": "ありがとう。ちょっと{不安|ふあん|anxious, uneasy|3}だったけど、{安心|あんしん|relief, peace of mind|4}した（スタンプ：うさぎがペコリ）",
-   "en": "Thanks. I was a bit anxious, but now I feel better (sticker: bunny bowing)",
+   "jp": "ありがとう。ちょっと{不安|ふあん|anxious, uneasy|3}だったけど、{安心|あんしん|relief, peace of mind|4}した",
+   "en": "Thanks. I was a bit anxious, but now I feel better",
    "me": true,
    "who": "you"
   },
@@ -143,7 +143,39 @@
     "ことがある"
    ],
    "explain": "It's your own decision, so ことにした. ことになった = it was decided for you; ようにした = made an effort to; ことがある = sometimes happens."
-  }
+  },
+  "mark": [
+   "作ることにした",
+   "聞いてみることにする",
+   "持ち歩くことにした",
+   "飲まないことにしました",
+   "見ないことにしている",
+   "することにした"
+  ],
+  "quiz_more": [
+   {
+    "question": "{今年|ことし}の{夏|なつ}は、{北海道|ほっかいどう}に＿＿ことにした。",
+    "en": "This summer, I've decided to go to Hokkaido.",
+    "options": [
+     "{行|い}く",
+     "{行|い}った",
+     "{行|い}って",
+     "{行|い}こう"
+    ],
+    "explain": "ことにする takes the dictionary form (or the ない-form): 行くことにした = 'I decided to go'."
+   },
+   {
+    "question": "{体|からだ}のために、{毎晩|まいばん}12{時|じ}までに{寝|ね}る＿＿。",
+    "en": "For my health, I make it a rule to be in bed by midnight.",
+    "options": [
+     "ことにしている",
+     "ことになっている",
+     "ようになっている",
+     "ことがある"
+    ],
+    "explain": "ことにしている = a rule you set for yourself. ことになっている is a rule decided by others."
+   }
+  ]
  },
  "kanji": {
   "kanji": "半額",

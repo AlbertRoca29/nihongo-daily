@@ -448,6 +448,12 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
 .furi-ad ruby.peek rt.kn{opacity:1}
 .furi-ad ruby:has(rt.kn){cursor:pointer}
 .furi-off .gl ruby,.furi-ad .gl ruby{border-bottom:0}
+/* kanji beyond N4: furigana stays on whatever the setting */
+.furi-off rt.hd,.furi-ad rt.hd{opacity:1}
+.furi-off ruby:has(rt.hd){border-bottom:0;cursor:auto}
+/* the grammar point inside a sentence */
+mark.gm{background:color-mix(in srgb,var(--stamp) 15%,transparent);color:inherit;font-weight:700;border-radius:4px;box-shadow:inset 0 -2px 0 var(--stamp);padding:0 1px}
+.gm rt{font-weight:500}
 
 /* header E: a thin line + the step name */
 .ptop{display:flex;flex-direction:column;gap:6px;padding-top:6px}
@@ -481,7 +487,11 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
 .typing i{width:6px;height:6px;border-radius:50%;background:var(--muted);opacity:.4;animation:blink 1s infinite}
 .typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
 @keyframes blink{50%{opacity:1}}
-.chat-ctl{display:flex;gap:8px;justify-content:center}
+.chat-ctl{display:flex;flex-direction:column;gap:8px}
+.chat-ctl.live{position:sticky;bottom:0;z-index:2;padding:10px 0 4px;background:linear-gradient(to bottom,transparent,var(--paper) 18px)}
+.chat-ctl .row{display:flex;align-items:center}
+.chat-ctl .btn{white-space:nowrap}
+.composer.reply{align-items:center;box-shadow:var(--shadow, 0 1px 3px rgba(0,0,0,.12))}
 .ring{border-radius:50%;padding:2px;display:inline-grid;flex:none}
 .ring img,.ring span{border-radius:50%;display:block}
 img.ava{box-shadow:0 0 0 2px var(--ringc,transparent)}
@@ -820,24 +830,104 @@ rt{font-size:max(.5em,9.5px)}
   // eligible: every kanji in the segment is N5 or N4 (KANJIDIC JLPT field 5 or 4)
   const easyKanji = seg => [...seg].filter(isKanji).every(ch => KD[ch] && KD[ch][4] >= 4);
   const known = (seg, r, KR) => easyKanji(seg) && ((KR || getKR())[seg + ":" + r] || 0) >= 3;
-  const rubyWord = (b, r, KR) => {
-    if (!r) return b;
-    const segs = b.match(/[ぁ-ゖゝゞー]+|[^ぁ-ゖゝゞー]+/g) || [b];
-    const rb = (s, rd) => `<ruby>${s}<rt${known(s, rd, KR) ? ' class="kn"' : ""}>${rd}</rt></ruby>`;
-    if (segs.length > 1){
-      const re = new RegExp("^" + segs.map(s => KANA.test(s) ? s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") : "(.+?)").join("") + "$");
-      const m = re.exec(r);
-      if (m){ let g = 1; return segs.map(s => KANA.test(s) ? s : rb(s, m[g++])).join(""); }
-    }
-    return rb(b, r);
+  // kanji outside N5/N4 (or not in JLPT at all): furigana always shows, whatever the furigana setting
+  const hardSeg = seg => [...seg].some(ch => isKanji(ch) && !(KD[ch] && KD[ch][4] >= 4));
+  // readings seen in lesson markup, so plain text (quiz options, notes) can get furigana on hard kanji too
+  const READ = store.get("readings", {});
+  let readDirty = false;
+  const learnReadings = o => {
+    if (typeof o === "string"){
+      for (const m of o.matchAll(MARK)){
+        if (!m[2]) continue;
+        const b = m[1], pairs = segPairs(b, m[2]);
+        pairs.forEach(([seg, rd]) => {
+          const i = b.indexOf(seg), next = b[i + seg.length] || "", key = seg.length === 1 ? seg + (next && KANA.test(next) ? "+" : "") : seg;
+          if (seg.length === 1 && key === seg) return;          // a lone kanji with no okurigana: too ambiguous to reuse
+          if (!READ[key]){ READ[key] = rd; readDirty = true; }
+        });
+      }
+    } else if (Array.isArray(o)) o.forEach(learnReadings);
+    else if (o && typeof o === "object") Object.values(o).forEach(learnReadings);
   };
-  const glossSrc = [];
-  const ruby = s => {
-    const raw = String(s ?? ""), si = raw.includes("|") ? glossSrc.push(raw) - 1 : -1, KR = getKR();
-    return esc(raw).replace(MARK, (m, b, r, g, f) => {
-      if (!g) return r ? rubyWord(b, r, KR) : m;
-      return `<span class="gl" tabindex="0" role="button" data-b="${b}" data-gl="${g}" data-r="${r}" data-f="${f || ""}" data-si="${si}">${rubyWord(b, r, KR)}</span>`;
+  const saveReadings = () => { if (readDirty){ store.set("readings", READ); readDirty = false; } };
+  const readingFor = (run, next) => run.length === 1 ? (next && KANA.test(next) ? READ[run + "+"] : null) : READ[run] || null;
+  const MK = s => `<mark class="gm">${s}</mark>`;
+  // join [html, marked] pieces, merging neighbours inside one <mark>
+  const joinMarked = ps => { let out = "", buf = ""; ps.forEach(([h, m]) => { if (m) buf += h; else { if (buf){ out += MK(buf); buf = ""; } out += h; } }); return out + (buf ? MK(buf) : ""); };
+  const rb = (s, rd, KR) => `<ruby>${esc(s)}<rt class="${hardSeg(s) ? "hd" : known(s, rd, KR) ? "kn" : ""}">${esc(rd)}</rt></ruby>`;
+  const isMarked = (hl, a, n) => { if (!hl) return false; for (let k = a; k < a + n; k++) if (hl.has(k)) return true; return false; };
+  // a {base|reading} block as pieces: kanji runs with their reading, kana one by one (so a highlight can start mid-word)
+  const rubyPieces = (b, r, KR, hl, off) => {
+    const segs = b.match(/[ぁ-ゖゝゞー]+|[^ぁ-ゖゝゞー]+/g) || [b];
+    let pairs = null;
+    if (r && segs.length > 1){
+      const re = new RegExp("^" + segs.map(x => KANA.test(x) ? x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") : "(.+?)").join("") + "$"), m = re.exec(r);
+      if (m){ let g = 1; pairs = segs.map(x => KANA.test(x) ? [x, null] : [x, m[g++]]); }
+    }
+    if (!pairs) pairs = [[b, r || null]];
+    const ps = []; let o = off;
+    pairs.forEach(([x, rd]) => {
+      if (rd) ps.push([rb(x, rd, KR), isMarked(hl, o, x.length)]);
+      else [...x].forEach((ch, j) => ps.push([esc(ch), isMarked(hl, o + j, 1)]));
+      o += x.length;
     });
+    return ps;
+  };
+  const rubyWord = (b, r, KR) => r ? joinMarked(rubyPieces(b, r, KR, null, 0)) : esc(b);
+  // plain text: hard kanji get furigana when a reading is known from lesson markup
+  const textPieces = (t, hl, off) => {
+    const ps = [], runs = t.match(/[一-鿿㐀-䶿々]+|[^一-鿿㐀-䶿々]+/g) || [];
+    let o = off, i = 0;
+    runs.forEach(x => {
+      const next = t[i + x.length];
+      if (isKanji(x[0]) && hardSeg(x)){ const rd = readingFor(x, next); if (rd){ ps.push([`<ruby>${esc(x)}<rt class="hd">${esc(rd)}</rt></ruby>`, isMarked(hl, o, x.length)]); o += x.length; i += x.length; return; } }
+      [...x].forEach((ch, j) => ps.push([esc(ch), isMarked(hl, o + j, 1)]));
+      o += x.length; i += x.length;
+    });
+    return ps;
+  };
+  // positions in the plain text covered by any of the strings in marks
+  const hlSet = (p, marks) => {
+    const set = new Set();
+    (marks || []).forEach(w => { w = plain(w); if (!w) return; let i = p.indexOf(w); while (i >= 0){ for (let k = i; k < i + w.length; k++) set.add(k); i = p.indexOf(w, i + 1); } });
+    return set.size ? set : null;
+  };
+  const glossSrc = [], glossIdx = new Map();
+  const glossId = raw => { let i = glossIdx.get(raw); if (i == null){ i = glossSrc.push(raw) - 1; glossIdx.set(raw, i); } return i; };
+  // ruby(s): furigana markup → html. opts.hl: strings to highlight (grammar), opts.blank: a string to replace by ＿＿
+  const ruby = (s, opts) => {
+    let raw = String(s ?? "");
+    const si = raw.includes("|") ? glossId(raw) : -1, KR = getKR();
+    const hl = opts && opts.hl ? hlSet(plain(raw), opts.hl) : null;
+    const re = new RegExp(MARK.source, "g");
+    let ps = [], last = 0, pos = 0, m;
+    while ((m = re.exec(raw))){
+      const t = raw.slice(last, m.index); ps.push(...textPieces(t, hl, pos)); pos += t.length;
+      const [all, b, r, g, f] = m, bp = rubyPieces(b, r, KR, hl, pos);
+      if (g){
+        // a tap-for-meaning word: wholly highlighted → one piece inside the run; partly → its own marks inside the span
+        const allIn = bp.every(x => x[1]), span = inner => `<span class="gl" tabindex="0" role="button" data-b="${esc(b)}" data-gl="${esc(g)}" data-r="${esc(r)}" data-f="${f || ""}" data-si="${si}">${inner}</span>`;
+        ps.push(allIn ? [span(bp.map(x => x[0]).join("")), true] : [span(joinMarked(bp)), false]);
+      } else ps.push(...bp);
+      pos += b.length; last = m.index + all.length;
+    }
+    ps.push(...textPieces(raw.slice(last), hl, pos));
+    return joinMarked(ps);
+  };
+  // ruby for exercises: plain strings too (hard kanji get their reading); blank = text to hide as ＿＿
+  const rubyQ = s => ruby(s);
+  const rubyBlank = (s, w) => {
+    const raw = String(s ?? ""), p = plain(raw), i = w ? p.indexOf(w) : -1;
+    if (i < 0) return ruby(raw);
+    // cut the marked-up string at plain positions i and i + w.length
+    const cut = (str, at) => { let pp = 0, out = "", re = new RegExp(MARK.source, "g"), last = 0, m;
+      while ((m = re.exec(str))){ const t = str.slice(last, m.index); if (pp + t.length >= at) return out + t.slice(0, at - pp); out += t; pp += t.length;
+        if (pp + m[1].length > at) return out; out += m[0]; pp += m[1].length; last = m.index + m[0].length; }
+      return out + str.slice(last).slice(0, at - pp); };
+    const head = cut(raw, i), tailStart = (() => { let pp = 0, re = new RegExp(MARK.source, "g"), last = 0, m; const at = i + w.length;
+      while ((m = re.exec(raw))){ const t = raw.slice(last, m.index); if (pp + t.length >= at) return last + (at - pp); pp += t.length; if (pp + m[1].length >= at) return m.index + m[0].length; pp += m[1].length; last = m.index + m[0].length; }
+      return last + (at - pp); })();
+    return ruby(head) + "<mark>＿＿</mark>" + ruby(raw.slice(tailStart));
   };
 
   let lessons = [], lesson = null, steps = [], idx = 0, castById = {}, STK = {};
@@ -924,7 +1014,8 @@ rt{font-size:max(.5em,9.5px)}
     return null;
   };
   let playRun = 0;
-  const stopAll = () => { playRun++; try{ player.pause(); }catch{} };
+  let curDone = null;
+  const stopAll = () => { playRun++; try{ player.pause(); }catch{} const d = curDone; curDone = null; if (d) d(false); };
   // resolves when the clip ends; returns false if there was no audio
   const playOne = async (lid, keys, slow, run) => {
     let m = await loadAudio(lid), src = findIn(m, keys, slow), rate = 1;
@@ -932,10 +1023,22 @@ rt{font-size:max(.5em,9.5px)}
     if (!src){ m = await loadAudio(lid, true); src = findIn(m, keys, slow) || findIn(m, keys, false); }
     if (run !== playRun) return true;
     if (!src){ toast("音声準備中 · the audio for this is on its way"); return false; }
-    return new Promise(done => {
+    return new Promise(res => {
+      let fin = false, retried = false;
+      const done = v => { if (fin) return; fin = true; if (curDone === done) curDone = null; res(v); };
+      curDone = done;
+      // some phones refuse a clip served from the offline cache: fetch it whole and play it from memory instead
+      const retry = async () => {
+        if (retried) return;
+        if (run !== playRun){ done(false); return; }
+        retried = true;
+        try{ const r = await fetch(src); if (!r.ok) throw 0; const u = URL.createObjectURL(await r.blob()); if (run !== playRun){ done(false); return; }
+          player.onerror = () => done(false); player.src = u; player.playbackRate = rate; await player.play(); }
+        catch(e){ if (e && e.name === "NotAllowedError") toast("Tap ▶ again to play"); done(false); }
+      };
       player.src = src; player.preservesPitch = true; player.playbackRate = rate;
-      player.onended = () => done(true); player.onerror = () => done(false);
-      player.play().catch(() => done(false));
+      player.onended = () => done(true); player.onerror = retry;
+      player.play().catch(e => { if (e && e.name === "NotAllowedError"){ toast("Tap ▶ again to play"); done(false); } else if (e && e.name === "AbortError") done(false); else retry(); });
     });
   };
   const play = (lid, keys, slow) => { stopAll(); return playOne(lid, keys, slow, playRun); };
@@ -1072,12 +1175,12 @@ rt{font-size:max(.5em,9.5px)}
       box.innerHTML = `<div class="card" style="display:flex;flex-direction:column;gap:10px">
           ${q.ask || qs.length > 1 ? `<div class="row"><span class="label">${esc(q.ask)}</span>${qs.length > 1 ? `<span class="count">${qi+1}/${qs.length}</span>` : ""}</div>` : ""}
           <div class="qprompt ${q.cls || ""}">${q.prompt}</div></div>
-        <div class="opts">${opts.map((x, i) => `<button class="opt ${q.jpo ? "jpo" : ""}" data-o="${i}">${esc(x.o)}</button>`).join("")}</div><div class="qafter"></div>`;
+        <div class="opts">${opts.map((x, i) => `<button class="opt ${q.jpo ? "jpo" : ""}" data-o="${i}">${q.fmt ? q.fmt(x.o) : esc(x.o)}</button>`).join("")}</div><div class="qafter"></div>`;
       box.querySelectorAll("[data-o]").forEach(b => b.onclick = () => {
         const pick = opts[+b.dataset.o];
         box.querySelectorAll("[data-o]").forEach((bb, i) => { bb.disabled = true; if (opts[i].ok) bb.classList.add("right"); });
         if (pick.ok){ right++; if (q.onRight) q.onRight(); } else { b.classList.add("wrong"); if (q.onWrong) q.onWrong(); }
-        box.querySelector(".qafter").innerHTML = `${q.note ? `<p class="note" style="margin:4px 0 0">${q.note}</p>` : ""}${!pick.ok && q.wrongNote ? `<p class="note" style="margin:4px 0 0">${q.wrongNote}</p>` : ""}<button class="btn primary" style="width:100%;margin-top:8px">${qi === qs.length - 1 ? "Finish" : "Next question"}</button>`;
+        box.querySelector(".qafter").innerHTML = `${q.note ? `<p class="note" style="margin:4px 0 0">${q.note}</p>` : ""}${!pick.ok && q.wrongNote ? `<p class="note" style="margin:4px 0 0">${q.wrongNote}</p>` : ""}${pick.ok && q.rightNote ? `<p class="note" style="margin:4px 0 0">${q.rightNote}</p>` : ""}<button class="btn primary" style="width:100%;margin-top:8px">${qi === qs.length - 1 ? "Finish" : "Next question"}</button>`;
         box.querySelector(".qafter .btn").onclick = () => { qi++; show(); };
       });
     };
@@ -1162,10 +1265,9 @@ rt{font-size:max(.5em,9.5px)}
     if (f === "line"){
       const others = [...new Set(L.dialogue.filter(d => !d.me).map(d => d.who))];
       const head = others.length === 1 ? `${avatar(others[0], L.dialogue.find(d => !d.me).speaker, false, true, 26)}<span>${esc(L.dialogue.find(d => !d.me).speaker)}</span>` : esc([...new Set(L.dialogue.filter(d => !d.me).map(d => d.speaker))].join(", "));
-      const live = !store.get("chat:" + L.id, false);
       return `<div class="step">${setting}
-        <div class="chat">${others.length === 1 ? "" : `<div class="chat-head">${head}</div>`}<div class="chat-head" style="font-weight:600">${esc(dateJP(L.id))}</div><div id="chatBody" style="display:flex;flex-direction:column;gap:8px">${live ? "" : L.dialogue.map((d, i) => chatLine(L, d, i, {read:true})).join("")}</div></div>
-        ${live ? `<div class="chat-ctl" id="chatCtl"><button class="btn primary" id="chatGo">▶ Start the chat</button><button class="btn ghost" id="chatAll">Show all</button></div>` : `<div class="chat-ctl"><button class="btn ghost" id="chatGo">▶ Replay</button><button class="btn ghost" id="playAll">${ICON_SAY} Read aloud</button></div>`}
+        <div class="chat">${others.length === 1 ? "" : `<div class="chat-head">${head}</div>`}<div class="chat-head" style="font-weight:600">${esc(dateJP(L.id))}</div><div id="chatBody" style="display:flex;flex-direction:column;gap:8px"></div></div>
+        <div class="chat-ctl" id="chatCtl"></div>
         ${hint}</div>`;
     }
     if (f === "story"){
@@ -1211,32 +1313,102 @@ rt{font-size:max(.5em,9.5px)}
       if (!open){ bub.classList.add("sel"); slot.innerHTML = iconRow(L, i, L.dialogue[i]); }
     };
     const pa = $("playAll"); if (pa) pa.onclick = () => playChain(L.id, L.dialogue.filter(d => !d.sticker).map(d => [`d${L.dialogue.indexOf(d)}`, plain(d.jp)]));
-    if (fmtOf(L) === "line"){
-      const go = $("chatGo"), all = $("chatAll");
-      if (go) go.onclick = () => liveChat(L);
-      if (all) all.onclick = () => { stopAll(); store.set("chat:" + L.id, true); $("chatBody").innerHTML = L.dialogue.map((d, i) => chatLine(L, d, i, {read:true})).join(""); $("chatCtl").innerHTML = `<button class="btn ghost" id="chatGo">▶ Replay</button>`; $("chatGo").onclick = () => liveChat(L); };
-    }
+    if (fmtOf(L) === "line") initChat(L);
   }
-  // C2: messages arrive one by one, with typing dots, 既読 and their audio
-  async function liveChat(L){
-    stopAll(); const run = playRun, body = $("chatBody"); if (!body) return;
-    body.innerHTML = ""; const ctl = $("chatCtl"); if (ctl) ctl.innerHTML = `<button class="btn ghost" id="chatAll2">Show all</button>`;
-    const skip = $("chatAll2"); if (skip) skip.onclick = () => { stopAll(); store.set("chat:" + L.id, true); body.innerHTML = L.dialogue.map((d, i) => chatLine(L, d, i, {read:true})).join(""); ctl.innerHTML = `<button class="btn ghost" id="chatGo">▶ Replay</button>`; $("chatGo").onclick = () => liveChat(L); };
-    const wait = ms => new Promise(r => setTimeout(r, ms));
-    const sc = () => { const st = $("stage"); st.scrollTop = st.scrollHeight; };
-    for (let i = 0; i < L.dialogue.length; i++){
-      if (run !== playRun) return;
-      const d = L.dialogue[i];
-      if (!d.me){
-        const ty = document.createElement("div"); ty.className = "line"; ty.innerHTML = `${avatar(d.who, d.speaker, false, true)}<span class="typing"><i></i><i></i><i></i></span>`;
-        body.appendChild(ty); sc(); await wait(900); ty.remove(); if (run !== playRun) return;
-        const prev = [...body.querySelectorAll(".line.me .side")].pop(); if (prev && !prev.querySelector(".kidoku")) prev.insertAdjacentHTML("afterbegin", `<span class="kidoku">既読</span>`);
-      } else await wait(500);
-      body.insertAdjacentHTML("beforeend", chatLine(L, d, i)); body.lastElementChild.classList.add("step"); sc();
-      if (!d.sticker && d.kind !== "voice") await playOne(L.id, [`d${i}`, plain(d.jp)], false, run); else await wait(900);
-      await wait(350);
+  /* LINE chat: step by step (tap for each new message, silent unless you ask), auto, or listen to all */
+  const CHAT_MODES = {step:"Step by step", auto:"Auto", listen:"Listen to all"};
+  const CHAT_HINT = {step:"Tap Next for each new message. No sound unless you tap ▶ on a bubble (or turn 🔊 on).", auto:"Messages arrive on their own, silently. Pause any time.", listen:"Messages arrive on their own with every voice, yours too."};
+  let CH = null;
+  const chatMode = () => CHAT_MODES[store.get("chatMode", "step")] ? store.get("chatMode", "step") : "step";
+  const chatSound = () => !!store.get("chatSound", false);
+  function initChat(L){
+    CH = {L, i:0, token:0, busy:false};
+    const done = store.get("chat:" + L.id, false);
+    if (done) chatShowAll(L, false); else chatIdle(L, false);
+    $("chatCtl").onclick = e => {
+      const b = e.target.closest("button"); if (!b || !CH || CH.L !== L) return;
+      if (b.dataset.cm){ store.set("chatMode", b.dataset.cm); chatIdle(L, CH.i >= L.dialogue.length); return; }
+      if (b.hasAttribute("data-cgo")){ chatStart(L, chatMode()); return; }
+      if (b.hasAttribute("data-call")){ chatShowAll(L, true); return; }
+      if (b.hasAttribute("data-cnext")){ chatStep(L); return; }
+      if (b.hasAttribute("data-cpause")){ CH.token++; stopAll(); CH.busy = false; chatStepCtl(L); return; }
+      if (b.hasAttribute("data-cauto")){ chatAuto(L, b.dataset.cauto); return; }
+      if (b.hasAttribute("data-csnd")){ store.set("chatSound", !chatSound()); chatStepCtl(L); return; }
+      if (b.hasAttribute("data-call-read")){ playChain(L.id, L.dialogue.map((d, i) => d.sticker ? null : [`d${i}`, plain(d.jp)]).filter(Boolean)); return; }
+    };
+  }
+  const chatCtl = (html, live) => { const c = $("chatCtl"); if (c){ c.innerHTML = html; c.classList.toggle("live", !!live); } };
+  const modePick = () => `<div class="seg" role="tablist" aria-label="How the chat plays">${Object.entries(CHAT_MODES).map(([k, v]) => `<button role="tab" data-cm="${k}" aria-selected="${chatMode() === k}">${v}</button>`).join("")}</div>`;
+  function chatIdle(L, done){
+    const m = chatMode();
+    chatCtl(`${modePick()}<p class="note" style="margin:0;text-align:center">${CHAT_HINT[m]}</p>
+      <div class="row" style="gap:8px;justify-content:center"><button class="btn primary" data-cgo>${done ? "↺ Replay" : "▶ Start the chat"}</button>${done ? `<button class="btn ghost" data-call-read>${ICON_SAY} Read aloud</button>` : `<button class="btn ghost" data-call>Show all</button>`}</div>`);
+  }
+  function chatShowAll(L, save){
+    if (CH) CH.token++; stopAll();
+    if (save) store.set("chat:" + L.id, true);
+    const body = $("chatBody"); if (!body) return;
+    body.innerHTML = L.dialogue.map((d, i) => chatLine(L, d, i, {read:true})).join("");
+    CH.i = L.dialogue.length; chatIdle(L, true);
+  }
+  function chatStart(L, mode){
+    CH.token++; stopAll(); CH.i = 0; CH.busy = false;
+    const body = $("chatBody"); if (body) body.innerHTML = "";
+    if (mode === "step") chatStepCtl(L); else chatAuto(L, mode);
+  }
+  const chatScroll = () => { const st = $("stage"); if (st) st.scrollTop = st.scrollHeight; };
+  const chatWait = ms => new Promise(r => setTimeout(r, ms));
+  // show message i (typing dots first for the other person); resolves false if interrupted
+  async function chatReveal(L, i, tok, typingMs){
+    const body = $("chatBody"), d = L.dialogue[i]; if (!body) return false;
+    if (!d.me && typingMs){
+      const ty = document.createElement("div"); ty.className = "line"; ty.innerHTML = `${avatar(d.who, d.speaker, false, true)}<span class="typing"><i></i><i></i><i></i></span>`;
+      body.appendChild(ty); chatScroll(); await chatWait(typingMs); ty.remove();
+      if (tok !== CH.token || !body.isConnected) return false;
     }
-    if (run === playRun){ store.set("chat:" + L.id, true); if (ctl){ ctl.innerHTML = `<button class="btn ghost" id="chatGo">▶ Replay</button>`; $("chatGo").onclick = () => liveChat(L); } }
+    if (!d.me){ const prev = [...body.querySelectorAll(".line.me .side")].pop(); if (prev && !prev.querySelector(".kidoku")) prev.insertAdjacentHTML("afterbegin", `<span class="kidoku">既読</span>`); }
+    body.insertAdjacentHTML("beforeend", chatLine(L, d, i)); body.lastElementChild.classList.add("step"); chatScroll();
+    CH.i = i + 1;
+    return true;
+  }
+  const chatFinished = L => { store.set("chat:" + L.id, true); chatIdle(L, true); };
+  const chatAudio = (L, i) => { const d = L.dialogue[i]; return d.sticker ? null : [`d${i}`, plain(d.jp)]; };
+  function chatStepCtl(L){
+    if (CH.i >= L.dialogue.length){ chatFinished(L); return; }
+    const d = L.dialogue[CH.i], snd = chatSound();
+    const mine = d.me ? `<div class="composer reply"><div class="jp-mid" style="flex:1;min-width:0;padding:6px 4px">${d.sticker && STK[d.sticker] ? `<img src="${esc(STK[d.sticker].img)}" alt="" style="height:44px">` : ruby(d.jp)}</div><button class="send" data-cnext aria-label="Send">↑</button></div>` : "";
+    chatCtl(`${mine}<div class="row" style="gap:8px;justify-content:center;flex-wrap:nowrap">
+        ${d.me ? "" : `<button class="btn primary" data-cnext style="flex:1">Next message ›</button>`}
+        <button class="btn ghost" data-csnd aria-pressed="${snd}" aria-label="${snd ? "Sound on" : "Sound off"}" title="Play each new message">${snd ? "🔊" : "🔇"}</button>
+        <button class="btn ghost" data-cauto="auto" aria-label="Play the rest automatically">Auto ▶</button>
+      </div><p class="note" style="margin:0;text-align:center">${CH.i}/${L.dialogue.length}${d.me ? " · your turn: tap ↑ to send" : ""}</p>`, true);
+  }
+  async function chatStep(L){
+    if (CH.busy || CH.i >= L.dialogue.length) return;
+    CH.busy = true; const tok = ++CH.token, i = CH.i;
+    stopAll();
+    const ok = await chatReveal(L, i, tok, 550);
+    CH.busy = false;
+    if (!ok) return;
+    chatStepCtl(L);
+    if (chatSound()){ const k = chatAudio(L, i); if (k) play(L.id, k); }
+  }
+  async function chatAuto(L, mode){
+    CH.token++; stopAll(); const tok = CH.token; CH.busy = true;
+    chatCtl(`<div class="row" style="gap:8px;justify-content:center"><button class="btn ghost" data-cpause>⏸ Pause</button><button class="btn ghost" data-call>Show all</button></div><p class="note" style="margin:0;text-align:center">${mode === "listen" ? "Listening to everything" : "Auto"} · pause to go step by step</p>`, true);
+    const listen = mode === "listen";
+    while (CH.i < L.dialogue.length){
+      if (tok !== CH.token || !$("chatBody")) return;
+      const i = CH.i, d = L.dialogue[i], len = plain(d.jp || "").length;
+      const typing = d.me ? 0 : listen ? 800 : Math.min(2200, 600 + 30 * len);
+      if (d.me) await chatWait(listen ? 450 : 700);
+      if (tok !== CH.token) return;
+      if (!await chatReveal(L, i, tok, typing)) return;
+      const k = chatAudio(L, i);
+      if (listen && k){ const run = (stopAll(), playRun); await playOne(L.id, k, false, run); if (run !== playRun){ if (tok === CH.token){ CH.token++; CH.busy = false; chatStepCtl(L); } return; } await chatWait(350); }
+      else await chatWait(Math.min(4200, 1200 + 70 * len));
+    }
+    if (tok === CH.token){ CH.busy = false; chatFinished(L); }
   }
 
   /* ---- phrases on one screen ---- */
@@ -1302,7 +1474,18 @@ rt{font-size:max(.5em,9.5px)}
   const formList = form => { const parts = String(form || "").split(/\s+[·・;；]\s+|\n/).map(s => s.trim()).filter(Boolean); return parts.length ? `<ul class="gform">${parts.map(formRule).join("")}</ul>` : ""; };
   const G_TABS = ["意味", "作り方", "今日の文", "チェック"];
   let gTab = 0;
-  const tapLine = (key, jp, en) => `<div class="tapen" data-tapen><div class="bubble-row"><div class="gline">${ruby(jp)}</div>${key !== null ? `<button class="play" data-play="${key ? key + "|" : ""}${esc(plain(jp))}" aria-label="Play">${ICON_SAY}</button>` : ""}</div><div class="en" hidden>${esc(en)}</div></div>`;
+  // what to highlight in example sentences: grammar.mark, or a guess from the pattern
+  const gMarks = G => {
+    if (Array.isArray(G.mark) && G.mark.length) return G.mark;
+    const out = [];
+    plain(G.pattern || "").replace(/[（(][^）)]*[）)]/g, "").split(/[\/／・、,，\s]+/).map(x => x.replace(/^[〜～~]+/, "").trim()).filter(x => x.length >= 2).forEach(x => {
+      out.push(x);
+      if (/する$/.test(x)) out.push(x.slice(0, -2) + "し");
+      else if (/[うくぐすつぬぶむるい]$/.test(x) && x.length >= 4) out.push(x.slice(0, -1));
+    });
+    return out.filter(x => x.length >= 3);
+  };
+  const tapLine = (key, jp, en, hl) => `<div class="tapen" data-tapen><div class="bubble-row"><div class="gline">${ruby(jp, hl ? {hl} : null)}</div>${key !== null ? `<button class="play" data-play="${key ? key + "|" : ""}${esc(plain(jp))}" aria-label="Play">${ICON_SAY}</button>` : ""}</div><div class="en" hidden>${esc(en)}</div></div>`;
   function grammarPanel(L, i){
     const G = L.grammar, next = i < 3 ? `<button class="btn ghost" data-gt="${i + 1}" style="width:100%">${G_TABS[i + 1]} ›</button>` : "";
     if (i === 0) return `<div class="card gsec" style="gap:10px"><div class="row"><span class="lvl ${esc(G.level)}">${esc(G.level)}</span>${starBtn("g:" + G.id, grammarDef(L, G))}</div>
@@ -1310,10 +1493,11 @@ rt{font-size:max(.5em,9.5px)}
         ${G.explanation ? `<p style="margin:0;font-size:15px;line-height:1.6">${ruby(G.explanation)}</p>` : ""}</div>${next}`;
     if (i === 1) return `<div class="card gsec">${formList(G.form)}</div>${next}`;
     if (i === 2){
-      const inLesson = (G.src || []).map(r => [r, lineOf(L, r)]).filter(x => x[1]).slice(0, 2);
-      return `<div class="card gsec" style="gap:12px">${inLesson.map(([r, x]) => tapLine(r, x.jp, x.en)).join("")}
-          <p class="note" style="margin:0">Tap a line for English.</p></div>
-        ${(G.examples || []).length ? `<button class="fold" data-gfold>▸ ${G.examples.length} more example${G.examples.length > 1 ? "s" : ""}</button><div class="card gsec" id="gex" hidden style="gap:12px">${G.examples.map(x => tapLine("", x.jp, x.en)).join("")}</div>` : ""}${next}`;
+      const hl = gMarks(G), all = (G.src || []).map(r => [r, lineOf(L, r)]).filter(x => x[1]), inLesson = all.slice(0, 2);
+      const more = [...all.slice(2).map(([r, x]) => [r, x]), ...(G.examples || []).map(x => ["", x])];
+      return `<div class="card gsec" style="gap:12px"><div class="row" style="justify-content:flex-start;gap:8px"><mark class="gm">${ruby(G.pattern)}</mark><span class="note">is highlighted. Tap a line for English.</span></div>
+          ${inLesson.map(([r, x]) => tapLine(r, x.jp, x.en, hl)).join("")}</div>
+        ${more.length ? `<button class="fold" data-gfold>▸ ${more.length} more example${more.length > 1 ? "s" : ""}</button><div class="card gsec" id="gex" hidden style="gap:12px">${more.map(([r, x]) => tapLine(r, x.jp, x.en, hl)).join("")}</div>` : ""}${next}`;
     }
     return `<div id="gquiz"></div>`;
   }
@@ -1337,10 +1521,14 @@ rt{font-size:max(.5em,9.5px)}
     };
   }
   function runGrammarQuiz(){
-    const L = lesson, G = L.grammar, q = G.quiz, key = "g:" + G.id;
-    runQuiz($("gquiz"), [{ask:"Fill the gap", prompt:`<span style="font-size:20px;font-weight:600">${ruby(q.question)}</span><div class="note" style="font-weight:500;margin-top:6px">${esc(q.en)}</div>`,
-      options:q.options.map(plain), jpo:true, onWrong:() => { putCard(key, grammarDef(L, G), true); paintStars(key); }, wrongNote:`${ruby(q.explain)} Starred for review.`}], r => {
-      $("gquiz").innerHTML = `<div class="card" style="display:flex;flex-direction:column;gap:6px"><b>${r ? "正解！ Right." : "Starred for review."}</b><p class="note" style="margin:0">${ruby(q.explain)}</p><div class="row" style="justify-content:flex-start">${pbtn(["quiz"], ICON_SAY + " Hear it")}<button class="btn ghost" id="ggo">Try again</button></div></div>`;
+    const L = lesson, G = L.grammar, key = "g:" + G.id;
+    const list = [G.quiz, ...(Array.isArray(G.quiz_more) ? G.quiz_more : [])].filter(q => q && q.question && (q.options || []).length >= 2);
+    const keys = list.map((q, i) => i ? "quiz" + i : "quiz");
+    const filled = q => q.question.replace("＿＿", q.options[0]);
+    runQuiz($("gquiz"), list.map((q, i) => ({ask:"Fill the gap", prompt:`<span style="font-size:20px;font-weight:600">${ruby(q.question)}</span><div class="note" style="font-weight:500;margin-top:6px">${esc(q.en)}</div>`,
+      options:q.options, fmt:o => ruby(o), jpo:true, onWrong:() => { putCard(key, grammarDef(L, G), true); paintStars(key); },
+      note:`<span class="jp-mid" style="font-size:16px">${ruby(filled(q), {hl:[plain(q.options[0])]})}</span> ${pbtn([keys[i]], ICON_SAY)}`, wrongNote:`${ruby(q.explain)} Starred for review.`, rightNote:ruby(q.explain)})), (r, n) => {
+      $("gquiz").innerHTML = `<div class="card" style="display:flex;flex-direction:column;gap:6px"><b>${r === n ? "正解！ All right." : `${r}/${n} right. Starred for review.`}</b><button class="btn ghost" id="ggo">Try again</button></div>`;
       $("ggo").onclick = runGrammarQuiz;
     });
   }
@@ -1373,7 +1561,7 @@ rt{font-size:max(.5em,9.5px)}
   const highlight = (sent, surface) => { const p = esc(plain(sent)), w = esc(surface || ""), i = w ? p.indexOf(w) : -1; return i < 0 ? p : p.slice(0, i) + "<mark>" + w + "</mark>" + p.slice(i + w.length); };
   function runVocabQuiz(){
     const L = lesson, vs = L.vocab, picks = shuffle(vs).slice(0, Math.min(4, vs.length));
-    runQuiz($("vquiz"), picks.map(v => { const key = "w:" + plain(v.jp); return {ask:"What does it mean?", prompt:esc(plain(v.jp)), options:[v.en, ...shuffle(vs.filter(x => x !== v).map(x => x.en)).slice(0, 3)],
+    runQuiz($("vquiz"), picks.map(v => { const key = "w:" + plain(v.jp); return {ask:"What does it mean?", prompt:ruby(v.jp), options:[v.en, ...shuffle(vs.filter(x => x !== v).map(x => x.en)).slice(0, 3)],
       onWrong:() => { putCard(key, wordDef(L, v), true); paintStars(key); }, wrongNote:`${ruby(v.jp)} (${esc(v.reading)}). Starred for review.`}; }),
       (r, n) => { $("vquiz").innerHTML = `<div class="card"><b>${r}/${n} right.</b> <span class="note">Missed words are starred.</span></div>`; });
   }
@@ -1441,7 +1629,7 @@ rt{font-size:max(.5em,9.5px)}
     const lp = $("lplay"); if (lp) lp.onclick = () => playChain(L.id, keys, 500);
     const ls = $("lslow"); if (ls) ls.onclick = () => { stopAll(); (async () => { const run = playRun; for (const k of keys){ if (run !== playRun) return; await playOne(L.id, k, true, run); } })(); };
     const tx = $("ltx"); if (tx) tx.onclick = () => { $("ltext").hidden = false; tx.hidden = true; };
-    if (X.question && $("lq")) runQuiz($("lq"), [{ask:"Listen, then answer", prompt:`<span style="font-size:18px;font-weight:600">${ruby(X.question)}</span>`, options:X.options.map(plain), jpo:true, note:X.explain ? ruby(X.explain) : ""}], r => { $("lq").innerHTML = `<div class="card"><b>${r ? "正解！" : "おしい！"}</b> <span class="note">${X.explain ? ruby(X.explain) : ""}</span></div>`; });
+    if (X.question && $("lq")) runQuiz($("lq"), [{ask:"Listen, then answer", prompt:`<span style="font-size:18px;font-weight:600">${ruby(X.question)}</span>`, options:X.options, fmt:o => ruby(o), jpo:true, note:X.explain ? ruby(X.explain) : ""}], r => { $("lq").innerHTML = `<div class="card"><b>${r ? "正解！" : "おしい！"}</b> <span class="note">${X.explain ? ruby(X.explain) : ""}</span></div>`; });
     const dc = $("dcheck"); if (dc) dc.onclick = () => {
       const want = (X.lines || []).map(li => li.jp).join(""), kanaOf = s => s.replace(MARK, (m, b, r) => r || b);
       const clean = s => s.replace(/[。、！？!?\s「」…・ｗ]/g, "");
@@ -1476,8 +1664,8 @@ rt{font-size:max(.5em,9.5px)}
     const c = L.challenge, t = c.type || "write";
     let body = "";
     if (t === "pick") body = `<div class="opts">${shuffle((c.options || []).map((o, i) => ({o, i}))).map(x => `<button class="opt jpo" data-pk="${x.i}">${ruby(x.o.jp)}</button>`).join("")}</div>`;
-    if (t === "order") body = `<div class="line me" style="align-items:flex-end"><div class="bubble" id="ordOut" style="min-height:44px;min-width:120px;background:var(--me);color:var(--me-ink)"><span class="jp-mid" style="opacity:.5">…</span></div></div><div class="tiles-in" id="ordIn">${shuffle((c.pieces || []).map((p, i) => ({p, i}))).map(x => `<button data-op="${x.i}">${esc(plain(x.p))}</button>`).join("")}</div><button class="btn ghost" id="ordReset">Start again</button>`;
-    if (t === "fix") body = `<div class="line me" style="align-items:flex-end"><div class="bubble" style="background:var(--me);color:var(--me-ink)"><div class="jp-mid">${(c.parts || []).map((p, i) => `<span class="fixbit" data-fx="${i}">${esc(plain(p.jp))}</span>`).join("")}</div></div></div>`;
+    if (t === "order") body = `<div class="line me" style="align-items:flex-end"><div class="bubble" id="ordOut" style="min-height:44px;min-width:120px;background:var(--me);color:var(--me-ink)"><span class="jp-mid" style="opacity:.5">…</span></div></div><div class="tiles-in" id="ordIn">${shuffle((c.pieces || []).map((p, i) => ({p, i}))).map(x => `<button data-op="${x.i}">${ruby(x.p)}</button>`).join("")}</div><button class="btn ghost" id="ordReset">Start again</button>`;
+    if (t === "fix") body = `<div class="line me" style="align-items:flex-end"><div class="bubble" style="background:var(--me);color:var(--me-ink)"><div class="jp-mid">${(c.parts || []).map((p, i) => `<span class="fixbit" data-fx="${i}">${ruby(p.jp)}</span>`).join("")}</div></div></div>`;
     if (t === "sticker") body = `<div class="sgrid">${shuffle((c.stickers || []).map((id, i) => ({id, i}))).map(x => STK[x.id] ? `<button data-sk="${x.i}"><img src="${esc(STK[x.id].img)}" alt=""><b>${esc(STK[x.id].text)}</b></button>` : "").join("")}</div>`;
     if (t === "write") body = `${c.hint ? `<button class="reveal" id="hint" style="font-size:14px">Need a hint?</button>` : ""}<div class="composer"><textarea id="answer" lang="ja" aria-label="Your answer" placeholder="${fmtOf(L) === "line" ? "返信…" : "ここに日本語で…"}"></textarea><button class="send" id="send" aria-label="Send">↑</button></div>`;
     return `<div class="step">${challengeHead(L)}${body}<div id="chOut" style="display:flex;flex-direction:column;gap:10px"></div><button class="skip" id="skip">今日はパス · skip</button></div>`;
@@ -1493,7 +1681,7 @@ rt{font-size:max(.5em,9.5px)}
       if (!o.ok) b.classList.add("wrong"); finish(!!o.ok, o.why ? ruby(o.why) : ""); });
     if (t === "order"){
       let picked = [];
-      const draw = () => { $("ordOut").innerHTML = `<span class="jp-mid">${picked.map(i => esc(plain(c.pieces[i]))).join("") || '<span style="opacity:.5">…</span>'}</span>`;
+      const draw = () => { $("ordOut").innerHTML = `<span class="jp-mid">${picked.map(i => ruby(c.pieces[i])).join("") || '<span style="opacity:.5">…</span>'}</span>`;
         document.querySelectorAll("[data-op]").forEach(b => { b.disabled = picked.includes(+b.dataset.op); });
         if (picked.length === c.pieces.length){ const ok = picked.every((p, i) => plain(c.pieces[p]) === plain(c.pieces[i])); finish(ok, ok ? "" : "Compare with the order below."); } };
       document.querySelectorAll("[data-op]").forEach(b => b.onclick = () => { picked.push(+b.dataset.op); draw(); });
@@ -1547,8 +1735,8 @@ rt{font-size:max(.5em,9.5px)}
         const o = q.order, picked = [];
         const draw = () => {
           box.innerHTML = `${head}<div class="card" style="display:flex;flex-direction:column;gap:12px"><div class="note">${ruby(q.prompt || "つぎの文の ★ に入る最もよいものを選びなさい。")}</div>
-            <div class="slots">${ruby(o.before || "")}${[0,1,2,3].map(i => `<span class="s ${i === o.star ? "star" : ""}">${picked[i] != null ? esc(plain(o.pieces[picked[i]])) : i === o.star ? "★" : ""}</span>`).join("")}${ruby(o.after || "")}</div>
-            <div class="tiles-in">${o.shown.map(i => `<button data-p="${i}" ${picked.includes(i) ? "disabled" : ""}>${esc(plain(o.pieces[i]))}</button>`).join("")}</div></div><div class="qafter"></div>`;
+            <div class="slots">${ruby(o.before || "")}${[0,1,2,3].map(i => `<span class="s ${i === o.star ? "star" : ""}">${picked[i] != null ? ruby(o.pieces[picked[i]]) : i === o.star ? "★" : ""}</span>`).join("")}${ruby(o.after || "")}</div>
+            <div class="tiles-in">${o.shown.map(i => `<button data-p="${i}" ${picked.includes(i) ? "disabled" : ""}>${ruby(o.pieces[i])}</button>`).join("")}</div></div><div class="qafter"></div>`;
           box.querySelectorAll("[data-p]").forEach(b => b.onclick = () => { picked.push(+b.dataset.p); if (picked.length === 4){ const ok = picked[o.star] === o.star; tally(ok); draw(); box.querySelector(".qafter").innerHTML = `<div class="card"><b style="color:${ok ? "var(--good)" : "var(--stamp)"}">${ok ? "正解！" : "おしい！"}</b> ★ = ${esc(plain(o.pieces[o.star]))}. ${q.explain ? ruby(q.explain) : ""}</div><button class="btn primary" style="width:100%">Next</button>`; box.querySelector(".qafter .btn").onclick = next; } else draw(); });
         };
         if (!o.shown) o.shown = shuffle([0, 1, 2, 3]);
@@ -1557,7 +1745,7 @@ rt{font-size:max(.5em,9.5px)}
       const sub = document.createElement("div"); box.innerHTML = head; box.appendChild(sub);
       if (q.listen){ sub.insertAdjacentHTML("beforebegin", `<button class="btn ghost" data-play="${esc(q.listen)}">▶ Listen</button>`); }
       if (q.text) sub.insertAdjacentHTML("beforebegin", `<div class="card"><div class="jp-mid">${ruby(q.text)}</div></div>`);
-      runQuiz(sub, [{ask:"", prompt:`<span style="font-size:19px;font-weight:600">${ruby(q.prompt)}</span>`, options:q.options.map(plain), jpo:true, onRight:() => tally(true), onWrong:() => tally(false), note:q.explain ? ruby(q.explain) : ""}], () => next());
+      runQuiz(sub, [{ask:"", prompt:`<span style="font-size:19px;font-weight:600">${ruby(q.prompt)}</span>`, options:q.options, fmt:/漢字読み|表記/.test(sec) ? (o => esc(plain(o))) : (o => ruby(o)), jpo:true, onRight:() => tally(true), onWrong:() => tally(false), note:q.explain ? ruby(q.explain) : ""}], () => next());
     };
     show();
   }
@@ -1662,7 +1850,8 @@ rt{font-size:max(.5em,9.5px)}
   function cardType(c, deck){
     if (c.kind === "word"){
       const others = deck.filter(x => x.kind === "word" && x.k !== c.k);
-      const opts = ["read", "reverse"]; if (c.sent && c.surface) opts.push("cloze"); opts.push("listen");
+      const opts = [...plain(c.word)].some(isKanji) ? ["read", "reverse"] : ["reverse"];   // no "how is it read?" for a kana-only word
+      if (c.sent && c.surface && plain(c.sent).includes(c.surface)) opts.push("cloze"); opts.push("listen");
       if (others.length < 3) return "self";
       return opts[(c.reps || 0) % opts.length];
     }
@@ -1695,22 +1884,22 @@ rt{font-size:max(.5em,9.5px)}
           ${c.sent ? `<div class="jp-mid" style="font-size:16px">${ruby(c.sent)}</div><div class="note">${esc(c.sentEn)}</div>` : ""}<div class="row" style="justify-content:flex-start">${pbtn(audioKeys, ICON_SAY + " Word", false, lid)}${c.sent ? pbtn(sentKeys, ICON_SAY + " Sentence", false, lid) : ""}</div>`;
       };
       const g4 = () => `<div class="grade4">${[[1, "Again"], [2, "Hard"], [3, "Good"], [4, "Easy"]].map(([g, n]) => `<button class="g${g}" data-g="${g}">${n}<small>${gapLabel(nextGap(getDeck()[c.k] || c, g))}</small></button>`).join("")}</div>`;
-      let front = "", mc = null;
+      let front = "", mc = null, fmt = t === "cloze" ? (o => ruby(o)) : (o => esc(o));
       const pickOthers = (f, n = 3) => shuffle(deck.filter(x => x.kind === c.kind && x.k !== c.k && f(x) && f(x) !== f(c)).map(f)).filter((v, i, a) => a.indexOf(v) === i).slice(0, n);
       if (t === "listen"){ front = `<div style="text-align:center;padding:8px 0"><button class="bigplay" style="margin:0 auto" data-lid="${esc(lid)}" data-play="${esc(audioKeys.join("|"))}">▶</button></div><p class="note" style="margin:0;text-align:center">No text. What does it mean?</p>`; mc = [c.en, ...pickOthers(x => x.en)]; }
       if (t === "read" && c.kind === "word"){ front = `<div class="wsent" style="text-align:center"><mark>${esc(plain(c.word))}</mark></div><p class="note" style="margin:0;text-align:center">How is it read?</p>`; mc = [c.reading, ...pickOthers(x => x.reading)]; }
-      if (t === "cloze"){ const s = plain(c.sent), i = s.indexOf(c.surface); front = `<div class="wsent">${esc(s.slice(0, i))}<mark>＿＿</mark>${esc(s.slice(i + c.surface.length))}</div><p class="note" style="margin:0">${esc(c.sentEn)}</p>`; mc = [c.surface, ...pickOthers(x => x.surface)]; }
-      if (t === "reverse"){ front = `<div class="qprompt" style="font-size:22px">${esc(c.en)}</div><p class="note" style="margin:0;text-align:center">Which word is it?</p>`; mc = [plain(c.word), ...pickOthers(x => plain(x.word))]; }
+      if (t === "cloze"){ front = `<div class="wsent">${rubyBlank(c.sent, c.surface)}</div><p class="note" style="margin:0">${esc(c.sentEn)}</p>`; mc = [c.surface, ...pickOthers(x => x.surface)]; }
+      if (t === "reverse"){ front = `<div class="qprompt" style="font-size:22px">${esc(c.en)}</div><p class="note" style="margin:0;text-align:center">Which word is it?</p>`; mc = [plain(c.word), ...pickOthers(x => plain(x.word))]; const wm = {}; deck.forEach(x => { if (x.word) wm[plain(x.word)] = x.word; }); fmt = o => ruby(wm[o] || o); }
       if (t === "meaning"){ front = `<div class="qprompt k">${esc(c.kanji)}</div><p class="note" style="margin:0;text-align:center">What does it mean?</p>`; mc = [c.meaning, ...c.decoys.meanings.slice(0, 3)]; }
       if (t === "read" && c.kind === "kanji"){ const w = c.words[0]; front = `<div class="qprompt">${esc(plain(w.jp))}</div><p class="note" style="margin:0;text-align:center">How is it read?</p>`; mc = [w.reading, ...c.decoys.readings.slice(0, 3)]; }
       if (t === "self"){
-        if (c.kind === "line") front = `<div class="wsent">${esc(plain(c.sent))}</div><p class="note" style="margin:0">Read it out loud. What does it mean?</p>`;
-        else if (c.kind === "grammar") front = `<div class="qprompt">${esc(plain(c.pattern))}</div>${c.sent ? `<div class="wsent">${esc(plain(c.sent))}</div>` : ""}<p class="note" style="margin:0">What does it mean? How is it made?</p>`;
+        if (c.kind === "line") front = `<div class="wsent">${ruby(c.sent)}</div><p class="note" style="margin:0">Read it out loud. What does it mean?</p>`;
+        else if (c.kind === "grammar") front = `<div class="qprompt">${ruby(c.pattern)}</div>${c.sent ? `<div class="wsent">${ruby(c.sent)}</div>` : ""}<p class="note" style="margin:0">What does it mean? How is it made?</p>`;
         else if (c.kind === "kanji") front = `<div class="qprompt k">${esc(c.kanji)}</div><p class="note" style="margin:0;text-align:center">Meaning? Readings?</p>`;
-        else front = `<div class="wsent">${c.sent ? highlight(c.sent, c.surface) : `<mark>${esc(plain(c.word))}</mark>`}</div><p class="note" style="margin:0">What does the highlighted word mean?</p>`;
+        else front = `<div class="wsent">${c.sent ? ruby(c.sent, {hl:[c.surface]}) : `<mark>${ruby(c.word)}</mark>`}</div><p class="note" style="margin:0">What does the highlighted word mean?</p>`;
       }
       box.innerHTML = `${cnt}<div class="card" style="display:flex;flex-direction:column;gap:10px"><div class="row"><span class="ctype">${CTYPE[t]}</span>${whoTag}</div>${front}</div>
-        ${mc && mc.length >= 2 ? `<div class="opts">${shuffle(mc.map((o, i) => ({o, ok:i === 0}))).map(x => `<button class="opt jpo" data-ok="${x.ok ? 1 : 0}">${esc(x.o)}</button>`).join("")}</div>` : `<button class="reveal" id="wrev">Tap to check</button>`}
+        ${mc && mc.length >= 2 ? `<div class="opts">${shuffle(mc.map((o, i) => ({o, ok:i === 0}))).map(x => `<button class="opt jpo" data-ok="${x.ok ? 1 : 0}">${fmt(x.o)}</button>`).join("")}</div>` : `<button class="reveal" id="wrev">Tap to check</button>`}
         <div id="wback" class="card" hidden style="display:flex;flex-direction:column;gap:8px"></div><div id="wgrade" hidden></div>`;
       const sc = box.closest(".stage,.page"); if (sc) sc.scrollTop = 0;
       if (t === "listen") setTimeout(() => play(lid, audioKeys), 150);
@@ -2012,24 +2201,26 @@ rt{font-size:max(.5em,9.5px)}
 
   /* ---------- data ---------- */
   const cache = {}, raw = {};
-  const getJSON = id => raw[id] || (raw[id] = fetch("lessons/" + id + ".json", {cache:"no-cache"}).then(r => { if (!r.ok) throw new Error("missing"); return r.json(); }).then(L => { L.id = id; return L; }).catch(e => { delete raw[id]; throw e; }));
+  const getJSON = id => raw[id] || (raw[id] = fetch("lessons/" + id + ".json", {cache:"no-cache"}).then(r => { if (!r.ok) throw new Error("missing"); return r.json(); }).then(L => { L.id = id; learnReadings(L); saveReadings(); return L; }).catch(e => { delete raw[id]; throw e; }));
   async function loadLesson(id){ if (cache[id]) return cache[id]; const L = await getJSON(id); cache[id] = L; await loadAudio(id); return L; }
 
   /* offline: keep the last 7 lessons with their audio on the phone (service worker cache) */
   async function precache(){
     if (!("serviceWorker" in navigator) || !navigator.onLine) return;
-    const last = store.get("offline", null); if (last && last.d === todayStr() && last.top === lessons[lessons.length - 1]?.id) return;
     const reg = await navigator.serviceWorker.ready.catch(() => null); if (!reg || !reg.active) return;
     const ids = lessons.slice(-7).map(l => l.id), urls = ["./", "index.html", "cast.json", "topics.json", "stickers.json", "lessons/index.json", "data/kanji.json", "manifest.webmanifest"];
     for (const id of ids){
       urls.push("lessons/" + id + ".json", "audio/" + id + ".json");
-      const m = await loadAudio(id);
+      const m = await loadAudio(id, id === ids[ids.length - 1]);
       Object.entries(m).forEach(([k, v]) => { if (typeof v === "string" && /\.mp3$/.test(v) && (k !== "_radio" || id === ids[ids.length - 1])) urls.push(v); });
     }
     Object.values(STK).forEach(s => urls.push(s.img));
     Object.values(getDeck()).forEach(c => { if (c.lesson && !ids.includes(c.lesson)) urls.push("audio/" + c.lesson + ".json"); });
-    reg.active.postMessage({type:"precache", urls:[...new Set(urls)]});
-    store.set("offline", {d:todayStr(), n:ids.length, top:ids[ids.length - 1]});
+    // send the list again only when something changed (e.g. today's audio arrived after the first open)
+    const list = [...new Set(urls)], sig = list.length + ":" + ids[ids.length - 1], last = store.get("offline", null);
+    if (last && last.d === todayStr() && last.sig === sig) return;
+    reg.active.postMessage({type:"precache", urls:list});
+    store.set("offline", {d:todayStr(), n:ids.length, top:ids[ids.length - 1], sig});
   }
 
   applySettings();

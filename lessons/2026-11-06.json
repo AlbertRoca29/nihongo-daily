@@ -122,7 +122,39 @@
     "{練習|れんしゅう}させてくれた"
    ],
    "explain": "I (subject) was made to practise by my mother (に): causative-passive させられた. させた = I made someone practise, された = plain passive, させてくれた = she kindly let me."
-  }
+  },
+  "mark": [
+   "行かされた",
+   "歩かされた",
+   "待たされた",
+   "食べさせられた",
+   "発表させられた",
+   "待たされて"
+  ],
+  "quiz_more": [
+   {
+    "question": "{部活|ぶかつ|school club|3}で、{毎日|まいにち}10キロも＿＿。",
+    "en": "In my club we were made to run 10 km every day.",
+    "options": [
+     "{走|はし}らされた",
+     "{走|はし}らせた",
+     "{走|はし}られた",
+     "{走|はし}らせてくれた"
+    ],
+    "explain": "う-verbs shorten させられる to される: 走らせられる → 走らされる, 'I was made to run (and didn't like it)'."
+   },
+   {
+    "question": "{上司|じょうし|boss|3}に{夜|よる}{遅|おそ}くまで＿＿、{終電|しゅうでん|last train|3}に{乗|の}れなかった。",
+    "en": "My boss made me work late, so I missed the last train.",
+    "options": [
+     "{残業|ざんぎょう}させられて",
+     "{残業|ざんぎょう}させて",
+     "{残業|ざんぎょう}されて",
+     "{残業|ざんぎょう}して"
+    ],
+    "explain": "残業 = overtime. する → させられる: you were forced to do it. させて would mean the boss let you."
+   }
+  ]
  },
  "kanji": {
   "kanji": "整理券",

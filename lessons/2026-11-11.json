@@ -82,8 +82,8 @@
    "speaker": "アルちゃん",
    "me": true,
    "time": "19:27",
-   "jp": "クマ…{出る|でる}んですか？{怖い|こわい|scary, scared|4}…（スタンプ：ふるえるネコ）",
-   "en": "Bears… there are bears? That's scary… (sticker: shivering cat)",
+   "jp": "クマ…{出る|でる}んですか？{怖い|こわい|scary, scared|4}…",
+   "en": "Bears… there are bears? That's scary…",
    "who": "you"
   },
   {
@@ -105,8 +105,8 @@
   {
    "speaker": "千夏さん",
    "time": "19:36",
-   "jp": "{偉い|えらい|good for you, well done|4}！{紅葉|こうよう|autumn leaves|3}は{雨|あめ}が{降|ふ}ったらすぐ{散っちゃう|ちっちゃう|to scatter, fall (leaves)|3}から、{明日|あした}{晴れて|はれて}よかったね。{写真|しゃしん}{送って|おくって}ね！（スタンプ：{山|やま}とピース）",
-   "en": "Good for you! The leaves fall right away once it rains, so lucky it's sunny tomorrow. Send me photos! (sticker: mountain and peace sign)",
+   "jp": "{偉い|えらい|good for you, well done|4}！{紅葉|こうよう|autumn leaves|3}は{雨|あめ}が{降|ふ}ったらすぐ{散っちゃう|ちっちゃう|to scatter, fall (leaves)|3}から、{明日|あした}{晴れて|はれて}よかったね。{写真|しゃしん}{送って|おくって}ね！",
+   "en": "Good for you! The leaves fall right away once it rains, so lucky it's sunny tomorrow. Send me photos!",
    "note": "{偉|えら}い literally means 'great, important', but to someone who does the sensible thing it means 'well done!'.",
    "who": "guest"
   }
@@ -149,7 +149,42 @@
     "{忘|わす}れちゃおう"
    ],
    "explain": "A past mistake you regret: 忘れて + しまった → 忘れちゃった, built on the て-form. 〜ておいた means you did it on purpose in advance."
-  }
+  },
+  "mark": [
+   "暗くなっちゃう",
+   "迷っちゃって",
+   "散っちゃう",
+   "散っちゃった",
+   "忘れてしまいました",
+   "食べちゃった",
+   "寝てしまって",
+   "行っちゃった",
+   "やってしまいました"
+  ],
+  "quiz_more": [
+   {
+    "question": "{面白|おもしろ}くて、{一晩|ひとばん|one night|3}で{全部|ぜんぶ}＿＿。",
+    "en": "It was so good I read the whole thing in one night.",
+    "options": [
+     "{読|よ}んじゃった",
+     "{読|よ}んちゃった",
+     "{読|よ}むちゃった",
+     "{読|よ}んでおいた"
+    ],
+    "explain": "む-verbs take で in the て-form, so でしまう → じゃう: 読んじゃった. Here it means 'all of it, completely'."
+   },
+   {
+    "question": "{明日|あした}テストなのに、ゲームを3{時間|じかん}も＿＿。",
+    "en": "I have a test tomorrow, but I ended up playing games for three hours.",
+    "options": [
+     "やってしまった",
+     "やっておいた",
+     "やってみた",
+     "やってあげた"
+    ],
+    "explain": "Something you regret doing = てしまった. ておいた means on purpose in advance; てみた means you tried it."
+   }
+  ]
  },
  "kanji": {
   "kanji": "熊出没注意",

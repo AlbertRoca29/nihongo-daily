@@ -147,13 +147,15 @@ When status allows: `"category": "review"`, a new scene with the cast that reuse
 
 ## Grammar
 
-`grammar`: `{id, pattern, level, meaning, form, explanation, src, examples, quiz}`
+`grammar`: `{id, pattern, level, meaning, form, explanation, src, mark, examples, quiz, quiz_more}`
 - `id`, `pattern`, `level`, `meaning`: from `curriculum/grammar.json` (the `pattern` may get furigana markup).
 - `form`: how to build it, one rule per case, rules separated by ` · ` (space, middle dot, space). Write each rule as `label: rule (example, example)`: the app shows the label as a chip, the rule in bold and each example on its own line under it. E.g. `う-verbs: -a + れる ({頼|たの}む → {頼|たの}まれる, {怒|おこ}る → {怒|おこ}られる) · る-verbs: + られる ({見|み}る → {見|み}られる) · する → される · {来|く}る → {来|こ}られる`. Short labels (`う-verbs`, `い-adj`, `noun`, `{動詞|どうし}ない{形|けい}`); an irregular can be just `する → される` (shown as chip + result). With a single rule the label can go: `{動詞|どうし}た{形|けい} + ばかり ({食|た}べたばかり)`. Examples are short forms, 1–3 per rule, no full sentences (those go in `examples`).
 - `explanation`: at most 50 words, 2–3 plain English sentences: when people use it, the nuance, and the classic mistake (or how it differs from the point learners confuse it with).
 - `src`: the lines of today's lesson that use it (`["d2", "p1"]`), at least one. Put the clearest first: the app shows the first two.
+- `mark`: the grammar point exactly as it appears in the `src` lines and `examples`, as plain strings without furigana, e.g. `["迷っちゃって", "忘れてしまいました", "食べちゃった"]` (the verb with its ending). The app highlights them on the 今日の文 tab; every `src` line must contain one (the check enforces it).
 - `examples`: 1–3 extra `{jp, en}` sentences in other situations, so the pattern isn't tied to one scene.
 - `quiz`: `{question, en, options, explain}`. `question` is a Japanese sentence with `＿＿` where the answer goes; `en` its translation; `options` 4 forms, **the right one first** (the app shuffles), the wrong ones plausible (wrong conjugation, the similar pattern); `explain` one line on why.
+- `quiz_more`: 2 more questions in the same shape, testing the point from other angles (another conjugation, the negative, telling it apart from the pattern learners confuse it with). チェック asks all three.
 - Never teach the same grammar point twice (the check refuses it), except in review lessons.
 
 ## Vocab

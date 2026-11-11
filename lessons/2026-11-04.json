@@ -113,7 +113,37 @@
     "{呼|よ}べた"
    ],
    "explain": "{呼|よ}ぶ → {呼|よ}ばれる: the teacher (に) did it to me. {呼|よ}ばせた is causative (made someone call), {呼|よ}べた is potential (could call)."
-  }
+  },
+  "mark": [
+   "頼まれて",
+   "怒られる",
+   "踏まれました",
+   "褒められた"
+  ],
+  "quiz_more": [
+   {
+    "question": "{雨|あめ}に＿＿、{服|ふく}が{びしょびしょ||soaking wet|3}だ。",
+    "en": "I got caught in the rain and my clothes are soaked.",
+    "options": [
+     "{降|ふ}られて",
+     "{降|ふ}って",
+     "{降|ふ}らせて",
+     "{降|ふ}れて"
+    ],
+    "explain": "雨に降られる is the 'suffering passive': the rain fell and you were the one affected."
+   },
+   {
+    "question": "{妹|いもうと}に{私|わたし}のケーキを{全部|ぜんぶ}＿＿。",
+    "en": "My little sister ate all my cake (and I'm not happy).",
+    "options": [
+     "{食|た}べられた",
+     "{食|た}べた",
+     "{食|た}べさせた",
+     "{食|た}べれた"
+    ],
+    "explain": "食べる → 食べられる. With に, the passive says someone did it and you suffered. 食べれた is the casual 'could eat'."
+   }
+  ]
  },
  "kanji": {
   "kanji": "鍋",

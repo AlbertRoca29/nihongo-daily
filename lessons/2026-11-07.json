@@ -124,7 +124,39 @@
     "{食|た}べよう"
    ],
    "explain": "ようにする / ようにしている comes after the dictionary form (or the ない form): {食|た}べるようにしている."
-  }
+  },
+  "mark": [
+   "電話するようにしてん",
+   "連絡するようにしてる",
+   "返すようにしています",
+   "話すようにしています",
+   "食べないようにしてる",
+   "起きるようにします"
+  ],
+  "quiz_more": [
+   {
+    "question": "{夜|よる}はコーヒーを＿＿ようにしています。",
+    "en": "I try not to drink coffee at night.",
+    "options": [
+     "{飲|の}まない",
+     "{飲|の}まなかった",
+     "{飲|の}まなくて",
+     "{飲|の}むな"
+    ],
+    "explain": "To try NOT to do something, use the ない-form: 飲まないようにする."
+   },
+   {
+    "question": "{来年|らいねん}から、{毎朝|まいあさ}ジョギングする＿＿。",
+    "en": "From next year, I'll make a point of jogging every morning.",
+    "options": [
+     "ようにする",
+     "ようになる",
+     "ことになる",
+     "ようだ"
+    ],
+    "explain": "ようにする is your own effort to make something a habit; ようになる is a change that happens over time."
+   }
+  ]
  },
  "kanji": {
   "kanji": "縁結び",

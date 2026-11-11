@@ -37,7 +37,7 @@ STEM_ONLY = re.compile(r"^(?:い(?![぀-ゟ])|いな|く[てな]|かっ|しい|�
 PARTICLE = re.compile(r"^(?:を|が|は|に|の|も|と|や|へ|か[らな]|けど|って)")
 KANJI = re.compile(r"[\u3400-\u9fff々]")
 # Where tap-to-see glosses are not allowed (the word itself is being taught or quizzed there)
-NO_GLOSS = re.compile(r"^(vocab|kanji_study|kanji\.|grammar\.(quiz\.options|pattern|form))")
+NO_GLOSS = re.compile(r"^(vocab|kanji_study|kanji\.|grammar\.(quiz\.options|quiz_more\[\d+\]\.options|pattern|form))")
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 REGISTERS = {"polite", "casual", "neutral", "dialect", "slang", "archaic"}
 LEVELS = {"N5", "N4", "N3", "N2", "N1"}
@@ -229,18 +229,35 @@ def check_new(lid, L, errs):
     ex = G.get("examples")
     if not isinstance(ex, list) or not 1 <= len(ex) <= 3 or not all(isinstance(x, dict) and x.get("jp") and x.get("en") for x in ex):
         errs.append(f"{lid}: grammar.examples needs 1-3 {{jp, en}} extra examples")
-    q = G.get("quiz")
-    if not isinstance(q, dict):
-        errs.append(f"{lid}: grammar.quiz missing")
-    else:
+    more = G.get("quiz_more", [])
+    if not isinstance(more, list) or not all(isinstance(x, dict) for x in more):
+        errs.append(f"{lid}: grammar.quiz_more must be a list of quiz questions")
+        more = []
+    mk = G.get("mark")
+    if mk is None and lid >= V2_FROM:
+        errs.append(f"{lid}: grammar.mark missing: list the pattern as it appears in the src lines, e.g. [\"迷っちゃって\"]")
+    if lid >= V2_FROM and len(more) < 2:
+        errs.append(f"{lid}: grammar.quiz_more needs 2 more quiz questions")
+    if mk is not None:
+        if not isinstance(mk, list) or not all(isinstance(x, str) and x and "{" not in x for x in mk):
+            errs.append(f"{lid}: grammar.mark must be a list of plain strings (the pattern as it appears in the lines)")
+        else:
+            lines = [plain(str((line_at(L, r) or {}).get("jp", ""))) for r in (G.get("src") or [])]
+            for r, ln in zip(G.get("src") or [], lines):
+                if not any(x in ln for x in mk):
+                    errs.append(f"{lid}: grammar.mark: nothing in mark appears in {r} ({ln[:20]}…); add the form used there")
+    for qn, q in [("quiz", G.get("quiz"))] + [(f"quiz_more[{i}]", x) for i, x in enumerate(more)]:
+      if not isinstance(q, dict):
+        errs.append(f"{lid}: grammar.{qn} missing")
+      else:
         if "＿＿" not in str(q.get("question", "")):
-            errs.append(f"{lid}: grammar.quiz.question must contain ＿＿ where the answer goes")
+            errs.append(f"{lid}: grammar.{qn}.question must contain ＿＿ where the answer goes")
         opts = q.get("options")
         if not isinstance(opts, list) or len(opts) != 4 or len(set(opts)) != 4:
-            errs.append(f"{lid}: grammar.quiz.options needs 4 different options, the right one first")
+            errs.append(f"{lid}: grammar.{qn}.options needs 4 different options, the right one first")
         for k in ("en", "explain"):
             if not isinstance(q.get(k), str) or not q[k].strip():
-                errs.append(f"{lid}: grammar.quiz.{k} missing")
+                errs.append(f"{lid}: grammar.{qn}.{k} missing")
 
 
 def today_str(override):

@@ -295,6 +295,9 @@ def items(lesson):
     q = (lesson.get("grammar") or {}).get("quiz") or {}
     if q.get("question") and q.get("options"):
         add(["quiz"], q["question"].replace("＿＿", q["options"][0]), VOICES["narrator"])
+    for i, q in enumerate((lesson.get("grammar") or {}).get("quiz_more") or [], 1):
+        if isinstance(q, dict) and q.get("question") and q.get("options"):
+            add([f"quiz{i}"], q["question"].replace("＿＿", q["options"][0]), VOICES["narrator"])
     for i, li in enumerate((lesson.get("listening") or {}).get("lines", []) if isinstance(lesson.get("listening"), dict) else []):
         add([f"l{i}", plain(li["jp"])], li["jp"], voice_for(li, lesson))
     return out
