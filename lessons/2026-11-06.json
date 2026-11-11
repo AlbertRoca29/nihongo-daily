@@ -43,41 +43,47 @@
  "dialogue_setting": "That evening, two versions of the same afternoon: yours, and Hana-obāchan's, told on the Tanakas' engawa.",
  "dialogue": [
   {
-   "speaker": "You",
+   "speaker": "アルちゃん",
    "me": true,
    "jp": "{今日|きょう}は{田中|たなか}さんに、{一人|ひとり}でバスに{乗|の}って{郵便局|ゆうびんきょく}まで{行|い}かされた。スペインの{家族|かぞく}に、{写真|しゃしん}と{小包|こづつみ|parcel, package|2}を{送|おく}るためだ。",
-   "en": "Today Tanaka-san made me take the bus to the post office on my own. I had to send photos and a parcel to my family in Spain."
+   "en": "Today Tanaka-san made me take the bus to the post office on my own. I had to send photos and a parcel to my family in Spain.",
+   "who": "you"
   },
   {
-   "speaker": "Hana-obāchan",
+   "speaker": "ハナおばあちゃん",
    "jp": "{停留所|ていりゅうじょ|bus stop|2}に、{背|せ|height (背が高い = tall)|3}の{高|たか}い{外国|がいこく}の{子|こ}が{おって||(dialect) = いて, was there|1}のう。{時刻表|じこくひょう|timetable|2}をじーっと{見|み}て、{困った|こまった|to be in trouble, at a loss|4}{顔|かお}を{しとった||(dialect) = していた|1}んじゃ。",
    "en": "There was a tall foreign lad at the bus stop, you see. He was staring and staring at the timetable with such a lost face.",
-   "note": "おって = いて, しとった = していた, 〜のう and 〜じゃ = old-fashioned よ / だ. Understand them; don't copy them."
+   "note": "おって = いて, しとった = していた, 〜のう and 〜じゃ = old-fashioned よ / だ. Understand them; don't copy them.",
+   "who": "hana"
   },
   {
-   "speaker": "You",
+   "speaker": "アルちゃん",
    "me": true,
    "jp": "バスは{約|やく|about, approximately|2}{1時間|いちじかん}に{1本|いっぽん}。そのおばあさんが「{運賃|うんちん|fare|2}は{降|お}りるときに{払|はら}うんじゃよ」と{教|おし}えてくれた。",
    "en": "There's only about one bus an hour. The old lady told me: 'You pay the fare when you get off.'",
-   "note": "In the quote, 払うんじゃよ is Hana's old-style 払うんだよ."
+   "note": "In the quote, 払うんじゃよ is Hana's old-style 払うんだよ.",
+   "who": "you"
   },
   {
-   "speaker": "You",
+   "speaker": "アルちゃん",
    "me": true,
    "jp": "でも{千円札|せんえんさつ|1,000-yen note|2}しかなくて、{両替|りょうがえ|changing into coins|2}で{慌て|あわて|to panic, get flustered|3}ているうちに、{郵便局前|ゆうびんきょくまえ}を{乗り越して|のりこして|to ride past one's stop|1}しまった。",
-   "en": "But I only had a 1000-yen note, and while I was panicking over the change, I rode right past the Post Office stop."
+   "en": "But I only had a 1000-yen note, and while I was panicking over the change, I rode right past the Post Office stop.",
+   "who": "you"
   },
   {
-   "speaker": "Hana-obāchan",
+   "speaker": "ハナおばあちゃん",
    "jp": "{仕方ない|しかたない|仕方ない = it can’t be helped|4}から、あたしも{一緒|いっしょ}に{降|お}りて、{坂|さか|slope, hill|3}をてくてく{歩|ある}いて{戻った|もどった|to go back|4}んじゃ。{子|こ}どもの{頃|ころ}は、{毎日|まいにち}この{坂|さか|slope, hill|3}を{歩|ある}かされたもんじゃよ。",
    "en": "Nothing for it, so I got off with him and we plodded back up the slope. When I was a girl, they made me walk this slope every single day.",
-   "note": "てくてく = the sound of walking a long way on foot. 〜たもんじゃ = 〜たものだ: 'I used to...' when remembering the past."
+   "note": "てくてく = the sound of walking a long way on foot. 〜たもんじゃ = 〜たものだ: 'I used to...' when remembering the past.",
+   "who": "hana"
   },
   {
-   "speaker": "You",
+   "speaker": "アルちゃん",
    "me": true,
    "jp": "{郵便局|ゆうびんきょく}が{閉まる|しまる|to close|3}{前|まえ}に、なんとか{間に合った|まにあった|to make it in time|4}。そのおばあさんは、{田中|たなか}さんの{隣|となり|next door|3}に{住|す}んでいるハナさんだった！",
-   "en": "I somehow made it before the post office closed. And the old lady turned out to be Hana-san, who lives next door to the Tanakas!"
+   "en": "I somehow made it before the post office closed. And the old lady turned out to be Hana-san, who lives next door to the Tanakas!",
+   "who": "you"
   }
  ],
  "grammar": {

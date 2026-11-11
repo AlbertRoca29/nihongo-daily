@@ -43,60 +43,68 @@
  "dialogue_setting": "A LINE chat at about 17:40: アルちゃん is standing by the supermarket exit on the shopping street, 健太 is on a quiet reception shift at Guesthouse Kaze.",
  "dialogue": [
   {
-   "speaker": "You",
+   "speaker": "アルちゃん",
    "time": "17:41",
    "jp": "{健太|けんた}、ちょっと{聞|き}いて！{田中|たなか}さんたちに{お礼|おれい|thanks, a thank-you|4}がしたくて、{今夜|こんや}スペインのトルティーヤを{作|つく}ることにした！",
    "en": "健太, listen! I wanted to thank the 田中s, so I've decided to make them a Spanish tortilla tonight!",
-   "me": true
+   "me": true,
+   "who": "you"
   },
   {
    "speaker": "健太",
    "time": "17:42",
    "jp": "{ええやん||(Kansai) = いいじゃん, nice!|2}！アルちゃん{料理|りょうり}できるんや。で、なんでそんな{焦って|あせって|to be flustered, rushed|3}んの？ｗ",
    "en": "Nice! So you can cook, アルちゃん. So why so flustered? lol",
-   "voice": "m"
+   "voice": "m",
+   "who": "kenta"
   },
   {
-   "speaker": "You",
+   "speaker": "アルちゃん",
    "time": "17:45",
    "jp": "スーパー{行|い}ったら、じゃがいもが{全部|ぜんぶ}{売り切れ|うりきれ|sold out|3}で、めっちゃ{がっかり||disappointed|4}した…。しかもセルフレジがピーピー{鳴って|なって|to ring, beep|3}、{店員|てんいん|shop staff|4}さんが{来|き}ちゃって{恥ずかしかった|はずかしかった|embarrassed|4}",
    "en": "I went to the supermarket and the potatoes were all sold out. So disappointing… And then the self-checkout kept beeping and a staff member came over. So embarrassing.",
-   "me": true
+   "me": true,
+   "who": "you"
   },
   {
    "speaker": "健太",
    "time": "17:46",
    "jp": "セルフレジ{あるある||(slang) a classic, happens to everyone|3}やｗ {気|き}にせんでええって。てか、{田中|たなか}さんち{農家|のうか|farming family|2}やん？じゃがいもぐらいあるやろ",
    "en": "Classic self-checkout moment lol. Don't worry about it. Anyway, the 田中s are farmers, right? They'll have potatoes, surely.",
-   "voice": "m"
+   "voice": "m",
+   "who": "kenta"
   },
   {
-   "speaker": "You",
+   "speaker": "アルちゃん",
    "time": "17:48",
    "jp": "あ、{確かに|たしかに|true, indeed|4}！じゃあ、{恵子|けいこ}さんに{聞|き}いてみることにする。{卵|たまご}と、2{割引|わりびき|discount|3}の{玉ねぎ|たまねぎ|onion|4}だけ{買|か}って{帰|かえ}るね",
    "en": "Oh, true! Then I'll ask 恵子さん. I'll just buy eggs and some 20%-off onions and head home.",
-   "me": true
+   "me": true,
+   "who": "you"
   },
   {
    "speaker": "健太",
    "time": "17:49",
    "jp": "それがええわ。{失敗|しっぱい|messing up, failure|3}しても{大丈夫|だいじょうぶ}。{恵子|けいこ}さんら、{絶対|ぜったい|definitely|4}{喜ぶ|よろこぶ|to be happy, pleased|3}で",
    "en": "Good call. Even if it flops, it's fine. 恵子さん and the others will definitely be happy.",
-   "voice": "m"
+   "voice": "m",
+   "who": "kenta"
   },
   {
-   "speaker": "You",
+   "speaker": "アルちゃん",
    "time": "17:51",
    "jp": "ありがとう。ちょっと{不安|ふあん|anxious, uneasy|3}だったけど、{安心|あんしん|relief, peace of mind|4}した（スタンプ：うさぎがペコリ）",
    "en": "Thanks. I was a bit anxious, but now I feel better (sticker: bunny bowing)",
-   "me": true
+   "me": true,
+   "who": "you"
   },
   {
    "speaker": "健太",
    "time": "17:52",
    "jp": "{今度|こんど}{俺|おれ}にも{作|つく}ってや！{大阪|おおさか}のお{好み焼き|このみやき|okonomiyaki|4}と{勝負|しょうぶ|a showdown, contest|3}やｗ",
    "en": "Make me one next time too! It'll be a showdown with Osaka okonomiyaki lol",
-   "voice": "m"
+   "voice": "m",
+   "who": "kenta"
   }
  ],
  "grammar": {

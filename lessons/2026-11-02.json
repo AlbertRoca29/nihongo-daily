@@ -13,36 +13,39 @@
    "en": "Excuse me, I'd like to go to Matsumoto.",
    "jp": "すみません、{松本|まつもと}まで{行|い}きたいんですが。",
    "me": true,
-   "speaker": "You"
+   "speaker": "アルちゃん",
+   "who": "you"
   },
   {
    "en": "Limited express or local train?",
    "jp": "{特急|とっきゅう|limited express (train)|3}ですか、{普通|ふつう|local train (stops everywhere)|4}ですか。",
-   "speaker": "Staff",
+   "speaker": "駅員さん",
    "voice": "m"
   },
   {
    "en": "Limited express, please. A reserved seat.",
    "jp": "{特急|とっきゅう|limited express (train)|3}でお{願|ねが}いします。{指定席|していせき|reserved seat|2}で。",
    "me": true,
-   "speaker": "You"
+   "speaker": "アルちゃん",
+   "who": "you"
   },
   {
    "en": "There's the Azusa leaving at 10:00. Is a window seat all right?",
    "jp": "10{時|じ}{発|はつ|departing (at)|2}の「あずさ」が{ございます||(very polite) = あります, there is|3}。{窓側|まどがわ|window side (seat)|2}で{よろしい||(polite) = いい, all right|3}ですか。",
-   "speaker": "Staff",
+   "speaker": "駅員さん",
    "voice": "m"
   },
   {
    "en": "Yes, that's fine. Which platform?",
    "jp": "はい、{大丈夫|だいじょうぶ}です。{何番線|なんばんせん|which platform?|2}ですか。",
    "me": true,
-   "speaker": "You"
+   "speaker": "アルちゃん",
+   "who": "you"
   },
   {
    "en": "Platform 9. Have a safe trip.",
    "jp": "{9番線|きゅうばんせん|platform 9|2}です。お{気|き}をつけて。",
-   "speaker": "Staff",
+   "speaker": "駅員さん",
    "voice": "m"
   }
  ],

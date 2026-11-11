@@ -38,40 +38,43 @@
  "dialogue_setting": "At the till of a konbini, late evening.",
  "dialogue": [
   {
-   "speaker": "Staff",
+   "speaker": "店員さん",
    "voice": "f",
    "jp": "お{弁当|べんとう|boxed meal|4}、{温めます|あたためます|to heat up, warm|3}か。",
    "en": "Shall I heat up your bento?"
   },
   {
-   "speaker": "You",
+   "speaker": "アルちゃん",
    "jp": "はい、お{願|ねが}いします。",
    "en": "Yes, please.",
-   "me": true
+   "me": true,
+   "who": "you"
   },
   {
-   "speaker": "Staff",
+   "speaker": "店員さん",
    "voice": "f",
    "jp": "ポイントカードはお{持ち|もち|(honorific) do you have|3}ですか。",
    "en": "Do you have a points card?"
   },
   {
-   "speaker": "You",
+   "speaker": "アルちゃん",
    "jp": "いえ、{大丈夫|だいじょうぶ|(here) I'm fine, no thanks|4}です。",
    "en": "No, that's OK.",
-   "me": true
+   "me": true,
+   "who": "you"
   },
   {
-   "speaker": "Staff",
+   "speaker": "店員さん",
    "voice": "f",
    "jp": "お{支払い|しはらい|payment|3}は{現金|げんきん|cash|3}ですか。",
    "en": "Will you pay in cash?"
   },
   {
-   "speaker": "You",
+   "speaker": "アルちゃん",
    "jp": "いえ、ICカードでお{願|ねが}いします。",
    "en": "No, by IC card, please.",
-   "me": true
+   "me": true,
+   "who": "you"
   }
  ],
  "kanji": {

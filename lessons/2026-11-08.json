@@ -4,7 +4,9 @@
  "function": "opinions",
  "format": "text",
  "reader": "sota",
- "cast": ["sota"],
+ "cast": [
+  "sota"
+ ],
  "title_jp": "{颯太|そうた}の{作文|さくぶん}",
  "context": "Sunday at the farm. 田中さん's grandson 颯太 (11) is here from Nagano city for the weekend, and he shyly hands you his homework: an essay about the person he respects most. He wants your opinion before his teacher sees it.",
  "phrases": [
@@ -64,8 +66,8 @@
   },
   {
    "speaker": "This year",
-   "jp": "{今年|ことし}は、スペインから{来|き}たアルバートさんが{手伝|てつだ}ってくれている。おじいちゃんは{最近|さいきん}、{前|まえ}よりよく{笑|わら}うようになった。ぼくは、アルバートさんのおかげだと{思|おも}う。",
-   "en": "This year, アルバートさん from Spain is helping us. Lately Grandpa has started laughing more than before. I think it's thanks to アルバートさん."
+   "jp": "{今年|ことし}は、スペインから{来|き}たアルちゃんが{手伝|てつだ}ってくれている。おじいちゃんは{最近|さいきん}、{前|まえ}よりよく{笑|わら}うようになった。ぼくは、アルちゃんのおかげだと{思|おも}う。",
+   "en": "This year, アルちゃん from Spain is helping us. Lately Grandpa has started laughing more than before. I think it's thanks to アルちゃん."
   },
   {
    "speaker": "Ending",
@@ -80,7 +82,11 @@
   "meaning": "come to be able to / start doing",
   "form": "{可能形|かのうけい}: + ようになる ({読|よ}める → {読|よ}めるようになる, とれる → とれるようになる) · {辞書形|じしょけい}: + ようになる ({笑|わら}う → {笑|わら}うようになる) · no longer: ない → なくなる ({泣|な}かない → {泣|な}かなくなる)",
   "explanation": "Use it for a change that came with time: something you can now do (potential form + ようになる) or a new habit that has appeared (dictionary form + ようになる). It describes a result, not a choice: a resolution is 〜ようにする, a decision is 〜ことにする. With nouns and adjectives just use になる: {好|す}きになった, never 好きようになった.",
-  "src": ["d2", "d4", "p3"],
+  "src": [
+   "d2",
+   "d4",
+   "p3"
+  ],
   "examples": [
    {
     "jp": "{日本|にほん}に{来|き}てから、{納豆|なっとう|natto, fermented soybeans|3}が{食|た}べられるようになった。",
@@ -94,7 +100,12 @@
   "quiz": {
    "question": "{毎日|まいにち}{練習|れんしゅう}したので、{一人|ひとり}で{自転車|じてんしゃ}に＿＿ようになった。",
    "en": "I practised every day, so now I can ride a bike on my own.",
-   "options": ["{乗|の}れる", "{乗|の}れて", "{乗|の}れた", "{乗|の}ろう"],
+   "options": [
+    "{乗|の}れる",
+    "{乗|の}れて",
+    "{乗|の}れた",
+    "{乗|の}ろう"
+   ],
    "explain": "'Became able to' = potential form in the dictionary shape ({乗|の}れる) + ようになる; the past goes on なる, not on the verb."
   }
  },
@@ -113,22 +124,98 @@
   "body": "Speaking about your own family to outsiders, or in writing, you use the plain words: {祖父|そふ}, {母|はは}, {父|ちち}. For someone else's family you use おじいさん, お{母|かあ}さん. That's why 颯太's essay starts with ぼくの{祖父|そふ} and then slips into おじいちゃん, like every child does. Inside a family, people often name each other from the youngest child's point of view: 恵子さん may well call her husband おじいちゃん when 颯太 is around."
  },
  "challenge": {
-  "prompt": "颯太 looks up at you: 「ねえねえ、アルバートくんはどう{思|おも}う？おじいちゃん、{畑|はたけ|field, orchard|2}やめたほうがいいと{思|おも}う？」 Give your opinion (you agree with him), and say that you've become able to help a little. Use 〜ようになる.",
+  "prompt": "颯太 looks up at you: 「ねえねえ、アルちゃんはどう{思|おも}う？おじいちゃん、{畑|はたけ|field, orchard|2}やめたほうがいいと{思|おも}う？」 Give your opinion (you agree with him), and say that you've become able to help a little. Use 〜ようになる.",
   "hint": "やめないほうがいい · {少|すこ}し{手伝|てつだ}える · 〜し",
   "model_answer": "ううん、やめないほうがいいと{思|おも}う。{僕|ぼく}も{少|すこ}し{手伝|てつだ}えるようになったし、{一緒|いっしょ}にがんばるよ！",
   "explanation": "やめないほうがいいと{思|おも}う gives your opinion softly (ない form + ほうがいい = it's better not to). {手伝|てつだ}えるようになった = potential form + ようになった, 'I've become able to help'. 〜し adds a reason, and plain casual speech fits talking to a kid."
  },
  "vocab": [
-  {"jp": "{祖父|そふ}", "reading": "そふ", "en": "grandfather (your own, formal)", "level": "N3", "src": "d0", "surface": "祖父", "note": "Used in writing and about your own family to others. Spoken at home: おじいちゃん."},
-  {"jp": "{育|そだ}てる", "reading": "そだてる", "en": "to grow (plants), to raise (children)", "level": "N4", "src": "d0", "surface": "育てて"},
-  {"jp": "{尊敬|そんけい}する", "reading": "そんけいする", "en": "to respect, look up to", "level": "N3", "src": "d0", "surface": "尊敬して", "note": "{尊敬|そんけい}する{人|ひと} = the person you look up to: a classic essay and interview question."},
-  {"jp": "{込|こ}める", "reading": "こめる", "en": "to put (feelings) into", "level": "N3", "src": "d1", "surface": "込めて", "note": "{心|こころ}を{込|こ}めて = with all your heart, wholeheartedly."},
-  {"jp": "{苦手|にがて}", "reading": "にがて", "en": "not keen on; bad at", "level": "N3", "src": "d2", "surface": "苦手", "note": "A softer way to say you dislike something: {納豆|なっとう}が{苦手|にがて}です."},
-  {"jp": "{登|のぼ}る", "reading": "のぼる", "en": "to climb", "level": "N4", "src": "d2", "surface": "登って"},
-  {"jp": "{意見|いけん}", "reading": "いけん", "en": "opinion", "level": "N3", "src": "d3", "surface": "意見"},
-  {"jp": "{反対|はんたい}", "reading": "はんたい", "en": "the opposite; being against", "level": "N3", "src": "d3", "surface": "反対", "note": "{反対|はんたい}する = to oppose. The opposite: {賛成|さんせい} (agreeing)."},
-  {"jp": "{自慢|じまん}", "reading": "じまん", "en": "pride; something to boast about", "level": "N3", "src": "d5", "surface": "自慢", "note": "{自慢|じまん}の{孫|まご} = a grandchild you're proud of. {自慢|じまん}する can also mean 'to show off'."},
-  {"jp": "{孫|まご}", "reading": "まご", "en": "grandchild", "level": "N3", "src": "p4", "surface": "孫"}
+  {
+   "jp": "{祖父|そふ}",
+   "reading": "そふ",
+   "en": "grandfather (your own, formal)",
+   "level": "N3",
+   "src": "d0",
+   "surface": "祖父",
+   "note": "Used in writing and about your own family to others. Spoken at home: おじいちゃん."
+  },
+  {
+   "jp": "{育|そだ}てる",
+   "reading": "そだてる",
+   "en": "to grow (plants), to raise (children)",
+   "level": "N4",
+   "src": "d0",
+   "surface": "育てて"
+  },
+  {
+   "jp": "{尊敬|そんけい}する",
+   "reading": "そんけいする",
+   "en": "to respect, look up to",
+   "level": "N3",
+   "src": "d0",
+   "surface": "尊敬して",
+   "note": "{尊敬|そんけい}する{人|ひと} = the person you look up to: a classic essay and interview question."
+  },
+  {
+   "jp": "{込|こ}める",
+   "reading": "こめる",
+   "en": "to put (feelings) into",
+   "level": "N3",
+   "src": "d1",
+   "surface": "込めて",
+   "note": "{心|こころ}を{込|こ}めて = with all your heart, wholeheartedly."
+  },
+  {
+   "jp": "{苦手|にがて}",
+   "reading": "にがて",
+   "en": "not keen on; bad at",
+   "level": "N3",
+   "src": "d2",
+   "surface": "苦手",
+   "note": "A softer way to say you dislike something: {納豆|なっとう}が{苦手|にがて}です."
+  },
+  {
+   "jp": "{登|のぼ}る",
+   "reading": "のぼる",
+   "en": "to climb",
+   "level": "N4",
+   "src": "d2",
+   "surface": "登って"
+  },
+  {
+   "jp": "{意見|いけん}",
+   "reading": "いけん",
+   "en": "opinion",
+   "level": "N3",
+   "src": "d3",
+   "surface": "意見"
+  },
+  {
+   "jp": "{反対|はんたい}",
+   "reading": "はんたい",
+   "en": "the opposite; being against",
+   "level": "N3",
+   "src": "d3",
+   "surface": "反対",
+   "note": "{反対|はんたい}する = to oppose. The opposite: {賛成|さんせい} (agreeing)."
+  },
+  {
+   "jp": "{自慢|じまん}",
+   "reading": "じまん",
+   "en": "pride; something to boast about",
+   "level": "N3",
+   "src": "d5",
+   "surface": "自慢",
+   "note": "{自慢|じまん}の{孫|まご} = a grandchild you're proud of. {自慢|じまん}する can also mean 'to show off'."
+  },
+  {
+   "jp": "{孫|まご}",
+   "reading": "まご",
+   "en": "grandchild",
+   "level": "N3",
+   "src": "p4",
+   "surface": "孫"
+  }
  ],
  "kanji_study": [
   {
@@ -138,11 +225,34 @@
    "kun": "くる(しい)・にが(い)",
    "meaning": "suffering; bitter",
    "words": [
-    {"jp": "{苦手|にがて}", "reading": "にがて", "en": "not keen on; bad at"},
-    {"jp": "{苦|くる}しい", "reading": "くるしい", "en": "painful, hard to bear"},
-    {"jp": "{苦労|くろう}", "reading": "くろう", "en": "hardship, trouble"}
+    {
+     "jp": "{苦手|にがて}",
+     "reading": "にがて",
+     "en": "not keen on; bad at"
+    },
+    {
+     "jp": "{苦|くる}しい",
+     "reading": "くるしい",
+     "en": "painful, hard to bear"
+    },
+    {
+     "jp": "{苦労|くろう}",
+     "reading": "くろう",
+     "en": "hardship, trouble"
+    }
    ],
-   "decoys": {"meanings": ["sweet", "hard, firm", "sad"], "readings": ["くて", "にがしゅ", "くしゅ"]}
+   "decoys": {
+    "meanings": [
+     "sweet",
+     "hard, firm",
+     "sad"
+    ],
+    "readings": [
+     "くて",
+     "にがしゅ",
+     "くしゅ"
+    ]
+   }
   },
   {
    "kanji": "込",
@@ -151,11 +261,34 @@
    "kun": "こ(む)・こ(める)",
    "meaning": "crowded; put into",
    "words": [
-    {"jp": "{込|こ}む", "reading": "こむ", "en": "to be crowded"},
-    {"jp": "{申|もう}し{込|こ}む", "reading": "もうしこむ", "en": "to apply, sign up"},
-    {"jp": "{込|こ}める", "reading": "こめる", "en": "to put (feelings) into"}
+    {
+     "jp": "{込|こ}む",
+     "reading": "こむ",
+     "en": "to be crowded"
+    },
+    {
+     "jp": "{申|もう}し{込|こ}む",
+     "reading": "もうしこむ",
+     "en": "to apply, sign up"
+    },
+    {
+     "jp": "{込|こ}める",
+     "reading": "こめる",
+     "en": "to put (feelings) into"
+    }
    ],
-   "decoys": {"meanings": ["enter", "pull out", "wrap"], "readings": ["ごむ", "はいむ", "いれむ"]}
+   "decoys": {
+    "meanings": [
+     "enter",
+     "pull out",
+     "wrap"
+    ],
+    "readings": [
+     "ごむ",
+     "はいむ",
+     "いれむ"
+    ]
+   }
   }
  ],
  "extras": [
@@ -164,11 +297,27 @@
    "title_jp": "{家族|かぞく}の{呼|よ}び{方|かた}",
    "intro": "Left: your own family, when talking to outsiders or writing. Right: someone else's family.",
    "items": [
-    {"jp": "{祖父|そふ|grandfather (mine)|2} → おじいさん", "en": "grandfather"},
-    {"jp": "{祖母|そぼ|grandmother (mine)|2} → おばあさん", "en": "grandmother"},
-    {"jp": "{両親|りょうしん|parents|3} → ご{両親|りょうしん}", "en": "parents"},
-    {"jp": "{兄|あに} → お{兄|にい}さん", "en": "older brother"},
-    {"jp": "{孫|まご|grandchild|2} → お{孫|まご}さん", "en": "grandchild", "note": "Neighbours like ハナおばあちゃん will ask: お{孫|まご}さん、{来|き}てるの？"}
+    {
+     "jp": "{祖父|そふ|grandfather (mine)|2} → おじいさん",
+     "en": "grandfather"
+    },
+    {
+     "jp": "{祖母|そぼ|grandmother (mine)|2} → おばあさん",
+     "en": "grandmother"
+    },
+    {
+     "jp": "{両親|りょうしん|parents|3} → ご{両親|りょうしん}",
+     "en": "parents"
+    },
+    {
+     "jp": "{兄|あに} → お{兄|にい}さん",
+     "en": "older brother"
+    },
+    {
+     "jp": "{孫|まご|grandchild|2} → お{孫|まご}さん",
+     "en": "grandchild",
+     "note": "Neighbours like ハナおばあちゃん will ask: お{孫|まご}さん、{来|き}てるの？"
+    }
    ]
   },
   {
@@ -176,11 +325,28 @@
    "title_jp": "{賛成|さんせい}・{反対|はんたい}",
    "intro": "From warm agreement to soft disagreement.",
    "items": [
-    {"jp": "{賛成|さんせい|agreed, I'm for it|3}！", "en": "Agreed! / I'm for it!"},
-    {"jp": "それな！", "en": "So true!", "note": "Slang, very common with young people."},
-    {"jp": "{人|ひと}によると{思|おも}う。", "en": "I think it depends on the person."},
-    {"jp": "うーん、どうかな。", "en": "Hmm, I'm not so sure.", "note": "The polite non-answer: often means 'no'."},
-    {"jp": "{私|わたし}はちょっと{反対|はんたい|against|3}かな。", "en": "I'm a bit against it, I guess."}
+    {
+     "jp": "{賛成|さんせい|agreed, I'm for it|3}！",
+     "en": "Agreed! / I'm for it!"
+    },
+    {
+     "jp": "それな！",
+     "en": "So true!",
+     "note": "Slang, very common with young people."
+    },
+    {
+     "jp": "{人|ひと}によると{思|おも}う。",
+     "en": "I think it depends on the person."
+    },
+    {
+     "jp": "うーん、どうかな。",
+     "en": "Hmm, I'm not so sure.",
+     "note": "The polite non-answer: often means 'no'."
+    },
+    {
+     "jp": "{私|わたし}はちょっと{反対|はんたい|against|3}かな。",
+     "en": "I'm a bit against it, I guess."
+    }
    ]
   }
  ]

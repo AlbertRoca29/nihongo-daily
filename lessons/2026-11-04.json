@@ -43,37 +43,43 @@
  "dialogue_setting": "At the low table in the Tanakas' living room, a clay pot bubbling in the middle.",
  "dialogue": [
   {
-   "speaker": "Keiko",
+   "speaker": "恵子さん",
    "jp": "{主人|しゅじん|(my) husband|2}に{頼まれて|たのまれて|to ask (a favour)|3}、{今日|きょう}はりんご{鍋|なべ|hotpot|3}にしたのよ。",
-   "en": "My husband asked me to, so tonight it's apple nabe."
+   "en": "My husband asked me to, so tonight it's apple nabe.",
+   "who": "keiko"
   },
   {
-   "speaker": "You",
+   "speaker": "アルちゃん",
    "jp": "りんごを{鍋|なべ|hotpot|3}に{入|い}れるんですか。{初|はじ}めて{見|み}ました！",
    "en": "You put apples in nabe? I've never seen that!",
-   "me": true
+   "me": true,
+   "who": "you"
   },
   {
-   "speaker": "Tanaka-san",
+   "speaker": "田中さん",
    "jp": "{鷹ノ原|たかのはら}のりんごは{甘|あま}い{ずら||(Nagano dialect) = でしょう, you'll see|1}。{遠慮|えんりょ|holding back, being shy|3}しないで{食べな|たべな|(casual) eat! = 食べなさい|2}。",
-   "en": "Takanohara apples are sweet, you'll see. Don't be shy, eat."
+   "en": "Takanohara apples are sweet, you'll see. Don't be shy, eat.",
+   "who": "tanaka"
   },
   {
-   "speaker": "You",
+   "speaker": "アルちゃん",
    "jp": "すごくおいしいです。{おかわり||seconds, another helping|3}してもいいですか。",
    "en": "It's really delicious. Can I have some more?",
-   "me": true
+   "me": true,
+   "who": "you"
   },
   {
-   "speaker": "Tanaka-san",
+   "speaker": "田中さん",
    "jp": "{明日|あした}は{五時|ごじ}に{起|お}きるぞ。{遅|おく}れたら{妻|つま|(my) wife|2}に{怒られる|おこられる|to get angry, tell off|4}からな。",
-   "en": "Tomorrow we get up at five. If you're late, my wife will tell you off."
+   "en": "Tomorrow we get up at five. If you're late, my wife will tell you off.",
+   "who": "tanaka"
   },
   {
-   "speaker": "You",
+   "speaker": "アルちゃん",
    "jp": "はい、{気|き}をつけます。{目覚まし|めざまし|alarm clock|3}を{二|ふた}つ{かけて||set (an alarm)|3}おきます！",
    "en": "OK, I'll be careful. I'll set two alarms!",
-   "me": true
+   "me": true,
+   "who": "you"
   }
  ],
  "grammar": {

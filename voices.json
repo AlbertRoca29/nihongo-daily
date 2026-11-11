@@ -1,5 +1,5 @@
 {
-  "_about": "Who speaks with which voice. A plain name is a Google Chirp 3 HD voice (ja-JP-Chirp3-HD-<name>), used for the narrator and guests. {engine: gemini, voice, model, style} is Gemini 3.8 TTS through the Gemini API (GEMINI_API_KEY): voice is a Japanese library voice (ja-jp-…) or a voice designed for the character (voice_…, see voices38.json); style is the delivery. {engine: voicevox, speaker, style} is VOICEVOX (free, credit line in Settings). Change an entry and the audio is remade on the next run. Picked by ear on samples/lab.",
+  "_about": "Who speaks with which voice. Everything runs on Gemini 3.8 Flash-Lite TTS (GEMINI_API_KEY) except 颯太 (VOICEVOX, credit in Settings). cast/others are keyed by character id. narrator reads grammar examples, extras and words. Guests and staff get a library voice from guest_pool matched by gender and age. If the month's Gemini spend reaches monthly_cap_usd, lines fall back to the Chirp voice chirp_narrator (free up to 1M chars/month), never to the phone's robot voice. Change an entry and the audio is remade on the next run.",
   "model": "Chirp3-HD",
   "you": {
     "engine": "gemini",
@@ -7,42 +7,47 @@
     "model": "gemini-3.8-flash-lite-tts",
     "style": "friendly, relaxed"
   },
-  "narrator": "Kore",
+  "narrator": {
+    "engine": "gemini",
+    "voice": "ja-jp-podcaster-10",
+    "model": "gemini-3.8-flash-lite-tts",
+    "style": "calm, clear, like a teacher reading an example"
+  },
   "cast": {
     "tanaka": {
       "engine": "gemini",
       "voice": "ja-jp-podcaster-7",
-      "model": "gemini-3.8-flash-tts",
+      "model": "gemini-3.8-flash-lite-tts",
       "style": "gruff, dry, unhurried"
     },
     "yuki": {
       "engine": "gemini",
       "voice": "ja-jp-commercial-6",
-      "model": "gemini-3.8-flash-tts",
+      "model": "gemini-3.8-flash-lite-tts",
       "style": "bubbly, teasing"
     },
     "kenta": {
       "engine": "gemini",
       "voice": "voice_fy8oio1yurjl",
-      "model": "gemini-3.8-flash-tts",
+      "model": "gemini-3.8-flash-lite-tts",
       "style": "joking, loud, fast"
     },
     "sato": {
       "engine": "gemini",
       "voice": "voice_q8ebkcksc90a",
-      "model": "gemini-3.8-flash-tts",
+      "model": "gemini-3.8-flash-lite-tts",
       "style": "polite, composed"
     },
     "hana": {
       "engine": "gemini",
       "voice": "ja-jp-csagent-4",
-      "model": "gemini-3.8-flash-tts",
+      "model": "gemini-3.8-flash-lite-tts",
       "style": "slow, gentle, amused, storytelling"
     },
     "ren": {
       "engine": "gemini",
       "voice": "ja-jp-storyteller-12",
-      "model": "gemini-3.8-flash-tts",
+      "model": "gemini-3.8-flash-lite-tts",
       "style": "soft, a little shy"
     },
     "sota": {
@@ -53,46 +58,744 @@
     "mio": {
       "engine": "gemini",
       "voice": "ja-jp-csagent-8",
-      "model": "gemini-3.8-flash-tts",
+      "model": "gemini-3.8-flash-lite-tts",
       "style": "playful, dramatic"
     },
     "hayato": {
       "engine": "gemini",
       "voice": "voice_y5oast0i9by4",
-      "model": "gemini-3.8-flash-tts",
+      "model": "gemini-3.8-flash-lite-tts",
       "style": "proud, theatrical"
     }
   },
   "others": {
-    "Keiko": {
+    "keiko": {
       "engine": "gemini",
       "voice": "ja-jp-training-10",
-      "model": "gemini-3.8-flash-tts",
+      "model": "gemini-3.8-flash-lite-tts",
       "style": "cheerful, chatty"
     }
   },
-  "pool": {
-    "f": [
-      "Aoede",
-      "Zephyr",
-      "Autonoe",
-      "Sulafat",
-      "Laomedeia",
-      "Despina"
-    ],
-    "m": [
-      "Orus",
-      "Umbriel",
-      "Sadachbia",
-      "Rasalgethi",
-      "Alnilam",
-      "Zubenelgenubi",
-      "Iapetus",
-      "Enceladus",
-      "Sadaltager"
-    ]
-  },
   "credits": [
     "VOICEVOX:白上虎太郎"
-  ]
+  ],
+  "chirp_narrator": "Kore",
+  "guest_pool": [
+    {
+      "id": "ja-jp-advisor-1",
+      "g": "m",
+      "age": 44,
+      "accent": "Osaka Japanese"
+    },
+    {
+      "id": "ja-jp-advisor-10",
+      "g": "m",
+      "age": 32,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-advisor-11",
+      "g": "f",
+      "age": 62,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-advisor-12",
+      "g": "f",
+      "age": 50,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-advisor-2",
+      "g": "f",
+      "age": 37,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-advisor-3",
+      "g": "m",
+      "age": 40,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-advisor-4",
+      "g": "f",
+      "age": 41,
+      "accent": "Osaka Japanese"
+    },
+    {
+      "id": "ja-jp-advisor-5",
+      "g": "f",
+      "age": 25,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-advisor-6",
+      "g": "m",
+      "age": 42,
+      "accent": "Osaka Japanese"
+    },
+    {
+      "id": "ja-jp-advisor-7",
+      "g": "f",
+      "age": 39,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-advisor-8",
+      "g": "m",
+      "age": 39,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-advisor-9",
+      "g": "m",
+      "age": 58,
+      "accent": "Fukuoka Japanese"
+    },
+    {
+      "id": "ja-jp-assistant-1",
+      "g": "f",
+      "age": 36,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-assistant-10",
+      "g": "m",
+      "age": 28,
+      "accent": "Fukuoka Japanese"
+    },
+    {
+      "id": "ja-jp-assistant-11",
+      "g": "m",
+      "age": 35,
+      "accent": "Fukuoka Japanese"
+    },
+    {
+      "id": "ja-jp-assistant-12",
+      "g": "m",
+      "age": 44,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-assistant-2",
+      "g": "m",
+      "age": 38,
+      "accent": "Osaka Japanese"
+    },
+    {
+      "id": "ja-jp-assistant-3",
+      "g": "m",
+      "age": 30,
+      "accent": "Fukuoka Japanese"
+    },
+    {
+      "id": "ja-jp-assistant-4",
+      "g": "f",
+      "age": 22,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-assistant-5",
+      "g": "f",
+      "age": 30,
+      "accent": "Osaka Japanese"
+    },
+    {
+      "id": "ja-jp-assistant-6",
+      "g": "f",
+      "age": 74,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-assistant-7",
+      "g": "f",
+      "age": 31,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-assistant-8",
+      "g": "f",
+      "age": 24,
+      "accent": "Osaka Japanese"
+    },
+    {
+      "id": "ja-jp-assistant-9",
+      "g": "n",
+      "age": 29,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-commercial-1",
+      "g": "f",
+      "age": 21,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-commercial-2",
+      "g": "m",
+      "age": 22,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-commercial-3",
+      "g": "f",
+      "age": 28,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-commercial-4",
+      "g": "m",
+      "age": 28,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-commercial-5",
+      "g": "m",
+      "age": 22,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-commercial-6",
+      "g": "f",
+      "age": 25,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-commercial-7",
+      "g": "f",
+      "age": 23,
+      "accent": "Osaka Japanese"
+    },
+    {
+      "id": "ja-jp-concierge-1",
+      "g": "f",
+      "age": 30,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-concierge-10",
+      "g": "f",
+      "age": 57,
+      "accent": "Osaka Japanese"
+    },
+    {
+      "id": "ja-jp-concierge-11",
+      "g": "f",
+      "age": 63,
+      "accent": "Fukuoka Japanese"
+    },
+    {
+      "id": "ja-jp-concierge-12",
+      "g": "m",
+      "age": 42,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-concierge-2",
+      "g": "m",
+      "age": 36,
+      "accent": "Fukuoka Japanese"
+    },
+    {
+      "id": "ja-jp-concierge-3",
+      "g": "f",
+      "age": 30,
+      "accent": "Osaka Japanese"
+    },
+    {
+      "id": "ja-jp-concierge-4",
+      "g": "m",
+      "age": 34,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-concierge-5",
+      "g": "f",
+      "age": 38,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-concierge-6",
+      "g": "m",
+      "age": 52,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-concierge-7",
+      "g": "f",
+      "age": 24,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-concierge-8",
+      "g": "m",
+      "age": 33,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-concierge-9",
+      "g": "n",
+      "age": 34,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-csagent-1",
+      "g": "m",
+      "age": 30,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-csagent-10",
+      "g": "m",
+      "age": 29,
+      "accent": "Fukuoka Japanese"
+    },
+    {
+      "id": "ja-jp-csagent-11",
+      "g": "f",
+      "age": 32,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-csagent-12",
+      "g": "f",
+      "age": 59,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-csagent-2",
+      "g": "f",
+      "age": 23,
+      "accent": "Osaka Japanese"
+    },
+    {
+      "id": "ja-jp-csagent-3",
+      "g": "m",
+      "age": 39,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-csagent-4",
+      "g": "f",
+      "age": 64,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-csagent-5",
+      "g": "m",
+      "age": 25,
+      "accent": "Fukuoka Japanese"
+    },
+    {
+      "id": "ja-jp-csagent-6",
+      "g": "f",
+      "age": 35,
+      "accent": "Osaka Japanese"
+    },
+    {
+      "id": "ja-jp-csagent-7",
+      "g": "m",
+      "age": 51,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-csagent-8",
+      "g": "f",
+      "age": 23,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-csagent-9",
+      "g": "m",
+      "age": 39,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-podcaster-1",
+      "g": "m",
+      "age": 57,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-podcaster-10",
+      "g": "f",
+      "age": 56,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-podcaster-11",
+      "g": "m",
+      "age": 38,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-podcaster-12",
+      "g": "f",
+      "age": 38,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-podcaster-2",
+      "g": "f",
+      "age": 28,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-podcaster-3",
+      "g": "f",
+      "age": 33,
+      "accent": "Osaka Japanese"
+    },
+    {
+      "id": "ja-jp-podcaster-4",
+      "g": "m",
+      "age": 39,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-podcaster-5",
+      "g": "m",
+      "age": 38,
+      "accent": "Osaka Japanese"
+    },
+    {
+      "id": "ja-jp-podcaster-6",
+      "g": "f",
+      "age": 37,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-podcaster-7",
+      "g": "m",
+      "age": 65,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-podcaster-8",
+      "g": "m",
+      "age": 34,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-podcaster-9",
+      "g": "f",
+      "age": 43,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-storyteller-1",
+      "g": "f",
+      "age": 29,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-storyteller-10",
+      "g": "f",
+      "age": 57,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-storyteller-11",
+      "g": "f",
+      "age": 36,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-storyteller-12",
+      "g": "m",
+      "age": 26,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-storyteller-2",
+      "g": "m",
+      "age": 27,
+      "accent": "Osaka Japanese"
+    },
+    {
+      "id": "ja-jp-storyteller-3",
+      "g": "f",
+      "age": 48,
+      "accent": "Fukuoka Japanese"
+    },
+    {
+      "id": "ja-jp-storyteller-4",
+      "g": "m",
+      "age": 49,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-storyteller-5",
+      "g": "m",
+      "age": 24,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-storyteller-6",
+      "g": "m",
+      "age": 27,
+      "accent": "Osaka Japanese"
+    },
+    {
+      "id": "ja-jp-storyteller-7",
+      "g": "f",
+      "age": 29,
+      "accent": "Fukuoka Japanese"
+    },
+    {
+      "id": "ja-jp-storyteller-8",
+      "g": "f",
+      "age": 59,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-storyteller-9",
+      "g": "m",
+      "age": 38,
+      "accent": "Osaka Japanese"
+    },
+    {
+      "id": "ja-jp-techagent-1",
+      "g": "f",
+      "age": 43,
+      "accent": "Fukuoka Japanese"
+    },
+    {
+      "id": "ja-jp-techagent-10",
+      "g": "m",
+      "age": 32,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-techagent-11",
+      "g": "m",
+      "age": 46,
+      "accent": "Fukuoka Japanese"
+    },
+    {
+      "id": "ja-jp-techagent-12",
+      "g": "m",
+      "age": 38,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-techagent-2",
+      "g": "m",
+      "age": 49,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-techagent-3",
+      "g": "f",
+      "age": 37,
+      "accent": "Osaka Japanese"
+    },
+    {
+      "id": "ja-jp-techagent-4",
+      "g": "m",
+      "age": 47,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-techagent-5",
+      "g": "f",
+      "age": 41,
+      "accent": "Osaka Japanese"
+    },
+    {
+      "id": "ja-jp-techagent-6",
+      "g": "f",
+      "age": 31,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-techagent-7",
+      "g": "f",
+      "age": 32,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-techagent-8",
+      "g": "m",
+      "age": 33,
+      "accent": "Fukuoka Japanese"
+    },
+    {
+      "id": "ja-jp-techagent-9",
+      "g": "f",
+      "age": 48,
+      "accent": "Fukuoka Japanese"
+    },
+    {
+      "id": "ja-jp-training-1",
+      "g": "f",
+      "age": 62,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-training-10",
+      "g": "f",
+      "age": 60,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-training-11",
+      "g": "n",
+      "age": 41,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-training-12",
+      "g": "f",
+      "age": 60,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-training-2",
+      "g": "m",
+      "age": 40,
+      "accent": "Fukuoka Japanese"
+    },
+    {
+      "id": "ja-jp-training-3",
+      "g": "f",
+      "age": 61,
+      "accent": "Osaka Japanese"
+    },
+    {
+      "id": "ja-jp-training-4",
+      "g": "m",
+      "age": 63,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-training-5",
+      "g": "f",
+      "age": 27,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-training-6",
+      "g": "f",
+      "age": 23,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-training-7",
+      "g": "f",
+      "age": 47,
+      "accent": "Fukuoka Japanese"
+    },
+    {
+      "id": "ja-jp-training-8",
+      "g": "f",
+      "age": 61,
+      "accent": "Osaka Japanese"
+    },
+    {
+      "id": "ja-jp-training-9",
+      "g": "f",
+      "age": 37,
+      "accent": "Fukuoka Japanese"
+    },
+    {
+      "id": "ja-jp-tutor-1",
+      "g": "f",
+      "age": 42,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-tutor-10",
+      "g": "f",
+      "age": 55,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-tutor-11",
+      "g": "m",
+      "age": 31,
+      "accent": "Fukuoka Japanese"
+    },
+    {
+      "id": "ja-jp-tutor-12",
+      "g": "m",
+      "age": 39,
+      "accent": "Osaka Japanese"
+    },
+    {
+      "id": "ja-jp-tutor-2",
+      "g": "m",
+      "age": 36,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-tutor-3",
+      "g": "f",
+      "age": 25,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-tutor-4",
+      "g": "m",
+      "age": 24,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-tutor-5",
+      "g": "f",
+      "age": 26,
+      "accent": "Fukuoka Japanese"
+    },
+    {
+      "id": "ja-jp-tutor-6",
+      "g": "f",
+      "age": 45,
+      "accent": "Fukuoka Japanese"
+    },
+    {
+      "id": "ja-jp-tutor-7",
+      "g": "m",
+      "age": 22,
+      "accent": "Osaka Japanese"
+    },
+    {
+      "id": "ja-jp-tutor-8",
+      "g": "f",
+      "age": 64,
+      "accent": "Tokyo Japanese"
+    },
+    {
+      "id": "ja-jp-tutor-9",
+      "g": "m",
+      "age": 40,
+      "accent": "Tokyo Japanese"
+    }
+  ],
+  "guest_model": "gemini-3.8-flash-lite-tts",
+  "slow_style": "slowly and clearly, like reading to a language learner, with natural intonation",
+  "monthly_cap_usd": 3,
+  "prices": {
+    "_about": "USD per million tokens (text in, audio out), from Google's pricing; 25 audio tokens = 1 s.",
+    "gemini-3.8-flash-lite-tts": {
+      "2026": [
+        0.5,
+        6
+      ],
+      "2027": [
+        1,
+        12
+      ]
+    },
+    "gemini-3.8-flash-tts": {
+      "2026": [
+        0.5,
+        9
+      ],
+      "2027": [
+        1,
+        18
+      ]
+    }
+  }
 }

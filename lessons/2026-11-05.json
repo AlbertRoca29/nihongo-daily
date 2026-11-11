@@ -43,56 +43,64 @@
  "dialogue_setting": "A LINE chat at night: you're under the kotatsu in your upstairs room, Yuki is on the train home in Tokyo.",
  "dialogue": [
   {
-   "speaker": "Yuki",
+   "speaker": "由紀",
    "time": "21:02",
    "jp": "アル〜！{農家|のうか|farm, farming family|2}{生活|せいかつ|daily life|3}{一日目|いちにちめ}、どうだった？？",
-   "en": "Al~! Day one of farm life, how was it??"
+   "en": "Al~! Day one of farm life, how was it??",
+   "who": "yuki"
   },
   {
-   "speaker": "You",
+   "speaker": "アルちゃん",
    "time": "21:05",
    "jp": "{疲|つか}れた〜ｗ 5{時|じ}に{起|お}きて、{一日中|いちにちじゅう|all day long|3}りんご{畑|ばたけ|field (farm)|2}にいた。でも{景色|けしき|view, scenery|3}がめっちゃきれい。{山|やま}が{真っ赤|まっか|bright red|3}だよ",
    "me": true,
-   "en": "So tired lol. Up at 5, in the apple orchard all day. But the view is amazing. The mountains are bright red."
+   "en": "So tired lol. Up at 5, in the apple orchard all day. But the view is amazing. The mountains are bright red.",
+   "who": "you"
   },
   {
-   "speaker": "Yuki",
+   "speaker": "由紀",
    "time": "21:06",
    "jp": "いいじゃん！で、{田中|たなか}さんってどんな{人|ひと}？{怖|こわ}い？",
-   "en": "Nice! So what's Tanaka-san like? Scary?"
+   "en": "Nice! So what's Tanaka-san like? Scary?",
+   "who": "yuki"
   },
   {
-   "speaker": "You",
+   "speaker": "アルちゃん",
    "time": "21:09",
    "jp": "{無口|むくち|quiet, of few words|2}だけど{優|やさ}しいよ。{今日|きょう}、{畑|はたけ|field (farm)|2}で{軽|けい|軽トラ = mini truck|2}トラを{運転|うんてん|driving|3}させてくれた！",
    "me": true,
-   "en": "He doesn't talk much but he's kind. Today he let me drive the kei truck in the field!"
+   "en": "He doesn't talk much but he's kind. Today he let me drive the kei truck in the field!",
+   "who": "you"
   },
   {
-   "speaker": "Yuki",
+   "speaker": "由紀",
    "time": "21:10",
    "jp": "マジ！？いい{人|ひと}じゃん。でも{夜|よる}とか{寂しくない|さびしくない|lonely|3}？",
-   "en": "Seriously!? He sounds great. But don't you get lonely, like at night?"
+   "en": "Seriously!? He sounds great. But don't you get lonely, like at night?",
+   "who": "yuki"
   },
   {
-   "speaker": "You",
+   "speaker": "アルちゃん",
    "time": "21:14",
    "jp": "ちょっとね。{静|しず}かすぎて、スペインの{家族|かぞく}を{思い出す|おもいだす|to remember, recall|3}。まだ{慣れない|なれない|to get used to|3}けど、がんばる",
    "me": true,
-   "en": "A little. It's so quiet I keep thinking of my family in Spain. Not used to it yet, but I'll hang in there."
+   "en": "A little. It's so quiet I keep thinking of my family in Spain. Not used to it yet, but I'll hang in there.",
+   "who": "you"
   },
   {
-   "speaker": "Yuki",
+   "speaker": "由紀",
    "time": "21:15",
    "jp": "えらい！{家族|かぞく}を{心配|しんぱい|worry|4}させないように、{写真|しゃしん}{送|おく}ってあげなよ（スタンプ：ファイト！）",
-   "en": "Good on you! Send them some photos so they don't worry (sticker: You got this!)"
+   "en": "Good on you! Send them some photos so they don't worry (sticker: You got this!)",
+   "who": "yuki"
   },
   {
-   "speaker": "You",
+   "speaker": "アルちゃん",
    "time": "21:16",
    "jp": "うん、{明日|あした}{送|おく}る！{おやすみ||good night|4}（スタンプ：ねこがおじぎ）",
    "me": true,
-   "en": "Yeah, I'll send them tomorrow! Night (sticker: cat bowing)"
+   "en": "Yeah, I'll send them tomorrow! Night (sticker: cat bowing)",
+   "who": "you"
   }
  ],
  "grammar": {

@@ -7,6 +7,8 @@ on:
     branches: [master]
     paths: ["lessons/**", "voices.json", "cast.json", "scripts/tts.py"]
   workflow_dispatch:
+  schedule:
+    - cron: "15 9 * * *"   # 10:15 Madrid, after Gemini's daily limit resets: retry leftovers, back-fill older lessons
 
 permissions:
   contents: write
@@ -24,7 +26,7 @@ jobs:
         run: python3 scripts/strokes.py || true
       - name: Start VOICEVOX (free voices used in voices.json)
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg rubberband-cli
           if grep -q voicevox voices.json; then
             docker run -d -p 50021:50021 voicevox/voicevox_engine:cpu-latest
             for i in $(seq 1 60); do curl -sf http://127.0.0.1:50021/version && break; sleep 5; done
@@ -33,6 +35,7 @@ jobs:
         env:
           GOOGLE_TTS_KEY: ${{ secrets.GOOGLE_TTS_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          BACKFILL: ${{ github.event_name == 'schedule' && '45' || '0' }}
         run: python3 scripts/tts.py
       - name: Commit audio
         run: |

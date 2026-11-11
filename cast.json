@@ -1,5 +1,5 @@
 {
- "_about": "The fixed world and recurring cast of Nihongo Line. Facts here are canon: never contradict them. 'log' is the story so far; the daily run appends one entry per lesson. New facts a lesson invents go in that entry's 'new_facts' and become canon too.",
+ "_about": "The fixed world and recurring cast of Nihongo Line. Facts here are canon: never contradict them. 'log' is the story so far; the daily run appends one entry per lesson. New facts a lesson invents go in that entry's 'new_facts' and become canon too. Each character's 'name' is the Japanese display name used as the speaker label; 'id' is what lines point to with \"who\". 'others' are recurring side characters with their own portrait and voice.",
  "world": {
   "you": "The learner, 'You' in dialogues. His name and personal details come from the task prompt (private: never write them into the repo; in lessons use only his name). He arrived in Japan at the start of November 2026 to volunteer and is staying for months: helps on the Tanaka farm in exchange for a room in their house, does reception shifts at Guesthouse Kaze, and assists in English classes at Takanohara High once a week. Characters address him by name with さん (polite: Tanaka-san at first, Sato-sensei, strangers), a short nickname for friends (Yuki, Kenta, Ren once close), くん (Sōta, Mio), ちゃん (Hana-obāchan).",
   "place": "{鷹ノ原町|たかのはらまち} (Takanohara), a small fictional mountain town in Nagano prefecture: apple orchards, rice fields, one station on a local line, rural buses, an onsen, a small shopping street, and the ruins of a castle on the hill ({鷹ノ原城跡|たかのはらじょうあと}). About 40 minutes by train to Nagano city, about 3 hours to Tokyo.",
@@ -17,7 +17,7 @@
  "cast": [
   {
    "id": "tanaka",
-   "name": "Tanaka-san",
+   "name": "田中さん",
    "name_jp": "{田中茂|たなかしげる}さん",
    "age": 67,
    "role": "Your volunteer host. Apple and rice farmer.",
@@ -35,11 +35,14 @@
    "fixed": [
     "Doesn't know about Ren at the start; whether and how he finds out is part of the story.",
     "Never drinks on weekdays; drinks local sake at New Year and festivals."
+   ],
+   "aliases": [
+    "Tanaka-san"
    ]
   },
   {
    "id": "yuki",
-   "name": "Yuki",
+   "name": "由紀",
    "name_jp": "{由紀|ゆき}",
    "age": 25,
    "role": "Your friend in Tokyo, mostly on LINE.",
@@ -57,11 +60,14 @@
    "fixed": [
     "Lives in Tokyo, not Takanohara; appears in person only when she visits or you visit Tokyo.",
     "Knows about the learner's love life and is fully supportive."
+   ],
+   "aliases": [
+    "Yuki"
    ]
   },
   {
    "id": "kenta",
-   "name": "Kenta",
+   "name": "健太",
    "name_jp": "{健太|けんた}",
    "age": 24,
    "role": "Your coworker at Guesthouse Kaze reception.",
@@ -78,6 +84,9 @@
    "fixed": [
     "Finds out about Ren early and is completely relaxed about it; teases you about him like he would about anyone.",
     "Has a girlfriend, {沙織|さおり}, a nurse in Nagano city."
+   ],
+   "aliases": [
+    "Kenta"
    ]
   },
   {
@@ -98,11 +107,12 @@
    "fixed": [
     "Mio is one of her students.",
     "Calls you アルちゃん (the name everyone in the story uses for him)."
-   ]
+   ],
+   "aliases": []
   },
   {
    "id": "hana",
-   "name": "Hana-obāchan",
+   "name": "ハナおばあちゃん",
    "name_jp": "ハナおばあちゃん",
    "age": 84,
    "role": "The Tanakas' neighbour, keeper of the town's stories.",
@@ -119,6 +129,9 @@
    "fixed": [
     "Her late husband was {正一|しょういち}, a carpenter.",
     "Has a cat, {タマ|たま}."
+   ],
+   "aliases": [
+    "Hana-obāchan"
    ]
   },
   {
@@ -142,11 +155,12 @@
    "fixed": [
     "Lives in Nagano city, so dates happen there or he visits Takanohara on weekends.",
     "Has a younger sister {葵|あおい} (22)."
-   ]
+   ],
+   "aliases": []
   },
   {
    "id": "sota",
-   "name": "Sōta",
+   "name": "颯太",
    "name_jp": "{颯太|そうた}",
    "age": 11,
    "role": "Tanaka-san's grandson.",
@@ -163,6 +177,9 @@
    "fixed": [
     "Only at the farm on weekends and holidays (check the date: no weekday visits during term).",
     "Doesn't know or care about your love life; if Ren comes up he just thinks Ren is 'Al's friend'."
+   ],
+   "aliases": [
+    "Sōta"
    ]
   },
   {
@@ -183,7 +200,8 @@
    ],
    "fixed": [
     "Interactions are always in a school or public setting (class, club, school festival, a group event). Teacher-student boundaries are kept: no private one-to-one meetups, no romance topics involving the learner."
-   ]
+   ],
+   "aliases": []
   },
   {
    "id": "hayato",
@@ -203,7 +221,8 @@
    "fixed": [
     "Only appears in story lessons: a legend told by Hana-obāchan, a museum panel at the castle ruins, the festival play, a picture book read to Sōta. He never speaks with the learner directly.",
     "Real historical facts mentioned with him must be accurate."
-   ]
+   ],
+   "aliases": []
   }
  ],
  "guests": {
@@ -324,6 +343,18 @@
     "田中さん gave アルちゃん Thursday 12 Nov off as the apple harvest is nearly finished.",
     "千夏さん (大野千夏, 58, lives in 松本) stayed at ゲストハウス風 on the weekend of 7–8 Nov and gave アルちゃん her LINE; she got lost on a mountain last year.",
     "アルちゃん plans to hike 鷹見岳 on 12 Nov (leave 7:00, down by 15:00) and promised to send 千夏さん photos."
+   ]
+  }
+ ],
+ "others": [
+  {
+   "id": "keiko",
+   "name": "恵子さん",
+   "name_jp": "{恵子|けいこ}さん",
+   "role": "田中さん's wife",
+   "aliases": [
+    "Keiko",
+    "恵子"
    ]
   }
  ]
