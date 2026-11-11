@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" id="themeColor" content="#f2f3f5">
-<script>(function(){var R=document.documentElement;function g(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}}var th=g("set:theme");if(th==="light"||th==="dark")R.setAttribute("data-theme",th);var cs=g("set:css");if(cs&&cs.vars){for(var k in cs.vars)R.style.setProperty(k,cs.vars[k]);(cs.links||[]).forEach(function(q){document.write('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?'+q+'&display=swap" data-f="https://fonts.googleapis.com/css2?'+q+'&display=swap">')})}var m=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)");function set(){var t=R.getAttribute("data-theme");var dark=t?t==="dark":!!(m&&m.matches);document.getElementById("themeColor").setAttribute("content",dark?"#000000":"#f2f3f5");}window.__themeColor=set;set();if(m&&m.addEventListener)m.addEventListener("change",set);})();</script>
+<meta name="theme-color" id="themeColor" content="#f5f5f3">
+<script>(function(){var R=document.documentElement;function g(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}}var th=g("set:theme");if(th==="light"||th==="dark")R.setAttribute("data-theme",th);var cs=g("set:css");if(cs&&cs.vars){for(var k in cs.vars)R.style.setProperty(k,cs.vars[k]);(cs.links||[]).forEach(function(q){document.write('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?'+q+'&display=swap" data-f="https://fonts.googleapis.com/css2?'+q+'&display=swap">')})}var m=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)");function set(){var t=R.getAttribute("data-theme");var dark=t?t==="dark":!!(m&&m.matches);document.getElementById("themeColor").setAttribute("content",dark?"#000000":"#f5f5f3");}window.__themeColor=set;set();if(m&&m.addEventListener)m.addEventListener("change",set);})();</script>
 <meta name="mobile-web-app-capable" content="yes">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);box-sizing:border-box;height:100%}html{background:#f2f3f5}@media (prefers-color-scheme:dark){html{background:#000}}html[data-theme="dark"]{background:#000}html[data-theme="light"]{background:#f2f3f5}body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);box-sizing:border-box;height:100%}html{background:#f5f5f3}@media (prefers-color-scheme:dark){html{background:#000}}html[data-theme="dark"]{background:#000}html[data-theme="light"]{background:#f5f5f3}body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
 <title>一日一歩</title>
 <meta name="robots" content="noindex,nofollow">
 <!-- fonts are self-hosted (fonts/, subset to kana + ~3,200 kanji); other fonts load from Google only when chosen in Settings -->
@@ -17,7 +17,7 @@
 <style>
 /* Layout: one-screen phone app. Gradient "station board" hero card, a slim progress line of stops, big rounded cards on a soft canvas, pill buttons in the thumb zone. Fintech-clean, bold type. */
 :root{
-  --paper:#f2f3f5; --card:#ffffff; --ink:#111316; --muted:#5f6570; --rule:#e3e5e9; --soft:#eef1f6;
+  --paper:#f5f5f3; --card:#ffffff; --ink:#111316; --muted:#5f6570; --rule:#e3e5e9; --soft:#eef1f6;
   --accent:#4f46e5; --accent-2:#2563eb; --on-accent:#ffffff; --good:#087a4f; --on-good:#ffffff;
   --grad:linear-gradient(135deg,#2b59ff 0%,#6d3cf5 55%,#a21caf 100%); --grad-ink:#2b2bd9;
   --btn:#111316; --on-btn:#ffffff; --ghost:#e6e8ec;
@@ -258,7 +258,7 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
 .chat .stack{display:flex;flex-direction:column;gap:2px;min-width:0;max-width:82%}
 .chat .line.me .stack{align-items:flex-end}
 .chat .bubble{max-width:100%;border-radius:16px 16px 16px 4px}
-.chat .line.me .bubble{background:var(--line-green);color:#06210f;border-radius:16px 16px 4px 16px}
+.chat .line.me .bubble{background:var(--me);color:var(--me-ink);border-radius:16px 16px 4px 16px}
 .chat .line.me .bubble rt{color:rgba(6,33,15,.68)}
 .chat .line.me .bubble .en{color:rgba(6,33,15,.8);border-top-color:rgba(6,33,15,.18)}
 .chat .line.me .bubble .en.hid{background:rgba(6,33,15,.14)}
@@ -614,6 +614,150 @@ details.more summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--a
 .card .agenda-row span{background:var(--soft)}
 </style>
 
+<style>
+/* ===== r4: 日の丸. White cards on near-white, black ink, one red sun.
+   Red only means three things: the sun, today, and words you can tap. Everything else is ink. ===== */
+:root{
+  --paper:#f5f5f3; --card:#ffffff; --ink:#0b0a09; --muted:#45423f; --rule:#e6e6e3; --soft:#f0f0ee;
+  --accent:#0b0a09; --accent-2:#0b0a09; --on-accent:#ffffff; --grad-ink:#0b0a09;
+  --btn:#0b0a09; --on-btn:#ffffff; --ghost:#ececea; --pop:#ffffff;
+  --sun:#d63a20; --red:#b52a15; --chip:#ececea; --hero:#ffffff;
+  --me:#fde3da; --me-ink:#0b0a09; --me-soft:rgba(11,10,9,.08); --me-line:rgba(11,10,9,.12);
+  --mark:rgba(181,42,21,.45); --mark-on:rgba(214,58,32,.12);
+  --shadow:0 1px 2px rgba(0,0,0,.06),0 0 0 1px rgba(0,0,0,.05);
+  --hero-shadow:0 14px 34px -12px rgba(0,0,0,.22),0 2px 6px rgba(0,0,0,.06),0 0 0 1px rgba(0,0,0,.06);
+  --grain-blend:multiply;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#000000; --card:#1c1c1e; --ink:#ffffff; --muted:#b4b4b4; --rule:#303033; --soft:#232326;
+  --accent:#ffffff; --accent-2:#ffffff; --on-accent:#000000; --grad-ink:#000000;
+  --btn:#ffffff; --on-btn:#000000; --ghost:#2a2a2d; --pop:#26262a;
+  --sun:#e0401f; --red:#ff6a4d; --chip:rgba(255,255,255,.1); --hero:#232326;
+  --me:#5e2b22; --me-ink:#fff1ec; --me-soft:rgba(255,255,255,.12); --me-line:rgba(255,255,255,.16);
+  --mark:rgba(255,106,77,.55); --mark-on:rgba(255,106,77,.18);
+  --shadow:none; --hero-shadow:0 0 0 1px rgba(255,255,255,.09); --grain-blend:overlay}}
+:root[data-theme="dark"]{
+  --paper:#000000; --card:#1c1c1e; --ink:#ffffff; --muted:#b4b4b4; --rule:#303033; --soft:#232326;
+  --accent:#ffffff; --accent-2:#ffffff; --on-accent:#000000; --grad-ink:#000000;
+  --btn:#ffffff; --on-btn:#000000; --ghost:#2a2a2d; --pop:#26262a;
+  --sun:#e0401f; --red:#ff6a4d; --chip:rgba(255,255,255,.1); --hero:#232326;
+  --me:#5e2b22; --me-ink:#fff1ec; --me-soft:rgba(255,255,255,.12); --me-line:rgba(255,255,255,.16);
+  --mark:rgba(255,106,77,.55); --mark-on:rgba(255,106,77,.18);
+  --shadow:none; --hero-shadow:0 0 0 1px rgba(255,255,255,.09); --grain-blend:overlay}
+html{background:var(--paper)!important}
+
+/* white cards lift off the paper with a hairline + soft shadow (none in dark) */
+.card,.tile,.kcell,.vmsg,.icon-btn,.furi3,.date-btn,.agenda-row span,.chips button,.ladder button,.sgrid button,.composer,.typing,.sign,.preview,.offline,.chat .bubble,.lines .bubble{box-shadow:var(--shadow)}
+.line .bubble.sel{box-shadow:none}
+.card .agenda-row span{box-shadow:none;background:var(--soft)}
+
+/* furigana never below ~9.5px */
+rt{font-size:max(.5em,9.5px)}
+.gform .fl ruby rt{font-size:9.5px}
+
+/* the lesson card: white, shaded, paper grain, a red sun low on the right */
+.board{background:var(--hero);color:var(--ink);box-shadow:var(--hero-shadow);border-radius:26px}
+.board::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.3;mix-blend-mode:var(--grain-blend);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.board::after{right:-46px;top:auto;bottom:-70px;width:190px;height:190px;background:var(--sun)}
+.board-kicker{opacity:1;color:var(--muted)}
+.board-title rt{color:var(--muted)}
+.board-en{opacity:1;color:var(--muted)}
+.band span{background:var(--chip)}
+.band .num{background:var(--btn);color:var(--on-btn)}
+.hero-meta span{background:var(--chip);color:var(--ink)}
+.hero-go b{background:var(--btn);color:var(--on-btn)}
+.hero-bar{background:var(--rule)}
+.hero-bar i{background:var(--ink)}
+.sign-bar{background:var(--ink);color:var(--paper)}
+.hanko{background:var(--sun);color:#fff}
+
+/* home */
+.home-head h1{font-size:34px;line-height:1.1}
+.home-head .sub{font-size:13.5px;letter-spacing:0;margin-top:6px}
+.home-head .sub b{color:var(--ink);font-weight:700}
+.home-head .icon-btn{width:44px;height:44px}
+.hero2{display:flex;flex-direction:column;gap:12px;padding:18px 18px 16px}
+.board > *{position:relative;z-index:1}
+.h-who{display:flex;align-items:center;gap:10px;min-height:36px}
+.h-who .ava,.h-who img.ava{width:36px;height:36px;font-size:15px;background:var(--chip);color:var(--ink)}
+.h-who b{display:block;font-family:var(--jp);font-size:15px;line-height:1.3}
+.h-who small{display:block;font-size:13px;color:var(--muted);line-height:1.3}
+.hero2 .board-title{font-family:var(--jp);font-size:clamp(23px,7vw,29px);line-height:1.5;margin:0}
+.hero2 .board-en{font-size:15px;margin-top:-6px;white-space:normal}
+.hero2 .hero-meta{margin:0;gap:6px}
+.hero2 .hero-meta span{font-family:var(--jp);font-size:13px;font-weight:700;padding:6px 12px;display:inline-flex;align-items:center;gap:5px}
+.h-go{display:flex;align-items:center;gap:14px;margin-top:2px}
+.h-left{flex:1;min-width:0;display:flex;flex-direction:column;gap:6px;line-height:1.3}
+.h-left b{font-size:15px}
+.h-left small{font-size:13px;color:var(--muted);font-weight:600}
+.h-segs{display:flex;gap:3px;max-width:200px}
+.h-segs i{flex:1;height:5px;border-radius:3px;background:var(--rule)}
+.h-segs i.on{background:var(--ink)}
+.h-btn{flex:none;background:var(--btn);color:var(--on-btn);border-radius:999px;min-height:50px;padding:0 26px;display:grid;place-items:center;font-weight:700;font-size:16px}
+.streak2{display:flex;align-items:center;gap:12px;padding:12px 14px}
+.streak2 .sn{display:flex;flex-direction:column;align-items:center;min-width:52px;line-height:1.15}
+.streak2 .sn b{font-size:22px;font-variant-numeric:tabular-nums}
+.streak2 .sn small{font-family:var(--jp);font-size:12px;font-weight:700;color:var(--muted)}
+.streak2 .vr{width:1px;align-self:stretch;background:var(--rule)}
+.streak2 .week{flex:1;gap:2px}
+.week .d{font-size:12px}
+.week .d i{width:26px;height:26px;background:var(--soft);font-size:12px}
+.week .d.on i{background:var(--ink);color:var(--paper)}
+.week .d.today{color:var(--ink);font-weight:700}
+.week .d.today:not(.on) i{background:transparent;box-shadow:inset 0 0 0 2px var(--sun)}
+.week .d.today.on i{box-shadow:0 0 0 2px var(--paper),0 0 0 4px var(--sun)}
+.tile{gap:6px;min-height:92px;padding:14px 16px}
+.tile .tt{display:flex;align-items:baseline;gap:8px;margin-bottom:auto}
+.tile .tt .tk{font-family:var(--mincho);font-weight:700;font-size:24px;line-height:1.1;color:var(--ink);margin:0}
+.tile .tt small{font-size:13px;font-weight:600;color:var(--muted)}
+.tile .ts{font-size:14px;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:8px}
+.tile .ts .faces img.ava{width:24px;height:24px}
+.tile .ts .faces > * + *{margin-left:-7px}
+.tile .badge{background:var(--sun)}
+.sec-h{padding:0 4px;margin-top:6px}
+.sec-h h2{margin:0;font-family:var(--jp);font-size:18px;font-weight:700}
+.sec-h h2 small{font-family:var(--ui);font-size:13px;font-weight:600;color:var(--muted);margin-left:4px}
+.link{color:var(--ink);display:inline-flex;align-items:center;gap:3px;min-height:44px}
+.lrow .tx div{font-family:var(--jp);font-size:16px}
+.lrow .tx small{font-size:13px}
+.lrow .st.half{background:var(--soft);color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+
+/* lesson header: name of who you're chatting with, in the top bar */
+.pline i{background:var(--ink)}
+.prow .lbl .tab{color:var(--ink)}
+.pwho{display:flex;align-items:center;gap:8px;min-width:0}
+.pwho .ava,.pwho img.ava{width:34px;height:34px;font-size:14px;background:var(--card);color:var(--ink);box-shadow:var(--shadow)}
+.pwho b{display:block;font-family:var(--jp);font-size:15px;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pwho small{display:block;font-size:12px;font-weight:600;color:var(--muted);line-height:1.2}
+.furi3{color:var(--ink);min-height:36px}
+.furi3[data-m="on"]{color:var(--ink)}
+
+/* chats: on the paper, friend in white, me in a light red tint */
+.chat{background:transparent;padding:0}
+.chat .line .ava{background:var(--card);color:var(--ink);box-shadow:var(--shadow)}
+.ava{color:var(--ink)}
+.line.me .bubble,.chat .line.me .bubble{background:var(--me);color:var(--me-ink);box-shadow:none}
+.line.me .bubble rt,.chat .line.me .bubble rt{color:var(--muted)}
+.line.me .bubble .en,.chat .line.me .bubble .en{color:var(--me-ink);opacity:.8;border-top-color:var(--me-line)}
+.line.me .bubble .en.hid,.chat .line.me .bubble .en.hid{background:var(--me-soft);opacity:1}
+.line.me .play,.line.me .star,.chat .line.me .play,.chat .line.me .star{background:var(--me-soft);color:var(--me-ink)}
+.line.me .star.on,.chat .line.me .star.on{background:var(--me-soft);color:var(--star)}
+.line.me .mini,.chat .line.me .mini{color:var(--me-ink)}
+.line.me mark,.chat .line.me mark{background:var(--me-soft);color:var(--me-ink)}
+.line.me .bubble.sel,.chat .line.me .bubble.sel{border-color:var(--ink)}
+.composer .send{background:var(--btn);color:var(--on-btn)}
+
+/* words you can tap: one thin, faint red line */
+.gl,.line.me .gl,.chat .line.me .gl{border-bottom:0;box-shadow:inset 0 -1.5px 0 var(--mark);border-radius:0}
+.gl.gl-on,.line.me .gl.gl-on,.chat .line.me .gl.gl-on{background:var(--mark-on);border-radius:3px}
+.furi-off ruby{border-bottom-color:var(--rule)}
+.tile{min-height:0}
+.tile .tt{margin-bottom:10px}
+.home-head > div:first-child{flex:1;min-width:0}
+.home-head .sub{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.offline{font-size:11px;padding:4px 9px;white-space:nowrap;color:var(--muted)}
+</style>
 </head>
 <body>
 <div class="app" id="app">
@@ -624,7 +768,7 @@ details.more summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--a
     <div class="pline"><i id="pfill" style="width:0"></i></div>
     <div class="prow">
       <div class="lbl"><a class="icon-btn" href="#" id="homeBtn" aria-label="Home"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"><path d="M2 7.2 8 2l6 5.2M3.8 6v7.5h8.4V6"/></svg></a>
-        <span class="tab" id="ptab"></span><span class="st" id="pstep"></span><span class="n" id="pnum"></span></div>
+        <span class="pwho" id="pwho" hidden></span><span class="tab" id="ptab"></span><span class="st" id="pstep"></span><span class="n" id="pnum"></span></div>
       <button class="furi3" id="furiBtn" aria-label="Furigana"></button>
     </div>
   </div>
@@ -1005,6 +1149,13 @@ details.more summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--a
       <div class="stack">${!d.me && first ? `<span class="who" style="padding:0 4px">${esc(d.speaker)}</span>` : ""}${lineInner(L, d, i)}<div class="icons-slot"></div></div>
       <span class="side">${d.me && opts.read ? `<span class="kidoku">既読</span>` : ""}${d.time ? `<span>${esc(d.time)}</span>` : ""}</span></div>`;
   }
+  const chatPartner = L => {
+    const others = [...new Set(L.dialogue.filter(d => !d.me).map(d => d.who))];
+    if (others.length !== 1) return null;
+    const d = L.dialogue.find(x => !x.me), c = person(others[0]);
+    const role = others[0] === "guest" && L.guest ? "Guest · " + String(L.guest.role || "").split(/ who | from /)[0] : c && c.role ? c.role.split(/[.,;]/)[0] : "";
+    return {face:avatar(others[0], d.speaker, false, true), name:d.speaker, role:role.length > 34 ? "" : role};
+  };
   function renderMain(L){
     const f = fmtOf(L), setting = L.dialogue_setting ? `<p class="note" style="margin:0">${ruby(L.dialogue_setting)}</p>` : "";
     const hint = `<p class="note" style="margin:0">Tap a line for ▶ 🐢 ☆. Double-tap for English.</p>`;
@@ -1013,7 +1164,7 @@ details.more summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--a
       const head = others.length === 1 ? `${avatar(others[0], L.dialogue.find(d => !d.me).speaker, false, true, 26)}<span>${esc(L.dialogue.find(d => !d.me).speaker)}</span>` : esc([...new Set(L.dialogue.filter(d => !d.me).map(d => d.speaker))].join(", "));
       const live = !store.get("chat:" + L.id, false);
       return `<div class="step">${setting}
-        <div class="chat"><div class="chat-head">${head}</div><div class="chat-head" style="font-weight:600">${esc(dateJP(L.id))}</div><div id="chatBody" style="display:flex;flex-direction:column;gap:8px">${live ? "" : L.dialogue.map((d, i) => chatLine(L, d, i, {read:true})).join("")}</div></div>
+        <div class="chat">${others.length === 1 ? "" : `<div class="chat-head">${head}</div>`}<div class="chat-head" style="font-weight:600">${esc(dateJP(L.id))}</div><div id="chatBody" style="display:flex;flex-direction:column;gap:8px">${live ? "" : L.dialogue.map((d, i) => chatLine(L, d, i, {read:true})).join("")}</div></div>
         ${live ? `<div class="chat-ctl" id="chatCtl"><button class="btn primary" id="chatGo">▶ Start the chat</button><button class="btn ghost" id="chatAll">Show all</button></div>` : `<div class="chat-ctl"><button class="btn ghost" id="chatGo">▶ Replay</button><button class="btn ghost" id="playAll">${ICON_SAY} Read aloud</button></div>`}
         ${hint}</div>`;
     }
@@ -1325,8 +1476,8 @@ details.more summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--a
     const c = L.challenge, t = c.type || "write";
     let body = "";
     if (t === "pick") body = `<div class="opts">${shuffle((c.options || []).map((o, i) => ({o, i}))).map(x => `<button class="opt jpo" data-pk="${x.i}">${ruby(x.o.jp)}</button>`).join("")}</div>`;
-    if (t === "order") body = `<div class="line me" style="align-items:flex-end"><div class="bubble" id="ordOut" style="min-height:44px;min-width:120px;background:var(--line-green);color:#06210f"><span class="jp-mid" style="opacity:.5">…</span></div></div><div class="tiles-in" id="ordIn">${shuffle((c.pieces || []).map((p, i) => ({p, i}))).map(x => `<button data-op="${x.i}">${esc(plain(x.p))}</button>`).join("")}</div><button class="btn ghost" id="ordReset">Start again</button>`;
-    if (t === "fix") body = `<div class="line me" style="align-items:flex-end"><div class="bubble" style="background:var(--line-green);color:#06210f"><div class="jp-mid">${(c.parts || []).map((p, i) => `<span class="fixbit" data-fx="${i}">${esc(plain(p.jp))}</span>`).join("")}</div></div></div>`;
+    if (t === "order") body = `<div class="line me" style="align-items:flex-end"><div class="bubble" id="ordOut" style="min-height:44px;min-width:120px;background:var(--me);color:var(--me-ink)"><span class="jp-mid" style="opacity:.5">…</span></div></div><div class="tiles-in" id="ordIn">${shuffle((c.pieces || []).map((p, i) => ({p, i}))).map(x => `<button data-op="${x.i}">${esc(plain(x.p))}</button>`).join("")}</div><button class="btn ghost" id="ordReset">Start again</button>`;
+    if (t === "fix") body = `<div class="line me" style="align-items:flex-end"><div class="bubble" style="background:var(--me);color:var(--me-ink)"><div class="jp-mid">${(c.parts || []).map((p, i) => `<span class="fixbit" data-fx="${i}">${esc(plain(p.jp))}</span>`).join("")}</div></div></div>`;
     if (t === "sticker") body = `<div class="sgrid">${shuffle((c.stickers || []).map((id, i) => ({id, i}))).map(x => STK[x.id] ? `<button data-sk="${x.i}"><img src="${esc(STK[x.id].img)}" alt=""><b>${esc(STK[x.id].text)}</b></button>` : "").join("")}</div>`;
     if (t === "write") body = `${c.hint ? `<button class="reveal" id="hint" style="font-size:14px">Need a hint?</button>` : ""}<div class="composer"><textarea id="answer" lang="ja" aria-label="Your answer" placeholder="${fmtOf(L) === "line" ? "返信…" : "ここに日本語で…"}"></textarea><button class="send" id="send" aria-label="Send">↑</button></div>`;
     return `<div class="step">${challengeHead(L)}${body}<div id="chOut" style="display:flex;flex-direction:column;gap:10px"></div><button class="skip" id="skip">今日はパス · skip</button></div>`;
@@ -1361,7 +1512,7 @@ details.more summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--a
       const h = $("hint"); if (h) h.onclick = () => { h.classList.add("open"); h.innerHTML = ruby(c.hint); };
       const send = () => { const a = ta.value.trim(); if (!a){ ta.focus(); return; } store.set("answer:" + L.id, a);
         out.innerHTML = ""; out.insertAdjacentHTML("beforebegin", ""); finish(null);
-        out.insertAdjacentHTML("afterbegin", `<div class="line me" style="align-items:flex-end"><div class="bubble" style="background:var(--line-green);color:#06210f"><div class="jp-mid">${esc(a)}</div></div></div>`); };
+        out.insertAdjacentHTML("afterbegin", `<div class="line me" style="align-items:flex-end"><div class="bubble" style="background:var(--me);color:var(--me-ink)"><div class="jp-mid">${esc(a)}</div></div></div>`); };
       $("send").onclick = send;
       const saved = store.get("answer:" + L.id, null); if (saved){ ta.value = ta.value || saved; send(); }
     }
@@ -1426,6 +1577,9 @@ details.more summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--a
     const st = steps[idx];
     $("ptab").textContent = st.tab; $("pstep").textContent = st.jp && st.jp !== st.tab ? "· " + st.jp : "";
     $("pnum").textContent = `${idx + 1}/${steps.length}`;
+    const one = st.type === "dialogue" && lesson && fmtOf(lesson) === "line" ? chatPartner(lesson) : null;
+    $("pwho").hidden = !one; $("ptab").hidden = $("pstep").hidden = !!one;
+    if (one) $("pwho").innerHTML = `${one.face}<span style="min-width:0"><b>${ruby(one.name)}</b>${one.role ? `<small>${esc(one.role)}</small>` : ""}</span>`;
     $("pfill").style.width = (steps.length > 1 ? 100 * idx / (steps.length - 1) : 0) + "%";
   }
   function renderStep(){
@@ -1663,6 +1817,8 @@ details.more summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--a
   }
   const prevLog = id => { const log = (window.__log || []).filter(e => e.date < id).slice(-1)[0]; return log ? log.summary : ""; };
 
+  const SEKKI = [[1,5,"小寒","しょうかん"],[1,20,"大寒","だいかん"],[2,4,"立春","りっしゅん"],[2,19,"雨水","うすい"],[3,5,"啓蟄","けいちつ"],[3,20,"春分","しゅんぶん"],[4,4,"清明","せいめい"],[4,20,"穀雨","こくう"],[5,5,"立夏","りっか"],[5,21,"小満","しょうまん"],[6,5,"芒種","ぼうしゅ"],[6,21,"夏至","げし"],[7,7,"小暑","しょうしょ"],[7,22,"大暑","たいしょ"],[8,7,"立秋","りっしゅう"],[8,23,"処暑","しょしょ"],[9,7,"白露","はくろ"],[9,22,"秋分","しゅうぶん"],[10,8,"寒露","かんろ"],[10,23,"霜降","そうこう"],[11,7,"立冬","りっとう"],[11,22,"小雪","しょうせつ"],[12,7,"大雪","たいせつ"],[12,21,"冬至","とうじ"]];
+  const sekki = id => { const d = new Date(id + "T12:00:00"), md = (d.getMonth() + 1) * 100 + d.getDate(); let cur = SEKKI[SEKKI.length - 1]; SEKKI.forEach(x => { if (x[0] * 100 + x[1] <= md) cur = x; }); return cur; };
   function renderHome(){
     setMode("home");
     const el = $("home"), t = todayStr();
@@ -1670,36 +1826,47 @@ details.more summary{cursor:pointer;font-size:13px;font-weight:700;color:var(--a
     const latest = lessons[lessons.length - 1], isToday = latest.id === t;
     const s = streak(), due = dueToday().length, deck = Object.values(getDeck()), ks = Object.values(kstate()), kN = ks.filter(v => kLevel(v) === 2).length;
     const days = [...Array(7)].map((_, i) => addDays(t, i - 6)), st = lessonStatus(latest.id), earlier = lessons.slice(0, -1).reverse().slice(0, 4);
-    const off = store.get("offline", null);
+    const off = store.get("offline", null), sk = sekki(t), starN = deck.filter(c => c.star).length;
+    const friends = Object.values(castById).filter(c => PORTRAITS.has(c.id) && c.id !== "you").slice(0, 3);
+    const kicker = isToday ? (latest.category === "news" ? "今日のニュース" : latest.format === "mock" ? "今月の模試" : "今日のレッスン") : "最新のレッスン";
     el.innerHTML = `<div class="step" style="gap:12px">
-      <div class="home-head"><div style="min-width:0"><h1>${APP_TITLE[0]}</h1><p class="sub">${esc(APP_TITLE[1])}</p></div>
-        <div style="display:flex;gap:8px;align-items:center">${off ? `<span class="offline">オフラインOK · ${off.n}日分</span>` : ""}<a class="icon-btn" href="#settings" aria-label="Settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></a></div></div>
-      <div class="card streak"><div class="streak-top"><span class="flame ${s.today ? "" : "cold"}">🔥</span>
-          <div style="flex:1;min-width:0"><div class="streak-n">${s.cur} <small>day${s.cur === 1 ? "" : "s"} in a row</small></div>
-          <div class="note">${s.today ? "Today counts. お疲れ様！" : s.cur ? "Finish a lesson or a review today to keep it going." : "Finish a lesson or a review to start a streak."}</div></div>
-          ${s.best > 1 ? `<div style="text-align:right;flex:none"><div class="label">Best</div><div style="font-weight:700;font-size:18px">${s.best}</div></div>` : ""}</div>
+      <div class="home-head"><div style="min-width:0"><h1>${APP_TITLE[0]}</h1><p class="sub">${esc(dateJP(t))} · <b>${sk[2]}</b> ${sk[3]}</p></div>
+        <div style="display:flex;gap:8px;align-items:center">${off ? `<span class="offline" title="${off.n} lessons saved for offline">オフライン ✓</span>` : ""}<a class="icon-btn" href="#settings" aria-label="Settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="17" r="2"/></svg></a></div></div>
+      <a class="board hero hero2" href="#${esc(latest.id)}" id="hero">
+        <div class="h-who"><span id="heroFace"><span class="ava">${latest.format === "mock" ? "模" : "今"}</span></span><span style="min-width:0"><b>${kicker}</b><small id="heroWho">${isToday ? "Today" : esc(dateJP(latest.id))} · ${esc((FMT[latest.format] || FMT.dialogue).en)}</small></span></div>
+        <div><div class="board-title" id="heroTitle">${esc(latest.topic)}</div></div>
+        <div class="board-en">${esc(latest.topic)}</div>
+        <div class="hero-meta"><span id="heroGram" hidden></span><span id="heroKanji" hidden></span><span id="heroRadio" hidden role="button" data-radio="${esc(latest.id)}"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg>Radio</span></div>
+        <div class="h-go"><div class="h-left" id="heroLeft"></div><span class="h-btn">${st.cls === "done" ? "Open" : st.cls === "half" ? "Continue" : "Start"}</span></div></a>
+      <div class="card streak2"><span class="sn"><b>${s.cur}</b><small>日連続</small></span><i class="vr"></i>
         <div class="week">${days.map(d => `<div class="d ${s.a[d] ? "on" : ""} ${d === t ? "today" : ""}"><i>✓</i>${"日月火水木金土"[new Date(d + "T12:00:00").getDay()]}</div>`).join("")}</div></div>
-      <a class="board hero" href="#${esc(latest.id)}" id="hero">
-        <div class="board-kicker">${isToday ? (latest.category === "news" ? "ニュース · Today's news lesson" : latest.format === "mock" ? "模試 · This month's mock" : "今日 · Today's lesson") : "最新 · " + esc(dateJP(latest.id))}</div>
-        <div class="board-title" id="heroTitle">${esc(latest.topic)}</div><div class="board-en" style="white-space:normal">${esc(latest.topic)}</div>
-        <div class="hero-meta"><span id="heroGram" hidden></span><span id="heroRadio" hidden role="button" data-radio="${esc(latest.id)}">🎧 Radio</span></div>
-        <div class="hero-go"><div class="hero-bar" id="heroBar"><i style="width:${st.cls === "done" ? 100 : 0}%"></i></div><b>${st.cls === "done" ? "Done ✓ · Open" : st.cls === "half" ? "Continue" : "Start"}</b></div></a>
       <div class="tiles">
-        <a class="tile" href="#review">${due ? `<span class="badge">${due}</span>` : ""}<span class="tk">復習</span><b>Review</b><span>${due ? `${due} card${due === 1 ? "" : "s"} today` : deck.length ? "All caught up" : "Finish a lesson to start"}</span></a>
-        <a class="tile" href="#people"><span class="tk">人物</span><b>People</b><span>Your LINE friends</span></a>
-        <a class="tile" href="#kanji"><span class="tk">漢字</span><b>Kanji</b><span>${kN} 覚えた · ${ks.length} seen</span></a>
-        <a class="tile" href="#saved"><span class="tk">★</span><b>Starred</b><span>${deck.filter(c => c.star).length} · ${deck.length} in review</span></a>
+        <a class="tile" href="#review">${due ? `<span class="badge">${due}</span>` : ""}<span class="tt"><span class="tk">復習</span><small>Review</small></span><span class="ts">${due ? `${due} card${due === 1 ? "" : "s"} due` : deck.length ? "All caught up" : "Opens after a lesson"}</span></a>
+        <a class="tile" href="#people"><span class="tt"><span class="tk">人物</span><small>People</small></span><span class="ts">${friends.length ? `<span class="faces">${friends.map(c => avatar(c.id, c.name)).join("")}</span>` : ""}Your friends</span></a>
+        <a class="tile" href="#kanji"><span class="tt"><span class="tk">漢字</span><small>Kanji</small></span><span class="ts">${ks.length ? `${kN} learned · ${ks.length} seen` : "None yet"}</span></a>
+        <a class="tile" href="#saved"><span class="tt"><span class="tk">保存</span><small>Starred</small></span><span class="ts">${starN ? `${starN} starred` : deck.length ? `${deck.length} in review` : "None yet"}</span></a>
       </div>
-      <div class="sec-h"><span class="label">Earlier lessons</span><a class="link" href="#lessons">All ${lessons.length}</a></div>
+      <div class="sec-h"><h2>これまで<small>Earlier</small></h2><a class="link" href="#lessons">All ${lessons.length}<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 5l7 7-7 7"/></svg></a></div>
       ${earlier.length ? `<div class="card">${earlier.map(lessonRow).join("")}</div>` : ""}
     </div>`;
     $("home").scrollTop = 0; fillTitles(el);
     loadLesson(latest.id).then(L => {
       if ($("home").hidden || !$("heroTitle")) return;
       $("heroTitle").innerHTML = ruby(L.title_jp || L.topic);
+      const others = [...new Set([...(L.cast || []), ...(L.dialogue || []).filter(d => !d.me).map(d => d.who)])].filter(id => id && id !== "you" && id !== "guest" && id !== "extra" && person(id));
+      const name = others.length ? person(others[0]).name : L.guest ? L.guest.name : "";
+      if (others.length) $("heroFace").innerHTML = avatar(others[0], name);
+      else if (L.guest) $("heroFace").innerHTML = `<span class="ava">${initial(L.guest.name)}</span>`;
+      if (name && L.format !== "mock") $("heroWho").textContent = `${isToday ? "Today" : dateJP(L.id)} · ${(FMT[fmtOf(L)] || FMT.dialogue).en} with ${name}`;
       if (L.grammar && L.grammar.pattern){ $("heroGram").hidden = false; $("heroGram").textContent = "文法 " + plain(L.grammar.pattern); }
+      const kj = (L.kanji_study || []).map(k => k.kanji).filter(Boolean);
+      if (kj.length){ $("heroKanji").hidden = false; $("heroKanji").textContent = "漢字 " + kj.join("・"); }
       if (audioMaps[L.id] && audioMaps[L.id]._radio) $("heroRadio").hidden = false;
-      if (st.cls === "half"){ const n = buildSteps(L).length; $("heroBar").firstElementChild.style.width = Math.min(95, Math.round(100 * store.get("pos:" + L.id, 0) / Math.max(n - 1, 1))) + "%"; }
+      const S = buildSteps(L), n = S.length, pos = Math.min(store.get("pos:" + L.id, 0), n - 1);
+      $("heroLeft").innerHTML = st.cls === "half"
+        ? `<small>Step ${pos + 1} of ${n} · ${esc(S[pos].jp || S[pos].tab)}</small><span class="h-segs">${S.map((_, i) => `<i class="${i < pos ? "on" : ""}"></i>`).join("")}</span>`
+        : st.cls === "done" ? `<b>Done ✓</b><small>Open it again any time</small>`
+        : `<b>${n} steps</b><small>about ${Math.max(5, Math.round(n * 1.2))} min</small>`;
     }).catch(() => {});
   }
   document.addEventListener("click", e => { const r = e.target.closest("#heroRadio"); if (r) e.preventDefault(); }, true);
