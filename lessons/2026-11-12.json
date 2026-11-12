@@ -1,0 +1,444 @@
+{
+ "topic": "News: Food tax cut to 1%?",
+ "category": "news",
+ "function": "reasons",
+ "format": "text",
+ "news": true,
+ "cast": [
+  "tanaka"
+ ],
+ "title_jp": "{食料品|しょくりょうひん}の{消費税|しょうひぜい}が1%に？",
+ "context": "Thursday evening: アルちゃん is back from {鷹見岳|たかみだけ} before dark, and over dinner {恵子|けいこ}さん shows him a simplified news article. On 6 November 2026 the lower house passed a bill cutting the consumption tax on food from 8% to 1% for two years from April 2027; the upper house began debating it on 11 November, where the ruling parties lack a majority. Source: Jiji Press (Nippon.com), Yomiuri Shimbun.",
+ "scene": "Back from your hike, {恵子|けいこ}さん shows you the news: the tax on food may drop to 1%. But why 1%, not zero?",
+ "keep": [
+  "p0"
+ ],
+ "phrases": [
+  {
+   "jp": "{温かい|あたたかい}うちに{食べて|たべて}ね。{山|やま}、{疲れた|つかれた}でしょう？",
+   "en": "Eat it while it's warm. The mountain must have tired you out, right?",
+   "register": "casual",
+   "note": "{温|あたた}かいうちに{食|た}べて is what every Japanese mum says at the table."
+  },
+  {
+   "jp": "{安い|やすい}うちに、お{米|こめ}を{買って|かって}おこうかな。",
+   "en": "Maybe I'll buy rice while it's cheap.",
+   "register": "casual",
+   "note": "〜ておこうかな = 'maybe I'll do it now, to be ready'. Half talking to yourself."
+  },
+  {
+   "jp": "どうして0%じゃなくて1%なんですか？",
+   "en": "Why is it 1% and not 0%?",
+   "register": "polite",
+   "note": "〜んですか asks for the reason or story behind something. Without ん it sounds flatter."
+  },
+  {
+   "jp": "{最近|さいきん}{何|なん}でも{高い|たかい}から、{助かる|たすかる|to be a help, a relief|4}わ。",
+   "en": "Everything's expensive lately, so it'll be a real help.",
+   "register": "casual",
+   "note": "わ at the end is soft and a bit old-fashioned feminine: you'll hear it from women {恵子|けいこ}さん's age."
+  },
+  {
+   "jp": "{安く|やすく}なるのはいいけど、お{金|かね}はどこから{出す|だす}{ずら||(Nagano dialect) = だろう, I wonder|1}。",
+   "en": "It's nice that things get cheaper, but where's the money going to come from, I wonder.",
+   "register": "dialect",
+   "note": "ずら is Nagano dialect for だろう. Standard: どこから{出|だ}すんだろう。"
+  }
+ ],
+ "dialogue_setting": "The {田中|たなか} house kitchen, Thursday evening: a simplified news article on {恵子|けいこ}さん's tablet.",
+ "text_title": "{食料品|しょくりょうひん|groceries, food products|3}の{消費税|しょうひぜい|consumption tax|4}、1%に？",
+ "dialogue": [
+  {
+   "speaker": "Headline",
+   "jp": "{食料品|しょくりょうひん|groceries, food products|3}の{消費税|しょうひぜい|consumption tax|4}を8%から1%に{下げる|さげる|to lower|4}{法案|ほうあん|bill (draft law)|2}が、11{月|がつ}6{日|か}に{衆議院|しゅうぎいん|House of Representatives|2}を{通りました|とおりました}。",
+   "en": "On 6 November, a bill lowering the consumption tax on food from 8% to 1% passed the House of Representatives."
+  },
+  {
+   "speaker": "When",
+   "jp": "{下がる|さがる}のは2027{年|ねん}4{月|がつ}から2{年間|ねんかん}だけです。お{酒|さけ}と{外食|がいしょく|eating out|3}は10%のままです。",
+   "en": "It goes down only for two years, from April 2027. Alcohol and eating out stay at 10%."
+  },
+  {
+   "speaker": "Why",
+   "jp": "{物価|ぶっか|prices (in general)|3}が{高い|たかい}{中|なか}、{家計|かけい|household budget|3}の{負担|ふたん|burden|3}を{軽く|かるく}するための{減税|げんぜい|tax cut|3}です。",
+   "en": "It's a tax cut to lighten the burden on household budgets while prices are high."
+  },
+  {
+   "speaker": "Why 1%?",
+   "jp": "0%ではなく1%なのは、0%だとレジの{変更|へんこう|change, alteration|3}に{時間|じかん}がかかりすぎるからだそうです。",
+   "en": "Apparently it's 1% rather than 0% because changing the cash registers for 0% would take too long."
+  },
+  {
+   "speaker": "The other 1%",
+   "jp": "{残り|のこり|the rest, remainder|4}の1%は、{収入|しゅうにゅう|income|3}が{多くない|おおくない}{働く|はたらく}{人|ひと}にお{金|かね}を{配って|くばって|to hand out|3}{返す|かえす}{仕組み|しくみ|system, how it works|3}です。",
+   "en": "The remaining 1% will be given back by handing out money to working people on lower incomes."
+  },
+  {
+   "speaker": "Against",
+   "jp": "{野党|やとう|opposition parties|2}はすべて{反対|はんたい}しました。お{金|かね}をどこから{出す|だす}のか、はっきりしないからです。",
+   "en": "All the opposition parties voted against it, because it isn't clear where the money will come from."
+  },
+  {
+   "speaker": "Next",
+   "jp": "11{日|にち}から{参議院|さんぎいん|House of Councillors|2}で{話し合い|はなしあい|discussion|3}が{始まりました|はじまりました}が、{与党|よとう|ruling parties|2}は{数|かず}が{足りない|たりない|to be not enough|4}ため、まだ{分かりません|わかりません}。",
+   "en": "Debate in the House of Councillors began on the 11th, but the ruling parties don't have enough seats, so nothing is certain yet."
+  }
+ ],
+ "listening": {
+  "type": "voicemail",
+  "intro": "Earlier, on the mountain, a voicemail from {恵子|けいこ}さん came in when you got signal.",
+  "who": "keiko",
+  "lines": [
+   {
+    "who": "keiko",
+    "jp": "アルちゃん、{恵子|けいこ}です。{山|やま}はどう？{紅葉|こうよう|autumn leaves|3}、きれいでしょう。",
+    "en": "アルちゃん, it's {恵子|けいこ}. How's the mountain? The leaves must be beautiful."
+   },
+   {
+    "who": "keiko",
+    "jp": "{明るい|あかるい}うちに{帰って|かえって}きてね。{今夜|こんや}はきのこのお{鍋|なべ|hot pot|4}よ。",
+    "en": "Come home while it's still light, OK? Tonight it's mushroom hot pot."
+   }
+  ],
+  "question": "{恵子|けいこ}さんはアルちゃんに{何|なに}をしてほしいですか。",
+  "options": [
+   "{暗|くら}くなる{前|まえ}に{帰|かえ}ってくる",
+   "きのこを{買|か}ってくる",
+   "{紅葉|こうよう}の{写真|しゃしん}を{送|おく}る",
+   "{夜|よる}に{電話|でんわ}する"
+  ],
+  "explain": "{明|あか}るいうちに = while it's still light, so: be home before dark. The mushrooms are for dinner; nobody asks him to buy them."
+ },
+ "grammar": {
+  "id": "n3-uchi-ni",
+  "pattern": "〜うちに",
+  "level": "N3",
+  "meaning": "while (before it changes)",
+  "form": "い-adj: + うちに ({若|わか}いうちに, {温|あたた}かいうちに) · な-adj: + なうちに ({元気|げんき}なうちに) · noun: + のうちに ({学生|がくせい}のうちに) · verb: ている + うちに ({話|はな}しているうちに)",
+  "explanation": "Do something while a state lasts, before it changes: {温|あたた}かいうちに = before it gets cold. Unlike {間|あいだ}に, it hints the chance won't last. With ている it also means 'while doing, without noticing': {読|よ}んでいるうちに{寝|ね}ちゃった.",
+  "src": [
+   "p0",
+   "p1"
+  ],
+  "mark": [
+   "温かいうちに",
+   "安いうちに",
+   "学生のうちに",
+   "元気なうちに",
+   "聞いているうちに"
+  ],
+  "examples": [
+   {
+    "jp": "{学生|がくせい}のうちに、いろいろな{国|くに}へ{行って|いって}みたい。",
+    "en": "I want to visit lots of countries while I'm still a student."
+   },
+   {
+    "jp": "おばあちゃんが{元気|げんき}なうちに、{昔|むかし}の{話|はなし}をもっと{聞いて|きいて}おこう。",
+    "en": "While Grandma is still well, let's hear more of her old stories."
+   },
+   {
+    "jp": "{音楽|おんがく}を{聞いて|きいて}いるうちに、{寝て|ねて}しまった。",
+    "en": "I fell asleep while listening to music."
+   }
+  ],
+  "quiz": {
+   "question": "スープ、{熱い|あつい}＿＿{飲んで|のんで}ね。",
+   "en": "Drink the soup while it's hot.",
+   "options": [
+    "うちに",
+    "{間|あいだ}",
+    "までに",
+    "ために"
+   ],
+   "explain": "Hot now, but it won't last: うちに. までに is a deadline, ために a purpose."
+  },
+  "quiz_more": [
+   {
+    "question": "{学生|がくせい}＿＿、たくさん{旅行|りょこう}したい。",
+    "en": "I want to travel a lot while I'm a student.",
+    "options": [
+     "のうちに",
+     "うちに",
+     "なうちに",
+     "のうちで"
+    ],
+    "explain": "After a noun, うちに needs の: {学生|がくせい}のうちに."
+   },
+   {
+    "question": "{本|ほん}を{読んで|よんで}いる＿＿、{眠く|ねむく}なってきた。",
+    "en": "While I was reading, I started getting sleepy.",
+    "options": [
+     "うちに",
+     "ために",
+     "までに",
+     "あとで"
+    ],
+    "explain": "ているうちに: while doing something, a change creeps in without you noticing."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "軽減税率",
+  "reading": "けいげんぜいりつ",
+  "romaji": "keigen zeiritsu",
+  "meaning": "reduced tax rate",
+  "where": "On every supermarket and konbini receipt: food items marked ※ or ＊ with the note {軽減税率|けいげんぜいりつ}{対象|たいしょう}, 'reduced rate applies'.",
+  "related": "{消費税|しょうひぜい} = consumption tax; {税込|ぜいこみ} = tax included; {税抜|ぜいぬ}き = before tax.",
+  "breakdown": "{軽減税率|けいげんぜいりつ}: 軽 light + 減 reduce (軽減 = lighten) + 税 tax + 率 rate → 'lightened tax rate'."
+ },
+ "tip": {
+  "mark": "税",
+  "title": "Eating in? That's 10%",
+  "body": "Since 2019 food is taxed at 8%, but eating it in the shop counts as 外食 at 10%. That's why konbini and fast-food staff ask {店内|てんない}でお{召|め}し{上|あ}がりですか? ('Eating in?'). Say {持|も}ち{帰|かえ}りで for take-away."
+ },
+ "challenge": {
+  "type": "pick",
+  "hint": "〜からだそうです",
+  "prompt": "{田中|たなか}さん looks at the tablet and grumbles: 「なんで0%にしないんだ？」 Pass on the reason from the article.",
+  "model_answer": "レジの{変更|へんこう|change, alteration|3}に{時間|じかん}がかかりすぎるからだそうです。",
+  "options": [
+   {
+    "jp": "レジの{変更|へんこう}に{時間|じかん}がかかりすぎるからだそうです。",
+    "ok": true,
+    "why": "Reason + から, then だそうです: 'apparently it's because…'. Polite, and makes clear it's from the article."
+   },
+   {
+    "jp": "レジの{変更|へんこう}に{時間|じかん}がかかりすぎるだからだそうです。",
+    "ok": false,
+    "why": "No だ between a verb and から: かかりすぎるから."
+   },
+   {
+    "jp": "レジの{変更|へんこう}に{時間|じかん}がかかりすぎるうちにだそうです。",
+    "ok": false,
+    "why": "うちに means 'while', not 'because'."
+   },
+   {
+    "jp": "レジの{変更|へんこう}に{時間|じかん}がかかりすぎるためでございます。",
+    "ok": false,
+    "why": "でございます is hotel-staff keigo: far too stiff at the family dinner table."
+   }
+  ],
+  "explanation": "{時間|じかん}がかかりすぎる = it takes too long; から gives the reason, and だそうです marks it as something you read, not your own idea. です keeps it polite with your host without sounding stiff."
+ },
+ "vocab": [
+  {
+   "jp": "{消費税|しょうひぜい}",
+   "reading": "しょうひぜい",
+   "en": "consumption tax, sales tax",
+   "level": "N3",
+   "src": "d0",
+   "surface": "消費税",
+   "note": "{消費|しょうひ} consume + {税|ぜい} tax. Prices say {税込|ぜいこみ} (tax in) or {税抜|ぜいぬ}き (tax out)."
+  },
+  {
+   "jp": "{下|さ}げる",
+   "reading": "さげる",
+   "en": "to lower, reduce",
+   "level": "N4",
+   "src": "d0",
+   "surface": "下げる",
+   "note": "Someone lowers something (を{下|さ}げる); by itself it goes down: {下|さ}がる."
+  },
+  {
+   "jp": "{外食|がいしょく}",
+   "reading": "がいしょく",
+   "en": "eating out",
+   "level": "N3",
+   "src": "d1",
+   "surface": "外食",
+   "note": "{外|そと} outside + {食|た}べる. {外食|がいしょく}する = to eat out."
+  },
+  {
+   "jp": "{負担|ふたん}",
+   "reading": "ふたん",
+   "en": "burden, load",
+   "level": "N2",
+   "src": "d2",
+   "surface": "負担",
+   "note": "Money, work or worry. {負担|ふたん}が{大|おお}きい / {軽|かる}くする. {体|からだ}に{負担|ふたん} = hard on the body."
+  },
+  {
+   "jp": "{変更|へんこう}",
+   "reading": "へんこう",
+   "en": "change, alteration",
+   "level": "N3",
+   "src": "d3",
+   "surface": "変更",
+   "note": "Formal 'change' for plans and settings: {予定|よてい}の{変更|へんこう}. In speech often {変|か}える."
+  },
+  {
+   "jp": "{残|のこ}り",
+   "reading": "のこり",
+   "en": "the rest, remainder",
+   "level": "N3",
+   "src": "d4",
+   "surface": "残り",
+   "note": "From {残|のこ}る (to remain). {残|のこ}りもの = leftovers."
+  },
+  {
+   "jp": "{配|くば}る",
+   "reading": "くばる",
+   "en": "to hand out, distribute",
+   "level": "N3",
+   "src": "d4",
+   "surface": "配って",
+   "note": "Flyers, food, money to many people. {気|き}を{配|くば}る = to be attentive."
+  },
+  {
+   "jp": "{仕組|しく}み",
+   "reading": "しくみ",
+   "en": "system, how it works",
+   "level": "N3",
+   "src": "d4",
+   "surface": "仕組み",
+   "note": "How a machine or system works: どういう{仕組|しく}み？ = how does that work?"
+  },
+  {
+   "jp": "{足|た}りる",
+   "reading": "たりる",
+   "en": "to be enough",
+   "level": "N4",
+   "src": "d6",
+   "surface": "足りない",
+   "note": "Mostly heard as {足|た}りない: お{金|かね}が{足|た}りない, {寝|ね}{足|た}りない."
+  },
+  {
+   "jp": "{助|たす}かる",
+   "reading": "たすかる",
+   "en": "to be a help, a relief",
+   "level": "N3",
+   "src": "p3",
+   "surface": "助かる",
+   "note": "Thanking for help in daily life: {助|たす}かります！ = that really helps!"
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "配",
+   "track": "lesson",
+   "on": "ハイ",
+   "kun": "くば(る)",
+   "meaning": "distribute, hand out",
+   "words": [
+    {
+     "jp": "{配|くば}る",
+     "reading": "くばる",
+     "en": "to hand out"
+    },
+    {
+     "jp": "{心配|しんぱい}",
+     "reading": "しんぱい",
+     "en": "worry"
+    },
+    {
+     "jp": "{配達|はいたつ}",
+     "reading": "はいたつ",
+     "en": "delivery"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "collect, gather",
+     "alcohol, sake",
+     "divide, split"
+    ],
+    "readings": [
+     "はいる",
+     "くまる",
+     "わける"
+    ]
+   }
+  },
+  {
+   "kanji": "届",
+   "track": "n3",
+   "on": "",
+   "kun": "とど(く)・とど(ける)",
+   "meaning": "reach, deliver; notification",
+   "words": [
+    {
+     "jp": "{届|とど}ける",
+     "reading": "とどける",
+     "en": "to deliver, take to"
+    },
+    {
+     "jp": "{届|とど}く",
+     "reading": "とどく",
+     "en": "to reach, arrive"
+    },
+    {
+     "jp": "{届|とど}け{出|で}",
+     "reading": "とどけで",
+     "en": "official notification"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "borrow, rent",
+     "wait for",
+     "leave behind"
+    ],
+    "readings": [
+     "とおける",
+     "とどげる",
+     "いたける"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Words from the news",
+   "title_jp": "ニュースのことば",
+   "intro": "Politics words you'll hear in every evening news programme.",
+   "items": [
+    {
+     "jp": "{与党|よとう|ruling party|2}と{野党|やとう|opposition party|2}",
+     "en": "ruling and opposition parties",
+     "note": "{与|よ} take part + {党|とう} party; {野|や} field → 'outside the government'."
+    },
+    {
+     "jp": "{法案|ほうあん|bill (draft law)|2}が{成立する|せいりつする|to be passed into law|2}",
+     "en": "a bill is passed into law"
+    },
+    {
+     "jp": "{国会|こっかい|the Diet (parliament)|3}",
+     "en": "the Diet, Japan's parliament",
+     "note": "Two houses: {衆議院|しゅうぎいん} and {参議院|さんぎいん}."
+    },
+    {
+     "jp": "{税込|ぜいこみ|tax included|3}・{税抜|ぜいぬき|before tax|3}",
+     "en": "tax included / before tax",
+     "note": "Check which one a price tag shows!"
+    }
+   ]
+  },
+  {
+   "title": "Giving reasons",
+   "title_jp": "{理由|りゆう}の{言い方|いいかた}",
+   "intro": "From chatty to newspaper style.",
+   "items": [
+    {
+     "jp": "{高い|たかい}から、{買わない|かわない}。",
+     "en": "It's expensive, so I won't buy it.",
+     "note": "から: everyday, your own reason."
+    },
+    {
+     "jp": "{雨|あめ}なので、{中止|ちゅうし|cancellation|3}です。",
+     "en": "As it's raining, it's cancelled.",
+     "note": "ので: softer, polite, good for excuses."
+    },
+    {
+     "jp": "{数|かず}が{足りない|たりない|to be not enough|4}ため、まだ{分かりません|わかりません}。",
+     "en": "Because the numbers aren't enough, it's still unclear.",
+     "note": "ため: written and news style."
+    },
+    {
+     "jp": "1%なのは、{時間|じかん}がかかるからだ。",
+     "en": "The reason it's 1% is that it takes time.",
+     "note": "〜のは〜からだ: 'the reason X is…'."
+    }
+   ]
+  }
+ ]
+}
