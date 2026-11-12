@@ -554,6 +554,19 @@ img.ava{box-shadow:0 0 0 2px var(--ringc,transparent)}
 .facts{margin:0;padding-left:18px;font-size:14px;display:flex;flex-direction:column;gap:4px}
 
 /* kanji states */
+.kcell{cursor:pointer;border:0;color:inherit;font:inherit;width:100%}
+.kcell:active{transform:scale(.97)}
+.kd-top{display:flex;gap:16px;align-items:center}
+.kd-top .kbig{font-size:84px}
+.kd-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.kd-chips span{font-size:12px;font-weight:700;background:var(--soft);border-radius:999px;padding:3px 9px}
+.kd-chips .s2{color:var(--good)} .kd-chips .s1{color:var(--star)}
+.kd-steps{display:flex;gap:6px} .kd-steps i{flex:1;height:6px;border-radius:3px;background:var(--soft)} .kd-steps i.on{background:var(--good)}
+.kd-line{display:flex;gap:10px;align-items:flex-start;padding:6px 0;border-bottom:1px solid var(--rule)} .kd-line:last-child{border-bottom:0}
+.kd-line .tx{min-width:0;flex:1} .kd-line .tx .en{font-size:13px;color:var(--muted)}
+.kd-line .when{font-size:11px;color:var(--muted);white-space:nowrap}
+#sheetBody a{color:var(--accent);text-decoration:none;font-weight:600}
+#heroKanji b{cursor:pointer;font-weight:inherit;text-decoration:underline dotted;text-underline-offset:3px}
 .kcell.s0{opacity:.6} .kcell .stt{font-size:10px;font-weight:700;letter-spacing:.04em}
 .kcell.s2{box-shadow:inset 0 0 0 2px var(--good)} .kcell.s2 .stt{color:var(--good)} .kcell.s1 .stt{color:var(--star)} .kcell.s0 .stt{color:var(--muted)}
 
@@ -2045,7 +2058,7 @@ rt{font-size:max(.5em,9.5px)}
       if (name && L.format !== "mock") $("heroWho").textContent = `${isToday ? "Today" : dateJP(L.id)} · ${(FMT[fmtOf(L)] || FMT.dialogue).en} with ${name}`;
       if (L.grammar && L.grammar.pattern){ $("heroGram").hidden = false; $("heroGram").textContent = "文法 " + plain(L.grammar.pattern); }
       const kj = (L.kanji_study || []).map(k => k.kanji).filter(Boolean);
-      if (kj.length){ $("heroKanji").hidden = false; $("heroKanji").textContent = "漢字 " + kj.join("・"); }
+      if (kj.length){ window.__heroKj = kj; $("heroKanji").hidden = false; $("heroKanji").innerHTML = "漢字 " + kj.map(k => `<b data-hkj="${esc(k)}">${esc(k)}</b>`).join("・"); }
       if (audioMaps[L.id] && audioMaps[L.id]._radio) $("heroRadio").hidden = false;
       const S = buildSteps(L), n = S.length, pos = Math.min(store.get("pos:" + L.id, 0), n - 1);
       $("heroLeft").innerHTML = st.cls === "half"
@@ -2054,7 +2067,7 @@ rt{font-size:max(.5em,9.5px)}
         : `<b>${n} steps</b><small>about ${Math.max(5, Math.round(n * 1.2))} min</small>`;
     }).catch(() => {});
   }
-  document.addEventListener("click", e => { const r = e.target.closest("#heroRadio"); if (r) e.preventDefault(); }, true);
+  document.addEventListener("click", e => { const r = e.target.closest("#heroRadio"); if (r) e.preventDefault(); const k = e.target.closest("[data-hkj]"); if (k){ e.preventDefault(); e.stopPropagation(); openKanji(k.dataset.hkj, window.__heroKj); } }, true);
   function page(title, jp, body){
     setMode("page");
     $("page").innerHTML = `<div class="step" style="gap:12px"><div class="page-head"><a class="icon-btn" href="#" aria-label="Home"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3 5 8l5 5"/></svg></a><h2>${esc(title)}</h2><span class="jp">${esc(jp)}</span></div>${body}</div>`;
@@ -2096,9 +2109,56 @@ rt{font-size:max(.5em,9.5px)}
     const ks = Object.entries(kstate()), groups = [2, 1, 0].map(l => [l, ks.filter(([, v]) => kLevel(v) === l)]);
     page("Kanji", "漢字", ks.length ? `<div class="card" style="display:flex;justify-content:space-around;text-align:center">${groups.map(([l, a]) => `<div><div style="font-size:24px;font-weight:800">${a.length}</div><div style="font-size:12px;font-weight:700;font-family:var(--jp)">${K_LABEL[l]}</div></div>`).join("")}</div>
       <p class="note" style="margin:0">見た = you studied it · 読めた = you passed its quiz · 覚えた = right in review 3 times in a row.</p>
-      ${groups.filter(([, a]) => a.length).map(([l, a]) => `<div class="label" style="font-family:var(--jp)">${K_LABEL[l]}</div><div class="kgrid">${a.reverse().map(([k, v]) => `<div class="kcell s${l}"><div class="k">${esc(k)}</div><div class="m">${esc(v.meaning)}</div><div class="r">${esc([v.on, v.kun].filter(Boolean).join(" · "))}</div><div class="stt" style="font-family:var(--jp)">${K_LABEL[l]}</div></div>`).join("")}</div>`).join("")}`
+      ${groups.filter(([, a]) => a.length).map(([l, a]) => `<div class="label" style="font-family:var(--jp)">${K_LABEL[l]}</div><div class="kgrid">${a.reverse().map(([k, v]) => `<button class="kcell s${l}" data-kj="${esc(k)}"><div class="k">${esc(k)}</div><div class="m">${esc(v.meaning)}</div><div class="r">${esc([v.on, v.kun].filter(Boolean).join(" · "))}</div><div class="stt" style="font-family:var(--jp)">${K_LABEL[l]}</div></button>`).join("")}</div>`).join("")}`
       : `<div class="card"><h3 style="margin:0;font-size:20px">No kanji yet</h3><p style="margin:0">They show up after the 漢字 stop of a lesson.</p></div>`);
+    const order = [...$("page").querySelectorAll("[data-kj]")].map(b => b.dataset.kj);
+    $("page").onclick = e => { const b = e.target.closest("[data-kj]"); if (b) openKanji(b.dataset.kj, order); };
   }
+  /* one kanji in depth: readings, progress, every word and line it appeared in */
+  let kjOrder = [];
+  async function openKanji(ch, order){
+    order = order && order.length ? order : [ch]; kjOrder = order;
+    const at = order.indexOf(ch), nav = d => order[(at + d + order.length) % order.length];
+    const head = `<div class="row">${order.length > 1 ? `<div style="display:flex;gap:6px"><button class="icon-btn" data-kjn="${esc(nav(-1))}" aria-label="Previous">‹</button><button class="icon-btn" data-kjn="${esc(nav(1))}" aria-label="Next">›</button></div>` : "<span></span>"}<button class="icon-btn" data-close aria-label="Close">✕</button></div>`;
+    openSheet(head + `<div class="kd-top"><div class="kbig">${esc(ch)}</div></div>`);
+    const Ls = (await Promise.all(lessons.map(l => loadLesson(l.id).catch(() => null)))).filter(Boolean);
+    await kdLoad;
+    if ($("sheet").hidden) return;
+    const v = kstate()[ch] || {}, D = KD[ch], card = getDeck()["k:" + ch];
+    let study = null, from = null;
+    for (const L of Ls){ const k = (L.kanji_study || []).find(x => x.kanji === ch); if (k){ study = k; from = L; break; } }
+    const lvl = v.seen || v.quiz ? kLevel(Object.assign({}, v, card ? {streak:card.streak} : {})) : -1;
+    const meaning = (study && study.meaning) || v.meaning || (D ? D[0] : "");
+    const on = (study && study.on) || v.on || "", kun = (study && study.kun) || v.kun || "";
+    const has = s => plain(s).includes(ch);
+    const known = new Set((study ? study.words : []).map(w => plain(w.jp)));
+    const vocab = [], lines = [];
+    Ls.slice().reverse().forEach(L => {
+      (L.vocab || []).forEach(w => { const p = plain(w.jp); if (p.includes(ch) && !known.has(p)){ known.add(p); vocab.push([L, w]); } });
+      const ls = [...(L.dialogue || []).map((d, i) => ["d" + i, d]), ...(L.phrases || []).map((d, i) => ["p" + i, d])];
+      ls.forEach(([key, d]) => { if (!d.sticker && d.jp && has(d.jp) && lines.length < 4 && !lines.some(x => x[0] === L)) lines.push([L, key, d]); });
+    });
+    const sign = Ls.slice().reverse().find(L => L.kanji && L.kanji.kanji && L.kanji.kanji.includes(ch));
+    const wordRow = (w, lid, when) => `<div class="kd-line"><button class="play" data-play="w:${esc(plain(w.jp))}"${lid ? ` data-lid="${esc(lid)}"` : ""} aria-label="Play" style="margin:0">${ICON_SAY}</button><div class="tx"><div class="jp-mid" style="line-height:1.8">${ruby(w.jp)}</div><div class="en">${esc(w.en)}</div></div>${when ? `<span class="when">${esc(when)}</span>` : ""}</div>`;
+    const extraOn = D && D[1] && D[1] !== on ? D[1] : "", extraKun = D && D[2] && D[2] !== kun ? D[2] : "";
+    const chips = [lvl >= 0 ? `<span class="s${lvl}" style="font-family:var(--jp)">${K_LABEL[lvl]}</span>` : `<span>New</span>`, D && D[4] ? `<span>N${D[4]}</span>` : `<span>Beyond JLPT</span>`, D && D[3] ? `<span>${D[3]} strokes</span>` : "", study ? `<span>${study.track === "n3" ? "N3 track" : "From the lesson"}</span>` : ""].join("");
+    const due = card && card.due ? (card.due <= todayStr() ? "today" : dateJP(card.due)) : "";
+    $("sheetBody").innerHTML = head + `
+      <div class="kd-top"><div class="kbig">${esc(ch)}</div><div style="min-width:0"><div style="font-size:20px;font-weight:700;line-height:1.25">${esc(meaning)}</div><div class="kd-chips">${chips}</div></div></div>
+      <div class="card"><div class="label">Readings</div><div class="kread">${on ? `<b>On</b><span style="font-family:var(--jp)">${esc(on)}</span>` : ""}${kun ? `<b>Kun</b><span style="font-family:var(--jp)">${esc(kun)}</span>` : ""}${!on && !kun ? `<span class="note">—</span>` : ""}</div>
+        ${extraOn || extraKun ? `<p class="note" style="margin:6px 0 0;font-family:var(--jp)">${[extraOn && "音 " + extraOn, extraKun && "訓 " + extraKun].filter(Boolean).map(esc).join("<br>")}</p>` : ""}
+        ${D && D[0] && D[0] !== meaning ? `<p class="note" style="margin:6px 0 0">Dictionary: ${esc(D[0])}</p>` : ""}</div>
+      ${study ? `<div class="card"><div class="label">Key words</div>${study.words.map(w => wordRow(w, from.id)).join("")}</div>` : ""}
+      ${vocab.length ? `<div class="card"><div class="label">In your vocab</div>${vocab.slice(0, 8).map(([L, w]) => wordRow(w, L.id, dateJP(L.id).replace(/（.）/, ""))).join("")}</div>` : ""}
+      ${lines.length ? `<div class="card"><div class="label">Seen in</div>${lines.map(([L, key, d]) => `<div class="kd-line"><button class="play" data-play="${esc(key)}|${esc(plain(d.jp))}" data-lid="${esc(L.id)}" aria-label="Play" style="margin:0">${ICON_SAY}</button><div class="tx"><div class="jp-mid" style="line-height:1.9">${ruby(d.jp)}</div><div class="en">${d.speaker && d.who && d.who !== "extra" ? `${esc(d.speaker)} · ` : ""}${ruby(d.en || "")}</div></div><a class="when" href="#${esc(L.id)}" data-close>${esc(dateJP(L.id).replace(/（.）/, ""))} ›</a></div>`).join("")}</div>` : ""}
+      ${sign ? `<div class="card"><div class="label">On a sign</div><div class="row" style="justify-content:flex-start;gap:12px"><span style="font-family:var(--mincho);font-size:28px">${esc(sign.kanji.kanji)}</span><div><div style="font-family:var(--jp)">${esc(sign.kanji.reading || "")}</div><div class="note">${esc(sign.kanji.meaning || "")}</div></div></div>${sign.kanji.breakdown ? `<p class="note" style="margin:0">${ruby(sign.kanji.breakdown)}</p>` : ""}</div>` : ""}
+      <div class="card" style="display:flex;flex-direction:column;gap:8px"><div class="row"><div class="label" style="margin:0">Progress</div>${study ? starBtn("k:" + ch, kanjiDef(from, study)) : ""}</div>
+        <div class="kd-steps">${[0, 1, 2].map(i => `<i class="${i <= lvl ? "on" : ""}"></i>`).join("")}</div>
+        <div class="row" style="font-size:12px;font-weight:700;font-family:var(--jp);color:var(--muted)">${K_LABEL.map(x => `<span>${x}</span>`).join("")}</div>
+        <p class="note" style="margin:0">${from ? `Learned in <a href="#${esc(from.id)}" data-close>${esc(dateJP(from.id))} · ${esc(from.topic)}</a>.` : ""}${card ? ` In review: ${card.streak || 0} right in a row${due ? `, back ${esc(due)}` : ""}.` : ""}</p></div>`;
+    fillTitles($("sheetBody"));
+  }
+  $("sheet").addEventListener("click", e => { const b = e.target.closest("[data-kjn]"); if (b){ e.stopPropagation(); openKanji(b.dataset.kjn, kjOrder); } });
   function renderLessons(){
     const byMonth = {};
     lessons.slice().reverse().forEach(l => { const d = new Date(l.id + "T12:00:00"), m = `${d.getFullYear()}年${d.getMonth() + 1}月`; (byMonth[m] = byMonth[m] || []).push(l); });
