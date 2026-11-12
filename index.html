@@ -428,7 +428,14 @@ img.ava{object-fit:cover;padding:0;background:var(--soft)}
 .chips{display:flex;gap:6px;flex-wrap:wrap}
 .chips button{font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;background:var(--card);color:var(--muted)}
 .chips button[aria-pressed="true"]{background:var(--btn);color:var(--on-btn)}
-.srow{display:flex;gap:10px;align-items:flex-start;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--rule)}
+.srow{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--rule)}
+.shead{flex:1;min-width:0;display:flex;align-items:center;gap:10px;background:none;border:0;padding:0;margin:0;color:inherit;font:inherit;text-align:left;cursor:pointer}
+.shead .sm{font-size:15px;color:var(--muted);flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.shead .sl1{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:16px}
+.shead .chev{color:var(--muted);font-size:18px;transition:transform .15s}
+.shead[aria-expanded="true"] .chev{transform:rotate(90deg)}
+.smore{flex-basis:100%;display:flex;flex-direction:column;gap:6px;padding:8px 0 2px}
+.smore[hidden]{display:none}
 .srow:last-child{border-bottom:0;padding-bottom:0}
 .srow:first-child{padding-top:0}
 .kgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px}
@@ -2090,17 +2097,35 @@ rt{font-size:max(.5em,9.5px)}
     let kind = "star";
     page("Review deck", "保存", `<div class="chips" id="sk">${KINDS.map(([k, n]) => `<button data-k="${k}" aria-pressed="${k === kind}">${n}</button>`).join("")}</div><div id="sl"></div>`);
     const row = c => {
-      let main = "";
-      if (c.kind === "kanji") main = `<div class="row" style="justify-content:flex-start;gap:12px"><span class="kbig" style="font-size:40px">${esc(c.kanji)}</span><div><div style="font-weight:600">${esc(c.meaning)}</div><div class="note" style="font-family:var(--jp)">${esc([c.on, c.kun].filter(Boolean).join(" · "))}</div></div></div>`;
-      else if (c.kind === "line") main = `<div class="jp-mid" style="font-size:17px">${ruby(c.sent)}</div><div class="note">${esc(c.sentEn)}</div>`;
-      else if (c.kind === "grammar") main = `<div class="jp-mid" style="font-weight:700">${ruby(c.pattern)}</div><div style="font-size:15px">${esc(c.meaning)}</div>`;
-      else main = `<div class="row" style="justify-content:flex-start;gap:10px"><span class="jp-mid" style="line-height:1.8">${ruby(c.word)}</span><span style="font-size:15px">${esc(c.en)}</span></div>${c.sent ? `<div class="src" style="font-family:var(--jp);font-size:13px;color:var(--muted)">${highlight(c.sent, c.surface)}</div>` : ""}`;
+      const lid = esc(c.lesson || ""), sk = [c.src, plain(c.sent || "")];
+      let head = "", more = "";
+      if (c.kind === "kanji"){
+        head = `<span class="kbig" style="font-size:30px;line-height:1">${esc(c.kanji)}</span><span class="sm">${esc(c.meaning)}</span>`;
+        more = `<div class="kread">${c.on ? `<b>On</b><span style="font-family:var(--jp)">${esc(c.on)}</span>` : ""}${c.kun ? `<b>Kun</b><span style="font-family:var(--jp)">${esc(c.kun)}</span>` : ""}</div>${(c.words || []).map(w => `<div class="row" style="justify-content:flex-start;gap:10px"><button class="play" data-lid="${lid}" data-play="w:${esc(plain(w.jp))}" style="margin:0">${ICON_SAY}</button><span class="jp-mid">${ruby(w.jp)}</span><span class="note">${esc(w.en)}</span></div>`).join("")}`;
+      } else if (c.kind === "line"){
+        head = `<span class="sl1 jp-mid">${esc(plain(c.sent))}</span>`;
+        more = `<div class="jp-mid" style="font-size:17px">${ruby(c.sent)}</div><div class="note">${esc(c.sentEn)}</div><div>${pbtn(sk, ICON_SAY + " Listen", false, c.lesson)}</div>`;
+      } else if (c.kind === "grammar"){
+        head = `<span class="jp-mid" style="font-weight:700">${ruby(c.pattern)}</span><span class="sm">${esc(shortEn(c.meaning))}</span>`;
+        more = `${shortEn(c.meaning) !== c.meaning ? `<div>${esc(c.meaning)}</div>` : ""}${c.form ? `<div class="gline">${ruby(c.form)}</div>` : ""}${c.sent ? `<div class="jp-mid" style="font-size:16px">${ruby(c.sent)}</div><div class="note">${esc(c.sentEn)}</div><div>${pbtn(sk, ICON_SAY + " Listen", false, c.lesson)}</div>` : ""}`;
+      } else {
+        head = `<span class="jp-mid" style="line-height:1.8">${ruby(c.word)}</span><span class="sm">${esc(shortEn(c.en))}</span>`;
+        more = `${c.reading ? `<div class="note" style="font-family:var(--jp)">${esc(c.reading)}</div>` : ""}${shortEn(c.en) !== c.en ? `<div>${esc(c.en)}</div>` : ""}${c.note ? `<div class="note">${ruby(c.note)}</div>` : ""}
+          ${c.sent ? `<div class="jp-mid" style="font-size:16px">${ruby(c.sent)}</div><div class="note">${esc(c.sentEn)}</div>` : ""}<div class="row" style="justify-content:flex-start">${pbtn(["w:" + plain(c.word)], ICON_SAY + " Word", false, c.lesson)}${c.sent ? pbtn(sk, ICON_SAY + " Sentence", false, c.lesson) : ""}</div>`;
+      }
       const when = c.isNew ? "New" : c.due <= todayStr() ? "Due now" : "Next " + dateJP(c.due);
-      return `<div class="srow"><div style="min-width:0;flex:1">${main}<div class="note" style="font-size:12px;margin-top:2px">${esc(when)}${c.lesson ? ` · <a href="#${esc(c.lesson)}" style="color:inherit">from ${esc(dateJP(c.lesson))}</a>` : ""}</div></div>${starBtn(c.k, c)}</div>`;
+      more += `<div class="note" style="font-size:12px">${esc(when)}${c.lesson ? ` · <a href="#${lid}" style="color:inherit">from ${esc(dateJP(c.lesson))}</a>` : ""}</div>`;
+      return `<div class="srow"><button class="shead" data-open aria-expanded="false">${head}<span class="chev" aria-hidden="true">›</span></button>${starBtn(c.k, c)}<div class="smore" hidden>${more}</div></div>`;
     };
     const draw = () => {
       const cards = Object.values(getDeck()).filter(c => kind === "all" || (kind === "star" ? c.star : (c.kind || "word") === kind)).sort((a, b) => a.added < b.added ? 1 : -1);
       $("sl").innerHTML = cards.length ? `<div class="card">${cards.map(row).join("")}</div>` : `<p class="note" style="margin:0">${kind === "star" ? "Nothing starred. ☆ anything you want to see more often." : "Nothing here yet."}</p>`;
+    };
+    $("sl").onclick = e => {
+      const h = e.target.closest("[data-open]"); if (!h) return;
+      const r = h.closest(".srow"), m = r.querySelector(".smore"), open = m.hidden;
+      m.hidden = !open; h.setAttribute("aria-expanded", String(open));
+      if (open){ const c = getDeck()[r.querySelector("[data-star]").dataset.star]; if (c && c.lesson) loadAudio(c.lesson); }
     };
     $("sk").onclick = e => { const b = e.target.closest("[data-k]"); if (!b) return; kind = b.dataset.k; $("sk").querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", String(x === b))); draw(); };
     draw();
