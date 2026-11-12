@@ -222,7 +222,7 @@ mark{background:var(--soft);color:var(--accent);border-radius:5px;padding:0 3px;
 .vrow .src{font-family:var(--jp);font-size:13px;color:var(--muted);margin-top:2px}
 .kbig{font-family:var(--mincho);font-size:64px;line-height:1.1}
 .pad{display:flex;flex-direction:column;gap:8px;align-items:center}
-.pad-box{position:relative;width:min(100%,300px);aspect-ratio:1;border-radius:16px;background:var(--soft);overflow:hidden;touch-action:none}
+.pad-box{overscroll-behavior:contain;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;position:relative;width:min(100%,300px);aspect-ratio:1;border-radius:16px;background:var(--soft);overflow:hidden;touch-action:none}
 .pad-box .guide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--mincho);font-size:min(220px,62vw);line-height:1;color:var(--ink);opacity:.12;pointer-events:none;user-select:none}
 .pad-box .guide.off{opacity:0}
 .pad-box svg.grid{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;color:var(--muted);opacity:.35}
@@ -1679,6 +1679,8 @@ rt{font-size:max(.5em,9.5px)}
       strokes.forEach(st => { ctx.beginPath(); st.forEach((p, i) => i ? ctx.lineTo(p[0] * w, p[1] * w) : ctx.moveTo(p[0] * w, p[1] * w)); if (st.length === 1) ctx.lineTo(st[0][0] * w + .1, st[0][1] * w); ctx.stroke(); });
     };
     const pt = e => { const r = cv.getBoundingClientRect(); return [(e.clientX - r.left) / r.width, (e.clientY - r.top) / r.height]; };
+    // drawing must never turn the page or trigger the browser's back/forward swipe
+    ["touchstart", "touchmove", "touchend"].forEach(t => box.addEventListener(t, e => { e.stopPropagation(); if (e.cancelable) e.preventDefault(); }, {passive:false}));
     cv.onpointerdown = e => { e.preventDefault(); cv.setPointerCapture(e.pointerId); cur = [pt(e)]; strokes.push(cur); redraw(); };
     cv.onpointermove = e => { if (!cur) return; e.preventDefault(); cur.push(pt(e)); redraw(); };
     cv.onpointerup = cv.onpointercancel = () => { cur = null; };
@@ -2049,7 +2051,7 @@ rt{font-size:max(.5em,9.5px)}
   $("back").onclick = () => go(-1);
   $("next").onclick = () => { const st = steps[idx]; if (st.type === "done" || idx >= steps.length - 1) goHome(); else go(1); };
   let sx = null, sy = null;
-  const noSwipe = el => el.closest && el.closest("textarea, input, .tiles-in, .chat");
+  const noSwipe = el => el.closest && el.closest("textarea, input, .tiles-in, .chat, .pad");
   $("stage").addEventListener("touchstart", e => { if (noSwipe(e.target)){ sx = null; return; } const t = e.touches[0]; sx = t.clientX; sy = t.clientY; }, {passive:true});
   $("stage").addEventListener("touchend", e => {
     if (sx == null || !lesson || noSwipe(e.target)) return;
