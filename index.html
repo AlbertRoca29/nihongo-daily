@@ -2246,10 +2246,12 @@ rt{font-size:max(.5em,9.5px)}
     const ks = Object.entries(kstate()), groups = [2, 1, 0].map(l => [l, ks.filter(([, v]) => kLevel(v) === l)]);
     page("Kanji", "漢字", ks.length ? `<div class="card" style="display:flex;justify-content:space-around;text-align:center">${groups.map(([l, a]) => `<div><div style="font-size:24px;font-weight:800">${a.length}</div><div style="font-size:12px;font-weight:700;font-family:var(--jp)">${K_LABEL[l]}</div></div>`).join("")}</div>
       <p class="note" style="margin:0">見た = you studied it · 読めた = you passed its quiz · 覚えた = right in review 3 times in a row.</p>
+      <button class="btn primary" id="kwrite" style="width:100%">✍️ Write from memory</button>
       ${groups.filter(([, a]) => a.length).map(([l, a]) => `<div class="label" style="font-family:var(--jp)">${K_LABEL[l]}</div><div class="kgrid">${a.reverse().map(([k, v]) => `<button class="kcell s${l}" data-kj="${esc(k)}"><div class="k">${esc(k)}</div><div class="m">${esc(v.meaning)}</div><div class="r">${esc([v.on, v.kun].filter(Boolean).join(" · "))}</div><div class="stt" style="font-family:var(--jp)">${K_LABEL[l]}</div></button>`).join("")}</div>`).join("")}`
       : `<div class="card"><h3 style="margin:0;font-size:20px">No kanji yet</h3><p style="margin:0">They show up after the 漢字 stop of a lesson.</p></div>`);
     const order = [...$("page").querySelectorAll("[data-kj]")].map(b => b.dataset.kj);
     $("page").onclick = e => { const b = e.target.closest("[data-kj]"); if (b) openKanji(b.dataset.kj, order); };
+    const kw = $("kwrite"); if (kw) kw.onclick = () => openWriteDrill(order);
   }
   /* one kanji in depth: readings, progress, every word and line it appeared in */
   let kjOrder = [];
@@ -2285,7 +2287,9 @@ rt{font-size:max(.5em,9.5px)}
       <div class="card"><div class="label">Readings</div><div class="kread">${on ? `<b>On</b><span style="font-family:var(--jp)">${esc(on)}</span>` : ""}${kun ? `<b>Kun</b><span style="font-family:var(--jp)">${esc(kun)}</span>` : ""}${!on && !kun ? `<span class="note">—</span>` : ""}</div>
         ${extraOn || extraKun ? `<p class="note" style="margin:6px 0 0;font-family:var(--jp)">${[extraOn && "音 " + extraOn, extraKun && "訓 " + extraKun].filter(Boolean).map(esc).join("<br>")}</p>` : ""}
         ${D && D[0] && D[0] !== meaning ? `<p class="note" style="margin:6px 0 0">Dictionary: ${esc(D[0])}</p>` : ""}</div>
+      ${study && (study.parts || study.lookalike) ? `<div class="card" style="display:flex;flex-direction:column;gap:8px">${study.parts ? `<div><div class="label">How it's built</div><p style="margin:4px 0 0">${ruby(study.parts)}</p></div>` : ""}${study.lookalike ? `<div><div class="label">Don't mix it up</div><p style="margin:4px 0 0">${ruby(study.lookalike)}</p></div>` : ""}</div>` : ""}
       ${study ? `<div class="card"><div class="label">Key words</div>${study.words.map(w => wordRow(w, from.id)).join("")}</div>` : ""}
+      <div class="card" style="display:flex;flex-direction:column;gap:10px"><div class="label">✍️ Write it</div><div class="pad" data-kdpad></div></div>
       ${vocab.length ? `<div class="card"><div class="label">In your vocab</div>${vocab.slice(0, 8).map(([L, w]) => wordRow(w, L.id, dateJP(L.id).replace(/（.）/, ""))).join("")}</div>` : ""}
       ${lines.length ? `<div class="card"><div class="label">Seen in</div>${lines.map(([L, key, d]) => `<div class="kd-line"><button class="play" data-play="${esc(key)}|${esc(plain(d.jp))}" data-lid="${esc(L.id)}" aria-label="Play" style="margin:0">${ICON_SAY}</button><div class="tx"><div class="jp-mid" style="line-height:1.9">${ruby(d.jp)}</div><div class="en">${d.speaker && d.who && d.who !== "extra" ? `${esc(d.speaker)} · ` : ""}${ruby(d.en || "")}</div></div><a class="when" href="#${esc(L.id)}" data-close>${esc(dateJP(L.id).replace(/（.）/, ""))} ›</a></div>`).join("")}</div>` : ""}
       ${sign ? `<div class="card"><div class="label">On a sign</div><div class="row" style="justify-content:flex-start;gap:12px"><span style="font-family:var(--mincho);font-size:28px">${esc(sign.kanji.kanji)}</span><div><div style="font-family:var(--jp)">${esc(sign.kanji.reading || "")}</div><div class="note">${esc(sign.kanji.meaning || "")}</div></div></div>${sign.kanji.breakdown ? `<p class="note" style="margin:0">${ruby(sign.kanji.breakdown)}</p>` : ""}</div>` : ""}
@@ -2294,7 +2298,38 @@ rt{font-size:max(.5em,9.5px)}
         <div class="row" style="font-size:12px;font-weight:700;font-family:var(--jp);color:var(--muted)">${K_LABEL.map(x => `<span>${x}</span>`).join("")}</div>
         <p class="note" style="margin:0">${from ? `Learned in <a href="#${esc(from.id)}" data-close>${esc(dateJP(from.id))} · ${esc(from.topic)}</a>.` : ""}${card ? ` In review: ${card.streak || 0} right in a row${due ? `, back ${esc(due)}` : ""}.` : ""}</p></div>`;
     fillTitles($("sheetBody"));
+    const kp = $("sheetBody").querySelector("[data-kdpad]"); if (kp) makePad(kp, ch);
   }
+
+  /* write from memory: meaning + a word shown, he writes the kanji, then checks against the stroke order */
+  async function openWriteDrill(list){
+    const Ls = (await Promise.all(lessons.map(l => loadLesson(l.id).catch(() => null)))).filter(Boolean);
+    const info = {}; Ls.forEach(L => (L.kanji_study || []).forEach(k => { if (!info[k.kanji]) info[k.kanji] = k; }));
+    let pool = shuffle(list.slice()), i = 0, shown = 0;
+    const draw = () => {
+      if (i >= pool.length){ pool = shuffle(list.slice()); i = 0; }
+      const ch = pool[i], k = info[ch] || {}, v = kstate()[ch] || {}, w = (k.words || [])[0];
+      $("sheetBody").innerHTML = `<div class="row"><b style="font-family:var(--jp);font-size:18px">書いてみよう <span class="note" style="font-family:var(--ui)">${shown + 1}</span></b><button class="icon-btn" data-close aria-label="Close">✕</button></div>
+        <div class="card" style="display:flex;flex-direction:column;gap:6px;text-align:center"><div class="label">Write the kanji for</div>
+          <div style="font-size:22px;font-weight:700">${esc(k.meaning || v.meaning || "")}</div>
+          ${w ? `<div class="note" style="font-family:var(--jp);font-size:16px">${esc(w.reading)} · ${esc(w.en)}</div>` : `<div class="note" style="font-family:var(--jp)">${esc([k.on || v.on, k.kun || v.kun].filter(Boolean).join(" · "))}</div>`}</div>
+        <div class="pad" data-wdpad></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><button class="btn ghost" data-wdshow>Show answer</button><button class="btn primary" data-wdnext>Next kanji</button></div>
+        <p class="note" data-wdans hidden style="margin:0;text-align:center"></p>`;
+      const pad = $("sheetBody").querySelector("[data-wdpad]"); makePad(pad, ch);
+      pad.querySelector(".guide").classList.add("off"); pad.querySelector("[data-g]").textContent = "Guide on";
+      pad.querySelector(".pad-order").style.visibility = "hidden";
+      $("sheetBody").querySelector("[data-wdshow]").onclick = e => {
+        pad.querySelector(".pad-order").style.visibility = "";
+        const so = pad.querySelector("[data-sorder]"); if (so && !so.closest("[hidden]")) so.click(); else { pad.querySelector(".guide").classList.remove("off"); pad.querySelector("[data-g]").textContent = "Guide off"; }
+        const a = $("sheetBody").querySelector("[data-wdans]"); a.hidden = false; a.innerHTML = `<span style="font-family:var(--mincho);font-size:28px;color:var(--ink)">${esc(ch)}</span> ${w ? ruby(w.jp) : ""}`;
+        e.currentTarget.disabled = true;
+      };
+      $("sheetBody").querySelector("[data-wdnext]").onclick = () => { i++; shown++; draw(); };
+    };
+    openSheet(""); draw();
+  }
+
   $("sheet").addEventListener("click", e => { const b = e.target.closest("[data-kjn]"); if (b){ e.stopPropagation(); openKanji(b.dataset.kjn, kjOrder); } });
   function renderLessons(){
     const byMonth = {};
