@@ -137,11 +137,11 @@ When status allows: `"category": "review"`, a new scene with the cast that reuse
 | `listening` | Today's listening activity (see Listening) |
 | `text_title` | Only for `text` format |
 | `grammar` | Today's grammar point (see below) |
-| `kanji` | `{kanji, reading, romaji, meaning, where, breakdown, related?}`: a word you'd really see written in this world (sign, label, menu, scroll, app screen). `breakdown`: one line on how its kanji build the meaning, e.g. `{既読|きどく}: 既 already + 読 read → 'already read'.` (the app also shows each kanji's dictionary meaning; for a single kanji, say what its parts hint at) |
+| `kanji` | The spotted word, its own stop, separate from the 2 kanji: `{kanji, reading, romaji, meaning, where, breakdown, related?}`: a word you'd really see written in this world (sign, label, menu, scroll, app screen). `breakdown`: one line on how its kanji build the meaning, e.g. `{既読|きどく}: 既 already + 読 read → 'already read'.` (the app also shows each kanji's dictionary meaning; for a single kanji, say what its parts hint at) |
 | `tip` | `{mark, title, body}`: `mark` is one kanji shown as a stamp; body is 2–3 sentences textbooks don't teach |
 | `challenge` | `{type, prompt, model_answer, explanation, ...}` (see Challenge types): a short task, ideally replying to a character. `explanation`: 2–3 English sentences (furigana markup allowed) that walk through the model answer: which grammar does what, why that word or form, the register |
 | `vocab` | 8–10 words from today's phrases and main text |
-| `kanji_study` | Exactly 2 kanji to learn |
+| `kanji_study` | Exactly 2 kanji to learn, each with its own deeper page (see Kanji study) |
 | `extras` | Optional bonus sections `{title, title_jp, intro, items: [{jp, en, note?}]}`; 2–3 of them |
 | `news` | `true` only on news lessons |
 
@@ -177,7 +177,10 @@ Exactly 2 kanji, recognition only (reading and meaning):
 - `track: "lesson"`: a kanji from one of today's vocab words, not taught before. Prefer N3 kanji.
 - `track: "n3"`: the next kanji on the N3 track (status names it). If it's very awkward for today, you may take one of the next five it lists.
 
-Each: `{kanji, track, on, kun, meaning, words, decoys}`
+Each: `{kanji, track, on, kun, meaning, parts, words, decoys, lookalike?}`
+- Each kanji gets its own page in the app (big kanji, stroke count, readings, how it's built, words, the line of today's lesson that uses it, and a drawing pad with stroke order), separate from the spotted word (`kanji` field), which has its own stop. Go a bit deeper here than a flashcard would.
+- `parts`: 1–2 English sentences on how it's built: its components (radical and other parts, with what each means or hints at) and a short memory hook tying them to the meaning, e.g. `酉 sake jar + 己 a kneeling person → someone handing out sake at a festival: distribute.` Name the radical when it helps (`氵 water radical`). Furigana markup allowed; no glosses.
+- `lookalike` (optional, use it when one exists): one line on a kanji he could confuse it with and how to tell them apart, e.g. `Not 酒 (sake): 配 has 己 on the right, 酒 has 氵 on the left.`
 - `on` in katakana, `kun` in hiragana with okurigana in brackets (`ま(がる)`); several readings joined with `・`. Leave one empty only if the kanji truly has none in common use.
 - `words`: 2–3 common words using it `{jp, reading, en}`. Put the most useful first: the quiz asks its reading. Use today's word for the `lesson` kanji.
 - `decoys`: `{meanings: [3 wrong meanings], readings: [3 wrong readings of words[0]]}`. Make them plausible.

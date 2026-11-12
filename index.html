@@ -1163,7 +1163,7 @@ rt{font-size:max(.5em,9.5px)}
   /* card definitions */
   const lineOf = (L, src) => { const m = /^([pd])(\d+)$/.exec(src || ""); return m ? ((m[1] === "p" ? L.phrases : L.dialogue) || [])[+m[2]] : null; };
   const wordDef = (L, v) => { const line = lineOf(L, v.src) || {}; return {kind:"word", word:v.jp, reading:v.reading, en:v.en, note:v.note || "", surface:v.surface, sent:line.jp || "", sentEn:line.en || "", src:v.src, lesson:L.id, who:line.who || ""}; };
-  const kanjiDef = (L, k) => ({kind:"kanji", kanji:k.kanji, on:k.on || "", kun:k.kun || "", meaning:k.meaning, words:k.words || [], decoys:k.decoys || {}, lesson:L.id});
+  const kanjiDef = (L, k) => ({kind:"kanji", kanji:k.kanji, on:k.on || "", kun:k.kun || "", meaning:k.meaning, parts:k.parts || "", words:k.words || [], decoys:k.decoys || {}, lesson:L.id});
   const lineDef = (L, line, ref) => ({kind:"line", sent:line.jp, sentEn:line.en, src:ref, lesson:L.id, who:line.who || ""});
   const grammarDef = (L, G) => { const ref = (G.src || [])[0], line = lineOf(L, ref) || (G.examples || [])[0] || {}; return {kind:"grammar", pattern:G.pattern, meaning:G.meaning, form:G.form || "", level:G.level || "", sent:line.jp || "", sentEn:line.en || "", src:ref, lesson:L.id}; };
   const freqOf = (L, v) => {
@@ -1250,8 +1250,9 @@ rt{font-size:max(.5em,9.5px)}
     if (L.listening && L.listening.type) s.push({type:"listening", tab:"聞く", jp:LIST_JP[L.listening.type] || "リスニング"});
     if (L.phrases?.length) s.push({type:"phrases", tab:"わかる", jp:"フレーズ"});
     if (L.grammar) s.push({type:"grammar", tab:"わかる", jp:"文法"});
+    if (L.kanji) s.push({type:"sign", tab:"わかる", jp:"見つけた言葉"});
     if (L.vocab?.length) s.push({type:"words", tab:"覚える", jp:"単語"});
-    if (L.kanji || L.kanji_study?.length) s.push({type:"kanji", tab:"覚える", jp:"漢字"});
+    if (L.kanji_study?.length) s.push({type:"kanji", tab:"覚える", jp:"今日の漢字"});
     if (L.challenge) s.push({type:"challenge", tab:"使う", jp:"チャレンジ"});
     s.push({type:"done", tab:"終点", jp:"お疲れ様"});
     return s;
@@ -1570,21 +1571,126 @@ rt{font-size:max(.5em,9.5px)}
       (r, n) => { $("vquiz").innerHTML = `<div class="card"><b>${r}/${n} right.</b> <span class="note">Missed words are starred.</span></div>`; });
   }
 
-  /* ---- kanji: the sign, the two kanji and the quiz on one stop ---- */
-  function renderKanji(L){
+  /* ---- the spotted word: one hard word from the scene (sign, label, receipt), its own stop ---- */
+  function renderSign(L){
     const k = L.kanji;
     return `<div class="step">
-      ${k ? `<div class="sign"><div class="sign-top"><div class="sign-k">${esc(k.kanji)}</div><div class="sign-r" id="kr">？</div></div></div>
+      <div class="sign"><div class="sign-top"><div class="sign-k">${esc(k.kanji)}</div><div class="sign-r" id="kr">？</div></div></div>
       <button class="reveal" id="krev">What does it mean?</button>
       <div class="card" id="kwhere" hidden style="display:flex;flex-direction:column;gap:8px"><div class="label">Where you'll see it</div><p style="margin:0">${ruby(k.where)}</p>${k.related ? `<p class="note" style="margin:0">${ruby(k.related)}</p>` : ""}
-        <div class="kparts"></div>${k.breakdown ? `<p style="margin:0">${ruby(k.breakdown)}</p>` : ""}</div>` : ""}
-      ${(L.kanji_study || []).map(x => `<div class="card" style="display:flex;flex-direction:column;gap:10px">
-        <div class="row" style="align-items:flex-start;flex-wrap:nowrap"><div style="display:flex;gap:14px;align-items:center;min-width:0"><div class="kbig">${esc(x.kanji)}</div>
-          <div><div style="font-size:18px;font-weight:700">${esc(x.meaning)}</div><span class="lvl ${x.track === "n3" ? "N3" : ""}">${x.track === "n3" ? "N3 track" : "From today's words"}</span></div></div></div>
+        <div class="kparts"></div>${k.breakdown ? `<p style="margin:0">${ruby(k.breakdown)}</p>` : ""}</div>
+    </div>`;
+  }
+
+  /* ---- today's two kanji: one page each (readings, how it's built, words, today's line, drawing pad), then the quiz ---- */
+  const kanjiLine = (L, ch) => [...(L.phrases || []), ...(L.dialogue || [])].find(x => x && x.jp && plain(x.jp).includes(ch));
+  function kanjiPage(L, x){
+    const line = kanjiLine(L, x.kanji);
+    return `<div class="card" style="display:flex;flex-direction:column;gap:12px">
+        <div class="row" style="align-items:center;flex-wrap:nowrap;justify-content:flex-start;gap:16px"><div class="kbig" style="font-size:84px">${esc(x.kanji)}</div>
+          <div style="min-width:0;display:flex;flex-direction:column;gap:4px"><div style="font-size:19px;font-weight:700">${esc(x.meaning)}</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center"><span class="lvl ${x.track === "n3" ? "N3" : ""}">${x.track === "n3" ? "N3 track" : "From today's words"}</span><span class="note" data-kmeta></span></div></div></div>
         <div class="kread">${x.on ? `<b>On</b><span style="font-family:var(--jp)">${esc(x.on)}</span>` : ""}${x.kun ? `<b>Kun</b><span style="font-family:var(--jp)">${esc(x.kun)}</span>` : ""}</div>
-        <div style="display:flex;flex-direction:column;gap:6px">${(x.words || []).map(w => `<div class="row" style="justify-content:flex-start;gap:10px;flex-wrap:nowrap"><button class="play" data-play="w:${esc(plain(w.jp))}" aria-label="Play" style="margin:0">${ICON_SAY}</button><span class="jp-mid" style="line-height:1.8">${ruby(w.jp)}</span><span class="note">${esc(w.en)}</span></div>`).join("")}</div>
-      </div>`).join("")}
-</div>`;
+        ${x.parts ? `<div><div class="label">How it's built</div><p style="margin:4px 0 0">${ruby(x.parts)}</p></div>` : ""}
+        <div><div class="label">Words</div><div style="display:flex;flex-direction:column;gap:6px;margin-top:4px">${(x.words || []).map(w => `<div class="row" style="justify-content:flex-start;gap:10px;flex-wrap:nowrap"><button class="play" data-play="w:${esc(plain(w.jp))}" aria-label="Play" style="margin:0">${ICON_SAY}</button><span class="jp-mid" style="line-height:1.8">${ruby(w.jp)}</span><span class="note">${esc(w.en)}</span></div>`).join("")}</div></div>
+        ${line ? `<div><div class="label">In today's lesson</div><p class="jp-mid" style="margin:4px 0 0;line-height:1.9">${ruby(line.jp)}</p><p class="note" style="margin:2px 0 0">${ruby(line.en || "")}</p></div>` : ""}
+        ${x.lookalike ? `<div><div class="label">Don't mix it up</div><p style="margin:4px 0 0">${ruby(x.lookalike)}</p></div>` : ""}
+      </div>
+      <div class="card" style="display:flex;flex-direction:column;gap:10px"><div class="label">✍️ Write it</div><div class="pad" data-pad="${esc(x.kanji)}"></div></div>`;
+  }
+  function renderKanji(L){ return `<div class="step">${kanjiPage(L, L.kanji_study[0])}</div>`; }
+  function wireKanjiPage(L, x){
+    kdLoad.then(() => { const m = document.querySelector("#stage [data-kmeta]"), d = KD[x.kanji]; if (m && d && d[3]) m.textContent = d[3] + " strokes"; });
+    const pad = document.querySelector("#stage [data-pad]"); if (pad) makePad(pad, x.kanji);
+  }
+  /* stroke order: strokes/<hex>.json (KanjiVG, saved by scripts/strokes.py), or KanjiVG straight from the CDN */
+  const strokeCache = {};
+  const loadStrokes = ch => strokeCache[ch] || (strokeCache[ch] = (async () => {
+    const hex = ch.codePointAt(0).toString(16).padStart(5, "0");
+    try{ const r = await fetch("strokes/" + hex + ".json"); if (r.ok){ const j = await r.json(); if (j.d?.length) return j; } }catch{}
+    try{
+      const r = await fetch("https://cdn.jsdelivr.net/gh/KanjiVG/kanjivg@master/kanji/" + hex + ".svg");
+      if (!r.ok) return null;
+      const doc = new DOMParser().parseFromString(await r.text(), "image/svg+xml");
+      const d = [...doc.querySelectorAll("path[id*='-s']")].sort((a, b) => +a.id.split("-s")[1] - +b.id.split("-s")[1]).map(p => p.getAttribute("d"));
+      const n = [...doc.querySelectorAll("text")].map(t => { const m = /([\d.]+) ([\d.]+)\)$/.exec(t.getAttribute("transform") || ""); return m ? [+m[1], +m[2]] : null; });
+      return d.length ? {d, n} : null;
+    }catch{ return null; }
+  })());
+  const SVGNS = "http://www.w3.org/2000/svg";
+  const svgEl = (tag, attrs) => { const e = document.createElementNS(SVGNS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; };
+  function makePad(el, kanji){
+    el.innerHTML = `<div class="pad-order" hidden><button class="btn primary" data-sorder>▶ Stroke order</button><button class="btn ghost" data-sstep>Next stroke</button></div>
+      <div class="pad-box">
+        <svg class="grid" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M50 0V100M0 50H100" stroke="currentColor" stroke-width=".6" stroke-dasharray="3 3" fill="none"/></svg>
+        <div class="guide">${esc(kanji)}</div><svg class="order off" viewBox="0 0 109 109"></svg><canvas></canvas></div>
+      <div class="pad-tools"><button class="btn ghost" data-g>Guide off</button><button class="btn ghost" data-u>Undo</button><button class="btn ghost" data-c>Clear</button></div>
+      <p class="note" style="margin:0;text-align:center" data-help>Trace it first, then hide the guide and write it from memory.</p>`;
+    const box = el.querySelector(".pad-box"), cv = el.querySelector("canvas"), ctx = cv.getContext("2d"), guide = el.querySelector(".guide");
+    const osvg = el.querySelector("svg.order");
+    let SD = null, shown = 0, run = 0;
+    const startOf = d => { const m = /^[Mm]\s*([-\d.]+)[,\s]*([-\d.]+)/.exec(d); return m ? [+m[1], +m[2]] : null; };
+    const drawStroke = (i, animate) => new Promise(done => {
+      const d = SD.d[i], live = svgEl("path", {d, class:"live"});
+      osvg.appendChild(live);
+      const s = startOf(d), np = SD.n[i] || s;
+      if (np) { const t = svgEl("text", {x:np[0], y:np[1], class:"num"}); t.textContent = i + 1; osvg.appendChild(t); }
+      if (s) osvg.appendChild(svgEl("circle", {cx:s[0], cy:s[1], r:2.2, class:"dot"}));
+      if (!animate || !live.animate) return done();
+      const len = live.getTotalLength();
+      live.style.strokeDasharray = len; live.style.strokeDashoffset = len;
+      const a = live.animate([{strokeDashoffset:len}, {strokeDashoffset:0}], {duration:Math.max(300, Math.min(900, len * 14)), easing:"ease-in-out", fill:"forwards"});
+      a.onfinish = () => { live.style.strokeDasharray = ""; live.style.strokeDashoffset = ""; done(); };
+    });
+    const resetOrder = () => {
+      osvg.innerHTML = ""; shown = 0;
+      SD.d.forEach(d => osvg.appendChild(svgEl("path", {d, class:"ghost"})));
+      osvg.classList.remove("off"); guide.classList.add("off");
+    };
+    const play = async () => {
+      const me = ++run; resetOrder();
+      for (let i = 0; i < SD.d.length; i++){
+        if (me !== run) return;
+        await drawStroke(i, true); shown = i + 1;
+        await new Promise(r => setTimeout(r, 180));
+      }
+    };
+    const step = async () => {
+      run++;
+      if (osvg.classList.contains("off") || shown >= SD.d.length) resetOrder();
+      const i = shown; shown++;
+      await drawStroke(i, true);
+      el.querySelector("[data-sstep]").textContent = shown >= SD.d.length ? "Start again" : `Next stroke (${shown + 1}/${SD.d.length})`;
+    };
+    loadStrokes(kanji).then(d => {
+      if (!d) return;
+      SD = d;
+      el.querySelector(".pad-order").hidden = false;
+      el.querySelector("[data-sstep]").textContent = `Stroke by stroke`;
+      el.querySelector("[data-sorder]").onclick = () => { el.querySelector("[data-sstep]").textContent = "Stroke by stroke"; play(); };
+      el.querySelector("[data-sstep]").onclick = step;
+      el.querySelector("[data-help]").textContent = `${d.d.length} strokes. The red dot shows where each stroke starts; watch the order, trace it, then hide the guide and write it from memory.`;
+    });
+    let strokes = [], cur = null;
+    const fit = () => { const r = box.getBoundingClientRect(), dpr = window.devicePixelRatio || 1; cv.width = r.width * dpr; cv.height = r.height * dpr; redraw(); };
+    const redraw = () => {
+      const w = cv.width; ctx.clearRect(0, 0, w, w);
+      ctx.strokeStyle = getComputedStyle(document.body).color; ctx.lineCap = ctx.lineJoin = "round"; ctx.lineWidth = w * 0.035;
+      strokes.forEach(st => { ctx.beginPath(); st.forEach((p, i) => i ? ctx.lineTo(p[0] * w, p[1] * w) : ctx.moveTo(p[0] * w, p[1] * w)); if (st.length === 1) ctx.lineTo(st[0][0] * w + .1, st[0][1] * w); ctx.stroke(); });
+    };
+    const pt = e => { const r = cv.getBoundingClientRect(); return [(e.clientX - r.left) / r.width, (e.clientY - r.top) / r.height]; };
+    cv.onpointerdown = e => { e.preventDefault(); cv.setPointerCapture(e.pointerId); cur = [pt(e)]; strokes.push(cur); redraw(); };
+    cv.onpointermove = e => { if (!cur) return; e.preventDefault(); cur.push(pt(e)); redraw(); };
+    cv.onpointerup = cv.onpointercancel = () => { cur = null; };
+    el.querySelector("[data-g]").onclick = e => {
+      const b = e.currentTarget, on = b.textContent === "Guide on";
+      run++;
+      if (on){ guide.classList.remove("off"); osvg.classList.add("off"); b.textContent = "Guide off"; }
+      else { guide.classList.add("off"); osvg.classList.add("off"); b.textContent = "Guide on"; }
+    };
+    el.querySelector("[data-u]").onclick = () => { strokes.pop(); redraw(); };
+    el.querySelector("[data-c]").onclick = () => { strokes = []; redraw(); };
+    fit();
   }
   function runKanjiQuiz(){
     const L = lesson, ks = L.kanji_study, qs = [];
@@ -1797,6 +1903,7 @@ rt{font-size:max(.5em,9.5px)}
     if (st.type === "phrases") h = renderPhrases(L);
     if (st.type === "grammar") h = renderGrammar(L);
     if (st.type === "words") h = renderWords(L);
+    if (st.type === "sign") h = renderSign(L);
     if (st.type === "kanji") h = renderKanji(L);
     if (st.type === "challenge") h = renderChallenge(L);
     if (st.type === "mock") h = renderMock(L);
@@ -1831,21 +1938,26 @@ rt{font-size:max(.5em,9.5px)}
     if (st.type === "phrases") wirePhrases(L);
     if (st.type === "grammar") wireGrammar(L);
     if (st.type === "words") wireWords(L);
-    if (st.type === "kanji"){
-      markKanji(L.kanji_study, "seen");
+    if (st.type === "sign"){
       const kr = $("krev"); if (kr) kr.onclick = e => {
         const k = L.kanji, b = e.currentTarget; $("kr").textContent = k.reading; b.classList.add("open"); b.textContent = k.meaning; $("kwhere").hidden = false;
         play(L.id, [k.reading]);
         kdLoad.then(() => { const box = document.querySelector("#kwhere .kparts"); if (box) box.innerHTML = [...new Set([...plain(k.kanji)].filter(isKanji))].filter(ch => KD[ch]).map(ch => `<div class="kpart"><div class="kc">${esc(ch)}</div><div style="min-width:0"><div class="km">${esc(KD[ch][0])}</div><div class="kr">${esc([KD[ch][1], KD[ch][2]].filter(Boolean).join(" · "))}</div></div></div>`).join(""); });
       };
       const sg = document.querySelector("#stage .sign"); if (sg && kr) sg.onclick = () => { if (!kr.classList.contains("open")) kr.click(); };
-      // page 2 of this step: the kanji quiz, opened by the bottom Next
-      const step = $("stage").querySelector(".step"), pageHTML = step.innerHTML, hasQ = (L.kanji_study || []).length;
+    }
+    if (st.type === "kanji"){
+      markKanji(L.kanji_study, "seen");
+      // pages: one per kanji, then the quiz; the bottom Next/Back walk them
+      const ks = L.kanji_study, step = $("stage").querySelector(".step"), last = ks.length;
       let page = 0;
-      const toQuiz = () => { page = 1; stopAll(); step.innerHTML = `<div id="kq" style="display:flex;flex-direction:column;gap:10px"></div>`; $("stage").scrollTop = 0; runKanjiQuiz(); };
-      const toPage = () => { page = 0; activeQuiz = null; step.innerHTML = pageHTML; wireStep(st); };
-      sub = {next:() => page === 0 && hasQ ? (toQuiz(), true) : false, back:() => page === 1 ? (toPage(), true) : false};
-      if (fromEnd && hasQ) toQuiz();
+      const show = p => {
+        page = p; stopAll(); activeQuiz = null; $("stage").scrollTop = 0;
+        if (p === last){ step.innerHTML = `<div id="kq" style="display:flex;flex-direction:column;gap:10px"></div>`; runKanjiQuiz(); }
+        else { step.innerHTML = kanjiPage(L, ks[p]); wireKanjiPage(L, ks[p]); }
+      };
+      sub = {next:() => page < last ? (show(page + 1), true) : false, back:() => page > 0 ? (show(page - 1), true) : false};
+      if (fromEnd) show(last); else wireKanjiPage(L, ks[0]);
     }
     if (st.type === "challenge") wireChallenge(L);
     if (st.type === "mock") runMock(L);
@@ -1893,7 +2005,7 @@ rt{font-size:max(.5em,9.5px)}
       const sentKeys = [c.src, plain(c.sent)];
       const done = g => { if (!again.has(c.k)){ grade(c, g, W.practice); if (g >= 3) W.ok++; } if (g === 1 && !again.has(c.k)){ again.add(c.k); queue.push(c); } W.qi++; show(); };
       const back = () => {
-        if (c.kind === "kanji") return `<div style="font-size:18px;font-weight:700">${esc(c.meaning)}</div><div class="kread">${c.on ? `<b>On</b><span style="font-family:var(--jp)">${esc(c.on)}</span>` : ""}${c.kun ? `<b>Kun</b><span style="font-family:var(--jp)">${esc(c.kun)}</span>` : ""}</div>${(c.words || []).map(w => `<div class="row" style="justify-content:flex-start;gap:10px"><button class="play" data-lid="${esc(lid)}" data-play="w:${esc(plain(w.jp))}" style="margin:0">${ICON_SAY}</button><span class="jp-mid">${ruby(w.jp)}</span><span class="note">${esc(w.en)}</span></div>`).join("")}`;
+        if (c.kind === "kanji") return `<div style="font-size:18px;font-weight:700">${esc(c.meaning)}</div><div class="kread">${c.on ? `<b>On</b><span style="font-family:var(--jp)">${esc(c.on)}</span>` : ""}${c.kun ? `<b>Kun</b><span style="font-family:var(--jp)">${esc(c.kun)}</span>` : ""}</div>${c.parts ? `<p class="note" style="margin:0">${ruby(c.parts)}</p>` : ""}${(c.words || []).map(w => `<div class="row" style="justify-content:flex-start;gap:10px"><button class="play" data-lid="${esc(lid)}" data-play="w:${esc(plain(w.jp))}" style="margin:0">${ICON_SAY}</button><span class="jp-mid">${ruby(w.jp)}</span><span class="note">${esc(w.en)}</span></div>`).join("")}`;
         if (c.kind === "line") return `<div class="jp-mid">${ruby(c.sent)}</div><div>${esc(c.sentEn)}</div>${pbtn(sentKeys, ICON_SAY + " Listen", false, lid)}`;
         if (c.kind === "grammar") return `<div style="font-size:18px;font-weight:700">${esc(c.meaning)}</div>${c.form ? `<div class="gline">${ruby(c.form)}</div>` : ""}${c.sent ? `<div class="jp-mid" style="font-size:16px">${ruby(c.sent)}</div><div class="note">${esc(c.sentEn)}</div>${pbtn(sentKeys, ICON_SAY + " Listen", false, lid)}` : ""}`;
         return `<div class="row" style="justify-content:flex-start;gap:10px"><span class="jp-big" style="line-height:1.7">${ruby(c.word)}</span><span style="font-size:17px;font-weight:600">${esc(c.en)}</span></div>${c.note ? `<div class="note">${ruby(c.note)}</div>` : ""}

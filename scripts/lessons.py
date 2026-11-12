@@ -137,6 +137,8 @@ def check_words(lid, L, track, errs):
             errs.append(f"{lid}: {w}.kanji must be one character")
         if not str(k.get("meaning", "")).strip():
             errs.append(f"{lid}: {w}.meaning missing")
+        if lid >= "2026-11-13" and len(str(k.get("parts", "")).strip()) < 15:
+            errs.append(f"{lid}: {w}.parts missing: how the kanji is built (components + memory hook)")
         on, kun = str(k.get("on", "")), str(k.get("kun", ""))
         if not on and not kun:
             errs.append(f"{lid}: {w} needs an on or kun reading")
