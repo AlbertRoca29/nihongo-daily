@@ -146,7 +146,7 @@
     "Hana-obāchan"
    ],
    "color": "#8e4b6e",
-   "status": "おはぎ{作りすぎた|つくりすぎた}",
+   "status": "{膝|ひざ}に{湿布|しっぷ}、{貼っとる|はっとる}よ",
    "where": "{田中|たなか}さんの{隣|となり}"
   },
   {
@@ -382,6 +382,20 @@
     "アルちゃん climbed 鷹見岳 on 12 Nov and was back at the 田中 house before dark.",
     "恵子さん reads the news on a tablet in the kitchen.",
     "Dinner on 12 Nov was 恵子さん's mushroom (きのこ) hot pot."
+   ]
+  },
+  {
+   "date": "2026-11-13",
+   "cast": [
+    "hana"
+   ],
+   "summary": "Friday: the day after the hike, アルちゃん has sore legs and a scratchy throat and goes to the pharmacy on the shopping street. ハナおばあちゃん, buying knee patches, has already heard about his climb from 恵子さん; she says a cold is going around town and the forecast says tonight will be much colder, so he buys throat medicine and is told to sleep early.",
+   "new_facts": [
+    "The shopping-street pharmacy (薬局) fills prescriptions (処方箋受付) and has a woman pharmacist.",
+    "ハナおばあちゃん uses patches (湿布) for her knees.",
+    "News travels fast in 鷹ノ原: 恵子さん told ハナおばあちゃん about アルちゃん's hike.",
+    "On 13 Nov a cold/flu was going around 鷹ノ原; the town loudspeakers (防災無線) announced it at 5 p.m.",
+    "アルちゃん had muscle ache and a slight sore throat (no cough) on 13 Nov and is taking throat medicine three times a day after meals."
    ]
   }
  ],

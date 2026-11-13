@@ -71,5 +71,12 @@
   "category": "news",
   "function": "reasons",
   "format": "text"
+ },
+ {
+  "id": "2026-11-13",
+  "topic": "Sore legs, and the town already knows",
+  "category": "health-body",
+  "function": "hearsay",
+  "format": "dialogue"
  }
 ]

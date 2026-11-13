@@ -1,0 +1,446 @@
+{
+ "topic": "Sore legs, and the town already knows",
+ "category": "health-body",
+ "function": "hearsay",
+ "format": "dialogue",
+ "cast": [
+  "hana"
+ ],
+ "title_jp": "{筋肉痛|きんにくつう}と{町|まち}の{噂|うわさ}",
+ "context": "Friday afternoon: the day after climbing {鷹見岳|たかみだけ}, アルちゃん has aching legs and a scratchy throat and goes to the pharmacy on the shopping street. ハナおばあちゃん, there for her knee patches, has already heard all about his hike.",
+ "scene": "Sore legs after {鷹見岳|たかみだけ} and a scratchy throat. At the pharmacy you bump into ハナおばあちゃん, who has already heard about your hike.",
+ "keep": [
+  "p0"
+ ],
+ "phrases": [
+  {
+   "jp": "{忘れない|わすれない}うちに、{薬|くすり}を{飲んで|のんで}おこう。",
+   "en": "I'll take my medicine before I forget.",
+   "register": "casual",
+   "note": "〜ないうちに + 〜ておこう: 'let me do it now, before X happens'. Very common when talking to yourself."
+  },
+  {
+   "jp": "{喉|のど|throat|4}が{痛くて|いたくて}、{咳|せき|cough|3}も{少し|すこし}{出ます|でます}。",
+   "en": "My throat hurts, and I'm coughing a bit too.",
+   "register": "polite",
+   "note": "Symptoms at a pharmacy or clinic: 〜が{痛|いた}い, {咳|せき}が{出|で}る, {熱|ねつ}がある."
+  },
+  {
+   "jp": "この{薬|くすり}、{飲む|のむ}と{眠く|ねむく}なりますか。",
+   "en": "Does this medicine make you sleepy?",
+   "register": "polite",
+   "note": "The question to ask before buying cold medicine you'll take before work or driving."
+  },
+  {
+   "jp": "{田中|たなか}さんによると、{明日|あした}は{雪|ゆき}が{降る|ふる}かもしれないそうです。",
+   "en": "According to {田中|たなか}さん, it might snow tomorrow.",
+   "register": "polite",
+   "note": "〜によると…そうです: the source first, then the news. The neatest way to pass on what someone said."
+  },
+  {
+   "jp": "{無理|むり|overdoing it|4}しないでね。お{大事|だいじ|take care (to someone ill)|4}に。",
+   "en": "Don't overdo it. Take care of yourself.",
+   "register": "casual",
+   "note": "お{大事|だいじ}に is said only to someone ill or hurt. Pharmacists and doctors say it as you leave."
+  }
+ ],
+ "dialogue_setting": "The small pharmacy on the {商店街|しょうてんがい}, Friday afternoon. ハナおばあちゃん is at the counter with a box of knee patches.",
+ "dialogue": [
+  {
+   "who": "hana",
+   "speaker": "ハナおばあちゃん",
+   "jp": "あら、アルちゃん。{鷹見岳|たかみだけ}に{登った|のぼった|to climb|4}んだってね。{恵子|けいこ}さんから{聞いた|きいた}よ。",
+   "en": "Oh, アルちゃん. I hear you climbed {鷹見岳|たかみだけ}. {恵子|けいこ}さん told me.",
+   "note": "〜んだって = 'I hear that…': the casual way to say you heard some news."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "はい。でも{今日|きょう}は{足|あし}が{筋肉痛|きんにくつう|muscle ache|3}で…。{喉|のど|throat|4}も{少し|すこし}{痛い|いたい}んです。",
+   "en": "Yes. But today my legs are aching… and my throat hurts a little too."
+  },
+  {
+   "who": "hana",
+   "speaker": "ハナおばあちゃん",
+   "jp": "{町|まち}で{風邪|かぜ}が{流行って|はやって|to be going around|3}るらしいのう。ひどくならないうちに{薬|くすり}を{飲み|のみ}なさい。",
+   "en": "Apparently there's a cold going around town. Take some medicine before it gets worse.",
+   "register": "dialect",
+   "note": "のう is old-fashioned/regional for ね: {流行|はや}ってるらしいね."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "すみません、{喉|のど|throat|4}の{痛み|いたみ|pain|3}に{効く|きく|to work, be effective|3}{薬|くすり}はありますか。{咳|せき|cough|3}は{出ません|でません}。",
+   "en": "Excuse me, do you have something that works for a sore throat? I'm not coughing."
+  },
+  {
+   "who": "extra",
+   "voice": "f",
+   "speaker": "薬剤師さん",
+   "jp": "こちらがよく{効きます|ききます|to work, be effective|3}よ。{1日|いちにち}{3回|さんかい}、{食後|しょくご|after meals|3}に{飲んで|のんで}ください。…1000{円|えん}お{預かり|あずかり|to take (and hold)|3}します。",
+   "en": "This one works well. Three times a day, after meals. …Out of 1000 yen.",
+   "note": "〜円お{預|あず}かりします: what every cashier says when you hand over money, before giving change."
+  },
+  {
+   "who": "hana",
+   "speaker": "ハナおばあちゃん",
+   "jp": "{天気予報|てんきよほう|weather forecast|4}によると、{今夜|こんや}は{ぐっと||sharply, a lot|3}{冷える|ひえる|to get cold|4}そうじゃ。{早く|はやく}{寝なさい|ねなさい}よ。",
+   "en": "The forecast says it'll get much colder tonight. Get to bed early.",
+   "register": "dialect",
+   "note": "そうじゃ is old-fashioned/regional for そうだ: {冷|ひ}えるそうだ."
+  }
+ ],
+ "listening": {
+  "type": "announcement",
+  "intro": "At five o'clock the town loudspeakers crackle on, as you walk home up the slope.",
+  "who": "extra",
+  "title": "{防災無線|ぼうさいむせん}のお{知らせ|しらせ}",
+  "place": "{鷹ノ原町|たかのはらまち}, town loudspeakers",
+  "lines": [
+   {
+    "who": "extra",
+    "voice": "f",
+    "jp": "こちらは{鷹ノ原町|たかのはらまち}{役場|やくば|town office|2}です。{町内|ちょうない|in town|2}で、インフルエンザが{流行って|はやって|to be going around|3}います。",
+    "en": "This is the {鷹ノ原町|たかのはらまち} town office. Influenza is going around town."
+   },
+   {
+    "who": "extra",
+    "voice": "f",
+    "jp": "{外|そと}から{帰ったら|かえったら}、{手|て}を{洗いましょう|あらいましょう}。{熱|ねつ}が{出たら|でたら}、{早めに|はやめに|early, in good time|3}{病院|びょういん}へ{行って|いって}ください。",
+    "en": "Wash your hands when you come home. If you get a fever, go to a clinic early."
+   }
+  ],
+  "question": "{熱|ねつ}が{出たら|でたら}、どうしたほうがいいですか。",
+  "options": [
+   "{早|はや}めに{病院|びょういん}へ{行|い}く",
+   "{役場|やくば}に{電話|でんわ}する",
+   "{薬局|やっきょく}で{薬|くすり}を{買|か}う",
+   "{家|いえ}で{手|て}を{洗|あら}う"
+  ],
+  "explain": "{熱|ねつ}が{出|で}たら、{早|はや}めに{病院|びょういん}へ: with a fever, go to a clinic early. Hand-washing is for when you come home."
+ },
+ "grammar": {
+  "id": "n3-nai-uchi-ni",
+  "pattern": "〜ないうちに",
+  "level": "N3",
+  "meaning": "before (something happens)",
+  "form": "verb ない-form: + うちに ({忘|わす}れないうちに, {降|ふ}らないうちに) · い-adj: -く + ならないうちに ({暗|くら}くならないうちに, ひどくならないうちに) · set phrase: {知|し}らないうちに",
+  "explanation": "Do it now, before something unwanted starts: ひどくならないうちに = before it gets worse. Close to 〜{前|まえ}に, but more urgent. {知|し}らないうちに means 'before I knew it'. Never say {忘|わす}れない{前|まえ}に: {前|まえ}に takes the dictionary form ({忘|わす}れる{前|まえ}に).",
+  "src": [
+   "d2",
+   "p0"
+  ],
+  "mark": [
+   "ひどくならないうちに",
+   "忘れないうちに",
+   "降らないうちに",
+   "冷めないうちに",
+   "知らないうちに"
+  ],
+  "examples": [
+   {
+    "jp": "{雨|あめ}が{降らない|ふらない}うちに、{洗濯物|せんたくもの|laundry|4}を{入れよう|いれよう}。",
+    "en": "Let's bring the laundry in before it rains."
+   },
+   {
+    "jp": "{冷めない|さめない|to get cold (food)|3}うちに{食べて|たべて}ね。",
+    "en": "Eat it before it gets cold."
+   },
+   {
+    "jp": "{知らない|しらない}うちに、{寝て|ねて}しまった。",
+    "en": "I fell asleep before I knew it."
+   }
+  ],
+  "quiz": {
+   "question": "{暗く|くらく}＿＿うちに、{帰って|かえって}きてね。",
+   "en": "Come home before it gets dark.",
+   "options": [
+    "ならない",
+    "なる",
+    "なった",
+    "ならなかった"
+   ],
+   "explain": "Before it gets dark = while it hasn't yet: {暗|くら}くならないうちに, always the plain present negative."
+  },
+  "quiz_more": [
+   {
+    "question": "{忘れない|わすれない}＿＿、{電話番号|でんわばんごう}をメモしておこう。",
+    "en": "Let me note down the phone number before I forget.",
+    "options": [
+     "うちに",
+     "{前|まえ}に",
+     "までに",
+     "あとで"
+    ],
+    "explain": "After a ない-form you need うちに. {前|まえ}に would need {忘|わす}れる{前|まえ}に."
+   },
+   {
+    "question": "{雨|あめ}が＿＿うちに、{出発|しゅっぱつ}しよう。",
+    "en": "Let's set off before it starts raining.",
+    "options": [
+     "{降|ふ}らない",
+     "{降|ふ}る",
+     "{降|ふ}った",
+     "{降|ふ}って"
+    ],
+    "explain": "'Before X happens' = X hasn't happened yet: {降|ふ}らないうちに. {降|ふ}るうちに isn't used."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "処方箋受付",
+  "reading": "しょほうせんうけつけ",
+  "romaji": "shohōsen uketsuke",
+  "meaning": "prescriptions accepted here",
+  "where": "On the glass door of every pharmacy that fills a doctor's prescription, usually in big red or green letters.",
+  "related": "{薬局|やっきょく} = pharmacy; お{薬手帳|くすりてちょう} = your medicine record booklet.",
+  "breakdown": "{処方箋|しょほうせん}{受付|うけつけ}: 処方 prescribe (処 deal with + 方 method) + 箋 slip of paper + 受付 reception → 'prescription slips received here'."
+ },
+ "tip": {
+  "mark": "薬",
+  "title": "Pharmacy or drugstore?",
+  "body": "A {薬局|やっきょく} with {処方箋|しょほうせん}{受付|うけつけ} fills prescriptions; a ドラッグストア mostly sells over-the-counter medicine, snacks and shampoo. Some cold medicines ({第1類|だいいちるい}) can only be sold after the pharmacist explains them, so they're kept behind the counter. Expect questions like 「{眠|ねむ}くなっても{大丈夫|だいじょうぶ}ですか」."
+ },
+ "challenge": {
+  "type": "order",
+  "prompt": "At dinner {恵子|けいこ}さん frowns: 「アルちゃん、{顔色|かおいろ|complexion|3}{悪い|わるい}わね。{大丈夫|だいじょうぶ}？」 Tell her what ハナおばあちゃん said and that you'll sleep early before it gets worse.",
+  "model_answer": "ハナおばあちゃんによると、{風邪|かぜ}が{流行って|はやって}るらしいので、ひどくならないうちに{早く|はやく}{寝ます|ねます}。",
+  "pieces": [
+   "ハナおばあちゃんによると、",
+   "{風邪|かぜ}が{流行って|はやって}るらしいので、",
+   "ひどくならないうちに",
+   "{早く|はやく}{寝ます|ねます}。"
+  ],
+  "explanation": "〜によると names your source, and らしい marks it as hearsay ({流行|はや}ってる is the casual ている). ひどくならないうちに = before it gets worse. The polite {寝|ね}ます fits talking to your host.",
+  "hint": "〜によると · 〜らしいので · 〜ないうちに"
+ },
+ "vocab": [
+  {
+   "jp": "{筋肉痛|きんにくつう}",
+   "reading": "きんにくつう",
+   "en": "muscle ache, sore muscles",
+   "level": "N2",
+   "src": "d1",
+   "surface": "筋肉痛",
+   "note": "{筋肉|きんにく} muscle + {痛|つう} pain. Typical after sport: {足|あし}が{筋肉痛|きんにくつう}だ."
+  },
+  {
+   "jp": "{喉|のど}",
+   "reading": "のど",
+   "en": "throat",
+   "level": "N4",
+   "src": "d1",
+   "surface": "喉",
+   "note": "Often written in kana: のど. {喉|のど}が{渇|かわ}く = to be thirsty."
+  },
+  {
+   "jp": "{流行|はや}る",
+   "reading": "はやる",
+   "en": "to be going around; to be popular",
+   "level": "N3",
+   "src": "d2",
+   "surface": "流行って",
+   "note": "For illnesses and trends. As a noun, {流行|りゅうこう} = fashion."
+  },
+  {
+   "jp": "{痛|いた}み",
+   "reading": "いたみ",
+   "en": "pain",
+   "level": "N3",
+   "src": "d3",
+   "surface": "痛み",
+   "note": "Noun from {痛|いた}い. {痛|いた}み{止|ど}め = painkiller."
+  },
+  {
+   "jp": "{効|き}く",
+   "reading": "きく",
+   "en": "to work, be effective",
+   "level": "N3",
+   "src": "d3",
+   "surface": "効く",
+   "note": "For medicine or remedies: 〜に{効|き}く. Same sound as {聞|き}く."
+  },
+  {
+   "jp": "{咳|せき}",
+   "reading": "せき",
+   "en": "cough",
+   "level": "N3",
+   "src": "d3",
+   "surface": "咳",
+   "note": "{咳|せき}が{出|で}る = to cough (not する)."
+  },
+  {
+   "jp": "{食後|しょくご}",
+   "reading": "しょくご",
+   "en": "after meals",
+   "level": "N3",
+   "src": "d4",
+   "surface": "食後",
+   "note": "On medicine labels. Before meals: {食前|しょくぜん}."
+  },
+  {
+   "jp": "{預|あず}かる",
+   "reading": "あずかる",
+   "en": "to take (and look after)",
+   "level": "N3",
+   "src": "d4",
+   "surface": "預かり",
+   "note": "Polite cashier set phrase: 〜円お{預|あず}かりします. To leave something with someone: {預|あず}ける."
+  },
+  {
+   "jp": "{冷|ひ}える",
+   "reading": "ひえる",
+   "en": "to get cold, chill",
+   "level": "N3",
+   "src": "d5",
+   "surface": "冷える",
+   "note": "Weather or body: {体|からだ}が{冷|ひ}える. Food getting cold is {冷|さ}める."
+  },
+  {
+   "jp": "{無理|むり}する",
+   "reading": "むりする",
+   "en": "to overdo it, push yourself",
+   "level": "N3",
+   "src": "p4",
+   "surface": "無理し",
+   "note": "{無理|むり}しないで: the classic caring line to someone tired or ill."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "痛",
+   "track": "lesson",
+   "on": "ツウ",
+   "kun": "いた(い)・いた(む)",
+   "meaning": "pain, hurt",
+   "parts": "疒 sickness radical (a sickbed seen from the side) + 甬, which gives the sound ツウ like 通 → pain running through a sick body.",
+   "lookalike": "Not 病 (illness): both have 疒, but 痛 has 甬 inside and 病 has 丙.",
+   "words": [
+    {
+     "jp": "{筋肉痛|きんにくつう}",
+     "reading": "きんにくつう",
+     "en": "muscle ache"
+    },
+    {
+     "jp": "{痛|いた}い",
+     "reading": "いたい",
+     "en": "painful, it hurts"
+    },
+    {
+     "jp": "{頭痛|ずつう}",
+     "reading": "ずつう",
+     "en": "headache"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "illness",
+     "fever",
+     "tired"
+    ],
+    "readings": [
+     "きんにくいた",
+     "すじにくつう",
+     "きんにくとう"
+    ]
+   }
+  },
+  {
+   "kanji": "預",
+   "track": "n3",
+   "on": "ヨ",
+   "kun": "あず(ける)・あず(かる)",
+   "meaning": "deposit, entrust",
+   "parts": "予 'in advance' (also the sound ヨ) + 頁 head → handing something over ahead of time to someone whose head you trust: entrust.",
+   "lookalike": "Not 頂 (いただく): 預 has 予 on the left, 頂 has 丁.",
+   "words": [
+    {
+     "jp": "{預|あず}かる",
+     "reading": "あずかる",
+     "en": "to take and look after"
+    },
+    {
+     "jp": "{預|あず}ける",
+     "reading": "あずける",
+     "en": "to leave in someone's care; to deposit"
+    },
+    {
+     "jp": "{預金|よきん}",
+     "reading": "よきん",
+     "en": "bank savings, deposit"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "prepare",
+     "borrow",
+     "pay"
+    ],
+    "readings": [
+     "あずける",
+     "よかる",
+     "あつかる"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Telling the pharmacist what's wrong",
+   "title_jp": "{症状|しょうじょう}の{言い方|いいかた}",
+   "intro": "Short lines that cover most colds and aches.",
+   "items": [
+    {
+     "jp": "{熱|ねつ}があります。",
+     "en": "I have a fever."
+    },
+    {
+     "jp": "{鼻水|はなみず|runny nose|3}が{止まりません|とまりません}。",
+     "en": "My nose won't stop running."
+    },
+    {
+     "jp": "{頭|あたま}がずきずきします。",
+     "en": "I have a throbbing headache.",
+     "note": "ずきずき = throbbing pain. ひりひり = stinging, like a sore throat."
+    },
+    {
+     "jp": "{寒気|さむけ|chills|3}がします。",
+     "en": "I've got the chills."
+    },
+    {
+     "jp": "{胃|い|stomach|3}がむかむかします。",
+     "en": "I feel queasy."
+    }
+   ]
+  },
+  {
+   "title": "Passing on what you heard",
+   "title_jp": "{聞いた|きいた}{話|はなし}の{伝え方|つたえかた}",
+   "intro": "From gossip to news, casual to polite.",
+   "items": [
+    {
+     "jp": "{雪|ゆき}が{降る|ふる}って。",
+     "en": "They say it'll snow.",
+     "note": "って: the most casual, between friends and family."
+    },
+    {
+     "jp": "{雪|ゆき}が{降る|ふる}んだって。",
+     "en": "I hear it'll snow.",
+     "note": "んだって: casual, sounds like fresh news."
+    },
+    {
+     "jp": "{雪|ゆき}が{降る|ふる}らしい。",
+     "en": "Apparently it'll snow.",
+     "note": "らしい: from what I've heard or seen, not sure."
+    },
+    {
+     "jp": "{予報|よほう|forecast|3}によると、{雪|ゆき}が{降る|ふる}そうです。",
+     "en": "According to the forecast, it will snow.",
+     "note": "によると…そうです: clear source, neutral and polite."
+    }
+   ]
+  }
+ ]
+}
