@@ -8,7 +8,7 @@ on:
     paths: ["lessons/**", "voices.json", "cast.json", "scripts/tts.py"]
   workflow_dispatch:
   schedule:
-    - cron: "15 9 * * *"   # 10:15 Madrid, after Gemini's daily limit resets: retry leftovers, back-fill older lessons
+    - cron: "5 8 * * *"    # 09:05 Madrid (10:05 in summer), just after Gemini's daily limit resets at midnight Pacific: retry leftovers, back-fill older lessons
 
 permissions:
   contents: write
