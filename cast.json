@@ -95,7 +95,7 @@
     "Kenta"
    ],
    "color": "#f39800",
-   "status": "トルティーヤ{対決|たいけつ}、いつにする？",
+   "status": "21{日|にち}はトルティーヤ{対決|たいけつ}や！",
    "where": "ゲストハウス{風|かぜ}"
   },
   {
@@ -396,6 +396,20 @@
     "News travels fast in 鷹ノ原: 恵子さん told ハナおばあちゃん about アルちゃん's hike.",
     "On 13 Nov a cold/flu was going around 鷹ノ原; the town loudspeakers (防災無線) announced it at 5 p.m.",
     "アルちゃん had muscle ache and a slight sore throat (no cough) on 13 Nov and is taking throat medicine three times a day after meals."
+   ]
+  },
+  {
+   "date": "2026-11-14",
+   "cast": [
+    "kenta"
+   ],
+   "summary": "Saturday: アルちゃん's cold is better and he works his reception shift at ゲストハウス風, where 健太 has put up a flyer: the tortilla vs okonomiyaki showdown is set for Saturday 21 Nov, judged by the guests. アルちゃん only learns from the flyer that the loser cleans alone the next day.",
+   "new_facts": [
+    "The tortilla showdown (アルちゃん vs 健太) is set for Sat 21 Nov, 18:00, in the ground-floor lounge of ゲストハウス風: free, first 10 guests, sign up at reception by Friday; the guests vote.",
+    "健太 decided アルちゃん will bring the potatoes; アルちゃん plans to ask 恵子さん for them.",
+    "The loser of the showdown cleans the guesthouse alone the next day.",
+    "If アルちゃん's cold isn't better, the showdown will be postponed.",
+    "On 14 Nov アルちゃん's cold was getting better and he worked his Saturday shift."
    ]
   }
  ],

@@ -78,5 +78,12 @@
   "category": "health-body",
   "function": "hearsay",
   "format": "dialogue"
+ },
+ {
+  "id": "2026-11-14",
+  "topic": "The tortilla showdown is on",
+  "category": "review",
+  "function": "planning",
+  "format": "text"
  }
 ]

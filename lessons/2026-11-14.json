@@ -1,0 +1,423 @@
+{
+ "topic": "The tortilla showdown is on",
+ "category": "review",
+ "function": "planning",
+ "format": "text",
+ "cast": [
+  "kenta"
+ ],
+ "reader": "kenta",
+ "title_jp": "トルティーヤ{対決|たいけつ}、{決定|けってい}！",
+ "context": "Saturday: アルちゃん's cold is better and he goes to his reception shift at {ゲストハウス風|ゲストハウスかぜ}. {健太|けんた} has already put up a flyer: the tortilla vs okonomiyaki showdown is set for next Saturday.",
+ "scene": "Saturday shift at the guesthouse. Your cold is better, and {健太|けんた} has already put up a flyer for your tortilla showdown.",
+ "keep": [
+  "p3"
+ ],
+ "phrases": [
+  {
+   "jp": "{対決|たいけつ|showdown|2}、{来週|らいしゅう}の{土曜|どよう}にやることにしたで！",
+   "en": "I've decided we're doing the showdown next Saturday!",
+   "register": "dialect",
+   "note": "Kansai で at the end = よ. Standard: やることにしたよ。"
+  },
+  {
+   "jp": "じゃあ、じゃがいもは{恵子|けいこ}さんに{頼んで|たのんで|to ask (a favour)|4}おくね。",
+   "en": "OK, then I'll ask {恵子|けいこ}さん for the potatoes.",
+   "register": "casual",
+   "note": "〜ておく = do it now, to be ready. Spoken often as {頼|たの}んどくね."
+  },
+  {
+   "jp": "{負けたら|まけたら|to lose|4}{掃除|そうじ}？そんなの{聞いて|きいて}ないよ！",
+   "en": "The loser cleans? Nobody told me that!",
+   "register": "casual",
+   "note": "{聞|き}いてない(よ) = 'that's news to me!', the classic complaint when a plan changes behind your back."
+  },
+  {
+   "jp": "{週末|しゅうまつ}は{無理|むり|overdoing it|4}しないことにする。{早く|はやく}{治したい|なおしたい|to cure, get over|3}し。",
+   "en": "I've decided not to overdo it this weekend. I want to get better fast.",
+   "register": "casual",
+   "note": "ないことにする = decide not to. し at the end gives a reason, a bit trailing off."
+  },
+  {
+   "jp": "{参加|さんか|taking part|3}したいんですが、どこで{申し込めば|もうしこめば|to apply, sign up|3}いいですか。",
+   "en": "I'd like to take part. Where should I sign up?",
+   "register": "polite",
+   "note": "Works for any event, class or tour. You'll hear back: {受付|うけつけ}でお{願|ねが}いします."
+  }
+ ],
+ "dialogue_setting": "The notice board by reception at {ゲストハウス風|ゲストハウスかぜ}: a flyer written by {健太|けんた}.",
+ "text_title": "{第1回|だいいっかい|the first (event)|3}　トルティーヤ{対決|たいけつ|showdown|2}！",
+ "dialogue": [
+  {
+   "speaker": "Intro",
+   "jp": "スペインのトルティーヤと{大阪|おおさか}のお{好み焼き|このみやき|okonomiyaki (savoury pancake)|4}、どっちがうまいか{決める|きめる|to decide|4}ことにしました！",
+   "en": "We've decided to settle which is better: the Spanish tortilla or {大阪|おおさか} okonomiyaki!"
+  },
+  {
+   "speaker": "When",
+   "jp": "11{月|がつ}21{日|にち}（{土|ど}）{夜|よる}6{時|じ}から、1{階|かい}の{ラウンジ||lounge|3}でやります。",
+   "en": "Saturday 21 November, from 6 p.m., in the ground-floor lounge."
+  },
+  {
+   "speaker": "Players",
+   "jp": "スペイン{代表|だいひょう|representative|3}：アルちゃん　vs　{大阪|おおさか}{代表|だいひょう|representative|3}：{健太|けんた}",
+   "en": "For Spain: アルちゃん. For {大阪|おおさか}: {健太|けんた}."
+  },
+  {
+   "speaker": "Voting",
+   "jp": "{審査員|しんさいん|judge|2}はお{客|きゃく}さんです。{両方|りょうほう|both|4}{食べて|たべて}、おいしかった{方|ほう}に{投票|とうひょう|vote|3}してください。",
+   "en": "The guests are the judges. Try both and vote for the one you liked best."
+  },
+  {
+   "speaker": "Ingredients",
+   "jp": "{材料|ざいりょう|ingredients|3}のじゃがいもは、アルちゃんが{田中|たなか}さんの{家|いえ}から{持って|もって}くることになりました。",
+   "en": "It's been arranged that アルちゃん brings the potatoes from the {田中|たなか}s' house."
+  },
+  {
+   "speaker": "Sign-up",
+   "jp": "{参加|さんか|taking part|3}{無料|むりょう|free of charge|4}・{先着|せんちゃく|first to arrive|2}10{名|めい}。{金曜日|きんようび}までに{受付|うけつけ|reception desk|3}で{名前|なまえ}を{書いて|かいて}おいてください。",
+   "en": "Free, first 10 people. Write your name at reception by Friday."
+  },
+  {
+   "speaker": "Rule",
+   "jp": "{負けた|まけた|to lose|4}{方|ほう}は、{次|つぎ}の{日|ひ}の{掃除|そうじ}を{一人|ひとり}でやることにします。",
+   "en": "Whoever loses does the next day's cleaning alone."
+  },
+  {
+   "speaker": "Note",
+   "jp": "※アルちゃんの{風邪|かぜ}が{治らなかったら|なおらなかったら|to get better, heal|4}、{延期|えんき|postponement|3}します。{お大事に|おだいじに|get well soon|4}！",
+   "en": "※ If アルちゃん's cold doesn't get better, we'll postpone. Get well soon!"
+  }
+ ],
+ "listening": {
+  "type": "dictation",
+  "intro": "{健太|けんた} sends a quick voice message about the rule. Type what he says.",
+  "who": "kenta",
+  "lines": [
+   {
+    "who": "kenta",
+    "jp": "{負けた|まけた|to lose|4}{方|ほう}が{掃除|そうじ}をすることにしよう。",
+    "en": "Let's make the loser do the cleaning."
+   }
+  ]
+ },
+ "grammar": {
+  "id": "n4-koto-ni-suru",
+  "pattern": "〜ことにする",
+  "level": "N4",
+  "meaning": "decide to",
+  "form": "{辞書形|じしょけい}: + ことにする ({決|き}める → {決|き}めることにする) · ない{形|けい}: + ことにする ({無理|むり}しないことにする) · announced: ことにしました / ことにします ({延期|えんき}することにしました) · habit: ことにしている ({毎朝|まいあさ}{歩|ある}くことにしている)",
+  "explanation": "Review: a choice you (or your group) make yourself. Notices love ことにしました (we've decided) and ことにします (this is our rule). ことにしている is a personal habit. Don't confuse it with ことになりました: decided by others or circumstances, which sounds more official.",
+  "src": [
+   "d0",
+   "d6",
+   "p0",
+   "p3"
+  ],
+  "mark": [
+   "決めることにしました",
+   "やることにします",
+   "やることにした",
+   "しないことにする",
+   "帰らないことにした",
+   "することにしましょう",
+   "食べないことにしています"
+  ],
+  "examples": [
+   {
+    "jp": "{今年|ことし}のお{正月|しょうがつ}は、スペインに{帰らない|かえらない}ことにした。",
+    "en": "I've decided not to go back to Spain this New Year."
+   },
+   {
+    "jp": "{会議|かいぎ}は{来週|らいしゅう}の{月曜日|げつようび}にすることにしましょう。",
+    "en": "Let's set the meeting for next Monday."
+   },
+   {
+    "jp": "{夜|よる}10{時|じ}{以降|いこう|after (a time)|3}は{食べない|たべない}ことにしています。",
+    "en": "I make a rule of not eating after 10 p.m."
+   }
+  ],
+  "quiz": {
+   "question": "{疲れた|つかれた}から、{今日|きょう}はもう{寝る|ねる}＿＿。",
+   "en": "I'm tired, so I've decided to go to bed now.",
+   "options": [
+    "ことにする",
+    "ことになる",
+    "ようになる",
+    "ことがある"
+   ],
+   "explain": "You decide it yourself, right now: ことにする. ことになる = decided for you; ようになる = gradually start to."
+  },
+  "quiz_more": [
+   {
+    "question": "お{金|かね}がないので、{今月|こんげつ}は{外食|がいしょく|eating out|3}＿＿ことにした。",
+    "en": "I'm out of money, so I've decided not to eat out this month.",
+    "options": [
+     "しない",
+     "しなく",
+     "しないで",
+     "しなかった"
+    ],
+    "explain": "Plain ない form + ことにした. Past goes on する, never on the verb before こと."
+   },
+   {
+    "question": "{健康|けんこう|health|3}のために、{毎朝|まいあさ}{歩く|あるく}＿＿。",
+    "en": "For my health, I make a point of walking every morning.",
+    "options": [
+     "ことにしている",
+     "ことになった",
+     "ことがある",
+     "ことにした"
+    ],
+    "explain": "Every morning = a habit you keep: ことにしている. ことにした is a one-off decision just made."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "先着",
+  "reading": "せんちゃく",
+  "romaji": "senchaku",
+  "meaning": "first to arrive (first come, first served)",
+  "where": "On flyers and shop posters: {先着|せんちゃく}10{名|めい}{様|さま} = only the first ten people get in (or get the gift).",
+  "related": "{先着順|せんちゃくじゅん} = first come, first served; {定員|ていいん} = capacity.",
+  "breakdown": "{先着|せんちゃく}: 先 ahead, first + 着 arrive → 'arriving first'."
+ },
+ "tip": {
+  "mark": "米",
+  "title": "※ = read the small print",
+  "body": "The ※ mark is called {米印|こめじるし} ('rice mark') because it looks like {米|こめ}. On flyers, menus and contracts it flags the exception you mustn't miss: ※{雨天中止|うてんちゅうし} (cancelled if it rains), ※{税込|ぜいこみ}. Read the ※ lines first."
+ },
+ "challenge": {
+  "type": "write",
+  "hint": "〜ことにしよう / 〜ないことにする",
+  "prompt": "{健太|けんた} on LINE: 「{風邪|かぜ}どう？{対決|たいけつ|showdown|2}、{ほんま||(Kansai) = 本当, really|3}に{来週|らいしゅう}で{ええん||(Kansai) = いいの, is it OK|3}？」 Reply: let's do it next week, and you've decided not to overdo it this weekend.",
+  "model_answer": "うん、{来週|らいしゅう}やることにしよう！{今週末|こんしゅうまつ}は{無理|むり|overdoing it|4}しないことにするね。",
+  "explanation": "やることにしよう = 'let's go with doing it', a decision you two make together. {無理|むり}しないことにする adds your own decision not to overdo it, and ね softens it. Plain casual form, because {健太|けんた} is a friend your age."
+ },
+ "vocab": [
+  {
+   "jp": "{決|き}める",
+   "reading": "きめる",
+   "en": "to decide, settle",
+   "level": "N4",
+   "src": "d0",
+   "surface": "決める",
+   "note": "You decide something (を{決|き}める); by itself it's {決|き}まる: {予定|よてい}が{決|き}まった."
+  },
+  {
+   "jp": "{代表|だいひょう}",
+   "reading": "だいひょう",
+   "en": "representative",
+   "level": "N3",
+   "src": "d2",
+   "surface": "代表",
+   "note": "Sports teams: {日本代表|にほんだいひょう} = Japan's national team. {代表者|だいひょうしゃ} = the person in charge."
+  },
+  {
+   "jp": "{投票|とうひょう}",
+   "reading": "とうひょう",
+   "en": "vote, voting",
+   "level": "N3",
+   "src": "d3",
+   "surface": "投票",
+   "note": "{投|な}げる throw + {票|ひょう} ballot → throw your ballot in. 〜に{投票|とうひょう}する = vote for."
+  },
+  {
+   "jp": "{材料|ざいりょう}",
+   "reading": "ざいりょう",
+   "en": "ingredients, materials",
+   "level": "N3",
+   "src": "d4",
+   "surface": "材料",
+   "note": "Every recipe starts with {材料|ざいりょう}（2{人分|ふたりぶん}）."
+  },
+  {
+   "jp": "{参加|さんか}",
+   "reading": "さんか",
+   "en": "taking part, joining",
+   "level": "N3",
+   "src": "d5",
+   "surface": "参加",
+   "note": "〜に{参加|さんか}する = join an event. {参加者|さんかしゃ} = participant."
+  },
+  {
+   "jp": "{無料|むりょう}",
+   "reading": "むりょう",
+   "en": "free of charge",
+   "level": "N4",
+   "src": "d5",
+   "surface": "無料",
+   "note": "{無|む} without + {料|りょう} fee. Opposite: {有料|ゆうりょう}. Spoken also タダ."
+  },
+  {
+   "jp": "{負|ま}ける",
+   "reading": "まける",
+   "en": "to lose (a game)",
+   "level": "N3",
+   "src": "d6",
+   "surface": "負けた",
+   "note": "〜に{負|ま}ける = lose to. Opposite: {勝|か}つ. Shops: {負|ま}けて！ = give me a discount!"
+  },
+  {
+   "jp": "{延期|えんき}",
+   "reading": "えんき",
+   "en": "postponement",
+   "level": "N2",
+   "src": "d7",
+   "surface": "延期",
+   "note": "{延|の}ばす stretch + {期|き} period. {延期|えんき}する = put off; {中止|ちゅうし} = cancel."
+  },
+  {
+   "jp": "{治|なお}る",
+   "reading": "なおる",
+   "en": "to get better, heal",
+   "level": "N3",
+   "src": "d7",
+   "surface": "治らなかったら",
+   "note": "Illness heals by itself ({風邪|かぜ}が{治|なお}る); you cure it: {治|なお}す."
+  },
+  {
+   "jp": "{申|もう}し{込|こ}む",
+   "reading": "もうしこむ",
+   "en": "to apply, sign up",
+   "level": "N3",
+   "src": "p4",
+   "surface": "申し込めば",
+   "note": "Classes, events, tours. Form title: {申込書|もうしこみしょ}. Online: {申|もう}し{込|こ}みボタン."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "負",
+   "track": "lesson",
+   "on": "フ",
+   "kun": "ま(ける)・お(う)",
+   "meaning": "lose; bear (a burden)",
+   "parts": "⺈ a bent person on top + 貝 shell (old money) → someone bent under a load of money: bearing a burden, and losing a bet.",
+   "lookalike": "Not 員 (member): 負 has the bent person on top, 員 has 口 a mouth.",
+   "words": [
+    {
+     "jp": "{負|ま}ける",
+     "reading": "まける",
+     "en": "to lose"
+    },
+    {
+     "jp": "{勝負|しょうぶ}",
+     "reading": "しょうぶ",
+     "en": "match, contest"
+    },
+    {
+     "jp": "{負担|ふたん}",
+     "reading": "ふたん",
+     "en": "burden"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "win",
+     "wealth, riches",
+     "shell, shellfish"
+    ],
+    "readings": [
+     "かける",
+     "おける",
+     "ふける"
+    ]
+   }
+  },
+  {
+   "kanji": "頼",
+   "track": "n3",
+   "on": "ライ",
+   "kun": "たの(む)・たよ(る)・たの(もしい)",
+   "meaning": "request; rely on",
+   "parts": "束 a tied bundle + 頁 head → bowing your head over the bundle you're asking for: request, rely on.",
+   "lookalike": "Not 顔 (face): both have 頁 on the right, but 頼 has 束 a bundle on the left.",
+   "words": [
+    {
+     "jp": "{頼|たの}む",
+     "reading": "たのむ",
+     "en": "to ask (a favour)"
+    },
+    {
+     "jp": "{頼|たよ}る",
+     "reading": "たよる",
+     "en": "to rely on"
+    },
+    {
+     "jp": "{信頼|しんらい}",
+     "reading": "しんらい",
+     "en": "trust"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "refuse",
+     "borrow",
+     "thank"
+    ],
+    "readings": [
+     "らいむ",
+     "たよむ",
+     "たのぶ"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Four ways to talk about plans",
+   "title_jp": "{予定|よてい}の{言い方|いいかた}",
+   "intro": "Same trip, four shades of 'I'm going'.",
+   "items": [
+    {
+     "jp": "{来週|らいしゅう}{行く|いく}つもりです。",
+     "en": "I intend to go next week.",
+     "note": "つもり: your intention, not fixed yet."
+    },
+    {
+     "jp": "{来週|らいしゅう}{行く|いく}{予定|よてい}です。",
+     "en": "I'm scheduled to go next week.",
+     "note": "{予定|よてい}: it's on the calendar."
+    },
+    {
+     "jp": "{来週|らいしゅう}{行く|いく}ことにしました。",
+     "en": "I've decided to go next week.",
+     "note": "You just made the choice yourself."
+    },
+    {
+     "jp": "{来週|らいしゅう}{行く|いく}ことになりました。",
+     "en": "It's been arranged that I'll go next week.",
+     "note": "Decided by others or circumstances."
+    }
+   ]
+  },
+  {
+   "title": "This week, once more",
+   "title_jp": "{今週|こんしゅう}のフレーズ",
+   "intro": "Useful lines from the last few days, for a quick review.",
+   "items": [
+    {
+     "jp": "{温かい|あたたかい}うちに{食べて|たべて}ね。",
+     "en": "Eat it while it's warm.",
+     "note": "What every Japanese mum says at the table."
+    },
+    {
+     "jp": "{暗く|くらく}ならないうちに{帰って|かえって}きてね。",
+     "en": "Come home before it gets dark.",
+     "note": "ないうちに = before something happens."
+    },
+    {
+     "jp": "{道|みち}に{迷って|まよって|to get lost|4}しまいました。",
+     "en": "I got lost.",
+     "note": "てしまう: it happened and you regret it."
+    },
+    {
+     "jp": "{無理|むり|overdoing it|4}しないでね。",
+     "en": "Don't overdo it, OK?",
+     "note": "The kindest thing to say to someone tired or sick."
+    }
+   ]
+  }
+ ]
+}
