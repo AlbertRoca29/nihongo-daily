@@ -200,7 +200,7 @@
     "Sōta"
    ],
    "color": "#2f7d32",
-   "status": "クワガタ{見つけた|みつけた}！",
+   "status": "{千歳飴|ちとせあめ}、{半分|はんぶん}もらう！",
    "where": "{長野市|ながのし} · {週末|しゅうまつ}は{畑|はたけ}"
   },
   {
@@ -410,6 +410,20 @@
     "The loser of the showdown cleans the guesthouse alone the next day.",
     "If アルちゃん's cold isn't better, the showdown will be postponed.",
     "On 14 Nov アルちゃん's cold was getting better and he worked his Saturday shift."
+   ]
+  },
+  {
+   "date": "2026-11-15",
+   "cast": [
+    "sota"
+   ],
+   "summary": "Sunday 15 Nov, 七五三: at 鷹ノ原神社 アルちゃん sees children in kimono and asks the 田中 family LINE group. 颯太 and 恵子さん explain, he realises why the boy in the living-room photo is crying, and 恵子さん teaches him ご丁寧にありがとうございます after a family gives him 千歳飴.",
+   "new_facts": [
+    "鷹ノ原神社 is the town shrine; local families go there for 七五三.",
+    "There is a 田中 family LINE group with アルちゃん, 恵子さん and 颯太.",
+    "A photo of 颯太 at his 七五三 (age 5, in hakama, crying because he hated the hakama) hangs in the 田中 living room (居間).",
+    "On 15 Nov a family at the shrine gave アルちゃん 千歳飴 for taking their photo; 颯太 wants half.",
+    "恵子さん made 赤飯 for lunch on 15 Nov."
    ]
   }
  ],

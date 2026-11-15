@@ -85,5 +85,12 @@
   "category": "review",
   "function": "planning",
   "format": "text"
+ },
+ {
+  "id": "2026-11-15",
+  "topic": "Kids in kimono at the shrine",
+  "category": "traditions",
+  "function": "politeness",
+  "format": "line"
  }
 ]

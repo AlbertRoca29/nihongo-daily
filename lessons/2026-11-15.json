@@ -1,0 +1,470 @@
+{
+ "topic": "Kids in kimono at the shrine",
+ "category": "traditions",
+ "function": "politeness",
+ "format": "line",
+ "cast": [
+  "sota"
+ ],
+ "title_jp": "{七五三|しちごさん}と{千歳飴|ちとせあめ}",
+ "context": "Sunday 15 November, the day of 七五三. On a morning walk to {鷹ノ原神社|たかのはらじんじゃ}, アルちゃん finds children in kimono everywhere and asks the {田中|たなか} family LINE group what's going on. Today: polite thanks and congratulations.",
+ "scene": "Sunday morning at the town shrine: kids in kimono everywhere. You ask the {田中|たなか} family group chat what's going on.",
+ "keep": [
+  "p0"
+ ],
+ "phrases": [
+  {
+   "jp": "{ご丁寧に|ごていねいに|kindly, so thoughtfully|3}、ありがとうございます。",
+   "en": "That's very kind of you, thank you.",
+   "register": "polite",
+   "note": "For a small gift or extra kindness: warmer than a plain ありがとうございます. The classic reply to a thank-you present."
+  },
+  {
+   "jp": "{七五三|しちごさん|Shichi-Go-San (kids' shrine day)|3}、おめでとうございます。",
+   "en": "Congratulations on Shichi-Go-San.",
+   "register": "polite",
+   "note": "Say it to the parents (or the child) you meet at the shrine. With strangers, congratulations always stay polite."
+  },
+  {
+   "jp": "{写真|しゃしん}、{お撮り|おとり|(humble) taking (a photo)|2}しましょうか？",
+   "en": "Shall I take your photo?",
+   "register": "polite",
+   "note": "Humble お + stem + しましょうか offers to do something for someone. You'll hear back: いいんですか？お{願|ねが}いします！"
+  },
+  {
+   "jp": "そんな、{気を遣わないで|きをつかわないで|to be considerate, go to trouble|4}ください。",
+   "en": "Oh, you really shouldn't have.",
+   "register": "polite",
+   "note": "When someone hands you a thank-you gift. Say it once, then accept with ありがとうございます."
+  },
+  {
+   "jp": "なるほど、それで{混んでる|こんでる|to be crowded|4}わけですね。",
+   "en": "I see, so that's why it's so crowded.",
+   "register": "polite",
+   "note": "それで…わけですね = 'so that's why…': a polite way to show a new fact made something click."
+  }
+ ],
+ "dialogue_setting": "The {田中|たなか} family LINE group, Sunday morning: アルちゃん is at {鷹ノ原神社|たかのはらじんじゃ}; {恵子|けいこ}さん and {颯太|そうた} are at home.",
+ "dialogue": [
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "10:12",
+   "jp": "{神社|じんじゃ|Shinto shrine|4}に{着物|きもの|kimono|3}の{子|こ}がいっぱいいる！{何|なに}かの{お祭り|おまつり|festival|4}？",
+   "en": "There are loads of kids in kimono at the shrine! Is it some festival?"
+  },
+  {
+   "who": "sota",
+   "speaker": "颯太",
+   "time": "10:13",
+   "jp": "{七五三|しちごさん|Shichi-Go-San (kids' shrine day)|3}だよ！{俺|おれ}も5{歳|さい}の{時|とき}{行った|いった}",
+   "en": "It's 七五三! I went too when I was five."
+  },
+  {
+   "who": "keiko",
+   "speaker": "恵子さん",
+   "time": "10:15",
+   "jp": "3{歳|さい}・5{歳|さい}・7{歳|さい}の{子|こ}の{成長|せいちょう|growth|3}を、{神社|じんじゃ|Shinto shrine|4}で{お祝い|おいわい|celebration|3}するのよ",
+   "en": "We celebrate how 3-, 5- and 7-year-olds are growing up, at the shrine."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "10:16",
+   "jp": "だからみんな{写真|しゃしん}を{撮ってる|とってる}わけだ！{細長い|ほそながい|long and thin|3}{袋|ふくろ}も{持ってる|もってる}",
+   "en": "So that's why everyone's taking photos! They're carrying long thin bags too."
+  },
+  {
+   "who": "sota",
+   "speaker": "颯太",
+   "time": "10:16",
+   "jp": "それ、{千歳飴|ちとせあめ|'thousand-year' candy|2}！{俺|おれ}は{袴|はかま|hakama (formal pleated trousers)|2}がイヤで{泣いた|ないた}らしい",
+   "en": "That's {千歳飴|ちとせあめ}! Apparently I cried because I hated my hakama."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "10:17",
+   "jp": "あ！{居間|いま|living room|3}の{写真|しゃしん}の{子|こ}、それで{泣いてた|ないてた}わけだ！",
+   "en": "Oh! So that's why the kid in the living-room photo is crying!"
+  },
+  {
+   "who": "sota",
+   "speaker": "颯太",
+   "time": "10:17",
+   "sticker": "hazukashii",
+   "jp": "{恥|は}ずかしい…",
+   "en": "So embarrassing…"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "10:20",
+   "jp": "さっき{家族|かぞく}の{写真|しゃしん}を{撮って|とって}あげたら、{千歳飴|ちとせあめ|'thousand-year' candy|2}をくれた",
+   "en": "Just now I took a family's photo for them, and they gave me {千歳飴|ちとせあめ}."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "10:20",
+   "jp": "でも『ありがとう』しか{言えなかった|いえなかった}…{失礼|しつれい|rude|4}だったかな？",
+   "en": "But all I could say was 'thanks'… Was that rude?"
+  },
+  {
+   "who": "keiko",
+   "speaker": "恵子さん",
+   "time": "10:22",
+   "kind": "voice",
+   "jp": "{大丈夫|だいじょうぶ}よ！{次|つぎ}は『{ご丁寧に|ごていねいに|kindly, so thoughtfully|3}ありがとうございます』って{言えば|いえば}{完璧|かんぺき|perfect|3}よ",
+   "en": "It's fine! Next time say 'that's very kind of you, thank you' and it'll be perfect."
+  }
+ ],
+ "listening": {
+  "type": "ladder",
+  "intro": "As you leave the shrine, {颯太|そうた} sends a voice message.",
+  "who": "sota",
+  "lines": [
+   {
+    "who": "sota",
+    "jp": "アルちゃん、{早く|はやく}{戻って|もどって}きて！{千歳飴|ちとせあめ|'thousand-year' candy|2}、{半分|はんぶん}ちょうだい！",
+    "en": "アルちゃん, come back quick! Give me half the candy!"
+   }
+  ]
+ },
+ "grammar": {
+  "id": "n3-wake-da",
+  "pattern": "〜わけだ",
+  "level": "N3",
+  "meaning": "so that's why, no wonder",
+  "form": "verb / い-adj: plain form + わけだ ({撮|と}ってる → {撮|と}ってるわけだ, {寒|さむ}い → {寒|さむ}いわけだ) · な-adj: + な + わけだ ({静|しず}か → {静|しず}かなわけだ) · noun: + な + わけだ ({休|やす}み → {休|やす}みなわけだ) · polite: わけです ({混|こ}んでるわけですね)",
+  "explanation": "Say it when a fact you've just learned explains something you'd already noticed: 'so that's why', 'no wonder'. It often follows だから or それで. Don't mix it up with わけではない (the next point), which denies a conclusion: 'that doesn't mean…'.",
+  "src": [
+   "d5",
+   "d3",
+   "p4"
+  ],
+  "mark": [
+   "泣いてたわけだ",
+   "撮ってるわけだ",
+   "混んでるわけです",
+   "寒いわけだ",
+   "混んでるわけだ",
+   "関西弁なわけだ"
+  ],
+  "examples": [
+   {
+    "jp": "{窓|まど}が{開いてる|あいてる}。{寒いわけだ|さむいわけだ}。",
+    "en": "The window's open. No wonder it's cold."
+   },
+   {
+    "jp": "{明日|あした}は{祝日|しゅくじつ|public holiday|3}か。{電車|でんしゃ}が{混んでる|こんでる|to be crowded|4}わけだ。",
+    "en": "Tomorrow's a holiday? So that's why the train is packed."
+   },
+   {
+    "jp": "{健太|けんた}は{大阪|おおさか}{出身|しゅっしん|coming from (hometown)|3}なんだ。それで{関西弁|かんさいべん|Kansai dialect|3}なわけだ。",
+    "en": "{健太|けんた} is from Osaka. So that's why he speaks Kansai-ben."
+   }
+  ],
+  "quiz": {
+   "question": "{雪|ゆき}が{降って|ふって}る。{寒い|さむい}＿＿。",
+   "en": "It's snowing. No wonder it's cold.",
+   "options": [
+    "わけだ",
+    "わけではない",
+    "わけがない",
+    "ことにした"
+   ],
+   "explain": "The snow explains the cold, so わけだ. わけではない = 'it doesn't mean', わけがない = 'there's no way', ことにした = 'decided to'."
+  },
+  "quiz_more": [
+   {
+    "question": "{今日|きょう}は{田中|たなか}さんの{誕生日|たんじょうび}なんだ。それでケーキがある＿＿。",
+    "en": "It's 田中さん's birthday today. So that's why there's a cake.",
+    "options": [
+     "わけだ",
+     "つもりだ",
+     "ところだ",
+     "ことにする"
+    ],
+    "explain": "A new fact (the birthday) explains what you see (the cake): わけだ. The others talk about plans or timing."
+   },
+   {
+    "question": "スペインの{人|ひと}なんだ。{料理|りょうり}が{上手|じょうず}＿＿わけだ。",
+    "en": "He's from Spain? No wonder he's a good cook.",
+    "options": [
+     "な",
+     "だ",
+     "の",
+     "で"
+    ],
+    "explain": "A な-adjective keeps な before わけだ: {上手|じょうず}なわけだ. {上手|じょうず}だわけだ is wrong."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "千歳飴",
+  "reading": "ちとせあめ",
+  "romaji": "chitose-ame",
+  "meaning": "'thousand-year candy' for 七五三",
+  "where": "Printed in red and gold on the long paper bags children carry at {七五三|しちごさん}, often with cranes and turtles, symbols of a long life.",
+  "breakdown": "{千歳飴|ちとせあめ}: 千 thousand + 歳 years (of age) + 飴 candy → 'thousand-year candy', a wish for a long life.",
+  "related": "{鶴|つる} = crane, {亀|かめ} = turtle: both drawn on the bag for long life."
+ },
+ "tip": {
+  "mark": "祝",
+  "title": "Why 3, 5 and 7?",
+  "body": "Odd numbers count as lucky, so children visit the shrine at 3, 5 and 7 (traditionally boys at 5, girls at 3 and 7). The official day is 15 November, but most families go on any weekend in October or November, often with a studio photo shoot. {千歳飴|ちとせあめ} is pulled long to wish the child a long life."
+ },
+ "challenge": {
+  "type": "sticker",
+  "prompt": "{恵子|けいこ}さん: 「お{昼|ひる}は{お赤飯|おせきはん|red-bean rice for celebrations|2}よ。{早く|はやく}{帰って|かえって}きてね」 You can't wait. Which sticker do you send?",
+  "stickers": [
+   "tanoshimi",
+   "shochi",
+   "gaan",
+   "nandeyanen"
+  ],
+  "model_answer": "{楽しみ|たのしみ}！",
+  "hint": "How do you say 'can't wait' to family?",
+  "explanation": "{楽|たの}しみ！ = 'can't wait!', the natural warm reply to family. {承知|しょうち}しました is office keigo, far too stiff for your host mum; ガーン is for bad news, and なんでやねん is a Kansai comeback for something absurd."
+ },
+ "vocab": [
+  {
+   "jp": "{神社|じんじゃ}",
+   "reading": "じんじゃ",
+   "en": "Shinto shrine",
+   "level": "N4",
+   "src": "d0",
+   "surface": "神社",
+   "note": "Look for the {鳥居|とりい} gate. A Buddhist temple is お{寺|てら}."
+  },
+  {
+   "jp": "{着物|きもの}",
+   "reading": "きもの",
+   "en": "kimono",
+   "level": "N4",
+   "src": "d0",
+   "surface": "着物",
+   "note": "着 wear + 物 thing. At {七五三|しちごさん} boys often wear {袴|はかま} instead."
+  },
+  {
+   "jp": "{成長|せいちょう}",
+   "reading": "せいちょう",
+   "en": "growth; growing up",
+   "level": "N3",
+   "src": "d2",
+   "surface": "成長",
+   "note": "{成長|せいちょう}する = to grow up. Used for children, plants, even companies."
+  },
+  {
+   "jp": "お{祝|いわ}い",
+   "reading": "おいわい",
+   "en": "celebration; a gift for it",
+   "level": "N3",
+   "src": "d2",
+   "surface": "お祝い",
+   "note": "お{祝|いわ}いする = to celebrate. Also the money or present itself."
+  },
+  {
+   "jp": "{居間|いま}",
+   "reading": "いま",
+   "en": "living room",
+   "level": "N3",
+   "src": "d5",
+   "surface": "居間",
+   "note": "{居|い} be, stay + {間|ま} room. Common in family homes; リビング is the modern word."
+  },
+  {
+   "jp": "{失礼|しつれい}",
+   "reading": "しつれい",
+   "en": "rude, impolite",
+   "level": "N4",
+   "src": "d8",
+   "surface": "失礼",
+   "note": "{失礼|しつれい}します = excuse me, entering or leaving a room."
+  },
+  {
+   "jp": "{丁寧|ていねい}",
+   "reading": "ていねい",
+   "en": "polite, courteous; careful",
+   "level": "N3",
+   "src": "d9",
+   "surface": "丁寧",
+   "note": "ご{丁寧|ていねい}に = 'how kind of you'. {丁寧語|ていねいご} is the です/ます style."
+  },
+  {
+   "jp": "{完璧|かんぺき}",
+   "reading": "かんぺき",
+   "en": "perfect",
+   "level": "N2",
+   "src": "d9",
+   "surface": "完璧",
+   "note": "Very common in speech: {完璧|かんぺき}！ = nailed it."
+  },
+  {
+   "jp": "{気|き}を{遣|つか}う",
+   "reading": "きをつかう",
+   "en": "to be considerate; to go to trouble for others",
+   "level": "N3",
+   "src": "p3",
+   "surface": "気を遣わないで",
+   "note": "Often written {気|き}を{使|つか}う. {気|き}を{遣|つか}わないで = don't go to any trouble."
+  },
+  {
+   "jp": "{混|こ}む",
+   "reading": "こむ",
+   "en": "to be crowded",
+   "level": "N4",
+   "src": "p4",
+   "surface": "混んでる",
+   "note": "{混|こ}んでる = crowded right now. Opposite: {空|す}いてる (empty)."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "祝",
+   "track": "lesson",
+   "on": "シュク・シュウ",
+   "kun": "いわ(う)",
+   "meaning": "celebrate",
+   "parts": "礻 the altar radical (things for the gods) + 兄, here a kneeling person with an open mouth → someone saying a blessing at the altar: celebrate.",
+   "lookalike": "Not 視 (look): 祝 has 兄 on the right, 視 has 見.",
+   "words": [
+    {
+     "jp": "お{祝|いわ}い",
+     "reading": "おいわい",
+     "en": "celebration"
+    },
+    {
+     "jp": "{祝日|しゅくじつ}",
+     "reading": "しゅくじつ",
+     "en": "public holiday"
+    },
+    {
+     "jp": "{祝|いわ}う",
+     "reading": "いわう",
+     "en": "to celebrate"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "pray, worship",
+     "ancestor",
+     "curse"
+    ],
+    "readings": [
+     "おしゅくい",
+     "おいのい",
+     "おいわき"
+    ]
+   }
+  },
+  {
+   "kanji": "戻",
+   "track": "n3",
+   "on": "レイ",
+   "kun": "もど(る)・もど(す)",
+   "meaning": "return, go back",
+   "parts": "戸 a door + 大 a big person → someone coming back in through the door: return.",
+   "lookalike": "Not 房 (room; tassel): 戻 has 大 under 戸, 房 has 方.",
+   "words": [
+    {
+     "jp": "{戻|もど}る",
+     "reading": "もどる",
+     "en": "to come back, return"
+    },
+    {
+     "jp": "{戻|もど}す",
+     "reading": "もどす",
+     "en": "to put back"
+    },
+    {
+     "jp": "{払|はら}い{戻|もど}し",
+     "reading": "はらいもどし",
+     "en": "refund"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "leave, depart",
+     "open",
+     "wait"
+    ],
+    "readings": [
+     "かえる",
+     "もとる",
+     "れいる"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "At the shrine",
+   "title_jp": "{神社|じんじゃ}で",
+   "intro": "Words you'll see and hear at any shrine.",
+   "items": [
+    {
+     "jp": "{鳥居|とりい|torii gate|3}",
+     "en": "torii gate",
+     "note": "Bow lightly before you pass under it."
+    },
+    {
+     "jp": "お{参り|まいり|visit to pray|4}",
+     "en": "a visit to a shrine or temple"
+    },
+    {
+     "jp": "お{賽銭|さいせん|coin offering|3}",
+     "en": "coin offering",
+     "note": "5{円|えん} is popular: ご{縁|えん} means a good connection."
+    },
+    {
+     "jp": "おみくじ",
+     "en": "fortune slip",
+     "note": "Tie a bad one to the rack and leave it behind."
+    },
+    {
+     "jp": "お{守り|まもり|good-luck charm|4}",
+     "en": "good-luck charm",
+     "note": "For exams, traffic safety, love, health…"
+    }
+   ]
+  },
+  {
+   "title": "Polite words for gifts and celebrations",
+   "title_jp": "お{祝|いわ}いとお{礼|れい}の{言葉|ことば}",
+   "intro": "Set phrases for giving, receiving and congratulating.",
+   "items": [
+    {
+     "jp": "ご{結婚|けっこん|marriage|4}おめでとうございます",
+     "en": "Congratulations on your wedding."
+    },
+    {
+     "jp": "{つまらない||boring, trifling|3}ものですが…",
+     "en": "It's nothing much, but… (giving a gift)",
+     "note": "Modest, a bit old-fashioned; ほんの{気持|きも}ちです is softer."
+    },
+    {
+     "jp": "お{気持ち|きもち}だけで{十分|じゅうぶん}です",
+     "en": "The thought alone is enough.",
+     "note": "Politely turning down a gift."
+    },
+    {
+     "jp": "ありがとうございます。いただきます",
+     "en": "Thank you, I'll gladly take it.",
+     "note": "Accepting food or a present."
+    },
+    {
+     "jp": "お{返し|かえし|return gift|3}",
+     "en": "a return gift",
+     "note": "Given back for a celebration present, usually half its value."
+    }
+   ]
+  }
+ ]
+}
