@@ -15,9 +15,16 @@ Files are named by voice + text, so unchanged lines are never remade. When a voi
 model (Flash -> Lite), the old file is kept. Newest lessons go first; older lessons are back-filled
 up to BACKFILL clips per run, so the daily limit stays free for today's lesson.
 
+Timing: Gemini's daily request limit resets at midnight Pacific (08:00 UTC in winter), but the
+lesson is pushed around 06:00 UTC, so the afternoon retry run and the next morning's lesson share
+one quota day. The ledger counts clips per Pacific day ("days"); older lessons (back-fill) stop once
+that count reaches DAILY_LIMIT - RESERVE, so RESERVE clips are always left for the next lesson.
+Today's and yesterday's lessons ignore the reserve.
+
   python3 scripts/tts.py               # all lessons (today's first)
   python3 scripts/tts.py 2026-11-05    # just these
-Env: GEMINI_API_KEY, GOOGLE_TTS_KEY (Chirp fallback), BACKFILL (default 0), VOICEVOX_URL.
+Env: GEMINI_API_KEY, GOOGLE_TTS_KEY (Chirp fallback), BACKFILL (default 0), VOICEVOX_URL,
+     DAILY_LIMIT (Gemini requests per Pacific day, default 95), RESERVE (default 60).
 """
 import base64, datetime as dt, glob, hashlib, json, os, re, subprocess, sys, time, urllib.error, urllib.parse, urllib.request
 
@@ -27,6 +34,8 @@ API = "https://texttospeech.googleapis.com/v1/text:synthesize"
 GAPI = "https://generativelanguage.googleapis.com/v1beta/models"
 VV = os.environ.get("VOICEVOX_URL", "http://127.0.0.1:50021")
 BACKFILL = int(os.environ.get("BACKFILL", "0") or 0)
+DAILY_LIMIT = int(os.environ.get("DAILY_LIMIT", "95") or 95)
+RESERVE = int(os.environ.get("RESERVE", "60") or 0)
 MARK = re.compile(r"\{([^|{}]+)\|([^|{}]*)(?:\|([^|{}]+)(?:\|([1-4]))?)?\}")  # same as index.html
 VOICES = json.load(open("voices.json", encoding="utf-8"))
 CASTJ = json.load(open("cast.json", encoding="utf-8"))
@@ -37,6 +46,11 @@ for c in PEOPLE.values():
         BY_NAME[n] = c
 LEDGER = "audio/_ledger.json"
 MONTH = dt.date.today().strftime("%Y-%m")
+try:
+    from zoneinfo import ZoneInfo
+    QUOTA_DAY = dt.datetime.now(ZoneInfo("America/Los_Angeles")).strftime("%Y-%m-%d")
+except Exception:  # no tz database: Pacific is UTC-8 in winter
+    QUOTA_DAY = (dt.datetime.utcnow() - dt.timedelta(hours=8)).strftime("%Y-%m-%d")
 LEGACY_MODEL = "gemini-3.8-flash-tts"
 RADIO_DAYS = 14
 
@@ -81,6 +95,11 @@ def spent():
     return _ledger.get(MONTH, {}).get("usd", 0.0)
 
 
+def used_today():
+    """Gemini clips made in the current quota day (midnight to midnight Pacific)."""
+    return _ledger.get("days", {}).get(QUOTA_DAY, 0)
+
+
 def over_cap():
     return spent() >= float(VOICES.get("monthly_cap_usd", 3))
 
@@ -93,6 +112,10 @@ def charge(model, usage):
     m["usd"] = round(m["usd"] + usd, 5)
     m["clips"] += 1
     m["seconds"] = round(m["seconds"] + usage.get("candidatesTokenCount", 0) / 25, 1)
+    days = _ledger.setdefault("days", {})
+    days[QUOTA_DAY] = days.get(QUOTA_DAY, 0) + 1
+    for d in sorted(days)[:-10]:  # keep the last 10 days
+        del days[d]
 
 
 def save_ledger():
@@ -118,6 +141,8 @@ def gemini(text, v):
         raise Later("gemini unavailable")
     if over_cap():
         raise Later("monthly cap")
+    if budget.get("guard") and used_today() >= DAILY_LIMIT - RESERVE:
+        raise Later("kept for the next lesson")
     part = {"text": text}
     if v.get("style"):
         part["speech_metadata"] = {"style": v["style"]}
@@ -394,6 +419,7 @@ budget = {"left": None}
 
 
 def build(lid, backfill):
+    budget["guard"] = backfill  # older lessons never touch the clips kept for the next lesson
     lesson = json.load(open(f"lessons/{lid}.json", encoding="utf-8"))
     folder = f"audio/{lid}"
     os.makedirs(folder, exist_ok=True)
@@ -492,6 +518,7 @@ def main():
         build(lid, backfill=not recent and not sys.argv[1:])
     save_ledger()
     print(f"Gemini this month: ${spent():.3f} of ${VOICES.get('monthly_cap_usd', 3)} cap")
+    print(f"Gemini today ({QUOTA_DAY} Pacific): {used_today()} clips; back-fill stops at {DAILY_LIMIT - RESERVE}")
 
 
 if __name__ == "__main__":

@@ -2,6 +2,7 @@ name: Lesson audio
 
 # Reads every lesson line with Google voices (see voices.json and scripts/tts.py).
 # Runs when a lesson or the voice casting changes; only new or changed lines are made.
+# The scheduled run and the next morning's lesson share one Gemini quota day, so back-fill keeps RESERVE clips free (see scripts/tts.py).
 on:
   push:
     branches: [master]
@@ -36,6 +37,8 @@ jobs:
           GOOGLE_TTS_KEY: ${{ secrets.GOOGLE_TTS_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           BACKFILL: ${{ github.event_name == 'schedule' && '45' || '0' }}
+          DAILY_LIMIT: "95"   # Gemini TTS requests per day on this key (resets midnight Pacific)
+          RESERVE: "60"       # back-fill always leaves this many for the next lesson (~50 clips each)
         run: python3 scripts/tts.py
       - name: Commit audio
         run: |
