@@ -92,5 +92,12 @@
   "category": "traditions",
   "function": "politeness",
   "format": "line"
+ },
+ {
+  "id": "2026-11-16",
+  "topic": "The samurai who broke the dam",
+  "category": "history-samurai",
+  "function": "reacting",
+  "format": "dialogue"
  }
 ]

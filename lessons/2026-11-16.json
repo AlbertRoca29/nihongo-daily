@@ -1,0 +1,459 @@
+{
+ "topic": "The samurai who broke the dam",
+ "category": "history-samurai",
+ "function": "reacting",
+ "format": "dialogue",
+ "cast": [
+  "hana"
+ ],
+ "title_jp": "{隼人|はやと}さまの{伝説|でんせつ|legend|3}",
+ "context": "Monday afternoon, a quiet day as the harvest ends: アルちゃん walked up to the small museum at {鷹ノ原城跡|たかのはらじょうあと} and photographed a painting of a samurai. On the {縁側|えんがわ}, ハナおばあちゃん tells him the legend of {黒鉄隼人|くろがねはやと}, who broke his lord's dam to save the village.",
+ "scene": "You photographed a samurai painting at the castle-ruins museum. On the {縁側|えんがわ}, ハナおばあちゃん tells you who he was.",
+ "keep": [
+  "p0"
+ ],
+ "phrases": [
+  {
+   "jp": "{侍|さむらい|samurai|3}がみんなお{金持ち|かねもち}だったわけではないんですね。",
+   "en": "So not all samurai were rich.",
+   "register": "polite",
+   "note": "みんな〜わけではない = not all of them. Many low-ranking samurai were in fact quite poor."
+  },
+  {
+   "jp": "えっ、{まさか||no way, surely not|4}！{本当|ほんとう}ですか。",
+   "en": "What, no way! Really?",
+   "register": "polite",
+   "note": "まさか reacts to something you didn't expect at all. Casual: え、マジ？"
+  },
+  {
+   "jp": "へえ、そうなんだ。{全然|ぜんぜん}{知らなかった|しらなかった}。",
+   "en": "Huh, is that so. I had no idea.",
+   "register": "casual",
+   "note": "へえ with a rising tone shows real interest. A flat へえ sounds bored."
+  },
+  {
+   "jp": "それは{気の毒|きのどく|pitiful, a shame|3}ですね。",
+   "en": "That's a real shame (for him).",
+   "register": "polite",
+   "note": "Sympathy for someone else's bad luck. Not for your own: then say {残念|ざんねん}."
+  },
+  {
+   "jp": "だから{今|いま}でも{鷹祭り|たかまつり|the town's hawk festival|2}で{感謝|かんしゃ|gratitude|3}するんですね。",
+   "en": "So that's why people still thank him at the {鷹祭り|たかまつり}.",
+   "register": "polite",
+   "note": "だから〜んですね: the 'ah, now I get it' reaction that links what you just heard to what you knew."
+  }
+ ],
+ "dialogue_setting": "The {縁側|えんがわ} of the {田中|たなか} house, Monday afternoon. ハナおばあちゃん has come over with persimmons; アルちゃん shows her a photo on his phone.",
+ "dialogue": [
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "おばあちゃん、{城跡|しろあと|castle ruins|2}の{博物館|はくぶつかん|museum|3}で、この{侍|さむらい|samurai|3}の{絵|え}を{見ました|みました}。",
+   "en": "おばあちゃん, I saw this painting of a samurai at the museum by the castle ruins."
+  },
+  {
+   "who": "hana",
+   "speaker": "ハナおばあちゃん",
+   "jp": "ああ、{隼人|はやと}さまじゃ。{大雨|おおあめ}で{村|むら}が{危険|きけん|danger, dangerous|3}になった{時|とき}、{殿様|とのさま|feudal lord|2}の{許し|ゆるし|permission|3}なしでダムを{壊して|こわして|to break, destroy|4}、{村|むら}を{守った|まもった|to protect|4}んじゃ。",
+   "en": "Ah, that's {隼人|はやと}さま. When heavy rain put the village in danger, he broke the lord's dam without permission and saved the village.",
+   "register": "dialect",
+   "note": "じゃ is old-fashioned/regional for だ: {隼人|はやと}さまだ, {守|まも}ったんだ."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "えっ、すごい！でも、それって{殿様|とのさま|feudal lord|2}に{逆らった|さからった|to go against, defy|3}ってことですよね？",
+   "en": "Wow, amazing! But that means he defied his lord, right?"
+  },
+  {
+   "who": "hana",
+   "speaker": "ハナおばあちゃん",
+   "jp": "そうじゃ。でも{殿様|とのさま|feudal lord|2}が{嫌い|きらい}だったわけではないんじゃよ。{村|むら}の{人|ひと}を{見捨てられなかった|みすてられなかった|to abandon|3}んじゃ。",
+   "en": "That's right. But it's not that he disliked his lord. He just couldn't abandon the village people.",
+   "register": "dialect",
+   "note": "んじゃよ = んだよ (old-fashioned/regional)."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "なるほど…。{悪い|わるい}{人|ひと}だったわけじゃないんですね。それで、どうなったんですか。",
+   "en": "I see… So he wasn't a bad man. And then what happened to him?"
+  },
+  {
+   "who": "hana",
+   "speaker": "ハナおばあちゃん",
+   "jp": "{罰|ばつ|punishment|3}として、お{米|こめ}の{給料|きゅうりょう|salary, pay|4}を{半分|はんぶん}にされたんじゃ。でも{村|むら}の{人|ひと}は{今|いま}でも{感謝|かんしゃ|gratitude|3}{しとる||(dialect) = している|1}よ。",
+   "en": "As punishment, his rice pay was cut in half. But the people here are still grateful to him today.",
+   "register": "dialect",
+   "note": "しとる = している (western/rural Japan). Samurai were paid in rice, not coins."
+  }
+ ],
+ "listening": {
+  "type": "voicemail",
+  "intro": "That evening your phone buzzes while you're washing up: a voicemail from {田中|たなか}さん.",
+  "who": "tanaka",
+  "lines": [
+   {
+    "who": "tanaka",
+    "jp": "アルちゃん、{田中|たなか}だ。{今夜|こんや}は{町|まち}の{寄り合い|よりあい|neighbourhood meeting|2}で{遅く|おそく}なる。",
+    "en": "アルちゃん, it's {田中|たなか}. I'll be late tonight because of the town meeting."
+   },
+   {
+    "who": "tanaka",
+    "jp": "{晩飯|ばんめし|dinner (casual)|3}は{先に|さきに}{食べとって|たべとって|(dialect) = 食べていて|2}くれ。8{時|じ}ごろには{帰る|かえる}{ずら||(Nagano dialect) = だろう|1}。",
+    "en": "Go ahead and eat dinner without me. I'll probably be back around eight."
+   }
+  ],
+  "question": "{田中|たなか}さんは{何時|なんじ}ごろ{帰ります|かえります}か。",
+  "options": [
+   "8{時|じ}ごろ",
+   "6{時|じ}ごろ",
+   "9{時|じ}ごろ",
+   "{晩|ばん}ご{飯|はん}の{前|まえ}"
+  ],
+  "explain": "8{時|じ}ごろには{帰|かえ}るずら = he'll probably be home around eight, after dinner, which he says to eat without him."
+ },
+ "grammar": {
+  "id": "n3-wake-dewa-nai",
+  "pattern": "〜わけではない",
+  "level": "N3",
+  "meaning": "it doesn't mean that",
+  "form": "verb / い-adj: plain + わけではない ({行|い}くわけではない, {高|たか}いわけではない) · な-adj / noun: + な + わけではない ({嫌|きら}いなわけではない) · past: plain past + わけではない ({嫌|きら}いだったわけではない, {悪|わる}い{人|ひと}だったわけではない) · casual: わけじゃない",
+  "explanation": "Corrects a conclusion someone might draw: 'it's not that…'. With みんな or {全部|ぜんぶ} it means 'not all'. In speech it's わけじゃない. Don't confuse it with わけがない ('there's no way'), a strong denial.",
+  "src": [
+   "d3",
+   "d4",
+   "p0"
+  ],
+  "mark": [
+   "嫌いだったわけではない",
+   "悪い人だったわけじゃない",
+   "金持ちだったわけではない",
+   "好きなわけではない",
+   "怒ってるわけじゃない"
+  ],
+  "examples": [
+   {
+    "jp": "{日本人|にほんじん}がみんな{寿司|すし}が{好き|すき}なわけではない。",
+    "en": "Not every Japanese person likes sushi."
+   },
+   {
+    "jp": "{怒って|おこって}るわけじゃないよ。ちょっと{疲れて|つかれて}るだけ。",
+    "en": "I'm not angry. I'm just a bit tired."
+   }
+  ],
+  "quiz": {
+   "question": "{肉|にく}が{嫌い|きらい}＿＿わけではないけど、{今日|きょう}は{魚|さかな}がいい。",
+   "en": "It's not that I dislike meat, but today I'd like fish.",
+   "options": [
+    "な",
+    "だ",
+    "の",
+    "で"
+   ],
+   "explain": "A な-adjective in the present takes な before わけ: {嫌|きら}いなわけではない."
+  },
+  "quiz_more": [
+   {
+    "question": "{侍|さむらい|samurai|3}がみんなお{金持ち|かねもち}＿＿。",
+    "en": "Not all samurai were rich.",
+    "options": [
+     "だったわけではない",
+     "だったわけがない",
+     "だったはずだ",
+     "だったそうだ"
+    ],
+    "explain": "'Not all' = みんな〜わけではない. わけがない would mean 'there's no way they were rich'."
+   },
+   {
+    "question": "{怒って|おこって}る＿＿よ。{眠い|ねむい}だけ。",
+    "en": "It's not that I'm angry. I'm just sleepy.",
+    "options": [
+     "わけじゃない",
+     "わけがない",
+     "わけだ",
+     "はずがない"
+    ],
+    "explain": "Correcting what the other person thinks, casually: わけじゃない. The others deny or conclude too strongly."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "城跡",
+  "reading": "しろあと",
+  "romaji": "shiroato",
+  "meaning": "castle ruins, site of a castle",
+  "where": "On the stone marker at the top of the hill and on the town signposts: {鷹ノ原城跡|たかのはらじょうあと} →.",
+  "related": "In names it's often read じょうせき or じょうあと, as in {鷹ノ原城跡|たかのはらじょうあと}.",
+  "breakdown": "{城跡|しろあと}: 城 castle + 跡 trace, remains → 'what's left of a castle'."
+ },
+ "tip": {
+  "mark": "城",
+  "title": "Why so many towns have only stone walls",
+  "body": "After the Meiji government's 1873 castle order ({廃城令|はいじょうれい}), most castles were torn down or sold, so many towns have only a {城跡|しろあと}. Only twelve original keeps ({天守|てんしゅ}) survive today. One is in nearby {松本|まつもと}: worth a day trip."
+ },
+ "challenge": {
+  "type": "pick",
+  "prompt": "At dinner {恵子|けいこ}さん laughs: 「ハナさんの{話|はなし}、{長かった|ながかった}でしょう？アルちゃん、{歴史|れきし}が{大好き|だいすき}なの？」 Say it's not that you love history, but ハナおばあちゃん's stories are interesting.",
+  "options": [
+   {
+    "jp": "{歴史|れきし}が{大好き|だいすき}なわけじゃないんですけど、ハナおばあちゃんの{話|はなし}は{面白い|おもしろい}んです。",
+    "ok": true,
+    "why": "な-adjective + な + わけじゃない, soft polite style for your host mum."
+   },
+   {
+    "jp": "{歴史|れきし}が{大好き|だいすき}だわけじゃないんですけど、ハナおばあちゃんの{話|はなし}は{面白い|おもしろい}んです。",
+    "ok": false,
+    "why": "Wrong form: a present な-adjective needs な before わけ, not だ."
+   },
+   {
+    "jp": "{歴史|れきし}が{大好き|だいすき}なわけがないんですけど、ハナおばあちゃんの{話|はなし}は{面白い|おもしろい}んです。",
+    "ok": false,
+    "why": "わけがない = 'there's no way I love history': far too strong and odd here."
+   },
+   {
+    "jp": "{歴史|れきし}が{大好き|だいすき}なわけじゃねえけど、ハナおばあちゃんの{話|はなし}は{面白い|おもしろい}よ。",
+    "ok": false,
+    "why": "じゃねえ is rough male slang: too rude for talking to {恵子|けいこ}さん."
+   }
+  ],
+  "model_answer": "{歴史|れきし}が{大好き|だいすき}なわけじゃないんですけど、ハナおばあちゃんの{話|はなし}は{面白い|おもしろい}んです。",
+  "hint": "な-adjective + な + わけじゃない, polite but soft",
+  "explanation": "{大好|だいす}きなわけじゃない corrects her guess without saying 'no' flatly: な-adjectives take な before わけ. 〜んですけど softens it, and 〜んです explains your feeling politely, right for your host mum."
+ },
+ "vocab": [
+  {
+   "jp": "{侍|さむらい}",
+   "reading": "さむらい",
+   "en": "samurai",
+   "level": "N3",
+   "src": "d0",
+   "surface": "侍",
+   "note": "Also {武士|ぶし}, the more formal, historical word."
+  },
+  {
+   "jp": "{危険|きけん}",
+   "reading": "きけん",
+   "en": "danger; dangerous",
+   "level": "N3",
+   "src": "d1",
+   "surface": "危険",
+   "note": "Written version of {危|あぶ}ない; on signs: {危険|きけん}! Keep out."
+  },
+  {
+   "jp": "{殿様|とのさま}",
+   "reading": "とのさま",
+   "en": "feudal lord, daimyō",
+   "level": "N2",
+   "src": "d1",
+   "surface": "殿様",
+   "note": "How villagers spoke of their lord. Today also jokes about a bossy man: {殿様|とのさま}みたい."
+  },
+  {
+   "jp": "{守|まも}る",
+   "reading": "まもる",
+   "en": "to protect; to keep (a promise)",
+   "level": "N4",
+   "src": "d1",
+   "surface": "守った",
+   "note": "Also {約束|やくそく}を{守|まも}る = keep a promise, ルールを{守|まも}る = follow rules."
+  },
+  {
+   "jp": "{逆|さか}らう",
+   "reading": "さからう",
+   "en": "to go against, defy",
+   "level": "N3",
+   "src": "d2",
+   "surface": "逆らった",
+   "note": "Takes に: {親|おや}に{逆|さか}らう = to disobey your parents."
+  },
+  {
+   "jp": "{罰|ばつ}",
+   "reading": "ばつ",
+   "en": "punishment, penalty",
+   "level": "N3",
+   "src": "d5",
+   "surface": "罰",
+   "note": "{罰|ばつ}ゲーム = forfeit in a party game. 〜として = as."
+  },
+  {
+   "jp": "{給料|きゅうりょう}",
+   "reading": "きゅうりょう",
+   "en": "salary, pay",
+   "level": "N4",
+   "src": "d5",
+   "surface": "給料",
+   "note": "{給料日|きゅうりょうび} = payday, the happiest day of the month."
+  },
+  {
+   "jp": "{感謝|かんしゃ}する",
+   "reading": "かんしゃする",
+   "en": "to be grateful, thank",
+   "level": "N3",
+   "src": "d5",
+   "surface": "感謝",
+   "note": "Deeper than ありがとう: 〜に{感謝|かんしゃ}する. Common in speeches and letters."
+  },
+  {
+   "jp": "{気|き}の{毒|どく}",
+   "reading": "きのどく",
+   "en": "pitiful, unfortunate",
+   "level": "N3",
+   "src": "p3",
+   "surface": "気の毒",
+   "note": "Literally 'poison to the spirit'. For other people's misfortune only."
+  },
+  {
+   "jp": "まさか",
+   "reading": "まさか",
+   "en": "no way!, surely not",
+   "level": "N3",
+   "src": "p1",
+   "surface": "まさか",
+   "note": "Alone as a reaction, or まさか〜とは{思|おも}わなかった = never imagined."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "逆",
+   "track": "lesson",
+   "on": "ギャク",
+   "kun": "さか・さか(らう)",
+   "meaning": "reverse, go against",
+   "parts": "⻌ road/movement radical + 屰, a person drawn upside down → walking the road the wrong way round: reverse, go against.",
+   "lookalike": "Not 送 (send) or 迷 (lost): all have ⻌, but only 逆 has the upside-down figure 屰.",
+   "words": [
+    {
+     "jp": "{逆|さか}らう",
+     "reading": "さからう",
+     "en": "to go against, defy"
+    },
+    {
+     "jp": "{逆|ぎゃく}",
+     "reading": "ぎゃく",
+     "en": "the opposite, reverse"
+    },
+    {
+     "jp": "{逆転|ぎゃくてん}",
+     "reading": "ぎゃくてん",
+     "en": "a turnaround, comeback"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "send",
+     "return",
+     "chase"
+    ],
+    "readings": [
+     "ぎゃくらう",
+     "さかろう",
+     "さがらう"
+    ]
+   }
+  },
+  {
+   "kanji": "険",
+   "track": "n3",
+   "on": "ケン",
+   "kun": "けわ(しい)",
+   "meaning": "steep, dangerous",
+   "parts": "阝 hill radical (on the left) + 㑒 'gathered together', which gives the sound ケン → hills crowded together: steep, risky ground.",
+   "lookalike": "Not 検 (inspect, 木 on the left) or 験 (test, 馬 on the left): 険 has the hill radical 阝.",
+   "words": [
+    {
+     "jp": "{危険|きけん}",
+     "reading": "きけん",
+     "en": "danger, dangerous"
+    },
+    {
+     "jp": "{保険|ほけん}",
+     "reading": "ほけん",
+     "en": "insurance"
+    },
+    {
+     "jp": "{冒険|ぼうけん}",
+     "reading": "ぼうけん",
+     "en": "adventure"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "test",
+     "inspect",
+     "safe"
+    ],
+    "readings": [
+     "きげん",
+     "ぎけん",
+     "きっけん"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Reacting while someone tells a story",
+   "title_jp": "{話|はなし}を{聞く|きく}ときのあいづち",
+   "intro": "Japanese listeners react all the time; silence sounds like you're not listening.",
+   "items": [
+    {
+     "jp": "へえ！",
+     "en": "Huh! / Really!",
+     "note": "Rising tone = interested. The all-purpose reaction."
+    },
+    {
+     "jp": "うそ！",
+     "en": "No way!",
+     "note": "Casual surprise, not an accusation of lying."
+    },
+    {
+     "jp": "それで？",
+     "en": "And then?",
+     "note": "Asks the speaker to go on. Polite: それで、どうなったんですか。"
+    },
+    {
+     "jp": "なるほど。",
+     "en": "I see, that makes sense.",
+     "note": "Avoid it with teachers or bosses: it can sound like you're judging. Use そうなんですね."
+    },
+    {
+     "jp": "それはひどい！",
+     "en": "That's awful!",
+     "note": "When the story is unfair to someone."
+    }
+   ]
+  },
+  {
+   "title": "Samurai-drama speech (recognise, don't use)",
+   "title_jp": "{時代劇|じだいげき|period drama|2}の{言葉|ことば}",
+   "intro": "You'll hear these in period dramas and in {隼人|はやと}'s legends. In real life they only get laughs.",
+   "items": [
+    {
+     "jp": "{拙者|せっしゃ|I (samurai, archaic)|1}",
+     "en": "I (humble, samurai)",
+     "note": "Drama speech only. Modern: {私|わたし}, {僕|ぼく}."
+    },
+    {
+     "jp": "〜でござる",
+     "en": "= です",
+     "note": "Drama speech only. {拙者|せっしゃ}は{侍|さむらい}でござる = I am a samurai."
+    },
+    {
+     "jp": "かたじけない",
+     "en": "= ありがとう",
+     "note": "Drama speech only. Grateful and a bit embarrassed."
+    },
+    {
+     "jp": "{知らぬ|しらぬ|(archaic) = 知らない|1}",
+     "en": "(I) don't know",
+     "note": "〜ぬ = 〜ない in old speech. Still in set phrases: {知|し}らぬ{間|ま}に."
+    }
+   ]
+  }
+ ]
+}
