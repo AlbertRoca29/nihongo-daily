@@ -200,7 +200,7 @@
     "Sōta"
    ],
    "color": "#2f7d32",
-   "status": "{千歳飴|ちとせあめ}、{半分|はんぶん}もらう！",
+   "status": "{熱|ねつ}で{寝てる|ねてる}…ゲームしたい",
    "where": "{長野市|ながのし} · {週末|しゅうまつ}は{畑|はたけ}"
   },
   {
@@ -439,6 +439,21 @@
     "ハナおばあちゃん brought persimmons to the 田中 house on 16 Nov.",
     "On the evening of 16 Nov 田中さん was late because of a town meeting (寄り合い) and told アルちゃん to eat dinner first."
    ]
+  },
+  {
+   "date": "2026-11-17",
+   "cast": [
+    "sota"
+   ],
+   "summary": "Tuesday evening: 颯太 has caught the cold going round, so 恵子さん stays the night in 長野市 to look after him. In the family LINE group she asks アルちゃん to sort the rubbish and put it out by 8 the next morning, since 田中さん is forgetful, explains the rules and says the potatoes for Saturday are ready in the shed; 颯太 sends a 'fight' sticker.",
+   "new_facts": [
+    "颯太 had a fever on 17 Nov; 恵子さん stayed the night of 17 Nov at 由美's in 長野市 to look after him.",
+    "In 鷹ノ原, burnable rubbish (燃えるゴミ) goes out on Wednesday mornings by 8:00 in yellow designated bags with the household name written on them; cans and bottles go out on Fridays (rinsed, cans crushed).",
+    "The 田中 household's rubbish collection point (ゴミ置き場) is next to the bus stop near the house.",
+    "恵子さん says 田中さん is forgetful (忘れっぽい) about rubbish day.",
+    "The 田中 house has a shed/barn (納屋); 恵子さん left the potatoes for the 21 Nov showdown there.",
+    "鷹ノ原 town has a large-item (粗大ゴミ) collection on Sat 28 Nov; apply by phone to the town office by 25 Nov."
+   ]
   }
  ],
  "others": [
@@ -452,8 +467,8 @@
     "恵子"
    ],
    "color": "#e07a3f",
-   "status": "お{鍋|なべ}の{季節|きせつ}ね",
-   "where": "{鷹ノ原|たかのはら} · {畑|はたけ}"
+   "status": "{孫|まご}の{看病|かんびょう}{中|ちゅう}",
+   "where": "{長野市|ながのし}（{今夜|こんや}だけ）"
   }
  ]
 }

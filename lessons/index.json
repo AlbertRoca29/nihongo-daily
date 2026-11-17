@@ -99,5 +99,12 @@
   "category": "history-samurai",
   "function": "reacting",
   "format": "dialogue"
+ },
+ {
+  "id": "2026-11-17",
+  "topic": "Rubbish day, home alone",
+  "category": "home-admin",
+  "function": "requesting",
+  "format": "line"
  }
 ]

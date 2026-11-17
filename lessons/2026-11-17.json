@@ -1,0 +1,479 @@
+{
+ "topic": "Rubbish day, home alone",
+ "category": "home-admin",
+ "function": "requesting",
+ "format": "line",
+ "cast": [
+  "sota"
+ ],
+ "title_jp": "ゴミ{出し|だし}、お{願い|ねがい}！",
+ "context": "Tuesday evening, 17 November. {颯太|そうた} has caught the cold going round, so {恵子|けいこ}さん stays the night in {長野|ながの} to look after him, and asks アルちゃん on LINE to deal with tomorrow's rubbish. Today: asking for and doing things in advance.",
+ "scene": "{恵子|けいこ}さん is away tonight and tomorrow is rubbish day. She asks you on LINE to sort it, and you ask how.",
+ "keep": [
+  "p1"
+ ],
+ "phrases": [
+  {
+   "jp": "{分別|ぶんべつ|sorting (rubbish)|3}の{仕方|しかた}、{教えて|おしえて}もらえますか？",
+   "en": "Could you show me how to sort the rubbish?",
+   "register": "polite",
+   "note": "To a neighbour or the town office. With family, drop to {教|おし}えてもらえる？"
+  },
+  {
+   "jp": "{出かける|でかける}{前|まえ}に、{窓|まど}を{閉めといて|しめといて}くれる？",
+   "en": "Could you shut the windows before you go out?",
+   "register": "casual",
+   "note": "〜といてくれる？ = do it now so it's done later. Very common at home."
+  },
+  {
+   "jp": "{燃える|もえる|to burn|3}ゴミは{何曜日|なんようび}ですか？",
+   "en": "Which day is burnable rubbish?",
+   "register": "polite",
+   "note": "The first question in any new town: every town has its own rubbish calendar."
+  },
+  {
+   "jp": "すみません、ゴミの{出し方|だしかた}、{間違って|まちがって}いましたか？",
+   "en": "Sorry, did I put the rubbish out wrong?",
+   "register": "polite",
+   "note": "For a neighbour pointing at your bag. Apologise first; it calms things down."
+  },
+  {
+   "jp": "{悪い|わるい}けど、ちょっと{頼んで|たのんで}もいい？",
+   "en": "Sorry, can I ask you a favour?",
+   "register": "casual",
+   "note": "悪いけど softens a request to friends or family. Politely: {申し訳|もうしわけ}ないんですが…"
+  }
+ ],
+ "dialogue_setting": "The {田中|たなか} family LINE group, Tuesday evening: {恵子|けいこ}さん is with a feverish {颯太|そうた} in {長野市|ながのし}; アルちゃん is in the {田中|たなか} kitchen.",
+ "dialogue": [
+  {
+   "who": "keiko",
+   "speaker": "恵子さん",
+   "time": "18:40",
+   "jp": "{颯太|そうた}が{熱|ねつ}を{出した|だした}の。{薬|くすり|medicine|4}を{買って|かって}、{今夜|こんや}は{長野|ながの}で{看病|かんびょう|looking after a sick person|2}するね",
+   "en": "{颯太|そうた} has a fever. I'll buy medicine and look after him in {長野|ながの} tonight."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "18:41",
+   "jp": "え、{大丈夫|だいじょうぶ}？{例の|れいの|that (one we know about)|3}{風邪|かぜ}かな…お{大事|だいじ|take care (to the sick)|4}にって{伝えて|つたえて|to pass on (a message)|4}！",
+   "en": "Oh no, is he OK? That cold going round?… Tell him to get well soon!"
+  },
+  {
+   "who": "keiko",
+   "speaker": "恵子さん",
+   "time": "18:43",
+   "jp": "それでお{願い|ねがい}！{明日|あした}は{燃える|もえる|to burn|3}ゴミの{日|ひ}なんだけど、お{父さん|とうさん}{忘れっぽい|わすれっぽい|forgetful|3}から…",
+   "en": "So, a favour! Tomorrow is burnable-rubbish day, but Dad is so forgetful…"
+  },
+  {
+   "who": "keiko",
+   "speaker": "恵子さん",
+   "time": "18:43",
+   "jp": "{今夜|こんや}のうちに{分別|ぶんべつ|sorting (rubbish)|3}しといてくれる？{朝|あさ}8{時|じ}までに{出して|だして}ね",
+   "en": "Could you sort it tonight? Put it out by 8 in the morning."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "18:45",
+   "jp": "{任せて|まかせて|leave it to (me)|3}！でも{分別|ぶんべつ|sorting (rubbish)|3}の{仕方|しかた}、{教えて|おしえて}もらえる？",
+   "en": "Leave it to me! But could you tell me how to sort it?"
+  },
+  {
+   "who": "keiko",
+   "speaker": "恵子さん",
+   "time": "18:47",
+   "jp": "{生ゴミ|なまごみ|kitchen scraps|3}と{紙|かみ}は{黄色い|きいろい}{袋|ふくろ}へ。{袋|ふくろ}に{名前|なまえ}も{書いて|かいて}ね",
+   "en": "Food scraps and paper go in the yellow bag. Write our name on the bag too."
+  },
+  {
+   "who": "keiko",
+   "speaker": "恵子さん",
+   "time": "18:47",
+   "jp": "{缶|かん|can, tin|3}と{瓶|びん|bottle, jar|3}は{金曜|きんよう}。{洗って|あらって}、{缶|かん|can, tin|3}は{潰して|つぶして|to crush, squash|3}おいてね",
+   "en": "Cans and bottles are Friday. Rinse them, and crush the cans and keep them aside."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "18:48",
+   "jp": "{了解|りょうかい|got it|4}！ゴミ{置き場|おきば|spot, place for (something)|3}は、バス{停|てい}の{横|よこ}だよね？",
+   "en": "Got it! The rubbish collection point is next to the bus stop, right?"
+  },
+  {
+   "who": "keiko",
+   "speaker": "恵子さん",
+   "time": "18:50",
+   "kind": "voice",
+   "jp": "そう！あ、じゃがいもは{納屋|なや|barn, shed|2}に{用意|ようい|preparation|4}しといたからね。{土曜日|どようび}、{頑張って|がんばって}！",
+   "en": "Yes! Oh, and I've put the potatoes ready in the shed. Good luck on Saturday!"
+  },
+  {
+   "who": "sota",
+   "speaker": "颯太",
+   "time": "18:51",
+   "sticker": "fight",
+   "jp": "ファイト！",
+   "en": "Go for it!"
+  }
+ ],
+ "listening": {
+  "type": "announcement",
+  "intro": "Later, as you carry the bag out, the town loudspeakers come on.",
+  "who": "extra",
+  "title": "{役場|やくば}からのお{知らせ|しらせ}",
+  "place": "{鷹ノ原町|たかのはらまち}, town loudspeakers",
+  "lines": [
+   {
+    "who": "extra",
+    "voice": "f",
+    "jp": "こちらは{鷹ノ原町|たかのはらまち}{役場|やくば|town office|2}です。{粗大ゴミ|そだいごみ|large rubbish (furniture etc.)|2}の{回収|かいしゅう|collection|2}のお{知らせ|しらせ}です。",
+    "en": "This is the {鷹ノ原町|たかのはらまち} town office, with news about large-item rubbish collection."
+   },
+   {
+    "who": "extra",
+    "voice": "f",
+    "jp": "{回収|かいしゅう|collection|2}は28{日|にち}の{土曜日|どようび}です。25{日|にち}までに、{役場|やくば|town office|2}に{電話|でんわ}で{申し込んで|もうしこんで|to apply|3}ください。",
+    "en": "Collection is on Saturday the 28th. Apply by phone to the town office by the 25th."
+   }
+  ],
+  "question": "{粗大|そだい}ゴミを{出|だ}したい{人|ひと}は、いつまでに{電話|でんわ}しますか。",
+  "options": [
+   "25{日|にち}まで",
+   "28{日|にち}まで",
+   "21{日|にち}まで",
+   "18{日|にち}まで"
+  ],
+  "explain": "25{日|にち}までに{申|もう}し{込|こ}んで: phone by the 25th. The 28th is the collection day itself."
+ },
+ "grammar": {
+  "id": "n4-te-oku",
+  "pattern": "〜ておく / 〜とく",
+  "level": "N4",
+  "meaning": "do in advance, leave as is",
+  "form": "{動詞|どうし}て{形|けい}: + おく ({書|か}いておく, {潰|つぶ}しておく) · casual: 〜ておく → 〜とく ({置|お}いとく, {用意|ようい}しといた) · casual: 〜でおく → 〜どく ({読|よ}んどく, {飲|の}んどく)",
+  "explanation": "Do something now so it's ready later, or leave things as they are. In speech ておく shrinks to とく/どく: {閉|し}めといて = {閉|し}めておいて. Don't confuse it with てある, which describes a state someone left, not your action.",
+  "src": [
+   "d3",
+   "d8",
+   "d6",
+   "p1"
+  ],
+  "mark": [
+   "分別しといて",
+   "用意しといた",
+   "潰しておいて",
+   "閉めといて",
+   "買っておきます",
+   "開けといて",
+   "読んどいて",
+   "読んどく"
+  ],
+  "examples": [
+   {
+    "jp": "{旅行|りょこう}の{前|まえ}に、{切符|きっぷ|ticket|4}を{買っておきます|かっておきます}。",
+    "en": "I'll buy the tickets before the trip."
+   },
+   {
+    "jp": "{暑い|あつい}から、{窓|まど}は{開けといて|あけといて}。",
+    "en": "It's hot, so leave the window open."
+   },
+   {
+    "jp": "{会議|かいぎ|meeting|4}の{資料|しりょう|documents, materials|3}、{今日|きょう}{読んどく|よんどく}ね。",
+    "en": "I'll read the meeting papers today, ahead of time."
+   }
+  ],
+  "quiz": {
+   "question": "{明日|あした}は{早い|はやい}から、{今夜|こんや}{荷物|にもつ}を{準備|じゅんび|preparation|4}して＿＿。",
+   "en": "I'm up early tomorrow, so I'll get my bag ready tonight.",
+   "options": [
+    "おこう",
+    "あろう",
+    "いよう",
+    "みよう"
+   ],
+   "explain": "Getting ready now for tomorrow = ておく: {準備|じゅんび}しておこう. てみよう would be 'let's try'."
+  },
+  "quiz_more": [
+   {
+    "question": "ビール、{冷蔵庫|れいぞうこ}に{入れ|いれ}＿＿よ。",
+    "en": "I've put the beer in the fridge (ready for later).",
+    "options": [
+     "といた",
+     "ておく",
+     "てた",
+     "ちゃった"
+    ],
+    "explain": "といた = ておいた, done in advance. ちゃった would sound like 'oops, I put it in'."
+   },
+   {
+    "question": "その{本|ほん}、{先|さき}に{読ん|よん}＿＿ね。",
+    "en": "Read that book first, OK?",
+    "options": [
+     "どいて",
+     "といて",
+     "でおく",
+     "てあって"
+    ],
+    "explain": "{読|よ}む's て-form is {読|よ}んで, so でおいて shrinks to どいて, not といて."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "可燃ごみ",
+  "reading": "かねんごみ",
+  "romaji": "kanen-gomi",
+  "meaning": "burnable rubbish",
+  "where": "On the town rubbish calendar stuck to the {田中|たなか} fridge, and printed on the yellow designated bags.",
+  "breakdown": "{可燃|かねん}: 可 can, possible + 燃 burn → 'burnable'. Signs say {可燃|かねん}ごみ; people say {燃|も}えるゴミ.",
+  "related": "{不燃|ふねん}ごみ = non-burnable rubbish (不 = not)."
+ },
+ "tip": {
+  "mark": "朝",
+  "title": "Never the night before",
+  "body": "Rubbish goes out on the morning of collection, usually by 8, not the night before: crows and cats tear bags open. A wrongly sorted bag gets a warning sticker and is left behind for you to fix. Some country towns ask you to write your name on the bag."
+ },
+ "challenge": {
+  "type": "write",
+  "prompt": "{健太|けんた}: 「アルちゃん、じゃがいもどうなった？」 Tell him {恵子|けいこ}さん has got them ready, and ask him to buy his own {材料|ざいりょう|ingredients|3} in advance.",
+  "model_answer": "{恵子|けいこ}さんが{用意|ようい}しといてくれたよ！{健太|けんた}も{材料|ざいりょう|ingredients|3}、{買っといて|かっといて}ね。",
+  "hint": "〜しといてくれた · 〜といてね",
+  "explanation": "{用意|ようい}しといてくれた = she prepared them in advance for you: とく + くれる shows the favour. {買|か}っといてね is the casual request, right for a friend like {健太|けんた}."
+ },
+ "vocab": [
+  {
+   "jp": "{看病|かんびょう}",
+   "reading": "かんびょう",
+   "en": "looking after a sick person",
+   "level": "N2",
+   "src": "d0",
+   "surface": "看病",
+   "note": "{看|かん} watch over + {病|びょう} illness. {看病|かんびょう}する: family nursing at home."
+  },
+  {
+   "jp": "{薬|くすり}",
+   "reading": "くすり",
+   "en": "medicine",
+   "level": "N4",
+   "src": "d0",
+   "surface": "薬",
+   "note": "{薬|くすり}を{飲|の}む = take medicine (even pills: 飲む, not {食|た}べる)."
+  },
+  {
+   "jp": "{燃|も}える",
+   "reading": "もえる",
+   "en": "to burn",
+   "level": "N3",
+   "src": "d2",
+   "surface": "燃える",
+   "note": "{燃|も}えるゴミ = burnable rubbish. Transitive: {燃|も}やす (to burn something)."
+  },
+  {
+   "jp": "{忘|わす}れっぽい",
+   "reading": "わすれっぽい",
+   "en": "forgetful",
+   "level": "N3",
+   "src": "d2",
+   "surface": "忘れっぽい",
+   "note": "〜っぽい = tends to: {怒|おこ}りっぽい (quick-tempered)."
+  },
+  {
+   "jp": "{分別|ぶんべつ}",
+   "reading": "ぶんべつ",
+   "en": "sorting (rubbish)",
+   "level": "N3",
+   "src": "d3",
+   "surface": "分別",
+   "note": "ゴミの{分別|ぶんべつ}. Read ふんべつ it means 'good sense': a different word."
+  },
+  {
+   "jp": "{缶|かん}",
+   "reading": "かん",
+   "en": "can, tin",
+   "level": "N3",
+   "src": "d6",
+   "surface": "缶",
+   "note": "{缶|かん}ビール, {缶|かん}コーヒー. Recycled separately from bottles."
+  },
+  {
+   "jp": "{瓶|びん}",
+   "reading": "びん",
+   "en": "bottle, jar (glass)",
+   "level": "N3",
+   "src": "d6",
+   "surface": "瓶",
+   "note": "Often written びん. Plastic bottles are ペットボトル."
+  },
+  {
+   "jp": "{潰|つぶ}す",
+   "reading": "つぶす",
+   "en": "to crush, squash",
+   "level": "N3",
+   "src": "d6",
+   "surface": "潰して",
+   "note": "Also {時間|じかん}を{潰|つぶ}す = kill time."
+  },
+  {
+   "jp": "{置|お}き{場|ば}",
+   "reading": "おきば",
+   "en": "spot, place for something",
+   "level": "N3",
+   "src": "d7",
+   "surface": "置き場",
+   "note": "{置|お}く put + {場|ば} place. ゴミ{置|お}き{場|ば}, {自転車|じてんしゃ}{置|お}き{場|ば}."
+  },
+  {
+   "jp": "{用意|ようい}",
+   "reading": "ようい",
+   "en": "preparation, getting ready",
+   "level": "N4",
+   "src": "d8",
+   "surface": "用意",
+   "note": "{用意|ようい}する: get things ready. Close to {準備|じゅんび}, more everyday."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "燃",
+   "track": "lesson",
+   "on": "ネン",
+   "kun": "も(える)・も(やす)",
+   "meaning": "burn",
+   "parts": "火 fire radical + 然, which has 灬 (fire again) at the bottom → fire on two sides: burn.",
+   "lookalike": "Not 然 (so, nature): 燃 adds 火 on the left.",
+   "words": [
+    {
+     "jp": "{燃|も}える",
+     "reading": "もえる",
+     "en": "to burn"
+    },
+    {
+     "jp": "{燃料|ねんりょう}",
+     "reading": "ねんりょう",
+     "en": "fuel"
+    },
+    {
+     "jp": "{可燃|かねん}ごみ",
+     "reading": "かねんごみ",
+     "en": "burnable rubbish"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "dry",
+     "cook",
+     "smoke"
+    ],
+    "readings": [
+     "ねんえる",
+     "やえる",
+     "もやる"
+    ]
+   }
+  },
+  {
+   "kanji": "薬",
+   "track": "n3",
+   "on": "ヤク",
+   "kun": "くすり",
+   "meaning": "medicine",
+   "parts": "艹 grass radical + 楽 (ease, comfort) → plants that make you feel better: medicine.",
+   "lookalike": "Not 楽 (fun, ease): 薬 has 艹 grass on top.",
+   "words": [
+    {
+     "jp": "{薬|くすり}",
+     "reading": "くすり",
+     "en": "medicine"
+    },
+    {
+     "jp": "{薬局|やっきょく}",
+     "reading": "やっきょく",
+     "en": "pharmacy"
+    },
+    {
+     "jp": "{目薬|めぐすり}",
+     "reading": "めぐすり",
+     "en": "eye drops"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "grass, herb",
+     "fun",
+     "poison"
+    ],
+    "readings": [
+     "やく",
+     "くさり",
+     "らく"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Kinds of rubbish",
+   "title_jp": "ゴミの{種類|しゅるい}",
+   "intro": "The words on every town's rubbish calendar.",
+   "items": [
+    {
+     "jp": "{燃える|もえる|to burn|3}ゴミ",
+     "en": "burnable rubbish",
+     "note": "Food scraps, paper, small plastics in many towns."
+    },
+    {
+     "jp": "{燃えない|もえない|to burn|3}ゴミ",
+     "en": "non-burnable rubbish",
+     "note": "Broken glass, metal, small appliances."
+    },
+    {
+     "jp": "{資源|しげん|resources|2}ゴミ",
+     "en": "recyclables",
+     "note": "Cans, bottles, paper, cardboard."
+    },
+    {
+     "jp": "ペットボトル",
+     "en": "plastic drinks bottle",
+     "note": "Remove the cap and label first."
+    },
+    {
+     "jp": "{粗大|そだい|large (rubbish)|2}ゴミ",
+     "en": "large items (furniture etc.)",
+     "note": "Book a collection; usually you pay with a sticker."
+    }
+   ]
+  },
+  {
+   "title": "More ways to ask",
+   "title_jp": "{頼み方|たのみかた}いろいろ",
+   "intro": "From casual to very polite.",
+   "items": [
+    {
+     "jp": "{手伝って|てつだって}くれない？",
+     "en": "Won't you help me?",
+     "note": "Casual, friends and family."
+    },
+    {
+     "jp": "ちょっと{見て|みて}ほしいんだけど…",
+     "en": "I'd like you to take a look…",
+     "note": "Soft: the request trails off."
+    },
+    {
+     "jp": "{教えて|おしえて}いただけますか？",
+     "en": "Could you please tell me?",
+     "note": "Polite: shops, offices, strangers."
+    },
+    {
+     "jp": "お{手数|てすう|trouble, bother|2}ですが、よろしくお{願い|ねがい}します",
+     "en": "Sorry for the trouble; thank you in advance.",
+     "note": "Written requests and emails."
+    }
+   ]
+  }
+ ]
+}
