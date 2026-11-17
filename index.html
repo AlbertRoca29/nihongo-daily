@@ -2391,7 +2391,6 @@ rt{font-size:max(.5em,9.5px)}
     const th = store.get("set:theme", "auto"), tId = findF(TFONTS, store.get("set:font", DEF_T), DEF_T)[0], dId = findF(DFONTS, store.get("set:dfont", DEF_D), DEF_D)[0], ui = store.get("set:uifont", "inter"), size = store.get("set:size", 18);
     const pair = (PAIRS.find(p => p[2] === tId && p[3] === dId) || [])[0];
     const grid = (key, list, cur, sample, weight) => `<div class="fontgrid" data-set="${key}">${list.map(f => `<button data-v="${f[0]}" aria-pressed="${f[0] === cur}"><b style="font-family:${f[0] === "same" ? "var(--jp)" : f[0] === "system" ? "system-ui,sans-serif" : esc(`"${f[2]}"`)};font-weight:${weight}">${sample}</b><small>${esc(f[1])}</small></button>`).join("")}</div>`;
-    const deck = Object.values(getDeck()), act = Object.keys(activity()).length, answers = Object.keys(localStorage).filter(k => k.startsWith("answer:")).length;
     page("Settings", "設定", `<div class="preview" id="preview"><div class="pv-top"><div style="min-width:0"><div class="pv-title">${APP_TITLE[0]}</div><div class="pv-sub">${esc(APP_TITLE[1])}</div></div><div class="pv-k">語</div></div>
         <div class="pv-line jp-mid">${ruby("{今日|きょう}はいい{天気|てんき}ですね。{散歩|さんぽ}する？")}</div><div class="pv-en">Lovely weather today. Want to go for a walk?</div></div>
       <div class="card" id="settings">
@@ -2405,14 +2404,9 @@ rt{font-size:max(.5em,9.5px)}
         <div class="set-row"><div class="lab">Beta: speak the phrases<span>🎤</span></div><div class="seg" data-set="speak"><button data-v="on" aria-pressed="${store.get("set:speak", false)}">On</button><button data-v="off" aria-pressed="${!store.get("set:speak", false)}">Off</button></div>
           <p class="note" style="margin:0">Adds a 🎤 to phrase cards: your phone's speech recognition writes what it heard and shows what didn't come through.</p></div>
       </div>
-      ${syncCard()}
-      <div class="card" style="display:flex;flex-direction:column;gap:10px"><div class="lab" style="font-weight:600;display:flex;justify-content:space-between">Your data<span class="note">${syncCfg() ? "synced 🔒" : "on this device only"}</span></div>
-        <table class="dtab"><tr><td>Review deck</td><td>${deck.length} cards · ${deck.filter(c => c.star).length} ★</td></tr><tr><td>Study days</td><td>${act}</td></tr><tr><td>Challenge answers</td><td>${answers}</td></tr><tr><td>Lessons done</td><td>${Object.keys(doneMap()).length}</td></tr><tr><td>Last backup</td><td>${esc(store.get("lastExport", "never"))}</td></tr></table>
-        <p class="note" style="margin:0">${syncCfg() ? "Your other devices and the encrypted sync file keep a copy too. A backup file now and then doesn't hurt." : "Nothing leaves this device. If you change phones or clear Safari, it's lost: turn on sync above, or export a backup now and then."}</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><button class="btn primary" id="exp">Export</button><label class="btn ghost" style="cursor:pointer">Import<input type="file" id="imp" accept="application/json,.json" hidden></label></div>
-        <button class="btn ghost" id="wipe" style="color:var(--stamp)">Erase everything on this device</button></div>
+      ${transferCard()}
       <p style="font-size:12px;opacity:.6;margin:14px 4px">Voices: Google Gemini 3.8 Flash-Lite TTS · VOICEVOX:白上虎太郎 · Stickers: Microsoft Fluent Emoji (MIT) · Kanji data: KANJIDIC (EDRDG, CC BY-SA)</p>`);
-    bindSync();
+    bindTransfer();
     const box = $("settings");
     box.onclick = e => {
       const b = e.target.closest("[data-v]"), g = b && b.closest("[data-set]"); if (!b || !g) return;
@@ -2424,17 +2418,6 @@ rt{font-size:max(.5em,9.5px)}
       box.querySelectorAll(`[data-set="${k}"] [data-v]`).forEach(x => x.setAttribute("aria-pressed", String(x === b)));
     };
     $("size").oninput = e => { store.set("set:size", +e.target.value); $("szv").textContent = e.target.value + "px"; applySettings(); };
-    $("exp").onclick = () => {
-      const data = {}; for (let i = 0; i < localStorage.length; i++){ const k = localStorage.key(i); data[k] = localStorage.getItem(k); }
-      const blob = new Blob([JSON.stringify({app:"ichinichi-ippo", date:new Date().toISOString(), data}, null, 1)], {type:"application/json"});
-      const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = `ichinichi-ippo-${todayStr()}.json`; document.body.appendChild(a); a.click(); a.remove();
-      store.set("lastExport", todayStr()); toast("Backup saved");
-    };
-    $("imp").onchange = async e => {
-      const f = e.target.files[0]; if (!f) return;
-      try{ const j = JSON.parse(await f.text()); if (!j.data) throw 0; Object.entries(j.data).forEach(([k, v]) => localStorage.setItem(k, v)); toast("Backup restored"); setTimeout(() => location.reload(), 600); }
-      catch{ toast("That file isn't a backup from this app"); }
-    };
     let armed = false;
     $("wipe").onclick = () => { if (!armed){ armed = true; $("wipe").textContent = "Tap again to erase everything"; setTimeout(() => { armed = false; const w = $("wipe"); if (w) w.textContent = "Erase everything on this device"; }, 3000); return; } localStorage.clear(); location.reload(); };
   }
@@ -2463,34 +2446,20 @@ rt{font-size:max(.5em,9.5px)}
     store.set("offline", {d:todayStr(), n:ids.length, top:ids[ids.length - 1], sig});
   }
 
-  /* ---------- sync between devices ----------
-     Progress is merged with the copy in one file of the learner's own PRIVATE GitHub repo.
-     It's encrypted here first (AES-GCM, key from a passphrase via PBKDF2): GitHub only ever sees ciphertext.
-     Display settings (theme, fonts, size) stay per device on purpose. */
+  /* ---------- move progress between devices: no accounts, no server ----------
+     "Send" makes a file (share sheet / download) or a text code (copy/paste); "Receive" MERGES it into this device.
+     Nothing is overwritten: cards, lessons, streak days and answers from both devices are kept. */
   const SYNC_KEYS = new Set(["deck", "done", "act", "kstate", "kr", "readings", "mocks", "newday"]);
   const SYNC_PRE = ["pos:", "chat:", "chal:", "answer:"];
   const isSynced = k => SYNC_KEYS.has(k) || SYNC_PRE.some(p => k.startsWith(p));
-  const SYNC_FILE = "progress.json", PBKDF2_ITER = 600000, PAIR = "ippo1:";
+  const isSetting = k => k.startsWith("set:") || k === "furiMode" || k === "chatSound";
+  const CODE = "IPPO1";
   const J = v => JSON.stringify(v);
-  const canon = v => Array.isArray(v) ? "[" + v.map(canon).join(",") + "]" : v && typeof v === "object" ? "{" + Object.keys(v).sort().map(k => J(k) + ":" + canon(v[k])).join(",") + "}" : J(v ?? null);   // key order doesn't count as a change
+  const canon = v => Array.isArray(v) ? "[" + v.map(canon).join(",") + "]" : v && typeof v === "object" ? "{" + Object.keys(v).sort().map(k => J(k) + ":" + canon(v[k])).join(",") + "}" : J(v ?? null);
   const rawSet = (k, v) => { try{ localStorage.setItem(k, v); }catch{} };
-  const syncCfg = () => store.get("sync:cfg", null);
   const syncMeta = () => { const m = store.get("sync:meta", {}); return {tomb:m.tomb || {}, ts:m.ts || {}}; };
-  let syncTimer = 0, syncBusy = null, syncAgain = false, syncLast = 0;
-  onStoreSet = k => {
-    if (!isSynced(k)) return;
-    if (k.startsWith("answer:")){ const m = syncMeta(); m.ts[k] = Date.now(); rawSet("sync:meta", J(m)); }
-    if (!syncCfg()) return;
-    clearTimeout(syncTimer); syncTimer = setTimeout(() => syncNow(), 15000);
-  };
-  document.addEventListener("visibilitychange", () => {
-    if (!syncCfg()) return;
-    if (document.visibilityState === "hidden"){ if (syncTimer){ clearTimeout(syncTimer); syncTimer = 0; syncNow(); } }
-    else if (Date.now() - syncLast > 60000) syncNow();
-  });
-  window.addEventListener("online", () => { if (syncCfg()) syncNow(); });
+  onStoreSet = k => { if (k.startsWith("answer:")){ const m = syncMeta(); m.ts[k] = Date.now(); rawSet("sync:meta", J(m)); } };
 
-  /* merge: nothing is ever lost from either side */
   const pickCard = (a, b) => {
     if ((a.mt || 0) !== (b.mt || 0)) return (a.mt || 0) > (b.mt || 0) ? a : b;
     const sa = a.seen || "", sb = b.seen || ""; if (sa !== sb) return sa > sb ? a : b;
@@ -2500,15 +2469,15 @@ rt{font-size:max(.5em,9.5px)}
   const orFlags = (x, y) => { const o = Object.assign({}, y, x); for (const f of Object.keys(o)) if (typeof x[f] === "boolean" || typeof y[f] === "boolean") o[f] = !!(x[f] || y[f]); return o; };
   const CHAL = {ok:3, done:2, skip:1};
   function mergeKey(k, a, b, ta, tb){
-    const obj = v => v && typeof v === "object";
+    const obj = v => v && typeof v === "object", both = obj(a) && obj(b);
     switch (k){
-      case "deck": return obj(a) && obj(b) ? unionBy(a, b, pickCard) : a;
-      case "done": return obj(a) && obj(b) ? unionBy(a, b, (x, y) => x < y ? x : y) : a;
-      case "act": return obj(a) && obj(b) ? unionBy(a, b, (x, y) => ({l:[...new Set([...(x.l || []), ...(y.l || [])])], r:Math.max(x.r || 0, y.r || 0)})) : a;
-      case "kstate": return obj(a) && obj(b) ? unionBy(a, b, orFlags) : a;
-      case "kr": case "mocks": return obj(a) && obj(b) ? unionBy(a, b, (x, y) => Math.max(+x || 0, +y || 0)) : a;
-      case "readings": return obj(a) && obj(b) ? unionBy(a, b, x => x) : a;
-      case "newday": return a.d === b.d ? {d:a.d, n:Math.max(a.n || 0, b.n || 0)} : (a.d > b.d ? a : b);
+      case "deck": return both ? unionBy(a, b, pickCard) : a;
+      case "done": return both ? unionBy(a, b, (x, y) => x < y ? x : y) : a;
+      case "act": return both ? unionBy(a, b, (x, y) => ({l:[...new Set([...(x.l || []), ...(y.l || [])])], r:Math.max(x.r || 0, y.r || 0)})) : a;
+      case "kstate": return both ? unionBy(a, b, orFlags) : a;
+      case "kr": case "mocks": return both ? unionBy(a, b, (x, y) => Math.max(+x || 0, +y || 0)) : a;
+      case "readings": return both ? unionBy(a, b, x => x) : a;
+      case "newday": return both ? (a.d === b.d ? {d:a.d, n:Math.max(a.n || 0, b.n || 0)} : (a.d > b.d ? a : b)) : a;
     }
     if (k.startsWith("pos:")) return Math.max(+a || 0, +b || 0);
     if (k.startsWith("chat:")) return !!(a || b);
@@ -2530,181 +2499,82 @@ rt{font-size:max(.5em,9.5px)}
     }
     return {data, meta:{tomb, ts}};
   }
-  const snapshot = () => {
-    const o = {};
-    for (let i = 0; i < localStorage.length; i++){ const k = localStorage.key(i); if (isSynced(k)){ const v = store.get(k, null); if (v != null) o[k] = v; } }
-    return o;
-  };
 
-  /* encryption */
+  /* the package: same shape as the old backup files ({app, data:{key: string}}), so old backups can be received too */
+  const pack = () => {
+    const data = {};
+    for (let i = 0; i < localStorage.length; i++){ const k = localStorage.key(i); if (isSynced(k) || isSetting(k) || k === "sync:meta") data[k] = localStorage.getItem(k); }
+    return {app:"ichinichi-ippo", v:2, date:new Date().toISOString(), data};
+  };
   const tEnc = new TextEncoder(), tDec = new TextDecoder();
-  const b64 = u => { let s = ""; for (let i = 0; i < u.length; i += 0x8000) s += String.fromCharCode.apply(null, u.subarray(i, i + 0x8000)); return btoa(s); };
-  const unb64 = s => Uint8Array.from(atob(s.replace(/\s/g, "")), c => c.charCodeAt(0));
-  const gzip = async (u, back) => new Uint8Array(await new Response(new Blob([u]).stream().pipeThrough(back ? new DecompressionStream("gzip") : new CompressionStream("gzip"))).arrayBuffer());
-  let keyMemo = {id:"", key:null};
-  async function passKey(pass, salt, iter){
-    const id = pass + "|" + b64(salt) + "|" + iter; if (keyMemo.id === id) return keyMemo.key;
-    const base = await crypto.subtle.importKey("raw", tEnc.encode(pass), "PBKDF2", false, ["deriveKey"]);
-    const key = await crypto.subtle.deriveKey({name:"PBKDF2", salt, iterations:iter, hash:"SHA-256"}, base, {name:"AES-GCM", length:256}, false, ["encrypt", "decrypt"]);
-    keyMemo = {id, key}; return key;
+  const b64u = u => { let s = ""; for (let i = 0; i < u.length; i += 0x8000) s += String.fromCharCode.apply(null, u.subarray(i, i + 0x8000)); return btoa(s).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, ""); };
+  const unb64u = s => Uint8Array.from(atob(s.replace(/-/g, "+").replace(/_/g, "/")), c => c.charCodeAt(0));
+  const gz = async (u, back) => new Uint8Array(await new Response(new Blob([u]).stream().pipeThrough(back ? new DecompressionStream("gzip") : new CompressionStream("gzip"))).arrayBuffer());
+  async function toCode(p){
+    const raw = tEnc.encode(J(p));
+    return typeof CompressionStream === "function" ? CODE + "z." + b64u(await gz(raw)) : CODE + "j." + b64u(raw);
   }
-  async function seal(payload, pass, salt){
-    salt = salt || crypto.getRandomValues(new Uint8Array(16));
-    const iv = crypto.getRandomValues(new Uint8Array(12)), z = typeof CompressionStream === "function";
-    let plain = tEnc.encode(J(payload)); if (z) plain = await gzip(plain);
-    const ct = new Uint8Array(await crypto.subtle.encrypt({name:"AES-GCM", iv}, await passKey(pass, salt, PBKDF2_ITER), plain));
-    return {app:"ichinichi-ippo-sync", v:1, kdf:"PBKDF2-SHA256", iter:PBKDF2_ITER, salt:b64(salt), iv:b64(iv), z, ct:b64(ct)};
+  async function fromText(t){
+    t = String(t || "").trim();
+    const m = /IPPO1([zj])\.([A-Za-z0-9_\-\s]+)/.exec(t);
+    if (m){ let u = unb64u(m[2].replace(/\s/g, "")); if (m[1] === "z") u = await gz(u, true); return JSON.parse(tDec.decode(u)); }
+    return JSON.parse(t);   // a file (or pasted file contents)
   }
-  async function unseal(box, pass){
-    if (!box || box.app !== "ichinichi-ippo-sync") throw Object.assign(new Error("format"), {code:"format"});
-    const salt = unb64(box.salt);
-    let plain;
-    try{ plain = new Uint8Array(await crypto.subtle.decrypt({name:"AES-GCM", iv:unb64(box.iv)}, await passKey(pass, salt, box.iter || PBKDF2_ITER), unb64(box.ct))); }
-    catch{ throw Object.assign(new Error("pass"), {code:"pass"}); }
-    if (box.z) plain = await gzip(plain, true);
-    return {payload:JSON.parse(tDec.decode(plain)), salt};
+  function receive(p){
+    if (!p || p.app !== "ichinichi-ippo" || !p.data) throw new Error("format");
+    const parse = s => { try{ return JSON.parse(s); }catch{ return null; } };
+    const L = {}, R = {}, before = {};
+    for (let i = 0; i < localStorage.length; i++){ const k = localStorage.key(i); if (isSynced(k)){ const v = store.get(k, null); if (v != null){ L[k] = v; before[k] = canon(v); } } }
+    for (const [k, s] of Object.entries(p.data)) if (isSynced(k)){ const v = parse(s); if (v != null) R[k] = v; }
+    const lessonsBefore = Object.keys(L.done || {}).length, cardsBefore = Object.keys(L.deck || {}).length;
+    const {data, meta} = mergeAll(L, R, syncMeta(), parse(p.data["sync:meta"]) || {});
+    for (const [k, v] of Object.entries(data)) if (before[k] !== canon(v)) rawSet(k, J(v));
+    rawSet("sync:meta", J(meta));
+    for (const [k, s] of Object.entries(p.data)) if (isSetting(k) && localStorage.getItem(k) == null) rawSet(k, s);   // settings only fill gaps
+    store.set("lastReceive", todayStr());
+    return {lessons:Object.keys(data.done || {}).length - lessonsBefore, cards:Object.keys(data.deck || {}).length - cardsBefore};
   }
+  const receivedMsg = r => r.lessons || r.cards ? `Added ${r.lessons} lesson${r.lessons === 1 ? "" : "s"} and ${r.cards} card${r.cards === 1 ? "" : "s"} from your other device` : "Merged: this device was already up to date";
 
-  /* GitHub: one file in a private repo, written with the repo's sha so two devices can't overwrite each other */
-  const httpErr = r => Object.assign(new Error("http " + r.status), {code:"http", status:r.status});
-  const gh = (cfg, path, opt = {}) => fetch("https://api.github.com/repos/" + cfg.repo + path, Object.assign({cache:"no-store"}, opt, {headers:Object.assign({Authorization:"Bearer " + cfg.token, Accept:"application/vnd.github+json"}, opt.headers || {})}));
-  async function checkRepo(cfg){
-    const r = await gh(cfg, ""); if (!r.ok) throw httpErr(r);
-    const j = await r.json();
-    if (!j.private) throw Object.assign(new Error("public"), {code:"public"});
-    if (j.permissions && !j.permissions.push) throw Object.assign(new Error("readonly"), {code:"readonly"});
+  function transferCard(){
+    const deck = Object.values(getDeck()), act = Object.keys(activity()).length, answers = Object.keys(localStorage).filter(k => k.startsWith("answer:")).length;
+    return `<div class="card" id="xfer" style="display:flex;flex-direction:column;gap:10px"><div class="lab" style="font-weight:600;display:flex;justify-content:space-between">Your data<span class="note">on this device</span></div>
+        <table class="dtab"><tr><td>Review deck</td><td>${deck.length} cards · ${deck.filter(c => c.star).length} ★</td></tr><tr><td>Study days</td><td>${act}</td></tr><tr><td>Challenge answers</td><td>${answers}</td></tr><tr><td>Lessons done</td><td>${Object.keys(doneMap()).length}</td></tr><tr><td>Last sent</td><td>${esc(store.get("lastExport", "never"))}</td></tr><tr><td>Last received</td><td>${esc(store.get("lastReceive", "never"))}</td></tr></table>
+        <div class="fgroup" style="margin:6px 0 0">Move to another device</div>
+        <p class="note" style="margin:0">Studied here? Send it, then receive it on your other device. Both are merged: nothing on the other device is lost.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><button class="btn primary" id="xSend">Send file</button><button class="btn ghost" id="xCopy">Copy as text</button></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><label class="btn primary" style="cursor:pointer;text-align:center">Receive file<input type="file" id="xFile" accept="application/json,.json,.txt,text/plain" hidden></label><button class="btn ghost" id="xPasteOpen">Paste text</button></div>
+        <div id="xPasteBox" hidden><textarea class="sync-in" id="xText" placeholder="Paste the IPPO1… text here" autocapitalize="off" spellcheck="false"></textarea><button class="btn primary" id="xPasteGo" style="width:100%;margin-top:8px">Add to this device</button></div>
+        <p class="note" style="margin:0" id="xMsg"></p>
+        <details class="more"><summary>How to send it</summary><p class="note" style="margin:4px 0 0"><b>Send file</b> opens your phone's share menu: AirDrop, WhatsApp or Telegram to yourself, email, or Save to Files. On a computer it downloads the file. <b>Copy as text</b> works anywhere you can paste: a note, a message to yourself. The file also works as a backup.</p></details>
+        <button class="btn ghost" id="wipe" style="color:var(--stamp)">Erase everything on this device</button></div>`;
   }
-  async function pull(cfg){
-    const r = await gh(cfg, "/contents/" + SYNC_FILE);
-    if (r.status === 404){ await checkRepo(cfg); return {sha:null, payload:null, salt:null}; }
-    if (!r.ok) throw httpErr(r);
-    const j = await r.json(); let c = j.content;
-    if (!c && j.sha){ const b = await gh(cfg, "/git/blobs/" + j.sha); if (!b.ok) throw httpErr(b); c = (await b.json()).content; }   // files over 1 MB
-    const {payload, salt} = await unseal(JSON.parse(tDec.decode(unb64(c))), cfg.pass);
-    return {sha:j.sha, payload, salt};
-  }
-  async function push(cfg, remote, payload){
-    const box = await seal(payload, cfg.pass, remote.salt);
-    const body = {message:"Sync " + new Date().toISOString().slice(0, 16).replace("T", " "), content:b64(tEnc.encode(J(box)))};
-    if (remote.sha) body.sha = remote.sha;
-    const r = await gh(cfg, "/contents/" + SYNC_FILE, {method:"PUT", headers:{"Content-Type":"application/json"}, body:J(body)});
-    if (r.status === 409 || r.status === 422) return false;   // the other device wrote first: pull and merge again
-    if (!r.ok) throw httpErr(r);
-    return true;
-  }
-  const syncErrText = e => {
-    if (!e) return "";
-    if (e.code === "pass") return "Wrong passphrase: it must be exactly the same on every device.";
-    if (e.code === "public") return "That repo is public. Make it private on GitHub (Settings → Danger zone), or use another one.";
-    if (e.code === "readonly") return "The token can only read that repo. Give it Contents: Read and write.";
-    if (e.code === "format") return "There's a progress.json in that repo that isn't from this app. Use an empty repo.";
-    if (e.code === "http"){
-      if (e.status === 401) return "GitHub refused the token (expired or mistyped). Make a new one and connect again.";
-      if (e.status === 403) return "The token isn't allowed to write there. It needs Contents: Read and write on that repo.";
-      if (e.status === 404) return "Repo not found, or the token doesn't include it. Check the name (you/repo) and the token's repository access.";
-      return "GitHub answered " + e.status + ". Will try again later.";
-    }
-    return navigator.onLine === false ? "Offline: will sync when you're back online." : "Couldn't reach GitHub. Will try again later.";
-  };
-
-  function syncNow(manual){
-    const cfg = syncCfg(); if (!cfg) return Promise.resolve();
-    if (syncBusy){ syncAgain = true; return syncBusy; }
-    clearTimeout(syncTimer); syncTimer = 0;
-    paintSync(true);
-    syncBusy = (async () => {
-      try{
-        for (let tries = 0; tries < 4; tries++){
-          const remote = await pull(cfg);
-          const L = snapshot(), mL = syncMeta(), R = remote.payload ? remote.payload.data || {} : {}, mR = remote.payload ? remote.payload.meta || {} : {};
-          const before = {}, rStr = {}; for (const k in L) before[k] = canon(L[k]); for (const k in R) rStr[k] = canon(R[k]);
-          const {data, meta} = mergeAll(L, R, mL, mR);
-          let changed = false;
-          for (const [k, v] of Object.entries(data)) if (before[k] !== canon(v)){ rawSet(k, J(v)); changed = true; }
-          if (data.readings) Object.assign(READ, data.readings);
-          rawSet("sync:meta", J(meta));
-          const stale = !remote.payload || canon(meta) !== canon({tomb:mR.tomb || {}, ts:mR.ts || {}}) || Object.keys(rStr).length !== Object.keys(data).length || Object.keys(data).some(k => rStr[k] !== canon(data[k]));
-          if (stale && !(await push(cfg, remote, {at:new Date().toISOString(), data, meta}))) continue;
-          syncLast = Date.now();
-          store.set("sync:state", {at:syncLast, err:""});
-          if (changed && $("stage").hidden) route();   // refresh the home/list pages; never interrupt a lesson
-          if (manual) toast(changed ? "Synced: progress from your other device added" : "Synced");
-          return;
-        }
-        throw new Error("busy");
-      }catch(e){
-        store.set("sync:state", Object.assign(store.get("sync:state", {}), {err:syncErrText(e), code:e.code || ""}));
-        if (manual) toast(syncErrText(e));
-      }finally{
-        syncBusy = null; paintSync();
-        if (syncAgain){ syncAgain = false; setTimeout(() => syncNow(), 1000); }
+  function bindTransfer(){
+    const msg = (t, bad) => { const el = $("xMsg"); if (el) el.innerHTML = bad ? `<span class="sync-err">${esc(t)}</span>` : esc(t); };
+    const done = r => { msg(receivedMsg(r)); toast(receivedMsg(r)); setTimeout(() => location.reload(), 1600); };
+    const fail = () => msg("That isn't progress from this app. Send it again from the other device.", true);
+    $("xSend").onclick = async () => {
+      const name = `ichinichi-ippo-${todayStr()}.json`, file = new File([J(pack())], name, {type:"application/json"});
+      store.set("lastExport", todayStr());
+      if (navigator.canShare && navigator.canShare({files:[file]}) && /Android|iPhone|iPad|Mobile/i.test(navigator.userAgent)){
+        try{ await navigator.share({files:[file], title:"一日一歩 progress"}); msg("Sent. Now tap Receive file on your other device."); return; }
+        catch(e){ if (e && e.name === "AbortError") return; }
       }
-    })();
-    return syncBusy;
-  }
-
-  /* settings card */
-  const ago = t => { const s = Math.round((Date.now() - t) / 1000); return s < 60 ? "just now" : s < 3600 ? Math.round(s / 60) + " min ago" : s < 86400 ? Math.round(s / 3600) + " h ago" : new Date(t).toLocaleDateString(); };
-  function syncStatusHtml(busy){
-    const cfg = syncCfg(), st = store.get("sync:state", {});
-    if (busy) return "Syncing…";
-    if (st.err) return `<span class="sync-err">${esc(st.err)}</span>`;
-    return st.at ? `Last synced ${esc(ago(st.at))} with <b>${esc(cfg.repo)}</b>. It syncs by itself when you open the app and after you study.` : "Not synced yet.";
-  }
-  function paintSync(busy){ const el = $("syncStatus"); if (el) el.innerHTML = syncStatusHtml(busy); }
-  function syncCard(){
-    const cfg = syncCfg(), head = on => `<div class="lab" style="font-weight:600;display:flex;justify-content:space-between">Sync between devices<span class="note">${on ? "on 🔒" : "off"}</span></div>`;
-    if (cfg) return `<div class="card" id="syncCard" style="display:flex;flex-direction:column;gap:10px">${head(true)}
-        <p class="note" style="margin:0" id="syncStatus">${syncStatusHtml(!!syncBusy)}</p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><button class="btn primary" id="syncGo">Sync now</button><button class="btn ghost" id="syncPair">Copy pairing code</button></div>
-        <p class="note" style="margin:0">The pairing code holds your token and passphrase: paste it into your other device's Settings, then delete it from wherever you sent it.</p>
-        <button class="btn ghost" id="syncOff">Turn off sync on this device</button></div>`;
-    const owner = /^([a-z0-9-]+)\.github\.io$/i.exec(location.hostname);
-    return `<div class="card" id="syncCard" style="display:flex;flex-direction:column;gap:10px">${head(false)}
-        <p class="note" style="margin:0">Keep lessons, review deck and streak the same on your phone and computer. Your progress is encrypted on this device with your passphrase, then saved as one file in a private GitHub repo of yours. Only your devices can read it: not GitHub, not anyone else.</p>
-        <details class="more"><summary>Set it up (once, about 3 minutes)</summary><ol class="note sync-steps">
-          <li>Create an empty <b>private</b> repo, e.g. <code>nihongo-sync</code>: <a href="https://github.com/new" target="_blank" rel="noopener">github.com/new</a>.</li>
-          <li>Create a token: <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">new fine-grained token</a>. Repository access: <i>Only select repositories</i> → that repo. Permissions → Repository → <i>Contents: Read and write</i>. Nothing else.</li>
-          <li>Fill in the three boxes below and tap Connect. Pick a passphrase you'll remember: without it the sync file can't be opened (your devices keep their own copy).</li>
-          <li>On your other device: paste the pairing code from this one, or fill in the same three boxes. Progress from both devices is merged; nothing is overwritten.</li></ol></details>
-        <input class="sync-in" id="syncRepo" placeholder="your-name/nihongo-sync" value="${owner ? esc(owner[1] + "/nihongo-sync") : ""}" autocapitalize="off" autocorrect="off" spellcheck="false">
-        <input class="sync-in" id="syncTok" type="password" placeholder="Token (github_pat_…)" autocomplete="off" autocapitalize="off" spellcheck="false">
-        <input class="sync-in" id="syncPass" type="password" placeholder="Passphrase (same on every device)" autocomplete="new-password">
-        <button class="btn primary" id="syncConnect">Connect</button>
-        <details class="more"><summary>Already on another device? Paste its pairing code</summary>
-          <textarea class="sync-in" id="syncCode" placeholder="ippo1:…" autocapitalize="off" spellcheck="false"></textarea>
-          <button class="btn primary" id="syncCodeGo" style="width:100%;margin-top:8px">Connect with code</button></details>
-        <p class="note" style="margin:0" id="syncStatus"></p></div>`;
-  }
-  async function connectSync(cfg, btn){
-    const st = $("syncStatus");
-    if (!/^[\w.-]+\/[\w.-]+$/.test(cfg.repo || "")){ st.innerHTML = `<span class="sync-err">Repo should look like your-name/nihongo-sync.</span>`; return; }
-    if (!cfg.token){ st.innerHTML = `<span class="sync-err">Paste the token.</span>`; return; }
-    if ((cfg.pass || "").length < 8){ st.innerHTML = `<span class="sync-err">Use a passphrase of at least 8 characters.</span>`; return; }
-    if (!crypto.subtle){ st.innerHTML = `<span class="sync-err">This browser can't encrypt (it needs https).</span>`; return; }
-    btn.disabled = true; st.textContent = "Checking…";
-    try{ await checkRepo(cfg); await pull(cfg); }
-    catch(e){ btn.disabled = false; st.innerHTML = `<span class="sync-err">${esc(syncErrText(e))}</span>`; return; }
-    store.set("sync:cfg", cfg); store.set("sync:state", {});
-    renderSettings();
-    await syncNow(true);
-  }
-  function bindSync(){
-    const v = id => ($(id) ? $(id).value.trim() : "");
-    if ($("syncConnect")) $("syncConnect").onclick = e => connectSync({repo:v("syncRepo"), token:v("syncTok"), pass:$("syncPass").value}, e.currentTarget);
-    if ($("syncCodeGo")) $("syncCodeGo").onclick = e => {
-      let c = null;
-      try{ const s = v("syncCode").replace(/\s/g, ""); if (!s.startsWith(PAIR)) throw 0; c = JSON.parse(tDec.decode(unb64(s.slice(PAIR.length).replace(/-/g, "+").replace(/_/g, "/")))); }catch{}
-      if (!c || !c.r){ $("syncStatus").innerHTML = `<span class="sync-err">That isn't a pairing code from this app.</span>`; return; }
-      connectSync({repo:c.r, token:c.t, pass:c.p}, e.currentTarget);
+      const a = document.createElement("a"); a.href = URL.createObjectURL(file); a.download = name; document.body.appendChild(a); a.click(); a.remove();
+      msg("Saved " + name + ". Send it to your other device, then tap Receive file there.");
     };
-    if ($("syncGo")) $("syncGo").onclick = () => syncNow(true);
-    if ($("syncPair")) $("syncPair").onclick = async () => {
-      const c = syncCfg(), code = PAIR + b64(tEnc.encode(J({r:c.repo, t:c.token, p:c.pass}))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
-      try{ await navigator.clipboard.writeText(code); toast("Pairing code copied"); }
-      catch{ window.prompt("Copy this pairing code:", code); }
+    $("xCopy").onclick = async () => {
+      const code = await toCode(pack()); store.set("lastExport", todayStr());
+      try{ await navigator.clipboard.writeText(code); msg(`Copied (${Math.ceil(code.length / 1024)} KB of text). Paste it on your other device: Paste text.`); }
+      catch{ $("xPasteBox").hidden = false; $("xText").value = code; $("xText").select(); msg("Select all of the text above and copy it.", false); }
     };
-    if ($("syncOff")) $("syncOff").onclick = () => { ["sync:cfg", "sync:state"].forEach(k => { try{ localStorage.removeItem(k); }catch{} }); keyMemo = {id:"", key:null}; toast("Sync turned off on this device"); renderSettings(); };
+    $("xFile").onchange = async e => {
+      const f = e.target.files[0]; if (!f) return;
+      try{ done(receive(await fromText(await f.text()))); }catch{ fail(); }
+      e.target.value = "";
+    };
+    $("xPasteOpen").onclick = () => { $("xPasteBox").hidden = !$("xPasteBox").hidden; if (!$("xPasteBox").hidden) $("xText").focus(); };
+    $("xPasteGo").onclick = async () => { try{ done(receive(await fromText($("xText").value))); }catch{ fail(); } };
   }
 
   applySettings();
@@ -2717,7 +2587,6 @@ rt{font-size:max(.5em,9.5px)}
       lessons = list.filter(l => l.id && l.topic && l.id <= today).sort((a, b) => a.id < b.id ? -1 : 1);
       route();
       setTimeout(precache, 4000);
-      syncNow();
     }catch{ showEmpty("Can't load lessons", "Check your connection and reopen the app."); }
   })();
   if ("serviceWorker" in navigator){ try{ navigator.serviceWorker.register("sw.js"); }catch{} }
