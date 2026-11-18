@@ -106,5 +106,12 @@
   "category": "home-admin",
   "function": "requesting",
   "format": "line"
+ },
+ {
+  "id": "2026-11-18",
+  "topic": "A profile full of old films",
+  "category": "entertainment",
+  "function": "describing",
+  "format": "text"
  }
 ]

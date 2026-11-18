@@ -1,0 +1,434 @@
+{
+ "topic": "A profile full of old films",
+ "category": "entertainment",
+ "function": "describing",
+ "format": "text",
+ "cast": [
+  "ren"
+ ],
+ "reader": "ren",
+ "title_jp": "{古い|ふるい}{映画|えいが}が{好きな|すきな}{人|ひと}",
+ "context": "Wednesday: the rubbish went out on time and {恵子|けいこ}さん is back from {長野市|ながのし}. That night, under the kotatsu, アルちゃん finally tries the dating app {健太|けんた} suggested and finds the profile of レン, 26, a designer who loves old films.",
+ "scene": "Wednesday night under the kotatsu. You finally open the dating app {健太|けんた} suggested, and one profile is all about old films.",
+ "keep": [
+  "p0"
+ ],
+ "phrases": [
+  {
+   "jp": "{映画|えいが}の{趣味|しゅみ|taste, hobby|4}が{合いそう|あいそう|to match, suit|4}ですね。",
+   "en": "Looks like we have the same taste in films.",
+   "register": "polite",
+   "note": "{趣味|しゅみ}が{合|あ}う = share tastes. A classic, safe first message on dating apps."
+  },
+  {
+   "jp": "{僕|ぼく}も{人見知り|ひとみしり|shy with strangers|3}だけど、{慣れたら|なれたら|to get used to|4}よくしゃべるよ。",
+   "en": "I'm shy with new people too, but once I'm used to you I talk a lot.",
+   "register": "casual",
+   "note": "Japanese people describe themselves this way all the time; it's a friendly warning, not a flaw."
+  },
+  {
+   "jp": "えー、そんなわけないじゃん！",
+   "en": "What? No way!",
+   "register": "casual",
+   "note": "わけがない with が dropped, plus じゃん. The instant reply to something absurd."
+  },
+  {
+   "jp": "{初めて|はじめて}のメッセージ、{緊張|きんちょう|being nervous|4}しないわけがないよ。",
+   "en": "A first message? Of course I'm nervous.",
+   "register": "casual",
+   "note": "Double negative = strong yes: しないわけがない ≈ {絶対|ぜったい}する."
+  },
+  {
+   "jp": "{返信|へんしん|reply (to a message)|3}が{遅くなって|おそくなって|to be late, slow|4}すみません。",
+   "en": "Sorry for the late reply.",
+   "register": "polite",
+   "note": "The standard opener on LINE or email. Casual: {返信|へんしん}{遅|おそ}くなってごめん！"
+  }
+ ],
+ "dialogue_setting": "A profile on a dating app (マッチングアプリ), read on アルちゃん's phone late at night.",
+ "text_title": "レン（26）・{長野市|ながのし}",
+ "dialogue": [
+  {
+   "speaker": "About me",
+   "jp": "はじめまして。{長野市|ながのし}でデザイナーをしています。{東京|とうきょう}の{大学|だいがく}を{出て|でて}、{地元|じもと|hometown, local area|3}に{戻りました|もどりました|to return|4}。",
+   "en": "Nice to meet you. I'm a designer in {長野市|ながのし}. I went to university in Tokyo, then came back to my hometown."
+  },
+  {
+   "speaker": "Hobbies",
+   "jp": "{趣味|しゅみ|hobby|4}は{古い|ふるい}{映画|えいが}と{フィルムカメラ||film camera|2}。{休み|やすみ}の{日|ひ}は{街|まち}の{小さな|ちいさな}{映画館|えいがかん|cinema|4}に{通って|かよって|to go regularly|4}います。",
+   "en": "My hobbies are old films and film cameras. On my days off I go to a small cinema in town."
+  },
+  {
+   "speaker": "Favourite film",
+   "jp": "{一番|いちばん}は{小津安二郎|おづやすじろう}の『{東京物語|とうきょうものがたり}』。{静か|しずか}だけど、{家族|かぞく}の{会話|かいわ|conversation|4}が{リアル||realistic|3}な{作品|さくひん|work (of art)|3}です。",
+   "en": "My favourite is {小津安二郎|おづやすじろう}'s 'Tokyo Story'. It's quiet, but the family's conversations feel so real."
+  },
+  {
+   "speaker": "Personality",
+   "jp": "{普段|ふだん|usually, normally|4}は{人見知り|ひとみしり|shy with strangers|3}ですが、{映画|えいが}の{話|はなし}になると{熱く|あつく|passionate, heated|3}なります。",
+   "en": "I'm usually shy with new people, but when films come up I get passionate."
+  },
+  {
+   "speaker": "Question",
+   "jp": "{白黒|しろくろ|black and white|3}{映画|えいが}は{退屈|たいくつ|boring|3}？そんなわけがない！{一度|いちど}{見て|みて}みてください。",
+   "en": "Black-and-white films are boring? No way! Try watching one."
+  },
+  {
+   "speaker": "Mornings",
+   "jp": "コーヒーは{毎朝|まいあさ}{自分|じぶん}で{淹れます|いれます|to brew (coffee, tea)|3}。コーヒーなしで{朝|あさ}が{始まる|はじまる}わけがないので。",
+   "en": "I make my own coffee every morning. There's no way a morning can start without it."
+  },
+  {
+   "speaker": "Looking for",
+   "jp": "{一緒|いっしょ}に{映画|えいが}を{見たり|みたり}、{山|やま}を{歩いたり|あるいたり}できる{人|ひと}に{出会えたら|であえたら|to meet (by chance)|3}{嬉しい|うれしい}です。",
+   "en": "I'd be happy to meet someone to watch films and walk in the mountains with."
+  },
+  {
+   "speaker": "Note",
+   "jp": "※{返信|へんしん|reply (to a message)|3}が{遅い|おそい}ことがあります。ごめんなさい！",
+   "en": "※ Sometimes I'm slow to reply. Sorry!"
+  }
+ ],
+ "listening": {
+  "type": "dictation",
+  "intro": "Later that night you match, and レン sends his first message. Type what he writes.",
+  "who": "ren",
+  "lines": [
+   {
+    "who": "ren",
+    "jp": "はじめまして！スペインの{映画|えいが}、{僕|ぼく}も{好き|すき}です。",
+    "en": "Nice to meet you! I like Spanish films too."
+   }
+  ]
+ },
+ "grammar": {
+  "id": "n3-wake-ga-nai",
+  "pattern": "〜わけがない",
+  "level": "N3",
+  "meaning": "there's no way that",
+  "form": "verb: plain form + わけがない ({始|はじ}まるわけがない, {知|し}らないわけがない) · い-adj: + わけがない ({高|たか}いわけがない) · な-adj: + な + わけがない ({退屈|たいくつ}なわけがない) · noun: + の / な + わけがない ({嘘|うそ}のわけがない) · spoken: わけない (そんなわけないじゃん)",
+  "explanation": "A strong denial based on your own reasoning: 'there's no way'. In speech が drops: そんなわけない！ is the classic reply to an absurd idea. Don't confuse it with わけではない ('it's not that…'), which only softens; わけがない flatly rules something out.",
+  "src": [
+   "d4",
+   "d5",
+   "p2",
+   "p3"
+  ],
+  "mark": [
+   "そんなわけがない",
+   "始まるわけがない",
+   "そんなわけない",
+   "しないわけがない",
+   "まずいわけがない",
+   "覚えているわけがない",
+   "危険なわけがない"
+  ],
+  "examples": [
+   {
+    "jp": "あの{店|みせ}のラーメンがまずいわけがないよ。いつも{行列|ぎょうれつ|queue|3}だもん。",
+    "en": "There's no way that shop's ramen is bad. There's always a queue."
+   },
+   {
+    "jp": "{一度|いちど}{会った|あった}だけの{人|ひと}の{名前|なまえ}を、{覚えて|おぼえて}いるわけがない。",
+    "en": "There's no way I'd remember the name of someone I met just once."
+   },
+   {
+    "jp": "こんなに{静か|しずか}な{町|まち}が{危険|きけん|dangerous|3}なわけがない。",
+    "en": "A town this quiet can't possibly be dangerous."
+   }
+  ],
+  "quiz": {
+   "question": "{彼|かれ}は{毎日|まいにち}{練習|れんしゅう}しているから、{下手|へた|bad at|4}＿＿。",
+   "en": "He practises every day, so there's no way he's bad at it.",
+   "options": [
+    "なわけがない",
+    "だわけがない",
+    "わけではない",
+    "わけがある"
+   ],
+   "explain": "下手 is a な-adjective, so it takes な before わけがない, never だ."
+  },
+  "quiz_more": [
+   {
+    "question": "あの{二人|ふたり}が{付き合って|つきあって|to date|3}る？そんな＿＿じゃん！",
+    "en": "Those two are dating? No way!",
+    "options": [
+     "わけない",
+     "わけだ",
+     "はずだ",
+     "ことだ"
+    ],
+    "explain": "そんなわけない(じゃん) = 'no way!', with が dropped in speech. わけだ and はずだ say it IS so."
+   },
+   {
+    "question": "{映画|えいが}が{嫌い|きらい}な＿＿。{今日|きょう}は{疲れて|つかれて}いるだけ。",
+    "en": "It's not that I dislike films. I'm just tired today.",
+    "options": [
+     "わけではない",
+     "わけがない",
+     "わけにはいかない",
+     "はずがない"
+    ],
+    "explain": "Softening a misunderstanding ('it's not that…') needs わけではない; わけがない would flatly deny it."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "自己紹介",
+  "reading": "じこしょうかい",
+  "romaji": "jiko shōkai",
+  "meaning": "self-introduction ('About me')",
+  "where": "The heading over the 'About me' part of every dating-app and social-media profile, and on school and job forms.",
+  "breakdown": "{自己紹介|じこしょうかい}: 自己 oneself + 紹介 introduction → 'introducing yourself'.",
+  "related": "{紹介|しょうかい}する = to introduce; {自己|じこ}PR = selling yourself on a job form."
+ },
+ "tip": {
+  "mark": "顔",
+  "title": "Profiles without faces",
+  "body": "On Japanese dating apps (マチアプ for short) many people show a coffee cup, a pet or a mountain instead of their face, to stay discreet in a small town. Every app must check your age with an ID ({年齢確認|ねんれいかくにん}) by law, so expect to upload one before you can message."
+ },
+ "challenge": {
+  "type": "fix",
+  "hint": "な-adjective + な + わけがない",
+  "prompt": "In his profile レン asks 「{白黒|しろくろ|black and white|3}{映画|えいが}は{退屈|たいくつ|boring|3}？」 You write him a first message: there's no way they're boring, and you love 『{東京物語|とうきょうものがたり}』 too. One part is wrong.",
+  "parts": [
+   {
+    "jp": "{白黒|しろくろ}{映画|えいが}が"
+   },
+   {
+    "jp": "{退屈|たいくつ}だわけが",
+    "wrong": true,
+    "why": "{退屈|たいくつ} is a な-adjective: it keeps な before わけ ({退屈|たいくつ}なわけがない), never だ."
+   },
+   {
+    "jp": "ないですよ。"
+   },
+   {
+    "jp": "『{東京物語|とうきょうものがたり}』、{僕|ぼく}も{大好き|だいすき}です！"
+   }
+  ],
+  "model_answer": "{白黒|しろくろ|black and white|3}{映画|えいが}が{退屈|たいくつ|boring|3}なわけがないですよ。『{東京物語|とうきょうものがたり}』、{僕|ぼく}も{大好き|だいすき}です！",
+  "explanation": "{退屈|たいくつ} is a な-adjective, so it keeps な before わけがない. Adding ですよ keeps the strong 'no way' polite and friendly, right for a first message to someone you haven't met. {僕|ぼく}も{大好き|だいすき} shows you share his taste."
+ },
+ "vocab": [
+  {
+   "jp": "{地元|じもと}",
+   "reading": "じもと",
+   "en": "hometown; local area",
+   "level": "N3",
+   "src": "d0",
+   "surface": "地元",
+   "note": "地 land + 元 origin. {地元|じもと}の{人|ひと} = the locals."
+  },
+  {
+   "jp": "{趣味|しゅみ}",
+   "reading": "しゅみ",
+   "en": "hobby; taste",
+   "level": "N4",
+   "src": "d1",
+   "surface": "趣味",
+   "note": "{趣味|しゅみ}が{合|あ}う = to share tastes. {趣味|しゅみ}が{悪|わる}い = bad taste."
+  },
+  {
+   "jp": "{映画館|えいがかん}",
+   "reading": "えいがかん",
+   "en": "cinema",
+   "level": "N4",
+   "src": "d1",
+   "surface": "映画館",
+   "note": "映画 film + 館 building, as in {図書館|としょかん} and {美術館|びじゅつかん}."
+  },
+  {
+   "jp": "{作品|さくひん}",
+   "reading": "さくひん",
+   "en": "work (of art)",
+   "level": "N3",
+   "src": "d2",
+   "surface": "作品",
+   "note": "作る make + 品 article. Used for films, novels, paintings, a child's drawing."
+  },
+  {
+   "jp": "{普段|ふだん}",
+   "reading": "ふだん",
+   "en": "usually, normally",
+   "level": "N3",
+   "src": "d3",
+   "surface": "普段",
+   "note": "Your normal state, as opposed to now. {普段着|ふだんぎ} = everyday clothes."
+  },
+  {
+   "jp": "{人見知|ひとみし}り",
+   "reading": "ひとみしり",
+   "en": "shy with strangers",
+   "level": "N2",
+   "src": "d3",
+   "surface": "人見知り",
+   "note": "人 people + {見知|みし}る know by sight. {人見知|ひとみし}りする = to be shy at first."
+  },
+  {
+   "jp": "{熱|あつ}い",
+   "reading": "あつい",
+   "en": "hot (to touch); passionate",
+   "level": "N4",
+   "src": "d3",
+   "surface": "熱く",
+   "note": "{熱|あつ}いお{茶|ちゃ}; {熱|あつ}くなる = get fired up. Hot weather is {暑|あつ}い."
+  },
+  {
+   "jp": "{白黒|しろくろ}",
+   "reading": "しろくろ",
+   "en": "black and white",
+   "level": "N3",
+   "src": "d4",
+   "surface": "白黒",
+   "note": "Japanese says white first. {白黒|しろくろ}つける = settle who's right."
+  },
+  {
+   "jp": "{退屈|たいくつ}",
+   "reading": "たいくつ",
+   "en": "boring; bored",
+   "level": "N3",
+   "src": "d4",
+   "surface": "退屈",
+   "note": "な-adjective: {退屈|たいくつ}な{映画|えいが}. {退屈|たいくつ}する = to be bored."
+  },
+  {
+   "jp": "{返信|へんしん}",
+   "reading": "へんしん",
+   "en": "reply (to a message)",
+   "level": "N3",
+   "src": "d7",
+   "surface": "返信",
+   "note": "{返|へん} return + {信|しん} message. {返信|へんしん}が{遅|おそ}い = slow to reply."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "退",
+   "track": "lesson",
+   "on": "タイ",
+   "kun": "しりぞ(く)・しりぞ(ける)",
+   "meaning": "retreat, withdraw",
+   "parts": "⻌ road radical (moving) + 艮 a person turning to look back → walking away backwards: retreat, withdraw. 退屈 is a mind that has withdrawn: bored.",
+   "lookalike": "Not 追 (chase): both sit on ⻌, but 退 has 艮 on top, 追 has 𠂤.",
+   "words": [
+    {
+     "jp": "{退屈|たいくつ}",
+     "reading": "たいくつ",
+     "en": "boring; bored"
+    },
+    {
+     "jp": "{退院|たいいん}",
+     "reading": "たいいん",
+     "en": "leaving hospital"
+    },
+    {
+     "jp": "{引退|いんたい}",
+     "reading": "いんたい",
+     "en": "retirement"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+      "advance",
+      "chase",
+      "return home"
+    ],
+    "readings": [
+     "だいくつ",
+     "たいくち",
+     "たいぐつ"
+    ]
+   }
+  },
+  {
+   "kanji": "熱",
+   "track": "n3",
+   "on": "ネツ",
+   "kun": "あつ(い)",
+   "meaning": "heat; fever; passion",
+   "parts": "埶 a person holding up a plant + 灬 fire radical (four dots) underneath → fire burning under it: heat, fever, passion.",
+   "lookalike": "Not 勢 (force): same top, but 勢 has 力 power below, 熱 has the fire dots 灬.",
+   "words": [
+    {
+     "jp": "{熱|ねつ}",
+     "reading": "ねつ",
+     "en": "fever; heat"
+    },
+    {
+     "jp": "{熱|あつ}い",
+     "reading": "あつい",
+     "en": "hot; passionate"
+    },
+    {
+     "jp": "{熱心|ねっしん}",
+     "reading": "ねっしん",
+     "en": "eager, keen"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "cold",
+     "smoke",
+     "power"
+    ],
+    "readings": [
+     "ねち",
+     "ぜつ",
+     "あつ"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Describing someone's personality",
+   "title_jp": "{性格|せいかく}の{言葉|ことば}",
+   "intro": "Words you'll see in every profile, and hear when friends ask 'what's he like?'.",
+   "items": [
+    {
+     "jp": "{明るくて|あかるくて}、よく{笑う|わらう}{人|ひと}です。",
+     "en": "He's cheerful and laughs a lot.",
+     "note": "{明|あか}るい = bright, cheerful: the top compliment."
+    },
+    {
+     "jp": "{真面目|まじめ|serious, earnest|4}だけど、{面白い|おもしろい}ところもある。",
+     "en": "He's serious, but he has a funny side too.",
+     "note": "{真面目|まじめ} is a compliment in Japan, not 'boring'."
+    },
+    {
+     "jp": "{落ち着いて|おちついて|to be calm|4}いて、{話しやすい|はなしやすい}。",
+     "en": "He's calm and easy to talk to.",
+     "note": "〜やすい = easy to. A very common way to praise someone."
+    },
+    {
+     "jp": "ちょっと{天然|てんねん|airheaded, naturally ditzy|3}なところがかわいい。",
+     "en": "He's a bit of a space cadet, and it's cute.",
+     "note": "{天然|てんねん} = 'natural': slang for sweetly clueless."
+    }
+   ]
+  },
+  {
+   "title": "Talking about films",
+   "title_jp": "{映画|えいが}の{話|はなし}",
+   "intro": "Four words for a night at the cinema.",
+   "items": [
+    {
+     "jp": "{字幕|じまく|subtitles|3}と{吹き替え|ふきかえ|dubbing|3}、どっちが{好き|すき}？",
+     "en": "Subtitles or dubbing, which do you prefer?",
+     "note": "Cinemas list both: {字幕版|じまくばん} / {吹替版|ふきかえばん}."
+    },
+    {
+     "jp": "{邦画|ほうが|Japanese film|2}より{洋画|ようが|Western film|2}をよく{見る|みる}。",
+     "en": "I watch more foreign films than Japanese ones.",
+     "note": "{邦画|ほうが} = Japanese films, {洋画|ようが} = Western ones."
+    },
+    {
+     "jp": "ちょっと{待って|まって}、ネタバレしないで！",
+     "en": "Wait, no spoilers!",
+     "note": "ネタバレ = spoiler (ネタ material + バレる be revealed)."
+    }
+   ]
+  }
+ ]
+}

@@ -173,7 +173,7 @@
    ],
    "aliases": [],
    "color": "#2c4f86",
-   "status": "",
+   "status": "{古い|ふるい}{映画|えいが}とコーヒー☕",
    "where": "{長野市|ながのし}"
   },
   {
@@ -454,6 +454,19 @@
     "The 田中 house has a shed/barn (納屋); 恵子さん left the potatoes for the 21 Nov showdown there.",
     "鷹ノ原 town has a large-item (粗大ゴミ) collection on Sat 28 Nov; apply by phone to the town office by 25 Nov."
    ]
+  },
+  {
+   "date": "2026-11-18",
+   "cast": [
+    "ren"
+   ],
+   "summary": "Wednesday night: the rubbish went out on time and 恵子さん is back from 長野市. Under the kotatsu アルちゃん finally tries the dating app 健太 suggested and reads the profile of レン (26, designer in 長野市) who loves old films; they match and レン sends a first message saying he likes Spanish films too.",
+   "new_facts": [
+    "恵子さん came back from 長野市 on 18 Nov.",
+    "アルちゃん joined a dating app on 18 Nov; his profile mentions Spanish films.",
+    "レン's profile: designer in 長野市, studied in Tokyo, loves old films and film cameras, often goes to a small cinema in 長野市; favourite film is 小津安二郎's 東京物語; shy at first but passionate about films; brews his own coffee every morning; looking for someone to watch films and walk in the mountains with; warns he is slow to reply.",
+    "アルちゃん and レン matched on 18 Nov; レン sent the first message (Spanish films). They haven't met yet."
+   ]
   }
  ],
  "others": [
@@ -467,8 +480,8 @@
     "恵子"
    ],
    "color": "#e07a3f",
-   "status": "{孫|まご}の{看病|かんびょう}{中|ちゅう}",
-   "where": "{長野市|ながのし}（{今夜|こんや}だけ）"
+   "status": "ただいま、{鷹ノ原|たかのはら}",
+   "where": "{鷹ノ原|たかのはら}"
   }
  ]
 }
