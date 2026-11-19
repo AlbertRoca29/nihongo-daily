@@ -113,5 +113,12 @@
   "category": "entertainment",
   "function": "describing",
   "format": "text"
+ },
+ {
+  "id": "2026-11-19",
+  "topic": "A phone in a puddle",
+  "category": "tech-internet",
+  "function": "narrating",
+  "format": "dialogue"
  }
 ]

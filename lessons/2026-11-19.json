@@ -1,0 +1,420 @@
+{
+ "topic": "A phone in a puddle",
+ "category": "tech-internet",
+ "function": "narrating",
+ "format": "dialogue",
+ "cast": [],
+ "guest": {
+  "name": "村井さん",
+  "name_jp": "{村井誠|むらいまこと}",
+  "role": "Owner of {村井電器|むらいでんき}, the electronics and phone-repair shop on the shopping street",
+  "voice": "m",
+  "age": 45
+ },
+ "title_jp": "{水|みず}たまりのスマホ",
+ "context": "Thursday morning: アルちゃん drops his phone in the orchard and finds it an hour later in a puddle, dead. He still hasn't answered レン's first message, so he rushes to {村井電器|むらいでんき} on the shopping street.",
+ "scene": "Your phone spent the morning in a puddle and won't turn on. You still owe レン a reply. You run to the repair shop.",
+ "keep": [
+  "p1"
+ ],
+ "phrases": [
+  {
+   "jp": "スマホを{落として|おとして|to drop|4}、{画面|がめん|screen|4}が{割れちゃった|われちゃった|to crack, break|4}。",
+   "en": "I dropped my phone and cracked the screen.",
+   "register": "casual",
+   "note": "{割|わ}れる = crack (glass, screens). ちゃった adds 'oops'."
+  },
+  {
+   "jp": "{急に|きゅうに|suddenly|4}{電源|でんげん|power (switch)|3}が{入らなく|はいらなく}なっちゃったんです。",
+   "en": "Suddenly it won't turn on any more.",
+   "register": "polite",
+   "note": "{電源|でんげん}が{入|はい}る = to turn on. Works at any phone or repair counter."
+  },
+  {
+   "jp": "{約束|やくそく}したから、{行かない|いかない}わけにはいかないよ。",
+   "en": "I promised, so I have to go.",
+   "register": "casual",
+   "note": "Double negative = 'I have no choice but to go'."
+  },
+  {
+   "jp": "{仕事中|しごとちゅう}なので、{電話|でんわ}に{出る|でる}わけにはいかないんです。",
+   "en": "I'm at work, so I can't take the call.",
+   "register": "polite",
+   "note": "{電話|でんわ}に{出|で}る = answer the phone. The reason is a rule, not ability."
+  },
+  {
+   "jp": "{やばい||uh-oh; bad|4}、{充電|じゅうでん|charging; battery|4}が{切れそう|きれそう|to run out|4}…。",
+   "en": "Uh-oh, my battery's about to die.",
+   "register": "casual",
+   "note": "{充電|じゅうでん}が{切|き}れる = the battery dies."
+  }
+ ],
+ "dialogue_setting": "{村井電器|むらいでんき}, a small electronics shop on the shopping street, late Thursday morning.",
+ "dialogue": [
+  {
+   "who": "guest",
+   "speaker": "村井さん",
+   "jp": "いらっしゃい。あれ、スマホの{画面|がめん|screen|4}、{真っ暗|まっくら|pitch dark|3}だね。どうしたの？",
+   "en": "Welcome. Oh, your phone's screen is completely black. What happened?"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "{今朝|けさ}、{畑|はたけ|field, orchard|4}で{落として|おとして|to drop|4}、{一時間|いちじかん}も{探した|さがした|to look for|4}んです。",
+   "en": "This morning I dropped it in the orchard and spent a whole hour looking for it."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "やっと{見つけたら|みつけたら|to find|4}、{水たまり|みずたまり|puddle|3}の{中|なか}で…。それから{電源|でんげん|power (switch)|3}が{入らない|はいらない}んです。",
+   "en": "When I finally found it, it was in a puddle… Since then it won't turn on."
+  },
+  {
+   "who": "guest",
+   "speaker": "村井さん",
+   "jp": "あー、{水没|すいぼつ|water damage, sunk|2}か。{今|いま}すぐ{充電|じゅうでん|charging (a battery)|4}するわけにはいかないね。{一晩|ひとばん|one night|3}{乾かそう|かわかそう|to dry (something)|3}。",
+   "en": "Ah, water damage. I can't charge it right away. Let's dry it overnight.",
+   "note": "{水没|すいぼつ} = 'sunk': shop talk for any phone that got wet."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "でも、{今日|きょう}は{返事|へんじ|reply|4}しないわけにはいかないんです。{待ってる|まってる}{人|ひと}がいて…。",
+   "en": "But I really have to reply today. Someone's waiting…"
+  },
+  {
+   "who": "guest",
+   "speaker": "村井さん",
+   "jp": "じゃあ、{明日|あした}の{朝|あさ}{取りに|とりに}{来て|きて}。{待ってる|まってる}{人|ひと}には、{後で|あとで}{謝れば|あやまれば|to apologise|4}いいよ。",
+   "en": "Then come and pick it up tomorrow morning. Just apologise to whoever's waiting later."
+  }
+ ],
+ "listening": {
+  "type": "ladder",
+  "intro": "As you leave the shop, {村井|むらい}さん calls after you.",
+  "who": "guest",
+  "lines": [
+   {
+    "who": "guest",
+    "jp": "{明日|あした}は10{時|じ}に{開ける|あける}からね。それまで{充電|じゅうでん|charging|4}しちゃだめだよ！",
+    "en": "I open at 10 tomorrow. Don't charge it before then!"
+   }
+  ]
+ },
+ "grammar": {
+  "id": "n3-wake-ni-wa-ikanai",
+  "pattern": "〜わけにはいかない",
+  "level": "N3",
+  "meaning": "can't (for social or moral reasons)",
+  "form": "verb (dictionary): + わけにはいかない ({休|やす}むわけにはいかない, {充電|じゅうでん}するわけにはいかない) · verb ない: + わけにはいかない = must ({行|い}かないわけにはいかない) · polite: わけにはいきません ({出|で}るわけにはいきません)",
+  "explanation": "You can't do something because of duty, rules or conscience, not because it's impossible. With ない it becomes 'I have no choice but to': {行|い}かないわけにはいかない. Don't use it for ability: 'I can't swim' is {泳|およ}げない.",
+  "src": [
+   "d4",
+   "d3",
+   "p2",
+   "p3"
+  ],
+  "mark": [
+   "返事しないわけにはいかない",
+   "充電するわけにはいかない",
+   "行かないわけにはいかない",
+   "出るわけにはいかない",
+   "断るわけにはいかない",
+   "寝るわけにはいかない"
+  ],
+  "examples": [
+   {
+    "jp": "{先輩|せんぱい|senior (at work, school)|3}に{誘われたら|さそわれたら|to invite|3}、{断る|ことわる|to refuse|3}わけにはいかない。",
+    "en": "If a senior invites you, you can't really say no."
+   },
+   {
+    "jp": "{明日|あした}は{試験|しけん}だから、{今夜|こんや}は{寝る|ねる}わけにはいかない。",
+    "en": "The exam is tomorrow, so I can't go to sleep tonight."
+   }
+  ],
+  "quiz": {
+   "question": "{熱|ねつ}があるけど、{今日|きょう}は{大事|だいじ}な{会議|かいぎ}だから、{休む|やすむ}＿＿。",
+   "en": "I have a fever, but today's meeting is important, so I can't take the day off.",
+   "options": [
+    "わけにはいかない",
+    "わけがない",
+    "わけではない",
+    "はずがない"
+   ],
+   "explain": "Duty stops you, so わけにはいかない. わけがない = 'no way', わけではない = 'it's not that'."
+  },
+  "quiz_more": [
+   {
+    "question": "{親友|しんゆう|best friend|3}の{結婚式|けっこんしき|wedding|3}だから、{行かない|いかない}＿＿。",
+    "en": "It's my best friend's wedding, so I have to go.",
+    "options": [
+     "わけにはいかない",
+     "わけではいかない",
+     "ことにはいかない",
+     "わけはいかない"
+    ],
+    "explain": "The fixed form is わけにはいかない: ない-form + it means 'I must'."
+   },
+   {
+    "question": "{子供|こども}のころから{水|みず}が{怖くて|こわくて}、{今|いま}も＿＿。",
+    "en": "I've been scared of water since I was a kid, and I still can't swim.",
+    "options": [
+     "泳げない",
+     "泳ぐわけにはいかない",
+     "泳ぐわけがない",
+     "泳がないわけにはいかない"
+    ],
+    "explain": "This is ability, not duty, so use the potential form {泳|およ}げない."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "修理",
+  "reading": "しゅうり",
+  "romaji": "shūri",
+  "meaning": "repair",
+  "where": "The sign in the window of {村井電器|むらいでんき}: スマホ{修理|しゅうり} {受付中|うけつけちゅう} (smartphone repairs taken).",
+  "breakdown": "{修理|しゅうり}: 修 mend, put right + 理 order, logic → putting something back in working order: repair.",
+  "related": "{修理|しゅうり}に{出|だ}す = send for repair; {修理代|しゅうりだい} = repair fee."
+ },
+ "tip": {
+  "mark": "水",
+  "title": "Phones and water",
+  "body": "In shop talk a phone that got wet is {水没|すいぼつ} ('sunk'), even if it only fell in a puddle. Many Japanese phones are {防水|ぼうすい} (waterproof) because people use them in the bath. If one dies anyway, don't charge it: dry it first."
+ },
+ "challenge": {
+  "type": "sticker",
+  "hint": "How do you say 'that's so embarrassing'?",
+  "prompt": "That evening {恵子|けいこ}さん tells the family LINE group. {颯太|そうた} replies: 「{水|みず}たまりで{一時間|いちじかん}もスマホ{探してた|さがしてた|to look for|4}の？{ウケる||hilarious (slang)|3}ｗ」 She hands you her phone. You're embarrassed. Which sticker?",
+  "stickers": [
+   "hazukashii",
+   "sugee",
+   "yatta",
+   "ookini"
+  ],
+  "model_answer": "{恥ずかしい|はずかしい}…",
+  "explanation": "{恥|は}ずかしい… is how you laugh at yourself after a silly mistake. すげー！ and やった！ cheer good news, and おおきに is Kansai 'thanks', which makes no sense as a reply here."
+ },
+ "vocab": [
+  {
+   "jp": "{画面|がめん}",
+   "reading": "がめん",
+   "en": "screen",
+   "level": "N3",
+   "src": "d0",
+   "surface": "画面",
+   "note": "{画|が} picture + {面|めん} surface. {画面|がめん}が{割|わ}れる = the screen cracks."
+  },
+  {
+   "jp": "{真|ま}っ{暗|くら}",
+   "reading": "まっくら",
+   "en": "pitch dark",
+   "level": "N3",
+   "src": "d0",
+   "surface": "真っ暗",
+   "note": "{真|ま}っ = completely + {暗|くら}い. Also {真|ま}っ{白|しろ}, {真|ま}っ{赤|か}."
+  },
+  {
+   "jp": "{落|お}とす",
+   "reading": "おとす",
+   "en": "to drop; to lose",
+   "level": "N4",
+   "src": "d1",
+   "surface": "落として",
+   "note": "You drop it: {落|お}とす. It falls: {落|お}ちる."
+  },
+  {
+   "jp": "{探|さが}す",
+   "reading": "さがす",
+   "en": "to look for",
+   "level": "N4",
+   "src": "d1",
+   "surface": "探した",
+   "note": "For something lost or wanted: {仕事|しごと}を{探|さが}す = job hunting."
+  },
+  {
+   "jp": "{水|みず}たまり",
+   "reading": "みずたまり",
+   "en": "puddle",
+   "level": "N3",
+   "src": "d2",
+   "surface": "水たまり",
+   "note": "水 water + たまる to collect."
+  },
+  {
+   "jp": "{電源|でんげん}",
+   "reading": "でんげん",
+   "en": "power (switch); power supply",
+   "level": "N3",
+   "src": "d2",
+   "surface": "電源",
+   "note": "{電源|でんげん}を{入|い}れる / {切|き}る = switch on / off."
+  },
+  {
+   "jp": "{充電|じゅうでん}",
+   "reading": "じゅうでん",
+   "en": "charging (a battery)",
+   "level": "N3",
+   "src": "d3",
+   "surface": "充電",
+   "note": "{充|じゅう} fill + {電|でん} electricity. {充電器|じゅうでんき} = charger."
+  },
+  {
+   "jp": "{一晩|ひとばん}",
+   "reading": "ひとばん",
+   "en": "one night; overnight",
+   "level": "N3",
+   "src": "d3",
+   "surface": "一晩",
+   "note": "{一晩中|ひとばんじゅう} = all night long."
+  },
+  {
+   "jp": "{乾|かわ}かす",
+   "reading": "かわかす",
+   "en": "to dry (something)",
+   "level": "N3",
+   "src": "d3",
+   "surface": "乾かそう",
+   "note": "You dry it: {乾|かわ}かす. It dries: {乾|かわ}く. {髪|かみ}を{乾|かわ}かす."
+  },
+  {
+   "jp": "{謝|あやま}る",
+   "reading": "あやまる",
+   "en": "to apologise",
+   "level": "N4",
+   "src": "d5",
+   "surface": "謝れば",
+   "note": "{人|ひと}に{謝|あやま}る. The polite noun is {謝罪|しゃざい}."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "暗",
+   "track": "lesson",
+   "on": "アン",
+   "kun": "くら(い)",
+   "meaning": "dark",
+   "parts": "日 sun radical + 音 sound → the sun is gone and you only have sounds to go on: dark.",
+   "lookalike": "Not 晴 (clear weather): both have 日 on the left, but 晴 has 青 blue, 暗 has 音 sound.",
+   "words": [
+    {
+     "jp": "{真|ま}っ{暗|くら}",
+     "reading": "まっくら",
+     "en": "pitch dark"
+    },
+    {
+     "jp": "{暗|くら}い",
+     "reading": "くらい",
+     "en": "dark; gloomy"
+    },
+    {
+     "jp": "{暗記|あんき}",
+     "reading": "あんき",
+     "en": "memorising by heart"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "bright",
+     "evening",
+     "quiet"
+    ],
+    "readings": [
+     "まっくろ",
+     "まくら",
+     "まっあん"
+    ]
+   }
+  },
+  {
+   "kanji": "探",
+   "track": "n3",
+   "on": "タン",
+   "kun": "さが(す)・さぐ(る)",
+   "meaning": "search, look for",
+   "parts": "扌 hand radical + 罙 (a hole 穴 with a tree 木) → a hand reaching deep into a hole: search.",
+   "lookalike": "Not 深 (deep): same right side, but 深 has 氵 water, 探 has 扌 hand.",
+   "words": [
+    {
+     "jp": "{探|さが}す",
+     "reading": "さがす",
+     "en": "to look for"
+    },
+    {
+     "jp": "{探偵|たんてい}",
+     "reading": "たんてい",
+     "en": "detective"
+    },
+    {
+     "jp": "{探検|たんけん}",
+     "reading": "たんけん",
+     "en": "exploration"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "deep",
+     "catch",
+     "throw"
+    ],
+    "readings": [
+     "たんす",
+     "さぐす",
+     "さかす"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Phone trouble",
+   "title_jp": "スマホのトラブル",
+   "intro": "What you'll say at a phone shop, or to a friend with a charger.",
+   "items": [
+    {
+     "jp": "スマホが{フリーズした||to freeze (device)|3}。",
+     "en": "My phone froze.",
+     "note": "Also {固|かた}まった: 'it set hard'."
+    },
+    {
+     "jp": "そろそろ{機種変|きしゅへん|switching to a new phone|3}しようかな。",
+     "en": "Maybe it's time for a new phone.",
+     "note": "Short for {機種変更|きしゅへんこう}, what shops call it."
+    },
+    {
+     "jp": "{充電器|じゅうでんき|charger|3}、{貸して|かして}くれない？",
+     "en": "Can you lend me a charger?",
+     "note": "The most-asked favour at any guesthouse."
+    },
+    {
+     "jp": "Wi-Fiのパスワード、{教えて|おしえて}もらえますか。",
+     "en": "Could you tell me the Wi-Fi password?",
+     "note": "Often on a card next to the router."
+    }
+   ]
+  },
+  {
+   "title": "Telling a mishap in order",
+   "title_jp": "{失敗|しっぱい}の{話し方|はなしかた}",
+   "intro": "Three linkers that make a story of what went wrong.",
+   "items": [
+    {
+     "jp": "{最初|さいしょ}は、{全然|ぜんぜん}{気づかなかった|きづかなかった|to notice|4}。",
+     "en": "At first I didn't notice at all."
+    },
+    {
+     "jp": "そしたら、{急に|きゅうに|suddenly|4}{変|へん}な{音|おと}がして…。",
+     "en": "And then suddenly there was a strange noise…",
+     "note": "そしたら = casual そうしたら, 'and then'."
+    },
+    {
+     "jp": "{結局|けっきょく|in the end|4}、{全部|ぜんぶ}{やり直し|やりなおし|doing over, redo|3}だった。",
+     "en": "In the end I had to redo everything."
+    }
+   ]
+  }
+ ]
+}
