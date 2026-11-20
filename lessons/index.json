@@ -120,5 +120,12 @@
   "category": "tech-internet",
   "function": "narrating",
   "format": "dialogue"
+ },
+ {
+  "id": "2026-11-20",
+  "topic": "Kenta's handover note",
+  "category": "work-volunteering",
+  "function": "comparing",
+  "format": "text"
  }
 ]

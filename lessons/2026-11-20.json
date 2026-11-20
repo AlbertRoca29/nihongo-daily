@@ -1,0 +1,455 @@
+{
+ "topic": "Kenta's handover note",
+ "category": "work-volunteering",
+ "function": "comparing",
+ "format": "text",
+ "cast": [
+  "kenta"
+ ],
+ "reader": "kenta",
+ "title_jp": "{健太|けんた}の{引き継ぎ|ひきつぎ}メモ",
+ "context": "Friday: {村井|むらい}さん hands back アルちゃん's phone, dried and working, and he finally replies to レン. The next thing on it is a photo of {健太|けんた}'s handover note: tomorrow {健太|けんた} will be busy preparing the showdown, so アルちゃん runs reception alone in the afternoon.",
+ "scene": "Your phone works again. Next on it: a photo of {健太|けんた}'s handover note for tomorrow, when you run reception alone.",
+ "keep": [
+  "p0"
+ ],
+ "phrases": [
+  {
+   "jp": "{雪|ゆき}のせいで、バスが{遅れて|おくれて|to be late, delayed|4}いるそうです。",
+   "en": "Apparently the bus is late because of the snow.",
+   "register": "polite",
+   "note": "What you tell a waiting guest. Noun + のせいで: never drop the の."
+  },
+  {
+   "jp": "{平日|へいじつ|weekday|3}に{比べて|くらべて|to compare|4}、{週末|しゅうまつ}はずっと{忙しい|いそがしい}ですね。",
+   "en": "Compared with weekdays, weekends are much busier.",
+   "register": "polite",
+   "note": "AにBべて = compared with A. ずっと before an adjective = much more."
+  },
+  {
+   "jp": "{確認|かくにん|checking, confirmation|4}してから、{折り返し|おりかえし|calling back|3}お{電話|でんわ}します。",
+   "en": "I'll check and call you back.",
+   "register": "polite",
+   "note": "The reception classic when you don't know the answer yet."
+  },
+  {
+   "jp": "{寝坊|ねぼう|oversleeping|4}したせいで、{朝ご飯|あさごはん}{食べられなかった|たべられなかった}…。",
+   "en": "I overslept, so I couldn't eat breakfast…",
+   "register": "casual",
+   "note": "Blaming yourself works too. {寝坊|ねぼう}する = to oversleep."
+  },
+  {
+   "jp": "{昨日|きのう}より、{今日|きょう}の{方|ほう}が{慣れて|なれて|to get used to|4}きた{気|き}がする。",
+   "en": "I feel more used to it today than yesterday.",
+   "register": "casual",
+   "note": "AよりBの{方|ほう}が = B more than A. 〜{気|き}がする softens it: 'I feel like'."
+  }
+ ],
+ "dialogue_setting": "A handwritten note taped to the reception desk at ゲストハウス{風|かぜ}, sent by {健太|けんた} as a photo on LINE.",
+ "text_title": "{土曜日|どようび}の{受付|うけつけ}メモ（{健太|けんた}より）",
+ "dialogue": [
+  {
+   "speaker": "Hello",
+   "jp": "アルちゃんへ。{明日|あした}は{対決|たいけつ|showdown, face-off|3}の{準備|じゅんび}のせいで、{俺|おれ}は{午後|ごご}ずっと{台所|だいどころ}や。{受付|うけつけ|reception (desk)|4}、{頼んだ|たのんだ}で！",
+   "en": "To アルちゃん. Because of the showdown prep, I'm in the kitchen all afternoon tomorrow. Reception is yours!",
+   "register": "dialect",
+   "note": "Kansai: や = だ, {頼|たの}んだで = {頼|たの}んだよ."
+  },
+  {
+   "speaker": "Weekdays vs weekends",
+   "jp": "{平日|へいじつ|weekday|3}に{比べて|くらべて}、{週末|しゅうまつ}はチェックインが{倍|ばい|double, twice as many|3}くらい{多い|おおい}。{特に|とくに}3{時|じ}から5{時|じ}が{混む|こむ}で。",
+   "en": "Compared with weekdays, there are about twice as many check-ins at weekends. 3 to 5 is the busiest.",
+   "register": "dialect",
+   "note": "{混|こ}むで = {混|こ}むよ (Kansai)."
+  },
+  {
+   "speaker": "Guests",
+   "jp": "{週末|しゅうまつ}は{家族連れ|かぞくづれ|families with children|3}も{多い|おおい}。{外国|がいこく}のお{客|きゃく}さんより、{質問|しつもん}が{細かい|こまかい|detailed; small|4}{気|き}がする。",
+   "en": "At weekends there are lots of families too. I feel their questions are more detailed than the foreign guests'."
+  },
+  {
+   "speaker": "Last week",
+   "jp": "{先週|せんしゅう}は{俺|おれ}が{予約|よやく}の{確認|かくにん|checking, confirmation|4}を{忘れた|わすれた}せいで、{部屋|へや}が{一つ|ひとつ}{足りなく|たりなく}なった。ほんまにごめん…。",
+   "en": "Last week, because I forgot to check a booking, we ended up one room short. Really sorry…",
+   "register": "dialect",
+   "note": "ほんまに = {本当|ほんとう}に (Kansai)."
+  },
+  {
+   "speaker": "Rule",
+   "jp": "チェックインの{時|とき}は{必ず|かならず}{名前|なまえ}と{泊数|はくすう|number of nights|2}を{確認|かくにん}。{到着|とうちゃく|arrival|3}が{遅れる|おくれる|to be late, delayed|4}{客|きゃく}には{電話|でんわ}してな。",
+   "en": "At check-in, always confirm the name and number of nights. Phone any guest whose arrival is running late.",
+   "register": "dialect",
+   "note": "してな = してね (Kansai)."
+  },
+  {
+   "speaker": "You vs me",
+   "jp": "{正直|しょうじき|honestly, to be honest|4}、{受付|うけつけ}は{俺|おれ}より{丁寧|ていねい}やし、{評判|ひょうばん|reputation|3}もええ。でもトルティーヤは{負けへん|まけへん|(Kansai) = 負けない|2}で！",
+   "en": "Honestly, you're more polite than me at reception, and the guests like you. But I won't lose at tortilla!",
+   "register": "dialect",
+   "note": "やし = だし, ええ = いい, {負|ま}けへん = {負|ま}けない (Kansai)."
+  },
+  {
+   "speaker": "P.S.",
+   "jp": "P.S. スマホ、{直った|なおった|to be fixed|4}？{直ったら|なおったら}スタンプ{一個|いっこ}{送って|おくって}な。",
+   "en": "P.S. Is your phone fixed? If it is, send me a sticker.",
+   "register": "dialect",
+   "note": "{送|おく}ってな = {送|おく}ってね (Kansai)."
+  }
+ ],
+ "listening": {
+  "type": "voicemail",
+  "intro": "In the afternoon your phone rings for the first time since the puddle: a voicemail from {恵子|けいこ}さん.",
+  "who": "keiko",
+  "lines": [
+   {
+    "who": "keiko",
+    "jp": "アルちゃん、{恵子|けいこ}です。{明日|あした}のじゃがいも、{納屋|なや|shed, barn|2}から{出して|だして}、{玄関|げんかん|entrance hall|3}に{置いて|おいて}おいたよ。",
+    "en": "アルちゃん, it's {恵子|けいこ}. I took tomorrow's potatoes out of the shed and left them in the entrance."
+   },
+   {
+    "who": "keiko",
+    "jp": "{卵|たまご}は{健太|けんた}くんが{買う|かう}んでしょう？{忘れないで|わすれないで}ね。",
+    "en": "{健太|けんた} is buying the eggs, right? Don't forget them."
+   }
+  ],
+  "question": "じゃがいもは{今|いま}どこにありますか。",
+  "options": [
+   "{玄関|げんかん}",
+   "{納屋|なや}",
+   "{台所|だいどころ}",
+   "ゲストハウス"
+  ],
+  "explain": "{納屋|なや}から{出して|だして}、{玄関|げんかん}に{置いて|おいて}おいた: she took them out of the shed and left them in the entrance."
+ },
+ "grammar": {
+  "id": "n3-sei-de",
+  "pattern": "〜せいで",
+  "level": "N3",
+  "meaning": "because of (blaming)",
+  "form": "noun: + の + せいで ({雪|ゆき}のせいで, {準備|じゅんび}のせいで) · verb: plain form + せいで ({忘|わす}れたせいで, {寝坊|ねぼう}したせいで) · い-adj: + せいで ({寒|さむ}いせいで) · な-adj: + な + せいで ({下手|へた}なせいで)",
+  "explanation": "Names the cause of a bad result, with a hint of blame: 'it's X's fault that…'. For good results use おかげで ('thanks to'). The classic mistake is dropping の after a noun: {雪|ゆき}のせいで, never {雪|ゆき}せいで. {私|わたし}のせいで = it's my fault.",
+  "src": [
+   "d3",
+   "p0",
+   "d0",
+   "p3"
+  ],
+  "mark": [
+   "忘れたせいで",
+   "雪のせいで",
+   "準備のせいで",
+   "寝坊したせいで",
+   "風邪のせいで",
+   "寒いせいで",
+   "私のせいで"
+  ],
+  "examples": [
+   {
+    "jp": "{風邪|かぜ}のせいで、{声|こえ}が{出ない|でない}。",
+    "en": "I've lost my voice because of this cold."
+   },
+   {
+    "jp": "{部屋|へや}が{寒い|さむい}せいで、{全然|ぜんぜん}{眠れなかった|ねむれなかった}。",
+    "en": "The room was so cold I couldn't sleep at all."
+   },
+   {
+    "jp": "{私|わたし}のせいで{遅れて|おくれて|to be late|4}しまって、すみません。",
+    "en": "I'm sorry we're late because of me."
+   }
+  ],
+  "quiz": {
+   "question": "{台風|たいふう|typhoon|3}＿＿、{電車|でんしゃ}が{止まった|とまった}。",
+   "en": "The trains stopped because of the typhoon.",
+   "options": [
+    "のせいで",
+    "せいで",
+    "なせいで",
+    "のおかげで"
+   ],
+   "explain": "台風 is a noun, so it needs の before せいで; おかげで is for good results."
+  },
+  "quiz_more": [
+   {
+    "question": "{先生|せんせい}が{丁寧|ていねい}に{教えて|おしえて}くれた＿＿、{合格|ごうかく|passing (an exam)|3}できた。",
+    "en": "Thanks to the teacher explaining carefully, I passed.",
+    "options": [
+     "おかげで",
+     "せいで",
+     "のせいで",
+     "のおかげで"
+    ],
+    "explain": "A good result takes おかげで, and after a verb there's no の."
+   },
+   {
+    "question": "{説明|せつめい}が{下手|へた|bad at|4}＿＿、お{客|きゃく}さんを{困らせて|こまらせて}しまった。",
+    "en": "Because my explanation was bad, I confused the guest.",
+    "options": [
+     "なせいで",
+     "だせいで",
+     "のせいで",
+     "せいで"
+    ],
+    "explain": "下手 is a な-adjective: it keeps な before せいで."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "満室",
+  "reading": "まんしつ",
+  "romaji": "manshitsu",
+  "meaning": "fully booked, no vacancy",
+  "where": "The sign {健太|けんた} hangs on the guesthouse door on busy weekends, and the red label on booking sites when no rooms are left.",
+  "breakdown": "{満室|まんしつ}: 満 full + 室 room → 'rooms full'.",
+  "related": "{満席|まんせき} = all seats taken; {空室|くうしつ} = vacancy."
+ },
+ "tip": {
+  "mark": "引",
+  "title": "Never leave without a handover",
+  "body": "In Japanese workplaces, even a part-timer passes on what's pending before a day off: this is {引き継ぎ|ひきつぎ}. A short written note is the norm, and it usually ends with よろしくお{願い|ねが}いします or a friendly {頼んだ|たのんだ}よ. Leaving without one looks careless, however good your work was."
+ },
+ "challenge": {
+  "type": "pick",
+  "prompt": "You send {健太|けんた} a sticker. He replies at once: 「おっ、{直った|なおった|to be fixed|4}んや！よかったな。」 Tell him yes, it's fixed, but because of the puddle the camera has gone a bit weird.",
+  "options": [
+   {
+    "jp": "うん、{直った|なおった}！でも{水|みず}たまりのせいで、カメラがちょっと{変|へん}になった。",
+    "ok": true,
+    "why": "Noun + のせいで for a bad result, casual style for a coworker friend."
+   },
+   {
+    "jp": "うん、{直った|なおった}！でも{水|みず}たまりせいで、カメラがちょっと{変|へん}になった。",
+    "ok": false,
+    "why": "After a noun you need の: {水|みず}たまりのせいで."
+   },
+   {
+    "jp": "うん、{直った|なおった}！でも{水|みず}たまりのおかげで、カメラがちょっと{変|へん}になった。",
+    "ok": false,
+    "why": "おかげで means 'thanks to': it only sounds sarcastic with a bad result."
+   },
+   {
+    "jp": "うん、{直った|なおった}！でも{水|みず}たまりなせいで、カメラがちょっと{変|へん}になった。",
+    "ok": false,
+    "why": "な is only for な-adjectives; {水|みず}たまり is a noun, so it takes の."
+   }
+  ],
+  "model_answer": "うん、{直った|なおった|to be fixed|4}！でも{水|みず}たまりのせいで、カメラがちょっと{変|へん}になった。",
+  "explanation": "{水|みず}たまりのせいで puts the blame on the puddle: a noun takes の before せいで. {変|へん}になった = 'went weird'. Plain form and うん fit a chat with {健太|けんた}, who writes in casual Kansai-ben.",
+  "hint": "noun + の + せいで, casual"
+ },
+ "vocab": [
+  {
+   "jp": "{対決|たいけつ}",
+   "reading": "たいけつ",
+   "en": "showdown, face-off",
+   "level": "N2",
+   "src": "d0",
+   "surface": "対決",
+   "note": "{対|たい} against + {決|けつ} decide. TV loves it: {料理|りょうり}{対決|たいけつ} = cooking battle."
+  },
+  {
+   "jp": "{受付|うけつけ}",
+   "reading": "うけつけ",
+   "en": "reception (desk)",
+   "level": "N3",
+   "src": "d0",
+   "surface": "受付",
+   "note": "{受|う}ける receive + {付|つ}ける attach. Signs at hotels, hospitals, offices."
+  },
+  {
+   "jp": "{平日|へいじつ}",
+   "reading": "へいじつ",
+   "en": "weekday",
+   "level": "N3",
+   "src": "d1",
+   "surface": "平日",
+   "note": "{平|へい} ordinary + {日|じつ} day. Opposite: {週末|しゅうまつ}, {土日|どにち}."
+  },
+  {
+   "jp": "{倍|ばい}",
+   "reading": "ばい",
+   "en": "double, twice (as much)",
+   "level": "N3",
+   "src": "d1",
+   "surface": "倍",
+   "note": "{倍|ばい}になる = to double. 3{倍|ばい} = three times as much."
+  },
+  {
+   "jp": "{細|こま}かい",
+   "reading": "こまかい",
+   "en": "detailed; small, fine",
+   "level": "N3",
+   "src": "d2",
+   "surface": "細かい",
+   "note": "{細|こま}かい{人|ひと} = a fussy person. {細|こま}かいお{金|かね} = small change."
+  },
+  {
+   "jp": "{確認|かくにん}",
+   "reading": "かくにん",
+   "en": "checking, confirmation",
+   "level": "N3",
+   "src": "d3",
+   "surface": "確認",
+   "note": "{確|かく} certain + {認|にん} recognise. {確認|かくにん}する: you'll hear it at every counter."
+  },
+  {
+   "jp": "{遅|おく}れる",
+   "reading": "おくれる",
+   "en": "to be late, delayed",
+   "level": "N4",
+   "src": "d4",
+   "surface": "遅れる",
+   "note": "Trains, people, arrivals. {遅|おそ}い is the adjective 'slow, late'."
+  },
+  {
+   "jp": "{正直|しょうじき}",
+   "reading": "しょうじき",
+   "en": "honestly; honest",
+   "level": "N3",
+   "src": "d5",
+   "surface": "正直",
+   "note": "Sentence opener: {正直|しょうじき}、… = 'to be honest…'. Also {正直|しょうじき}な{人|ひと}."
+  },
+  {
+   "jp": "{評判|ひょうばん}",
+   "reading": "ひょうばん",
+   "en": "reputation",
+   "level": "N3",
+   "src": "d5",
+   "surface": "評判",
+   "note": "{評判|ひょうばん}がいい / {悪|わる}い. {評判|ひょうばん}の{店|みせ} = a popular shop."
+  },
+  {
+   "jp": "{直|なお}る",
+   "reading": "なおる",
+   "en": "to be fixed, repaired",
+   "level": "N4",
+   "src": "d6",
+   "surface": "直った",
+   "note": "Things get {直|なお}る; illnesses get {治|なお}る. Same sound."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "確",
+   "track": "lesson",
+   "on": "カク",
+   "kun": "たし(か)・たし(かめる)",
+   "meaning": "certain, sure; confirm",
+   "parts": "石 stone radical + 隺 a bird flying high → as solid as stone: certain, confirmed.",
+   "lookalike": "Not 硬 (hard): both have 石 on the left, but 確 has 隺, 硬 has 更.",
+   "words": [
+    {
+     "jp": "{確認|かくにん}",
+     "reading": "かくにん",
+     "en": "checking, confirmation"
+    },
+    {
+     "jp": "{確|たし}か",
+     "reading": "たしか",
+     "en": "certain; if I remember right"
+    },
+    {
+     "jp": "{正確|せいかく}",
+     "reading": "せいかく",
+     "en": "accurate"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "stone",
+     "doubt",
+     "record"
+    ],
+    "readings": [
+     "かくいん",
+     "がくにん",
+     "かっにん"
+    ]
+   }
+  },
+  {
+   "kanji": "遅",
+   "track": "n3",
+   "on": "チ",
+   "kun": "おく(れる)・おそ(い)",
+   "meaning": "late, slow",
+   "parts": "⻌ road radical (moving) + 尸 and 羊 sheep → a sheep plodding down the road: slow, late.",
+   "lookalike": "Not 達 (reach): both sit on ⻌, but 遅 has 尸 over 羊, 達 has 土 over 羊.",
+   "words": [
+    {
+     "jp": "{遅|おく}れる",
+     "reading": "おくれる",
+     "en": "to be late, delayed"
+    },
+    {
+     "jp": "{遅|おそ}い",
+     "reading": "おそい",
+     "en": "slow; late"
+    },
+    {
+     "jp": "{遅刻|ちこく}",
+     "reading": "ちこく",
+     "en": "being late (for school, work)"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "early",
+     "run",
+     "stop"
+    ],
+    "readings": [
+     "おそれる",
+     "おくられる",
+     "ちれる"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Reception lines in keigo",
+   "title_jp": "{受付|うけつけ}の{敬語|けいご}",
+   "intro": "What {健太|けんた} switches to the moment a guest walks in.",
+   "items": [
+    {
+     "jp": "ご{予約|よやく}のお{名前|なまえ}をお{願い|ねがい}します。",
+     "en": "May I have the name on the booking?",
+     "note": "The first line at every check-in."
+    },
+    {
+     "jp": "{少々|しょうしょう|a little (polite)|3}お{待ち|まち}ください。",
+     "en": "One moment, please.",
+     "note": "{少々|しょうしょう} = polite ちょっと."
+    },
+    {
+     "jp": "{本日|ほんじつ|today (formal)|3}は{満室|まんしつ|fully booked|2}でございます。",
+     "en": "We're fully booked today.",
+     "note": "{本日|ほんじつ} = formal {今日|きょう}."
+    }
+   ]
+  },
+  {
+   "title": "More ways to compare",
+   "title_jp": "{比べる|くらべる}{言い方|いいかた}",
+   "intro": "Three patterns that sit next to より and に{比|くら}べて.",
+   "items": [
+    {
+     "jp": "{大阪|おおさか}の{冬|ふゆ}は、ここほど{寒く|さむく}ない。",
+     "en": "Winter in Osaka isn't as cold as here.",
+     "note": "AほどBない = not as B as A."
+    },
+    {
+     "jp": "{平日|へいじつ|weekday|3}のほうが{断然|だんぜん|by far|3}{楽|らく}だよ。",
+     "en": "Weekdays are by far easier.",
+     "note": "{断然|だんぜん} = by far, decidedly; casual and strong."
+    },
+    {
+     "jp": "どっちも{同じ|おなじ}くらい{美味しい|おいしい}。",
+     "en": "Both are just as tasty.",
+     "note": "{同|おな}じくらい = about the same: the diplomatic answer at a food showdown."
+    }
+   ]
+  }
+ ]
+}
