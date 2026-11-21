@@ -1,0 +1,374 @@
+{
+ "topic": "{由紀|ゆき} works on a Saturday",
+ "category": "money-work",
+ "function": "opinions",
+ "format": "line",
+ "cast": ["yuki"],
+ "title_jp": "{土曜|どよう}なのに{仕事|しごと}？",
+ "context": "Saturday 21 November, lunchtime. アルちゃん runs the reception of ゲストハウス{風|かぜ} alone while {健太|けんた} cooks for tonight's showdown; in {東京|とうきょう}, {由紀|ゆき} is stuck at the office on her day off and wants to talk about work culture.",
+ "scene": "Lunch break at reception. {由紀|ゆき} is working on a Saturday in {東京|とうきょう} and wants your opinion on Japanese work culture.",
+ "keep": ["p0"],
+ "phrases": [
+  {
+   "jp": "{田中|たなか}さんのおかげで、{仕事|しごと}に{慣れました|なれました|to get used to|4}。",
+   "en": "Thanks to you, {田中|たなか}さん, I've got used to the work.",
+   "register": "polite",
+   "note": "Thanking a host or boss. You'll hear back いえいえ or {頑張|がんば}ったからだよ."
+  },
+  {
+   "jp": "{日本|にほん}の{働き方|はたらきかた|way of working|3}について、どう{思います|おもいます}か？",
+   "en": "What do you think about the way people work in Japan?",
+   "register": "polite",
+   "note": "〜についてどう{思|おも}いますか: the standard way to ask an opinion."
+  },
+  {
+   "jp": "{確かに|たしかに|true, indeed|4}。でも、ちょっと{違う|ちがう}と{思う|おもう}な。",
+   "en": "True. But I think it's a bit different.",
+   "register": "casual",
+   "note": "Agree first, then disagree softly: the Japanese way to push back."
+  },
+  {
+   "jp": "それは{人|ひと}に{よる||to depend on|4}んじゃない？",
+   "en": "Doesn't that depend on the person?",
+   "register": "casual",
+   "note": "〜による = it depends on. Politely: {人|ひと}によると{思|おも}います."
+  },
+  {
+   "jp": "{有給|ゆうきゅう|paid leave|3}、{取りにくい|とりにくい}んだよね。",
+   "en": "It's hard to take paid leave, you know.",
+   "register": "casual",
+   "note": "{有給|ゆうきゅう} is short for {有給休暇|ゆうきゅうきゅうか}. 〜にくい = hard to do."
+  }
+ ],
+ "dialogue_setting": "LINE, Saturday lunchtime: {由紀|ゆき} at her office in {東京|とうきょう}, アルちゃん behind the reception desk of ゲストハウス{風|かぜ}.",
+ "dialogue": [
+  {
+   "who": "yuki",
+   "speaker": "由紀",
+   "time": "12:31",
+   "kind": "voice",
+   "jp": "{土曜|どよう}なのに{休日出勤|きゅうじつしゅっきん|working on a day off|2}なう…マジむり",
+   "en": "Working on my day off, it's Saturday… seriously, I can't.",
+   "register": "slang",
+   "note": "なう = 'right now' (from English 'now'), old Twitter slang. マジむり = {本当|ほんとう}に{無理|むり}."
+  },
+  {
+   "who": "yuki",
+   "speaker": "由紀",
+   "time": "12:31",
+   "jp": "{部長|ぶちょう|department head|3}が{月曜|げつよう}までに{資料|しりょう|documents, materials|3}ほしいって",
+   "en": "My department head wants the documents by Monday."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "12:33",
+   "jp": "え、{土曜|どよう}も？スペインだったら、みんな{文句|もんく|complaint|3}{言う|いう}よｗ",
+   "en": "What, Saturdays too? In Spain everyone would complain, lol."
+  },
+  {
+   "who": "yuki",
+   "speaker": "由紀",
+   "time": "12:34",
+   "jp": "{日本|にほん}は「{上司|じょうし|boss|3}より{先|さき}に{帰りにくい|かえりにくい}」って{空気|くうき|atmosphere, mood|4}あるじゃん",
+   "en": "In Japan there's this feeling that it's hard to leave before your boss, right?"
+  },
+  {
+   "who": "yuki",
+   "speaker": "由紀",
+   "time": "12:35",
+   "jp": "{ぶっちゃけ||(slang) to be blunt|3}、{長く|ながく}{働く|はたらく}のが{偉い|えらい|admirable, great|4}って{考え方|かんがえかた|way of thinking|4}、{古い|ふるい}と{思う|おもう}",
+   "en": "To be blunt, I think the idea that working long hours is admirable is outdated.",
+   "register": "slang",
+   "note": "ぶっちゃけ = {正直|しょうじき}に{言|い}うと (honestly speaking)."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "12:37",
+   "jp": "{確かに|たしかに|true, indeed|4}。でも{日本|にほん}の{仕事|しごと}って、{丁寧|ていねい|careful, polite|4}で{真面目|まじめ|serious, diligent|4}だと{思う|おもう}な",
+   "en": "True. But I think work in Japan is careful and serious."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "12:37",
+   "jp": "{今日|きょう}は{一人|ひとり}だけど、{健太|けんた}が{渡して|わたして|to hand over|4}くれたメモのおかげで{何とか|なんとか|somehow|4}なってる！",
+   "en": "I'm alone today, but thanks to the note {健太|けんた} gave me, I'm managing!"
+  },
+  {
+   "who": "yuki",
+   "speaker": "由紀",
+   "time": "12:38",
+   "jp": "{偉い|えらい|admirable, great|4}じゃん！で、{夜|よる}の{対決|たいけつ|showdown|3}は{勝てそう|かてそう}？",
+   "en": "Well done you! So, tonight's showdown: think you'll win?"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "12:40",
+   "jp": "{恵子|けいこ}さんのじゃがいものおかげで、{自信|じしん|confidence|4}あるよ！",
+   "en": "Thanks to {恵子|けいこ}さん's potatoes, I'm feeling confident!"
+  },
+  {
+   "who": "yuki",
+   "speaker": "由紀",
+   "time": "12:41",
+   "sticker": "fight",
+   "jp": "ファイト！",
+   "en": "Go for it!"
+  }
+ ],
+ "listening": {
+  "type": "announcement",
+  "intro": "Through the open window, the station next door makes an announcement.",
+  "who": "extra",
+  "title": "{鷹ノ原駅|たかのはらえき}のお{知らせ|しらせ}",
+  "place": "{鷹ノ原駅|たかのはらえき}, next to the guesthouse",
+  "lines": [
+   {
+    "who": "extra",
+    "voice": "m",
+    "jp": "お{知らせ|しらせ}します。{長野|ながの}{方面|ほうめん|direction (of)|2}からの{電車|でんしゃ}は、{約|やく}20{分|ぷん}{遅れて|おくれて}おります。",
+    "en": "An announcement. The train from {長野|ながの} is running about 20 minutes late."
+   },
+   {
+    "who": "extra",
+    "voice": "m",
+    "jp": "{線路|せんろ|railway track|3}に{鹿|しか|deer|3}が{入った|はいった}ためです。ご{迷惑|めいわく|trouble, inconvenience|3}をおかけして、{申し訳|もうしわけ}ございません。",
+    "en": "This is because a deer got onto the track. We apologise for the inconvenience."
+   }
+  ],
+  "question": "{電車|でんしゃ}はどうして{遅|おく}れていますか。",
+  "options": [
+   "{鹿|しか}が{線路|せんろ}に{入|はい}ったから",
+   "{雪|ゆき}がたくさん{降|ふ}ったから",
+   "{事故|じこ}があったから",
+   "{乗|の}る{人|ひと}が{多|おお}いから"
+  ],
+  "explain": "{鹿|しか}が{入|はい}ったためです: ため gives the formal reason. Deer on the line are common in {長野|ながの}, and some guests will check in late."
+ },
+ "grammar": {
+  "id": "n3-okage-de",
+  "pattern": "〜おかげで",
+  "level": "N3",
+  "meaning": "thanks to",
+  "form": "noun: + のおかげで ({健太|けんた}のおかげで, メモのおかげで) · verb: plain form + おかげで ({飲|の}んだおかげで, {来|き}てくれたおかげで) · い-adj: + おかげで ({近|ちか}いおかげで) · な-adj: + なおかげで ({元気|げんき}なおかげで)",
+  "explanation": "Gives the cause of a good result, with a feeling of thanks. For bad results use 〜せいで instead. Said about a bad result, おかげで turns sarcastic: {雨|あめ}のおかげでびしょびしょ = 'thanks a lot, rain'.",
+  "src": ["d6", "d8", "p0"],
+  "mark": ["メモのおかげで", "じゃがいものおかげで", "田中さんのおかげで", "飲んだおかげで", "近いおかげで", "先生のおかげで"],
+  "examples": [
+   {
+    "jp": "{薬|くすり}を{飲んだ|のんだ}おかげで、{熱|ねつ}が{下がった|さがった}。",
+    "en": "Thanks to the medicine, my fever went down."
+   },
+   {
+    "jp": "{駅|えき}が{近い|ちかい}おかげで、{通勤|つうきん|commuting|3}が{楽|らく}だ。",
+    "en": "Because the station is close, commuting is easy."
+   },
+   {
+    "jp": "{先生|せんせい}のおかげで、{試験|しけん}に{合格|ごうかく|passing (an exam)|3}できました。",
+    "en": "Thanks to my teacher, I passed the exam."
+   }
+  ],
+  "quiz": {
+   "question": "{友達|ともだち}が{手伝って|てつだって}くれた＿＿、{早く|はやく}{終わった|おわった}。",
+   "en": "Thanks to my friend's help, I finished early.",
+   "options": ["おかげで", "せいで", "のおかげで", "なおかげで"],
+   "explain": "After a verb, おかげで joins directly; の is only for nouns. せいで would blame the friend."
+  },
+  "quiz_more": [
+   {
+    "question": "{雨|あめ}の＿＿、{試合|しあい}が{中止|ちゅうし|cancellation|3}になった。",
+    "en": "Because of the rain, the match was cancelled.",
+    "options": ["せいで", "おかげで", "ように", "ほうが"],
+    "explain": "A cancelled match is a bad result, so せいで. おかげで here would sound sarcastic."
+   },
+   {
+    "question": "この{町|まち}は{静か|しずか}＿＿、よく{眠れる|ねむれる}。",
+    "en": "This town is quiet, so I sleep well.",
+    "options": ["なおかげで", "のおかげで", "おかげで", "だおかげで"],
+    "explain": "な-adjectives keep な before おかげで: {静|しず}かなおかげで."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "満室",
+  "reading": "まんしつ",
+  "romaji": "manshitsu",
+  "meaning": "fully booked, no vacancies",
+  "where": "On the small sign アルちゃん hangs on the guesthouse door at lunchtime: tonight every bed is taken.",
+  "breakdown": "{満室|まんしつ}: 満 full + 室 room → 'rooms full'. Booking sites show it too.",
+  "related": "{空室|くうしつ} = vacancy (空 empty + 室 room)."
+ },
+ "tip": {
+  "mark": "先",
+  "title": "Leaving before the others",
+  "body": "When you leave work while others stay, say お{先|さき}に{失礼|しつれい}します; they answer お{疲|つか}れ{様|さま}です. Many workers still don't use all their {有給|ゆうきゅう} because of the 空気, but younger people and new rules are slowly changing that."
+ },
+ "challenge": {
+  "type": "write",
+  "prompt": "{由紀|ゆき}: 「で、アルちゃんはどう{思う|おもう}？スペインと{日本|にほん}、どっちの{働き方|はたらきかた|way of working|3}がいい？」 Give your opinion, and thank her for teaching you about Japanese offices.",
+  "model_answer": "{休み|やすみ}はスペインの{方|ほう}がいいと{思う|おもう}。でも、{由紀|ゆき}のおかげで{日本|にほん}の{会社|かいしゃ}のことがよくわかったよ！",
+  "hint": "〜の方がいいと思う · 〜のおかげで",
+  "explanation": "〜の{方|ほう}がいいと{思|おも}う gives a clear opinion by comparing. {由紀|ゆき}のおかげで thanks her for a good result (you understand more now). Plain form and よ fit a close friend on LINE."
+ },
+ "vocab": [
+  {
+   "jp": "{休日出勤|きゅうじつしゅっきん}",
+   "reading": "きゅうじつしゅっきん",
+   "en": "working on a day off",
+   "level": "N3",
+   "src": "d0",
+   "surface": "休日出勤",
+   "note": "{休日|きゅうじつ} day off + {出勤|しゅっきん} going to work. {休日出勤|きゅうじつしゅっきん}する."
+  },
+  {
+   "jp": "{資料|しりょう}",
+   "reading": "しりょう",
+   "en": "documents, materials",
+   "level": "N3",
+   "src": "d1",
+   "surface": "資料",
+   "note": "Handouts, data, slides for a meeting: {会議|かいぎ}の{資料|しりょう}."
+  },
+  {
+   "jp": "{文句|もんく}",
+   "reading": "もんく",
+   "en": "complaint, grumble",
+   "level": "N3",
+   "src": "d2",
+   "surface": "文句",
+   "note": "{文句|もんく}を{言|い}う = to complain. {文句|もんく}ない = no complaints, perfect."
+  },
+  {
+   "jp": "{上司|じょうし}",
+   "reading": "じょうし",
+   "en": "boss, superior",
+   "level": "N3",
+   "src": "d3",
+   "surface": "上司",
+   "note": "{上|じょう} above + {司|し} in charge. Opposite: {部下|ぶか} (subordinate)."
+  },
+  {
+   "jp": "{偉|えら}い",
+   "reading": "えらい",
+   "en": "admirable, great; well done",
+   "level": "N3",
+   "src": "d4",
+   "surface": "偉い",
+   "note": "{偉|えら}いじゃん! = good for you. {偉|えら}い{人|ひと} = an important person."
+  },
+  {
+   "jp": "{考|かんが}え{方|かた}",
+   "reading": "かんがえかた",
+   "en": "way of thinking",
+   "level": "N4",
+   "src": "d4",
+   "surface": "考え方",
+   "note": "Verb stem + {方|かた} = way of doing: {働|はたら}き{方|かた}, {読|よ}み{方|かた}."
+  },
+  {
+   "jp": "{真面目|まじめ}",
+   "reading": "まじめ",
+   "en": "serious, diligent",
+   "level": "N4",
+   "src": "d5",
+   "surface": "真面目",
+   "note": "Praise, but can mean 'too serious'. Slang: マジ comes from it."
+  },
+  {
+   "jp": "{渡|わた}す",
+   "reading": "わたす",
+   "en": "to hand over, give",
+   "level": "N4",
+   "src": "d6",
+   "surface": "渡して",
+   "note": "Pass something to someone's hand. {渡|わた}る = to cross (a road, a bridge)."
+  },
+  {
+   "jp": "{何|なん}とか",
+   "reading": "なんとか",
+   "en": "somehow, one way or another",
+   "level": "N3",
+   "src": "d6",
+   "surface": "何とか",
+   "note": "{何|なん}とかなる = it'll work out. {何|なん}とかする = I'll manage it."
+  },
+  {
+   "jp": "{自信|じしん}",
+   "reading": "じしん",
+   "en": "confidence",
+   "level": "N3",
+   "src": "d8",
+   "surface": "自信",
+   "note": "{自信|じしん}がある / ない. Not {地震|じしん} (earthquake): same sound."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "偉",
+   "track": "lesson",
+   "on": "イ",
+   "kun": "えら(い)",
+   "meaning": "great, admirable",
+   "parts": "亻 person radical + 韋 (to go around, surpass) → a person who goes beyond the others: great, admirable.",
+   "lookalike": "Not 違 (differ): 偉 has 亻 person on the left, 違 has ⻌ road around it.",
+   "words": [
+    {"jp": "{偉|えら}い", "reading": "えらい", "en": "admirable, great"},
+    {"jp": "{偉人|いじん}", "reading": "いじん", "en": "great person (in history)"},
+    {"jp": "{偉大|いだい}", "reading": "いだい", "en": "great, mighty"}
+   ],
+   "decoys": {
+    "meanings": ["strong", "strict", "rich"],
+    "readings": ["いらい", "おもい", "かたい"]
+   }
+  },
+  {
+   "kanji": "渡",
+   "track": "n3",
+   "on": "ト",
+   "kun": "わた(る)・わた(す)",
+   "meaning": "cross; hand over",
+   "parts": "氵 water radical + 度 (degree, times) → getting across the water step by step: cross; passing something across to someone: hand over.",
+   "lookalike": "Not 度 (degree, times): 渡 adds 氵 water on the left.",
+   "words": [
+    {"jp": "{渡|わた}す", "reading": "わたす", "en": "to hand over"},
+    {"jp": "{渡|わた}る", "reading": "わたる", "en": "to cross"},
+    {"jp": "{渡|わた}り{鳥|どり}", "reading": "わたりどり", "en": "migratory bird"}
+   ],
+   "decoys": {
+    "meanings": ["swim", "measure", "wash"],
+    "readings": ["とす", "かえす", "わらす"]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Office words",
+   "title_jp": "{会社|かいしゃ}のことば",
+   "intro": "What {由紀|ゆき} and her colleagues talk about every day.",
+   "items": [
+    {"jp": "{残業|ざんぎょう|overtime|3}", "en": "overtime", "note": "{残業|ざんぎょう}する = work late."},
+    {"jp": "{定時|ていじ|regular finishing time|3}で{帰る|かえる}", "en": "to leave on time", "note": "The dream of many office workers."},
+    {"jp": "{飲み会|のみかい|drinking party|4}", "en": "drinks with colleagues", "note": "Officially optional, often not really."},
+    {"jp": "{転職|てんしょく|changing jobs|3}", "en": "changing jobs", "note": "Much more common now than 20 years ago."}
+   ]
+  },
+  {
+   "title": "Ways to give an opinion",
+   "title_jp": "{意見|いけん}の{言い方|いいかた}",
+   "intro": "From soft to slangy.",
+   "items": [
+    {"jp": "〜んじゃない？", "en": "isn't it…? / I'd say…", "note": "A soft opinion phrased as a question."},
+    {"jp": "{私|わたし}はスペイン{派|は|camp, side|3}かな", "en": "I'm team Spain, I guess", "note": "〜{派|は} = on the side of."},
+    {"jp": "どっちとも{言えない|いえない}", "en": "I can't say either way", "note": "Useful when you don't want to choose."},
+    {"jp": "それな", "en": "exactly, so true", "note": "Young people's slang for 'I agree'."}
+   ]
+  }
+ ]
+}

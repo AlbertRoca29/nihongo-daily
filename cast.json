@@ -68,7 +68,7 @@
     "Yuki"
    ],
    "color": "#80c241",
-   "status": "カラオケ{行きたい|いきたい}…",
+   "status": "{休日出勤|きゅうじつしゅっきん}なう…カラオケ{行きたい|いきたい}",
    "where": "{東京|とうきょう}"
   },
   {
@@ -95,7 +95,7 @@
     "Kenta"
    ],
    "color": "#f39800",
-   "status": "{明日|あした}は{対決|たいけつ}や！{負けへん|まけへん}で🔥",
+   "status": "{今日|きょう}は{対決|たいけつ}や！{負けへん|まけへん}で🔥",
    "where": "ゲストハウス{風|かぜ}"
   },
   {
@@ -495,6 +495,20 @@
     "Guesthouse rule: at check-in confirm the name and number of nights; phone guests whose arrival is late.",
     "On Sat 21 Nov 健太 is in the kitchen all afternoon preparing the showdown; アルちゃん runs reception alone.",
     "恵子さん put the showdown potatoes in the 田中 house entrance (玄関) on 20 Nov; 健太 is buying the eggs."
+   ]
+  },
+  {
+   "date": "2026-11-21",
+   "cast": [
+    "yuki"
+   ],
+   "summary": "Saturday lunchtime: アルちゃん runs reception alone and hangs the 満室 sign. On LINE, 由紀 is working on her day off in 東京 and says the idea that long hours are admirable is outdated; アルちゃん says he's managing thanks to 健太's note and feels confident for tonight's showdown thanks to 恵子さん's potatoes.",
+   "new_facts": [
+    "由紀 worked on Sat 21 Nov (休日出勤) because her 部長 wanted documents by Monday.",
+    "由紀 thinks Japan's 'hard to leave before the boss' culture and the idea that long hours are admirable are outdated.",
+    "ゲストハウス風 was fully booked (満室) on the night of Sat 21 Nov.",
+    "On the afternoon of 21 Nov the train from 長野 was about 20 minutes late because a deer got onto the track.",
+    "由紀 wants to hear the result of the showdown."
    ]
   }
  ],

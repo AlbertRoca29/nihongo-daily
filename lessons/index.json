@@ -127,5 +127,12 @@
   "category": "work-volunteering",
   "function": "comparing",
   "format": "text"
+ },
+ {
+  "id": "2026-11-21",
+  "topic": "{由紀|ゆき} works on a Saturday",
+  "category": "money-work",
+  "function": "opinions",
+  "format": "line"
  }
 ]
