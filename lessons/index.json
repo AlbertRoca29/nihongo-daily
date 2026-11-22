@@ -134,5 +134,12 @@
   "category": "money-work",
   "function": "opinions",
   "format": "line"
+ },
+ {
+  "id": "2026-11-22",
+  "topic": "News: Early snow hits Nagano",
+  "category": "news",
+  "function": "feelings",
+  "format": "dialogue"
  }
 ]

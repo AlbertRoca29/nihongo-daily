@@ -40,7 +40,7 @@
     "Tanaka-san"
    ],
    "color": "#c0392b",
-   "status": "{今年|ことし}のりんごは{甘い|あまい}ぞ",
+   "status": "{初雪|はつゆき}だに。{雪道|ゆきみち}{気|き}をつけろ",
    "where": "{鷹ノ原|たかのはら} · {畑|はたけ}"
   },
   {
@@ -95,7 +95,7 @@
     "Kenta"
    ],
    "color": "#f39800",
-   "status": "{今日|きょう}は{対決|たいけつ}や！{負けへん|まけへん}で🔥",
+   "status": "{対決|たいけつ}、{勝った|かった}で！{次|つぎ}は{白馬|はくば}や🏂",
    "where": "ゲストハウス{風|かぜ}"
   },
   {
@@ -509,6 +509,20 @@
     "ゲストハウス風 was fully booked (満室) on the night of Sat 21 Nov.",
     "On the afternoon of 21 Nov the train from 長野 was about 20 minutes late because a deer got onto the track.",
     "由紀 wants to hear the result of the showdown."
+   ]
+  },
+  {
+   "date": "2026-11-22",
+   "cast": [
+    "tanaka",
+    "keiko"
+   ],
+   "summary": "Sunday 22 Nov: the first snow fell in 鷹ノ原 overnight, the first snow of アルちゃん's life. 恵子さん reads the news about early heavy snow in 白馬 and the stranded cars in 長和町; アルちゃん lost the showdown to 健太 4–6 and must clean the guesthouse, so 田中さん drives him there in the kei truck.",
+   "new_facts": [
+    "The first snow of the season fell in 鷹ノ原 on the night of Sat 21 Nov; it was the first snow アルちゃん had ever seen.",
+    "健太 won the tortilla–okonomiyaki showdown 6 votes to 4; アルちゃん cleans ゲストハウス風 alone on Sun 22 Nov (健太 offered to help in a voice message).",
+    "田中さん drove アルちゃん to the guesthouse in the kei truck on 22 Nov.",
+    "健太 wants to go to 白馬 with アルちゃん now the ski season has started; アルちゃん has never skied."
    ]
   }
  ],

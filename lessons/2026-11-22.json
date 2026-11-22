@@ -1,0 +1,431 @@
+{
+ "topic": "News: Early snow hits Nagano",
+ "category": "news",
+ "function": "feelings",
+ "format": "dialogue",
+ "news": true,
+ "cast": [
+  "tanaka"
+ ],
+ "title_jp": "{長野|ながの}に{早い|はやい}{雪|ゆき}",
+ "context": "On 20 November 2026 the season's first strong cold wave reached {長野県|ながのけん} just before the three-day weekend: 20 cm of snow lay in {白馬|はくば} by 3 p.m., {長野市|ながのし} saw its first snow, and in {長和町|ながわまち} cars were stuck in a line of up to about 2 km that evening. {白馬八方尾根|はくばはっぽうおね} ski area moved its pre-opening about 10 days earlier, to 21 November. Source: NBS {長野放送|ながのほうそう}, TV{朝日|あさひ} (ANN).",
+ "scene": "Sunday morning, snow outside. {恵子|けいこ}さん reads the snow news on her tablet, and you still have to clean the guesthouse after losing last night.",
+ "keep": [
+  "p1"
+ ],
+ "phrases": [
+  {
+   "jp": "{生まれて初めて|うまれてはじめて}{雪|ゆき}を{見ました|みました}。",
+   "en": "I saw snow for the first time in my life.",
+   "register": "polite",
+   "note": "{生|う}まれて{初|はじ}めて = for the first time ever. Stronger than {初|はじ}めて alone."
+  },
+  {
+   "jp": "{負けて|まけて}、めっちゃ{悔しい|くやしい|frustrating (after losing)|4}！",
+   "en": "I lost and I'm so frustrated!",
+   "register": "casual",
+   "note": "{悔|くや}しい is for losing or failing when you tried; {残念|ざんねん} is just 'too bad'."
+  },
+  {
+   "jp": "{着いた|ついた}ばかりなのに、もう{帰る|かえる}の？",
+   "en": "You've only just arrived and you're leaving already?",
+   "register": "casual",
+   "note": "〜たばかりなのに = 'only just… and yet'. Said to a guest leaving early."
+  },
+  {
+   "jp": "{道|みち}が{凍って|こおって|to freeze|3}いるので、{滑らない|すべらない|to slip|4}ように{気をつけて|きをつけて}ください。",
+   "en": "The road is frozen, so please be careful not to slip.",
+   "register": "polite",
+   "note": "A warning you'll hear all winter at stations and on the news."
+  },
+  {
+   "jp": "{感動|かんどう|being deeply moved|4}して、{言葉|ことば}が{出なかった|でなかった}。",
+   "en": "I was so moved I couldn't speak.",
+   "register": "neutral",
+   "note": "{感動|かんどう}する: moved by beauty, a film, kindness. Not 'excited' (ワクワクする)."
+  }
+ ],
+ "dialogue_setting": "The {田中|たなか} kitchen, Sunday 22 November, 8 a.m. Snow on the {縁側|えんがわ}; {恵子|けいこ}さん has the news open on her tablet.",
+ "dialogue": [
+  {
+   "who": "keiko",
+   "speaker": "恵子さん",
+   "jp": "アルちゃん、ニュース{見て|みて}。{白馬|はくば}はもう{雪|ゆき}が{20センチ|にじゅっセンチ}も{積もった|つもった|to pile up (snow)|3}って。",
+   "en": "アルちゃん, look at the news. In {白馬|はくば} 20 cm of snow has already piled up."
+  },
+  {
+   "who": "keiko",
+   "speaker": "恵子さん",
+   "jp": "スキー{場|じょう|ski resort|3}も、いつもより{10日|とおか}{早く|はやく}オープンしたそうよ。",
+   "en": "And the ski resort opened ten days earlier than usual, they say."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "え、もう？{初雪|はつゆき|first snow of the season|3}、{昨日|きのう}の{夜|よる}{降った|ふった}ばかりなのに。{生まれて初めて|うまれてはじめて}の{雪|ゆき}だったんです。",
+   "en": "What, already? The first snow only fell last night. It was the first snow of my life."
+  },
+  {
+   "who": "tanaka",
+   "speaker": "田中さん",
+   "register": "dialect",
+   "note": "ずら = だろう (Nagano dialect). いかん = いけない: you mustn't.",
+   "jp": "{長和町|ながわまち}じゃ、{車|くるま}が{2キロ|にキロ}も{動けなく|うごけなく}なったずら。{雪道|ゆきみち|snowy road|3}を{甘く見ちゃ|あまくみちゃ|to underestimate|3}いかん。",
+   "en": "In {長和町|ながわまち} cars got stuck for 2 km, right? Don't underestimate snowy roads."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "はい…。でも{今日|きょう}は{掃除|そうじ|cleaning|4}です。{対決|たいけつ|showdown|3}、{4対6|よんたいろく}で{負けちゃって|まけちゃって}…{悔しい|くやしい|frustrating (after losing)|4}！",
+   "en": "Yes… But today I'm cleaning. I lost the showdown 4 to 6… so frustrating!"
+  },
+  {
+   "who": "tanaka",
+   "speaker": "田中さん",
+   "register": "dialect",
+   "note": "だに = だよ (Nagano dialect, for emphasis). 〜てやる: doing a favour, from someone older.",
+   "jp": "{悔しい|くやしい|frustrating (after losing)|4}のは{本気|ほんき|serious, for real|4}だったからだに。{軽トラ|けいトラ|kei truck|3}で{送って|おくって|to give a lift|4}やる。",
+   "en": "You're frustrated because you were serious about it. I'll drive you in the kei truck."
+  }
+ ],
+ "listening": {
+  "type": "dictation",
+  "intro": "On the way, {健太|けんた} sends you a voice message from the guesthouse. Type what he says.",
+  "who": "kenta",
+  "lines": [
+   {
+    "who": "kenta",
+    "jp": "{雪|ゆき}やから{気|き}ぃつけてな。{掃除|そうじ|cleaning|4}、{一緒|いっしょ}にやろか？",
+    "en": "It's snowing, so be careful. Shall we do the cleaning together?"
+   }
+  ]
+ },
+ "grammar": {
+  "id": "n4-bakari",
+  "pattern": "〜たばかり",
+  "level": "N4",
+  "meaning": "have just done",
+  "form": "verb た-form: + ばかり ({降|ふ}ったばかり, {来|き}たばかり) · before a noun: + ばかりの ({買|か}ったばかりの{靴|くつ}) · 'and yet': + ばかりなのに ({着|つ}いたばかりなのに)",
+  "explanation": "Says something happened only a short time ago, as the speaker feels it: minutes or even months. 〜たところ means literally 'a moment ago'. Don't mix it up with て-form + ばかりいる, which means 'doing nothing but'.",
+  "src": [
+   "d2",
+   "p2"
+  ],
+  "mark": [
+   "降ったばかり",
+   "着いたばかり",
+   "買ったばかり",
+   "来たばかり"
+  ],
+  "examples": [
+   {
+    "jp": "{買った|かった}ばかりの{靴|くつ}が、もう{汚れた|よごれた|to get dirty|3}。",
+    "en": "The shoes I just bought are already dirty."
+   },
+   {
+    "jp": "{日本|にほん}に{来た|きた}ばかりのころは、{何|なに}もわからなかった。",
+    "en": "When I had just come to Japan, I didn't understand anything."
+   }
+  ],
+  "quiz": {
+   "question": "{昼|ひる}ご{飯|はん}を{食べた|たべた}＿＿なのに、もうお{腹|なか}が{空いた|すいた|to get hungry|4}。",
+   "en": "I only just ate lunch, and I'm already hungry.",
+   "options": [
+    "ばかり",
+    "まま",
+    "だけ",
+    "ほど"
+   ],
+   "explain": "た-form + ばかりなのに: 'only just did it, and yet…'."
+  },
+  "quiz_more": [
+   {
+    "question": "{先月|せんげつ}＿＿パソコンが{壊れた|こわれた|to break|4}。",
+    "en": "The computer I bought just last month broke.",
+    "options": [
+     "買ったばかりの",
+     "買うばかりの",
+     "買ったばかりな",
+     "買ってばかりの"
+    ],
+    "explain": "Use the た-form, and ばかりの before a noun."
+   },
+   {
+    "question": "{弟|おとうと}はゲームをして＿＿いる。",
+    "en": "My little brother does nothing but play games.",
+    "options": [
+     "ばかり",
+     "たばかり",
+     "ところ",
+     "まま"
+    ],
+    "explain": "て-form + ばかりいる = doing nothing but. た-form + ばかり would mean 'just did'."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "路面凍結",
+  "reading": "ろめんとうけつ",
+  "romaji": "romen tōketsu",
+  "meaning": "icy road (warning)",
+  "where": "On the orange electronic sign by the bridge, as {田中|たなか}さん's kei truck crawls down to the station.",
+  "breakdown": "{路面凍結|ろめんとうけつ}: 路 road + 面 surface + 凍 freeze + 結 tie, set → 'the road surface has frozen'.",
+  "related": "{注意|ちゅうい} = caution: {路面凍結|ろめんとうけつ}{注意|ちゅうい} is the full sign."
+ },
+ "tip": {
+  "mark": "雪",
+  "title": "Walk like a penguin",
+  "body": "Japanese news and stations really tell people to walk on ice like a penguin (ペンギン{歩き|あるき}): small steps, weight forward. In snowy towns, clearing snow ({雪かき|ゆきかき}) in front of your house is expected, and neighbours notice who does it."
+ },
+ "challenge": {
+  "type": "fix",
+  "hint": "{動詞|どうし}た{形|けい} + ばかり",
+  "prompt": "{健太|けんた} on LINE: 「{白馬|はくば}、もうオープンしたらしいで！{今度|こんど}{一緒|いっしょ}に{行こ|いこ}か？」 You reply: you only just saw snow, so it's still scary, but you want to go. One part is wrong.",
+  "parts": [
+   {
+    "jp": "{雪|ゆき}を"
+   },
+   {
+    "jp": "{見る|みる}ばかりだから、",
+    "wrong": true,
+    "why": "'Just did' needs the た-form: {見|み}たばかり. {見|み}るばかり means 'only keep looking'."
+   },
+   {
+    "jp": "まだ{怖い|こわい}けど、"
+   },
+   {
+    "jp": "{行きたい|いきたい}！"
+   }
+  ],
+  "model_answer": "{雪|ゆき}を{見た|みた}ばかりだから、まだ{怖い|こわい|scary|4}けど、{行きたい|いきたい}！",
+  "explanation": "{見|み}たばかりだから: the た-form + ばかり says you saw snow only very recently, and だから gives it as the reason. けど softens the fear before the real answer, {行|い}きたい. Plain form fits a friend on LINE."
+ },
+ "vocab": [
+  {
+   "jp": "{積|つ}もる",
+   "reading": "つもる",
+   "en": "to pile up, accumulate (snow)",
+   "level": "N3",
+   "src": "d0",
+   "surface": "積もった",
+   "note": "{雪|ゆき}が{積|つ}もる. Not つもり (intention), though it sounds close."
+  },
+  {
+   "jp": "{初雪|はつゆき}",
+   "reading": "はつゆき",
+   "en": "first snow of the season",
+   "level": "N3",
+   "src": "d2",
+   "surface": "初雪",
+   "note": "{初|はつ} first + {雪|ゆき} snow. Also {初恋|はつこい}, first love."
+  },
+  {
+   "jp": "{甘|あま}く{見|み}る",
+   "reading": "あまくみる",
+   "en": "to underestimate",
+   "level": "N3",
+   "src": "d3",
+   "surface": "甘く見ちゃ",
+   "note": "Literally 'see as sweet'. {甘|あま}く{見|み}ないで = don't take it lightly."
+  },
+  {
+   "jp": "{掃除|そうじ}",
+   "reading": "そうじ",
+   "en": "cleaning",
+   "level": "N4",
+   "src": "d4",
+   "surface": "掃除",
+   "note": "{掃除|そうじ}する. Big end-of-year clean: {大掃除|おおそうじ}."
+  },
+  {
+   "jp": "{悔|くや}しい",
+   "reading": "くやしい",
+   "en": "frustrating, galling (after losing)",
+   "level": "N3",
+   "src": "d4",
+   "surface": "悔しい",
+   "note": "For losing or failing after trying. Sports players say it all the time."
+  },
+  {
+   "jp": "{本気|ほんき}",
+   "reading": "ほんき",
+   "en": "serious, for real",
+   "level": "N3",
+   "src": "d5",
+   "surface": "本気",
+   "note": "{本気|ほんき}で = seriously. マジ is the slang version."
+  },
+  {
+   "jp": "{送|おく}る",
+   "reading": "おくる",
+   "en": "to give a lift; to send",
+   "level": "N4",
+   "src": "d5",
+   "surface": "送って",
+   "note": "{駅|えき}まで{送|おく}るよ = I'll drive you to the station."
+  },
+  {
+   "jp": "{凍|こお}る",
+   "reading": "こおる",
+   "en": "to freeze",
+   "level": "N3",
+   "src": "p3",
+   "surface": "凍って",
+   "note": "{凍|こお}っている = is frozen. {冷凍|れいとう} = frozen food."
+  },
+  {
+   "jp": "{滑|すべ}る",
+   "reading": "すべる",
+   "en": "to slip, slide",
+   "level": "N3",
+   "src": "p3",
+   "surface": "滑らない",
+   "note": "Also skiing: スキーで{滑|すべ}る. Exams: {試験|しけん}に{滑|すべ}る = fail (slang)."
+  },
+  {
+   "jp": "{感動|かんどう}",
+   "reading": "かんどう",
+   "en": "being deeply moved",
+   "level": "N3",
+   "src": "p4",
+   "surface": "感動",
+   "note": "{感|かん} feel + {動|どう} move. {感動|かんどう}する, {感動的|かんどうてき}."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "積",
+   "track": "lesson",
+   "on": "セキ",
+   "kun": "つ(もる)・つ(む)",
+   "meaning": "pile up, accumulate",
+   "parts": "禾 grain radical + 責 (duty, demand) → grain piled up as the tax you owe: pile up, accumulate.",
+   "lookalike": "Not 績 (results): 積 has 禾 grain on the left, 績 has 糸 thread.",
+   "words": [
+    {
+     "jp": "{積|つ}もる",
+     "reading": "つもる",
+     "en": "to pile up"
+    },
+    {
+     "jp": "{積極的|せっきょくてき}",
+     "reading": "せっきょくてき",
+     "en": "active, positive"
+    },
+    {
+     "jp": "{面積|めんせき}",
+     "reading": "めんせき",
+     "en": "area (size)"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "to melt",
+     "to cover",
+     "to measure"
+    ],
+    "readings": [
+     "たもる",
+     "せきる",
+     "つかる"
+    ]
+   }
+  },
+  {
+   "kanji": "降",
+   "track": "n3",
+   "on": "コウ",
+   "kun": "ふ(る)・お(りる)",
+   "meaning": "fall (rain, snow); get off",
+   "parts": "阝 hill radical on the left + 夅 two feet walking downward → coming down a hill: things fall from the sky, people get off.",
+   "lookalike": "Not 隆 (rise): 隆 has 生 at the bottom right.",
+   "words": [
+    {
+     "jp": "{降|ふ}る",
+     "reading": "ふる",
+     "en": "to fall (rain, snow)"
+    },
+    {
+     "jp": "{降|お}りる",
+     "reading": "おりる",
+     "en": "to get off"
+    },
+    {
+     "jp": "{以降|いこう}",
+     "reading": "いこう",
+     "en": "from … onward"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "rise",
+     "stop",
+     "wait"
+    ],
+    "readings": [
+     "おる",
+     "こうる",
+     "くだる"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Snow words",
+   "title_jp": "{雪|ゆき}のことば",
+   "intro": "What you'll hear in {鷹ノ原|たかのはら} from now until March.",
+   "items": [
+    {
+     "jp": "{雪かき|ゆきかき|clearing snow|3}",
+     "en": "shovelling snow",
+     "note": "{雪|ゆき}かきする: a daily job in snow country."
+    },
+    {
+     "jp": "{吹雪|ふぶき|snowstorm, blizzard|3}",
+     "en": "blizzard",
+     "note": "{吹|ふ}く blow + {雪|ゆき} snow."
+    },
+    {
+     "jp": "{立ち往生|たちおうじょう|being stranded|2}",
+     "en": "getting stuck, stranded",
+     "note": "News word for cars or trains stuck in snow."
+    },
+    {
+     "jp": "スタッドレスタイヤ",
+     "en": "winter tyres",
+     "note": "From 'studless'. Everyone here changes tyres in November."
+    }
+   ]
+  },
+  {
+   "title": "After losing",
+   "title_jp": "{負けた|まけた}とき",
+   "intro": "Three feelings that aren't the same.",
+   "items": [
+    {
+     "jp": "{悔しい|くやしい|frustrating (after losing)|4}",
+     "en": "galling: I tried and lost",
+     "note": "You want to win next time."
+    },
+    {
+     "jp": "{残念|ざんねん|too bad, a pity|4}",
+     "en": "too bad",
+     "note": "Calmer, also for things you didn't try."
+    },
+    {
+     "jp": "がっかり",
+     "en": "disappointed",
+     "note": "Something fell short of what you hoped."
+    },
+    {
+     "jp": "{次|つぎ}は{負けない|まけない}！",
+     "en": "Next time I won't lose!",
+     "note": "What you say after {悔|くや}しい."
+    }
+   ]
+  }
+ ]
+}
