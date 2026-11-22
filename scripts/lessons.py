@@ -847,6 +847,58 @@ def cmd_bump(args):
     return 0
 
 
+def _plain(s):
+    """Strip furigana/gloss markup: {漢字|かんじ|meaning|3} -> 漢字 (for compact digests)."""
+    return re.sub(r"\{([^{}|]*)\|[^{}]*\}", r"\1", s or "")
+
+
+def cmd_context(args):
+    """Everything the writer needs besides status, in few tokens:
+    cast.json without the log (status already prints the story and canon),
+    the path of the latest lesson to read in full, and a digest of the ones before."""
+    today = today_str(args.today)
+    cast_data = load_cast()
+    print("CAST.JSON without 'log' (status shows the story so far and all new_facts):")
+    print(json.dumps({k: v for k, v in cast_data.items() if k != "log"}, ensure_ascii=False, separators=(",", ":")))
+    before = [e for e in load_json(INDEX) if e["id"] < today]
+    if not before:
+        return 0
+    print(f"\nLATEST LESSON (read it in full as the format model): lessons/{before[-1]['id']}.json")
+    print(f"\nDIGEST of the {min(args.n, len(before) - 1)} lessons before it (don't repeat their phrases, openings or angles):")
+    for e in before[-(args.n + 1):-1]:
+        try:
+            L = load_json(LESSONS / f"{e['id']}.json")
+        except Exception:
+            continue
+        ch = (L.get("challenge") or {}).get("type", "")
+        li = (L.get("listening") or {}).get("type", "")
+        print(f"\n## {e['id']} {_plain(L.get('topic',''))} | {L.get('category','')} · {L.get('function','')} · {L.get('format','')} | challenge {ch} · listening {li}")
+        print("scene: " + _plain(L.get("scene", "")))
+        print("phrases: " + " / ".join(_plain(p.get("jp", "")) for p in L.get("phrases", [])))
+        for d in L.get("dialogue", []):
+            print(f"  {d.get('speaker','')}: {_plain(d.get('jp',''))}")
+    return 0
+
+
+def cmd_addlog(args):
+    """Append today's story-log entry to cast.json without reading the file by hand.
+    stdin: the log entry JSON; optional key "_status": {"<id>": {"status": "...", "where": "..."}}."""
+    entry = json.loads(sys.stdin.read())
+    upd = entry.pop("_status", {}) or {}
+    data = load_json(CAST)
+    data.setdefault("log", [])
+    data["log"] = [x for x in data["log"] if x.get("date") != entry.get("date")] + [entry]
+    people = {c["id"]: c for c in data.get("cast", []) + data.get("others", [])}
+    for cid, fields in upd.items():
+        if cid not in people:
+            print(f"Unknown character id: {cid}")
+            return 1
+        people[cid].update({k: v for k, v in fields.items() if k in ("status", "where")})
+    save_json(CAST, data)
+    print(f"Logged {entry.get('date')}" + (f"; updated {', '.join(upd)}" if upd else ""))
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--today", help="pretend today is YYYY-MM-DD")
@@ -855,8 +907,12 @@ def main():
     sub.add_parser("check")
     b = sub.add_parser("bump")
     b.add_argument("date")
+    c = sub.add_parser("context")
+    c.add_argument("-n", type=int, default=4, help="lessons to digest before the latest (default 4)")
+    sub.add_parser("addlog")
     args = ap.parse_args()
-    return {"status": cmd_status, "check": cmd_check, "bump": cmd_bump}[args.cmd](args)
+    return {"status": cmd_status, "check": cmd_check, "bump": cmd_bump,
+            "context": cmd_context, "addlog": cmd_addlog}[args.cmd](args)
 
 
 if __name__ == "__main__":
