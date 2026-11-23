@@ -1,0 +1,449 @@
+{
+ "topic": "レン's cinema is closing",
+ "category": "society-opinions",
+ "function": "hypotheticals",
+ "format": "line",
+ "cast": [
+  "ren"
+ ],
+ "title_jp": "{映画館|えいがかん}が{閉館|へいかん}？",
+ "context": "Monday 23 November, {勤労感謝の日|きんろうかんしゃのひ}, a public holiday. レン is at his favourite small cinema in {長野市|ながのし} and finds a notice that it will close in March; on LINE he and アルちゃん talk about shrinking towns in Japan and Spain, and what if.",
+ "scene": "A holiday morning. レン sends you a photo from his favourite cinema in {長野市|ながのし}: a notice on the door.",
+ "keep": [
+  "p1"
+ ],
+ "phrases": [
+  {
+   "jp": "{大雪|おおゆき|heavy snow|3}のため、{電車|でんしゃ}が{止まって|とまって}います。",
+   "en": "Because of heavy snow, the trains are stopped.",
+   "register": "polite",
+   "note": "Station and news style. A friend would say {雪|ゆき}がすごくて{電車|でんしゃ}{止|と}まってる."
+  },
+  {
+   "jp": "もし{僕|ぼく}がお{金持ち|かねもち|rich person|4}だったら、その{映画館|えいがかん}を{買う|かう}のに。",
+   "en": "If I were rich, I'd buy that cinema.",
+   "register": "casual",
+   "note": "もし〜たら、〜のに: a wish about something that isn't true. The のに adds 'if only'."
+  },
+  {
+   "jp": "{小さい|ちいさい}{町|まち}だと、すぐ{噂|うわさ|rumour, gossip|3}になるよね。",
+   "en": "In a small town, things get around fast, right?",
+   "register": "casual",
+   "note": "{噂|うわさ}になる = become gossip. {噂|うわさ}によると = rumour has it."
+  },
+  {
+   "jp": "もし{日本|にほん}に{住む|すむ}なら、{田舎|いなか|the countryside|4}と{都会|とかい|big city|3}、どっちがいい？",
+   "en": "If you lived in Japan, which would you pick: the countryside or the city?",
+   "register": "casual",
+   "note": "〜なら: 'if (that's your plan)'. A classic small-talk question for foreigners."
+  },
+  {
+   "jp": "{人口|じんこう|population|3}が{減って|へって|to decrease|4}、お{店|みせ}がどんどん{閉まって|しまって|to close (shop, door)|4}います。",
+   "en": "The population is falling, and shops keep closing one after another.",
+   "register": "neutral",
+   "note": "どんどん = steadily, more and more. You'll hear this about rural towns everywhere."
+  }
+ ],
+ "dialogue_setting": "LINE, Monday 23 November, late morning. レン is in front of a small cinema in {長野市|ながのし}; you're on the {縁側|えんがわ} at the {田中|たなか} house.",
+ "dialogue": [
+  {
+   "who": "ren",
+   "speaker": "レン",
+   "time": "10:12",
+   "jp": "おはよう。{今日|きょう}は{祝日|しゅくじつ|public holiday|3}だから、いつもの{映画館|えいがかん}に{来た|きた}んだけど…",
+   "en": "Morning. It's a holiday today, so I came to my usual cinema, but…"
+  },
+  {
+   "who": "ren",
+   "speaker": "レン",
+   "time": "10:12",
+   "jp": "{入口|いりぐち}にこんな{紙|かみ}が。「{利用者|りようしゃ|users, customers|3}が{減少した|げんしょうした|decrease|2}ため、3{月末|がつまつ}で{閉館|へいかん|closing (a hall, for good)|2}いたします」",
+   "en": "There's a paper like this at the entrance: 'Due to a decrease in customers, we will close at the end of March.'",
+   "note": "Formal notice language: {減少|げんしょう}した = {減|へ}った, いたします = humble します."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "10:20",
+   "jp": "え、{本当|ほんとう}？レンさんがよく{行く|いく}{映画館|えいがかん}ですよね？",
+   "en": "What, really? That's the cinema you go to all the time, isn't it?"
+  },
+  {
+   "who": "ren",
+   "speaker": "レン",
+   "time": "10:31",
+   "jp": "うん。もしここがなくなったら、どこで{古い|ふるい}{映画|えいが}{見れば|みれば}いいんだろう",
+   "en": "Yeah. If this place disappears, where am I supposed to watch old films?"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "10:33",
+   "jp": "スペインの{村|むら|village|3}も、{人口|じんこう|population|3}が{減って|へって|to decrease|4}お{店|みせ}がどんどん{閉まって|しまって|to close (shop, door)|4}ます",
+   "en": "Spanish villages too: the population is falling and shops keep closing."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "10:34",
+   "jp": "もし{僕|ぼく}がお{金持ち|かねもち|rich person|4}だったら、その{映画館|えいがかん}{買う|かう}のにｗ",
+   "en": "If I were rich, I'd buy that cinema lol"
+  },
+  {
+   "who": "ren",
+   "speaker": "レン",
+   "time": "10:52",
+   "jp": "ｗ ありがとう。でも{正直|しょうじき}、{田舎|いなか|the countryside|4}の{町|まち}はちょっと{苦手|にがて}なんだ",
+   "en": "lol thanks. But to be honest, I'm not great with small country towns."
+  },
+  {
+   "who": "ren",
+   "speaker": "レン",
+   "time": "10:52",
+   "jp": "もし{小さい|ちいさい}{町|まち}に{住んでたら|すんでたら}、アプリも{使えなかった|つかえなかった}と{思う|おもう}。すぐ{噂|うわさ|rumour, gossip|3}になるから",
+   "en": "If I lived in a small town, I don't think I could have used the app. Word gets around fast."
+  },
+  {
+   "who": "ren",
+   "speaker": "レン",
+   "time": "10:53",
+   "jp": "だから…もし{長野市|ながのし}に{来る|くる}ことがあったら、{閉館|へいかん|closing (a hall, for good)|2}の{前|まえ}に{一緒|いっしょ}に{行かない|いかない}？",
+   "en": "So… if you ever come to {長野市|ながのし}, shall we go together before it closes?"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "10:55",
+   "jp": "ぜひ！{雪|ゆき}で{電車|でんしゃ}に{乗れなかったら|のれなかったら}、ごめんなさいｗ",
+   "en": "I'd love to! Sorry in advance if the snow stops me getting on a train lol"
+  }
+ ],
+ "listening": {
+  "type": "ladder",
+  "intro": "That afternoon at {鷹ノ原|たかのはら} station you hear the announcement you'll hear all winter.",
+  "who": "extra",
+  "lines": [
+   {
+    "who": "extra",
+    "voice": "f",
+    "jp": "{大雪|おおゆき|heavy snow|3}のため、{長野|ながの}{行き|ゆき}の{電車|でんしゃ}は{30分|さんじゅっぷん}ほど{遅れて|おくれて}います。",
+    "en": "Because of heavy snow, the train for {長野|ながの} is running about 30 minutes late."
+   }
+  ]
+ },
+ "grammar": {
+  "id": "n3-tame-cause",
+  "pattern": "〜ため ({原因|げんいん})",
+  "level": "N3",
+  "meaning": "because of (formal)",
+  "form": "noun: + のため ({大雪|おおゆき}のため, {工事|こうじ}のため) · verb (plain): + ため ({減少|げんしょう}したため, {遅|おく}れたため) · い-adj: + ため ({寒|さむ}いため) · な-adj: + なため ({危険|きけん}なため)",
+  "explanation": "A formal 'because', used in notices, announcements, news and work emails. Between friends it sounds stiff: say から or ので. Don't confuse it with ため meaning 'in order to' (〜するために): here it gives the cause.",
+  "src": [
+   "d1",
+   "p0"
+  ],
+  "mark": [
+   "減少したため",
+   "大雪のため",
+   "工事のため",
+   "危険なため"
+  ],
+  "examples": [
+   {
+    "jp": "{工事|こうじ|construction work|3}のため、この{道|みち}は{通れません|とおれません}。",
+    "en": "Due to construction work, this road is closed."
+   },
+   {
+    "jp": "{道|みち}が{凍って|こおって|to freeze|3}いて{危険|きけん}なため、{今日|きょう}は{休校|きゅうこう|school closed|2}です。",
+    "en": "The roads are frozen and dangerous, so school is closed today."
+   }
+  ],
+  "quiz": {
+   "question": "{台風|たいふう|typhoon|3}の＿＿、{試合|しあい|match, game|3}は{中止|ちゅうし|cancellation|3}になりました。",
+   "en": "Because of the typhoon, the match was cancelled.",
+   "options": [
+    "ため",
+    "ので",
+    "から",
+    "のに"
+   ],
+   "explain": "Noun + のため = because of. ので and から can't come straight after の like this."
+  },
+  "quiz_more": [
+   {
+    "question": "{雪|ゆき}が{多い|おおい}＿＿、バスが{遅れて|おくれて}います。",
+    "en": "Because there's a lot of snow, the buses are late.",
+    "options": [
+     "ため",
+     "のため",
+     "なため",
+     "とため"
+    ],
+    "explain": "An い-adjective takes ため directly; の only comes after a noun."
+   },
+   {
+    "question": "この{道|みち}は{危険|きけん}＿＿ため、{通れません|とおれません}。",
+    "en": "This road is dangerous, so you can't go through.",
+    "options": [
+     "な",
+     "の",
+     "だ",
+     "で"
+    ],
+    "explain": "A な-adjective keeps な before ため: {危険|きけん}なため."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "閉館",
+  "reading": "へいかん",
+  "romaji": "heikan",
+  "meaning": "closing (of a cinema, museum, library)",
+  "where": "On the paper taped to the cinema door in レン's photo, in big black letters.",
+  "breakdown": "{閉館|へいかん}: 閉 close (a door inside the 門 gate) + 館 hall, building → 'the building closes'.",
+  "related": "{開館|かいかん} = opening; {閉館時間|へいかんじかん} = closing time."
+ },
+ "tip": {
+  "mark": "噂",
+  "title": "Everyone knows your car",
+  "body": "In a small Japanese town people notice whose car is parked where and who came to visit. Worry about {人|ひと}の{目|め} (other people's eyes) is real, so many people keep dating private ({内緒|ないしょ}) until it's serious."
+ },
+ "challenge": {
+  "type": "sticker",
+  "hint": "He's being kind and patient. How do you thank him?",
+  "prompt": "レン replies: 「{大丈夫|だいじょうぶ}。もし{雪|ゆき}だったら、また{別|べつ}の{日|ひ}にしよう。{急がなくて|いそがなくて}いいよ」 You're touched that he's so patient. Which sticker?",
+  "stickers": [
+   "arigato",
+   "kusa",
+   "gaan",
+   "nemui"
+  ],
+  "model_answer": "ありがとう〜",
+  "explanation": "ありがとう〜 is a warm, casual thanks for his kindness. {草|くさ} means 'lol' and would laugh off what he said, ガーン is shock, and {眠|ねむ}い… would sound like you want to end the chat."
+ },
+ "vocab": [
+  {
+   "jp": "{祝日|しゅくじつ}",
+   "reading": "しゅくじつ",
+   "en": "public holiday",
+   "level": "N3",
+   "src": "d0",
+   "surface": "祝日",
+   "note": "{祝|しゅく} celebrate + {日|じつ} day. On calendars, often red."
+  },
+  {
+   "jp": "{利用者|りようしゃ}",
+   "reading": "りようしゃ",
+   "en": "users, customers",
+   "level": "N3",
+   "src": "d1",
+   "surface": "利用者",
+   "note": "{利用|りよう} use + {者|しゃ} person. Signs and notices; in speech: お{客|きゃく}さん."
+  },
+  {
+   "jp": "{減少|げんしょう}",
+   "reading": "げんしょう",
+   "en": "decrease, decline",
+   "level": "N3",
+   "src": "d1",
+   "surface": "減少",
+   "note": "Formal word for {減|へ}ること. News: {人口減少|じんこうげんしょう}. Opposite: {増加|ぞうか}."
+  },
+  {
+   "jp": "{村|むら}",
+   "reading": "むら",
+   "en": "village",
+   "level": "N4",
+   "src": "d4",
+   "surface": "村",
+   "note": "Smaller than {町|まち}. Officially, Japan has {市|し}, {町|まち} and {村|むら}."
+  },
+  {
+   "jp": "{人口|じんこう}",
+   "reading": "じんこう",
+   "en": "population",
+   "level": "N3",
+   "src": "d4",
+   "surface": "人口",
+   "note": "{人|じん} person + {口|こう} mouth: mouths to feed."
+  },
+  {
+   "jp": "{減|へ}る",
+   "reading": "へる",
+   "en": "to decrease, go down",
+   "level": "N4",
+   "src": "d4",
+   "surface": "減って",
+   "note": "Opposite: {増|ふ}える. お{腹|なか}が{減|へ}った = I'm hungry (casual)."
+  },
+  {
+   "jp": "{閉|し}まる",
+   "reading": "しまる",
+   "en": "to close (shop, door)",
+   "level": "N4",
+   "src": "d4",
+   "surface": "閉まって",
+   "note": "The shop closes by itself: {閉|し}まる. You close it: {閉|し}める."
+  },
+  {
+   "jp": "お{金持|かねも}ち",
+   "reading": "おかねもち",
+   "en": "rich person; rich",
+   "level": "N4",
+   "src": "d5",
+   "surface": "お金持ち",
+   "note": "Literally 'money holder'. もしお{金持|かねも}ちだったら = if I were rich."
+  },
+  {
+   "jp": "{田舎|いなか}",
+   "reading": "いなか",
+   "en": "the countryside; hometown",
+   "level": "N3",
+   "src": "d6",
+   "surface": "田舎",
+   "note": "Also one's rural hometown: {田舎|いなか}に{帰|かえ}る. Opposite: {都会|とかい}."
+  },
+  {
+   "jp": "{噂|うわさ}",
+   "reading": "うわさ",
+   "en": "rumour, gossip",
+   "level": "N3",
+   "src": "d7",
+   "surface": "噂",
+   "note": "{噂|うわさ}になる = become gossip. {噂|うわさ}をすれば = speak of the devil."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "減",
+   "track": "lesson",
+   "on": "ゲン",
+   "kun": "へ(る)・へ(らす)",
+   "meaning": "decrease, reduce",
+   "parts": "氵 water radical + 咸 (all, every) → water draining away until all of it is gone: decrease.",
+   "lookalike": "Not 滅 (destroy): 減 has 口 inside, 滅 has 火 fire.",
+   "words": [
+    {
+     "jp": "{減|へ}る",
+     "reading": "へる",
+     "en": "to decrease"
+    },
+    {
+     "jp": "{減少|げんしょう}",
+     "reading": "げんしょう",
+     "en": "decline"
+    },
+    {
+     "jp": "{減|へ}らす",
+     "reading": "へらす",
+     "en": "to reduce"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "increase",
+     "flow",
+     "wash"
+    ],
+    "readings": [
+     "げる",
+     "ふる",
+     "かる"
+    ]
+   }
+  },
+  {
+   "kanji": "乗",
+   "track": "n3",
+   "on": "ジョウ",
+   "kun": "の(る)・の(せる)",
+   "meaning": "ride, get on",
+   "parts": "Originally a person standing on top of a tree (木 at the bottom) → climbing up onto something: ride, get on.",
+   "lookalike": "Not 垂 (hang down): 乗 has the 木 tree shape at the bottom, 垂 ends in flat lines.",
+   "words": [
+    {
+     "jp": "{乗|の}る",
+     "reading": "のる",
+     "en": "to ride, get on"
+    },
+    {
+     "jp": "{乗車券|じょうしゃけん}",
+     "reading": "じょうしゃけん",
+     "en": "train ticket"
+    },
+    {
+     "jp": "{乗|の}せる",
+     "reading": "のせる",
+     "en": "to give a ride; to put on"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "get off",
+     "wait",
+     "pass by"
+    ],
+    "readings": [
+     "じょる",
+     "のぼる",
+     "うる"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Notice Japanese",
+   "title_jp": "{張り紙|はりがみ}のことば",
+   "intro": "Words you'll see taped to doors when something closes or changes.",
+   "items": [
+    {
+     "jp": "{本日|ほんじつ|today (formal)|3}{休業|きゅうぎょう|closed for business|2}",
+     "en": "Closed today",
+     "note": "{本日|ほんじつ} is the formal {今日|きょう}."
+    },
+    {
+     "jp": "{臨時休業|りんじきゅうぎょう|unscheduled closure|2}",
+     "en": "Temporarily closed",
+     "note": "Closed for an unusual reason: illness, snow, repairs."
+    },
+    {
+     "jp": "{長い間|ながいあいだ}ありがとうございました",
+     "en": "Thank you for all these years",
+     "note": "The last line on a closing-down notice."
+    },
+    {
+     "jp": "ご{了承|りょうしょう|understanding, acceptance|2}ください",
+     "en": "Thank you for your understanding",
+     "note": "Polite way to say 'sorry, but that's how it is'."
+    }
+   ]
+  },
+  {
+   "title": "Three ways to say 'if'",
+   "title_jp": "「もし」の{使い方|つかいかた}",
+   "intro": "Same 'if', different feelings.",
+   "items": [
+    {
+     "jp": "もし{雨|あめ}だったら、{家|いえ}にいる。",
+     "en": "If it rains, I'll stay home.",
+     "note": "〜たら: the all-rounder, safe in most cases."
+    },
+    {
+     "jp": "{長野|ながの}に{行く|いく}なら、{善光寺|ぜんこうじ}がいいよ。",
+     "en": "If you're going to {長野|ながの}, {善光寺|ぜんこうじ} is good.",
+     "note": "〜なら: reacting to someone's plan, giving advice."
+    },
+    {
+     "jp": "もっと{時間|じかん}があれば、{旅行|りょこう}できるのに。",
+     "en": "If only I had more time, I could travel.",
+     "note": "〜ば…のに: wishing things were different."
+    }
+   ]
+  }
+ ]
+}

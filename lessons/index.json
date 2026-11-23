@@ -141,5 +141,12 @@
   "category": "news",
   "function": "feelings",
   "format": "dialogue"
+ },
+ {
+  "id": "2026-11-23",
+  "topic": "レン's cinema is closing",
+  "category": "society-opinions",
+  "function": "hypotheticals",
+  "format": "line"
  }
 ]
