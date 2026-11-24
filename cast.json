@@ -119,7 +119,7 @@
    ],
    "aliases": [],
    "color": "#1f3a8a",
-   "status": "",
+   "status": "{避難訓練|ひなんくんれん}、{無事|ぶじ}{終わりました|おわりました}。",
    "where": "{鷹ノ原高校|たかのはらこうこう}"
   },
   {
@@ -224,7 +224,7 @@
    ],
    "aliases": [],
    "color": "#c9a227",
-   "status": "{吹奏楽|すいそうがく}がんばる🎺",
+   "status": "{避難訓練|ひなんくんれん}、アルちゃんガチで{走ってた|はしってた}ｗ",
    "where": "{鷹ノ原高校|たかのはらこうこう}"
   },
   {
@@ -535,6 +535,20 @@
     "レン's favourite small cinema in 長野市 will close (閉館) at the end of March 2027 because customers have decreased.",
     "レン finds small country towns hard because gossip spreads fast; he says he couldn't have used the dating app if he lived in one.",
     "On 23 Nov レン invited アルちゃん to go to the cinema together before it closes; no date set yet, and レン said there's no hurry if it snows. They still haven't met."
+   ]
+  },
+  {
+   "date": "2026-11-24",
+   "cast": [
+    "sato",
+    "mio"
+   ],
+   "summary": "Tuesday 24 Nov: during 4th-period English at 鷹ノ原高校 the alarm for an earthquake drill sounds and アルちゃん, the only one who hadn't read last week's handout, runs for the door while the students get under their desks. 佐藤先生 tells him not to run but stay calm and protect his head; 澪 laughs and tells him to keep emergency water and a light at home, and 恵子さん asks him to buy AA batteries for the torch.",
+   "new_facts": [
+    "鷹ノ原高校 held an earthquake evacuation drill (避難訓練) during 4th period on Tue 24 Nov; it was announced on a handout the week before, which アルちゃん didn't read.",
+    "アルちゃん ran for the door during the drill; 澪 thought it was hilarious.",
+    "The 田中 house torch (懐中電灯) needed new AA batteries on 24 Nov; 恵子さん asked アルちゃん to buy four at 村井電器, round the corner from the pharmacy.",
+    "The classroom of 2-3 has a green 非常口 sign above the door."
    ]
   }
  ],

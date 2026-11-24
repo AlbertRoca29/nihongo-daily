@@ -148,5 +148,12 @@
   "category": "society-opinions",
   "function": "hypotheticals",
   "format": "line"
+ },
+ {
+  "id": "2026-11-24",
+  "topic": "The drill nobody told you about",
+  "category": "safety",
+  "function": "advice",
+  "format": "story"
  }
 ]

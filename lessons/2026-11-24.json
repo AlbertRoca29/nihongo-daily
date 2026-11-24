@@ -1,0 +1,418 @@
+{
+ "topic": "The drill nobody told you about",
+ "category": "safety",
+ "function": "advice",
+ "format": "story",
+ "cast": [
+  "sato",
+  "mio"
+ ],
+ "title_jp": "{避難訓練|ひなんくんれん}",
+ "context": "Tuesday 24 November, 4th period at {鷹ノ原高校|たかのはらこうこう}: an earthquake drill starts with the alarm sound, and アルちゃん, who never read the notice, runs for the door. {佐藤|さとう}先生 and {澪|みお} tell the story and give him advice on what to really do.",
+ "scene": "Tuesday English class. A scary alarm goes off, and you run for the door. You were the only one who didn't know.",
+ "keep": [
+  "p0"
+ ],
+ "phrases": [
+  {
+   "jp": "{揺れて|ゆれて|to shake, sway|3}いる{時|とき}は、{外|そと}に{出ない|でない}ほうがいいですよ。",
+   "en": "While it's shaking, you'd better not go outside.",
+   "register": "polite",
+   "note": "〜ないほうがいい = you'd better not. The classic earthquake rule: glass and roof tiles fall."
+  },
+  {
+   "jp": "{停電|ていでん|power cut|3}に{備えて|そなえて|to prepare for|3}、{懐中電灯|かいちゅうでんとう|torch, flashlight|3}を{用意|ようい}しておくといいよ。",
+   "en": "It's a good idea to have a torch ready in case of a power cut.",
+   "register": "casual",
+   "note": "〜ておくといい = it's good to do in advance. Softer than 〜なさい."
+  },
+  {
+   "jp": "{天気予報|てんきよほう|weather forecast|3}によると、{明日|あした}は{大雪|おおゆき|heavy snow|3}らしいよ。",
+   "en": "According to the forecast, there's going to be heavy snow tomorrow.",
+   "register": "casual",
+   "note": "〜によると + らしい / そうだ: you say where you heard it."
+  },
+  {
+   "jp": "{避難所|ひなんじょ|evacuation shelter|2}の{場所|ばしょ}、{確認|かくにん}しといたら？",
+   "en": "Why don't you check where the evacuation shelter is?",
+   "register": "casual",
+   "note": "〜たら？ = why don't you…? しといたら = しておいたら, casual."
+  },
+  {
+   "jp": "{地震|じしん|earthquake|4}の{時|とき}は、どうしたらいいですか？",
+   "en": "What should I do in an earthquake?",
+   "register": "polite",
+   "note": "どうしたらいいですか = what should I do? The easiest way to ask for advice."
+  }
+ ],
+ "dialogue_setting": "Told afterwards by アルちゃん, {佐藤|さとう}先生 and {澪|みお}: class 2-3, 4th period, Tuesday 24 November.",
+ "dialogue": [
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "4{時間目|じかんめ}の{英語|えいご}の{授業中|じゅぎょうちゅう}、スピーカーから{急|きゅう}に{怖い|こわい}{音|おと}が{鳴った|なった}。「{地震|じしん|earthquake|4}です！」",
+   "en": "In 4th-period English, a scary sound suddenly came from the speaker. 'Earthquake!'"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "{僕|ぼく}は「{逃げなきゃ|にげなきゃ|to run away, escape|3}！」とドアに{走った|はしった}。でも{生徒|せいと|pupil, student|3}たちは{静か|しずか}に{机|つくえ}の{下|した}に{入って|はいって}いた。",
+   "en": "I thought 'I have to get out!' and ran for the door. But the students were quietly getting under their desks."
+  },
+  {
+   "who": "sato",
+   "speaker": "佐藤先生",
+   "jp": "{実は|じつは|actually, the truth is|4}、{避難訓練|ひなんくんれん|evacuation drill|3}でした。アルちゃん{以外|いがい}は、みんな{知って|しって}いたんです。",
+   "en": "Actually, it was an evacuation drill. Everyone except アルちゃん knew."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "{澪|みお}さんによると、{先週|せんしゅう}のプリントに{書いて|かいて}あったらしい。{僕|ぼく}だけ{読んで|よんで}いなかった…。",
+   "en": "According to {澪|みお}, it was written on last week's handout. I was the only one who hadn't read it…"
+  },
+  {
+   "who": "sato",
+   "speaker": "佐藤先生",
+   "jp": "{授業|じゅぎょう}の{後|あと}、{私|わたし}は{言いました|いいました}。「{揺れて|ゆれて|to shake, sway|3}いる{時|とき}は、{走らない|はしらない}ほうがいいですよ。{落ち着いて|おちついて|to calm down|4}{頭|あたま}を{守って|まもって}ください」",
+   "en": "After class I told him: 'While it's shaking, it's better not to run. Stay calm and protect your head.'"
+  },
+  {
+   "who": "mio",
+   "speaker": "澪",
+   "jp": "アルちゃん、ガチで{焦って|あせって}てウケたｗ　{非常用|ひじょうよう|for emergencies|3}の{水|みず}とライト、{家|いえ}に{置いとく|おいとく}といいっすよって{教えた|おしえた}。",
+   "en": "アルちゃん was seriously panicking, it was so funny lol. I told him it's good to keep emergency water and a light at home.",
+   "register": "slang",
+   "note": "ガチで = {本当|ほんとう}に, ウケた = {面白|おもしろ}かった, {置|お}いとく = {置|お}いておく, 〜っす = casual です."
+  }
+ ],
+ "listening": {
+  "type": "voicemail",
+  "intro": "On your way out of school, a voicemail from {恵子|けいこ}さん.",
+  "who": "keiko",
+  "lines": [
+   {
+    "who": "keiko",
+    "jp": "アルちゃん、{恵子|けいこ}です。{帰り|かえり}に{電池|でんち|battery|3}、{買って|かって}きてくれる？{単三|たんさん|AA (battery size)|2}を4{本|ほん}ね。",
+    "en": "アルちゃん, it's {恵子|けいこ}. Could you buy batteries on the way home? Four AA."
+   },
+   {
+    "who": "keiko",
+    "jp": "{懐中電灯|かいちゅうでんとう|torch, flashlight|3}の{電池|でんち|battery|3}が{切れちゃった|きれちゃった|to run out|4}の。",
+    "en": "The torch batteries have run out."
+   },
+   {
+    "who": "keiko",
+    "jp": "{薬局|やっきょく|pharmacy|3}の{角|かど|corner|3}を{曲がった|まがった|to turn|4}ところの、{村井|むらい}さんのお{店|みせ}にあるよ。",
+    "en": "{村井|むらい}さん's shop has them, just round the corner from the pharmacy."
+   }
+  ],
+  "question": "{恵子|けいこ}さんは{何|なに}を{頼みました|たのみました}か。",
+  "options": [
+   "{電池|でんち}を4{本|ほん}{買う|かう}こと",
+   "{懐中電灯|かいちゅうでんとう}を{買う|かう}こと",
+   "{薬局|やっきょく}で{薬|くすり}を{買う|かう}こと",
+   "{村井|むらい}さんに{電話|でんわ}すること"
+  ],
+  "explain": "{電池|でんち}{買って|かって}きてくれる？{単三|たんさん}を4{本|ほん}: four AA batteries. The torch itself is fine; only its batteries ran out."
+ },
+ "grammar": {
+  "id": "n3-ni-yoru-to",
+  "pattern": "〜によると",
+  "level": "N3",
+  "meaning": "according to",
+  "form": "noun: + によると (ニュースによると, {天気予報|てんきよほう}によると) · person: + によると / の{話|はなし}によると ({澪|みお}さんによると, {先生|せんせい}の{話|はなし}によると) · ending: + そうだ / らしい (…{降る|ふる}そうです, …あったらしい)",
+  "explanation": "Names where information comes from: the news, a forecast, a notice, what someone said. The sentence usually ends in そうだ or らしい. Never use it for your own opinion (私によると ✗, say 私は〜と思う), and don't mix it up with によって (by, depending on).",
+  "src": [
+   "d3",
+   "p2"
+  ],
+  "mark": [
+   "澪さんによると",
+   "天気予報によると",
+   "ニュースによると",
+   "話によると"
+  ],
+  "examples": [
+   {
+    "jp": "ニュースによると、{白馬|はくば}のスキー{場|じょう}はもうオープンしたそうです。",
+    "en": "According to the news, the ski slopes in {白馬|はくば} have already opened."
+   },
+   {
+    "jp": "{健太|けんた}の{話|はなし}によると、{駅前|えきまえ}に{新しい|あたらしい}ラーメン{屋|や}ができたらしい。",
+    "en": "According to {健太|けんた}, a new ramen shop has opened in front of the station."
+   }
+  ],
+  "quiz": {
+   "question": "ニュース＿＿、{明日|あした}は{雪|ゆき}が{降る|ふる}そうです。",
+   "en": "According to the news, it's going to snow tomorrow.",
+   "options": [
+    "によると",
+    "によって",
+    "について",
+    "にとって"
+   ],
+   "explain": "The news is the source of the information, so によると. について = about, にとって = for (someone)."
+  },
+  "quiz_more": [
+   {
+    "question": "{先生|せんせい}の{話|はなし}によると、{訓練|くんれん|drill, training|3}は{来週|らいしゅう}＿＿。",
+    "en": "According to the teacher, the drill is next week.",
+    "options": [
+     "だそうです",
+     "にします",
+     "でしょうか",
+     "ですから"
+    ],
+    "explain": "A によると sentence ends with a hearsay form like そうです or らしい."
+   },
+   {
+    "question": "＿＿によると、{今日|きょう}は{午後|ごご}から{雨|あめ}らしい。",
+    "en": "According to the forecast, it'll rain from the afternoon.",
+    "options": [
+     "天気予報",
+     "私",
+     "私の意見",
+     "傘"
+    ],
+    "explain": "によると cites an outside source. For your own view, say 私は〜と思う, never 私によると."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "非常口",
+  "reading": "ひじょうぐち",
+  "romaji": "hijōguchi",
+  "meaning": "emergency exit",
+  "where": "The green sign with a running man above the classroom door: the door you ran to.",
+  "breakdown": "{非常口|ひじょうぐち}: 非 not + 常 usual → {非常|ひじょう} 'emergency', + 口 mouth, opening → 'the emergency opening'.",
+  "related": "{非常ベル|ひじょうベル} = fire alarm bell; {出口|でぐち} = exit."
+ },
+ "tip": {
+  "mark": "揺",
+  "title": "Don't run, duck",
+  "body": "Every phone in the room plays the same chime a few seconds before strong shaking: the {緊急地震速報|きんきゅうじしんそくほう} (earthquake early warning). The Japanese rule is the opposite of instinct: don't run outside, get under a table and hold on. The free 'Safety tips' app from Japan's tourism agency gives these alerts in English."
+ },
+ "challenge": {
+  "type": "write",
+  "prompt": "{健太|けんた} on LINE: 「{明日|あした}、{白馬|はくば}{行こう|いこう}かな{思てん|おもてん}ねんけど、{天気|てんき}どうなん？」 You saw a forecast of {大雪|おおゆき|heavy snow|3}. Tell him what it says and give him advice.",
+  "hint": "〜によると…らしい · 〜ないほうがいい",
+  "model_answer": "{天気予報|てんきよほう|weather forecast|3}によると、{明日|あした}は{大雪|おおゆき|heavy snow|3}らしいよ。{車|くるま}で{行かない|いかない}ほうがいいと{思う|おもう}。",
+  "explanation": "{天気予報|てんきよほう}によると names your source, and らしい marks it as something you heard, not your own claim. 〜ないほうがいいと{思|おも}う gives advice gently. Plain form and よ suit a friend on LINE."
+ },
+ "vocab": [
+  {
+   "jp": "{地震|じしん}",
+   "reading": "じしん",
+   "en": "earthquake",
+   "level": "N4",
+   "src": "d0",
+   "surface": "地震",
+   "note": "{地|じ} ground + {震|しん} quake. {地震|じしん}だ！ is what everyone shouts."
+  },
+  {
+   "jp": "{逃|に}げる",
+   "reading": "にげる",
+   "en": "to run away, escape",
+   "level": "N3",
+   "src": "d1",
+   "surface": "逃げなきゃ",
+   "note": "{逃|に}げなきゃ = {逃|に}げなければ: I have to get away!"
+  },
+  {
+   "jp": "{生徒|せいと}",
+   "reading": "せいと",
+   "en": "pupil, student (school)",
+   "level": "N4",
+   "src": "d1",
+   "surface": "生徒",
+   "note": "Secondary school pupils. University students are {学生|がくせい}."
+  },
+  {
+   "jp": "{実|じつ}は",
+   "reading": "じつは",
+   "en": "actually, the truth is",
+   "level": "N4",
+   "src": "d2",
+   "surface": "実は",
+   "note": "Opens a confession or surprise: {実|じつ}は… = to tell the truth…"
+  },
+  {
+   "jp": "{避難訓練|ひなんくんれん}",
+   "reading": "ひなんくんれん",
+   "en": "evacuation drill",
+   "level": "N2",
+   "src": "d2",
+   "surface": "避難訓練",
+   "note": "{避難|ひなん} evacuation + {訓練|くんれん} training. Every Japanese school does them."
+  },
+  {
+   "jp": "{揺|ゆ}れる",
+   "reading": "ゆれる",
+   "en": "to shake, sway",
+   "level": "N3",
+   "src": "d4",
+   "surface": "揺れて",
+   "note": "{揺|ゆ}れてる！ = it's shaking! Also trains and hearts: {心|こころ}が{揺|ゆ}れる."
+  },
+  {
+   "jp": "{落|お}ち{着|つ}く",
+   "reading": "おちつく",
+   "en": "to calm down",
+   "level": "N3",
+   "src": "d4",
+   "surface": "落ち着いて",
+   "note": "{落|お}ち{着|つ}いて！ = calm down! Also: a cosy place is {落|お}ち{着|つ}く."
+  },
+  {
+   "jp": "{非常|ひじょう}",
+   "reading": "ひじょう",
+   "en": "emergency",
+   "level": "N3",
+   "src": "d5",
+   "surface": "非常",
+   "note": "{非常用|ひじょうよう} = for emergencies, {非常口|ひじょうぐち} = emergency exit."
+  },
+  {
+   "jp": "{停電|ていでん}",
+   "reading": "ていでん",
+   "en": "power cut, blackout",
+   "level": "N3",
+   "src": "p1",
+   "surface": "停電",
+   "note": "{停|てい} stop + {電|でん} electricity. Common after snowstorms in the mountains."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "震",
+   "track": "lesson",
+   "on": "シン",
+   "kun": "ふる(える)・ふる(う)",
+   "meaning": "quake, tremble",
+   "parts": "雨 rain on top + 辰 (an old sign tied to thunder) → thunder in a storm that makes the ground shake: quake.",
+   "lookalike": "Not 振 (wave, shake by hand): 振 has 扌 hand on the left, 震 has 雨 rain on top.",
+   "words": [
+    {
+     "jp": "{地震|じしん}",
+     "reading": "じしん",
+     "en": "earthquake"
+    },
+    {
+     "jp": "{震度|しんど}",
+     "reading": "しんど",
+     "en": "seismic intensity"
+    },
+    {
+     "jp": "{震|ふる}える",
+     "reading": "ふるえる",
+     "en": "to tremble, shiver"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "thunder",
+     "cloud",
+     "flood"
+    ],
+    "readings": [
+     "ちしん",
+     "じでん",
+     "じしゅん"
+    ]
+   }
+  },
+  {
+   "kanji": "曲",
+   "track": "n3",
+   "on": "キョク",
+   "kun": "ま(がる)・ま(げる)",
+   "meaning": "bend, turn; tune, song",
+   "parts": "Originally a picture of a bent, woven basket → bend. A melody bends up and down, so it also means a tune.",
+   "lookalike": "Not 典 (rule, ceremony): 典 has two legs (八) at the bottom, 曲 doesn't.",
+   "words": [
+    {
+     "jp": "{曲|ま}がる",
+     "reading": "まがる",
+     "en": "to turn, bend"
+    },
+    {
+     "jp": "{曲|きょく}",
+     "reading": "きょく",
+     "en": "song, tune"
+    },
+    {
+     "jp": "{作曲|さっきょく}",
+     "reading": "さっきょく",
+     "en": "composing music"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "field",
+     "straight",
+     "sing"
+    ],
+    "readings": [
+     "まわる",
+     "きがる",
+     "めがる"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Earthquake words",
+   "title_jp": "{地震|じしん}のことば",
+   "intro": "What you'll hear on TV and the town loudspeakers after a quake.",
+   "items": [
+    {
+     "jp": "{震度|しんど|seismic intensity|3}3",
+     "en": "Intensity 3",
+     "note": "Japan's 0–7 shaking scale. 3 rattles the dishes; 5 and up is serious."
+    },
+    {
+     "jp": "{余震|よしん|aftershock|3}に{注意|ちゅうい}してください",
+     "en": "Watch out for aftershocks",
+     "note": "Heard after every bigger quake, for days."
+    },
+    {
+     "jp": "この{地震|じしん|earthquake|4}による{津波|つなみ|tsunami|3}の{心配|しんぱい}はありません",
+     "en": "There is no tsunami risk from this earthquake",
+     "note": "The sentence everyone waits for on the news."
+    },
+    {
+     "jp": "{避難所|ひなんじょ|evacuation shelter|2}",
+     "en": "Evacuation shelter",
+     "note": "Usually a school gym or community hall. Check yours on the town map."
+    }
+   ]
+  },
+  {
+   "title": "Three ways to give advice",
+   "title_jp": "アドバイスの{言い方|いいかた}",
+   "intro": "From firm to gentle.",
+   "items": [
+    {
+     "jp": "{外|そと}に{出ない|でない}ほうがいいよ。",
+     "en": "You'd better not go outside.",
+     "note": "〜ほうがいい: clear advice. Can sound strong to a superior."
+    },
+    {
+     "jp": "{水|みず}を{買って|かって}おくといいよ。",
+     "en": "It's good to buy some water.",
+     "note": "〜といい: a friendly tip, 'it helps if…'."
+    },
+    {
+     "jp": "{先生|せんせい}に{聞いて|きいて}みたら？",
+     "en": "Why don't you ask the teacher?",
+     "note": "〜たら？: a light suggestion between friends."
+    }
+   ]
+  }
+ ]
+}
