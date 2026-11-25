@@ -1,0 +1,427 @@
+{
+ "topic": "What does ごしたい mean?",
+ "category": "language",
+ "function": "reasons",
+ "format": "dialogue",
+ "cast": [
+  "kenta"
+ ],
+ "title_jp": "{方言|ほうげん}って{難|むずか}しい",
+ "context": "Wednesday 25 November, a quiet afternoon at ゲストハウス{風|かぜ}: アルちゃん tells {健太|けんた} he misunderstood {田中|たなか}さん's Nagano dialect this morning. {健太|けんた} explains why Japanese changes from region to region, and why he doesn't use Kansai-ben with guests.",
+ "scene": "Quiet Wednesday at reception. This morning {田中|たなか}さん said something you didn't understand at all, and you answered the wrong thing.",
+ "keep": [
+  "p0"
+ ],
+ "phrases": [
+  {
+   "jp": "{地域|ちいき|region, area|3}によって、{言葉|ことば}や{習慣|しゅうかん|custom, habit|3}が{違います|ちがいます}。",
+   "en": "Language and customs differ from region to region.",
+   "register": "polite",
+   "note": "〜によって{違|ちが}う = it varies by… The most common use of によって."
+  },
+  {
+   "jp": "{人|ひと}によって、{好み|このみ|taste, liking|3}は{違う|ちがう}からね。",
+   "en": "Everyone's taste is different, after all.",
+   "register": "casual",
+   "note": "Ending with 〜からね gives a reason softly, like 'after all'."
+  },
+  {
+   "jp": "{遅れた|おくれた}のは、{雪|ゆき}で{電車|でんしゃ}が{止まった|とまった}からです。",
+   "en": "The reason I was late is that the train stopped because of the snow.",
+   "register": "polite",
+   "note": "〜のは〜からです puts the reason last: a clear, polite explanation."
+  },
+  {
+   "jp": "{方言|ほうげん|dialect|3}が{分からなくて|わからなくて}、{勘違い|かんちがい|misunderstanding|3}しちゃった。",
+   "en": "I didn't understand the dialect, so I got it wrong.",
+   "register": "casual",
+   "note": "〜なくて gives the cause of what happened next. {勘違|かんちが}いする = to get the wrong idea."
+  },
+  {
+   "jp": "{ごしたい||(Nagano dialect) tired, worn out|1}{ずら||(Nagano dialect) = でしょう, right?|1}。",
+   "en": "You must be tired, eh?",
+   "register": "dialect",
+   "note": "Standard: {疲|つか}れたでしょう. Older people in Nagano say it; don't copy it at work."
+  }
+ ],
+ "dialogue_setting": "ゲストハウス{風|かぜ}, reception desk, a quiet Wednesday afternoon with no check-ins yet.",
+ "dialogue": [
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "{健太|けんた}、{今朝|けさ}{田中|たなか}さんに「{ごしたい||(Nagano dialect) tired, worn out|1}{ずら||(Nagano dialect) = でしょう, right?|1}」って{言われて|いわれて}、「{何|なに}がしたいの？」って{聞いちゃった|きいちゃった}。",
+   "en": "{健太|けんた}, this morning {田中|たなか}さん said 'ごしたいずら' to me, and I asked 'What do you want to do?'"
+  },
+  {
+   "who": "kenta",
+   "speaker": "健太",
+   "jp": "ｗｗそれ{勘違い|かんちがい|misunderstanding|3}や。「ごしたい」は{長野|ながの}の{方言|ほうげん|dialect|3}で、「{疲れた|つかれた}」って{意味|いみ|meaning|4}やで。",
+   "en": "Haha, you got the wrong idea. 'ごしたい' is Nagano dialect and means 'tired'.",
+   "register": "dialect",
+   "note": "や = だ, やで = だよ (Kansai)."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "{日本|にほん}って、{地域|ちいき|region, area|3}によってそんなに{言葉|ことば}が{違う|ちがう}の？なんで？",
+   "en": "Does Japanese really change that much depending on the region? Why?"
+  },
+  {
+   "who": "kenta",
+   "speaker": "健太",
+   "jp": "{昔|むかし|long ago, in the old days|4}は{山|やま}の{向こう側|むこうがわ|the other side|3}と、あんまり{行き来|いきき|coming and going|2}がなかったからや。それで{言葉|ことば}が{ばらばら||all different, scattered|3}に{変わった|かわった}んやて。",
+   "en": "Because long ago people didn't go back and forth much with the other side of the mountains. So the words changed in different ways, they say.",
+   "register": "dialect",
+   "note": "からや = からだ, んやて = んだって (they say)."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "じゃあ、{健太|けんた}が{仕事|しごと}で{関西弁|かんさいべん|Kansai dialect|3}を{使わない|つかわない}のは、なんで？",
+   "en": "So why don't you use Kansai-ben at work?"
+  },
+  {
+   "who": "kenta",
+   "speaker": "健太",
+   "jp": "お{客|きゃく}さんに{通じへん|つうじへん|(Kansai) not get across = つうじない|3}こともあるし、{きつく||harsh, sharp|3}{聞こえる|きこえる|to sound (like)|4}{人|ひと}もおるからな。",
+   "en": "Because sometimes guests don't understand it, and to some people it sounds harsh.",
+   "register": "dialect",
+   "note": "{通|つう}じへん = {通|つう}じない, おる = いる (Kansai)."
+  }
+ ],
+ "listening": {
+  "type": "announcement",
+  "intro": "On your way home, an announcement on the platform at {鷹ノ原駅|たかのはらえき}.",
+  "who": "extra",
+  "title": "{鷹ノ原駅|たかのはらえき}のお{知らせ|しらせ}",
+  "place": "{鷹ノ原駅|たかのはらえき}, platform",
+  "lines": [
+   {
+    "who": "extra",
+    "voice": "f",
+    "jp": "お{知らせ|しらせ}します。{大雪|おおゆき|heavy snow|3}によって、{長野|ながの}{行き|いき}の{電車|でんしゃ}は{約|やく}15{分|ふん}{遅れて|おくれて}おります。",
+    "en": "An announcement. Because of heavy snow, the train for {長野|ながの} is running about 15 minutes late."
+   },
+   {
+    "who": "extra",
+    "voice": "f",
+    "jp": "お{急ぎ|いそぎ}のところ、ご{迷惑|めいわく|trouble, inconvenience|3}をおかけして{申し訳|もうしわけ}ございません。",
+    "en": "We apologise for the inconvenience when you are in a hurry."
+   }
+  ],
+  "question": "{電車|でんしゃ}はどうして{遅|おく}れていますか。",
+  "options": [
+   "{雪|ゆき}がたくさん{降|ふ}ったから",
+   "{鹿|しか}が{線路|せんろ}に{入|はい}ったから",
+   "{事故|じこ}があったから",
+   "{風|かぜ}が{強|つよ}いから"
+  ],
+  "explain": "{大雪|おおゆき}によって = because of heavy snow. In announcements によって (or により) gives a formal cause."
+ },
+ "grammar": {
+  "id": "n3-ni-yotte",
+  "pattern": "〜によって",
+  "level": "N3",
+  "meaning": "by, depending on, due to",
+  "form": "depends on: noun + によって ({地域|ちいき}によって, {人|ひと}によって) · cause: noun + によって ({大雪|おおゆき}によって, {事故|じこ}によって) · passive 'by': noun + によって ({隼人|はやと}によって{守られた|まもられた})",
+  "explanation": "Most often 'it differs depending on X': {地域|ちいき}によって{違|ちが}う. It also gives a formal cause (news, announcements) and the doer of a passive in written style. Don't mix it up with によると (according to), which names where information came from.",
+  "src": [
+   "d2",
+   "p0",
+   "p1"
+  ],
+  "mark": [
+   "地域によって",
+   "人によって",
+   "店によって",
+   "大雪によって"
+  ],
+  "examples": [
+   {
+    "jp": "{店|みせ}によって、{値段|ねだん}がかなり{違います|ちがいます}。",
+    "en": "Prices vary quite a lot from shop to shop."
+   },
+   {
+    "jp": "{大雪|おおゆき|heavy snow|3}によって、{電車|でんしゃ}が{止まりました|とまりました}。",
+    "en": "The trains stopped because of heavy snow."
+   }
+  ],
+  "quiz": {
+   "question": "{曜日|ようび}＿＿、お{客|きゃく}さんの{数|かず}が{違います|ちがいます}。",
+   "en": "The number of guests differs depending on the day of the week.",
+   "options": [
+    "によって",
+    "によると",
+    "について",
+    "にとって"
+   ],
+   "explain": "Something changes depending on X → によって. によると = according to, について = about, にとって = for (someone)."
+  },
+  "quiz_more": [
+   {
+    "question": "{台風|たいふう|typhoon|3}＿＿、{試合|しあい}が{中止|ちゅうし|cancellation|3}になりました。",
+    "en": "The match was cancelled because of the typhoon.",
+    "options": [
+     "によって",
+     "によると",
+     "のおかげで",
+     "に対して"
+    ],
+    "explain": "A formal cause → によって. のおかげで is only for good results."
+   },
+   {
+    "question": "{天気予報|てんきよほう|weather forecast|3}＿＿、{明日|あした}も{雪|ゆき}だそうです。",
+    "en": "According to the forecast, it'll snow tomorrow too.",
+    "options": [
+     "によると",
+     "によって",
+     "について",
+     "に比べて"
+    ],
+    "explain": "Here the forecast is a source of information + そうです, so によると, not によって."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "信州",
+  "reading": "しんしゅう",
+  "romaji": "shinshū",
+  "meaning": "Shinshū, the old name for Nagano",
+  "where": "Printed on the {信州弁|しんしゅうべん} hand towels sold at reception, under a list of dialect words.",
+  "breakdown": "{信州|しんしゅう}: 信 trust + 州 province → short for {信濃国|しなののくに}, the old province that is now Nagano.",
+  "related": "{信州|しんしゅう}そば = Nagano soba; {信州弁|しんしゅうべん} = Nagano dialect."
+ },
+ "tip": {
+  "mark": "弁",
+  "title": "Every region has its 〜{弁|べん}",
+  "body": "Dialects are named with {弁|べん}: {関西弁|かんさいべん}, {信州弁|しんしゅうべん}, {博多弁|はかたべん}. Many people speak standard Japanese ({標準語|ひょうじゅんご}) at work and switch back with family, so the same person can sound like two people. Say ずら yourself and older locals will laugh and love it."
+ },
+ "challenge": {
+  "type": "order",
+  "prompt": "{健太|けんた} asks: 「スペインにも{方言|ほうげん|dialect|3}ってあるん？」 Tell him yes, and that the language differs a lot depending on the region.",
+  "model_answer": "うん、{地域|ちいき|region, area|3}によって{言葉|ことば}がかなり{違う|ちがう}よ。",
+  "pieces": [
+   "うん、",
+   "{地域|ちいき}によって",
+   "{言葉|ことば}が",
+   "かなり{違う|ちがう}よ。"
+  ],
+  "explanation": "{地域|ちいき}によって sets up what the difference depends on, and the sentence ends with {違|ちが}う, the verb によって usually goes with. Plain form + よ fits a coworker your age.",
+  "hint": "{地域|ちいき}によって · 〜{違|ちが}う"
+ },
+ "vocab": [
+  {
+   "jp": "{勘違|かんちが}い",
+   "reading": "かんちがい",
+   "en": "misunderstanding, wrong idea",
+   "level": "N3",
+   "src": "d1",
+   "surface": "勘違い",
+   "note": "{勘違|かんちが}いする = to get it wrong in your head. Softer than {間違|まちが}い."
+  },
+  {
+   "jp": "{方言|ほうげん}",
+   "reading": "ほうげん",
+   "en": "dialect",
+   "level": "N3",
+   "src": "d1",
+   "surface": "方言",
+   "note": "{方|ほう} direction, region + {言|げん} words. A specific one is 〜{弁|べん}."
+  },
+  {
+   "jp": "{意味|いみ}",
+   "reading": "いみ",
+   "en": "meaning",
+   "level": "N4",
+   "src": "d1",
+   "surface": "意味",
+   "note": "どういう{意味|いみ}？ = what do you mean? 〜って{意味|いみ} = it means…"
+  },
+  {
+   "jp": "{地域|ちいき}",
+   "reading": "ちいき",
+   "en": "region, area",
+   "level": "N3",
+   "src": "d2",
+   "surface": "地域",
+   "note": "Common in news and notices: {地域|ちいき}の{人|ひと} = local people."
+  },
+  {
+   "jp": "{向|む}こう{側|がわ}",
+   "reading": "むこうがわ",
+   "en": "the other side",
+   "level": "N3",
+   "src": "d3",
+   "surface": "向こう側",
+   "note": "{向|む}こう over there + {側|がわ} side. {道|みち}の{向|む}こう{側|がわ} = across the road."
+  },
+  {
+   "jp": "{昔|むかし}",
+   "reading": "むかし",
+   "en": "long ago, the old days",
+   "level": "N4",
+   "src": "d3",
+   "surface": "昔",
+   "note": "{昔|むかし}{昔|むかし}… = once upon a time."
+  },
+  {
+   "jp": "{通|つう}じる",
+   "reading": "つうじる",
+   "en": "to get across, be understood",
+   "level": "N3",
+   "src": "d5",
+   "surface": "通じへん",
+   "note": "{日本語|にほんご}が{通|つう}じた！ = they understood my Japanese! Also: a road leads somewhere."
+  },
+  {
+   "jp": "{習慣|しゅうかん}",
+   "reading": "しゅうかん",
+   "en": "custom, habit",
+   "level": "N3",
+   "src": "p0",
+   "surface": "習慣",
+   "note": "{習|しゅう} learn + {慣|かん} get used to. {日本|にほん}の{習慣|しゅうかん} = Japanese customs."
+  },
+  {
+   "jp": "{好|この}み",
+   "reading": "このみ",
+   "en": "taste, liking",
+   "level": "N3",
+   "src": "p1",
+   "surface": "好み",
+   "note": "From {好|この}む (to like). {好|この}みのタイプ = your type."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "違",
+   "track": "lesson",
+   "on": "イ",
+   "kun": "ちが(う)・ちが(える)",
+   "meaning": "differ, be wrong",
+   "parts": "⻌ road radical + 韋 (two feet walking in opposite directions) → two people going different ways on the road: differ.",
+   "lookalike": "Not 偉 (great): 偉 has 亻 person on the left, 違 has the ⻌ road along the bottom.",
+   "words": [
+    {
+     "jp": "{勘違|かんちが}い",
+     "reading": "かんちがい",
+     "en": "misunderstanding"
+    },
+    {
+     "jp": "{違|ちが}う",
+     "reading": "ちがう",
+     "en": "to differ, be wrong"
+    },
+    {
+     "jp": "{間違|まちが}える",
+     "reading": "まちがえる",
+     "en": "to make a mistake"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "great, admirable",
+     "pass through",
+     "return"
+    ],
+    "readings": [
+     "かんちがえ",
+     "かんい",
+     "がんちがい"
+    ]
+   }
+  },
+  {
+   "kanji": "側",
+   "track": "n3",
+   "on": "ソク",
+   "kun": "がわ",
+   "meaning": "side",
+   "parts": "亻 person + 則 rule → a person standing beside you, keeping to the rule: side.",
+   "lookalike": "Not 測 (measure): 測 has 氵 water on the left, 側 has 亻 person.",
+   "words": [
+    {
+     "jp": "{向|む}こう{側|がわ}",
+     "reading": "むこうがわ",
+     "en": "the other side"
+    },
+    {
+     "jp": "{右側|みぎがわ}",
+     "reading": "みぎがわ",
+     "en": "right side"
+    },
+    {
+     "jp": "{両側|りょうがわ}",
+     "reading": "りょうがわ",
+     "en": "both sides"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "measure",
+     "rule",
+     "front"
+    ],
+    "readings": [
+     "むこうそく",
+     "むこうかわ",
+     "むかいがわ"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "{健太|けんた}'s Kansai-ben",
+   "title_jp": "{関西弁|かんさいべん}→{標準語|ひょうじゅんご}",
+   "intro": "What {健太|けんた} says, and what it means in standard Japanese.",
+   "items": [
+    {
+     "jp": "めっちゃ",
+     "en": "really, super",
+     "note": "= とても. Now used all over Japan by young people."
+    },
+    {
+     "jp": "あかん",
+     "en": "no good, don't",
+     "note": "= だめ. あかんで！ = don't do that!"
+    },
+    {
+     "jp": "ほんま？",
+     "en": "Really?",
+     "note": "= {本当|ほんとう}？"
+    },
+    {
+     "jp": "ちゃうちゃう",
+     "en": "No, no, that's not it",
+     "note": "= {違|ちが}う{違|ちが}う."
+    }
+   ]
+  },
+  {
+   "title": "Words from {信州|しんしゅう}",
+   "title_jp": "{信州弁|しんしゅうべん}",
+   "intro": "What you might hear from {田中|たなか}さん or ハナおばあちゃん.",
+   "items": [
+    {
+     "jp": "{ごしたい||(Nagano dialect) tired, worn out|1}",
+     "en": "Tired, worn out",
+     "note": "= {疲|つか}れた."
+    },
+    {
+     "jp": "そうずら",
+     "en": "Right, isn't it?",
+     "note": "= そうでしょう. Also heard in Yamanashi and Shizuoka."
+    },
+    {
+     "jp": "{ずくがある||(Nagano dialect) has get-up-and-go|1}",
+     "en": "Has energy, gets things done",
+     "note": "ずくなし = a lazy person. Very Nagano."
+    }
+   ]
+  }
+ ]
+}

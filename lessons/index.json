@@ -155,5 +155,12 @@
   "category": "safety",
   "function": "advice",
   "format": "story"
+ },
+ {
+  "id": "2026-11-25",
+  "topic": "What does ごしたい mean?",
+  "category": "language",
+  "function": "reasons",
+  "format": "dialogue"
  }
 ]

@@ -95,7 +95,7 @@
     "Kenta"
    ],
    "color": "#f39800",
-   "status": "{対決|たいけつ}、{勝った|かった}で！{次|つぎ}は{白馬|はくば}や🏂",
+   "status": "「ごしたい」≠「{何|なに}かしたい」やでｗ",
    "where": "ゲストハウス{風|かぜ}"
   },
   {
@@ -549,6 +549,19 @@
     "アルちゃん ran for the door during the drill; 澪 thought it was hilarious.",
     "The 田中 house torch (懐中電灯) needed new AA batteries on 24 Nov; 恵子さん asked アルちゃん to buy four at 村井電器, round the corner from the pharmacy.",
     "The classroom of 2-3 has a green 非常口 sign above the door."
+   ]
+  },
+  {
+   "date": "2026-11-25",
+   "cast": [
+    "kenta"
+   ],
+   "summary": "Wednesday 25 Nov at ゲストハウス風 reception: アルちゃん tells 健太 that when 田中さん said 'ごしたいずら' this morning he answered 'what do you want to do?'. 健太 explains it's Nagano dialect for 'tired', why dialects differ by region, and that he avoids Kansai-ben with guests because it may not get across or can sound harsh.",
+   "new_facts": [
+    "On the morning of 25 Nov 田中さん told アルちゃん 'ごしたいずら' (you must be tired) and アルちゃん misunderstood it as 'what do you want to do?'.",
+    "健太 speaks standard keigo with guests because Kansai-ben may not be understood and can sound harsh to some people.",
+    "ゲストハウス風 sells 信州弁 hand towels (tenugui) at reception.",
+    "On the evening of 25 Nov the train for 長野 from 鷹ノ原駅 was about 15 minutes late because of heavy snow."
    ]
   }
  ],
