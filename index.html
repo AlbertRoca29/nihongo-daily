@@ -2580,7 +2580,7 @@ rt{font-size:max(.5em,9.5px)}
   applySettings();
   (async () => {
     try{
-      try{ const cr = await fetch("cast.json", {cache:"no-cache"}); if (cr.ok){ const C = await cr.json(); [...C.cast, ...(C.others || [])].forEach(c => { castById[c.id] = c; }); window.__log = C.log || []; } }catch{}
+      try{ const cr = await fetch("cast.json", {cache:"no-cache"}); if (cr.ok){ const C = await cr.json(); [...C.cast, ...(C.others || [])].forEach(c => { castById[c.id] = c; if ("status_base" in c) c.status = c.status_base; if ("where_base" in c) c.where = c.where_base; }); const T0 = todayStr(); window.__log = (C.log || []).filter(e => (e.date || "") <= T0); window.__log.forEach(e => Object.entries(e.status_upd || {}).forEach(([id, f]) => { const c = castById[id]; if (c && f){ if (typeof f.status === "string") c.status = f.status; if (typeof f.where === "string") c.where = f.where; } })); } }catch{}
       try{ const sr = await fetch("stickers.json", {cache:"no-cache"}); if (sr.ok) (await sr.json()).stickers.forEach(s => { STK[s.id] = s; }); }catch{}
       await kdLoad;
       const r = await fetch("lessons/index.json", {cache:"no-cache"}), list = await r.json(), today = todayStr();

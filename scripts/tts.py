@@ -14,6 +14,7 @@ versions), "w:<word>", "slow:<key>", "_radio" and "_radio_tl" (timeline).
 Files are named by voice + text, so unchanged lines are never remade. When a voice only changes
 model (Flash -> Lite), the old file is kept. Newest lessons go first; older lessons are back-filled
 up to BACKFILL clips per run, so the daily limit stays free for today's lesson.
+Pre-written upcoming lessons count as recent and go first, nearest date first.
 
 Timing: Gemini's daily request limit resets at midnight Pacific (08:00 UTC in winter), but the
 lesson is pushed around 06:00 UTC, so the afternoon retry run and the next morning's lesson share
@@ -510,11 +511,18 @@ def build(lid, backfill):
 def main():
     if not GKEY:
         print("GEMINI_API_KEY is not set: only VOICEVOX and Chirp lines can be made.")
-    ids = sys.argv[1:] or sorted((os.path.basename(f)[:-5] for f in glob.glob("lessons/2*.json")), reverse=True)
     today = dt.date.today()
+    if sys.argv[1:]:
+        ids = sys.argv[1:]
+    else:
+        # Pre-written lessons: yesterday, today and every upcoming lesson first, nearest date first,
+        # so the audio stays a few days ahead of the calendar; then older lessons, newest first (back-fill).
+        allids = sorted(os.path.basename(f)[:-5] for f in glob.glob("lessons/2*.json"))
+        y = (today - dt.timedelta(days=1)).isoformat()
+        ids = [i for i in allids if i >= y] + sorted((i for i in allids if i < y), reverse=True)
     budget["left"] = BACKFILL
     for lid in ids:
-        recent = (today - dt.date.fromisoformat(lid)).days <= 1
+        recent = (today - dt.date.fromisoformat(lid)).days <= 1  # also true for every upcoming lesson
         build(lid, backfill=not recent and not sys.argv[1:])
     save_ledger()
     print(f"Gemini this month: ${spent():.3f} of ${VOICES.get('monthly_cap_usd', 3)} cap")

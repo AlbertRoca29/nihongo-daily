@@ -4,7 +4,16 @@ You add one short Japanese lesson per day to this app. The learner is studying f
 
 Only touch `lessons/` and `cast.json` (the story log), and `topics.json` when a new angle is truly needed. Never change `index.html`, `sw.js`, the manifest, icons, `stickers.json` or `curriculum/` unless the user asks.
 
-Write **only today's lesson**. Never write lessons for future dates: each lesson follows the kanji and grammar tracks, the story log, and avoids words already taught, so it must be written on the day.
+Write **only today's lesson**, unless a pre-write run tells you to write ahead (below). Each lesson follows the kanji and grammar tracks and the story log, and avoids words already taught, so lessons are always written one at a time, in date order, never with a gap.
+
+## Pre-writing (writing ahead)
+
+The app only shows lessons dated up to the phone's today, and only the story-log entries and status changes up to that date, so lessons can be written ahead (December 2026 is pre-written because no runs happen then).
+- Every command takes `--today YYYY-MM-DD`: `python3 scripts/lessons.py --today 2026-12-03 status`, `... --today 2026-12-03 context`. Use the date you are writing for, and write that date's lesson exactly as the daily run would on that day.
+- With a future `--today`, status is in PRE-WRITE MODE: no news lessons (news can't be written ahead); mock exams, review days, practical days, challenge and listening types, guests and weekdays all follow the date as usual. It may give a SEASON hint for a fixed calendar date: check those facts with web search before using them, and never state anything that depends on news.
+- Write the scene as happening on that date (weekday, weather of the season, 颯太's school holidays from late December).
+- The story-log entry (`addlog`) uses that date. Status changes go through `_status` in addlog, never by editing `status` by hand: addlog stores them with the date, so the app reveals them on the right day.
+- When the run without `--today` finds today's lesson pre-written, it writes nothing. Never `bump` a pre-written lesson.
 
 ## Level: N3, without assuming it's known
 
@@ -54,7 +63,7 @@ Make the combination feel like one real moment, not a checklist: "Yuki tells you
 - **Who speaks**: every line of a `dialogue`, `line` or `story` has `"who"`: a character id from cast.json (`cast` or `others`, e.g. `"kenta"`, `"keiko"`), `"you"` for the learner, `"guest"` for today's guest, or `"extra"` for staff, a shopkeeper, a passer-by (with `"voice": "f"` or `"m"`). Voice, portrait and LINE icon all come from `who`.
 - **Speaker labels are Japanese**: `speaker` is exactly the character's `name` in cast.json (`田中さん`, `健太`, `ハナおばあちゃん`, `恵子さん`), the guest's `name`, or a Japanese label for extras (`店員さん`, `駅員さん`). Never romaji. The learner's lines: `"speaker": "アルちゃん", "who": "you", "me": true`. The check refuses anything else.
 - Portraits: chibi portraits (`icons/cast/<id>.svg`) and LINE profile pictures (`icons/line/<id>.svg`) exist for the cast, 恵子さん and the learner; guests and extras get their initial.
-- **Status messages**: each character in cast.json has a LINE `status` (a short Japanese line with furigana markup, like a real LINE profile) shown in the app's People page. When something changes for a character in today's lesson, update their `status` (and `where` if they moved). Keep it in their voice.
+- **Status messages**: each character in cast.json has a LINE `status` (a short Japanese line with furigana markup, like a real LINE profile) shown in the app's People page. When something changes for a character in today's lesson, update their `status` (and `where` if they moved) through `_status` in addlog, which stores the change with the date. Keep it in their voice.
 - Characters address the learner as described in `world.you` and the task prompt.
 
 ## Formats

@@ -25,6 +25,19 @@ TZ = "Europe/Madrid"
 
 NEWS_OPTIONAL_AFTER = 8   # days since last news: write one if there's a good story
 NEWS_DUE_AFTER = 10       # days since last news: always write one
+# Fixed dates used as hints when lessons are written ahead (pre-write mode, --today in the future).
+# Verify each fact with web search before using it in a lesson.
+SEASON = {
+    "12-13": "正月事始め (13 Dec): traditionally the day New Year preparations and すす払い begin.",
+    "12-22": "冬至 (winter solstice, 22 Dec in Japan in 2026): ゆず湯 and かぼちゃ customs.",
+    "12-24": "Christmas Eve: in Japan a couples' evening, クリスマスケーキ and fried chicken.",
+    "12-25": "Christmas Day: a normal workday in Japan; often given as the posting date for 年賀状 to arrive on 1 Jan (check Japan Post).",
+    "12-28": "仕事納め: many offices close for the year around now.",
+    "12-31": "大晦日: 年越しそば, 除夜の鐘, 紅白歌合戦, 良いお年を.",
+    "01-01": "元日: 初詣, おせち, お年玉, 年賀状, あけましておめでとう.",
+    "01-03": "三が日 ends: 箱根駅伝 on 2-3 Jan, back from the 帰省.",
+    "01-07": "七草がゆ (7 Jan).",
+}
 REVIEW_EVERY = 12         # lessons since last review before a review is allowed
 PRACTICAL_EVERY = 3       # one regular lesson in three is on a practical field
 GUEST_EVERY = 8           # lessons since the last guest before a new guest is due
@@ -700,6 +713,8 @@ def cmd_status(args):
     today_entry = next((e for e in idx if e["id"] == today), None)
     upcoming = [e for e in idx if e["id"] > today]
 
+    real_today = today_str(None)
+    prewrite = today > real_today
     news = [e["id"] for e in past if e.get("category") == "news"]
     since_ref = news[-1] if news else (ids[0] if ids else today)
     days = (dt.date.fromisoformat(today) - dt.date.fromisoformat(since_ref)).days
@@ -711,6 +726,8 @@ def cmd_status(args):
         news_state = "OPTIONAL"
     else:
         news_state = "NOT YET"
+    if prewrite:
+        news_state = "OFF (pre-writing: news can't be written ahead)"
 
     reviews = [i for i, e in enumerate(before) if e.get("category") == "review"]
     since_review = len(before) - (reviews[-1] + 1) if reviews else len(before)
@@ -808,7 +825,20 @@ def cmd_status(args):
     print("Kanji already taught (never teach again): " + ("".join(taught_k) or "none"))
     print(f"Vocab already taught ({len(taught_v)}, never list again): " + ("、".join(taught_v) or "none"))
     print()
+    if prewrite:
+        print(f"PRE-WRITE MODE: real date {real_today}; you are writing ahead for {today}. No news lessons. "
+              "Write the scene as happening on this date (weekday, season, school holidays). "
+              + (f"SEASON: {SEASON[today[5:]]}" if today[5:] in SEASON else "Late-December/New-Year season details are welcome when they fit (大掃除, 忘年会, 年賀状, お歳暮, 冬休み)."))
     regular_pick = f"field '{group[0]['id']}', function '{fns[0]['id']}', format '{fmt}', challenge '{ch_type}', listening '{li_type}'"
+    if upcoming and not prewrite:
+        if today_entry:
+            print(f"DECISION: today's lesson already exists (pre-written; upcoming lessons up to {upcoming[-1]['id']}). Write nothing; just report its topic. Never bump a pre-written lesson.")
+        else:
+            print(f"DECISION: lessons are pre-written up to {upcoming[-1]['id']} but {today} is missing. Write nothing and report the gap.")
+        return 0
+    if prewrite and today_entry:
+        print(f"DECISION: {today} is already written. Write nothing for this date.")
+        return 0
     if mock_due:
         print(f"DECISION: first Saturday of the month: write the MONTHLY MOCK for {today} (format 'mock', category 'mock'; see CLAUDE.md). No regular lesson or news today.")
     elif news_state == "DUE":
@@ -889,11 +919,23 @@ def cmd_addlog(args):
     data.setdefault("log", [])
     data["log"] = [x for x in data["log"] if x.get("date") != entry.get("date")] + [entry]
     people = {c["id"]: c for c in data.get("cast", []) + data.get("others", [])}
+    clean = {}
     for cid, fields in upd.items():
         if cid not in people:
             print(f"Unknown character id: {cid}")
             return 1
-        people[cid].update({k: v for k, v in fields.items() if k in ("status", "where")})
+        f = {k: v for k, v in (fields or {}).items() if k in ("status", "where")}
+        c = people[cid]
+        # The app shows status_base plus every dated status_upd up to the device's today,
+        # so pre-written lessons never reveal a later status.
+        c.setdefault("status_base", c.get("status", ""))
+        c.setdefault("where_base", c.get("where", ""))
+        c.update(f)
+        if f:
+            clean[cid] = f
+    if clean:
+        entry["status_upd"] = clean
+    data["log"][-1] = entry
     save_json(CAST, data)
     print(f"Logged {entry.get('date')}" + (f"; updated {', '.join(upd)}" if upd else ""))
     return 0
