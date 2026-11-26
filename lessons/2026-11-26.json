@@ -1,0 +1,423 @@
+{
+ "topic": "The town photo club",
+ "category": "hobbies",
+ "function": "hearsay",
+ "format": "text",
+ "cast": [
+  "ren"
+ ],
+ "title_jp": "{町|まち}の{写真|しゃしん}クラブ",
+ "context": "Thursday 26 November, evening at the {田中|たなか} house: under the kotatsu アルちゃん reads the town newsletter's page on the local photo club. It says film cameras are popular with young people again, and he thinks of レン.",
+ "scene": "Thursday night under the kotatsu. The town newsletter has a page on the local photo club, and it mentions film cameras: レン's hobby.",
+ "keep": [
+  "p1"
+ ],
+ "text_title": "{町報|ちょうほう|town newsletter|2}たかのはら 12{月号|がつごう}：サークル{紹介|しょうかい|introduction|4}",
+ "phrases": [
+  {
+   "jp": "{写真|しゃしん}について、もっと{知りたい|しりたい}です。",
+   "en": "I'd like to know more about photography.",
+   "register": "polite",
+   "note": "Noun + について = about. Works with {知|し}る, {話|はな}す, {聞|き}く, {調|しら}べる."
+  },
+  {
+   "jp": "フィルムカメラ、{若い|わかい}{人|ひと}に{人気|にんき}らしいよ。",
+   "en": "Apparently film cameras are popular with young people.",
+   "register": "casual",
+   "note": "らしい passes on something you read or heard, a little less sure than そうだ."
+  },
+  {
+   "jp": "{代表|だいひょう|representative, leader|3}の{方|かた}によると、{初心者|しょしんしゃ|beginner|3}でも{大丈夫|だいじょうぶ}だそうです。",
+   "en": "According to the leader, even beginners are fine.",
+   "register": "polite",
+   "note": "〜によると…そうです: name the source, then the news. Very common in polite talk."
+  },
+  {
+   "jp": "{何|なに}かに{夢中|むちゅう|absorbed, crazy about|3}になれる{趣味|しゅみ|hobby|4}がほしいな。",
+   "en": "I want a hobby I can really get lost in.",
+   "register": "casual",
+   "note": "〜に{夢中|むちゅう}になる = to get hooked on something."
+  },
+  {
+   "jp": "すみません、{写真|しゃしん}を{撮って|とって|to take (a photo)|4}もいいですか。",
+   "en": "Excuse me, may I take a photo?",
+   "register": "polite",
+   "note": "Ask this before photographing people, shops or inside temples."
+  }
+ ],
+ "dialogue_setting": "The December issue of the town newsletter, left on the kotatsu by {恵子|けいこ}さん.",
+ "dialogue": [
+  {
+   "speaker": "This month",
+   "jp": "{今月|こんげつ}は、{町|まち}の{写真|しゃしん}クラブについて{紹介|しょうかい|introduction|4}します。{名前|なまえ}は「{鷹ノ原|たかのはら}フォト{会|かい|club, society|3}」です。",
+   "en": "This month we introduce the town's photo club. Its name is '{鷹ノ原|たかのはら}フォト{会|かい}'.",
+   "register": "polite"
+  },
+  {
+   "speaker": "Members",
+   "jp": "{会員|かいいん|member (of a club)|3}は20{代|だい}から80{代|だい}まで15{人|にん}。{毎月|まいつき}{第2日曜日|だいににちようび|second Sunday (of the month)|2}に{公民館|こうみんかん|community hall|3}に{集まって|あつまって|to gather|4}います。",
+   "en": "There are 15 members, from their 20s to their 80s. They meet at the community hall on the second Sunday of every month.",
+   "register": "polite"
+  },
+  {
+   "speaker": "Winter",
+   "jp": "{会員|かいいん|member (of a club)|3}の{話|はなし}によると、{冬|ふゆ}は{公民館|こうみんかん|community hall|3}の{窓|まど}から{鷹見岳|たかみだけ}がきれいに{撮れる|とれる|can take (a photo)|4}そうです。",
+   "en": "According to the members, in winter you can get a beautiful shot of {鷹見岳|たかみだけ} from the community hall's window.",
+   "register": "polite"
+  },
+  {
+   "speaker": "Trend",
+   "jp": "{最近|さいきん}は、{若い|わかい}{人|ひと}の{間|あいだ|among|3}でフィルムカメラが{人気|にんき}らしいです。{現像|げんぞう|developing (film)|2}を{待つ|まつ}のも{楽しい|たのしい}そうです。",
+   "en": "Lately film cameras seem to be popular among young people. Apparently waiting for the film to be developed is part of the fun.",
+   "register": "polite"
+  },
+  {
+   "speaker": "The leader",
+   "jp": "{代表|だいひょう|representative, leader|3}の{山田|やまだ}さん（72）は「{写真|しゃしん}に{夢中|むちゅう|absorbed, crazy about|3}になって、{毎日|まいにち}が{楽しく|たのしく}なった」と{話して|はなして}いました。",
+   "en": "The leader, {山田|やまだ}さん (72), said, 'Since I got hooked on photography, every day has become fun.'",
+   "register": "polite"
+  },
+  {
+   "speaker": "Join us",
+   "jp": "{初心者|しょしんしゃ|beginner|3}{歓迎|かんげい|welcome|3}！{道具|どうぐ|tools, equipment|3}がない{人|ひと}は、スマホでも{大丈夫|だいじょうぶ}です。",
+   "en": "Beginners welcome! If you have no equipment, a smartphone is fine too.",
+   "register": "polite"
+  },
+  {
+   "speaker": "Contact",
+   "jp": "{写真|しゃしん}について{質問|しつもん}がある{方|かた}は、{気軽|きがる|feel free, casually|3}に{公民館|こうみんかん|community hall|3}までどうぞ。",
+   "en": "If you have any questions about photography, feel free to come to the community hall.",
+   "register": "polite"
+  }
+ ],
+ "listening": {
+  "type": "dictation",
+  "intro": "You send レン a photo of the page. He answers with a voice message. Type what he says.",
+  "who": "ren",
+  "lines": [
+   {
+    "who": "ren",
+    "jp": "フィルムについてなら、{何|なん}でも{聞いて|きいて}ね。",
+    "en": "If it's about film, ask me anything."
+   },
+   {
+    "who": "ren",
+    "jp": "{今度|こんど}、{僕|ぼく}のカメラ{見せる|みせる}よ。",
+    "en": "I'll show you my camera some time."
+   }
+  ]
+ },
+ "grammar": {
+  "id": "n3-ni-tsuite",
+  "pattern": "〜について",
+  "level": "N3",
+  "meaning": "about, concerning",
+  "form": "noun + について ({写真|しゃしん}について, {日本|にほん}について) · before a noun: noun + についての + noun ({写真|しゃしん}についての{質問|しつもん}, {雪|ゆき}についての{記事|きじ})",
+  "explanation": "Marks the topic you talk, ask, think or write about: {写真|しゃしん}について{話|はな}す. Before another noun it needs の: についての{記事|きじ}. Don't confuse it with にとって (for someone, from their point of view) or によって (depending on).",
+  "src": [
+   "d0",
+   "d6",
+   "p0"
+  ],
+  "mark": [
+   "写真クラブについて",
+   "写真について",
+   "歴史について",
+   "映画について"
+  ],
+  "examples": [
+   {
+    "jp": "{日本|にほん}の{歴史|れきし|history|4}について、レポートを{書きました|かきました}。",
+    "en": "I wrote a report about Japanese history."
+   },
+   {
+    "jp": "{好きな|すきな}{映画|えいが}について、{何時間|なんじかん}も{話しちゃった|はなしちゃった}。",
+    "en": "We ended up talking about our favourite films for hours."
+   }
+  ],
+  "quiz": {
+   "question": "{新しい|あたらしい}{仕事|しごと}＿＿、{何|なに}か{質問|しつもん}はありますか。",
+   "en": "Do you have any questions about the new job?",
+   "options": [
+    "について",
+    "にとって",
+    "によって",
+    "に対して"
+   ],
+   "explain": "The topic of the questions → について. にとって = for someone, によって = depending on."
+  },
+  "quiz_more": [
+   {
+    "question": "これは{雪|ゆき}＿＿{記事|きじ|article|3}です。",
+    "en": "This is an article about snow.",
+    "options": [
+     "についての",
+     "について",
+     "についで",
+     "にとっての"
+    ],
+    "explain": "Before a noun ({記事|きじ}) you need の: についての."
+   },
+   {
+    "question": "{子ども|こども}＿＿、この{本|ほん}は{難しすぎます|むずかしすぎます}。",
+    "en": "For children, this book is too difficult.",
+    "options": [
+     "にとって",
+     "について",
+     "によって",
+     "によると"
+    ],
+    "explain": "From children's point of view → にとって. について would mean the book is about children."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "公民館",
+  "reading": "こうみんかん",
+  "romaji": "kōminkan",
+  "meaning": "community hall",
+  "where": "On the newsletter's little map, and over the door of the building where the photo club meets.",
+  "breakdown": "{公民館|こうみんかん}: 公 public + 民 people + 館 building → 'a building for the town's people'.",
+  "related": "{図書館|としょかん} = library; {映画館|えいがかん} = cinema: 館 is a building for something."
+ },
+ "tip": {
+  "mark": "写",
+  "title": "Ask before you shoot",
+  "body": "In Japan, ask before photographing people: すみません、{写真|しゃしん}を{撮って|とって}もいいですか. Many people don't want their face on social media, so friends often blur faces or shoot from behind. Shrines, museums and shops may have {撮影禁止|さつえいきんし} (no photos) signs."
+ },
+ "challenge": {
+  "type": "fix",
+  "prompt": "レン on LINE: 「{町報|ちょうほう|town newsletter|2}？どんな{記事|きじ|article|3}？」 You reply that it's an article about the town's photo club, and that film cameras seem to be popular. One part is wrong.",
+  "parts": [
+   {
+    "jp": "{町|まち}の{写真|しゃしん}クラブ"
+   },
+   {
+    "jp": "について{記事|きじ}だよ。",
+    "wrong": true,
+    "why": "Before a noun ({記事|きじ}) について needs の: についての{記事|きじ}."
+   },
+   {
+    "jp": "フィルムカメラが"
+   },
+   {
+    "jp": "{人気|にんき}らしい！"
+   }
+  ],
+  "model_answer": "{町|まち}の{写真|しゃしん}クラブについての{記事|きじ|article|3}だよ。フィルムカメラが{人気|にんき}らしい！",
+  "explanation": "についての links the topic to the noun {記事|きじ}: 'an article about the photo club'. らしい passes on what you read, without claiming it yourself. Plain form + よ fits a friendly chat with レン.",
+  "hint": "noun + についての + noun"
+ },
+ "vocab": [
+  {
+   "jp": "{紹介|しょうかい}",
+   "reading": "しょうかい",
+   "en": "introduction",
+   "level": "N4",
+   "src": "d0",
+   "surface": "紹介",
+   "note": "{紹介|しょうかい}する = to introduce. {自己紹介|じこしょうかい} = self-introduction."
+  },
+  {
+   "jp": "{会員|かいいん}",
+   "reading": "かいいん",
+   "en": "member (of a club)",
+   "level": "N3",
+   "src": "d1",
+   "surface": "会員",
+   "note": "{会|かい} club + {員|いん} member. Also gym or shop membership: {会員|かいいん}カード."
+  },
+  {
+   "jp": "{集|あつ}まる",
+   "reading": "あつまる",
+   "en": "to gather, meet up",
+   "level": "N4",
+   "src": "d1",
+   "surface": "集まって",
+   "note": "{集|あつ}まる = people gather; {集|あつ}める = you collect something."
+  },
+  {
+   "jp": "{撮|と}る",
+   "reading": "とる",
+   "en": "to take (a photo), film",
+   "level": "N4",
+   "src": "d2",
+   "surface": "撮れる",
+   "note": "Same sound as {取|と}る, but {撮|と}る is only for photos and video. {撮|と}れる = can take."
+  },
+  {
+   "jp": "{夢中|むちゅう}",
+   "reading": "むちゅう",
+   "en": "absorbed, crazy about",
+   "level": "N3",
+   "src": "d4",
+   "surface": "夢中",
+   "note": "{夢|む} dream + {中|ちゅう} inside → lost in a dream. 〜に{夢中|むちゅう}になる."
+  },
+  {
+   "jp": "{初心者|しょしんしゃ}",
+   "reading": "しょしんしゃ",
+   "en": "beginner",
+   "level": "N3",
+   "src": "d5",
+   "surface": "初心者",
+   "note": "{初|しょ} first + {心|しん} heart + {者|しゃ} person. The green-yellow car sticker is {初心者|しょしんしゃ}マーク."
+  },
+  {
+   "jp": "{歓迎|かんげい}",
+   "reading": "かんげい",
+   "en": "welcome",
+   "level": "N3",
+   "src": "d5",
+   "surface": "歓迎",
+   "note": "On flyers: {初心者|しょしんしゃ}{歓迎|かんげい}. {歓迎会|かんげいかい} = welcome party."
+  },
+  {
+   "jp": "{道具|どうぐ}",
+   "reading": "どうぐ",
+   "en": "tools, equipment",
+   "level": "N3",
+   "src": "d5",
+   "surface": "道具",
+   "note": "Any gear for a job or hobby: {釣|つ}りの{道具|どうぐ} = fishing gear."
+  },
+  {
+   "jp": "{気軽|きがる}",
+   "reading": "きがる",
+   "en": "casual, without worry",
+   "level": "N3",
+   "src": "d6",
+   "surface": "気軽",
+   "note": "{気軽|きがる}にどうぞ = feel free. Polite and friendly, common on signs and flyers."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "撮",
+   "track": "lesson",
+   "on": "サツ",
+   "kun": "と(る)",
+   "meaning": "take (a photo), film",
+   "parts": "扌 hand radical + 最 most, best → your hand catching the best moment: take a photo.",
+   "lookalike": "Not 最 (most): 撮 is 最 with 扌 hand added on the left.",
+   "words": [
+    {
+     "jp": "{撮|と}る",
+     "reading": "とる",
+     "en": "to take (a photo)"
+    },
+    {
+     "jp": "{撮影|さつえい}",
+     "reading": "さつえい",
+     "en": "photography, filming"
+    },
+    {
+     "jp": "{自撮|じど}り",
+     "reading": "じどり",
+     "en": "selfie"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "most, extreme",
+     "hold, grasp",
+     "pick, gather"
+    ],
+    "readings": [
+     "さつる",
+     "もる",
+     "とおる"
+    ]
+   }
+  },
+  {
+   "kanji": "窓",
+   "track": "n3",
+   "on": "ソウ",
+   "kun": "まど",
+   "meaning": "window",
+   "parts": "穴 hole radical (a roof with an opening) + ム + 心 heart → the opening in your house where your heart looks out: window.",
+   "lookalike": "Not 空 (sky): both start with 穴, but 窓 has ム and 心 below, 空 has 工.",
+   "words": [
+    {
+     "jp": "{窓|まど}",
+     "reading": "まど",
+     "en": "window"
+    },
+    {
+     "jp": "{窓口|まどぐち}",
+     "reading": "まどぐち",
+     "en": "service counter, window"
+    },
+    {
+     "jp": "{窓側|まどがわ}",
+     "reading": "まどがわ",
+     "en": "window side"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "door",
+     "hole",
+     "sky"
+    ],
+    "readings": [
+     "そう",
+     "とびら",
+     "まで"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Camera talk",
+   "title_jp": "{写真|しゃしん}の{言葉|ことば}",
+   "intro": "Words you'll hear from anyone with a camera, film or phone.",
+   "items": [
+    {
+     "jp": "{自撮り|じどり|selfie|4}",
+     "en": "selfie",
+     "note": "{自|じ} self + {撮|ど}り taking. {自撮|じど}り{棒|ぼう} = selfie stick."
+    },
+    {
+     "jp": "{映える|ばえる|(slang) look great in photos|3}",
+     "en": "to look great on social media",
+     "note": "Slang. インスタ{映|ば}え = Insta-worthy. Standard {映|は}える means 'to shine'."
+    },
+    {
+     "jp": "{現像|げんぞう|developing (film)|2}する",
+     "en": "to develop film",
+     "note": "Film shops still offer it; it takes about a week."
+    },
+    {
+     "jp": "{撮影禁止|さつえいきんし|no photography|2}",
+     "en": "No photography",
+     "note": "The sign you'll see in temples, museums and some shops."
+    }
+   ]
+  },
+  {
+   "title": "Three ways to pass on what you heard",
+   "title_jp": "{聞いた|きいた}{話|はなし}の{伝え方|つたえかた}",
+   "intro": "Same news, three registers.",
+   "items": [
+    {
+     "jp": "{人気|にんき}だそうです。",
+     "en": "I hear it's popular.",
+     "note": "Polite and clear: you're reporting what you heard or read."
+    },
+    {
+     "jp": "{人気|にんき}らしいよ。",
+     "en": "Apparently it's popular.",
+     "note": "Casual, a little less sure, like something you picked up."
+    },
+    {
+     "jp": "{人気|にんき}なんだって。",
+     "en": "They say it's popular.",
+     "note": "Very casual, spoken. Friends use it all the time."
+    }
+   ]
+  }
+ ]
+}

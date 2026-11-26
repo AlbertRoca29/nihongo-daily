@@ -162,5 +162,12 @@
   "category": "language",
   "function": "reasons",
   "format": "dialogue"
+ },
+ {
+  "id": "2026-11-26",
+  "topic": "The town photo club",
+  "category": "hobbies",
+  "function": "hearsay",
+  "format": "text"
  }
 ]
