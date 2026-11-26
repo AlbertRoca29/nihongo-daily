@@ -99,7 +99,7 @@
     "Kenta"
    ],
    "color": "#f39800",
-   "status": "12/10は{白馬|はくば}や🏂 {寝坊|ねぼう}したらあかんで",
+   "status": "{応援|おうえん}してるで☕ 12/10は{白馬|はくば}や🏂",
    "where": "ゲストハウス{風|かぜ}",
    "status_base": "「ごしたい」≠「{何|なに}かしたい」やでｗ",
    "where_base": "ゲストハウス{風|かぜ}"
@@ -660,6 +660,23 @@
     "On 30 Nov アルちゃん was in 長野市 but didn't tell レン; they still haven't met.",
     "Snowy roads still scare アルちゃん."
    ]
+  },
+  {
+   "date": "2026-12-01",
+   "cast": [
+    "kenta"
+   ],
+   "summary": "Tuesday 1 Dec, quiet evening at ゲストハウス風: 健太 catches アルちゃん grinning at his phone, and アルちゃん tells him for the first time about レン, a man he met on the app. 健太 is completely relaxed about it, teases him ('as a friend, or as a possible boyfriend?') and tells him to ask レン out for coffee.",
+   "new_facts": [
+    "On 1 Dec アルちゃん came out to 健太 by telling him about レン; 健太 was relaxed and supportive.",
+    "健太 knows レン is a designer in 長野市 and that アルちゃん and レン haven't met yet.",
+    "アルちゃん admitted to 健太 that he'd like to meet レン; 健太 suggested inviting him for coffee."
+   ],
+   "status_upd": {
+    "kenta": {
+     "status": "{応援|おうえん}してるで☕ 12/10は{白馬|はくば}や🏂"
+    }
+   }
   }
  ],
  "others": [

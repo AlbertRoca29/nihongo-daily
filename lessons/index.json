@@ -197,5 +197,12 @@
   "category": "getting-around",
   "function": "requesting",
   "format": "story"
+ },
+ {
+  "id": "2026-12-01",
+  "topic": "Telling {健太|けんた} about レン",
+  "category": "love-relationships",
+  "function": "describing",
+  "format": "dialogue"
  }
 ]

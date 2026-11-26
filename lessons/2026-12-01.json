@@ -1,0 +1,410 @@
+{
+ "topic": "Telling {健太|けんた} about レン",
+ "category": "love-relationships",
+ "function": "describing",
+ "format": "dialogue",
+ "cast": [
+  "kenta"
+ ],
+ "title_jp": "どんな{人|ひと}？",
+ "context": "Tuesday 1 December, a quiet evening at {ゲストハウス風|ゲストハウスかぜ}: {健太|けんた} catches アルちゃん smiling at his phone, and アルちゃん tells him for the first time about レン, the man he met on the app.",
+ "scene": "Quiet Tuesday evening at reception. {健太|けんた} catches you grinning at your phone and wants to know who it is.",
+ "keep": [
+  "p1"
+ ],
+ "phrases": [
+  {
+   "jp": "{優しそう|やさしそう}な{人|ひと}だね。",
+   "en": "He looks kind.",
+   "register": "casual",
+   "note": "い-adj stem + そう = looks… From a photo or first meeting."
+  },
+  {
+   "jp": "{彼|かれ}は{長野市|ながのし}でデザイナーとして{働いて|はたらいて|to work|4}います。",
+   "en": "He works as a designer in {長野市|ながのし}.",
+   "register": "polite",
+   "note": "Job + として{働|はたら}く = work as."
+  },
+  {
+   "jp": "{見た目|みため|looks, appearance|4}より、{性格|せいかく|personality|4}が{大事|だいじ}。",
+   "en": "Personality matters more than looks.",
+   "register": "casual",
+   "note": "AよりBが{大事|だいじ} = B matters more than A."
+  },
+  {
+   "jp": "{笑顔|えがお|smile|4}がすてきな{人|ひと}。",
+   "en": "Someone with a lovely smile.",
+   "register": "casual",
+   "note": "A classic compliment, also on dating profiles."
+  },
+  {
+   "jp": "コーヒーにでも{誘って|さそって|to invite, ask out|4}みようかな。",
+   "en": "Maybe I'll ask him out for a coffee or something.",
+   "register": "casual",
+   "note": "〜にでも = '…or something', makes the invitation light."
+  }
+ ],
+ "dialogue_setting": "{ゲストハウス風|ゲストハウスかぜ} reception, Tuesday evening. No guests are checking in; the stove is on.",
+ "dialogue": [
+  {
+   "who": "kenta",
+   "speaker": "健太",
+   "jp": "アルちゃん、さっきからスマホ{見て|みて}{ニヤニヤ||grinning|3}してるやん。{誰|だれ}なん？",
+   "en": "アルちゃん, you've been grinning at your phone for ages. Who is it?",
+   "register": "dialect",
+   "note": "Kansai: やん = じゃない, なん = なの."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "…アプリで{知り合った|しりあった|to get to know, meet|3}{人|ひと}。{長野市|ながのし}でデザイナーとして{働いて|はたらいて|to work|4}る、レンさんっていう{男|おとこ}の{人|ひと}。",
+   "en": "…Someone I met on the app. A guy called レン who works as a designer in {長野市|ながのし}.",
+   "register": "casual"
+  },
+  {
+   "who": "kenta",
+   "speaker": "健太",
+   "jp": "へえ、ええやん！どんな{人|ひと}？{写真|しゃしん}{見せて|みせて}や。",
+   "en": "Oh, nice! What's he like? Show me a photo.",
+   "register": "dialect",
+   "note": "Kansai: ええ = いい, {見|み}せてや = {見|み}せてよ."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "{落ち着いて|おちついて}て、ちょっと{人見知り|ひとみしり|shy with strangers|3}。でも{映画|えいが}の{話|はなし}になると、{目|め}が{キラキラ||sparkling|3}するんだ。",
+   "en": "He's calm and a bit shy. But when we talk about films, his eyes light up.",
+   "register": "casual"
+  },
+  {
+   "who": "kenta",
+   "speaker": "健太",
+   "jp": "ほんで、{友達|ともだち}として？それとも{恋人|こいびと}{候補|こうほ|candidate|3}として？",
+   "en": "So, as a friend? Or as a possible boyfriend?",
+   "register": "dialect",
+   "note": "Kansai: ほんで = それで."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "まだ{会った|あった}こともないよ！…でも、{正直|しょうじき}{会って|あって}みたい。",
+   "en": "We haven't even met yet! …But honestly, I'd like to meet him.",
+   "register": "casual"
+  }
+ ],
+ "listening": {
+  "type": "ladder",
+  "intro": "{健太|けんた} grins and gives you one piece of advice.",
+  "who": "kenta",
+  "lines": [
+   {
+    "who": "kenta",
+    "jp": "コーヒーにでも{誘って|さそって}みたら？{応援|おうえん|support, cheering on|3}してるで。",
+    "en": "Why not ask him for a coffee? I'm rooting for you.",
+    "register": "dialect",
+    "note": "Kansai: してるで = してるよ."
+   }
+  ]
+ },
+ "grammar": {
+  "id": "n3-toshite",
+  "pattern": "〜として",
+  "level": "N3",
+  "meaning": "as (a role)",
+  "form": "noun + として (デザイナーとして, {友達|ともだち}として) · before a noun: noun + としての + noun ({親|おや}としての{気持|きも}ち)",
+  "explanation": "Gives the role or capacity something is in: as a designer, as a friend. With a job, として{働|はたら}く is the natural pair. Don't confuse it with にとって, which is a point of view ('for me').",
+  "src": [
+   "d1",
+   "d4",
+   "p1"
+  ],
+  "mark": [
+   "デザイナーとして",
+   "友達として",
+   "恋人候補として",
+   "看護師として",
+   "親としての"
+  ],
+  "examples": [
+   {
+    "jp": "{姉|あね}は{看護師|かんごし|nurse|3}として{病院|びょういん}で{働いて|はたらいて}いる。",
+    "en": "My sister works as a nurse at a hospital."
+   },
+   {
+    "jp": "{親|おや|parent|3}としての{気持ち|きもち}、{今|いま}なら{分かる|わかる}。",
+    "en": "Now I understand how it feels as a parent."
+   }
+  ],
+  "quiz": {
+   "question": "{彼|かれ}は{留学生|りゅうがくせい|exchange student|3}＿＿{日本|にほん}に{来ました|きました}。",
+   "en": "He came to Japan as an exchange student.",
+   "options": [
+    "として",
+    "にとって",
+    "について",
+    "に対して"
+   ],
+   "explain": "His role when he came → として."
+  },
+  "quiz_more": [
+   {
+    "question": "{先生|せんせい}＿＿{仕事|しごと}は、{大変|たいへん}だけど{楽しい|たのしい}。",
+    "en": "The work as a teacher is hard but fun.",
+    "options": [
+     "としての",
+     "として",
+     "にとっての",
+     "としに"
+    ],
+    "explain": "Before a noun ({仕事|しごと}) use としての."
+   },
+   {
+    "question": "{私|わたし}＿＿、この{町|まち}は{第二|だいに}のふるさとです。",
+    "en": "For me, this town is a second home.",
+    "options": [
+     "にとって",
+     "として",
+     "について",
+     "に対して"
+    ],
+    "explain": "From my point of view → にとって. として would make 'I' a role."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "相性",
+  "reading": "あいしょう",
+  "romaji": "aishō",
+  "meaning": "compatibility, chemistry",
+  "where": "On レン's profile in the dating app: 「相性 92%」.",
+  "breakdown": "{相性|あいしょう}: 相 mutual, each other + 性 nature → 'how two natures fit together'.",
+  "related": "{相性|あいしょう}がいい = we get on well. Also for food and wine, or a player and a team."
+ },
+ "tip": {
+  "mark": "秘",
+  "title": "Out to some, not to all",
+  "body": "Many gay people in Japan are out only to close friends, like レン. Neutral words like {恋人|こいびと} or パートナー are common. If someone tells you, don't pass it on unless they say it's OK: telling others is called アウティング and is taken seriously."
+ },
+ "challenge": {
+  "type": "write",
+  "prompt": "{健太|けんた}: 「{練習|れんしゅう}しとき！レンさんに『{日本|にほん}で{何|なに}してるの？』って{聞かれたら|きかれたら}？」 Answer that you came as a volunteer and help on a farm and at a school.",
+  "model_answer": "ボランティアとして{来て|きて}、{農家|のうか|farm, farming family|3}と{学校|がっこう}で{手伝って|てつだって}るよ。",
+  "explanation": "ボランティアとして gives your role in Japan. {来|き}て links it to what you do there, {手伝|てつだ}ってる. Plain form + よ suits a chat with レン, who already talks casually with you.",
+  "hint": "role + として + {来|く}る"
+ },
+ "vocab": [
+  {
+   "jp": "ニヤニヤ",
+   "reading": "にやにや",
+   "en": "grinning",
+   "level": "N3",
+   "src": "d0",
+   "surface": "ニヤニヤ",
+   "note": "A secret, slightly silly grin. ニコニコ is a friendly smile."
+  },
+  {
+   "jp": "{知|し}り{合|あ}う",
+   "reading": "しりあう",
+   "en": "to get to know, meet",
+   "level": "N3",
+   "src": "d1",
+   "surface": "知り合った",
+   "note": "How you met someone: {大学|だいがく}で{知|し}り{合|あ}った. {知|し}り{合|あ}い = acquaintance."
+  },
+  {
+   "jp": "{働|はたら}く",
+   "reading": "はたらく",
+   "en": "to work",
+   "level": "N4",
+   "src": "d1",
+   "surface": "働いて",
+   "note": "〜として{働|はたら}く = work as. {仕事|しごと}する is more casual."
+  },
+  {
+   "jp": "キラキラ",
+   "reading": "きらきら",
+   "en": "sparkling, shining",
+   "level": "N3",
+   "src": "d3",
+   "surface": "キラキラ",
+   "note": "Stars, snow, or eyes full of excitement."
+  },
+  {
+   "jp": "{候補|こうほ}",
+   "reading": "こうほ",
+   "en": "candidate",
+   "level": "N2",
+   "src": "d4",
+   "surface": "候補",
+   "note": "Elections, job lists, or teasing: {恋人|こいびと}{候補|こうほ}."
+  },
+  {
+   "jp": "{見|み}た{目|め}",
+   "reading": "みため",
+   "en": "looks, appearance",
+   "level": "N3",
+   "src": "p2",
+   "surface": "見た目",
+   "note": "Literally 'how it looks to the eye'. Also for food."
+  },
+  {
+   "jp": "{性格|せいかく}",
+   "reading": "せいかく",
+   "en": "personality",
+   "level": "N3",
+   "src": "p2",
+   "surface": "性格",
+   "note": "{性格|せいかく}がいい = good-natured. {明|あか}るい{性格|せいかく} = cheerful."
+  },
+  {
+   "jp": "{笑顔|えがお}",
+   "reading": "えがお",
+   "en": "smile",
+   "level": "N3",
+   "src": "p3",
+   "surface": "笑顔",
+   "note": "{笑|え} laugh + {顔|がお} face. A smiling face, not the act of smiling."
+  },
+  {
+   "jp": "{誘|さそ}う",
+   "reading": "さそう",
+   "en": "to invite, ask out",
+   "level": "N3",
+   "src": "p4",
+   "surface": "誘って",
+   "note": "{食事|しょくじ}に{誘|さそ}う = ask someone to dinner. Both friends and dates."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "合",
+   "track": "n3",
+   "on": "ゴウ・ガッ",
+   "kun": "あ(う)・あ(わせる)",
+   "meaning": "fit, match, come together",
+   "parts": "人 a lid on top + 一 + 口 a pot → a lid that fits its pot: fit, match, meet.",
+   "lookalike": "Not 会 (meet): 会 has 云 under the roof, 合 has 一 and 口.",
+   "words": [
+    {
+     "jp": "{知|し}り{合|あ}う",
+     "reading": "しりあう",
+     "en": "to get to know"
+    },
+    {
+     "jp": "{試合|しあい}",
+     "reading": "しあい",
+     "en": "match, game"
+    },
+    {
+     "jp": "{合格|ごうかく}",
+     "reading": "ごうかく",
+     "en": "passing (an exam)"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "meet, society",
+     "eat, food",
+     "lid"
+    ],
+    "readings": [
+     "しりごう",
+     "しりあつ",
+     "しりかう"
+    ]
+   }
+  },
+  {
+   "kanji": "誘",
+   "track": "lesson",
+   "on": "ユウ",
+   "kun": "さそ(う)",
+   "meaning": "invite, tempt",
+   "parts": "言 words radical + 秀 excellent → using your best words to get someone to come: invite.",
+   "lookalike": "Not 透 (transparent): both have 秀, but 透 has 辶 road, 誘 has 言 words.",
+   "words": [
+    {
+     "jp": "{誘|さそ}う",
+     "reading": "さそう",
+     "en": "to invite, ask out"
+    },
+    {
+     "jp": "{誘|さそ}い",
+     "reading": "さそい",
+     "en": "invitation"
+    },
+    {
+     "jp": "{勧誘|かんゆう}",
+     "reading": "かんゆう",
+     "en": "recruiting, solicitation"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "talk, speak",
+     "excellent",
+     "refuse"
+    ],
+    "readings": [
+     "さすう",
+     "ゆうう",
+     "そそう"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Describing someone's character",
+   "title_jp": "{性格|せいかく}を{表す|あらわす}{言葉|ことば}",
+   "intro": "Words for what someone is like.",
+   "items": [
+    {
+     "jp": "{真面目|まじめ|serious, earnest|4}",
+     "en": "serious, hard-working",
+     "note": "A compliment in Japan, sometimes 'a bit too serious'."
+    },
+    {
+     "jp": "{面白い|おもしろい}",
+     "en": "funny, interesting",
+     "note": "The top quality people list for a partner."
+    },
+    {
+     "jp": "{素直|すなお|honest, open|3}",
+     "en": "open, straightforward",
+     "note": "Someone who says what they feel and listens."
+    },
+    {
+     "jp": "マイペース",
+     "en": "does things at their own pace",
+     "note": "Japanese-made English. Neutral or gently teasing."
+    }
+   ]
+  },
+  {
+   "title": "Words for a partner",
+   "title_jp": "{恋人|こいびと}の{呼び方|よびかた}",
+   "intro": "How people refer to someone they're dating.",
+   "items": [
+    {
+     "jp": "{彼氏|かれし|boyfriend|4}",
+     "en": "boyfriend",
+     "note": "{彼女|かのじょ} = girlfriend. The everyday words."
+    },
+    {
+     "jp": "パートナー",
+     "en": "partner",
+     "note": "Neutral; used more and more, also by gay couples."
+    },
+    {
+     "jp": "{気|き}になる{人|ひと}",
+     "en": "someone you're interested in",
+     "note": "Before you're dating: a crush."
+    }
+   ]
+  }
+ ]
+}
