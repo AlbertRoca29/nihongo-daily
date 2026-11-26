@@ -190,5 +190,12 @@
   "category": "feelings",
   "function": "reacting",
   "format": "line"
+ },
+ {
+  "id": "2026-11-30",
+  "topic": "A taxi in the snow",
+  "category": "getting-around",
+  "function": "requesting",
+  "format": "story"
  }
 ]

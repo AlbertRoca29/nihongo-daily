@@ -1,0 +1,408 @@
+{
+ "topic": "A taxi in the snow",
+ "category": "getting-around",
+ "function": "requesting",
+ "format": "story",
+ "cast": [
+  "ren"
+ ],
+ "title_jp": "{雪|ゆき}の{日|ひ}のタクシー",
+ "context": "Monday 30 November: アルちゃん goes to {長野市|ながのし} by train to buy gloves and goggles for the ski day, takes a taxi in the snow, and on the way home thinks about レン, who lives in the same city.",
+ "scene": "You tell the story of your Monday trip to {長野市|ながのし}: a taxi ride in the snow, and a message you didn't send.",
+ "keep": [
+  "p1"
+ ],
+ "phrases": [
+  {
+   "jp": "この{住所|じゅうしょ|address|3}までお{願い|ねがい}します。",
+   "en": "To this address, please.",
+   "register": "polite",
+   "note": "Show the address on your phone. Drivers will also ask どちらまで？"
+  },
+  {
+   "jp": "{次|つぎ}の{信号|しんごう|traffic light|4}で{止めて|とめて|to stop (something)|4}もらえますか。",
+   "en": "Could you stop at the next light?",
+   "register": "polite",
+   "note": "〜てもらえますか = polite request. Also: ここでいいです (here is fine)."
+  },
+  {
+   "jp": "カードで{払えますか|はらえますか}。",
+   "en": "Can I pay by card?",
+   "register": "polite",
+   "note": "Ask before you get in: country taxis don't always take cards."
+  },
+  {
+   "jp": "{領収書|りょうしゅうしょ|receipt|3}をお{願い|ねがい}できますか。",
+   "en": "Could I have a receipt, please?",
+   "register": "polite",
+   "note": "{領収書|りょうしゅうしょ} is the formal receipt; レシート is the shop slip."
+  },
+  {
+   "jp": "{雪道|ゆきみち|snowy road|3}は、{僕|ぼく}にとってまだ{怖い|こわい}です。",
+   "en": "Snowy roads are still scary for me.",
+   "register": "polite",
+   "note": "Person + にとって = from that person's point of view."
+  }
+ ],
+ "dialogue_setting": "アルちゃん tells the story of his Monday in {長野市|ながのし}; the taxi driver's words are quoted.",
+ "dialogue": [
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "jp": "{月曜日|げつようび}、スキーの{手袋|てぶくろ}とゴーグルを{買いに|かいに}、{電車|でんしゃ}で{長野市|ながのし}へ{行った|いった}。",
+   "en": "On Monday I took the train to {長野市|ながのし} to buy ski gloves and goggles.",
+   "me": true
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "jp": "{駅前|えきまえ}でタクシーに{乗って|のって}、スマホの{地図|ちず}を{見せた|みせた}。「この{住所|じゅうしょ|address|3}までお{願い|ねがい}します」",
+   "en": "In front of the station I got in a taxi and showed my phone map. 'To this address, please.'",
+   "me": true
+  },
+  {
+   "who": "extra",
+   "voice": "m",
+   "speaker": "運転手さん",
+   "jp": "「お{客|きゃく}さん、ここから{歩いて|あるいて}5{分|ふん}ですよ」",
+   "en": "'Sir, it's a five-minute walk from here,' the driver laughed."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "jp": "でも{雪道|ゆきみち|snowy road|3}は、スペインから{来た|きた}{僕|ぼく}にとってまだ{怖い|こわい}。{運転手|うんてんしゅ|(taxi) driver|4}さんにとっては{普通|ふつう}らしいけど。",
+   "en": "But for me, from Spain, snowy roads are still scary. For the driver it's normal, apparently.",
+   "me": true
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "jp": "だから{乗せて|のせて|to give (someone) a ride|3}もらった。{最後|さいご}に「{次|つぎ}の{信号|しんごう|traffic light|4}で{止めて|とめて|to stop (something)|4}もらえますか」と{頼んだ|たのんだ}。",
+   "en": "So he gave me a ride. At the end I asked, 'Could you stop at the next light?'",
+   "me": true
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "jp": "{帰り|かえり|the way back|4}の{電車|でんしゃ}で、レンさんのことを{考えた|かんがえた}。{同じ|おなじ}{町|まち}にいたのに、{連絡|れんらく}する{勇気|ゆうき|courage|3}がなかった。",
+   "en": "On the train back, I thought about レン. We were in the same city, but I didn't have the courage to message him.",
+   "me": true
+  }
+ ],
+ "listening": {
+  "type": "dictation",
+  "intro": "The driver's last words as you get out. Type what he says.",
+  "who": "extra",
+  "lines": [
+   {
+    "who": "extra",
+    "voice": "m",
+    "jp": "{着きました|つきました}よ。{足元|あしもと|one's step, footing|3}に{気をつけて|きをつけて}ください。",
+    "en": "Here we are. Watch your step."
+   }
+  ]
+ },
+ "grammar": {
+  "id": "n3-ni-totte",
+  "pattern": "〜にとって",
+  "level": "N3",
+  "meaning": "for (someone), from their point of view",
+  "form": "noun + にとって ({僕|ぼく}にとって, {子|こ}どもにとって) · contrast: noun + にとっては ({運転手|うんてんしゅ}さんにとっては) · before a noun: noun + にとっての + noun ({私|わたし}にとっての{家族|かぞく})",
+  "explanation": "How something is from someone's point of view, with words like {大切|たいせつ}, {難|むずか}しい, {怖|こわ}い. It's not for doing something for someone (that's のために), and not に{対|たい}して, which marks a target.",
+  "src": [
+   "d3",
+   "p4"
+  ],
+  "mark": [
+   "僕にとって",
+   "運転手さんにとっては",
+   "私にとって",
+   "子どもにとって"
+  ],
+  "examples": [
+   {
+    "jp": "{家族|かぞく}は、{私|わたし}にとって{一番|いちばん}{大切|たいせつ}です。",
+    "en": "My family is the most important thing to me."
+   },
+   {
+    "jp": "この{本|ほん}は、{子|こ}どもにとって{少し|すこし}{難しい|むずかしい}。",
+    "en": "This book is a bit difficult for children."
+   }
+  ],
+  "quiz": {
+   "question": "{田中|たなか}さん＿＿、りんごの{木|き}は{子|こ}どものようなものだ。",
+   "en": "For {田中|たなか}さん, the apple trees are like his children.",
+   "options": [
+    "にとって",
+    "に対して",
+    "について",
+    "によって"
+   ],
+   "explain": "From his point of view → にとって. について would mean 'about {田中|たなか}さん'."
+  },
+  "quiz_more": [
+   {
+    "question": "{健康|けんこう|health|3}＿＿、{毎日|まいにち}{歩いて|あるいて}います。",
+    "en": "I walk every day for my health.",
+    "options": [
+     "のために",
+     "にとって",
+     "に対して",
+     "によって"
+    ],
+    "explain": "A goal you act for → のために. にとって is a point of view, not a purpose."
+   },
+   {
+    "question": "{日本人|にほんじん}＿＿{普通|ふつう}のことでも、{外国人|がいこくじん}には{不思議|ふしぎ|strange, mysterious|3}なことがある。",
+    "en": "Some things are normal for Japanese people but strange to foreigners.",
+    "options": [
+     "にとって",
+     "について",
+     "に対して",
+     "によると"
+    ],
+    "explain": "Normal from Japanese people's point of view → にとって."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "空車",
+  "reading": "くうしゃ",
+  "romaji": "kūsha",
+  "meaning": "vacant (taxi)",
+  "where": "The red sign lit up behind the windscreen of the taxis waiting at {長野駅|ながのえき}.",
+  "breakdown": "{空車|くうしゃ}: 空 empty + 車 car → 'empty car': this taxi is free.",
+  "related": "{賃走|ちんそう} = occupied, meter running; {迎車|げいしゃ} = on its way to pick someone up."
+ },
+ "tip": {
+  "mark": "扉",
+  "title": "Hands off the taxi door",
+  "body": "Japanese taxi doors open and close by themselves: the driver works them, so don't touch. In small towns there are few taxis, so call one (タクシーを{呼|よ}ぶ) or wait at the station. No tipping."
+ },
+ "challenge": {
+  "type": "fix",
+  "prompt": "{健太|けんた} on LINE: 「{長野|ながの}どうやった？」 You want to say it was fun, but snowy roads are still scary for you. One part is wrong.",
+  "parts": [
+   {
+    "jp": "{楽しかった|たのしかった}けど、"
+   },
+   {
+    "jp": "{雪道|ゆきみち}は"
+   },
+   {
+    "jp": "{僕|ぼく}について",
+    "wrong": true,
+    "why": "について means 'about me'. From your point of view → にとって."
+   },
+   {
+    "jp": "まだ{怖い|こわい}な。"
+   }
+  ],
+  "model_answer": "{楽しかった|たのしかった}けど、{雪道|ゆきみち|snowy road|3}は{僕|ぼく}にとってまだ{怖い|こわい}な。",
+  "explanation": "{僕|ぼく}にとって frames {怖|こわ}い from your point of view: scary for you, not for everyone. けど turns from the fun part to the scary part. Plain form + な fits a chat with {健太|けんた}.",
+  "hint": "noun + にとって = from someone's point of view"
+ },
+ "vocab": [
+  {
+   "jp": "{住所|じゅうしょ}",
+   "reading": "じゅうしょ",
+   "en": "address",
+   "level": "N3",
+   "src": "d1",
+   "surface": "住所",
+   "note": "{住|じゅう} live + {所|しょ} place. Forms ask for {住所|じゅうしょ} and {氏名|しめい} (full name)."
+  },
+  {
+   "jp": "{運転手|うんてんしゅ}",
+   "reading": "うんてんしゅ",
+   "en": "driver",
+   "level": "N4",
+   "src": "d3",
+   "surface": "運転手",
+   "note": "Say {運転手|うんてんしゅ}さん to the driver. {手|しゅ} = person doing it."
+  },
+  {
+   "jp": "{乗|の}せる",
+   "reading": "のせる",
+   "en": "to give a ride; to put on",
+   "level": "N3",
+   "src": "d4",
+   "surface": "乗せて",
+   "note": "{乗|の}る = you get on; {乗|の}せる = someone takes you. {乗|の}せてもらう = get a lift."
+  },
+  {
+   "jp": "{信号|しんごう}",
+   "reading": "しんごう",
+   "en": "traffic light",
+   "level": "N3",
+   "src": "d4",
+   "surface": "信号",
+   "note": "A green light is {青|あお} in Japanese: {信号|しんごう}が{青|あお}になった."
+  },
+  {
+   "jp": "{止|と}める",
+   "reading": "とめる",
+   "en": "to stop (something)",
+   "level": "N4",
+   "src": "d4",
+   "surface": "止めて",
+   "note": "{止|と}まる = it stops; {止|と}める = you stop it. Also: park a car."
+  },
+  {
+   "jp": "{帰|かえ}り",
+   "reading": "かえり",
+   "en": "the way back",
+   "level": "N4",
+   "src": "d5",
+   "surface": "帰り",
+   "note": "{帰|かえ}りの{電車|でんしゃ} = the train home. {行|い}き = the way there."
+  },
+  {
+   "jp": "{勇気|ゆうき}",
+   "reading": "ゆうき",
+   "en": "courage",
+   "level": "N3",
+   "src": "d5",
+   "surface": "勇気",
+   "note": "{勇気|ゆうき}がない = can't bring yourself to. {勇気|ゆうき}を{出|だ}す = pluck up courage."
+  },
+  {
+   "jp": "{領収書|りょうしゅうしょ}",
+   "reading": "りょうしゅうしょ",
+   "en": "receipt (formal)",
+   "level": "N2",
+   "src": "p3",
+   "surface": "領収書",
+   "note": "For work expenses. Often with a name on it: お{名前|なまえ}は？"
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "市",
+   "track": "n3",
+   "on": "シ",
+   "kun": "いち",
+   "meaning": "city; market",
+   "parts": "亠 a lid or roof + 巾 cloth → cloth stalls under a roof: a market, and the town that grew round it: city.",
+   "lookalike": "Not 布 (cloth): 布 has ナ on top, 市 has 亠.",
+   "words": [
+    {
+     "jp": "{市民|しみん}",
+     "reading": "しみん",
+     "en": "citizen, city resident"
+    },
+    {
+     "jp": "{市役所|しやくしょ}",
+     "reading": "しやくしょ",
+     "en": "city hall"
+    },
+    {
+     "jp": "{朝市|あさいち}",
+     "reading": "あさいち",
+     "en": "morning market"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "cloth",
+     "village",
+     "shop"
+    ],
+    "readings": [
+     "いちみん",
+     "しみ",
+     "じみん"
+    ]
+   }
+  },
+  {
+   "kanji": "号",
+   "track": "lesson",
+   "on": "ゴウ",
+   "kun": "",
+   "meaning": "number, sign, signal",
+   "parts": "口 mouth + a bent line under it → a voice shouting out a call: a signal, and the numbers that are called out.",
+   "lookalike": "Not 写 (copy): 号 has 口 on top, 写 has 冖.",
+   "words": [
+    {
+     "jp": "{信号|しんごう}",
+     "reading": "しんごう",
+     "en": "traffic light"
+    },
+    {
+     "jp": "{番号|ばんごう}",
+     "reading": "ばんごう",
+     "en": "number"
+    },
+    {
+     "jp": "〜{号車|ごうしゃ}",
+     "reading": "ごうしゃ",
+     "en": "car number (on a train)"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "mouth",
+     "copy",
+     "letter"
+    ],
+    "readings": [
+     "しんこう",
+     "しんご",
+     "しんごん"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Taking a taxi",
+   "title_jp": "タクシーの{言葉|ことば}",
+   "intro": "What you'll hear and say in a Japanese taxi.",
+   "items": [
+    {
+     "jp": "どちらまで？",
+     "en": "Where to?",
+     "note": "The driver's first question."
+    },
+    {
+     "jp": "ここでいいです。",
+     "en": "Here is fine.",
+     "note": "To get out a little early."
+    },
+    {
+     "jp": "{急いで|いそいで}もらえますか。",
+     "en": "Could you hurry, please?",
+     "note": "Polite request with 〜てもらえますか."
+    },
+    {
+     "jp": "タクシー{乗り場|のりば|taxi rank|3}",
+     "en": "taxi rank",
+     "note": "{乗|の}り{場|ば} = boarding place. Also バス{乗|の}り{場|ば}."
+    }
+   ]
+  },
+  {
+   "title": "Three kinds of 'for'",
+   "title_jp": "「for」の{言い方|いいかた}",
+   "intro": "English 'for' has three different Japanese forms.",
+   "items": [
+    {
+     "jp": "{僕|ぼく}にとって{大切|たいせつ}",
+     "en": "important to me",
+     "note": "Point of view → にとって."
+    },
+    {
+     "jp": "{僕|ぼく}のために{作った|つくった}",
+     "en": "made for me",
+     "note": "Benefit or purpose → のために."
+    },
+    {
+     "jp": "{僕|ぼく}に{対して|たいして}{優しい|やさしい}",
+     "en": "kind to me",
+     "note": "Target of an attitude → に{対|たい}して."
+    }
+   ]
+  }
+ ]
+}
