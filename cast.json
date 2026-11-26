@@ -154,7 +154,7 @@
     "Hana-obāchan"
    ],
    "color": "#8e4b6e",
-   "status": "{膝|ひざ}に{湿布|しっぷ}、{貼っとる|はっとる}よ",
+   "status": "{野沢菜|のざわな}、よう{漬かった|つかった}よ",
    "where": "{田中|たなか}さんの{隣|となり}",
    "status_base": "{膝|ひざ}に{湿布|しっぷ}、{貼っとる|はっとる}よ",
    "where_base": "{田中|たなか}さんの{隣|となり}"
@@ -611,6 +611,24 @@
    "status_upd": {
     "kenta": {
      "status": "12/10は{白馬|はくば}や🏂 {寝坊|ねぼう}したらあかんで"
+    }
+   }
+  },
+  {
+   "date": "2026-11-28",
+   "cast": [
+    "hana",
+    "keiko",
+    "sota"
+   ],
+   "summary": "Saturday 28 Nov: アルちゃん, 颯太 and 恵子さん are making oyaki when ハナおばあちゃん brings her first 野沢菜 pickles of the winter. They invite her in; she loves 颯太's pumpkin oyaki, and 恵子さん reminds アルちゃん to phone ハナおばあちゃん to say thank you.",
+   "new_facts": [
+    "ハナおばあちゃん pickles 野沢菜 every late autumn and shares them with the 田中s; her first batch of winter 2026 was ready on 28 Nov.",
+    "恵子さん makes oyaki (おやき) at home; on 28 Nov 颯太 wrapped all of them, with pumpkin filling."
+   ],
+   "status_upd": {
+    "hana": {
+     "status": "{野沢菜|のざわな}、よう{漬かった|つかった}よ"
     }
    }
   }

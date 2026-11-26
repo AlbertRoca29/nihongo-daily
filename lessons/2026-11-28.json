@@ -1,0 +1,158 @@
+{
+ "topic": "ハナおばあちゃん's pickles",
+ "category": "food-cooking",
+ "function": "politeness",
+ "format": "dialogue",
+ "cast": ["hana", "sota"],
+ "title_jp": "{野沢菜|のざわな}とおやき",
+ "context": "Saturday 28 November, evening at the {田中|たなか} house: {恵子|けいこ}さん, {颯太|そうた} and アルちゃん are making oyaki when ハナおばあちゃん drops by with her first {野沢菜|のざわな} pickles of the winter.",
+ "scene": "Saturday evening. You and {颯太|そうた} are making oyaki with {恵子|けいこ}さん when someone calls at the door. It's ハナおばあちゃん, with a gift.",
+ "keep": ["p0"],
+ "phrases": [
+  {"jp": "ちょうど{今|いま}、{焼き上がった|やきあがった|to finish baking|2}ところです。", "en": "They've just this moment finished cooking.", "register": "polite", "note": "たところ = just did it, right now."},
+  {"jp": "つまらないものですが、どうぞ。", "en": "It's nothing much, but please.", "register": "polite", "note": "The classic modest line when giving a gift. Younger people often say ほんの{気持|きも}ちです."},
+  {"jp": "お{口|くち}に{合う|あう|to suit (one's taste)|3}かどうか{分かりません|わかりません}が…", "en": "I don't know if it'll be to your taste, but…", "register": "polite", "note": "Said when serving food you made. The answer: とてもおいしいです！"},
+  {"jp": "じゃあ、{遠慮なく|えんりょなく|without holding back|3}いただきます。", "en": "Well then, I'll gladly have some.", "register": "polite", "note": "Accepting after someone insists. Refusing once first is polite."},
+  {"jp": "お{粗末|そまつ|humble, poor|2}さまでした。", "en": "It was nothing special. (reply to ごちそうさま)", "register": "polite", "note": "The cook's humble reply when guests say ごちそうさまでした."}
+ ],
+ "dialogue_setting": "The {田中|たなか} kitchen on a cold Saturday night; oyaki in the frying pan, snow on the doorstep.",
+ "dialogue": [
+  {"who": "hana", "speaker": "ハナおばあちゃん", "jp": "ごめんください。{野沢菜|のざわな|nozawana pickled greens|3}がよう{漬かった|つかった|to be pickled|3}で、{持って|もって}きたよ。", "en": "Hello there! My {野沢菜|のざわな} pickles are nicely done, so I brought you some.", "register": "dialect", "note": "Regional/old: よう = よく, 〜で = 〜ので."},
+  {"who": "keiko", "speaker": "恵子さん", "jp": "まあ、ハナさん！ちょうど{今|いま}、おやきを{焼いて|やいて|to cook, grill|4}いるところなの。どうぞ{上がって|あがって|to come in (a house)|4}。", "en": "Oh, ハナさん! We're right in the middle of cooking oyaki. Please, come in.", "register": "casual"},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "jp": "こんばんは！{今|いま}、{焼き上がった|やきあがった|to finish baking|2}ところです。{一緒|いっしょ}にいかがですか。", "en": "Good evening! They've just finished cooking. Would you like some with us?", "register": "polite"},
+  {"who": "hana", "speaker": "ハナおばあちゃん", "jp": "あら、{悪い|わるい}のう。じゃあ、{遠慮なく|えんりょなく|without holding back|3}いただこうかね。", "en": "Oh, that's too kind of you. Well then, I'll gladly have one.", "register": "dialect", "note": "Old/regional: のう = ね. {悪|わる}い here = 'I feel bad (for troubling you)'."},
+  {"who": "sota", "speaker": "颯太", "jp": "ハナばあちゃん、これ{全部|ぜんぶ}{俺|おれ}が{包んだ|つつんだ|to wrap|3}んだよ！{中身|なかみ|filling, contents|3}はかぼちゃ！", "en": "ハナばあちゃん, I wrapped all of these! The filling's pumpkin!", "register": "casual"},
+  {"who": "hana", "speaker": "ハナおばあちゃん", "jp": "{皮|かわ|skin, outer layer|3}がもちもちで、お{口|くち}に{合う|あう|to suit (one's taste)|3}よ。{颯太|そうた}、{上手|じょうず}になったのう。", "en": "The dough's lovely and chewy, just to my taste. {颯太|そうた}, you've got good at this.", "register": "dialect", "note": "Old/regional: のう = ね. もちもち = soft and chewy."}
+ ],
+ "listening": {
+  "type": "voicemail",
+  "intro": "Earlier that afternoon, ハナおばあちゃん left a message on the house phone.",
+  "who": "hana",
+  "lines": [
+   {"who": "hana", "jp": "{恵子|けいこ}さん、ハナです。{野沢菜|のざわな|nozawana pickled greens|3}が{漬かった|つかった|to be pickled|3}で、{夕方|ゆうがた}{持って|もって}いくね。", "en": "{恵子|けいこ}さん, it's ハナ. My {野沢菜|のざわな} pickles are ready, so I'll bring some over this evening."}
+  ],
+  "question": "ハナおばあちゃんは、{何|なに}を{持って|もって}きますか。",
+  "options": ["のざわなのつけもの", "おやき", "かぼちゃ", "りんご"],
+  "explain": "She says {野沢菜|のざわな}が{漬|つ}かった: the pickles are ready, and she'll bring them in the evening."
+ },
+ "grammar": {
+  "id": "n4-tokoro",
+  "pattern": "〜るところ / 〜ているところ / 〜たところ",
+  "level": "N4",
+  "meaning": "about to / in the middle of / just did",
+  "form": "about to: {辞書形|じしょけい} + ところ ({出|で}かけるところ, {食|た}べるところ) · in the middle: 〜ている + ところ ({焼|や}いているところ) · just did: 〜た + ところ ({焼|や}き{上|あ}がったところ, {着|つ}いたところ)",
+  "explanation": "Pinpoints where you are in an action: just before, in the middle, just after. Often with ちょうど. Don't mix たところ (the moment right after) with たばかり, which can mean days or weeks ago.",
+  "src": ["d2", "d1", "p0"],
+  "mark": ["焼き上がったところ", "焼いているところ", "出かけるところ", "着いたところ"],
+  "examples": [
+   {"jp": "{今|いま}から{出かける|でかける}ところだから、{後|あと}で{電話|でんわ}するね。", "en": "I'm just about to go out, so I'll call you later."},
+   {"jp": "{今|いま}、{駅|えき}に{着いた|ついた}ところです。", "en": "I've just arrived at the station."}
+  ],
+  "quiz": {
+   "question": "{電話|でんわ}が{鳴った|なった|to ring|4}とき、ちょうどお{風呂|ふろ}に＿＿ところだった。",
+   "en": "When the phone rang, I was just about to get in the bath.",
+   "options": ["入る", "入った", "入って", "入り"],
+   "explain": "About to = dictionary form + ところ. {入|はい}ったところ would mean you had just got in."
+  },
+  "quiz_more": [
+   {
+    "question": "{今|いま}、{晩ご飯|ばんごはん}を{作って|つくって}＿＿ところ。",
+    "en": "I'm in the middle of making dinner.",
+    "options": ["いる", "ある", "おく", "しまう"],
+    "explain": "In the middle of = 〜ているところ."
+   },
+   {
+    "question": "{先週|せんしゅう}{日本|にほん}に{来た|きた}＿＿なので、まだ{慣れて|なれて}いません。",
+    "en": "I only came to Japan last week, so I'm not used to it yet.",
+    "options": ["ばかり", "ところ", "ところで", "まま"],
+    "explain": "A week ago is too long for たところ (the moment just after). たばかり = 'only recently'."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "野沢菜",
+  "reading": "のざわな",
+  "romaji": "nozawana",
+  "meaning": "nozawana, a leafy green usually pickled",
+  "where": "On the bags of pickles at the supermarket and every station shop in {長野|ながの}, and on ハナおばあちゃん's handwritten jar label.",
+  "breakdown": "{野沢菜|のざわな}: 野沢 ({野沢温泉|のざわおんせん}, a village in {長野|ながの}) + 菜 greens → 'the greens from {野沢|のざわ}'.",
+  "related": "{漬物|つけもの} = pickles; {白菜|はくさい} = Chinese cabbage. 菜 is a leafy vegetable."
+ },
+ "tip": {
+  "mark": "漬",
+  "title": "Winter starts with pickles",
+  "body": "In {長野|ながの}, {野沢菜|のざわな} is harvested after the first frosts in late autumn, washed and pickled in big tubs to last the winter. Neighbours share their pickles, and everyone's family recipe is 'the best'. Over tea, a plate of {野沢菜|のざわな} is the normal snack."
+ },
+ "challenge": {
+  "type": "write",
+  "prompt": "{恵子|けいこ}さん on the family LINE: 「アルちゃん、ハナさんにお{礼|れい}の{電話|でんわ}した？」 You're just about to call her now. Reply.",
+  "model_answer": "ちょうど{今|いま}、{電話|でんわ}するところです！",
+  "explanation": "{電話|でんわ}する in the dictionary form + ところ = about to call. ちょうど{今|いま} stresses 'right this moment'. です keeps it polite to {恵子|けいこ}さん, as in your chats with her.",
+  "hint": "dictionary form + ところ"
+ },
+ "vocab": [
+  {"jp": "{漬|つ}かる", "reading": "つかる", "en": "to be pickled; to soak", "level": "N3", "src": "d0", "surface": "漬かった", "note": "{漬|つ}ける = you pickle it; {漬|つ}かる = it's pickled. Also お{風呂|ふろ}に{漬|つ}かる."},
+  {"jp": "{焼|や}く", "reading": "やく", "en": "to grill, bake, cook", "level": "N4", "src": "d1", "surface": "焼いて", "note": "Any dry heat: pan, grill, oven. {焼|や}き{鳥|とり}, {焼|や}き{魚|ざかな}."},
+  {"jp": "{上|あ}がる", "reading": "あがる", "en": "to come in (a house)", "level": "N4", "src": "d1", "surface": "上がって", "note": "You step up from the {玄関|げんかん}, so どうぞ{上|あ}がって = come in."},
+  {"jp": "{焼|や}き{上|あ}がる", "reading": "やきあがる", "en": "to finish baking", "level": "N2", "src": "d2", "surface": "焼き上がった", "note": "{焼|や}く + {上|あ}がる (finished). Bakeries announce: パンが{焼|や}き{上|あ}がりました！"},
+  {"jp": "{包|つつ}む", "reading": "つつむ", "en": "to wrap", "level": "N3", "src": "d4", "surface": "包んだ", "note": "Wrapping food or presents. {包|つつ}み{紙|がみ} = wrapping paper."},
+  {"jp": "{中身|なかみ}", "reading": "なかみ", "en": "filling, contents", "level": "N3", "src": "d4", "surface": "中身", "note": "{中|なか} inside + {身|み} body → what's inside. Also a box's or a person's 'inside'."},
+  {"jp": "{皮|かわ}", "reading": "かわ", "en": "skin; outer layer, dough", "level": "N3", "src": "d5", "surface": "皮", "note": "Fruit peel, animal skin, gyoza wrappers: all {皮|かわ}."},
+  {"jp": "{口|くち}に{合|あ}う", "reading": "くちにあう", "en": "to suit one's taste", "level": "N3", "src": "d5", "surface": "口に合う", "note": "Polite: お{口|くち}に{合|あ}いますか = Is it to your taste?"},
+  {"jp": "{粗末|そまつ}", "reading": "そまつ", "en": "humble, poor (quality)", "level": "N3", "src": "p4", "surface": "粗末", "note": "Mostly in お{粗末|そまつ}さまでした. {粗末|そまつ}にする = to waste."}
+ ],
+ "kanji_study": [
+  {
+   "kanji": "部",
+   "track": "n3",
+   "on": "ブ",
+   "kun": "",
+   "meaning": "part, section; club, department",
+   "parts": "立 + 口 on the left (a place where people stand and talk) + 阝 the 'village' radical on the right → a group within a place: section, part.",
+   "lookalike": "Not 郎 (son, as in 太郎): 郎 has 良 on the left, 部 has 立 over 口.",
+   "words": [
+    {"jp": "{全部|ぜんぶ}", "reading": "ぜんぶ", "en": "all, everything"},
+    {"jp": "{部屋|へや}", "reading": "へや", "en": "room"},
+    {"jp": "{部活|ぶかつ}", "reading": "ぶかつ", "en": "school club"}
+   ],
+   "decoys": {"meanings": ["village", "station", "all, whole"], "readings": ["ぜんべ", "ぜんぶう", "せんぶ"]}
+  },
+  {
+   "kanji": "包",
+   "track": "lesson",
+   "on": "ホウ",
+   "kun": "つつ(む)",
+   "meaning": "wrap, pack",
+   "parts": "勹 a curved arm wrapping around + 己 inside → something curled up and held: wrap. In old writing 己 was a baby in the womb.",
+   "lookalike": "Not 句 (phrase): both have 勹, but 句 has 口 inside, 包 has 己.",
+   "words": [
+    {"jp": "{包|つつ}む", "reading": "つつむ", "en": "to wrap"},
+    {"jp": "{包丁|ほうちょう}", "reading": "ほうちょう", "en": "kitchen knife"},
+    {"jp": "{包帯|ほうたい}", "reading": "ほうたい", "en": "bandage"}
+   ],
+   "decoys": {"meanings": ["hold, embrace", "bubble", "carry"], "readings": ["くるむ", "つづむ", "ほうむ"]}
+  }
+ ],
+ "extras": [
+  {
+   "title": "Food words from {長野|ながの}",
+   "title_jp": "{信州|しんしゅう}の{味|あじ}",
+   "intro": "What you'll find on a {長野|ながの} table in winter.",
+   "items": [
+    {"jp": "おやき", "en": "stuffed dumpling, pan-cooked", "note": "Wheat dough filled with {野沢菜|のざわな}, pumpkin or red bean paste."},
+    {"jp": "{漬物|つけもの|pickles|4}", "en": "pickles", "note": "Served with every Japanese meal and with tea."},
+    {"jp": "{信州|しんしゅう|old name of this region|3}そば", "en": "{信州|しんしゅう} buckwheat noodles", "note": "{長野|ながの}'s most famous dish. {黒鉄隼人|くろがねはやと} loved it, says the legend."}
+   ]
+  },
+  {
+   "title": "Visiting and receiving guests",
+   "title_jp": "{訪問|ほうもん|visiting|2}のあいさつ",
+   "intro": "The set lines at the door and the table.",
+   "items": [
+    {"jp": "ごめんください。", "en": "Hello, anyone home?", "note": "Said at the door of a house or a small shop."},
+    {"jp": "お{邪魔|じゃま|intrusion, bother|3}します。", "en": "Sorry to intrude. (entering)", "note": "Leaving: お{邪魔|じゃま}しました."},
+    {"jp": "{何|なに}もありませんが、どうぞ。", "en": "There's nothing special, but please help yourself.", "note": "The host's modest line when offering food."}
+   ]
+  }
+ ]
+}

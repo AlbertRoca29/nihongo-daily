@@ -176,5 +176,12 @@
   "category": "review",
   "function": "planning",
   "format": "line"
+ },
+ {
+  "id": "2026-11-28",
+  "topic": "ハナおばあちゃん's pickles",
+  "category": "food-cooking",
+  "function": "politeness",
+  "format": "dialogue"
  }
 ]
