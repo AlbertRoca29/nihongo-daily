@@ -99,7 +99,7 @@
     "Kenta"
    ],
    "color": "#f39800",
-   "status": "「ごしたい」≠「{何|なに}かしたい」やでｗ",
+   "status": "12/10は{白馬|はくば}や🏂 {寝坊|ねぼう}したらあかんで",
    "where": "ゲストハウス{風|かぜ}",
    "status_base": "「ごしたい」≠「{何|なに}かしたい」やでｗ",
    "where_base": "ゲストハウス{風|かぜ}"
@@ -595,6 +595,24 @@
     "From the window of the 鷹ノ原 公民館 you can photograph 鷹見岳 in winter.",
     "On 26 Nov レン said he'd show アルちゃん his camera some time; still no date set, they haven't met."
    ]
+  },
+  {
+   "date": "2026-11-27",
+   "cast": [
+    "kenta"
+   ],
+   "guest": "翔さん (ski instructor in 白馬)",
+   "summary": "Friday 27 Nov: 健太 makes a LINE group to plan a ski day in 白馬 and adds his friend 翔さん, a ski instructor who will teach アルちゃん. They fix Thursday 10 Dec, meeting at 鷹ノ原駅 at 7:00; 翔さん books rental skis and boots, and promises to teach アルちゃん how to fall first.",
+   "new_facts": [
+    "翔さん (佐々木翔, 29) is a ski instructor in 白馬 and 健太's snowboarding friend; he speaks casual っす style.",
+    "The 白馬 ski day is set for Thu 10 Dec: meet at 鷹ノ原駅 at 7:00. 翔さん books rental skis and boots; アルちゃん must bring his own gloves and goggles.",
+    "The LINE group for the trip is called 「白馬いこ」."
+   ],
+   "status_upd": {
+    "kenta": {
+     "status": "12/10は{白馬|はくば}や🏂 {寝坊|ねぼう}したらあかんで"
+    }
+   }
   }
  ],
  "others": [

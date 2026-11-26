@@ -1,0 +1,463 @@
+{
+ "topic": "Ski trip group chat",
+ "category": "review",
+ "function": "planning",
+ "format": "line",
+ "cast": [
+  "kenta"
+ ],
+ "guest": {
+  "name": "翔さん",
+  "name_jp": "{佐々木翔|ささきしょう}",
+  "role": "Ski instructor in {白馬|はくば}, {健太|けんた}'s snowboarding friend",
+  "voice": "m",
+  "age": 29
+ },
+ "title_jp": "{白馬|はくば}スキー{計画|けいかく}",
+ "context": "Friday 27 November, evening: {健太|けんた} makes a LINE group to plan a ski day in {白馬|はくば} and adds his friend {翔|しょう}さん, a ski instructor who will teach アルちゃん, who has never skied.",
+ "scene": "Friday night. {健太|けんた} adds you to a new LINE group with his friend {翔|しょう}さん, a ski instructor. Your first ski day is being planned.",
+ "keep": [
+  "p4"
+ ],
+ "phrases": [
+  {
+   "jp": "{板|いた|ski, board|3}、{予約|よやく|reservation, booking|4}しておきますね。",
+   "en": "I'll book the skis in advance.",
+   "register": "polite",
+   "note": "ておく = do it now so it's ready later."
+  },
+  {
+   "jp": "{雪道|ゆきみち|snowy road|3}を{甘く見ない|あまくみない|to underestimate|3}ほうがいいよ。",
+   "en": "Don't underestimate snowy roads.",
+   "register": "casual",
+   "note": "Review: {甘|あま}く{見|み}る from the first-snow day + ないほうがいい."
+  },
+  {
+   "jp": "{寒い|さむい}から、{重ね着|かさねぎ|layering clothes|3}して{行こう|いこう}。",
+   "en": "It's cold, so let's wear layers.",
+   "register": "casual",
+   "note": "Review: {重ね着|かさねぎ}する. Every {長野|ながの} local will tell you this."
+  },
+  {
+   "jp": "{大雪|おおゆき|heavy snow|3}のため、{電車|でんしゃ}が{遅れて|おくれて|to be late|4}いるらしい。",
+   "en": "Apparently the train is late because of heavy snow.",
+   "register": "neutral",
+   "note": "Review: ため (cause) + らしい (hearsay). The winter combo."
+  },
+  {
+   "jp": "{寝坊|ねぼう|oversleeping|4}しないように、{目覚まし|めざまし|alarm clock|4}をかけておこう。",
+   "en": "I'll set an alarm so I don't oversleep.",
+   "register": "casual",
+   "note": "{目覚|めざ}ましをかける = set an alarm. ておこう = let's do it beforehand."
+  }
+ ],
+ "dialogue_setting": "A new LINE group called 「{白馬|はくば}いこ」, made by {健太|けんた} on Friday night.",
+ "dialogue": [
+  {
+   "who": "kenta",
+   "speaker": "健太",
+   "time": "21:02",
+   "jp": "グループ{作った|つくった}で！{白馬|はくば}スキー{計画|けいかく|plan|3}や🏂",
+   "en": "Made a group! The {白馬|はくば} ski plan 🏂",
+   "register": "dialect",
+   "note": "Kansai: {作|つく}ったで = {作|つく}ったよ, や = だ."
+  },
+  {
+   "who": "kenta",
+   "speaker": "健太",
+   "time": "21:02",
+   "jp": "こっち{翔|しょう}。スキーの{先生|せんせい}やねん。アルちゃんに{教えて|おしえて}くれるって",
+   "en": "This is {翔|しょう}. He's a ski instructor. He says he'll teach you, アルちゃん.",
+   "register": "dialect",
+   "note": "Kansai: やねん = なんだ."
+  },
+  {
+   "who": "guest",
+   "speaker": "翔さん",
+   "time": "21:05",
+   "jp": "はじめまして！{翔|しょう}っす。{初心者|しょしんしゃ|beginner|3}、{大歓迎|だいかんげい|very welcome|3}っすよ！",
+   "en": "Nice to meet you! I'm {翔|しょう}. Beginners are very welcome!",
+   "register": "slang",
+   "note": "っす = です, casual-polite young men's speech."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "21:06",
+   "jp": "よろしくお{願い|ねがい}します！スキーは{生まれて初めて|うまれてはじめて|for the first time in my life|3}です",
+   "en": "Nice to meet you! It'll be my first time ever skiing."
+  },
+  {
+   "who": "guest",
+   "speaker": "翔さん",
+   "time": "21:08",
+   "jp": "{板|いた|ski, board|3}と{靴|くつ}はレンタル{予約|よやく|reservation, booking|4}しとくっす。{手袋|てぶくろ|gloves|3}は{自分|じぶん}で{用意|ようい|preparing|3}しといてください！",
+   "en": "I'll book rental skis and boots. Get your own gloves ready, though!",
+   "register": "slang",
+   "note": "しとく = しておく, しといて = しておいて."
+  },
+  {
+   "who": "kenta",
+   "speaker": "健太",
+   "time": "21:10",
+   "jp": "{10日|とおか}の{木曜|もくよう}、{朝|あさ}7{時|じ}に{鷹ノ原|たかのはら}{駅|えき}{集合|しゅうごう|meeting up (at a place)|3}な。{寝坊|ねぼう|oversleeping|4}したら{あかん|あかん|(Kansai) = だめ, no good|3}で",
+   "en": "Thursday the 10th, meet at {鷹ノ原|たかのはら} station at 7 a.m. Don't you dare oversleep.",
+   "register": "dialect",
+   "note": "Kansai: あかん = だめ. {集合|しゅうごう}な = {集合|しゅうごう}ね."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "21:11",
+   "jp": "{了解|りょうかい|got it|4}！{目覚まし|めざまし|alarm clock|4}、2つかけとく！",
+   "en": "Got it! I'll set two alarms!",
+   "register": "casual"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "21:11",
+   "jp": "でも{転んで|ころんで|to fall over|4}も{笑わないで|わらわないで|to laugh|4}ね…",
+   "en": "But don't laugh if I fall over…",
+   "register": "casual"
+  },
+  {
+   "who": "guest",
+   "speaker": "翔さん",
+   "time": "21:12",
+   "kind": "voice",
+   "jp": "{最初|さいしょ|the beginning, first|4}はみんな{転ぶ|ころぶ|to fall over|4}っすよ！{転び方|ころびかた|how to fall|2}から{教える|おしえる}っす！",
+   "en": "Everyone falls at first! I'll start by teaching you how to fall!",
+   "register": "slang",
+   "note": "っす = です. Falling safely really is lesson one."
+  },
+  {
+   "who": "kenta",
+   "speaker": "健太",
+   "time": "21:13",
+   "sticker": "kusa",
+   "jp": "{草|くさ}",
+   "en": "lol"
+  }
+ ],
+ "listening": {
+  "type": "ladder",
+  "intro": "{翔|しょう}さん sends one more voice message about the day.",
+  "who": "guest",
+  "lines": [
+   {
+    "who": "guest",
+    "jp": "{山|やま}の{上|うえ}は{寒い|さむい}んで、{重ね着|かさねぎ}してきてくださいっす！",
+    "en": "It's cold up the mountain, so come wearing layers!"
+   }
+  ]
+ },
+ "grammar": {
+  "id": "n4-te-oku",
+  "pattern": "〜ておく / 〜とく",
+  "level": "N4",
+  "meaning": "do in advance, leave as is",
+  "form": "{動詞|どうし}て{形|けい}: + おく ({予約|よやく}しておく, かけておく) · casual: 〜ておく → 〜とく ({予約|よやく}しとく, かけとく) · request: 〜ておいて → 〜といて ({用意|ようい}しといて)",
+  "explanation": "Review: you do something now so it's ready for later. Planning chats are full of it: {予約|よやく}しとく, {用意|ようい}しといて. In speech ておく becomes とく, and でおく becomes どく ({読|よ}んどく).",
+  "src": [
+   "d4",
+   "d6",
+   "p4"
+  ],
+  "mark": [
+   "予約しとく",
+   "用意しといて",
+   "かけとく",
+   "かけておこう",
+   "調べておきます",
+   "買っといた"
+  ],
+  "examples": [
+   {
+    "jp": "{電車|でんしゃ}の{時間|じかん}、{調べておきます|しらべておきます}ね。",
+    "en": "I'll check the train times beforehand."
+   },
+   {
+    "jp": "おやつ、{三人分|さんにんぶん}{買っといた|かっといた}よ。",
+    "en": "I've bought snacks for three already."
+   }
+  ],
+  "quiz": {
+   "question": "{寝坊|ねぼう|oversleeping|4}しないように、{目覚まし|めざまし|alarm clock|4}を＿＿。",
+   "en": "I'll set an alarm so I don't oversleep.",
+   "options": [
+    "かけとこう",
+    "かけどこう",
+    "かけといこう",
+    "かけてとこう"
+   ],
+   "explain": "かけておこう shrinks to かけとこう. どく is only after a voiced で ({読|よ}んでおく → {読|よ}んどく)."
+  },
+  "quiz_more": [
+   {
+    "question": "{地図|ちず}、{前|まえ}の{日|ひ}に{読ん|よん}＿＿よ。",
+    "en": "I'll read the map the day before.",
+    "options": [
+     "どく",
+     "とく",
+     "でとく",
+     "だく"
+    ],
+    "explain": "{読|よ}んでおく → {読|よ}んどく: after で, おく becomes どく."
+   },
+   {
+    "question": "ビール、{冷やして|ひやして|to chill|3}＿＿から、{飲んで|のんで}いいよ。",
+    "en": "I've chilled the beer, so go ahead and drink it.",
+    "options": [
+     "おいた",
+     "おく",
+     "みた",
+     "いく"
+    ],
+    "explain": "Done beforehand, ready now → past おいた. おく would mean you haven't done it yet."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "初級",
+  "reading": "しょきゅう",
+  "romaji": "shokyū",
+  "meaning": "beginner level",
+  "where": "On the slope map {翔|しょう}さん sends: the green runs are marked 初級コース.",
+  "breakdown": "{初級|しょきゅう}: 初 first + 級 grade, level → 'the first level'.",
+  "related": "{中級|ちゅうきゅう} = intermediate, {上級|じょうきゅう} = advanced. Japanese classes use them too."
+ },
+ "tip": {
+  "mark": "輩",
+  "title": "The っす guy",
+  "body": "っす is a shortened です used by young men, often in sports clubs, with seniors or friends of friends. It's friendly and respectful-ish, but not real keigo: never use it with a boss, a teacher or a customer. Women use it less, though some do as a joke."
+ },
+ "challenge": {
+  "type": "sticker",
+  "prompt": "{翔|しょう}さん: 「{予約|よやく|reservation|4}しといたっす！{10日|とおか}、{楽しみ|たのしみ}にしてるっす！」 You can't wait either. Which sticker?",
+  "stickers": [
+   "tanoshimi",
+   "kowai",
+   "gaan",
+   "oyasumi"
+  ],
+  "model_answer": "楽しみ！",
+  "explanation": "{楽|たの}しみ！ answers {楽|たの}しみにしてる with the same excitement. {怖|こわ}い… would say you're scared, ガーン is shock at bad news, and おやすみ would end the chat.",
+  "hint": "He's looking forward to it. Match his mood."
+ },
+ "vocab": [
+  {
+   "jp": "{計画|けいかく}",
+   "reading": "けいかく",
+   "en": "plan",
+   "level": "N4",
+   "src": "d0",
+   "surface": "計画",
+   "note": "{計画|けいかく}を{立|た}てる = make a plan. Bigger than {予定|よてい} (schedule)."
+  },
+  {
+   "jp": "{板|いた}",
+   "reading": "いた",
+   "en": "board; skis",
+   "level": "N3",
+   "src": "d4",
+   "surface": "板",
+   "note": "Any flat board. Skiers just say {板|いた} for their skis."
+  },
+  {
+   "jp": "{予約|よやく}",
+   "reading": "よやく",
+   "en": "reservation, booking",
+   "level": "N4",
+   "src": "d4",
+   "surface": "予約",
+   "note": "{予|よ} beforehand + {約|やく} promise. {予約|よやく}する = to book."
+  },
+  {
+   "jp": "{手袋|てぶくろ}",
+   "reading": "てぶくろ",
+   "en": "gloves",
+   "level": "N3",
+   "src": "d4",
+   "surface": "手袋",
+   "note": "{手|て} hand + {袋|ふくろ} bag → a bag for your hand."
+  },
+  {
+   "jp": "{集合|しゅうごう}",
+   "reading": "しゅうごう",
+   "en": "meeting up (at a set place)",
+   "level": "N3",
+   "src": "d5",
+   "surface": "集合",
+   "note": "On schedules: 7{時|じ}{駅|えき}{集合|しゅうごう}. {現地集合|げんちしゅうごう} = meet there."
+  },
+  {
+   "jp": "{寝坊|ねぼう}",
+   "reading": "ねぼう",
+   "en": "oversleeping",
+   "level": "N3",
+   "src": "d5",
+   "surface": "寝坊",
+   "note": "{寝坊|ねぼう}する = to oversleep. The classic excuse for being late."
+  },
+  {
+   "jp": "{目覚|めざ}まし",
+   "reading": "めざまし",
+   "en": "alarm clock",
+   "level": "N3",
+   "src": "d6",
+   "surface": "目覚まし",
+   "note": "Short for {目覚|めざ}まし{時計|どけい}. {目覚|めざ}ましをかける = set an alarm."
+  },
+  {
+   "jp": "{転|ころ}ぶ",
+   "reading": "ころぶ",
+   "en": "to fall over",
+   "level": "N3",
+   "src": "d7",
+   "surface": "転んで",
+   "note": "Falling while walking or skiing. {落|お}ちる is falling from a height."
+  },
+  {
+   "jp": "{最初|さいしょ}",
+   "reading": "さいしょ",
+   "en": "the beginning, first",
+   "level": "N4",
+   "src": "d8",
+   "surface": "最初",
+   "note": "{最初|さいしょ}は = at first. Opposite: {最後|さいご} = last."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "寝",
+   "track": "n3",
+   "on": "シン",
+   "kun": "ね(る)・ね(かす)",
+   "meaning": "sleep, lie down",
+   "parts": "宀 roof on top + 丬 a bed seen from the side + the rest a person under the covers → lying in bed under a roof: sleep.",
+   "lookalike": "Not 浸 (soak): 浸 has 氵 water on the left and no roof.",
+   "words": [
+    {
+     "jp": "{寝坊|ねぼう}",
+     "reading": "ねぼう",
+     "en": "oversleeping"
+    },
+    {
+     "jp": "{寝|ね}る",
+     "reading": "ねる",
+     "en": "to sleep, go to bed"
+    },
+    {
+     "jp": "{昼寝|ひるね}",
+     "reading": "ひるね",
+     "en": "nap"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "wake up",
+     "rest, take a break",
+     "dream"
+    ],
+    "readings": [
+     "しんぼう",
+     "ねんぼう",
+     "ねぼ"
+    ]
+   }
+  },
+  {
+   "kanji": "袋",
+   "track": "lesson",
+   "on": "タイ",
+   "kun": "ふくろ",
+   "meaning": "bag, sack",
+   "parts": "代 (タイ, gives the sound) on top + 衣 clothing below → a piece of cloth that holds things: bag.",
+   "lookalike": "Not 装 (dress up): 袋 has 代 on top, 装 has 壮.",
+   "words": [
+    {
+     "jp": "{手袋|てぶくろ}",
+     "reading": "てぶくろ",
+     "en": "gloves"
+    },
+    {
+     "jp": "{紙袋|かみぶくろ}",
+     "reading": "かみぶくろ",
+     "en": "paper bag"
+    },
+    {
+     "jp": "{袋|ふくろ}",
+     "reading": "ふくろ",
+     "en": "bag"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "clothes",
+     "pocket, sleeve",
+     "box"
+    ],
+    "readings": [
+     "てふくろ",
+     "てだい",
+     "しゅたい"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "On the slopes",
+   "title_jp": "ゲレンデの{言葉|ことば}",
+   "intro": "Words you'll hear on your first ski day.",
+   "items": [
+    {
+     "jp": "ゲレンデ",
+     "en": "ski slope",
+     "note": "From German Gelände. スキー{場|じょう} is the whole resort."
+    },
+    {
+     "jp": "リフト{券|けん|ticket|3}",
+     "en": "lift pass",
+     "note": "{一日券|いちにちけん} = day pass."
+    },
+    {
+     "jp": "{滑る|すべる|to slide, ski|4}",
+     "en": "to ski, slide",
+     "note": "Skiers say {滑|すべ}る, not スキーする, for the actual skiing."
+    },
+    {
+     "jp": "ナイター",
+     "en": "night skiing",
+     "note": "Japanese-made English: night + er."
+    }
+   ]
+  },
+  {
+   "title": "Planning in a group chat",
+   "title_jp": "グループで{予定|よてい}を{決める|きめる}",
+   "intro": "Short lines for fixing a date with friends.",
+   "items": [
+    {
+     "jp": "{都合|つごう|convenience, availability|3}どう？",
+     "en": "Does that work for you?",
+     "note": "Polite: ご{都合|つごう}はいかがですか."
+    },
+    {
+     "jp": "{空いてる|あいてる|to be free|4}{日|ひ}ある？",
+     "en": "Any days you're free?",
+     "note": "{予定|よてい}が{空|あ}いてる = no plans."
+    },
+    {
+     "jp": "{現地集合|げんちしゅうごう|meeting at the spot|2}で！",
+     "en": "Let's meet there!",
+     "note": "Each person makes their own way."
+    }
+   ]
+  }
+ ]
+}

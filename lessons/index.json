@@ -169,5 +169,12 @@
   "category": "hobbies",
   "function": "hearsay",
   "format": "text"
+ },
+ {
+  "id": "2026-11-27",
+  "topic": "Ski trip group chat",
+  "category": "review",
+  "function": "planning",
+  "format": "line"
  }
 ]
