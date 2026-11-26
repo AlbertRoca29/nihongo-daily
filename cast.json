@@ -70,7 +70,7 @@
     "Yuki"
    ],
    "color": "#80c241",
-   "status": "{休日出勤|きゅうじつしゅっきん}なう…カラオケ{行きたい|いきたい}",
+   "status": "{話したら|はなしたら}スッキリ…でも{月曜|げつよう}{憂鬱|ゆううつ}",
    "where": "{東京|とうきょう}",
    "status_base": "{休日出勤|きゅうじつしゅっきん}なう…カラオケ{行きたい|いきたい}",
    "where_base": "{東京|とうきょう}"
@@ -629,6 +629,23 @@
    "status_upd": {
     "hana": {
      "status": "{野沢菜|のざわな}、よう{漬かった|つかった}よ"
+    }
+   }
+  },
+  {
+   "date": "2026-11-29",
+   "cast": [
+    "yuki"
+   ],
+   "summary": "Sunday 29 Nov: in the supermarket queue アルちゃん gets angry LINE messages from 由紀: her boss praised a senior colleague for her project idea and is nicer to the men than to her. アルちゃん takes her side and calms her down, then finally tells her he lost the showdown 4–6.",
+   "new_facts": [
+    "由紀's 部長 praised her 先輩 for a project (企画) 由紀 came up with; 由紀 feels the 部長 is nicer to male colleagues than to her.",
+    "由紀 now knows アルちゃん lost the tortilla showdown 4–6.",
+    "The shopping-street supermarket ran a Sunday-only 20% discount on all apples on 29 Nov."
+   ],
+   "status_upd": {
+    "yuki": {
+     "status": "{話したら|はなしたら}スッキリ…でも{月曜|げつよう}{憂鬱|ゆううつ}"
     }
    }
   }

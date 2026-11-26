@@ -183,5 +183,12 @@
   "category": "food-cooking",
   "function": "politeness",
   "format": "dialogue"
+ },
+ {
+  "id": "2026-11-29",
+  "topic": "{由紀|ゆき} vents about her boss",
+  "category": "feelings",
+  "function": "reacting",
+  "format": "line"
  }
 ]

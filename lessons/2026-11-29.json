@@ -1,0 +1,166 @@
+{
+ "topic": "{由紀|ゆき} vents about her boss",
+ "category": "feelings",
+ "function": "reacting",
+ "format": "line",
+ "cast": ["yuki"],
+ "title_jp": "{聞いて|きいて}！{腹立つ|はらたつ}！",
+ "context": "Sunday 29 November, evening: アルちゃん is at the shopping-street supermarket when {由紀|ゆき} messages from {東京|とうきょう}, furious that her boss praised a senior colleague for her idea.",
+ "scene": "Sunday evening at the supermarket. {由紀|ゆき} messages you, really angry about her boss. Time to react like a good friend.",
+ "keep": ["p2"],
+ "phrases": [
+  {"jp": "{部長|ぶちょう|department head|3}は{私|わたし}に{対して|たいして}だけ{厳しい|きびしい|strict, harsh|4}。", "en": "My boss is strict only with me.", "register": "casual", "note": "Person + に{対|たい}して = towards that person."},
+  {"jp": "え、うそ！ひどくない？", "en": "What, no way! Isn't that awful?", "register": "casual", "note": "ひどくない？ = 'isn't it awful?', asking for agreement, not a negative."},
+  {"jp": "それは{怒って|おこって}{当然|とうぜん|natural, of course|3}だよ。", "en": "You've every right to be angry.", "register": "casual", "note": "〜て{当然|とうぜん} = it's only natural that… Shows you're on their side."},
+  {"jp": "{話したら|はなしたら}、ちょっとスッキリした。", "en": "Talking about it made me feel a bit better.", "register": "casual", "note": "スッキリ = refreshed, a weight off your chest."},
+  {"jp": "{一回|いっかい}、{深呼吸|しんこきゅう|deep breath|3}しよ？", "en": "Take a deep breath, OK?", "register": "casual", "note": "しよ？ = しよう？, soft and friendly. Calming someone down."}
+ ],
+ "dialogue_setting": "LINE, Sunday evening. You're in the supermarket queue; {由紀|ゆき} is at home in {東京|とうきょう}.",
+ "dialogue": [
+  {"who": "yuki", "speaker": "由紀", "time": "18:41", "jp": "アル〜{聞いて|きいて}！マジで{腹が立つ|はらがたつ|to get angry|4}", "en": "アル~ listen! I'm seriously angry.", "register": "slang", "note": "マジで = {本当|ほんとう}に."},
+  {"who": "yuki", "speaker": "由紀", "time": "18:41", "jp": "{企画|きかく|project, proposal|3}、{私|わたし}が{考えた|かんがえた}のに{部長|ぶちょう|department head|3}が{先輩|せんぱい|senior colleague|4}を{褒めた|ほめた|to praise|3}の", "en": "I came up with the project, but my boss praised my senior colleague."},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "time": "18:43", "jp": "え、うそ！ひどくない？", "en": "What, no way! Isn't that awful?", "register": "casual"},
+  {"who": "yuki", "speaker": "由紀", "time": "18:44", "jp": "しかも{部長|ぶちょう}、{男性|だんせい|man, male|3}に{対して|たいして}は{優しい|やさしい}のに、{私|わたし}に{対して|たいして}は{厳しい|きびしい|strict, harsh|4}んだよね", "en": "And my boss is nice to the men, but strict with me.", "register": "casual"},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "time": "18:45", "jp": "マジか…それは{怒って|おこって}{当然|とうぜん|natural, of course|3}だよ", "en": "Seriously… you've every right to be angry.", "register": "slang", "note": "マジか = {本当|ほんとう}か, 'seriously?'."},
+  {"who": "yuki", "speaker": "由紀", "time": "18:45", "sticker": "pien", "jp": "ぴえん", "en": "(teary face)"},
+  {"who": "yuki", "speaker": "由紀", "time": "18:50", "kind": "voice", "jp": "ありがと。{話したら|はなしたら}、ちょっと{スッキリ||refreshed, relieved|4}した〜", "en": "Thanks. Talking about it made me feel a bit better~", "register": "casual"},
+  {"who": "yuki", "speaker": "由紀", "time": "18:51", "jp": "てか、{対決|たいけつ|showdown|3}どうだった？{結果|けっか}{聞いて|きいて}ないじゃん！", "en": "Anyway, how did the showdown go? You never told me the result!", "register": "slang", "note": "てか = というか, 'anyway, by the way'."},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "time": "18:53", "jp": "4{対|たい}6で{負けた|まけた}ｗ　{次|つぎ}は{絶対|ぜったい|definitely, absolutely|4}{勝つ|かつ|to win|4}！", "en": "Lost 4 to 6 lol. Next time I'll definitely win!", "register": "casual"}
+ ],
+ "listening": {
+  "type": "announcement",
+  "intro": "Meanwhile, an announcement comes over the supermarket speakers.",
+  "who": "extra",
+  "title": "スーパーのお{知らせ|しらせ}",
+  "place": "The shopping-street supermarket, {鷹ノ原|たかのはら}",
+  "lines": [
+   {"who": "extra", "voice": "f", "jp": "ご{来店|らいてん|coming to the shop|2}ありがとうございます。ただいまより、りんごを{全品|ぜんぴん|all items|2}2{割引|わりびき}いたします。", "en": "Thank you for shopping with us. From now, all apples are 20% off."},
+   {"who": "extra", "voice": "f", "jp": "{日曜日|にちようび}だけのサービスです。どうぞご{利用|りよう}ください。", "en": "It's a Sunday-only offer. Please take advantage of it."}
+  ],
+  "question": "{何|なに}が{安く|やすく}なりますか。",
+  "options": ["りんご", "やさい", "パン", "おやき"],
+  "explain": "りんごを{全品|ぜんぴん}2{割引|わりびき}: every apple is 20% off, today only."
+ },
+ "grammar": {
+  "id": "n3-ni-taishite",
+  "pattern": "〜に{対|たい}して",
+  "level": "N3",
+  "meaning": "towards, in contrast to",
+  "form": "noun + に{対|たい}して ({私|わたし}に{対|たい}して, お{客|きゃく}さんに{対|たい}して) · before a noun: noun + に{対|たい}する + noun ({私|わたし}に{対|たい}する{態度|たいど}) · contrast: 〜のに{対|たい}して ({兄|あに}は{静|しず}かなのに{対|たい}して)",
+  "explanation": "Marks who an attitude or action is aimed at: お{客|きゃく}さんに{対|たい}して{丁寧|ていねい}. With の it contrasts two things. Don't mix it with について, which is the topic you talk about, not a target.",
+  "src": ["d3", "p0"],
+  "mark": ["男性に対しては", "私に対しては", "私に対して", "お客さんに対して", "なのに対して"],
+  "examples": [
+   {"jp": "{健太|けんた}はお{客|きゃく}さんに{対して|たいして}、いつも{丁寧|ていねい|polite|4}だ。", "en": "{健太|けんた} is always polite to guests."},
+   {"jp": "{兄|あに}は{静か|しずか}なのに{対して|たいして}、{弟|おとうと}はよく{話す|はなす}。", "en": "My older brother is quiet, whereas my younger brother talks a lot."}
+  ],
+  "quiz": {
+   "question": "{先生|せんせい}は{生徒|せいと}＿＿、とても{優しい|やさしい}。",
+   "en": "The teacher is very kind to the students.",
+   "options": ["に対して", "について", "によって", "によると"],
+   "explain": "The students are the target of the kindness → に{対|たい}して. について would be 'about the students'."
+  },
+  "quiz_more": [
+   {
+    "question": "お{客|きゃく}さん＿＿{態度|たいど|attitude|3}が{悪い|わるい}{店員|てんいん}がいた。",
+    "en": "There was a shop assistant with a bad attitude towards customers.",
+    "options": ["に対する", "に対して", "に対しての", "に対し"],
+    "explain": "Before a noun ({態度|たいど}) use に{対|たい}する."
+   },
+   {
+    "question": "{東京|とうきょう}は{人|ひと}が{多い|おおい}＿＿、{鷹ノ原|たかのはら}は{静か|しずか}だ。",
+    "en": "{東京|とうきょう} has lots of people, whereas {鷹ノ原|たかのはら} is quiet.",
+    "options": ["のに対して", "に対して", "について", "によって"],
+    "explain": "Contrasting two clauses needs の first: {多|おお}いのに{対|たい}して."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "通知",
+  "reading": "つうち",
+  "romaji": "tsūchi",
+  "meaning": "notification",
+  "where": "On your lock screen while you queue: 「LINE: {新|あたら}しい通知が3{件|けん}」.",
+  "breakdown": "{通知|つうち}: 通 pass through + 知 know → 'pass on so someone knows': notify.",
+  "related": "{通知|つうち}をオフにする = mute notifications. {知|し}らせ = a notice."
+ },
+ "tip": {
+  "mark": "共",
+  "title": "Agree first, advise later",
+  "body": "When a Japanese friend vents, they usually want {共感|きょうかん} (empathy), not solutions. React first: わかる, ひどい, それな, {当然|とうぜん}だよ. Advice too early can sound like you're taking the other side."
+ },
+ "challenge": {
+  "type": "order",
+  "prompt": "{由紀|ゆき}: 「{健太|けんた}くんって、どんな{人|ひと}？」 Tell her he's really polite to guests, but mean to you (as a joke).",
+  "model_answer": "お{客|きゃく}さんに{対して|たいして}はすごく{丁寧|ていねい|polite|4}だけど、{僕|ぼく}に{対して|たいして}は{意地悪|いじわる|mean, teasing|3}だよｗ",
+  "pieces": ["お{客|きゃく}さんに{対|たい}しては", "すごく{丁寧|ていねい}だけど、", "{僕|ぼく}に{対|たい}しては", "{意地悪|いじわる}だよｗ"],
+  "explanation": "Each に{対|たい}しては names who the attitude is aimed at, and は sets the two people side by side for the contrast. だけど links the two halves. Plain form and ｗ fit a chat with {由紀|ゆき}.",
+  "hint": "〜に{対|たい}しては … だけど、〜に{対|たい}しては …"
+ },
+ "vocab": [
+  {"jp": "{腹|はら}が{立|た}つ", "reading": "はらがたつ", "en": "to get angry", "level": "N3", "src": "d0", "surface": "腹が立つ", "note": "Literally 'the belly stands up'. Casual: {腹立|はらた}つ！"},
+  {"jp": "{部長|ぶちょう}", "reading": "ぶちょう", "en": "department head", "level": "N3", "src": "d1", "surface": "部長", "note": "Also club captain at school. People call their boss {部長|ぶちょう}, not by name."},
+  {"jp": "{先輩|せんぱい}", "reading": "せんぱい", "en": "senior (at work or school)", "level": "N3", "src": "d1", "surface": "先輩", "note": "Anyone who joined before you. The opposite is {後輩|こうはい}."},
+  {"jp": "{褒|ほ}める", "reading": "ほめる", "en": "to praise", "level": "N3", "src": "d1", "surface": "褒めた", "note": "{褒|ほ}められる = to be praised. Common answer: いえいえ、そんな…"},
+  {"jp": "{厳|きび}しい", "reading": "きびしい", "en": "strict, harsh", "level": "N3", "src": "d3", "surface": "厳しい", "note": "Strict people, rules, or weather: {厳|きび}しい{寒|さむ}さ."},
+  {"jp": "{当然|とうぜん}", "reading": "とうぜん", "en": "natural, of course", "level": "N3", "src": "d4", "surface": "当然", "note": "〜て{当然|とうぜん} = it's only natural that…"},
+  {"jp": "スッキリ", "reading": "すっきり", "en": "refreshed, relieved", "level": "N3", "src": "d6", "surface": "スッキリ", "note": "After venting, a shower, a tidy room. Also written すっきり."},
+  {"jp": "{絶対|ぜったい}", "reading": "ぜったい", "en": "definitely, absolutely", "level": "N3", "src": "d8", "surface": "絶対", "note": "{絶対|ぜったい}{勝|か}つ = I'll definitely win. With negatives: never."},
+  {"jp": "{勝|か}つ", "reading": "かつ", "en": "to win", "level": "N4", "src": "d8", "surface": "勝つ", "note": "Opposite: {負|ま}ける. Particle に: {健太|けんた}に{勝|か}つ."}
+ ],
+ "kanji_study": [
+  {
+   "kanji": "対",
+   "track": "n3",
+   "on": "タイ・ツイ",
+   "kun": "",
+   "meaning": "opposite, against; versus; towards",
+   "parts": "文 on the left + 寸 a hand on the right → two sides facing each other, hand to hand: opposite, versus.",
+   "lookalike": "Not 村 (village): 村 has 木 tree on the left, 対 has 文.",
+   "words": [
+    {"jp": "{反対|はんたい}", "reading": "はんたい", "en": "opposite, against"},
+    {"jp": "{対決|たいけつ}", "reading": "たいけつ", "en": "showdown"},
+    {"jp": "〜に{対|たい}して", "reading": "にたいして", "en": "towards"}
+   ],
+   "decoys": {"meanings": ["pair, couple", "village", "sentence, writing"], "readings": ["はんつい", "はんだい", "ほんたい"]}
+  },
+  {
+   "kanji": "勝",
+   "track": "lesson",
+   "on": "ショウ",
+   "kun": "か(つ)",
+   "meaning": "win, victory",
+   "parts": "月 body (flesh radical) + 关 two hands lifting + 力 power → lifting with all your body's strength: win.",
+   "lookalike": "Not 券 (ticket): 券 has 刀 at the bottom and no 月 on the left.",
+   "words": [
+    {"jp": "{勝|か}つ", "reading": "かつ", "en": "to win"},
+    {"jp": "{優勝|ゆうしょう}", "reading": "ゆうしょう", "en": "winning the championship"},
+    {"jp": "{勝手|かって}", "reading": "かって", "en": "selfish, as one pleases"}
+   ],
+   "decoys": {"meanings": ["lose", "fight", "power"], "readings": ["まつ", "しょう", "かづ"]}
+  }
+ ],
+ "extras": [
+  {
+   "title": "Reacting on LINE",
+   "title_jp": "LINEのリアクション",
+   "intro": "Short reactions friends use all the time.",
+   "items": [
+    {"jp": "わかる〜", "en": "I know, right / I get it", "note": "The most common empathy word. Long ー sounds warmer."},
+    {"jp": "それな", "en": "Exactly", "note": "Slang. Strong agreement among friends."},
+    {"jp": "{草|くさ|(slang) lol|3}", "en": "lol", "note": "Slang: ｗｗｗ looks like grass ({草|くさ})."},
+    {"jp": "{大丈夫|だいじょうぶ}？{無理|むり}しないでね", "en": "You OK? Don't overdo it", "note": "Comforting someone who is tired or stressed."}
+   ]
+  },
+  {
+   "title": "Angry, from mild to furious",
+   "title_jp": "{怒り|いかり|anger|3}のレベル",
+   "intro": "From a little annoyed to really angry.",
+   "items": [
+    {"jp": "イライラする", "en": "to be irritated", "note": "Small, ongoing annoyance: traffic, a slow queue."},
+    {"jp": "ムカつく", "en": "to be pissed off", "note": "Casual, a bit rude. Don't use it about your boss at work."},
+    {"jp": "キレる", "en": "to snap, lose it", "note": "Slang. {部長|ぶちょう}がキレた = the boss blew up."}
+   ]
+  }
+ ]
+}
