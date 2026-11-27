@@ -183,7 +183,7 @@
    ],
    "aliases": [],
    "color": "#2c4f86",
-   "status": "24{日|か}の{上映|じょうえい}、{楽しみ|たのしみ}🎞",
+   "status": "{久しぶり|ひさしぶり}に{泣けた|なけた}イブ🎞❄",
    "where": "{長野市|ながのし}",
    "status_base": "{映画館|えいがかん}、なくならないで…🎞",
    "where_base": "{長野市|ながのし}"
@@ -1016,6 +1016,25 @@
     "恵子さん has heard about the 'date' but not that it's with a man; she will drive アルちゃん to 鷹ノ原駅 on 24 Dec, leaving the house at 4 p.m.",
     "The 田中s pass a 回覧板 (neighbourhood circular) to ハナおばあちゃん's house."
    ]
+  },
+  {
+   "date": "2026-12-24",
+   "cast": [
+    "ren"
+   ],
+   "summary": "Thursday 24 Dec, Christmas Eve: アルちゃん and レン's first real date, 『素晴らしき哉、人生！』 at レン's cinema; both cried at the ending. Walking to 長野駅 in the snow, they plan their next date: a snowshoe walk at 戸隠 on 3 January, meeting at 長野駅 at 9 a.m.",
+   "new_facts": [
+    "アルちゃん and レン had their first real date on 24 Dec 2026 (film at レン's cinema in 長野市).",
+    "レン has seen 『素晴らしき哉、人生！』 many times and cries every time.",
+    "Next date: Sun 3 Jan 2027, snowshoe walk at 戸隠; meet at 長野駅 at 9:00.",
+    "On the evening of 24 Dec, trains from 長野 towards 鷹ノ原 were about 15 minutes late because of snow.",
+    "Before New Year アルちゃん helps the 田中s with the 大掃除 and with soba-making (そば打ち)."
+   ],
+   "status_upd": {
+    "ren": {
+     "status": "{久しぶり|ひさしぶり}に{泣けた|なけた}イブ🎞❄"
+    }
+   }
   }
  ],
  "others": [

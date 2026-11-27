@@ -1,0 +1,162 @@
+{
+ "topic": "Christmas Eve: a film with レン",
+ "category": "love-relationships",
+ "function": "planning",
+ "format": "dialogue",
+ "cast": ["ren"],
+ "title_jp": "イブの{映画|えいが}と{次|つぎ}の{約束|やくそく}",
+ "context": "Thursday 24 December, Christmas Eve: アルちゃん and レン's first real date. After 『{素晴らしき哉|すばらしきかな}、{人生|じんせい}！』 at レン's cinema, they walk to {長野駅|ながのえき} in the snow and plan the next date.",
+ "scene": "Christmas Eve. The film is over and snow is falling in {長野|ながの}. Walking to the station with レン, you plan your next date.",
+ "keep": ["p0", "p1"],
+ "phrases": [
+  {"jp": "{次|つぎ}はいつにする？", "en": "When shall we do the next one?", "register": "casual", "note": "〜にする = decide on. {何|なに}にする？ = what will you have?"},
+  {"jp": "{年明け|としあけ|after New Year|3}の3{日|か}はどう？", "en": "How about the 3rd, after New Year?", "register": "casual", "note": "〜はどう？ = suggesting a date or plan."},
+  {"jp": "じゃあ、{決まり|きまり|it's settled|3}ね。", "en": "Then it's settled.", "register": "casual", "note": "Closes a plan. Also: {決|き}まりだね！"},
+  {"jp": "{彼|かれ}は{優しい|やさしい}ばかりか、{料理|りょうり}まで{上手|じょうず}なんだ。", "en": "He's not only kind, he's even a good cook.", "register": "neutral", "note": "ばかりか… まで: the second thing is the bigger surprise."},
+  {"jp": "{都合|つごう|convenience, schedule|3}のいい{日|ひ}を{教えて|おしえて}ください。", "en": "Please tell me which days suit you.", "register": "polite", "note": "{都合|つごう}がいい / {悪|わる}い = (a time) suits / doesn't suit you."}
+ ],
+ "dialogue_setting": "A street of shops near {長野駅|ながのえき}, about 8 p.m. on Christmas Eve. Light snow; the two of you walk side by side, not too close.",
+ "dialogue": [
+  {"who": "ren", "speaker": "レン", "jp": "{字幕|じまく|subtitles|3}、{速かった|はやかった}でしょ。{大丈夫|だいじょうぶ}だった？", "en": "The subtitles were fast, weren't they? Were you OK?", "register": "casual"},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "jp": "{英語|えいご}だから{平気|へいき|fine, no problem|4}。{主人公|しゅじんこう|main character|3}が{最後|さいご}に{笑う|わらう}{場面|ばめん|scene|3}、{泣けた|なけた|to be moved to tears|3}よ。", "en": "It's in English, so no problem. The scene where the hero smiles at the end made me cry.", "register": "casual"},
+  {"who": "ren", "speaker": "レン", "jp": "{僕|ぼく}も、{何回|なんかい}{見て|みて}も{泣ける|なける|to be moved to tears|3}んだ。…ねえ、{雪山|ゆきやま}を{歩く|あるく}{約束|やくそく}、{覚えてる|おぼえてる|to remember|4}？", "en": "Me too: it gets me every time. …Hey, do you remember our promise to walk in the snowy mountains?", "register": "casual"},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "jp": "もちろん！でも{年末|ねんまつ|end of the year|3}は{大掃除|おおそうじ}ばかりか、{そば打ち|そばうち|making soba by hand|2}まで{手伝う|てつだう}{予定|よてい}なんだ。", "en": "Of course! But at the end of the year I'm helping with the big clean, and even soba-making.", "register": "casual"},
+  {"who": "ren", "speaker": "レン", "jp": "じゃあ、{年明け|としあけ|after New Year|3}の3{日|か}はどう？{戸隠|とがくし}なら、スノーシューで{歩ける|あるける}よ。", "en": "Then how about the 3rd, after New Year? At {戸隠|とがくし} we can walk in snowshoes.", "register": "casual"},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "jp": "いいね、{決まり|きまり|it's settled|3}！{今日|きょう}は{映画|えいが}ばかりか、{次|つぎ}の{約束|やくそく}までできちゃった。", "en": "Great, it's settled! Today I didn't just get a film, I even got our next date.", "register": "casual"}
+ ],
+ "listening": {
+  "type": "announcement",
+  "intro": "At {長野駅|ながのえき}, the speakers have news about your train home.",
+  "who": "extra",
+  "title": "{駅|えき}の{放送|ほうそう|announcement|3}",
+  "place": "{長野駅|ながのえき}",
+  "lines": [
+   {"who": "extra", "voice": "m", "jp": "お{客様|きゃくさま}にお{知らせ|しらせ}いたします。{本日|ほんじつ}は{雪|ゆき}のため、", "en": "Announcement to all passengers. Today, because of snow,"},
+   {"who": "extra", "voice": "m", "jp": "{鷹ノ原|たかのはら}{方面|ほうめん|direction (of)|3}の{電車|でんしゃ}は、{約|やく}15{分|ふん}{遅れて|おくれて}おります。", "en": "trains for {鷹ノ原|たかのはら} are running about 15 minutes late."}
+  ],
+  "question": "{鷹ノ原|たかのはら}{行き|いき}の{電車|でんしゃ}は、どうなっていますか。",
+  "options": ["雪で15分ぐらい遅れている", "雪で50分ぐらい遅れている", "事故で15分ぐらい遅れている", "雪で止まっている"],
+  "explain": "{雪|ゆき}のため = because of snow; {約|やく}15{分|ふん}{遅|おく}れて = about 15 minutes late."
+ },
+ "grammar": {
+  "id": "n3-bakari-ka",
+  "pattern": "〜ばかりか",
+  "level": "N3",
+  "meaning": "not only... but even",
+  "form": "noun: + ばかりか ({映画|えいが}ばかりか) · verb / い-adj: plain + ばかりか ({泣|な}けるばかりか, {優|やさ}しいばかりか) · な-adj: + なばかりか ({上手|じょうず}なばかりか)",
+  "explanation": "Like だけでなく, but the second thing is bigger or more surprising, so it usually takes まで, さえ or も. It sounds a bit written; in chat it adds a playful, dramatic touch. Don't use it for requests or invitations.",
+  "src": ["d3", "d5", "p3"],
+  "mark": ["大掃除ばかりか", "映画ばかりか", "優しいばかりか", "遅刻したばかりか", "安いばかりか"],
+  "examples": [
+   {"jp": "{健太|けんた}は{遅刻|ちこく|being late|3}したばかりか、{財布|さいふ}まで{忘れた|わすれた}。", "en": "{健太|けんた} wasn't just late, he even forgot his wallet."},
+   {"jp": "この{店|みせ}は{安い|やすい}ばかりか、{量|りょう}も{多い|おおい}。", "en": "This place isn't only cheap, the portions are big too."}
+  ],
+  "quiz": {
+   "question": "{雪|ゆき}で、バス＿＿{電車|でんしゃ}まで{止まった|とまった}。",
+   "en": "Because of the snow, not only the buses but even the trains stopped.",
+   "options": ["ばかりか", "ばかり", "だけ", "しか"],
+   "explain": "Noun + ばかりか, then まで for the bigger surprise."
+  },
+  "quiz_more": [
+   {
+    "question": "レンは{写真|しゃしん}が{上手|じょうず}＿＿、{自分|じぶん}で{現像|げんぞう|developing (film)|2}までする。",
+    "en": "レン isn't just good at photos, he even develops them himself.",
+    "options": ["なばかりか", "だばかりか", "ばかりで", "のばかりか"],
+    "explain": "な-adjectives keep な before ばかりか."
+   },
+   {
+    "question": "この{映画|えいが}は{子ども|こども}＿＿、{大人|おとな}も{泣ける|なける}。",
+    "en": "This film moves not only children but adults too.",
+    "options": ["ばかりか", "ばかりに", "ほど", "なのに"],
+    "explain": "ばかりか adds the second, bigger group: adults too."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "上映中",
+  "reading": "じょうえいちゅう",
+  "romaji": "jōei-chū",
+  "meaning": "now showing",
+  "where": "On the hand-painted board outside レン's cinema, under 『{素晴らしき哉|すばらしきかな}、{人生|じんせい}！』.",
+  "breakdown": "{上映中|じょうえいちゅう}: {上映|じょうえい} screening (上 up + 映 project onto a screen) + 中 during → the film is showing now.",
+  "related": "{上映時間|じょうえいじかん} = running time; {映画館|えいがかん} = cinema."
+ },
+ "tip": {
+  "mark": "恋",
+  "title": "A Japanese Christmas",
+  "body": "In Japan Christmas is a fun season, not a religious one, for most people. Families eat fried chicken and a strawberry Christmas cake, often ordered weeks ahead, while Christmas Eve is the couples' night: lights, dinner, a film. It's a {文化|ぶんか} thing that surprises many visitors."
+ },
+ "challenge": {
+  "type": "order",
+  "prompt": "On the platform, レン: 「3{日|か}、{何時|なんじ}にどこで{会う|あう}？」 Suggest meeting at {長野駅|ながのえき} at 9 in the morning.",
+  "pieces": ["じゃあ、", "{朝|あさ}9{時|じ}に", "{長野駅|ながのえき}で", "{会おう|あおう}か。"],
+  "model_answer": "じゃあ、{朝|あさ}9{時|じ}に{長野駅|ながのえき}で{会おう|あおう}か。",
+  "explanation": "Time + に, place + で, then the volitional {会|あ}おう ('let's meet'). Adding か makes it a soft suggestion: 'shall we?'. Casual, right with レン now.",
+  "hint": "time に, place で, volitional + か"
+ },
+ "vocab": [
+  {"jp": "{字幕|じまく}", "reading": "じまく", "en": "subtitles", "level": "N3", "src": "d0", "surface": "字幕", "note": "{字幕版|じまくばん} = subtitled version; {吹|ふ}き{替|か}え = dubbed."},
+  {"jp": "{平気|へいき}", "reading": "へいき", "en": "fine, no problem, unbothered", "level": "N3", "src": "d1", "surface": "平気", "note": "Casual {大丈夫|だいじょうぶ}. {平気|へいき}な{顔|かお} = a calm face."},
+  {"jp": "{主人公|しゅじんこう}", "reading": "しゅじんこう", "en": "main character, hero", "level": "N3", "src": "d1", "surface": "主人公", "note": "Films, novels, games. Not {主人|しゅじん} (husband, shop owner)."},
+  {"jp": "{場面|ばめん}", "reading": "ばめん", "en": "scene", "level": "N3", "src": "d1", "surface": "場面", "note": "{場|ば} place + {面|めん} face. Also シーン."},
+  {"jp": "{泣|な}ける", "reading": "なける", "en": "to be moved to tears", "level": "N3", "src": "d1", "surface": "泣けた", "note": "{泣|な}ける{映画|えいが} = a tearjerker. Like a potential of {泣|な}く."},
+  {"jp": "{覚|おぼ}える", "reading": "おぼえる", "en": "to remember; to learn", "level": "N4", "src": "d2", "surface": "覚えて", "note": "{覚|おぼ}えてる？ = do you remember? {覚|おぼ}える{単語|たんご} = words to learn."},
+  {"jp": "{年末|ねんまつ}", "reading": "ねんまつ", "en": "end of the year", "level": "N3", "src": "d3", "surface": "年末", "note": "{年末年始|ねんまつねんし} = the New Year holidays."},
+  {"jp": "{年明|としあ}け", "reading": "としあけ", "en": "the start of the new year", "level": "N3", "src": "d4", "surface": "年明け", "note": "{年明|としあ}けに = early in January, after the holidays."},
+  {"jp": "{都合|つごう}", "reading": "つごう", "en": "convenience, schedule", "level": "N3", "src": "p4", "surface": "都合", "note": "{都合|つごう}がいい / {悪|わる}い. Polite way to ask when someone is free."}
+ ],
+ "kanji_study": [
+  {
+   "kanji": "泣",
+   "track": "lesson",
+   "on": "キュウ",
+   "kun": "な(く)",
+   "meaning": "cry",
+   "parts": "氵 water radical + 立 stand → water running down the face of someone standing there: cry.",
+   "lookalike": "Not 位 (rank): 位 has 亻 person on the left, 泣 has 氵 water.",
+   "words": [
+    {"jp": "{泣|な}く", "reading": "なく", "en": "to cry"},
+    {"jp": "{泣|な}ける", "reading": "なける", "en": "to be moved to tears"},
+    {"jp": "{泣|な}き{虫|むし}", "reading": "なきむし", "en": "crybaby"}
+   ],
+   "decoys": {"meanings": ["to laugh", "to stand", "to swim"], "readings": ["なぐ", "たく", "きゅうく"]}
+  },
+  {
+   "kanji": "化",
+   "track": "n3",
+   "on": "カ・ケ",
+   "kun": "ば(ける)・ば(かす)",
+   "meaning": "change, transform",
+   "parts": "亻 person + 匕 a person turned upside down → someone turning into something else: change.",
+   "lookalike": "Not 花 (flower): 花 is 化 with 艹 grass on top.",
+   "words": [
+    {"jp": "{文化|ぶんか}", "reading": "ぶんか", "en": "culture"},
+    {"jp": "{変化|へんか}", "reading": "へんか", "en": "change"},
+    {"jp": "お{化|ば}け", "reading": "おばけ", "en": "ghost"}
+   ],
+   "decoys": {"meanings": ["flower", "north", "person"], "readings": ["ぶんけ", "もんか", "ぶか"]}
+  }
+ ],
+ "extras": [
+  {
+   "title": "Making a plan",
+   "title_jp": "{予定|よてい}を{決める|きめる}",
+   "intro": "Short lines for fixing a date.",
+   "items": [
+    {"jp": "{何時|なんじ}{集合|しゅうごう}にする？", "en": "What time shall we meet?"},
+    {"jp": "その{日|ひ}はちょっと…", "en": "That day's a bit difficult…", "note": "The polite Japanese 'no': leave the sentence unfinished."},
+    {"jp": "{予定|よてい}が{変わったら|かわったら}、{連絡|れんらく}するね。", "en": "If plans change, I'll let you know."}
+   ]
+  },
+  {
+   "title": "Christmas words",
+   "title_jp": "クリスマスの{言葉|ことば}",
+   "intro": "What you see and hear around 24 December.",
+   "items": [
+    {"jp": "クリスマスケーキを{予約|よやく}した。", "en": "I pre-ordered a Christmas cake."},
+    {"jp": "{駅前|えきまえ}のイルミネーション、きれいだね。", "en": "The lights by the station are pretty, aren't they?"},
+    {"jp": "メリークリスマス！{良い|よい}お{年|とし}を。", "en": "Merry Christmas! Have a good New Year.", "note": "{良|よ}いお{年|とし}を is the goodbye for the last days of the year."}
+   ]
+  }
+ ]
+}

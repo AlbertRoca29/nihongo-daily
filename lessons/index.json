@@ -358,5 +358,12 @@
   "category": "review",
   "function": "hearsay",
   "format": "story"
+ },
+ {
+  "id": "2026-12-24",
+  "topic": "Christmas Eve: a film with レン",
+  "category": "love-relationships",
+  "function": "planning",
+  "format": "dialogue"
  }
 ]
