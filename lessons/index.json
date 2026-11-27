@@ -351,5 +351,12 @@
   "category": "getting-around",
   "function": "reasons",
   "format": "line"
+ },
+ {
+  "id": "2026-12-23",
+  "topic": "The whole town knows about tomorrow",
+  "category": "review",
+  "function": "hearsay",
+  "format": "story"
  }
 ]

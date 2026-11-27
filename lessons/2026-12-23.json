@@ -1,0 +1,165 @@
+{
+ "topic": "The whole town knows about tomorrow",
+ "category": "review",
+ "function": "hearsay",
+ "format": "story",
+ "cast": ["kenta"],
+ "title_jp": "{噂|うわさ}って{速い|はやい}",
+ "context": "Wednesday 23 December, the day before アルちゃん's date with レン: by lunchtime half of {鷹ノ原|たかのはら} has heard he's going to {長野|ながの} on Christmas Eve, and the rumour says it's with a girlfriend. アルちゃん and {健太|けんた} tell the day.",
+ "scene": "Wednesday, the day before your date. A rumour about your Christmas Eve is travelling round town faster than the bus. You and {健太|けんた} tell how the day went.",
+ "keep": ["p0"],
+ "phrases": [
+  {"jp": "{明日|あした}、デートなんだって？", "en": "I hear you've got a date tomorrow?", "register": "casual", "note": "Review: 〜んだって = 'I heard…'. With a rising tone it asks 'is it true?'"},
+  {"jp": "それ、{誰|だれ}から{聞いた|きいた}の？", "en": "Who did you hear that from?", "register": "casual"},
+  {"jp": "{噂|うわさ|rumour|3}って、{広まる|ひろまる|to spread (news)|3}のが{速い|はやい}ね。", "en": "Rumours sure spread fast.", "register": "casual", "note": "Review: noun + って = 'as for…', casual は."},
+  {"jp": "{楽しみ|たのしみ}で{仕方がない|しかたがない|can't help it|3}。", "en": "I can't wait.", "register": "casual", "note": "Review from 19 Dec: 〜て{仕方|しかた}がない = so much I can't help it."},
+  {"jp": "{本当|ほんとう}のことは、まだ{内緒|ないしょ|secret|3}にしてね。", "en": "Keep the real story a secret for now, OK?", "register": "casual", "note": "{内緒|ないしょ}にする = keep secret. Softer and more everyday than {秘密|ひみつ}."}
+ ],
+ "dialogue_setting": "Two voices tell the day: アルちゃん, and {健太|けんた} at the reception desk of ゲストハウス{風|かぜ}.",
+ "dialogue": [
+  {"who": "you", "speaker": "アルちゃん", "me": true, "jp": "{朝|あさ}、ゴミを{出しに|だしに}{行ったら|いったら}、{近所|きんじょ|neighbourhood|4}の{人|ひと}に「{明日|あした}、デートなんだって？」と{聞かれた|きかれた}。", "en": "This morning when I took the rubbish out, a neighbour asked me, 'I hear you've got a date tomorrow?'", "register": "neutral"},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "jp": "{恵子|けいこ}さんが「イブは{長野|ながの}なんだって」ってハナおばあちゃんに{話した|はなした}らしい。そこから{町中|まちじゅう|all over town|3}に{伝わった|つたわった|to spread, get passed on|3}。", "en": "Apparently {恵子|けいこ}さん told ハナおばあちゃん, 'He's off to {長野|ながの} on Christmas Eve.' From there it went all over town.", "register": "neutral"},
+  {"who": "kenta", "speaker": "健太", "jp": "{昼|ひる}にはもう、ゲストハウスでも{話題|わだい|topic (of talk)|3}になっとった。「アルちゃん、{長野|ながの}に{彼女|かのじょ}おるんやって」ってな。", "en": "By lunch it was already the talk of the guesthouse too: 'Apparently アルちゃん has a girlfriend in {長野|ながの}.'", "register": "dialect", "note": "なっとった = なっていた; おるんやって = いるんだって (Kansai)."},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "jp": "{彼女|かのじょ}じゃなくて{男|おとこ}の{人|ひと}なのに…。{隠したい|かくしたい|to hide|3}わけじゃないけど、{否定|ひてい|denial|3}もできなかった。", "en": "It's not a girlfriend, it's a guy… I don't want to hide it, but I couldn't deny it either.", "register": "neutral"},
+  {"who": "kenta", "speaker": "健太", "jp": "ほんまのこと{知っとる|しっとる}のは{俺|おれ}だけや。「{噂|うわさ|rumour|3}って{広まる|ひろまる|to spread (news)|3}の{速い|はやい}なあ」って{笑ったら|わらったら}、アルちゃんも{笑っとった|わらっとった}。", "en": "I'm the only one who knows the truth. When I laughed, 'Rumours sure travel fast,' アルちゃん laughed too.", "register": "dialect", "note": "ほんま = {本当|ほんとう}; {知|し}っとる = {知|し}っている; {笑|わら}っとった = {笑|わら}っていた (Kansai)."},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "jp": "レンが「{田舎|いなか|countryside|3}は{噂|うわさ|rumour|3}が{怖い|こわい}」って{言ってた|いってた}{意味|いみ}が、やっと{分かった|わかった}。{明日|あした}は{気にしない|きにしない|to worry about|4}で{楽しもう|たのしもう}。", "en": "I finally get what レン meant when he said gossip is scary in the countryside. Tomorrow I'll just enjoy it and not worry.", "register": "neutral"}
+ ],
+ "listening": {
+  "type": "voicemail",
+  "intro": "In the evening, a voicemail from {恵子|けいこ}さん. She's heard the rumour too.",
+  "who": "keiko",
+  "lines": [
+   {"who": "keiko", "jp": "アルちゃん、ハナさんから{聞いた|きいた}よ。{明日|あした}デートなんだって？ふふ、{楽しんで|たのしんで}きてね。", "en": "アルちゃん, I heard from ハナさん. You've got a date tomorrow? Hehe, have fun."},
+   {"who": "keiko", "jp": "{雪|ゆき}だから、{駅|えき}まで{車|くるま}で{送って|おくって}いくね。4{時|じ}に{玄関|げんかん|entrance hall|3}でね。", "en": "It's snowy, so I'll drive you to the station. 4 o'clock at the front door."}
+  ],
+  "question": "{恵子|けいこ}さんは{明日|あした}、{何|なに}をしてくれますか。",
+  "options": ["駅まで車で送ってくれる", "長野まで車で送ってくれる", "駅まで迎えに来てくれる", "ハナさんに話してくれる"],
+  "explain": "{駅|えき}まで{車|くるま}で{送|おく}っていく: she'll drive you to the station, at 4 o'clock."
+ },
+ "grammar": {
+  "id": "n3-tte",
+  "pattern": "〜って",
+  "level": "N3",
+  "meaning": "they say / speaking of / quote (casual)",
+  "form": "quote: plain form + って ({怖|こわ}いって{言|い}ってた) · hearsay: 〜んだって (デートなんだって, Kansai: おるんやって) · topic: noun + って ({噂|うわさ}って)",
+  "explanation": "Review: casual って quotes (for と), ends a sentence to mean 'I heard', and after a noun means 'as for'. Gossip runs on 〜んだって. With a noun or な-adjective it's なんだって, never だだって.",
+  "src": ["d0", "d2", "d4", "d5", "p0"],
+  "mark": ["デートなんだって", "おるんやって", "噂って", "って言ってた", "雪なんだって", "着くって"],
+  "examples": [
+   {"jp": "{明日|あした}も{雪|ゆき}なんだって。{恵子|けいこ}さんが{言って|いって}た。", "en": "I hear it's snowing again tomorrow. {恵子|けいこ}さん said so."},
+   {"jp": "{小池|こいけ}さん、20{分|ぷん}で{着く|つく}って。", "en": "{小池|こいけ}さん says she'll be here in 20 minutes."}
+  ],
+  "quiz": {
+   "question": "{健太|けんた}の{彼女|かのじょ}、{看護師|かんごし|nurse|3}＿＿。",
+   "en": "I hear {健太|けんた}'s girlfriend is a nurse.",
+   "options": ["なんだって", "だだって", "なのって", "のだって"],
+   "explain": "Noun + なんだって passes on what you heard."
+  },
+  "quiz_more": [
+   {
+    "question": "レンが「{明日|あした}は{寒い|さむい}よ」＿＿{言って|いって}た。",
+    "en": "レン said, 'It'll be cold tomorrow.'",
+    "options": ["って", "だって", "っけ", "なんて"],
+    "explain": "Quote + って + {言|い}う: casual と."
+   },
+   {
+    "question": "「ゆず{湯|ゆ}」＿＿、{何|なに}？",
+    "en": "What's a 'yuzu bath'?",
+    "options": ["って", "なんだって", "だって", "っけ"],
+    "explain": "Noun + って{何|なに}？ asks what something is."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "回覧板",
+  "reading": "かいらんばん",
+  "romaji": "kairanban",
+  "meaning": "neighbourhood circular (clipboard passed house to house)",
+  "where": "On the {田中|たなか} shoe rack: the clipboard of town notices {恵子|けいこ}さん takes next door to ハナおばあちゃん. It's how news (and gossip) travels.",
+  "breakdown": "{回覧板|かいらんばん}: 回 go round + 覧 look at + 板 board → a board that goes round for everyone to read.",
+  "related": "{回覧|かいらん} = circulating something to read."
+ },
+ "tip": {
+  "mark": "噂",
+  "title": "Christmas Eve is for couples",
+  "body": "In Japan クリスマスイブ is a date night more than a family day, so 'going to {長野|ながの} on the 24th' instantly means デート. Families eat Christmas cake; the big family holiday is New Year."
+ },
+ "challenge": {
+  "type": "pick",
+  "prompt": "{健太|けんた} on LINE: 「{結局|けっきょく}、あの{噂|うわさ|rumour|3}、{誰|だれ}が{広めた|ひろめた|to spread|3}ん？」 Tell him you heard it was ハナおばあちゃん who told everyone.",
+  "options": [
+   {"jp": "ハナおばあちゃんが{話|はな}したんだって。", "ok": true, "why": "Past 〜たんだって passes on what you heard."},
+   {"jp": "ハナおばあちゃんが{話|はな}したっけ。", "ok": false, "why": "っけ is for trying to remember, not passing on news."},
+   {"jp": "ハナおばあちゃんが{話|はな}すって。", "ok": false, "why": "Present tense: 'she says she'll tell', not that she already did."},
+   {"jp": "ハナおばあちゃんが{話|はな}したなんて。", "ok": false, "why": "なんて shows shock ('to think she told!'), not who it was."}
+  ],
+  "model_answer": "ハナおばあちゃんが{話した|はなした}んだって。",
+  "explanation": "The story you heard goes in the past plain form, {話|はな}した, and んだって adds 'that's what I heard'. It's casual, right for {健太|けんた} on LINE.",
+  "hint": "past plain form + んだって"
+ },
+ "vocab": [
+  {"jp": "{近所|きんじょ}", "reading": "きんじょ", "en": "neighbourhood; neighbours", "level": "N4", "src": "d0", "surface": "近所", "note": "{近所|きんじょ}の{人|ひと} = a neighbour. {近|きん} near + {所|じょ} place."},
+  {"jp": "{町中|まちじゅう}", "reading": "まちじゅう", "en": "all over town, the whole town", "level": "N3", "src": "d1", "surface": "町中", "note": "〜{中|じゅう} = all through: {一日中|いちにちじゅう}, {世界中|せかいじゅう}."},
+  {"jp": "{伝|つた}わる", "reading": "つたわる", "en": "to be passed on, spread", "level": "N3", "src": "d1", "surface": "伝わった", "note": "{伝|つた}える = you pass it on; {伝|つた}わる = it gets passed on. Also feelings: {気持|きも}ちが{伝|つた}わる."},
+  {"jp": "{話題|わだい}", "reading": "わだい", "en": "topic (of conversation)", "level": "N3", "src": "d2", "surface": "話題", "note": "{話題|わだい}になる = become the talk of. {話題|わだい}の{店|みせ} = a buzzed-about shop."},
+  {"jp": "{隠|かく}す", "reading": "かくす", "en": "to hide", "level": "N3", "src": "d3", "surface": "隠した", "note": "{隠|かく}れる = (you) hide yourself. {隠|かく}し{事|ごと} = a secret."},
+  {"jp": "{否定|ひてい}", "reading": "ひてい", "en": "denial", "level": "N3", "src": "d3", "surface": "否定", "note": "{否定|ひてい}する = deny. Opposite: {肯定|こうてい}."},
+  {"jp": "{広|ひろ}まる", "reading": "ひろまる", "en": "to spread (news, a rumour)", "level": "N3", "src": "d4", "surface": "広まる", "note": "Spreading news or habits. {広|ひろ}める = you spread it."},
+  {"jp": "{気|き}にする", "reading": "きにする", "en": "to worry about, mind", "level": "N4", "src": "d5", "surface": "気にしない", "note": "{気|き}にしないで = don't worry about it."},
+  {"jp": "{内緒|ないしょ}", "reading": "ないしょ", "en": "secret", "level": "N3", "src": "p4", "surface": "内緒", "note": "{内緒|ないしょ}にする / {内緒|ないしょ}だよ. Everyday, a bit playful."}
+ ],
+ "kanji_study": [
+  {
+   "kanji": "伝",
+   "track": "lesson",
+   "on": "デン",
+   "kun": "つた(わる)・つた(える)・つた(う)",
+   "meaning": "transmit, pass on",
+   "parts": "亻 person + 云 'to say' → a person passing on what was said: transmit.",
+   "lookalike": "Not 転 (roll): 転 has 車 car on the left, 伝 has 亻 person.",
+   "words": [
+    {"jp": "{伝|つた}わる", "reading": "つたわる", "en": "to be passed on, spread"},
+    {"jp": "{伝統|でんとう}", "reading": "でんとう", "en": "tradition"},
+    {"jp": "{手伝|てつだ}う", "reading": "てつだう", "en": "to help"}
+   ],
+   "decoys": {"meanings": ["to roll", "to say", "body"], "readings": ["つかわる", "でんわる", "つなわる"]}
+  },
+  {
+   "kanji": "当",
+   "track": "n3",
+   "on": "トウ",
+   "kun": "あ(たる)・あ(てる)",
+   "meaning": "hit; right, this very",
+   "parts": "Old form 當: 尚 + 田 field → a field that matches its claim: hitting the mark, being right. Today it's ⺌ little sparks over ヨ.",
+   "lookalike": "Not 雪 (snow): 雪 has 雨 rain on top, 当 has ⺌.",
+   "words": [
+    {"jp": "{本当|ほんとう}", "reading": "ほんとう", "en": "true, real"},
+    {"jp": "{当|あ}たり{前|まえ}", "reading": "あたりまえ", "en": "natural, obvious"},
+    {"jp": "{担当|たんとう}", "reading": "たんとう", "en": "in charge (of)"}
+   ],
+   "decoys": {"meanings": ["snow", "small", "field"], "readings": ["ほんどう", "ほんと", "ほうとう"]}
+  }
+ ],
+ "extras": [
+  {
+   "title": "Passing it on",
+   "title_jp": "{聞いた|きいた}{話|はなし}",
+   "intro": "Other ways to report what you heard.",
+   "items": [
+    {"jp": "{雪|ゆき}が{降る|ふる}らしいよ。", "en": "Apparently it's going to snow."},
+    {"jp": "{健太|けんた}から{聞いた|きいた}んだけど…", "en": "I heard from {健太|けんた} that…"},
+    {"jp": "{噂|うわさ|rumour|3}によると、{新しい|あたらしい}{店|みせ}ができるみたい。", "en": "Word is, a new shop is opening."}
+   ]
+  },
+  {
+   "title": "Keeping it quiet",
+   "title_jp": "{内緒|ないしょ|secret|3}の{話|はなし}",
+   "intro": "For when news shouldn't travel.",
+   "items": [
+    {"jp": "ここだけの{話|はなし}だけど…", "en": "Just between us…", "note": "Said right before gossip, ironically."},
+    {"jp": "{誰|だれ}にも{言わない|いわない}でね。", "en": "Don't tell anyone, OK?"},
+    {"jp": "あの{人|ひと}、{口が軽い|くちがかるい|can't keep a secret|3}から。", "en": "That person can't keep a secret.", "note": "{口|くち}が{軽|かる}い = loose-lipped; {口|くち}が{堅|かた}い = can keep a secret."}
+   ]
+  }
+ ]
+}
