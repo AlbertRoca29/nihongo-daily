@@ -372,5 +372,12 @@
   "category": "family-childhood",
   "function": "politeness",
   "format": "text"
+ },
+ {
+  "id": "2026-12-26",
+  "topic": "Year-end supermarket and a date report",
+  "category": "shops-eating-out",
+  "function": "reacting",
+  "format": "line"
  }
 ]

@@ -70,7 +70,7 @@
     "Yuki"
    ],
    "color": "#80c241",
-   "status": "{忘年会|ぼうねんかい}、{部長|ぶちょう}のカラオケ{地獄|じごく}…🎤",
+   "status": "イブの{報告|ほうこく}、{尊い|とうとい}…🎄",
    "where": "{東京|とうきょう}",
    "status_base": "{休日出勤|きゅうじつしゅっきん}なう…カラオケ{行きたい|いきたい}",
    "where_base": "{東京|とうきょう}"
@@ -212,8 +212,8 @@
     "Sōta"
    ],
    "color": "#2f7d32",
-   "status": "アルちゃんの{歌|うた}、すげー{盛り上がった|もりあがった}！🎤",
-   "where": "{長野市|ながのし} · {週末|しゅうまつ}は{畑|はたけ}",
+   "status": "{冬休み|ふゆやすみ}！じいちゃん{家|ち}にいるよ⛄",
+   "where": "{鷹ノ原|たかのはら} · {冬休み|ふゆやすみ}は{畑|はたけ}",
    "status_base": "{熱|ねつ}で{寝てる|ねてる}…ゲームしたい",
    "where_base": "{長野市|ながのし} · {週末|しゅうまつ}は{畑|はたけ}"
   },
@@ -1048,6 +1048,28 @@
     "アルちゃん posted his 年賀状 on 25 Dec, so they arrive on 1 Jan; the 田中 family's card has handwritten lines for 田中さん (to help more with snow and pruning), 恵子さん (he's put on weight from her cooking) and 颯太 (build a snowman together).",
     "アルちゃん promised 颯太 to build a snowman together during the winter break."
    ]
+  },
+  {
+   "date": "2026-12-26",
+   "cast": [
+    "yuki",
+    "sota"
+   ],
+   "summary": "Saturday 26 Dec: 颯太 is on winter break at the farm. He and アルちゃん do 恵子さん's New Year shopping at the packed 商店街 supermarket (red-and-white kamaboko at twice the usual price), while アルちゃん tells 由紀 on LINE that Christmas Eve was the best: they both cried at the film, and the next date is 戸隠 on 3 Jan. 由紀 tells him to buy 颯太 some sweets.",
+   "new_facts": [
+    "颯太 is staying at the 田中 farm for the winter break from 26 Dec.",
+    "On 26 Dec the 商店街 supermarket was packed with New Year shoppers; the checkout queue was about 30 minutes.",
+    "由紀 knows about the 24 Dec date and the 3 Jan 戸隠 plan."
+   ],
+   "status_upd": {
+    "yuki": {
+     "status": "イブの{報告|ほうこく}、{尊い|とうとい}…🎄"
+    },
+    "sota": {
+     "status": "{冬休み|ふゆやすみ}！じいちゃん{家|ち}にいるよ⛄",
+     "where": "{鷹ノ原|たかのはら} · {冬休み|ふゆやすみ}は{畑|はたけ}"
+    }
+   }
   }
  ],
  "others": [

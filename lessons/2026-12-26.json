@@ -1,0 +1,159 @@
+{
+ "topic": "Year-end supermarket and a date report",
+ "category": "shops-eating-out",
+ "function": "reacting",
+ "format": "line",
+ "cast": ["yuki"],
+ "title_jp": "{年末|ねんまつ}のスーパーと{報告|ほうこく}",
+ "context": "Saturday 26 December: アルちゃん and {颯太|そうた}, now on winter break, are doing {恵子|けいこ}さん's New Year shopping at the packed {商店街|しょうてんがい} supermarket, while {由紀|ゆき} demands a report on Christmas Eve over LINE.",
+ "scene": "Saturday, the supermarket is packed with New Year shoppers. You're on an errand with {颯太|そうた} when {由紀|ゆき} messages: how was Christmas Eve?",
+ "keep": ["p0"],
+ "phrases": [
+  {"jp": "うわ、{美味しそう|おいしそう}！", "en": "Wow, that looks delicious!", "register": "casual", "note": "The reaction to any food photo. Polite: {美味|おい}しそうですね."},
+  {"jp": "{雪|ゆき}が{降り|ふり}そうだね。", "en": "Looks like it's going to snow.", "register": "casual", "note": "Verb stem + そう = it looks about to happen."},
+  {"jp": "え、マジで？", "en": "Wait, seriously?", "register": "slang", "note": "マジ = {本当|ほんとう}. With friends only."},
+  {"jp": "それは{大変|たいへん}でしたね。", "en": "That must have been hard.", "register": "polite", "note": "Sympathy after someone's bad news."},
+  {"jp": "このお{菓子|かし|sweets, snacks|4}、{子供|こども}が{喜び|よろこび}そうですね。", "en": "Kids would love these sweets, wouldn't they?", "register": "polite"}
+ ],
+ "dialogue_setting": "LINE, Saturday late morning. You're in the queue at the {商店街|しょうてんがい} supermarket; {颯太|そうた} is next to you with the basket.",
+ "dialogue": [
+  {"who": "yuki", "speaker": "由紀", "time": "10:12", "jp": "アルちゃん〜！イブどうだった！？{報告|ほうこく}{待ってる|まってる}んだけど😤", "en": "アルちゃん! How was Christmas Eve?! I'm waiting for my report 😤", "register": "casual"},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "time": "10:15", "jp": "{最高|さいこう|the best|4}だった！{映画|えいが}で{二人|ふたり}とも{泣いた|ないた}ｗ", "en": "It was the best! We both cried at the film lol", "register": "casual"},
+  {"who": "yuki", "speaker": "由紀", "time": "10:15", "sticker": "toutoi", "jp": "{尊い|とうとい}…", "en": "Too precious…"},
+  {"who": "yuki", "speaker": "由紀", "time": "10:16", "jp": "え、{次|つぎ}の{約束|やくそく}もした？", "en": "Wait, did you fix the next date too?", "register": "casual"},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "time": "10:17", "jp": "うん、3{日|か}に{戸隠|とがくし}！{今|いま}は{恵子|けいこ}さんのお{使い|つかい|errand|3}でスーパー", "en": "Yep, {戸隠|とがくし} on the 3rd! Right now I'm at the supermarket on an errand for {恵子|けいこ}さん.", "register": "casual"},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "time": "10:17", "jp": "{正月|しょうがつ|New Year|4}の{買い物|かいもの}で、レジの{列|れつ|line, queue|3}がすごい。{並んだら|ならんだら|to line up|4}30{分|ぷん}かかりそう…", "en": "Everyone's doing New Year shopping, and the checkout queue is huge. Looks like 30 minutes if I join it…", "register": "casual"},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "time": "10:19", "jp": "{紅白|こうはく|red and white|2}かまぼこ、{高そう|たかそう}でしょ？いつもの{倍|ばい}だよ📷", "en": "Red-and-white kamaboko, looks pricey, right? Twice the usual 📷", "register": "casual"},
+  {"who": "yuki", "speaker": "由紀", "time": "10:20", "jp": "うわ、{美味しそう|おいしそう}！でも{年末|ねんまつ}は{値上がり|ねあがり|price rise|3}するのよね〜", "en": "Wow, looks delicious! But prices always go up at the end of the year~", "register": "casual"},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "time": "10:21", "jp": "{颯太|そうた}が、お{菓子|かし|sweets, snacks|4}{売り場|うりば|sales section (of a shop)|3}に{行きたそう|いきたそう}にしてるｗ", "en": "{颯太|そうた} looks like he's dying to go to the sweets aisle lol", "register": "casual"},
+  {"who": "yuki", "speaker": "由紀", "time": "10:22", "jp": "ｗｗｗ {一個|いっこ}{買って|かって}あげなよ。{お兄ちゃん|おにいちゃん}でしょ！", "en": "lololol buy him one. You're the big brother, aren't you!", "register": "casual"}
+ ],
+ "listening": {
+  "type": "ladder",
+  "intro": "{由紀|ゆき} sends a voice message as you reach the checkout.",
+  "who": "yuki",
+  "lines": [
+   {"who": "yuki", "jp": "{年末|ねんまつ}のスーパーって、{見てる|みてる}だけで{楽しそう|たのしそう}だよね。", "en": "Year-end supermarkets look fun just to look at, don't they?"}
+  ]
+ },
+ "grammar": {
+  "id": "n4-sou-look",
+  "pattern": "〜そう (様子)",
+  "level": "N4",
+  "meaning": "looks like, seems about to",
+  "form": "い-adj: drop い + そう ({美味|おい}しい → {美味|おい}しそう, {高|たか}い → {高|たか}そう) · な-adj: + そう ({元気|げんき}そう) · verb: stem + そう ({降|ふ}る → {降|ふ}りそう, かかる → かかりそう) · いい → よさそう · ない → なさそう",
+  "explanation": "Says how something looks to you, from what you see: {美味|おい}しそう = it looks tasty. With verbs: 'about to, likely to'. Don't mix it up with plain form + そうだ ('I heard'). And かわいそう means 'poor thing', not 'looks cute'.",
+  "src": ["d7", "d5", "d8", "d6", "p0"],
+  "mark": ["美味しそう", "かかりそう", "行きたそう", "高そう", "降りそう", "眠そう"],
+  "examples": [
+   {"jp": "{健太|けんた}、{今日|きょう}はずっと{眠そう|ねむそう}だね。", "en": "{健太|けんた} has looked sleepy all day."},
+   {"jp": "{空|そら}が{暗い|くらい}。{雪|ゆき}が{降り|ふり}そうだ。", "en": "The sky is dark. It looks like it'll snow."}
+  ],
+  "quiz": {
+   "question": "この{伊達巻|だてまき|sweet rolled omelette|2}、すごく＿＿！",
+   "en": "This rolled omelette looks so tasty!",
+   "options": ["美味しそう", "美味しいそう", "美味しそうに", "美味しくそう"],
+   "explain": "い-adjective: drop い, add そう."
+  },
+  "quiz_more": [
+   {
+    "question": "レジの{列|れつ}が{長い|ながい}。30{分|ぷん}＿＿。",
+    "en": "The checkout queue is long. Looks like it'll take 30 minutes.",
+    "options": ["かかりそう", "かかるそう", "かかったそう", "かかってそう"],
+    "explain": "Verb stem (かかり) + そう = looks likely."
+   },
+   {
+    "question": "このお{店|みせ}、{安くて|やすくて}＿＿だね。",
+    "en": "This shop looks cheap and good.",
+    "options": ["よさそう", "いいそう", "よそう", "いさそう"],
+    "explain": "いい is irregular: よさそう."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "要冷蔵",
+  "reading": "ようれいぞう",
+  "romaji": "yō reizō",
+  "meaning": "keep refrigerated",
+  "where": "Printed on the back of the kamaboko pack in your basket.",
+  "breakdown": "{要冷蔵|ようれいぞう}: {要|よう} needs + {冷蔵|れいぞう} cold storage ({冷|れい} cold + {蔵|ぞう} storehouse) → 'needs to be kept cold'.",
+  "related": "{冷蔵庫|れいぞうこ} = fridge; {要予約|ようよやく} = booking required."
+ },
+ "tip": {
+  "mark": "正",
+  "title": "Year-end shopping",
+  "body": "In the last days of December supermarkets fill with New Year food: {紅白|こうはく} kamaboko, {伊達巻|だてまき}, {黒豆|くろまめ}, {数の子|かずのこ}. Prices climb towards the 31st and some things sell out, so many families shop a few days early."
+ },
+ "challenge": {
+  "type": "write",
+  "prompt": "{恵子|けいこ}さん on the family LINE: 「スーパー{混んでる|こんでる}？」 Tell her it's really crowded and the checkout looks like it'll take about 30 minutes.",
+  "model_answer": "すごく{混んで|こんで}います。レジ、30{分|ぷん}くらいかかりそうです。",
+  "explanation": "{混|こ}んでいます describes the crowd right now. かかりそう is the verb stem + そう: from what you can see, it looks like it'll take 30 minutes. です keeps it polite for {恵子|けいこ}さん.",
+  "hint": "verb stem + そう です"
+ },
+ "vocab": [
+  {"jp": "{最高|さいこう}", "reading": "さいこう", "en": "the best, amazing", "level": "N3", "src": "d1", "surface": "最高", "note": "{最|さい} most + {高|こう} high. {最高|さいこう}だった！ = it was amazing."},
+  {"jp": "お{使|つか}い", "reading": "おつかい", "en": "errand", "level": "N3", "src": "d4", "surface": "使い", "note": "お{使|つか}いに{行|い}く = run an errand (often shopping for family)."},
+  {"jp": "{正月|しょうがつ}", "reading": "しょうがつ", "en": "New Year", "level": "N4", "src": "d5", "surface": "正月", "note": "Usually お{正月|しょうがつ}: the first days of January."},
+  {"jp": "{列|れつ}", "reading": "れつ", "en": "line, queue", "level": "N3", "src": "d5", "surface": "列", "note": "{列|れつ}に{並|なら}ぶ = queue up. {行列|ぎょうれつ} = a long queue."},
+  {"jp": "{並|なら}ぶ", "reading": "ならぶ", "en": "to line up, queue", "level": "N4", "src": "d5", "surface": "並んだら", "note": "{並|なら}べる = put in a row (shelves, plates)."},
+  {"jp": "{値上|ねあ}がり", "reading": "ねあがり", "en": "price rise", "level": "N3", "src": "d7", "surface": "値上がり", "note": "{値上|ねあ}がりする = go up in price. Opposite: {値下|ねさ}がり."},
+  {"jp": "{売|う}り{場|ば}", "reading": "うりば", "en": "section of a shop", "level": "N3", "src": "d8", "surface": "売り場", "note": "{売|う}る sell + {場|ば} place. {食品売|しょくひんう}り{場|ば} = food floor."},
+  {"jp": "お{菓子|かし}", "reading": "おかし", "en": "sweets, snacks", "level": "N4", "src": "d8", "surface": "菓子", "note": "Covers crisps too. {和菓子|わがし} = Japanese sweets."}
+ ],
+ "kanji_study": [
+  {
+   "kanji": "並",
+   "track": "lesson",
+   "on": "ヘイ",
+   "kun": "なら(ぶ)・なら(べる)・なみ",
+   "meaning": "line up, row; ordinary",
+   "parts": "Old form 竝: two 立 (people standing) side by side → people standing in a row: line up.",
+   "lookalike": "Not 普 (ordinary): 普 is 並 with 日 sun underneath.",
+   "words": [
+    {"jp": "{並|なら}ぶ", "reading": "ならぶ", "en": "to line up"},
+    {"jp": "{並|なら}べる", "reading": "ならべる", "en": "to put in a row"},
+    {"jp": "{並|なみ}", "reading": "なみ", "en": "regular (size)"}
+   ],
+   "decoys": {"meanings": ["to stand", "wide", "next to"], "readings": ["なさぶ", "へいぶ", "ならむ"]}
+  },
+  {
+   "kanji": "法",
+   "track": "n3",
+   "on": "ホウ・ハッ",
+   "kun": "",
+   "meaning": "law, method",
+   "parts": "氵 water radical + 去 go away → water that flows away along a fixed course: a rule, a way of doing things.",
+   "lookalike": "Not 決 (decide): both have 氵, but 法 has 去 and 決 has 夬.",
+   "words": [
+    {"jp": "{方法|ほうほう}", "reading": "ほうほう", "en": "method, way"},
+    {"jp": "{文法|ぶんぽう}", "reading": "ぶんぽう", "en": "grammar"},
+    {"jp": "{法律|ほうりつ}", "reading": "ほうりつ", "en": "law"}
+   ],
+   "decoys": {"meanings": ["to go away", "river", "to decide"], "readings": ["ほうぼう", "ほっぽう", "ほうほ"]}
+  }
+ ],
+ "extras": [
+  {
+   "title": "Reacting on LINE",
+   "title_jp": "{反応|はんのう|reaction|3}",
+   "intro": "Quick replies friends really send.",
+   "items": [
+    {"jp": "うそ！", "en": "No way!", "note": "Literally 'a lie', but it's surprise, not an accusation."},
+    {"jp": "ウケる。", "en": "That's hilarious.", "note": "Slang."},
+    {"jp": "なるほどね。", "en": "Ah, I see."},
+    {"jp": "よかったじゃん！", "en": "That's great!"}
+   ]
+  },
+  {
+   "title": "How people look",
+   "title_jp": "〜そう",
+   "intro": "Describing someone from what you see.",
+   "items": [
+    {"jp": "{忙し|いそがし}そうだね。", "en": "You look busy."},
+    {"jp": "{元気|げんき}がなさそう。{大丈夫|だいじょうぶ}？", "en": "You look down. Are you OK?"},
+    {"jp": "{颯太|そうた}、{嬉し|うれし}そう！", "en": "{颯太|そうた} looks so happy!"}
+   ]
+  }
+ ]
+}
