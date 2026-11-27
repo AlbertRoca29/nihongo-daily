@@ -923,6 +923,18 @@
      "where": "{東京|とうきょう}"
     }
    }
+  },
+  {
+   "date": "2026-12-17",
+   "cast": [
+    "hana"
+   ],
+   "summary": "Thursday 17 Dec: アルちゃん dropped his wallet on the 商店街 in the morning and found it already handed in at the 交番 by 鷹ノ原駅; the man from the rice shop (米屋さん) had picked it up, nothing missing. In the afternoon ハナおばあちゃん says it has always been a town where lost things come back because everyone knows each other; アルちゃん thinks it's more that handing things in is simply normal.",
+   "new_facts": [
+    "There is a 交番 in front of 鷹ノ原駅.",
+    "The 商店街 has a rice shop (米屋); its owner found アルちゃん's wallet on 17 Dec.",
+    "アルちゃん's wallet had about 5,000 yen in it; everything came back."
+   ]
   }
  ],
  "others": [

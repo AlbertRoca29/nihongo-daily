@@ -309,5 +309,12 @@
   "category": "society-opinions",
   "function": "comparing",
   "format": "line"
+ },
+ {
+  "id": "2026-12-17",
+  "topic": "A lost wallet comes back",
+  "category": "safety",
+  "function": "opinions",
+  "format": "story"
  }
 ]

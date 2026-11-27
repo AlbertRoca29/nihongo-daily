@@ -1,0 +1,432 @@
+{
+ "topic": "A lost wallet comes back",
+ "category": "safety",
+ "function": "opinions",
+ "format": "story",
+ "cast": [
+  "hana"
+ ],
+ "title_jp": "{戻って|もどって}きた{財布|さいふ}",
+ "context": "Thursday 17 December: アルちゃん lost his wallet on the {商店街|しょうてんがい} in the morning, and found it already handed in at the {交番|こうばん}: the man from the rice shop had picked it up. In the afternoon he and ハナおばあちゃん share their opinions on why things come back in this town.",
+ "scene": "Thursday. This morning your wallet vanished on the {商店街|しょうてんがい}. Now ハナおばあちゃん is under the kotatsu, and you tell each other what you think.",
+ "keep": [
+  "p0"
+ ],
+ "phrases": [
+  {
+   "jp": "{日本|にほん}は、{財布|さいふ|wallet|4}が{戻って|もどって}くるくらい{安全|あんぜん|safe|4}だと{思う|おもう}。",
+   "en": "I think Japan is so safe that wallets come back.",
+   "register": "casual",
+   "note": "Verb + くらい + adjective: 'so … that …'."
+  },
+  {
+   "jp": "それは{場所|ばしょ}に{よる||to depend on|4}んじゃないかな。",
+   "en": "Doesn't that depend on the place?",
+   "register": "casual",
+   "note": "〜による = it depends on. んじゃないかな softens a different opinion."
+  },
+  {
+   "jp": "{財布|さいふ|wallet|4}の{落とし物|おとしもの|lost item|3}は{届いて|とどいて}いませんか。",
+   "en": "Has a wallet been handed in?",
+   "register": "polite",
+   "note": "The question to ask at a {交番|こうばん} or a station office."
+  },
+  {
+   "jp": "{5000円|ごせんえん}くらい{入って|はいって}いました。",
+   "en": "There was about 5,000 yen in it.",
+   "register": "polite",
+   "note": "Number + くらい = about. They'll ask what was inside."
+  },
+  {
+   "jp": "そうかなあ。{僕|ぼく}はちょっと{違う|ちがう}と{思う|おもう}。",
+   "en": "Hmm, I'm not sure. I see it a bit differently.",
+   "register": "casual",
+   "note": "A gentle way to disagree. ちょっと keeps it soft."
+  }
+ ],
+ "dialogue_setting": "Thursday afternoon at the {田中|たなか} house. ハナおばあちゃん has come round; you both tell the story of the morning.",
+ "dialogue": [
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "{今朝|けさ}、{商店街|しょうてんがい|shopping street|3}で{財布|さいふ|wallet|4}を{落とした|おとした}。{泣きたい|なきたい}くらい{焦った|あせった|to panic|4}。",
+   "en": "This morning I dropped my wallet on the shopping street. I panicked so much I wanted to cry.",
+   "register": "neutral"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "{駅前|えきまえ}の{交番|こうばん|police box|3}に{行ったら|いったら}、もう{届いて|とどいて}いた。{米屋|こめや|rice shop|2}さんが{拾って|ひろって|to pick up|4}くれたんだ。",
+   "en": "When I went to the police box by the station, it was already there. The man from the rice shop had picked it up.",
+   "register": "neutral"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "{中身|なかみ|contents|3}も{全部|ぜんぶ}そのまま。{信じられない|しんじられない|to believe|3}くらいだよ。",
+   "en": "Everything inside was still there. It's almost unbelievable.",
+   "register": "neutral"
+  },
+  {
+   "who": "hana",
+   "speaker": "ハナおばあちゃん",
+   "jp": "{驚く|おどろく|to be surprised|3}ことはないよ。{昔|むかし}から、{落とした|おとした}もんはちゃーんと{戻って|もどって|to come back|4}くる{町|まち}{じゃ||(old/regional) = だ|2}よ。",
+   "en": "Nothing to be surprised about. This has always been a town where lost things come back.",
+   "register": "dialect",
+   "note": "もん = もの; じゃ = だ (old/regional)."
+  },
+  {
+   "who": "hana",
+   "speaker": "ハナおばあちゃん",
+   "jp": "みんな{顔|かお}を{知っとる|しっとる|(regional) = 知っている|2}から{のう||(old) sentence ending = ね|1}。{悪い|わるい}ことなんて、{できん|できん|(regional) = できない|2}くらい{じゃ||(old/regional) = だ|2}。",
+   "en": "Everyone knows everyone's face, you see. You couldn't do anything bad even if you tried.",
+   "register": "dialect",
+   "note": "知っとる = 知っている; できん = できない; のう = ね (old)."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "{田舎|いなか|countryside|3}だからってだけじゃないと{思う|おもう}。{拾った|ひろった|to pick up|4}{人|ひと}が{届ける|とどける|to hand in|3}のが{当たり前|あたりまえ|normal, only natural|4}なんだ。",
+   "en": "I don't think it's only because it's the countryside. Handing in what you find is just normal here.",
+   "register": "neutral"
+  }
+ ],
+ "listening": {
+  "type": "dictation",
+  "intro": "This morning at the {交番|こうばん}, the officer asked you something first. Type what he said.",
+  "who": "extra",
+  "lines": [
+   {
+    "who": "extra",
+    "voice": "m",
+    "jp": "{財布|さいふ|wallet|4}の{色|いろ}と、{中身|なかみ|contents|3}を{教えて|おしえて}ください。",
+    "en": "Please tell me the colour of the wallet and what was in it."
+   }
+  ]
+ },
+ "grammar": {
+  "id": "n3-kurai",
+  "pattern": "〜くらい / 〜ぐらい",
+  "level": "N3",
+  "meaning": "about, to the point that",
+  "form": "amount: number + くらい・ぐらい (10{分|ぷん}くらい, 5000{円|えん}ぐらい) · degree: plain form + くらい ({泣|な}きたいくらい, {信|しん}じられないくらい) · small thing: noun + くらい (これくらい, {電話|でんわ}くらい)",
+  "explanation": "With numbers, くらい/ぐらい means 'about'. After a verb or adjective it shows degree: 'so much that…'. It's close to ほど but more casual, and it can also make something sound small: これくらい = 'something this small'. ほど can't do that.",
+  "src": [
+   "d0",
+   "d2",
+   "d4",
+   "p0",
+   "p3"
+  ],
+  "mark": [
+   "泣きたいくらい",
+   "信じられないくらい",
+   "できんくらい",
+   "戻ってくるくらい",
+   "5000円くらい",
+   "10分ぐらい",
+   "これくらい",
+   "出ないくらい"
+  ],
+  "examples": [
+   {
+    "jp": "{交番|こうばん|police box|3}まで、{歩いて|あるいて}{10分|じゅっぷん}ぐらいです。",
+    "en": "It's about ten minutes on foot to the police box."
+   },
+   {
+    "jp": "{声|こえ}が{出ない|でない}くらい{寒かった|さむかった}。",
+    "en": "It was so cold I couldn't get a word out."
+   },
+   {
+    "jp": "これくらい、{自分|じぶん}でできるよ。",
+    "en": "I can do something this small myself."
+   }
+  ],
+  "quiz": {
+   "question": "{駅|えき}まで{歩いて|あるいて}{5分|ごふん}＿＿です。",
+   "en": "It's about five minutes' walk to the station.",
+   "options": [
+    "くらい",
+    "しか",
+    "より",
+    "ずつ"
+   ],
+   "explain": "Number + くらい = about."
+  },
+  "quiz_more": [
+   {
+    "question": "{財布|さいふ|wallet|4}がなくて、{泣きたい|なきたい}＿＿だった。",
+    "en": "My wallet was gone and I felt like crying.",
+    "options": [
+     "くらい",
+     "ばかり",
+     "ながら",
+     "より"
+    ],
+    "explain": "Plain form + くらい: so bad I wanted to cry."
+   },
+   {
+    "question": "これ＿＿、{自分|じぶん}でやるよ。",
+    "en": "I'll do something this small myself.",
+    "options": [
+     "くらい",
+     "ほど",
+     "まで",
+     "しか"
+    ],
+    "explain": "Only くらい makes something sound small; ほど can't."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "交番",
+  "reading": "こうばん",
+  "romaji": "kōban",
+  "meaning": "police box",
+  "where": "Above the door of the little police box in front of {鷹ノ原駅|たかのはらえき}, next to the word KOBAN.",
+  "breakdown": "交 take turns + 番 turn, watch → officers taking turns keeping watch: a police box.",
+  "related": "{警察|けいさつ} = the police. People call the officers お{巡|まわ}りさん."
+ },
+ "tip": {
+  "mark": "届",
+  "title": "Found it? Hand it in",
+  "body": "In Japan you take what you find to a {交番|こうばん}. By law the owner can be asked to give the finder 5–20% of its value as thanks, and if no owner turns up in three months, the finder can keep it. Many people simply refuse the reward."
+ },
+ "challenge": {
+  "type": "fix",
+  "prompt": "ハナおばあちゃん: 「{財布|さいふ}、{戻って|もどって}よかったねえ。この{町|まち}、どう{思う|おもう}？」 Tell her you think this town is so safe that wallets come back. One part is wrong.",
+  "parts": [
+   {
+    "jp": "この{町|まち}は、"
+   },
+   {
+    "jp": "{財布|さいふ}が{戻って|もどって}くるだくらい",
+    "wrong": true,
+    "why": "くらい follows the plain verb directly: {戻|もど}ってくるくらい, no だ."
+   },
+   {
+    "jp": "{安全|あんぜん}だと{思います|おもいます}。"
+   }
+  ],
+  "model_answer": "この{町|まち}は、{財布|さいふ|wallet|4}が{戻って|もどって}くるくらい{安全|あんぜん|safe|4}だと{思います|おもいます}。",
+  "explanation": "{財布|さいふ}が{戻|もど}ってくるくらい describes how safe: 'safe to the point that wallets come back'. くらい goes straight after the plain verb. 〜だと{思|おも}います gives your opinion politely, right for an older neighbour.",
+  "hint": "plain verb + くらい, no だ"
+ },
+ "vocab": [
+  {
+   "jp": "{財布|さいふ}",
+   "reading": "さいふ",
+   "en": "wallet, purse",
+   "level": "N4",
+   "src": "d0",
+   "surface": "財布",
+   "note": "{財布|さいふ}を{落|お}とす = to drop your wallet."
+  },
+  {
+   "jp": "{米屋|こめや}",
+   "reading": "こめや",
+   "en": "rice shop",
+   "level": "N3",
+   "src": "d1",
+   "surface": "米屋",
+   "note": "{米|こめ} rice + {屋|や} shop. Shopkeepers are called 〜{屋|や}さん."
+  },
+  {
+   "jp": "{拾|ひろ}う",
+   "reading": "ひろう",
+   "en": "to pick up, find",
+   "level": "N4",
+   "src": "d1",
+   "surface": "拾って",
+   "note": "The opposite of {捨|す}てる (throw away)."
+  },
+  {
+   "jp": "{信|しん}じる",
+   "reading": "しんじる",
+   "en": "to believe",
+   "level": "N3",
+   "src": "d2",
+   "surface": "信じられない",
+   "note": "{信|しん}じられない! = unbelievable! Very common reaction."
+  },
+  {
+   "jp": "{戻|もど}る",
+   "reading": "もどる",
+   "en": "to come back, return",
+   "level": "N4",
+   "src": "d3",
+   "surface": "戻って",
+   "note": "{戻|もど}ってくる = come back here. Things and people both."
+  },
+  {
+   "jp": "{届|とど}ける",
+   "reading": "とどける",
+   "en": "to hand in, deliver",
+   "level": "N3",
+   "src": "d5",
+   "surface": "届ける",
+   "note": "You {届|とど}ける it; it {届|とど}く (arrives)."
+  },
+  {
+   "jp": "{当|あ}たり{前|まえ}",
+   "reading": "あたりまえ",
+   "en": "normal, only natural",
+   "level": "N3",
+   "src": "d5",
+   "surface": "当たり前",
+   "note": "{当|あ}たり{前|まえ}じゃん! = obviously! (casual)."
+  },
+  {
+   "jp": "{安全|あんぜん}",
+   "reading": "あんぜん",
+   "en": "safe; safety",
+   "level": "N4",
+   "src": "p0",
+   "surface": "安全",
+   "note": "Opposite: {危険|きけん} (dangerous)."
+  },
+  {
+   "jp": "{落|お}とし{物|もの}",
+   "reading": "おとしもの",
+   "en": "lost item",
+   "level": "N3",
+   "src": "p2",
+   "surface": "落とし物",
+   "note": "{落|お}とす drop + {物|もの} thing. {忘|わす}れ{物|もの} = something left behind."
+  },
+  {
+   "jp": "よる",
+   "reading": "よる",
+   "en": "to depend on",
+   "level": "N3",
+   "src": "p1",
+   "surface": "よる",
+   "note": "Always 〜による / 〜によって. {人|ひと}による = depends on the person."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "拾",
+   "track": "lesson",
+   "on": "シュウ・ジュウ",
+   "kun": "ひろ(う)",
+   "meaning": "pick up",
+   "parts": "扌 hand radical + 合 fit together → a hand gathering things off the ground: pick up.",
+   "lookalike": "Not 給 (supply): 給 has 糸 thread on the left, 拾 has 扌 hand.",
+   "words": [
+    {
+     "jp": "{拾|ひろ}う",
+     "reading": "ひろう",
+     "en": "to pick up"
+    },
+    {
+     "jp": "{拾|ひろ}い{物|もの}",
+     "reading": "ひろいもの",
+     "en": "a find, a lucky bargain"
+    },
+    {
+     "jp": "{拾得物|しゅうとくぶつ}",
+     "reading": "しゅうとくぶつ",
+     "en": "found property (official)"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "to throw away",
+     "to hold",
+     "to meet"
+    ],
+    "readings": [
+     "すくう",
+     "ひらう",
+     "もらう"
+    ]
+   }
+  },
+  {
+   "kanji": "米",
+   "track": "n3",
+   "on": "ベイ・マイ",
+   "kun": "こめ",
+   "meaning": "rice; America",
+   "parts": "A picture of a rice plant: a cross for the stalk with grains scattered all around it.",
+   "lookalike": "Not 来 (come): 来 has an extra bar on top.",
+   "words": [
+    {
+     "jp": "お{米|こめ}",
+     "reading": "おこめ",
+     "en": "rice (uncooked)"
+    },
+    {
+     "jp": "{新米|しんまい}",
+     "reading": "しんまい",
+     "en": "new rice; a newbie"
+    },
+    {
+     "jp": "{米国|べいこく}",
+     "reading": "べいこく",
+     "en": "the USA"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "wheat",
+     "bean",
+     "field"
+    ],
+    "readings": [
+     "おまめ",
+     "おむぎ",
+     "おいね"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "At the police box",
+   "title_jp": "{交番|こうばん}で",
+   "intro": "What you'll say and hear when something goes missing.",
+   "items": [
+    {
+     "jp": "{財布|さいふ|wallet|4}を{落として|おとして}しまったんですが…",
+     "en": "I've lost my wallet…"
+    },
+    {
+     "jp": "どこで{落とした|おとした}か、{覚えて|おぼえて}いますか。",
+     "en": "Do you remember where you dropped it?",
+     "note": "The officer's first question."
+    },
+    {
+     "jp": "こちらに{名前|なまえ}と{連絡先|れんらくさき|contact details|3}をお{願い|ねがい}します。",
+     "en": "Please write your name and contact details here."
+    }
+   ]
+  },
+  {
+   "title": "Soft ways to disagree",
+   "title_jp": "やわらかく{反対|はんたい}する",
+   "intro": "Japanese rarely says 'you're wrong'. Try these instead.",
+   "items": [
+    {
+     "jp": "{確かに|たしかに|certainly, true|4}。でも…",
+     "en": "True. But…",
+     "note": "Agree first, then add your view."
+    },
+    {
+     "jp": "{人|ひと}によると{思う|おもう}けど。",
+     "en": "I think it depends on the person, though."
+    },
+    {
+     "jp": "そういう{考え方|かんがえかた}もあるね。",
+     "en": "That's one way to see it.",
+     "note": "Polite, often means you don't agree."
+    }
+   ]
+  }
+ ]
+}
