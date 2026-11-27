@@ -274,5 +274,12 @@
   "category": "home-admin",
   "function": "planning",
   "format": "story"
+ },
+ {
+  "id": "2026-12-12",
+  "topic": "Asked to sing at the town contest",
+  "category": "entertainment",
+  "function": "politeness",
+  "format": "dialogue"
  }
 ]

@@ -212,7 +212,7 @@
     "Sōta"
    ],
    "color": "#2f7d32",
-   "status": "{熱|ねつ}で{寝てる|ねてる}…ゲームしたい",
+   "status": "アルちゃんの{歌|うた}、すげー{盛り上がった|もりあがった}！🎤",
    "where": "{長野市|ながのし} · {週末|しゅうまつ}は{畑|はたけ}",
    "status_base": "{熱|ねつ}で{寝てる|ねてる}…ゲームしたい",
    "where_base": "{長野市|ながのし} · {週末|しゅうまつ}は{畑|はたけ}"
@@ -838,6 +838,24 @@
    "status_upd": {
     "mio": {
      "status": "{面接|めんせつ}{終わった|おわった}〜！{結果|けっか}{待ち|まち}🙏"
+    }
+   }
+  },
+  {
+   "date": "2026-12-12",
+   "cast": [
+    "sota",
+    "tanaka"
+   ],
+   "summary": "Saturday 12 Dec: アルちゃん goes with 田中さん and 颯太 to the 公民館's year-end singing contest (年忘れのど自慢大会). The organiser asks him to sing; he modestly accepts and sings a Spanish song, with 颯太 cheering.",
+   "new_facts": [
+    "The 鷹ノ原 公民館 holds a 年忘れのど自慢大会 every December; アルちゃん sang a Spanish song there on Sat 12 Dec.",
+    "田中さん told アルちゃん he doesn't need to sing enka; he never sings himself."
+   ],
+   "status_upd": {
+    "sota": {
+     "status": "アルちゃんの{歌|うた}、すげー{盛り上がった|もりあがった}！🎤",
+     "where": "{長野市|ながのし} · {週末|しゅうまつ}は{畑|はたけ}"
     }
    }
   }

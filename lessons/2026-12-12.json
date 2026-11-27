@@ -1,0 +1,317 @@
+{
+ "topic": "Asked to sing at the town contest",
+ "category": "entertainment",
+ "function": "politeness",
+ "format": "dialogue",
+ "cast": ["sota", "tanaka"],
+ "title_jp": "のど{自慢|じまん}で{一曲|いっきょく}",
+ "context": "Saturday 12 December: アルちゃん goes with {田中|たなか}さん and {颯太|そうた} to the {鷹ノ原|たかのはら} community hall's year-end singing contest, and the organiser asks him to sing. He modestly says yes and sings a Spanish song.",
+ "scene": "Saturday. At the town's year-end singing contest with {田中|たなか}さん and {颯太|そうた}, the organiser suddenly asks you to sing.",
+ "keep": ["p2"],
+ "phrases": [
+  {
+   "jp": "よろしければ、ご{参加|さんか}いただけませんか。",
+   "en": "If you don't mind, would you take part?",
+   "register": "polite",
+   "note": "ご〜いただけませんか: a very polite request. You'll hear it from organisers and staff."
+  },
+  {
+   "jp": "{私|わたし}なんか、まだまだです。",
+   "en": "Oh, someone like me? I've got a long way to go.",
+   "register": "polite",
+   "note": "The modest reply to praise. Also: いえいえ、とんでもないです。"
+  },
+  {
+   "jp": "では、お{言葉|ことば}に{甘えて|あまえて|to accept (kindness), rely on|3}…",
+   "en": "Well then, if you insist… (accepting kindly)",
+   "register": "polite",
+   "note": "Lit. 'leaning on your words'. Use it when you accept an offer after hesitating."
+  },
+  {
+   "jp": "{大きな|おおきな}{拍手|はくしゅ|applause, clapping|3}をお{願い|ねがい}します！",
+   "en": "A big round of applause, please!",
+   "register": "polite",
+   "note": "What every MC says before and after each singer."
+  },
+  {
+   "jp": "カラオケなんて、{久しぶり|ひさしぶり}だな。",
+   "en": "Karaoke! It's been ages.",
+   "register": "casual",
+   "note": "Noun + なんて: shows a feeling about it, here surprise."
+  }
+ ],
+ "dialogue_setting": "The big room of the {鷹ノ原|たかのはら} {公民館|こうみんかん}, folding chairs, a small stage, oil heaters. The organiser comes over between singers.",
+ "dialogue": [
+  {
+   "who": "extra",
+   "voice": "f",
+   "speaker": "係の人",
+   "jp": "スペインの{方|かた}ですよね。よろしければ、{大会|たいかい|contest, tournament|3}で{一曲|いっきょく|one song|3}{歌って|うたって}いただけませんか。",
+   "en": "You're the person from Spain, aren't you? If you don't mind, could you sing one song in the contest?",
+   "register": "polite"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "えっ、{私|わたし}なんかでいいんですか。{歌|うた}、{下手|へた|bad at, poor at|4}ですよ…",
+   "en": "What, someone like me is OK? I'm bad at singing…",
+   "register": "polite"
+  },
+  {
+   "who": "sota",
+   "speaker": "颯太",
+   "jp": "アルちゃんが{歌う|うたう}なんて、すげー！{絶対|ぜったい}{盛り上がる|もりあがる|to liven up, get exciting|4}よ！",
+   "en": "You're going to sing? So cool! Everyone's going to go wild!",
+   "register": "casual"
+  },
+  {
+   "who": "tanaka",
+   "speaker": "田中さん",
+   "jp": "{演歌|えんか|enka (old-style ballads)|2}なんか{歌わんで|うたわんで|(dialect) = 歌わなくて|2}いい。{好きな|すきな}{歌|うた}でいいずら。",
+   "en": "No need to sing enka or anything. Any song you like is fine.",
+   "register": "dialect",
+   "note": "Standard: {演歌|えんか}なんか{歌|うた}わなくていい。{好|す}きな{歌|うた}でいいでしょう。"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "では、お{言葉|ことば}に{甘えて|あまえて|to accept (kindness), rely on|3}…スペインの{歌|うた}を{歌わせて|うたわせて}いただきます。",
+   "en": "Well then, if you insist… I'll sing a Spanish song.",
+   "register": "polite"
+  },
+  {
+   "who": "extra",
+   "voice": "f",
+   "speaker": "係の人",
+   "jp": "ありがとうございます！では、{三番目|さんばんめ}にお{呼び|よび|to call (someone)|4}しますね。",
+   "en": "Thank you so much! Then we'll call you up third.",
+   "register": "polite"
+  }
+ ],
+ "listening": {
+  "type": "announcement",
+  "intro": "The MC opens the contest over the hall's microphone.",
+  "who": "extra",
+  "title": "のど{自慢|じまん}{大会|たいかい}",
+  "place": "{公民館|こうみんかん}",
+  "lines": [
+   {
+    "who": "extra",
+    "voice": "f",
+    "jp": "ただいまより、{年忘れ|としわすれ|year-end (forget-the-year)|2}のど{自慢|じまん|amateur singing contest|2}{大会|たいかい|contest|3}を{始めます|はじめます}。",
+    "en": "We will now begin the year-end amateur singing contest."
+   },
+   {
+    "who": "extra",
+    "voice": "f",
+    "jp": "{結果|けっか}は{最後|さいご}に{発表|はっぴょう|announcement|3}します。{出場者|しゅつじょうしゃ|contestant|2}の{方|かた}は、{舞台|ぶたい|stage|3}の{横|よこ}でお{待ち|まち}ください。",
+    "en": "The results will be announced at the end. Contestants, please wait beside the stage."
+   }
+  ],
+  "question": "{結果|けっか}はいつ{発表|はっぴょう}されますか。",
+  "options": [
+   "さいごに",
+   "さいしょに",
+   "三番目の人のあとで",
+   "あしたの朝"
+  ],
+  "explain": "{結果|けっか}は{最後|さいご}に{発表|はっぴょう}します: the results come at the very end."
+ },
+ "grammar": {
+  "id": "n3-nante",
+  "pattern": "〜なんて / 〜なんか",
+  "level": "N3",
+  "meaning": "things like (dismissive or surprised)",
+  "form": "noun: + なんか / なんて ({私|わたし}なんか, {演歌|えんか}なんか, カラオケなんて) · plain form: + なんて ({歌|うた}うなんて, {寒|さむ}いなんて)",
+  "explanation": "After a noun, なんか/なんて mean 'the likes of', making it sound small: modest about yourself ({私|わたし}なんか), dismissive about things. After a plain-form sentence, なんて shows surprise: 'to think that…!'. Careful: {君|きみ}なんか about someone else sounds rude.",
+  "src": ["d2", "d1", "d3", "p4", "p1"],
+  "mark": ["歌うなんて", "私なんか", "演歌なんか", "カラオケなんて", "積もるなんて", "宿題なんか"],
+  "examples": [
+   {
+    "jp": "{雪|ゆき}がこんなに{積もる|つもる}なんて、{知らなかった|しらなかった}。",
+    "en": "I had no idea snow could pile up this much!"
+   },
+   {
+    "jp": "{宿題|しゅくだい}なんか、{後|あと}でいいよ。",
+    "en": "Homework can wait till later."
+   }
+  ],
+  "quiz": {
+   "question": "{健太|けんた}が{早起き|はやおき|getting up early|3}する＿＿、{信じられない|しんじられない|unbelievable|3}！",
+   "en": "{健太|けんた} getting up early? I can't believe it!",
+   "options": ["なんて", "のに", "ので", "ばかり"],
+   "explain": "Plain verb + なんて: surprise at the whole fact."
+  },
+  "quiz_more": [
+   {
+    "question": "{僕|ぼく}＿＿、まだまだ{下手|へた|bad at|4}です。",
+    "en": "Someone like me is still bad at it.",
+    "options": ["なんか", "なのか", "なんで", "ながら"],
+    "explain": "Noun + なんか: modest about yourself."
+   },
+   {
+    "question": "{雪|ゆき}の{日|ひ}にカラオケに{行く|いく}＿＿、{思わなかった|おもわなかった}。",
+    "en": "I never thought we'd go to karaoke on a snowy day.",
+    "options": ["なんて", "なんか", "ほど", "なら"],
+    "explain": "After a verb use なんて, not なんか: なんて + {思|おも}わなかった = 'never imagined'."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "出場者",
+  "reading": "しゅつじょうしゃ",
+  "romaji": "shutsujōsha",
+  "meaning": "contestant, participant",
+  "where": "The heading on the sign-up sheet taped by the stage.",
+  "breakdown": "出 go out + 場 place, stage + 者 person → 'person who goes out on stage'.",
+  "related": "{出場|しゅつじょう}する = to take part (in a contest, a match)."
+ },
+ "tip": {
+  "mark": "歌",
+  "title": "Praise and the modest reply",
+  "body": "After you sing, people will say お{上手|じょうず}ですね! even if you weren't. Don't say thank you and agree: say いえいえ、とんでもないです or {私|わたし}なんか… with a smile. Clapping along in rhythm is {手拍子|てびょうし}, and it's always welcome."
+ },
+ "challenge": {
+  "type": "write",
+  "prompt": "After the contest, the organiser says: 「ぜひ{来年|らいねん}も{出て|でて}ください！」 Thank her politely and say yes modestly, with なんか.",
+  "model_answer": "ありがとうございます。{私|わたし}なんかでよければ、{喜んで|よろこんで|gladly|3}。",
+  "explanation": "{私|わたし}なんか is the modest 'someone like me', and でよければ means 'if it's all right'. {喜|よろこ}んで ('gladly') is the polite yes. All three together sound humble but happy.",
+  "hint": "{私|わたし}なんかでよければ…"
+ },
+ "vocab": [
+  {
+   "jp": "{一曲|いっきょく}",
+   "reading": "いっきょく",
+   "en": "one song, a song",
+   "level": "N3",
+   "src": "d0",
+   "surface": "一曲",
+   "note": "Counter {曲|きょく} for songs: {二曲|にきょく}, {三曲|さんきょく}."
+  },
+  {
+   "jp": "{大会|たいかい}",
+   "reading": "たいかい",
+   "en": "contest, tournament",
+   "level": "N3",
+   "src": "d0",
+   "surface": "大会",
+   "note": "大 big + 会 meeting. Sports, speech or singing contests."
+  },
+  {
+   "jp": "{下手|へた}",
+   "reading": "へた",
+   "en": "bad at, poor at",
+   "level": "N4",
+   "src": "d1",
+   "surface": "下手",
+   "note": "〜が{下手|へた}. Opposite: {上手|じょうず}. Saying it about yourself is normal."
+  },
+  {
+   "jp": "{盛|も}り{上|あ}がる",
+   "reading": "もりあがる",
+   "en": "to liven up, get exciting",
+   "level": "N3",
+   "src": "d2",
+   "surface": "盛り上がる",
+   "note": "Parties, matches, crowds. {盛|も}り{上|あ}がったね! = That was fun!"
+  },
+  {
+   "jp": "{演歌|えんか}",
+   "reading": "えんか",
+   "en": "enka (old-style Japanese ballads)",
+   "level": "N2",
+   "src": "d3",
+   "surface": "演歌",
+   "note": "Sad songs of the sea, sake and lost love; loved by older people."
+  },
+  {
+   "jp": "{甘|あま}える",
+   "reading": "あまえる",
+   "en": "to accept kindness; to act spoiled",
+   "level": "N3",
+   "src": "d4",
+   "surface": "甘えて",
+   "note": "From {甘|あま}い sweet. お{言葉|ことば}に{甘|あま}えて = taking you up on it."
+  },
+  {
+   "jp": "{呼|よ}ぶ",
+   "reading": "よぶ",
+   "en": "to call (someone)",
+   "level": "N4",
+   "src": "d5",
+   "surface": "呼び",
+   "note": "Humble お{呼|よ}びします = 'we'll call you'. Also 'to invite'."
+  },
+  {
+   "jp": "{拍手|はくしゅ}",
+   "reading": "はくしゅ",
+   "en": "applause, clapping",
+   "level": "N3",
+   "src": "p3",
+   "surface": "拍手",
+   "note": "{拍手|はくしゅ}する = to clap. 手 hand is inside."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "甘",
+   "track": "lesson",
+   "on": "カン",
+   "kun": "あま(い)・あま(える)",
+   "meaning": "sweet; to rely on, be indulged",
+   "parts": "A mouth (口 opened wide) with one line inside → something sweet held on the tongue to savour.",
+   "lookalike": "Not 廿 (twenty): 甘 has a closed bottom line.",
+   "words": [
+    {"jp": "{甘|あま}える", "reading": "あまえる", "en": "to accept kindness; act spoiled"},
+    {"jp": "{甘|あま}い", "reading": "あまい", "en": "sweet"},
+    {"jp": "{甘口|あまくち}", "reading": "あまくち", "en": "mild, sweet (curry, sake)"}
+   ],
+   "decoys": {
+    "meanings": ["bitter", "mouth", "delicious"],
+    "readings": ["かんえる", "うまえる", "あまれる"]
+   }
+  },
+  {
+   "kanji": "表",
+   "track": "n3",
+   "on": "ヒョウ",
+   "kun": "おもて・あらわ(す)",
+   "meaning": "surface, front; to show; table, chart",
+   "parts": "An old form of 衣 clothing with 毛 fur on top → the fur side of a coat, worn outward: surface, show.",
+   "lookalike": "Not 衣 (clothing) or 麦 (wheat): 表 has three lines across the top.",
+   "words": [
+    {"jp": "{発表|はっぴょう}", "reading": "はっぴょう", "en": "announcement; presentation"},
+    {"jp": "{表|おもて}", "reading": "おもて", "en": "front, surface"},
+    {"jp": "{代表|だいひょう}", "reading": "だいひょう", "en": "representative"}
+   ],
+   "decoys": {
+    "meanings": ["clothing", "back, behind", "to hide"],
+    "readings": ["はつひょう", "はっぽう", "はっひょう"]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Saying yes and no politely",
+   "title_jp": "{丁寧|ていねい}に{受ける|うける}・{断る|ことわる}",
+   "intro": "When someone offers or asks something.",
+   "items": [
+    {"jp": "せっかくですが、{今回|こんかい}は{遠慮|えんりょ|holding back|3}しておきます。", "en": "It's kind of you, but I'll pass this time.", "note": "The soft no."},
+    {"jp": "いえいえ、とんでもないです。", "en": "Oh no, not at all.", "note": "The reply to praise or thanks."},
+    {"jp": "{喜んで|よろこんで|gladly|3}！", "en": "Gladly!", "note": "A warm, polite yes."}
+   ]
+  },
+  {
+   "title": "Karaoke words",
+   "title_jp": "カラオケの{言葉|ことば}",
+   "intro": "For your next karaoke night.",
+   "items": [
+    {"jp": "{十八番|おはこ|your signature song|2}", "en": "your go-to song", "note": "Written {十八番|じゅうはちばん}, read おはこ."},
+    {"jp": "{手拍子|てびょうし|clapping in rhythm|2}", "en": "clapping along"},
+    {"jp": "デュエットしよう！", "en": "Let's sing a duet!"}
+   ]
+  }
+ ]
+}
