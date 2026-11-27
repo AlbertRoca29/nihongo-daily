@@ -1,0 +1,418 @@
+{
+ "topic": "Why Nagano eats soba",
+ "category": "history-samurai",
+ "function": "reasons",
+ "format": "dialogue",
+ "cast": [
+  "hana"
+ ],
+ "title_jp": "どうして{信州|しんしゅう}はそばなの？",
+ "context": "Wednesday 9 December: ハナおばあちゃん comes to the {田中|たなか} kitchen with buckwheat flour to make soba with {恵子|けいこ}さん. When アルちゃん asks why Nagano is famous for soba, she explains how rice was paid as tax in the Edo period.",
+ "scene": "Wednesday evening. ハナおばあちゃん is making soba in the {田中|たなか} kitchen. You ask why Nagano is so famous for it.",
+ "keep": [
+  "p4"
+ ],
+ "phrases": [
+  {
+   "jp": "{寒い|さむい}から、お{米|こめ}があまり{育たなかった|そだたなかった|to grow (up)|4}んです。",
+   "en": "Because it's cold, rice didn't grow well.",
+   "register": "polite",
+   "note": "〜から + 〜んです: giving a reason and explaining."
+  },
+  {
+   "jp": "{理由|りゆう|reason|4}はいくつかあります。",
+   "en": "There are a few reasons.",
+   "register": "polite",
+   "note": "Start of any explanation: then 一つ{目|め}は… (the first is…)."
+  },
+  {
+   "jp": "{当時|とうじ|those days, back then|3}の{政治|せいじ|politics, government|3}は{厳しかった|きびしかった}そうです。",
+   "en": "They say the government back then was harsh.",
+   "register": "polite",
+   "note": "{当時|とうじ}: talking about a past period, as in a museum."
+  },
+  {
+   "jp": "そばを{食べれば|たべれば}、{長生き|ながいき|long life|3}できるって。",
+   "en": "They say if you eat soba, you live long.",
+   "register": "casual",
+   "note": "〜って at the end = I heard / people say (casual)."
+  },
+  {
+   "jp": "なるほど、だからか！",
+   "en": "Oh, so that's why!",
+   "register": "casual",
+   "note": "When a reason finally clicks. Polite: なるほど、だからですね。"
+  }
+ ],
+ "dialogue_setting": "The {田中|たなか} kitchen on a snowy Wednesday evening. ハナおばあちゃん rolls the dough; {恵子|けいこ}さん boils the water.",
+ "dialogue": [
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "ハナおばあちゃん、どうして{長野|ながの}はそばが{有名|ゆうめい|famous|4}なんですか。",
+   "en": "ハナおばあちゃん, why is Nagano famous for soba?",
+   "register": "polite"
+  },
+  {
+   "who": "hana",
+   "speaker": "ハナおばあちゃん",
+   "jp": "{山|やま}が{多くて|おおくて}{寒い|さむい}からじゃ。{米|こめ}が{よう||(old/regional) = よく, well|2}{育たん|そだたん|(old/regional) = 育たない, not grow|2}{土地|とち|land|3}でも、そばなら{育つ|そだつ|to grow (up)|4}んよ。",
+   "en": "Because it's mountainous and cold. Even on land where rice won't grow well, soba grows.",
+   "register": "dialect",
+   "note": "じゃ = だ, よう{育|そだ}たん = よく{育|そだ}たない (old, regional)."
+  },
+  {
+   "who": "hana",
+   "speaker": "ハナおばあちゃん",
+   "jp": "それに{のう||(old) sentence ending = ね|1}、そばは{種|たね|seed|3}を{まけば||to sow (seeds)|3}、七十五{日|にち}で{食べられる|たべられる}んじゃ。",
+   "en": "And you know, if you sow soba seeds, you can eat it in 75 days.",
+   "register": "dialect",
+   "note": "のう = ね, じゃ = だ (old). まく = to sow."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "え、じゃあ{昔|むかし}は、お{米|こめ}はあまり{食べなかった|たべなかった}んですか。",
+   "en": "Oh, so back then people didn't eat much rice?",
+   "register": "polite"
+  },
+  {
+   "who": "hana",
+   "speaker": "ハナおばあちゃん",
+   "jp": "{米|こめ}は{年貢|ねんぐ|rice tax (Edo period)|2}として{殿様|とのさま}に{納めた|おさめた|to pay (tax)|2}。{納めなければ|おさめなければ|to pay (tax)|2}、{罰|ばつ}じゃった。",
+   "en": "Rice was paid to the lord as tax. If you didn't pay, you were punished.",
+   "register": "dialect",
+   "note": "じゃった = だった (old). {年貢|ねんぐ} = rice tax farmers paid in the Edo period."
+  },
+  {
+   "who": "keiko",
+   "speaker": "恵子さん",
+   "jp": "だから{隼人|はやと}さまも、そばが{好き|すき}だったのかしらね。",
+   "en": "Maybe that's why {隼人|はやと}さま loved soba too.",
+   "register": "casual",
+   "note": "〜かしら: soft 'I wonder', used mostly by older women."
+  }
+ ],
+ "listening": {
+  "type": "dictation",
+  "intro": "{恵子|けいこ}さん makes a plan for New Year's Eve. Type what she says.",
+  "who": "keiko",
+  "lines": [
+   {
+    "who": "keiko",
+    "jp": "{大晦日|おおみそか|New Year's Eve|3}も、ハナさんのそばを{食べよう|たべよう}ね。",
+    "en": "Let's eat ハナさん's soba on New Year's Eve too."
+   }
+  ]
+ },
+ "grammar": {
+  "id": "n4-ba",
+  "pattern": "〜ば",
+  "level": "N4",
+  "meaning": "if (condition)",
+  "form": "う-verbs: -u → -eば (まく → まけば, {飲|の}む → {飲|の}めば) · る-verbs: -る → れば ({食|た}べる → {食|た}べれば) · する → すれば · {来|く}る → {来|く}れば · い-adj: -い → ければ ({安|やす}い → {安|やす}ければ, いい → よければ) · negative: ない → なければ ({納|おさ}めなければ)",
+  "explanation": "〜ば states a condition: whenever A is true, B follows. It sounds general and logical, so it's perfect for rules, facts and advice. For a one-off event in the past ('when I got home…'), use たら instead.",
+  "src": [
+   "d2",
+   "d4",
+   "p3"
+  ],
+  "mark": [
+   "まけば",
+   "納めなければ",
+   "食べれば",
+   "安ければ",
+   "分からなければ"
+  ],
+  "examples": [
+   {
+    "jp": "{安ければ|やすければ}、{買います|かいます}。",
+    "en": "If it's cheap, I'll buy it."
+   },
+   {
+    "jp": "{分からなければ|わからなければ}、いつでも{聞いて|きいて}ね。",
+    "en": "If you don't understand, ask any time."
+   }
+  ],
+  "quiz": {
+   "question": "{毎日|まいにち}{練習|れんしゅう}＿＿、{上手|じょうず}になりますよ。",
+   "en": "If you practise every day, you'll get good.",
+   "options": [
+    "すれば",
+    "するば",
+    "しれば",
+    "されば"
+   ],
+   "explain": "する is irregular: する → すれば."
+  },
+  "quiz_more": [
+   {
+    "question": "{天気|てんき}が＿＿、{山|やま}に{行こう|いこう}。",
+    "en": "If the weather's good, let's go to the mountains.",
+    "options": [
+     "よければ",
+     "いければ",
+     "よいば",
+     "いいれば"
+    ],
+    "explain": "いい conjugates from よい: よければ."
+   },
+   {
+    "question": "{年貢|ねんぐ|rice tax (Edo period)|2}を{納め|おさめ}＿＿、{罰|ばつ}を{受けた|うけた}。",
+    "en": "If you didn't pay the rice tax, you were punished.",
+    "options": [
+     "なければ",
+     "ないば",
+     "なかれば",
+     "ないれば"
+    ],
+    "explain": "ない works like an い-adjective: ない → なければ."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "十割そば",
+  "reading": "じゅうわりそば",
+  "romaji": "jūwari soba",
+  "meaning": "100% buckwheat soba",
+  "where": "Handwritten on the paper bag of buckwheat flour ハナおばあちゃん brought.",
+  "breakdown": "{十割|じゅうわり}: 十 ten + 割 tenths → 'ten tenths' of buckwheat: no wheat flour at all.",
+  "related": "{二八|にはち}そば = 8 parts buckwheat, 2 parts wheat: the most common kind."
+ },
+ "tip": {
+  "mark": "年",
+  "title": "Soba on New Year's Eve",
+  "body": "On {大晦日|おおみそか} most families eat {年越|としこ}しそば. Long noodles wish for a long life, and soba breaks easily, so it 'cuts off' the year's bad luck. Don't leave any in the bowl."
+ },
+ "challenge": {
+  "type": "fix",
+  "prompt": "{恵子|けいこ}さん: 「アルちゃんも、そば{打ち|うち|making (noodles) by hand|2}やってみる？」 You answer that if you have time, you'd love to try. One part is wrong.",
+  "parts": [
+   {
+    "jp": "{時間|じかん}が"
+   },
+   {
+    "jp": "あるば、",
+    "wrong": true,
+    "why": "ある is an う-verb: ある → あれば."
+   },
+   {
+    "jp": "ぜひ"
+   },
+   {
+    "jp": "やってみたいです！"
+   }
+  ],
+  "model_answer": "{時間|じかん}があれば、ぜひやってみたいです！",
+  "explanation": "ある changes its last sound -u to -e and adds ば: あれば, 'if I have'. ぜひ adds real enthusiasm, and やってみたい means 'I want to try'. です keeps it polite for {恵子|けいこ}さん.",
+  "hint": "う-verbs: -u → -eば"
+ },
+ "vocab": [
+  {
+   "jp": "{有名|ゆうめい}",
+   "reading": "ゆうめい",
+   "en": "famous",
+   "level": "N4",
+   "src": "d0",
+   "surface": "有名",
+   "note": "な-adjective. 〜で{有名|ゆうめい} = famous for…"
+  },
+  {
+   "jp": "{土地|とち}",
+   "reading": "とち",
+   "en": "land, ground; region",
+   "level": "N3",
+   "src": "d1",
+   "surface": "土地",
+   "note": "{土|ど} earth + {地|ち} ground. Also 'a region': {土地|とち}の{料理|りょうり} = local food."
+  },
+  {
+   "jp": "{育|そだ}つ",
+   "reading": "そだつ",
+   "en": "to grow (up)",
+   "level": "N3",
+   "src": "d1",
+   "surface": "育つ",
+   "note": "Intransitive: plants and children grow. To raise = {育|そだ}てる."
+  },
+  {
+   "jp": "{種|たね}",
+   "reading": "たね",
+   "en": "seed",
+   "level": "N3",
+   "src": "d2",
+   "surface": "種",
+   "note": "{種|たね}をまく = sow seeds. Also 'cause': {心配|しんぱい}の{種|たね}."
+  },
+  {
+   "jp": "{納|おさ}める",
+   "reading": "おさめる",
+   "en": "to pay (tax, a fee)",
+   "level": "N2",
+   "src": "d4",
+   "surface": "納めた",
+   "note": "Formal: {税金|ぜいきん}を{納|おさ}める = pay taxes."
+  },
+  {
+   "jp": "{理由|りゆう}",
+   "reading": "りゆう",
+   "en": "reason",
+   "level": "N4",
+   "src": "p1",
+   "surface": "理由",
+   "note": "{理由|りゆう}は〜からです = the reason is…"
+  },
+  {
+   "jp": "{当時|とうじ}",
+   "reading": "とうじ",
+   "en": "those days, back then",
+   "level": "N3",
+   "src": "p2",
+   "surface": "当時",
+   "note": "For a period already named. Casual: あの{頃|ころ}."
+  },
+  {
+   "jp": "{政治|せいじ}",
+   "reading": "せいじ",
+   "en": "politics, government",
+   "level": "N3",
+   "src": "p2",
+   "surface": "政治",
+   "note": "{政治家|せいじか} = politician."
+  },
+  {
+   "jp": "{長生|ながい}き",
+   "reading": "ながいき",
+   "en": "long life",
+   "level": "N3",
+   "src": "p3",
+   "surface": "長生き",
+   "note": "{長生|ながい}きする = live long. {長|なが}い + {生|い}きる."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "育",
+   "track": "lesson",
+   "on": "イク",
+   "kun": "そだ(つ)・そだ(てる)",
+   "meaning": "grow up, raise",
+   "parts": "On top, an upside-down newborn child; below, 月 the 'flesh' radical (body) → a baby's body getting bigger: grow, raise.",
+   "words": [
+    {
+     "jp": "{育|そだ}つ",
+     "reading": "そだつ",
+     "en": "to grow (up)"
+    },
+    {
+     "jp": "{教育|きょういく}",
+     "reading": "きょういく",
+     "en": "education"
+    },
+    {
+     "jp": "{体育|たいいく}",
+     "reading": "たいいく",
+     "en": "P.E. (school sport)"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "to be born",
+     "to teach",
+     "to eat"
+    ],
+    "readings": [
+     "いくつ",
+     "はぐつ",
+     "うまつ"
+    ]
+   }
+  },
+  {
+   "kanji": "政",
+   "track": "n3",
+   "on": "セイ・ショウ",
+   "kun": "まつりごと",
+   "meaning": "politics, government",
+   "parts": "正 'correct' + 攵 a hand holding a stick → making people do what's right: govern.",
+   "lookalike": "Not 故 (old; reason): 故 has 古 on the left, 政 has 正.",
+   "words": [
+    {
+     "jp": "{政治|せいじ}",
+     "reading": "せいじ",
+     "en": "politics, government"
+    },
+    {
+     "jp": "{政府|せいふ}",
+     "reading": "せいふ",
+     "en": "the government"
+    },
+    {
+     "jp": "{行政|ぎょうせい}",
+     "reading": "ぎょうせい",
+     "en": "administration"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "correct",
+     "reason",
+     "law"
+    ],
+    "readings": [
+     "しょうじ",
+     "せいち",
+     "まさじ"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Edo-period words",
+   "title_jp": "{江戸時代|えどじだい}のことば",
+   "intro": "You'll see these on museum panels at the castle ruins.",
+   "items": [
+    {
+     "jp": "{藩|はん|feudal domain|2}",
+     "en": "feudal domain",
+     "note": "Land ruled by a {大名|だいみょう}, like the {鷹ノ原藩|たかのはらはん}."
+    },
+    {
+     "jp": "{石高|こくだか|rice yield (domain's wealth)|1}",
+     "en": "a domain's rice yield",
+     "note": "Wealth was counted in rice, not money."
+    },
+    {
+     "jp": "{飢饉|ききん|famine|2}",
+     "en": "famine",
+     "note": "The {天明|てんめい} famine of the 1780s hit Shinshu hard."
+    }
+   ]
+  },
+  {
+   "title": "Ordering soba",
+   "title_jp": "そばの{注文|ちゅうもん}",
+   "intro": "Three words for any soba shop.",
+   "items": [
+    {
+     "jp": "ざるそば",
+     "en": "cold soba on a bamboo tray",
+     "note": "Dip it in the cold sauce."
+    },
+    {
+     "jp": "かけそば",
+     "en": "hot soba in broth",
+     "note": "The warm choice in winter."
+    },
+    {
+     "jp": "そば{湯|ゆ}",
+     "en": "the hot soba cooking water",
+     "note": "Poured into your leftover sauce at the end and drunk."
+    }
+   ]
+  }
+ ]
+}

@@ -253,5 +253,12 @@
   "category": "traditions",
   "function": "advice",
   "format": "line"
+ },
+ {
+  "id": "2026-12-09",
+  "topic": "Why Nagano eats soba",
+  "category": "history-samurai",
+  "function": "reasons",
+  "format": "dialogue"
  }
 ]
