@@ -183,7 +183,7 @@
    ],
    "aliases": [],
    "color": "#2c4f86",
-   "status": "{雪|ゆき}の{日|ひ}の{一枚|いちまい}📷",
+   "status": "{現像|げんぞう}、{待った|まった}{甲斐|かい}があった📷",
    "where": "{長野市|ながのし}",
    "status_base": "{映画館|えいがかん}、なくならないで…🎞",
    "where_base": "{長野市|ながのし}"
@@ -856,6 +856,24 @@
     "sota": {
      "status": "アルちゃんの{歌|うた}、すげー{盛り上がった|もりあがった}！🎤",
      "where": "{長野市|ながのし} · {週末|しゅうまつ}は{畑|はたけ}"
+    }
+   }
+  },
+  {
+   "date": "2026-12-13",
+   "cast": [
+    "ren"
+   ],
+   "summary": "Sunday 13 Dec: レン posts his developed film photos from the snowy day they met. His sister 葵 comments asking who he went with and he answers only '秘密'; in a voice message he tells アルちゃん it doesn't mean anything bad, and says he plans to tell 葵 properly.",
+   "new_facts": [
+    "レン posts his film photos on Instagram; アルちゃん follows him and commented on 13 Dec.",
+    "レン's film from 6 Dec took a week to develop.",
+    "レン plans to tell 葵 about アルちゃん properly soon; アルちゃん told him there's no hurry and suggested a film again."
+   ],
+   "status_upd": {
+    "ren": {
+     "status": "{現像|げんぞう}、{待った|まった}{甲斐|かい}があった📷",
+     "where": "{長野市|ながのし}"
     }
    }
   }

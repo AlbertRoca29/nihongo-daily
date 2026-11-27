@@ -281,5 +281,12 @@
   "category": "entertainment",
   "function": "politeness",
   "format": "dialogue"
+ },
+ {
+  "id": "2026-12-13",
+  "topic": "レン's film photos and a secret",
+  "category": "tech-internet",
+  "function": "reacting",
+  "format": "text"
  }
 ]

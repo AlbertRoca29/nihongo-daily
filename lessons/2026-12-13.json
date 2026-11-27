@@ -1,0 +1,315 @@
+{
+ "topic": "レン's film photos and a secret",
+ "category": "tech-internet",
+ "function": "reacting",
+ "format": "text",
+ "cast": ["ren"],
+ "reader": "ren",
+ "title_jp": "{秘密|ひみつ}の{一枚|いちまい}",
+ "text_title": "レンのインスタ{投稿|とうこう|post (social media)|3}",
+ "context": "Sunday 13 December: レン posts the developed film photos from the snowy day he and アルちゃん first met. His sister {葵|あおい} asks who he went with; he answers '{秘密|ひみつ}', then tells アルちゃん it doesn't mean anything bad.",
+ "scene": "Sunday evening. レン posts last week's film photos online. His sister comments. You read the comments, and what he answers her.",
+ "keep": ["p1"],
+ "phrases": [
+  {
+   "jp": "え、{何|なに}これ、{素敵|すてき|lovely, wonderful|4}！",
+   "en": "Wait, what is this? It's lovely!",
+   "register": "casual",
+   "note": "A warm, slightly grown-up reaction. Younger people also say エモい."
+  },
+  {
+   "jp": "{写真|しゃしん}とか{動画|どうが|video|4}とか、よく{投稿する|とうこうする|to post (online)|3}の？",
+   "en": "Do you post photos and videos and stuff a lot?",
+   "register": "casual",
+   "note": "AとかBとか: examples, not a full list."
+  },
+  {
+   "jp": "それ、{分かる|わかる}〜！",
+   "en": "Oh, I totally get that!",
+   "register": "casual",
+   "note": "The everyday 'same here'. Stretch the vowel when you mean it."
+  },
+  {
+   "jp": "いいね、{押しといた|おしといた|to press (pressed in advance)|3}よ。",
+   "en": "I gave it a like.",
+   "register": "casual",
+   "note": "{押|お}しといた = {押|お}しておいた (casual contraction)."
+  },
+  {
+   "jp": "マジで？{全然|ぜんぜん}{知らなかった|しらなかった}！",
+   "en": "Seriously? I had no idea!",
+   "register": "slang",
+   "note": "マジで = {本当|ほんとう}に. Fine with friends, never at work."
+  }
+ ],
+ "dialogue_setting": "Sunday evening under the kotatsu. You scroll レン's new post on your phone, with its comments.",
+ "dialogue": [
+  {
+   "who": "ren",
+   "speaker": "Post",
+   "jp": "{先週|せんしゅう}の{日曜日|にちようび}。{雪|ゆき}の{喫茶店|きっさてん|old-style coffee shop|3}とか、{古い|ふるい}{映画館|えいがかん|cinema|4}とか。",
+   "en": "Last Sunday. The coffee shop in the snow, the old cinema, things like that.",
+   "register": "casual"
+  },
+  {
+   "who": "ren",
+   "speaker": "Post",
+   "jp": "フィルムだから、{現像|げんぞう|developing (film)|2}に{一週間|いっしゅうかん}かかった。{待つ|まつ}{時間|じかん}も{不思議|ふしぎ|strange, mysterious|4}と{楽しい|たのしい}。",
+   "en": "It's film, so developing took a week. Strangely, even the waiting is fun.",
+   "register": "casual"
+  },
+  {
+   "who": "extra",
+   "voice": "f",
+   "age": 22,
+   "speaker": "Sister's comment",
+   "jp": "お{兄ちゃん|にいちゃん}、{珍しく|めずらしく|unusually, for once|3}{楽しそう|たのしそう}ｗ {誰|だれ}と{行った|いった}の〜？",
+   "en": "Big brother, you look happy for once lol. Who did you go with~?",
+   "register": "casual"
+  },
+  {
+   "who": "ren",
+   "speaker": "レン's reply",
+   "jp": "{秘密|ひみつ|secret|4}。",
+   "en": "That's a secret.",
+   "register": "casual"
+  },
+  {
+   "who": "extra",
+   "voice": "m",
+   "age": 26,
+   "speaker": "Friend's comment",
+   "jp": "{色|いろ}がエモい！{加工|かこう|editing (photos)|3}とかしてないの？",
+   "en": "The colours are so moody! Didn't you edit them or something?",
+   "register": "slang",
+   "note": "エモい (slang) = moving, nostalgic. From English 'emotional'."
+  },
+  {
+   "who": "ren",
+   "speaker": "レン's reply",
+   "jp": "してないよ。フィルムの{色|いろ}、{そのまま||as it is, unchanged|4}。",
+   "en": "Nope. The film's colours, just as they are.",
+   "register": "casual"
+  },
+  {
+   "who": "you",
+   "speaker": "Your comment",
+   "jp": "{素敵|すてき|lovely, wonderful|4}！{雪|ゆき}の{日|ひ}の{写真|しゃしん}、いいね。",
+   "en": "Lovely! The snowy-day photos are great.",
+   "register": "casual"
+  }
+ ],
+ "listening": {
+  "type": "dictation",
+  "intro": "A minute later, レン sends you a voice message. Type what he says.",
+  "who": "ren",
+  "lines": [
+   {
+    "who": "ren",
+    "jp": "{秘密|ひみつ|secret|4}って{書いた|かいた}けど、{変な|へんな}{意味|いみ}じゃないよ。",
+    "en": "I wrote 'secret', but I don't mean it in a bad way."
+   }
+  ]
+ },
+ "grammar": {
+  "id": "n3-toka",
+  "pattern": "〜とか",
+  "level": "N3",
+  "meaning": "things like, or something",
+  "form": "noun: + とか ({映画|えいが}とか, {加工|かこう}とか) · list: A とか B とか ({喫茶店|きっさてん}とか{映画館|えいがかん}とか)",
+  "explanation": "とか gives examples without a full list, like や, but it's casual. It can also follow just one thing, meaning '…or something', which softens questions and invitations. や can't do that. In emails and with superiors, use や or など.",
+  "src": ["d0", "d4", "p1"],
+  "mark": ["喫茶店とか", "映画館とか", "加工とか", "写真とか", "動画とか", "掃除とか", "洗濯とか", "お茶とか"],
+  "examples": [
+   {
+    "jp": "{週末|しゅうまつ}は{掃除|そうじ}とか{洗濯|せんたく}とかで{忙しい|いそがしい}。",
+    "en": "At weekends I'm busy with cleaning, laundry and stuff."
+   },
+   {
+    "jp": "{今度|こんど}、お{茶|ちゃ}とかどう？",
+    "en": "How about tea or something next time?"
+   }
+  ],
+  "quiz": {
+   "question": "{休み|やすみ}の{日|ひ}は、{映画|えいが}＿＿{見て|みて}ゆっくりしてる。",
+   "en": "On my days off I take it easy, watching films and stuff.",
+   "options": ["とか", "から", "まで", "より"],
+   "explain": "Noun + とか: one example of what you do, 'films or something'."
+  },
+  "quiz_more": [
+   {
+    "question": "ケーキとかクッキー＿＿、{甘い|あまい}ものが{好き|すき}。",
+    "en": "I like sweet things like cake and cookies.",
+    "options": ["とか", "でも", "ほど", "しか"],
+    "explain": "AとかBとか: the second とか closes the list of examples."
+   },
+   {
+    "question": "（{部長|ぶちょう}へのメール）{会議|かいぎ}では、{予算|よさん|budget|3}＿＿{日程|にってい|schedule, dates|3}について{話しました|はなしました}。",
+    "en": "(Email to the manager) At the meeting we discussed the budget, the schedule and so on.",
+    "options": ["や", "とか", "なんか", "って"],
+    "explain": "In a work email use や: とか is too casual."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "保存",
+  "reading": "ほぞん",
+  "romaji": "hozon",
+  "meaning": "save",
+  "where": "The bookmark button under レン's post.",
+  "breakdown": "{保存|ほぞん}: 保 keep, protect + 存 exist → 'keep it existing': save.",
+  "related": "{保存|ほぞん}しました = Saved. Also on food: {冷蔵保存|れいぞうほぞん} = keep refrigerated."
+ },
+ "tip": {
+  "mark": "匂",
+  "title": "Hinting without saying",
+  "body": "Many Japanese people only press いいね in public and keep real reactions for private messages. {匂わせ|におわせ} is slang for a post that hints at a secret partner without saying it. A one-word {秘密|ひみつ} under a photo for two is a classic {匂わせ|におわせ}."
+ },
+ "challenge": {
+  "type": "fix",
+  "prompt": "レン on LINE: 「{葵|あおい}には{今度|こんど}、ちゃんと{話す|はなす}つもり。」 You reply that there's no hurry at all, and let's go to a film or something again. One part is wrong.",
+  "parts": [
+   {"jp": "うん、"},
+   {"jp": "{全然|ぜんぜん}{急がなくて|いそがなくて}いいよ。"},
+   {"jp": "また{映画|えいが}や", "wrong": true, "why": "や can't stand after just one thing before a verb. 'A film or something' → {映画|えいが}とか."},
+   {"jp": "{行こう|いこう}ね。"}
+  ],
+  "model_answer": "うん、{全然|ぜんぜん}{急がなくて|いそがなくて|to hurry|4}いいよ。また{映画|えいが}とか{行こう|いこう}ね。",
+  "explanation": "{急|いそ}がなくていい means 'you don't have to hurry', and {全然|ぜんぜん} makes it 'not at all'. {映画|えいが}とか keeps the invitation light: a film, or something like that. ね at the end makes it warm.",
+  "hint": "one example + とか = '…or something'"
+ },
+ "vocab": [
+  {
+   "jp": "{不思議|ふしぎ}",
+   "reading": "ふしぎ",
+   "en": "strange, mysterious",
+   "level": "N3",
+   "src": "d1",
+   "surface": "不思議",
+   "note": "不 not + 思 think + {議|ぎ} discuss → beyond thought. {不思議|ふしぎ}と = strangely."
+  },
+  {
+   "jp": "{珍|めずら}しい",
+   "reading": "めずらしい",
+   "en": "unusual, rare",
+   "level": "N3",
+   "src": "d2",
+   "surface": "珍しく",
+   "note": "{珍|めずら}しく〜 = for once. {珍|めずら}しいね! = That's not like you!"
+  },
+  {
+   "jp": "{秘密|ひみつ}",
+   "reading": "ひみつ",
+   "en": "secret",
+   "level": "N3",
+   "src": "d3",
+   "surface": "秘密",
+   "note": "{秘密|ひみつ}にする = to keep secret. Kids say ないしょ."
+  },
+  {
+   "jp": "そのまま",
+   "reading": "そのまま",
+   "en": "as it is, unchanged",
+   "level": "N3",
+   "src": "d5",
+   "surface": "そのまま",
+   "note": "Also: そのままでいい = it's fine as it is."
+  },
+  {
+   "jp": "{素敵|すてき}",
+   "reading": "すてき",
+   "en": "lovely, wonderful",
+   "level": "N3",
+   "src": "p0",
+   "surface": "素敵",
+   "note": "Warmer than きれい: people, places, gifts."
+  },
+  {
+   "jp": "{動画|どうが}",
+   "reading": "どうが",
+   "en": "video (online)",
+   "level": "N3",
+   "src": "p1",
+   "surface": "動画",
+   "note": "動 move + 画 picture. YouTube is {動画|どうが}, TV is not."
+  },
+  {
+   "jp": "{投稿|とうこう}",
+   "reading": "とうこう",
+   "en": "post (online); to post",
+   "level": "N2",
+   "src": "p1",
+   "surface": "投稿",
+   "note": "{投稿|とうこう}する = to post. {投|とう} throw + {稿|こう} manuscript."
+  },
+  {
+   "jp": "{押|お}す",
+   "reading": "おす",
+   "en": "to press, push",
+   "level": "N4",
+   "src": "p3",
+   "surface": "押し",
+   "note": "Buttons and doors. いいねを{押|お}す = to like a post."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "投",
+   "track": "lesson",
+   "on": "トウ",
+   "kun": "な(げる)",
+   "meaning": "throw; send in, post",
+   "parts": "扌 hand radical + 殳 an arm holding a tool → a hand swinging to throw: throw, send in.",
+   "lookalike": "Not 設 (set up): 設 has 言 words on the left, 投 has 扌 a hand.",
+   "words": [
+    {"jp": "{投稿|とうこう}", "reading": "とうこう", "en": "post (online)"},
+    {"jp": "{投|な}げる", "reading": "なげる", "en": "to throw"},
+    {"jp": "{投票|とうひょう}", "reading": "とうひょう", "en": "vote"}
+   ],
+   "decoys": {
+    "meanings": ["hit", "pick up", "carry"],
+    "readings": ["どうこう", "なげこう", "とうご"]
+   }
+  },
+  {
+   "kanji": "議",
+   "track": "n3",
+   "on": "ギ",
+   "kun": "",
+   "meaning": "discuss, debate; deliberation",
+   "parts": "言 words + 義 what is right → words about what is right: discussion, debate.",
+   "lookalike": "Not 儀 (ceremony): 儀 has 亻 a person on the left, 議 has 言 words.",
+   "words": [
+    {"jp": "{会議|かいぎ}", "reading": "かいぎ", "en": "meeting"},
+    {"jp": "{不思議|ふしぎ}", "reading": "ふしぎ", "en": "strange, mysterious"},
+    {"jp": "{議員|ぎいん}", "reading": "ぎいん", "en": "member of parliament, councillor"}
+   ],
+   "decoys": {
+    "meanings": ["ceremony", "justice", "to speak"],
+    "readings": ["がいぎ", "かいき", "かいぎょ"]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Social media words",
+   "title_jp": "SNSの{言葉|ことば}",
+   "intro": "What you'll see under posts.",
+   "items": [
+    {"jp": "フォローしたよ！", "en": "I followed you!"},
+    {"jp": "ストーリー、{見たよ|みたよ}。", "en": "I saw your story."},
+    {"jp": "{鍵垢|かぎあか|private account|2}", "en": "private (locked) account", "note": "{鍵|かぎ} key + アカウント."}
+   ]
+  },
+  {
+   "title": "Quick reactions",
+   "title_jp": "すぐ{使える|つかえる}リアクション",
+   "intro": "Short and very casual.",
+   "items": [
+    {"jp": "ウケる", "en": "That's hilarious", "note": "Slang. Very common among young people."},
+    {"jp": "{草|くさ|lol (slang)|2}", "en": "lol", "note": "ｗｗｗ looks like grass ({草|くさ})."},
+    {"jp": "{尊い|とうとい|precious (slang)|2}…", "en": "So precious…", "note": "For something too cute or moving."}
+   ]
+  }
+ ]
+}
