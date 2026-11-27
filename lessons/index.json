@@ -365,5 +365,12 @@
   "category": "love-relationships",
   "function": "planning",
   "format": "dialogue"
+ },
+ {
+  "id": "2026-12-25",
+  "topic": "A New Year's card for the 田中 family",
+  "category": "family-childhood",
+  "function": "politeness",
+  "format": "text"
  }
 ]

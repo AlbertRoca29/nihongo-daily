@@ -1,0 +1,165 @@
+{
+ "topic": "A New Year's card for the 田中 family",
+ "category": "family-childhood",
+ "function": "politeness",
+ "format": "text",
+ "cast": ["tanaka", "sota"],
+ "reader": "you",
+ "title_jp": "{年賀状|ねんがじょう}を{書く|かく}",
+ "context": "Friday 25 December: Christmas Day is an ordinary workday in Japan, and the last day to post {年賀状|ねんがじょう} so they arrive on 1 January. At the kotatsu, アルちゃん writes his card to the {田中|たなか} family, with a handwritten line for each of them.",
+ "scene": "Christmas Day, an ordinary Friday in Japan. Today's the last day to post New Year's cards. You write one to the {田中|たなか} family.",
+ "keep": ["p0"],
+ "phrases": [
+  {"jp": "いつもお{世話|せわ|care, looking after|3}になってばかりで、すみません。", "en": "I'm always relying on you, sorry.", "register": "polite", "note": "Humble thanks: 'all I do is receive your help'."},
+  {"jp": "{昨年|さくねん|last year (formal)|3}は{大変|たいへん}お{世話|せわ|care, looking after|3}になりました。", "en": "Thank you for everything last year.", "register": "polite", "note": "The classic {年賀状|ねんがじょう} line. Never {去年|きょねん} on a New Year card."},
+  {"jp": "{本年|ほんねん|this year (formal)|2}もよろしくお{願い|ねがい}いたします。", "en": "I look forward to your kindness this year too.", "register": "polite"},
+  {"jp": "{寝て|ねて}ばかりいないで、{手伝って|てつだって}よ。", "en": "Stop lying around and help me!", "register": "casual", "note": "Family telling-off: 〜てばかりいないで."},
+  {"jp": "{皆様|みなさま|everyone (polite)|3}のご{健康|けんこう|health|3}をお{祈り|いのり|to pray, wish for|3}しております。", "en": "I wish you all good health.", "register": "polite", "note": "Formal closing for cards and letters."}
+ ],
+ "dialogue_setting": "Your room above the {田中|たなか} house, Christmas morning. A New Year's card with a printed greeting, and your handwriting underneath.",
+ "text_title": "{田中|たなか}{家|け}への{年賀状|ねんがじょう|New Year's card|3}",
+ "dialogue": [
+  {"who": "you", "speaker": "Greeting", "jp": "{謹賀新年|きんがしんねん|Happy New Year (formal)|2}　あけましておめでとうございます。", "en": "Happy New Year."},
+  {"who": "you", "speaker": "Thanks", "jp": "{昨年|さくねん|last year (formal)|3}は、{右も左も分からない|みぎもひだりもわからない|knowing nothing at all|2}{私|わたし}を、{家族|かぞく}のように{迎えて|むかえて}くださり、ありがとうございました。", "en": "Last year you welcomed me like family, when I didn't know my left from my right. Thank you."},
+  {"who": "you", "speaker": "Thanks", "jp": "{畑|はたけ|field (crops)|3}でも{家|いえ}でも、お{世話|せわ|care, looking after|3}になってばかりでした。", "en": "On the farm and at home, I did nothing but rely on you."},
+  {"who": "you", "speaker": "Wish", "jp": "{本年|ほんねん|this year (formal)|2}もどうぞよろしくお{願い|ねがい}{申し上げます|もうしあげます|to say (humble)|2}。", "en": "I humbly ask for your kindness this year as well."},
+  {"who": "you", "speaker": "Date", "jp": "{令和|れいわ}9{年|ねん}　{元旦|がんたん|New Year's morning|2}", "en": "Reiwa 9 (2027), New Year's Day"},
+  {"who": "you", "speaker": "Handwritten 1", "jp": "{田中|たなか}さん、{今年|ことし}は{雪かき|ゆきかき}も{剪定|せんてい|pruning (trees)|1}も、もっと{役に立てる|やくにたてる|to be useful|3}よう{頑張ります|がんばります}。", "en": "{田中|たなか}さん, this year I'll work hard to be more useful, with the snow and the pruning."},
+  {"who": "you", "speaker": "Handwritten 2", "jp": "{恵子|けいこ}さんのご{飯|はん}を{食べて|たべて}ばかりで、{少し|すこし}{太りました|ふとりました|to put on weight|4}（{笑|わら}）。", "en": "I've done nothing but eat {恵子|けいこ}さん's cooking, and I've put on a bit of weight (lol)."},
+  {"who": "you", "speaker": "Handwritten 3", "jp": "{颯太|そうた}へ　{冬休み|ふゆやすみ}、ゲームしてばかりいないで、{一緒に|いっしょに}{雪だるま|ゆきだるま|snowman|3}{作ろう|つくろう}！", "en": "To {颯太|そうた}: this winter break, don't just play video games, let's build a snowman together!"}
+ ],
+ "listening": {
+  "type": "dictation",
+  "intro": "{恵子|けいこ}さん calls up the stairs about your cards. Type what she says.",
+  "who": "keiko",
+  "lines": [
+   {"who": "keiko", "jp": "{今日|きょう}までに{出せば|だせば}、{元日|がんじつ}に{届く|とどく}よ。", "en": "If you post them by today, they'll arrive on New Year's Day."}
+  ]
+ },
+ "grammar": {
+  "id": "n3-te-bakari",
+  "pattern": "〜てばかりいる",
+  "level": "N3",
+  "meaning": "doing nothing but",
+  "form": "て-form + ばかりいる ({食|た}べてばかりいる, {寝|ね}てばかりいる) · past: 〜てばかりいた / 〜てばかりだった · telling off: 〜てばかりいないで (ゲームしてばかりいないで)",
+  "explanation": "Says someone does one thing all the time, usually as a complaint or a joke: 'all you do is…'. In thanks it turns humble: お{世話|せわ}になってばかりで = 'I've only taken your help'. Not たばかり ('just did').",
+  "src": ["d7", "d2", "d6", "p0", "p3"],
+  "mark": ["ゲームしてばかりいないで", "なってばかり", "食べてばかり", "寝てばかり", "言ってばかり"],
+  "examples": [
+   {"jp": "{健太|けんた}は{仕事中|しごとちゅう}、{文句|もんく|complaint|3}を{言って|いって}ばかりいる。", "en": "At work {健太|けんた} does nothing but complain."},
+   {"jp": "{雪|ゆき}の{日|ひ}は、こたつで{寝て|ねて}ばかりだった。", "en": "On snowy days, all I did was sleep under the kotatsu."}
+  ],
+  "quiz": {
+   "question": "{颯太|そうた}は{冬休み|ふゆやすみ}、ゲームを＿＿いる。",
+   "en": "This winter break, all {颯太|そうた} does is play games.",
+   "options": ["してばかり", "したばかり", "するばかり", "してだけ"],
+   "explain": "て-form + ばかりいる = doing nothing but that."
+  },
+  "quiz_more": [
+   {
+    "question": "さっきご{飯|はん}を{食べた|たべた}＿＿だから、お{腹|なか}いっぱい。",
+    "en": "I've only just eaten, so I'm full.",
+    "options": ["ばかり", "てばかり", "ばかりか", "だけで"],
+    "explain": "た-form + ばかり = 'just did'. てばかり is 'all the time'."
+   },
+   {
+    "question": "{笑って|わらって}＿＿いないで、{手伝って|てつだって}よ！",
+    "en": "Stop just laughing and help me!",
+    "options": ["ばかり", "だけ", "しか", "ばかりか"],
+    "explain": "〜てばかりいないで = stop doing only that."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "謹賀新年",
+  "reading": "きんがしんねん",
+  "romaji": "kinga shinnen",
+  "meaning": "Happy New Year (formal, printed)",
+  "where": "Printed in gold at the top of the card you bought at the post office.",
+  "breakdown": "{謹賀新年|きんがしんねん}: {謹|きん} respectfully + {賀|が} celebrate + {新年|しんねん} new year → 'I respectfully celebrate the New Year'.",
+  "related": "{賀正|がしょう} and {迎春|げいしゅん} are shorter printed greetings."
+ },
+ "tip": {
+  "mark": "賀",
+  "title": "Writing {年賀状|ねんがじょう}",
+  "body": "Cards posted from 15 to 25 December are delivered on 1 January. On them, write {昨年|さくねん}, not {去年|きょねん}: {去|さ}る means 'to leave', a bad word for New Year. The short handwritten line under the printed greeting is the part people really read."
+ },
+ "challenge": {
+  "type": "fix",
+  "prompt": "Your card to {佐藤|さとう}{先生|せんせい} has a printed greeting; under it you write a line. One part is wrong for a teacher.",
+  "parts": [
+   {"jp": "{昨年|さくねん}は"},
+   {"jp": "{大変|たいへん}お{世話|せわ}になりました。"},
+   {"jp": "{本年|ほんねん}も"},
+   {"jp": "よろしくね！", "wrong": true, "why": "Far too casual for {佐藤|さとう}{先生|せんせい}: use よろしくお{願|ねが}いいたします."}
+  ],
+  "model_answer": "{昨年|さくねん}は{大変|たいへん}お{世話|せわ|care, looking after|3}になりました。{本年|ほんねん}もよろしくお{願い|ねがい}いたします。",
+  "explanation": "{昨年|さくねん} and {本年|ほんねん} are the formal words for last year and this year. お{世話|せわ}になりました thanks someone for their help, and お{願|ねが}いいたします is the humble form of お{願|ねが}いします, right for a teacher you work with.",
+  "hint": "keep the whole card in keigo"
+ },
+ "vocab": [
+  {"jp": "{世話|せわ}", "reading": "せわ", "en": "care, looking after", "level": "N3", "src": "d2", "surface": "世話", "note": "お{世話|せわ}になる = be helped by; {世話|せわ}をする = look after."},
+  {"jp": "{昨年|さくねん}", "reading": "さくねん", "en": "last year (formal)", "level": "N3", "src": "d1", "surface": "昨年", "note": "Formal {去年|きょねん}. Like {昨日|さくじつ} for {昨日|きのう}."},
+  {"jp": "{本年|ほんねん}", "reading": "ほんねん", "en": "this year (formal)", "level": "N2", "src": "d3", "surface": "本年", "note": "Formal {今年|ことし}: cards, speeches, shop notices."},
+  {"jp": "{申|もう}し{上|あ}げる", "reading": "もうしあげる", "en": "to say (humble)", "level": "N3", "src": "d3", "surface": "申し上げます", "note": "Very humble {言|い}う. お{願|ねが}い{申|もう}し{上|あ}げます on cards."},
+  {"jp": "{役|やく}に{立|た}つ", "reading": "やくにたつ", "en": "to be useful", "level": "N3", "src": "d5", "surface": "役に立てる", "note": "{役|やく}に{立|た}てる = be able to help. {役|やく}に{立|た}たない = useless."},
+  {"jp": "{太|ふと}る", "reading": "ふとる", "en": "to put on weight", "level": "N4", "src": "d6", "surface": "太りました", "note": "{太|ふと}った = got fat (state: {太|ふと}っている). Opposite: {痩|や}せる."},
+  {"jp": "{雪|ゆき}だるま", "reading": "ゆきだるま", "en": "snowman", "level": "N3", "src": "d7", "surface": "雪だるま", "note": "Named after the round Daruma doll. Japanese ones have two balls, not three."},
+  {"jp": "{健康|けんこう}", "reading": "けんこう", "en": "health", "level": "N3", "src": "p4", "surface": "健康", "note": "{健康|けんこう}に{良|い}い = good for you. ご{健康|けんこう} in polite writing."},
+  {"jp": "{祈|いの}る", "reading": "いのる", "en": "to pray, wish for", "level": "N3", "src": "p4", "surface": "祈り", "note": "お{祈|いの}りしております = I wish you (polite). Also at shrines."}
+ ],
+ "kanji_study": [
+  {
+   "kanji": "健",
+   "track": "lesson",
+   "on": "ケン",
+   "kun": "すこ(やか)",
+   "meaning": "healthy, strong",
+   "parts": "亻 person + 建 build → a person who is well built: healthy. You know it from {健太|けんた}'s name ('healthy and big').",
+   "lookalike": "Not 建 (build): 建 has no 亻 person on the left.",
+   "words": [
+    {"jp": "{健康|けんこう}", "reading": "けんこう", "en": "health"},
+    {"jp": "{保健室|ほけんしつ}", "reading": "ほけんしつ", "en": "school nurse's room"},
+    {"jp": "{健|すこ}やか", "reading": "すこやか", "en": "healthy, sound"}
+   ],
+   "decoys": {"meanings": ["to build", "peace", "to pray"], "readings": ["けんこ", "げんこう", "けんごう"]}
+  },
+  {
+   "kanji": "首",
+   "track": "n3",
+   "on": "シュ",
+   "kun": "くび",
+   "meaning": "neck, head",
+   "parts": "丷 hair on top + 自 a face with its nose → a head: neck, head, and the 'head' of a country.",
+   "lookalike": "Inside 道 (road) you'll find 首 walking on 辶.",
+   "words": [
+    {"jp": "{首|くび}", "reading": "くび", "en": "neck"},
+    {"jp": "{首都|しゅと}", "reading": "しゅと", "en": "capital city"},
+    {"jp": "{手首|てくび}", "reading": "てくび", "en": "wrist"}
+   ],
+   "decoys": {"meanings": ["face", "nose", "road"], "readings": ["くぴ", "こび", "くぶ"]}
+  }
+ ],
+ "extras": [
+  {
+   "title": "Card greetings by person",
+   "title_jp": "{相手|あいて}によって",
+   "intro": "Same card, different keigo.",
+   "items": [
+    {"jp": "{本年|ほんねん|this year (formal)|2}もご{指導|しどう|guidance|2}のほど、よろしくお{願い|ねがい}いたします。", "en": "I ask for your guidance this year too.", "note": "To a teacher or boss."},
+    {"jp": "{今年|ことし}もよろしくね！", "en": "Here's to another year!", "note": "To friends."},
+    {"jp": "あけおめ！ことよろ！", "en": "HNY! Here's to this year!", "note": "Slang shortening, LINE only."}
+   ]
+  },
+  {
+   "title": "All I do is…",
+   "title_jp": "〜てばかり",
+   "intro": "Everyday complaints and jokes.",
+   "items": [
+    {"jp": "お{正月|しょうがつ}は{食べて|たべて}{寝て|ねて}ばかりだった。", "en": "All I did at New Year was eat and sleep."},
+    {"jp": "{謝って|あやまって}ばかりいないで、{笑って|わらって}よ。", "en": "Stop apologising all the time, smile!"},
+    {"jp": "{最近|さいきん}、{雪|ゆき}が{降って|ふって}ばかりだね。", "en": "It's been doing nothing but snow lately."}
+   ]
+  }
+ ]
+}
