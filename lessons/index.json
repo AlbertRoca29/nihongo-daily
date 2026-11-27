@@ -225,5 +225,12 @@
   "category": "school-youth",
   "function": "opinions",
   "format": "dialogue"
+ },
+ {
+  "id": "2026-12-05",
+  "topic": "Mock exam: December",
+  "category": "mock",
+  "function": "narrating",
+  "format": "mock"
  }
 ]

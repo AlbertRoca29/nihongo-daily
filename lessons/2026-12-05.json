@@ -1,0 +1,173 @@
+{
+ "topic": "Mock exam: December",
+ "category": "mock",
+ "function": "narrating",
+ "format": "mock",
+ "title_jp": "12{月|がつ}の{模試|もし}",
+ "context": "Saturday 5 December: a snowy morning at the {田中|たなか} house, and time for this month's N3-style mock, using only words, kanji and grammar you've already met.",
+ "listening": {
+  "type": "mock",
+  "intro": "Two things you hear this Saturday: a message from {恵子|けいこ}さん and an announcement at the station.",
+  "who": "keiko",
+  "lines": [
+   {
+    "who": "keiko",
+    "jp": "アルちゃん、{恵子|けいこ}です。{颯太|そうた}が{作文|さくぶん}を{持って|もって}きたから、{早く|はやく}{帰って|かえって}きてね。{夕ご飯|ゆうごはん}はりんご{鍋|なべ}よ。",
+    "en": "アルちゃん, it's {恵子|けいこ}. {颯太|そうた} has brought his essay, so come home early. Dinner is apple hot pot."
+   },
+   {
+    "who": "extra",
+    "voice": "m",
+    "jp": "{大雪|おおゆき}のため、{長野|ながの}{行き|いき}の{電車|でんしゃ}は20{分|ぷん}ほど{遅れて|おくれて}おります。",
+    "en": "Because of heavy snow, the train for {長野|ながの} is running about 20 minutes late."
+   }
+  ]
+ },
+ "mock": {
+  "questions": [
+   {
+    "section": "漢字読み",
+    "prompt": "雪が屋根まで【積もった】。",
+    "options": [
+     "つもった",
+     "つまった",
+     "とまった",
+     "かさなった"
+    ],
+    "explain": "{積|つ}もる = to pile up, as snow does: {積|つ}もった."
+   },
+   {
+    "section": "漢字読み",
+    "prompt": "来週、【留学】の面接がある。",
+    "options": [
+     "りゅうがく",
+     "るがく",
+     "りゅがく",
+     "とめがく"
+    ],
+    "explain": "{留学|りゅうがく}: 留 is read リュウ here (ル only in {留守|るす})."
+   },
+   {
+    "section": "表記",
+    "prompt": "雪で電車が【おくれて】いる。",
+    "options": [
+     "遅れて",
+     "送れて",
+     "運れて",
+     "返れて"
+    ],
+    "explain": "{遅|おく}れる = to be late. {送|おく}る (send) has the same sound but another kanji."
+   },
+   {
+    "section": "文脈規定",
+    "prompt": "{朝|あさ}はとても{寒くて|さむくて}、{道|みち}が（　）いるから{気をつけて|きをつけて}ね。",
+    "options": [
+     "{凍|こお}って",
+     "{届|とど}いて",
+     "{慣|な}れて",
+     "{減|へ}って"
+    ],
+    "explain": "A cold morning makes the road freeze: {道|みち}が{凍|こお}っている."
+   },
+   {
+    "section": "文脈規定",
+    "prompt": "{健太|けんた}とけんかしたので、{次|つぎ}の{日|ひ}すぐに（　）。",
+    "options": [
+     "{謝|あやま}った",
+     "{褒|ほ}めた",
+     "{誘|さそ}った",
+     "{預|あず}かった"
+    ],
+    "explain": "After a fight you apologise: {謝|あやま}る."
+   },
+   {
+    "section": "言い換え",
+    "prompt": "この{店|みせ}は{評判|ひょうばん}がいい。",
+    "options": [
+     "みんなが、いい{店|みせ}だと{言って|いって}いる",
+     "{値段|ねだん}がとても{安い|やすい}",
+     "{店員|てんいん}がとても{少ない|すくない}",
+     "{雰囲気|ふんいき}がとても{静か|しずか}だ"
+    ],
+    "explain": "{評判|ひょうばん}がいい = people say good things about it."
+   },
+   {
+    "section": "言い換え",
+    "prompt": "{結局|けっきょく}、{映画館|えいがかん}には{行かなかった|いかなかった}。",
+    "options": [
+     "{最後|さいご}は、{映画館|えいがかん}には{行かなかった|いかなかった}",
+     "{急|きゅう}に、{映画館|えいがかん}には{行かなかった|いかなかった}",
+     "{一人|ひとり}で、{映画館|えいがかん}には{行かなかった|いかなかった}",
+     "{正直|しょうじき}、{映画館|えいがかん}には{行かなかった|いかなかった}"
+    ],
+    "explain": "{結局|けっきょく} = in the end, after all."
+   },
+   {
+    "section": "文法 ★",
+    "order": {
+     "before": "",
+     "pieces": [
+      "{去年|きょねん}に",
+      "{比|くら}べて",
+      "{今年|ことし}は",
+      "{雪|ゆき}が"
+     ],
+     "after": "{多い|おおい}。",
+     "star": 1
+    },
+    "explain": "{去年|きょねん}に{比|くら}べて / {今年|ことし}は / {雪|ゆき}が{多|おお}い: the reference point comes first with に{比|くら}べて."
+   },
+   {
+    "section": "文法 ★",
+    "order": {
+     "before": "",
+     "pieces": [
+      "{駅|えき}に",
+      "{着|つ}いたら",
+      "すぐ",
+      "{連絡|れんらく}"
+     ],
+     "after": "するね。",
+     "star": 1
+    },
+    "explain": "{駅|えき}に{着|つ}いたら, すぐ{連絡|れんらく}する: once the first thing happens, the next one follows."
+   },
+   {
+    "section": "読解",
+    "text": "ゲストハウス{風|かぜ}からのお{知らせ|しらせ}：12{月|がつ}10{日|とおか}（{木|もく}）は、スタッフが{白馬|はくば}へ{行く|いく}ため、{受付|うけつけ}は{午後|ごご}3{時|じ}からです。ご{予約|よやく}の{確認|かくにん}は、メールでお{願い|ねがい}します。",
+    "prompt": "12{月|がつ}10{日|とおか}、{受付|うけつけ}は{何時|なんじ}からですか。",
+    "options": [
+     "{午後|ごご}3{時|じ}",
+     "{朝|あさ}7{時|じ}",
+     "{午前|ごぜん}10{時|じ}",
+     "{午後|ごご}5{時|じ}"
+    ],
+    "explain": "{受付|うけつけ}は{午後|ごご}3{時|じ}から: the staff are in {白馬|はくば} that morning."
+   },
+   {
+    "section": "聴解",
+    "listen": "l0",
+    "prompt": "{今日|きょう}の{夕ご飯|ゆうごはん}は{何|なん}ですか。",
+    "options": [
+     "りんごなべ",
+     "きのこなべ",
+     "おやき",
+     "せきはん"
+    ],
+    "explain": "{夕|ゆう}ご{飯|はん}はりんご{鍋|なべ}よ: {恵子|けいこ}さん's apple hot pot."
+   },
+   {
+    "section": "聴解",
+    "listen": "l1",
+    "prompt": "{電車|でんしゃ}は、どうして{遅れて|おくれて}いますか。",
+    "options": [
+     "{雪|ゆき}がたくさん{降|ふ}ったから",
+     "{電車|でんしゃ}が{混|こ}んでいたから",
+     "{地震|じしん}があったから",
+     "{停電|ていでん}したから"
+    ],
+    "explain": "{大雪|おおゆき}のため = because of heavy snow."
+   }
+  ]
+ }
+}
