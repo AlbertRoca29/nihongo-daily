@@ -1,0 +1,411 @@
+{
+ "topic": "Dream jobs after English class",
+ "category": "money-work",
+ "function": "describing",
+ "format": "dialogue",
+ "cast": [
+  "sato",
+  "mio"
+ ],
+ "title_jp": "{将来|しょうらい}の{仕事|しごと}",
+ "context": "Tuesday 15 December: after 4th-period English on 'future jobs', {佐藤先生|さとうせんせい} asks {澪|みお} what she wants to be. {澪|みお} says an interpreter but worries about pay, and asks アルちゃん what his work is like.",
+ "scene": "Tuesday, after English class. Today's theme was future jobs. {澪|みお} has a dream, a worry about money, and a question for you.",
+ "keep": [
+  "p0"
+ ],
+ "phrases": [
+  {
+   "jp": "どんなお{仕事|しごと}をされているんですか。",
+   "en": "What kind of work do you do?",
+   "register": "polite",
+   "note": "されている = respectful している. The safe way to ask an adult you've just met."
+  },
+  {
+   "jp": "{時給|じきゅう|hourly wage|3}はいくらですか。",
+   "en": "What's the hourly pay?",
+   "register": "polite",
+   "note": "Part-time jobs are paid by the hour. Ask it at an interview, not to friends' parents."
+  },
+  {
+   "jp": "お{金|かね}より、{やりがい||sense of purpose, being worth doing|3}が{大事|だいじ}だと{思います|おもいます}。",
+   "en": "I think a sense of purpose matters more than money.",
+   "register": "polite",
+   "note": "やりがい: the feeling that a job is worth doing."
+  },
+  {
+   "jp": "{冬|ふゆ}のボーナスなら、もう{出ました|でました}よ。",
+   "en": "If you mean the winter bonus, it's already been paid.",
+   "register": "polite",
+   "note": "Many Japanese workers get a bonus in early December, a big topic in the staff room."
+  },
+  {
+   "jp": "{安定|あんてい|stability|3}した{仕事|しごと}がいいな。",
+   "en": "I'd like a stable job.",
+   "register": "casual",
+   "note": "{安定|あんてい}した + noun = stable. A very common wish among students."
+  }
+ ],
+ "dialogue_setting": "Classroom 2-3 after 4th period. '{将来|しょうらい}の{職業|しょくぎょう}' is still on the blackboard. Snow outside.",
+ "dialogue": [
+  {
+   "who": "sato",
+   "speaker": "佐藤先生",
+   "jp": "{今日|きょう}のテーマは「{将来|しょうらい}の{仕事|しごと}」でしたね。{澪|みお}さんは{何|なに}になりたいんですか。",
+   "en": "Today's theme was 'future jobs'. What do you want to be, {澪|みお}さん?",
+   "register": "polite"
+  },
+  {
+   "who": "mio",
+   "speaker": "澪",
+   "jp": "{通訳|つうやく|interpreter, interpreting|3}です。{人|ひと}と{人|ひと}を{言葉|ことば}で{つなぐ|つなぐ|to connect|3}{仕事|しごと}って、かっこよくないですか。",
+   "en": "An interpreter. A job that connects people through language, isn't that cool?",
+   "register": "polite"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "{通訳|つうやく|interpreter|3}なら、{澪|みお}さんに{ぴったり||perfect, just right|4}だよ。{面接|めんせつ}の{英語|えいご}も{上手|じょうず}だったし。",
+   "en": "If it's interpreting, that's perfect for you. Your English at the interview was great too.",
+   "register": "casual"
+  },
+  {
+   "who": "mio",
+   "speaker": "澪",
+   "jp": "でも{給料|きゅうりょう}とか、{安定|あんてい|stability|3}してるのかな…。アルちゃんの{仕事|しごと}って、どんな{感じ|かんじ}？",
+   "en": "But is the pay and stuff stable, I wonder… What's your work like, アルちゃん?",
+   "register": "casual"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "{朝|あさ}は{畑|はたけ|field, orchard|3}、{午後|ごご}はゲストハウスの{受付|うけつけ}。{給料|きゅうりょう}はないけど、{毎日|まいにち}{勉強|べんきょう}になるよ。",
+   "en": "Mornings in the orchard, afternoons on guesthouse reception. There's no pay, but I learn something every day.",
+   "register": "casual"
+  },
+  {
+   "who": "sato",
+   "speaker": "佐藤先生",
+   "jp": "{仕事|しごと}を{選ぶ|えらぶ|to choose|4}なら、{好き|すき}なことと{得意|とくい|good at, strong point|4}なことを、{両方|りょうほう|both|4}{考える|かんがえる}といいですよ。",
+   "en": "If you're choosing a job, it's good to think about both what you love and what you're good at.",
+   "register": "polite"
+  }
+ ],
+ "listening": {
+  "type": "voicemail",
+  "intro": "At lunch break, {恵子|けいこ}さん leaves you a voicemail.",
+  "who": "keiko",
+  "lines": [
+   {
+    "who": "keiko",
+    "jp": "アルちゃん、{恵子|けいこ}です。{今日|きょう}は{雪|ゆき}がひどいから、{車|くるま}で{迎えに|むかえに}{行く|いく}わね。",
+    "en": "アルちゃん, it's {恵子|けいこ}. The snow's bad today, so I'll come and pick you up by car."
+   },
+   {
+    "who": "keiko",
+    "jp": "{学校|がっこう}の{前|まえ}に4{時半|じはん}でいいかしら。{無理|むり}なら{連絡|れんらく}してね。",
+    "en": "Is 4:30 in front of the school OK? If it's not possible, let me know."
+   }
+  ],
+  "question": "{恵子|けいこ}さんは、いつどこに{来ますか|きますか}。",
+  "options": [
+   "4時半に学校の前",
+   "4時に学校の前",
+   "4時半に駅の前",
+   "5時にゲストハウス"
+  ],
+  "explain": "{学校|がっこう}の{前|まえ}に4{時半|じはん}: in front of the school at 4:30."
+ },
+ "grammar": {
+  "id": "n4-nara",
+  "pattern": "〜なら",
+  "level": "N4",
+  "meaning": "if it's the case that / as for",
+  "form": "noun: + なら ({通訳|つうやく}なら, ボーナスなら) · verb: plain form + なら ({選|えら}ぶなら, {行|い}くなら) · adjective: + なら ({寒|さむ}いなら, {無理|むり}なら)",
+  "explanation": "なら picks up a topic or plan someone just mentioned: 'if it's X, then…'. It's perfect for advice. Unlike たら, the advice can come before the action: {長野|ながの}に{行|い}くなら = before you go. No だ before なら.",
+  "src": [
+   "d2",
+   "d5",
+   "p3"
+  ],
+  "mark": [
+   "通訳なら",
+   "選ぶなら",
+   "ボーナスなら",
+   "行くなら",
+   "寒いなら"
+  ],
+  "examples": [
+   {
+    "jp": "{長野|ながの}に{行く|いく}なら、そばを{食べて|たべて}ね。",
+    "en": "If you're going to Nagano, have some soba."
+   },
+   {
+    "jp": "{寒い|さむい}なら、こたつに{入りなよ|はいりなよ}。",
+    "en": "If you're cold, get under the kotatsu."
+   }
+  ],
+  "quiz": {
+   "question": "A: {明日|あした}、{白馬|はくば}に{行く|いく}んだ。 B: {白馬|はくば}に{行く|いく}＿＿、{手袋|てぶくろ|gloves|3}を{忘れないで|わすれないで}ね。",
+   "en": "A: I'm going to Hakuba tomorrow. B: If you're going to Hakuba, don't forget your gloves.",
+   "options": [
+    "なら",
+    "たら",
+    "と",
+    "ので"
+   ],
+   "explain": "Advice before the trip → なら. {行|い}ったら would mean 'once you're there'."
+  },
+  "quiz_more": [
+   {
+    "question": "コーヒー＿＿、{駅前|えきまえ}の{喫茶店|きっさてん|coffee shop|3}がおいしいよ。",
+    "en": "If it's coffee you want, the café by the station is good.",
+    "options": [
+     "なら",
+     "だら",
+     "ので",
+     "けど"
+    ],
+    "explain": "Noun + なら picks up the topic: 'as for coffee'."
+   },
+   {
+    "question": "{無理|むり|impossible, too much|4}＿＿、{言って|いって}ね。",
+    "en": "If it's too much, tell me.",
+    "options": [
+     "なら",
+     "だなら",
+     "ならで",
+     "なると"
+    ],
+    "explain": "な-adjectives and nouns take なら directly, never だなら."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "職業",
+  "reading": "しょくぎょう",
+  "romaji": "shokugyō",
+  "meaning": "occupation, profession",
+  "where": "On the blackboard: {将来|しょうらい}の{職業|しょくぎょう}.",
+  "breakdown": "{職|しょく} post, duty + {業|ぎょう} work, business → the work you do as your post: occupation.",
+  "related": "Forms ask: ご{職業|しょくぎょう} = Occupation. {就職|しゅうしょく} = getting a job."
+ },
+ "tip": {
+  "mark": "夢",
+  "title": "{将来|しょうらい}の{夢|ゆめ} and {就活|しゅうかつ}",
+  "body": "Japanese kids are asked about their {将来|しょうらい}の{夢|ゆめ} (future dream) all through school. At university, job-hunting ({就活|しゅうかつ}) starts in the third year, with everyone in the same black {リクルートスーツ||job-hunting suit|2}. Many people still join one company straight after graduating."
+ },
+ "challenge": {
+  "type": "write",
+  "prompt": "{澪|みお}: 「アルちゃんは、{将来|しょうらい}どんな{仕事|しごと}がしたい？」 Answer casually: if you can choose, you'd like a job that uses Japanese.",
+  "model_answer": "{選べる|えらべる}なら、{日本語|にほんご}を{使う|つかう}{仕事|しごと}がしたいな。",
+  "explanation": "{選|えら}べる is 'can choose', and なら makes it 'if I can choose'. {日本語|にほんご}を{使|つか}う{仕事|しごと} describes the job with a verb before the noun. たいな is a soft, casual wish, right for {澪|みお}.",
+  "hint": "{選|えら}べるなら…"
+ },
+ "vocab": [
+  {
+   "jp": "{通訳|つうやく}",
+   "reading": "つうやく",
+   "en": "interpreter; interpreting",
+   "level": "N2",
+   "src": "d1",
+   "surface": "通訳",
+   "note": "Spoken. Written translation is {翻訳|ほんやく}."
+  },
+  {
+   "jp": "つなぐ",
+   "reading": "つなぐ",
+   "en": "to connect, link",
+   "level": "N3",
+   "src": "d1",
+   "surface": "つなぐ",
+   "note": "{手|て}をつなぐ = hold hands. Wi-Fiにつなぐ = connect to Wi-Fi."
+  },
+  {
+   "jp": "ぴったり",
+   "reading": "ぴったり",
+   "en": "perfect, just right",
+   "level": "N3",
+   "src": "d2",
+   "surface": "ぴったり",
+   "note": "〜にぴったり = perfect for. Also for clothes that fit exactly."
+  },
+  {
+   "jp": "{安定|あんてい}",
+   "reading": "あんてい",
+   "en": "stability",
+   "level": "N3",
+   "src": "d3",
+   "surface": "安定",
+   "note": "{安定|あんてい}する = to be stable. {安定|あんてい}した{仕事|しごと} = a steady job."
+  },
+  {
+   "jp": "{畑|はたけ}",
+   "reading": "はたけ",
+   "en": "field, orchard (not rice)",
+   "level": "N4",
+   "src": "d4",
+   "surface": "畑",
+   "note": "火 fire + 田 field: fields once cleared by burning. Rice paddy: {田|た}んぼ."
+  },
+  {
+   "jp": "{選|えら}ぶ",
+   "reading": "えらぶ",
+   "en": "to choose",
+   "level": "N3",
+   "src": "d5",
+   "surface": "選ぶ",
+   "note": "Choosing from several. Can choose: {選|えら}べる."
+  },
+  {
+   "jp": "{得意|とくい}",
+   "reading": "とくい",
+   "en": "good at, strong point",
+   "level": "N3",
+   "src": "d5",
+   "surface": "得意",
+   "note": "〜が{得意|とくい}. Opposite: {苦手|にがて}. Modest people rarely say it about themselves."
+  },
+  {
+   "jp": "{両方|りょうほう}",
+   "reading": "りょうほう",
+   "en": "both",
+   "level": "N4",
+   "src": "d5",
+   "surface": "両方",
+   "note": "{両|りょう} both + {方|ほう} side."
+  },
+  {
+   "jp": "{時給|じきゅう}",
+   "reading": "じきゅう",
+   "en": "hourly wage",
+   "level": "N3",
+   "src": "p1",
+   "surface": "時給",
+   "note": "{時|じ} hour + {給|きゅう} pay. On job posters: {時給|じきゅう}1,100{円|えん}〜."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "訳",
+   "track": "lesson",
+   "on": "ヤク",
+   "kun": "わけ",
+   "meaning": "translate; reason",
+   "parts": "言 words radical + 尺 a measure → measuring words from one language against another: translate. Also the 'reason' behind things.",
+   "lookalike": "Not 駅 (station): 駅 has 馬 a horse on the left, 訳 has 言 words.",
+   "words": [
+    {
+     "jp": "{通訳|つうやく}",
+     "reading": "つうやく",
+     "en": "interpreter"
+    },
+    {
+     "jp": "{言|い}い{訳|わけ}",
+     "reading": "いいわけ",
+     "en": "excuse"
+    },
+    {
+     "jp": "{翻訳|ほんやく}",
+     "reading": "ほんやく",
+     "en": "translation"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "station",
+     "measure",
+     "poem"
+    ],
+    "readings": [
+     "つうわけ",
+     "とうやく",
+     "つうえき"
+    ]
+   }
+  },
+  {
+   "kanji": "選",
+   "track": "n3",
+   "on": "セン",
+   "kun": "えら(ぶ)",
+   "meaning": "choose, select; election",
+   "parts": "辶 road radical + 巽 two people kneeling on a stand → walking along a line of candidates and picking one: choose.",
+   "lookalike": "Not 遅 (late): both have 辶, but 選 has two 己 shapes on top.",
+   "words": [
+    {
+     "jp": "{選|えら}ぶ",
+     "reading": "えらぶ",
+     "en": "to choose"
+    },
+    {
+     "jp": "{選手|せんしゅ}",
+     "reading": "せんしゅ",
+     "en": "(sports) player"
+    },
+    {
+     "jp": "{選挙|せんきょ}",
+     "reading": "せんきょ",
+     "en": "election"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "walk",
+     "send",
+     "arrange"
+    ],
+    "readings": [
+     "せんぶ",
+     "えるぶ",
+     "よらぶ"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Kinds of work",
+   "title_jp": "いろいろな{働き方|はたらきかた}",
+   "intro": "Words you'll hear when people talk about jobs.",
+   "items": [
+    {
+     "jp": "{会社員|かいしゃいん|company employee|4}",
+     "en": "office worker",
+     "note": "Like {由紀|ゆき}."
+    },
+    {
+     "jp": "{公務員|こうむいん|civil servant|3}",
+     "en": "civil servant",
+     "note": "Public school teachers like {佐藤先生|さとうせんせい} are too."
+    },
+    {
+     "jp": "フリーランス",
+     "en": "freelancer"
+    }
+   ]
+  },
+  {
+   "title": "Money at work",
+   "title_jp": "{給料|きゅうりょう}の{話|はなし}",
+   "intro": "Talked about quietly, but talked about.",
+   "items": [
+    {
+     "jp": "{手取り|てどり|take-home pay|3}",
+     "en": "take-home pay",
+     "note": "What's left after tax."
+    },
+    {
+     "jp": "{副業|ふくぎょう|side job|3}",
+     "en": "side job",
+     "note": "More and more companies allow it."
+    },
+    {
+     "jp": "{残業代|ざんぎょうだい|overtime pay|3}",
+     "en": "overtime pay"
+    }
+   ]
+  }
+ ]
+}
