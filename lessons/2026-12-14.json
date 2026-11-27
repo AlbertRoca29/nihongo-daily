@@ -1,0 +1,450 @@
+{
+ "topic": "A guest running late in the snow",
+ "category": "work-volunteering",
+ "function": "requesting",
+ "format": "line",
+ "cast": [
+  "kenta"
+ ],
+ "guest": {
+  "name": "藤原さん",
+  "name_jp": "{藤原|ふじわら}さん",
+  "role": "a retired teacher from {名古屋|なごや} on a ski trip, very polite",
+  "voice": "m",
+  "age": 62
+ },
+ "title_jp": "{遅れて|おくれて}{着く|つく}お{客|きゃく}さん",
+ "context": "Monday 14 December: アルちゃん is on reception at ゲストハウス{風|かぜ} when a guest, {藤原|ふじわら}さん, messages the guesthouse LINE: his train is stuck in the snow and he'll arrive after 9 p.m. He politely asks about the bath and a place to eat.",
+ "scene": "Monday afternoon at reception. A guest messages the guesthouse LINE: his train is stuck in the snow and he has a few requests.",
+ "keep": [
+  "p0"
+ ],
+ "phrases": [
+  {
+   "jp": "{恐れ入りますが|おそれいりますが|I'm sorry to trouble you, but|2}、もう{一度|いちど}お{願い|ねがい}できますか。",
+   "en": "I'm sorry to trouble you, but could you say that once more?",
+   "register": "polite",
+   "note": "{恐|おそ}れ{入|い}りますが softens any request at work: a 'cushion word'."
+  },
+  {
+   "jp": "あと、{一つ|ひとつ}{伺っても|うかがっても|to ask (humble)|3}よろしいですか。",
+   "en": "Also, may I ask one more thing?",
+   "register": "polite",
+   "note": "{伺|うかが}う = humble {聞|き}く. For customers, bosses, teachers."
+  },
+  {
+   "jp": "{早ければ|はやければ}{早い|はやい}ほどいいです。",
+   "en": "The sooner, the better.",
+   "register": "polite",
+   "note": "A set phrase. Casual: {早|はや}ければ{早|はや}いほどいいよ."
+  },
+  {
+   "jp": "{到着|とうちゃく|arrival|3}が{遅れそう|おくれそう}です。",
+   "en": "It looks like I'll arrive late.",
+   "register": "polite",
+   "note": "Send this before the time, not after."
+  },
+  {
+   "jp": "お{待ち|まち}しております。",
+   "en": "We look forward to seeing you.",
+   "register": "polite",
+   "note": "Humble keigo staff use for guests on their way."
+  }
+ ],
+ "dialogue_setting": "The guesthouse's LINE account on the reception tablet, late afternoon. Snow outside the window.",
+ "dialogue": [
+  {
+   "who": "guest",
+   "speaker": "藤原さん",
+   "time": "16:40",
+   "jp": "ゲストハウス{風|かぜ}さま。{本日|ほんじつ|today (formal)|3}{予約|よやく}している{藤原|ふじわら}です。",
+   "en": "To Guesthouse {風|かぜ}. This is {藤原|ふじわら}, booked for today.",
+   "register": "polite"
+  },
+  {
+   "who": "guest",
+   "speaker": "藤原さん",
+   "time": "16:41",
+   "jp": "{雪|ゆき}で{電車|でんしゃ}が{止まって|とまって}しまい、{到着|とうちゃく|arrival|3}が9{時|じ}{過ぎ|すぎ|past, after|3}になりそうです。",
+   "en": "The train has stopped because of the snow, so I'll probably arrive after 9.",
+   "register": "polite"
+  },
+  {
+   "who": "guest",
+   "speaker": "藤原さん",
+   "time": "16:41",
+   "jp": "{恐れ入りますが|おそれいりますが|I'm sorry to trouble you, but|2}、お{風呂|ふろ}は{何時|なんじ}まで{使えますか|つかえますか}。",
+   "en": "Sorry to trouble you, but until what time can I use the bath?",
+   "register": "polite"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "16:45",
+   "jp": "ご{連絡|れんらく}ありがとうございます。お{風呂|ふろ}のご{利用|りよう|use|3}は10{時|じ}までです。",
+   "en": "Thank you for letting us know. The bath can be used until 10.",
+   "register": "polite"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "16:45",
+   "jp": "{夜|よる}は{遅く|おそく}なればなるほど{冷えます|ひえます}ので、{暖かく|あたたかく|warm|4}してお{越し|こし}ください。",
+   "en": "The later it gets, the colder it is, so please dress warmly on your way.",
+   "register": "polite",
+   "note": "お{越|こ}しください = honorific 'please come'."
+  },
+  {
+   "who": "guest",
+   "speaker": "藤原さん",
+   "time": "16:50",
+   "jp": "{助かります|たすかります}。あと、{一つ|ひとつ}{伺っても|うかがっても|to ask (humble)|3}よろしいですか。",
+   "en": "That's a great help. May I ask one more thing?",
+   "register": "polite"
+  },
+  {
+   "who": "guest",
+   "speaker": "藤原さん",
+   "time": "16:50",
+   "jp": "{夕食|ゆうしょく|dinner|3}がまだなんです。{遅く|おそく}まで{開いて|あいて}いるお{店|みせ}はありますか。",
+   "en": "I haven't had dinner yet. Is there anywhere open late?",
+   "register": "polite"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "16:53",
+   "jp": "{商店街|しょうてんがい}の{とり吉|とりきち}が、11{時|じ}まで{営業|えいぎょう|being open (for business)|3}しています。",
+   "en": "{とり吉|とりきち} on the shopping street is open until 11.",
+   "register": "polite"
+  },
+  {
+   "who": "guest",
+   "speaker": "藤原さん",
+   "time": "16:54",
+   "sticker": "arigatou-gozaimasu",
+   "jp": "ありがとうございます",
+   "en": "Thank you very much"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "16:55",
+   "jp": "お{待ち|まち}しております。お{気をつけて|きをつけて}！",
+   "en": "We look forward to seeing you. Travel safely!",
+   "register": "polite"
+  }
+ ],
+ "listening": {
+  "type": "ladder",
+  "intro": "{健太|けんた} phones to check on the late guest and gives you a reception rule.",
+  "who": "kenta",
+  "lines": [
+   {
+    "who": "kenta",
+    "jp": "{連絡|れんらく}は{早ければ|はやければ}{早い|はやい}ほど{ええねん|ええねん|(Kansai) = いいんだ|2}。",
+    "en": "When it comes to getting in touch, the sooner the better."
+   }
+  ]
+ },
+ "grammar": {
+  "id": "n3-ba-hodo",
+  "pattern": "〜ば〜ほど",
+  "level": "N3",
+  "meaning": "the more..., the more...",
+  "form": "verb: ば-form + dictionary form + ほど ({遅|おそ}くなればなるほど, すればするほど) · い-adj: -ければ + -い + ほど ({早|はや}ければ{早|はや}いほど) · な-adj: なら + な + ほど ({静|しず}かなら{静|しず}かなほど)",
+  "explanation": "Say the same word twice: the more one thing happens, the more something else follows. First in ば-form, then plain form + ほど. The two must be the same word. You can also drop the ば part: {遅|おそ}くなるほど{冷|ひ}える.",
+  "src": [
+   "d4",
+   "p2"
+  ],
+  "mark": [
+   "遅くなればなるほど",
+   "早ければ早いほど",
+   "すればするほど",
+   "考えれば考えるほど"
+  ],
+  "examples": [
+   {
+    "jp": "{練習|れんしゅう}すればするほど、{上手|じょうず}になるよ。",
+    "en": "The more you practise, the better you get."
+   },
+   {
+    "jp": "{考えれば|かんがえれば}{考える|かんがえる}ほど、{分からなく|わからなく}なる。",
+    "en": "The more I think about it, the less I understand."
+   }
+  ],
+  "quiz": {
+   "question": "{雪|ゆき}が{降れば|ふれば}＿＿ほど、{道|みち}が{混む|こむ}。",
+   "en": "The more it snows, the more crowded the roads get.",
+   "options": [
+    "降る",
+    "降った",
+    "降って",
+    "降らない"
+   ],
+   "explain": "After the ば-form, repeat the dictionary form: {降|ふ}れば{降|ふ}るほど."
+  },
+  "quiz_more": [
+   {
+    "question": "この{温泉|おんせん}は、{入れば|はいれば}{入る|はいる}＿＿{体|からだ}が{温まる|あたたまる|to warm up|3}。",
+    "en": "The longer you stay in this onsen, the warmer you get.",
+    "options": [
+     "ほど",
+     "まで",
+     "だけ",
+     "より"
+    ],
+    "explain": "ば + dictionary form + ほど: 'the more…, the more…'."
+   },
+   {
+    "question": "{部屋|へや}は{広ければ|ひろければ}＿＿ほどいい。",
+    "en": "The bigger the room, the better.",
+    "options": [
+     "広い",
+     "広く",
+     "広くて",
+     "広かった"
+    ],
+    "explain": "い-adjectives: -ければ, then the plain -い form + ほど."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "門限",
+  "reading": "もんげん",
+  "romaji": "mongen",
+  "meaning": "curfew, door-closing time",
+  "where": "On the card by the guesthouse door: {門限|もんげん} 23:00.",
+  "breakdown": "門 gate + 限 limit → the time limit for the gate: curfew.",
+  "related": "Students and dorms have one too: {門限|もんげん}は10{時|じ}."
+ },
+ "tip": {
+  "mark": "恐",
+  "title": "Cushion words",
+  "body": "Japanese wraps a request in a 'cushion word' (クッション{言葉|ことば}) first: {恐|おそ}れ{入|い}りますが, お{手数|てすう}ですが, {申|もう}し{訳|わけ}ありませんが. Without one, even a perfect keigo request can sound blunt. Guesthouses, {旅館|りょかん} and {民宿|みんしゅく} hear them all day."
+ },
+ "challenge": {
+  "type": "sticker",
+  "prompt": "At 21:20 {藤原|ふじわら}さん arrives safely. {健太|けんた} on LINE: 「お{疲れ|つかれ}！{明日|あした}の{朝食|ちょうしょく}は{俺|おれ}がやるから、アルちゃんはゆっくり{寝て|ねて}な」 Send a sticker to thank him.",
+  "stickers": [
+   "arigato",
+   "gomen",
+   "gaan",
+   "kowai"
+  ],
+  "model_answer": "ありがとう〜",
+  "explanation": "{健太|けんた} is doing you a favour, so the right feeling is thanks: ありがとう〜. ごめん would mean you did something wrong, and ガーン or {怖|こわ}い don't fit good news.",
+  "hint": "He's doing you a favour."
+ },
+ "vocab": [
+  {
+   "jp": "{本日|ほんじつ}",
+   "reading": "ほんじつ",
+   "en": "today (formal)",
+   "level": "N3",
+   "src": "d0",
+   "surface": "本日",
+   "note": "Formal {今日|きょう}. On shop signs: {本日休業|ほんじつきゅうぎょう} = closed today."
+  },
+  {
+   "jp": "{到着|とうちゃく}",
+   "reading": "とうちゃく",
+   "en": "arrival",
+   "level": "N3",
+   "src": "d1",
+   "surface": "到着",
+   "note": "{到着|とうちゃく}する = to arrive. Opposite: {出発|しゅっぱつ}."
+  },
+  {
+   "jp": "{過|す}ぎ",
+   "reading": "すぎ",
+   "en": "past, after (a time)",
+   "level": "N4",
+   "src": "d1",
+   "surface": "過ぎ",
+   "note": "9{時|じ}{過|す}ぎ = just after 9. Also {食|た}べ{過|す}ぎ = overeating."
+  },
+  {
+   "jp": "{恐|おそ}れ{入|い}る",
+   "reading": "おそれいる",
+   "en": "to be sorry to trouble; to be grateful",
+   "level": "N2",
+   "src": "d2",
+   "surface": "恐れ入ります",
+   "note": "Almost always {恐|おそ}れ{入|い}りますが, before a request."
+  },
+  {
+   "jp": "{利用|りよう}",
+   "reading": "りよう",
+   "en": "use",
+   "level": "N3",
+   "src": "d3",
+   "surface": "利用",
+   "note": "{利用|りよう}する = to use (a service). On signs: ご{利用|りよう}ください."
+  },
+  {
+   "jp": "{暖|あたた}かい",
+   "reading": "あたたかい",
+   "en": "warm (weather, rooms)",
+   "level": "N4",
+   "src": "d4",
+   "surface": "暖かく",
+   "note": "{暖|あたた}かくして = wrap up warm. Warm drinks: {温|あたた}かい."
+  },
+  {
+   "jp": "{伺|うかが}う",
+   "reading": "うかがう",
+   "en": "to ask; to visit (humble)",
+   "level": "N3",
+   "src": "d5",
+   "surface": "伺って",
+   "note": "Humble form of {聞|き}く and {訪|たず}ねる."
+  },
+  {
+   "jp": "{夕食|ゆうしょく}",
+   "reading": "ゆうしょく",
+   "en": "dinner",
+   "level": "N4",
+   "src": "d6",
+   "surface": "夕食",
+   "note": "Polite {晩|ばん}ご{飯|はん}. Hotels: {夕食付|ゆうしょくつ}き = dinner included."
+  },
+  {
+   "jp": "{営業|えいぎょう}",
+   "reading": "えいぎょう",
+   "en": "being open (business); sales",
+   "level": "N3",
+   "src": "d7",
+   "surface": "営業",
+   "note": "{営業中|えいぎょうちゅう} = Open on shop doors. {営業時間|えいぎょうじかん} = opening hours."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "利",
+   "track": "lesson",
+   "on": "リ",
+   "kun": "き(く)",
+   "meaning": "use, benefit; profit",
+   "parts": "禾 grain + 刂 knife → cutting the ripe grain at harvest: what you gain, something useful.",
+   "lookalike": "Not 和 (peace, Japanese): 和 has 口 a mouth on the right, 利 has 刂 a knife.",
+   "words": [
+    {
+     "jp": "{利用|りよう}",
+     "reading": "りよう",
+     "en": "use"
+    },
+    {
+     "jp": "{便利|べんり}",
+     "reading": "べんり",
+     "en": "convenient"
+    },
+    {
+     "jp": "{有利|ゆうり}",
+     "reading": "ゆうり",
+     "en": "advantageous"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "peace",
+     "grain",
+     "cut"
+    ],
+    "readings": [
+     "りよ",
+     "きよう",
+     "りおう"
+    ]
+   }
+  },
+  {
+   "kanji": "民",
+   "track": "n3",
+   "on": "ミン",
+   "kun": "たみ",
+   "meaning": "people, citizens",
+   "parts": "An old drawing of an eye pierced by a needle, a mark once put on servants → the common people.",
+   "lookalike": "Not 氏 (family name, Mr): 民 has an extra box at the top left.",
+   "words": [
+    {
+     "jp": "{民宿|みんしゅく}",
+     "reading": "みんしゅく",
+     "en": "family-run guesthouse"
+    },
+    {
+     "jp": "{国民|こくみん}",
+     "reading": "こくみん",
+     "en": "the nation's people, citizens"
+    },
+    {
+     "jp": "{住民|じゅうみん}",
+     "reading": "じゅうみん",
+     "en": "residents"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "family name",
+     "village",
+     "king"
+    ],
+    "readings": [
+     "みんじゅく",
+     "たみやど",
+     "めいしゅく"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Cushion words",
+   "title_jp": "クッション{言葉|ことば}",
+   "intro": "Say one before any request at work.",
+   "items": [
+    {
+     "jp": "お{手数|てすう|trouble, bother|2}ですが、こちらにお{名前|なまえ}をお{願い|ねがい}します。",
+     "en": "Sorry for the trouble, but your name here, please.",
+     "note": "For asking someone to do a task."
+    },
+    {
+     "jp": "{申し訳|もうしわけ|excuse, apology|3}ありませんが、{満室|まんしつ|fully booked|2}です。",
+     "en": "I'm very sorry, but we're fully booked.",
+     "note": "Before bad news."
+    },
+    {
+     "jp": "よろしければ、お{茶|ちゃ}をどうぞ。",
+     "en": "If you'd like, please have some tea.",
+     "note": "Before an offer."
+    }
+   ]
+  },
+  {
+   "title": "Places to stay",
+   "title_jp": "{泊まる|とまる}ところ",
+   "intro": "What you'll see on booking sites.",
+   "items": [
+    {
+     "jp": "{旅館|りょかん|Japanese inn|3}",
+     "en": "traditional inn",
+     "note": "Tatami rooms, dinner and breakfast often included."
+    },
+    {
+     "jp": "{民宿|みんしゅく|family-run guesthouse|2}",
+     "en": "family-run B&B",
+     "note": "Cheaper, homely, often in the countryside."
+    },
+    {
+     "jp": "{素泊まり|すどまり|room only (no meals)|2}",
+     "en": "room only, no meals"
+    }
+   ]
+  }
+ ]
+}

@@ -288,5 +288,12 @@
   "category": "tech-internet",
   "function": "reacting",
   "format": "text"
+ },
+ {
+  "id": "2026-12-14",
+  "topic": "A guest running late in the snow",
+  "category": "work-volunteering",
+  "function": "requesting",
+  "format": "line"
  }
 ]
