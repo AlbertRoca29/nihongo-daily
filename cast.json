@@ -183,7 +183,7 @@
    ],
    "aliases": [],
    "color": "#2c4f86",
-   "status": "{映画館|えいがかん}、なくならないで…🎞",
+   "status": "{日曜|にちよう}、{楽しみ|たのしみ}☕",
    "where": "{長野市|ながのし}",
    "status_base": "{映画館|えいがかん}、なくならないで…🎞",
    "where_base": "{長野市|ながのし}"
@@ -691,6 +691,23 @@
     "田中さん's father used to take him skiing on snowy days.",
     "颯太's essay 「おじいちゃんの子どもの頃」 got a 花丸 from his teacher; he will show it to 田中さん on Saturday 5 Dec."
    ]
+  },
+  {
+   "date": "2026-12-03",
+   "cast": [
+    "ren"
+   ],
+   "summary": "Thursday 3 Dec: taking 健太's advice, アルちゃん asks レン on LINE to meet for coffee in 長野市 on Sunday. レン compares a chain café by the station with an old 喫茶店 near his cinema whose owner roasts his own beans; they choose the 喫茶店 and fix 2 p.m.",
+   "new_facts": [
+    "アルちゃん and レン will meet for the first time on Sunday 6 Dec at 14:00 in 長野市, at an old 喫茶店 near レン's favourite cinema; アルちゃん will message him when he gets off the train.",
+    "The 喫茶店 near the cinema is a bit pricier than the station chain café; its マスター roasts his own beans (自家焙煎).",
+    "The shopping-street supermarket closes at 8 p.m.; boxed meals and side dishes go half price before closing."
+   ],
+   "status_upd": {
+    "ren": {
+     "status": "{日曜|にちよう}、{楽しみ|たのしみ}☕"
+    }
+   }
   }
  ],
  "others": [

@@ -1,0 +1,466 @@
+{
+ "topic": "Asking レン out for coffee",
+ "category": "shops-eating-out",
+ "function": "comparing",
+ "format": "line",
+ "cast": [
+  "ren"
+ ],
+ "title_jp": "{日曜|にちよう}、{空いてる|あいてる}？",
+ "context": "Thursday 3 December: taking {健太|けんた}'s advice, アルちゃん asks レン on LINE to meet for coffee on Sunday in {長野市|ながのし}. レン compares a chain café by the station with an old {喫茶店|きっさてん} near his cinema, and they choose the {喫茶店|きっさてん}.",
+ "scene": "Thursday night under the kotatsu. You take {健太|けんた}'s advice and ask レン out for coffee. He gives you two places to choose from.",
+ "keep": [
+  "p1"
+ ],
+ "phrases": [
+  {
+   "jp": "こっちのほうが{値段|ねだん|price|4}は{高い|たかい}けど、{量|りょう}が{多い|おおい}。",
+   "en": "This one is pricier, but you get more.",
+   "register": "casual",
+   "note": "AのほうがX: the basic way to compare two things."
+  },
+  {
+   "jp": "{着いたら|ついたら}、{連絡|れんらく}するね。",
+   "en": "I'll message you when I get there.",
+   "register": "casual",
+   "note": "Said before every meet-up in Japan."
+  },
+  {
+   "jp": "どっちのほうが{人気|にんき}ですか。",
+   "en": "Which one is more popular?",
+   "register": "polite",
+   "note": "Ask staff this when you can't choose between two."
+  },
+  {
+   "jp": "{雰囲気|ふんいき|atmosphere|4}がいいお{店|みせ}だね。",
+   "en": "It's a place with a nice atmosphere.",
+   "register": "casual",
+   "note": "Cafés, restaurants, even people: {雰囲気|ふんいき}がいい."
+  },
+  {
+   "jp": "{味|あじ}は{同じ|おなじ}くらいだね。",
+   "en": "They taste about the same.",
+   "register": "casual",
+   "note": "{同|おな}じくらい = about the same: comparing without a winner."
+  }
+ ],
+ "dialogue_setting": "LINE, Thursday evening. アルちゃん writes first; レン, as usual, takes a while to reply.",
+ "dialogue": [
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "20:41",
+   "jp": "レンさん、こんばんは！{急|きゅう|sudden|4}だけど、{今度|こんど}の{日曜|にちよう}、{空いてる|あいてる|to be free (time)|4}？",
+   "en": "Evening, レン! This is sudden, but are you free this Sunday?",
+   "register": "casual"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "20:42",
+   "jp": "よかったら、{長野|ながの}でコーヒーでもどうかな…",
+   "en": "If you like, maybe a coffee in {長野|ながの}…?",
+   "register": "casual"
+  },
+  {
+   "who": "ren",
+   "speaker": "レン",
+   "time": "21:36",
+   "jp": "{遅く|おそく}なってごめん。{日曜|にちよう}は{予定|よてい|plans|4}ないよ。うれしい",
+   "en": "Sorry for the slow reply. I've got no plans on Sunday. I'm happy you asked.",
+   "register": "casual"
+  },
+  {
+   "who": "ren",
+   "speaker": "レン",
+   "time": "21:37",
+   "jp": "{駅前|えきまえ}の{チェーン店|チェーンてん|chain store|3}と、{映画館|えいがかん}の{近く|ちかく}の{喫茶店|きっさてん|old-style coffee shop|3}、どっちがいい？",
+   "en": "A chain café by the station, or a coffee shop near the cinema: which do you prefer?",
+   "register": "casual"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "21:38",
+   "jp": "どう{違う|ちがう}の？",
+   "en": "What's the difference?",
+   "register": "casual"
+  },
+  {
+   "who": "ren",
+   "speaker": "レン",
+   "time": "21:41",
+   "jp": "{喫茶店|きっさてん|old-style coffee shop|3}は{チェーン店|チェーンてん|chain store|3}に{比べて|くらべて}ちょっと{高い|たかい}けど、{雰囲気|ふんいき|atmosphere|4}がいいよ",
+   "en": "The coffee shop is a bit pricier than the chain, but it has a nice atmosphere.",
+   "register": "casual"
+  },
+  {
+   "who": "ren",
+   "speaker": "レン",
+   "time": "21:41",
+   "jp": "{マスター||owner (of a café or bar)|3}が{自分|じぶん}で{豆|まめ|(coffee) beans|3}を{焙煎|ばいせん|roasting (coffee)|1}してるんだ",
+   "en": "The owner roasts the beans himself.",
+   "register": "casual"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "21:43",
+   "jp": "じゃあ{喫茶店|きっさてん|old-style coffee shop|3}がいい！{駅|えき}に{着いたら|ついたら}{連絡|れんらく}するね",
+   "en": "Then the coffee shop! I'll message you when I get to the station.",
+   "register": "casual"
+  },
+  {
+   "who": "ren",
+   "speaker": "レン",
+   "time": "21:45",
+   "jp": "うん、2{時|じ}に。{雪|ゆき}が{降ったら|ふったら}、{無理|むり}しないでね",
+   "en": "OK, at 2. If it snows, don't push yourself.",
+   "register": "casual"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "21:45",
+   "sticker": "tanoshimi",
+   "jp": "楽しみ！",
+   "en": "Can't wait!"
+  }
+ ],
+ "listening": {
+  "type": "announcement",
+  "intro": "Earlier that evening, an announcement at the supermarket just before closing.",
+  "who": "extra",
+  "title": "スーパーのお{知らせ|しらせ}",
+  "place": "The shopping-street supermarket, {鷹ノ原|たかのはら}",
+  "lines": [
+   {
+    "who": "extra",
+    "voice": "m",
+    "jp": "ご{来店|らいてん|coming to the shop|2}ありがとうございます。{当店|とうてん|this shop|2}は{夜|よる}8{時|じ}で{閉店|へいてん|closing (a shop)|3}いたします。",
+    "en": "Thank you for shopping with us. The shop closes at 8 p.m."
+   },
+   {
+    "who": "extra",
+    "voice": "m",
+    "jp": "ただいま、お{弁当|べんとう}とお{惣菜|そうざい|ready-made side dishes|3}が{半額|はんがく|half price|3}です。",
+    "en": "Right now, boxed meals and ready-made dishes are half price."
+   }
+  ],
+  "question": "お{店|みせ}は{何時|なんじ}に{閉まります|しまります}か。",
+  "options": [
+   "8じ",
+   "7じはん",
+   "8じはん",
+   "9じ"
+  ],
+  "explain": "{夜|よる}8{時|じ}で{閉店|へいてん}: the shop closes at 8 p.m."
+ },
+ "grammar": {
+  "id": "n4-tara",
+  "pattern": "〜たら",
+  "level": "N4",
+  "meaning": "if / when (after)",
+  "form": "verbs: た-form + ら ({着|つ}いた → {着|つ}いたら, {降|ふ}った → {降|ふ}ったら) · い-adj: -かったら ({高|たか}い → {高|たか}かったら) · noun / な-adj: + だったら ({雨|あめ}だったら, {暇|ひま}だったら)",
+  "explanation": "Two uses: 'if' ({雪|ゆき}が{降|ふ}ったら, it may or may not happen) and 'when / once' ({着|つ}いたら, it will happen, then the next step). The second half can be a request, plan or offer, which と can't do. Build it from the た-form: {着|つ}いたら, not {着|つ}くたら.",
+  "src": [
+   "d7",
+   "d8",
+   "p1"
+  ],
+  "mark": [
+   "着いたら",
+   "降ったら",
+   "終わったら",
+   "安かったら"
+  ],
+  "examples": [
+   {
+    "jp": "{仕事|しごと}が{終わったら|おわったら}、{電話|でんわ}するね。",
+    "en": "I'll call you when I finish work."
+   },
+   {
+    "jp": "もっと{安かったら|やすかったら}、{買う|かう}んだけど。",
+    "en": "If it were cheaper, I'd buy it."
+   }
+  ],
+  "quiz": {
+   "question": "{家|いえ}に＿＿、すぐお{風呂|ふろ}に{入りたい|はいりたい}。",
+   "en": "As soon as I get home, I want to get in the bath.",
+   "options": [
+    "帰ったら",
+    "帰るたら",
+    "帰りたら",
+    "帰ったと"
+   ],
+   "explain": "た-form + ら: {帰|かえ}った → {帰|かえ}ったら."
+  },
+  "quiz_more": [
+   {
+    "question": "もし{明日|あした}＿＿、また{今度|こんど}にしよう。",
+    "en": "If it's rain tomorrow, let's do it another time.",
+    "options": [
+     "雨だったら",
+     "雨たら",
+     "雨かったら",
+     "雨だら"
+    ],
+    "explain": "Nouns take だったら: {雨|あめ}だったら."
+   },
+   {
+    "question": "その{店|みせ}、そんなに＿＿{行かない|いかない}よ。",
+    "en": "If that place is so expensive, I'm not going.",
+    "options": [
+     "高かったら",
+     "高いたら",
+     "高くたら",
+     "高だったら"
+    ],
+    "explain": "い-adjectives: drop い, add かったら."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "自家焙煎",
+  "reading": "じかばいせん",
+  "romaji": "jika baisen",
+  "meaning": "roasted in-house",
+  "where": "On the wooden sign of the {喫茶店|きっさてん}, in the photo レン sends you later that night.",
+  "breakdown": "{自家焙煎|じかばいせん}: 自家 one's own house + 焙煎 roasting → beans roasted by the shop itself.",
+  "related": "{自家製|じかせい} = homemade (bread, jam, sauces): another word you'll see on menus."
+ },
+ "tip": {
+  "mark": "喫",
+  "title": "A {喫茶店|きっさてん} is not just a café",
+  "body": "A {喫茶店|きっさてん} is an old-style coffee house with a マスター behind the counter, ナポリタン and thick toast. カフェ sounds newer and lighter. Many {喫茶店|きっさてん} do a モーニング set before 11: coffee with free toast and an egg."
+ },
+ "challenge": {
+  "type": "order",
+  "prompt": "レン: 「{駅|えき}のどこで{待ち合わせ|まちあわせ|meeting up|4}する？」 Tell him you'll send a LINE once you get off the train.",
+  "model_answer": "{電車|でんしゃ}を{降りたら|おりたら}、LINEするね。",
+  "pieces": [
+   "{電車|でんしゃ}を",
+   "{降|お}りたら、",
+   "LINE",
+   "するね。"
+  ],
+  "explanation": "{降|お}りたら comes from the た-form {降|お}りた + ら: 'once I've got off'. The first step happens, then the second (LINEする). Plain form + ね suits a friendly chat with レン.",
+  "hint": "た-form + ら, then what you'll do"
+ },
+ "vocab": [
+  {
+   "jp": "{急|きゅう}",
+   "reading": "きゅう",
+   "en": "sudden, short notice",
+   "level": "N3",
+   "src": "d0",
+   "surface": "急",
+   "note": "{急|きゅう}だけど / {急|きゅう}にごめん: softens a last-minute ask."
+  },
+  {
+   "jp": "{空|あ}く",
+   "reading": "あく",
+   "en": "to be free, become empty",
+   "level": "N4",
+   "src": "d0",
+   "surface": "空いてる",
+   "note": "{空|あ}いてる？ = are you free? Also seats: {席|せき}が{空|あ}いてる."
+  },
+  {
+   "jp": "{予定|よてい}",
+   "reading": "よてい",
+   "en": "plans, schedule",
+   "level": "N4",
+   "src": "d2",
+   "surface": "予定",
+   "note": "{予定|よてい}がある = I've got plans (a polite way to say no)."
+  },
+  {
+   "jp": "チェーン{店|てん}",
+   "reading": "ちぇーんてん",
+   "en": "chain store",
+   "level": "N3",
+   "src": "d3",
+   "surface": "チェーン店",
+   "note": "Opposite: {個人店|こじんてん}, an independent shop."
+  },
+  {
+   "jp": "{喫茶店|きっさてん}",
+   "reading": "きっさてん",
+   "en": "old-style coffee shop",
+   "level": "N3",
+   "src": "d3",
+   "surface": "喫茶店",
+   "note": "{喫|きっ} drink + {茶|さ} tea + {店|てん} shop. See today's tip."
+  },
+  {
+   "jp": "{雰囲気|ふんいき}",
+   "reading": "ふんいき",
+   "en": "atmosphere, vibe",
+   "level": "N3",
+   "src": "d5",
+   "surface": "雰囲気",
+   "note": "Careful: it's ふんいき, though many young people say ふいんき."
+  },
+  {
+   "jp": "マスター",
+   "reading": "ますたー",
+   "en": "owner (of a café or bar)",
+   "level": "N3",
+   "src": "d6",
+   "surface": "マスター",
+   "note": "What regulars call the man behind the counter. A woman owner: ママ."
+  },
+  {
+   "jp": "{豆|まめ}",
+   "reading": "まめ",
+   "en": "beans",
+   "level": "N3",
+   "src": "d6",
+   "surface": "豆",
+   "note": "Coffee beans, soy beans. {豆腐|とうふ} = tofu."
+  },
+  {
+   "jp": "{値段|ねだん}",
+   "reading": "ねだん",
+   "en": "price",
+   "level": "N3",
+   "src": "p0",
+   "surface": "値段",
+   "note": "{値段|ねだん}が{高|たか}い / {安|やす}い. On tags you'll see {価格|かかく}."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "値",
+   "track": "lesson",
+   "on": "チ",
+   "kun": "ね・あたい",
+   "meaning": "price, value",
+   "parts": "亻 person radical + 直 straight → what a person says straight out when you ask: the price, the value.",
+   "lookalike": "Not 植 (plant): 植 has 木 tree on the left, 値 has 亻 person.",
+   "words": [
+    {
+     "jp": "{値段|ねだん}",
+     "reading": "ねだん",
+     "en": "price"
+    },
+    {
+     "jp": "{値上|ねあ}がり",
+     "reading": "ねあがり",
+     "en": "price rise"
+    },
+    {
+     "jp": "{価値|かち}",
+     "reading": "かち",
+     "en": "value, worth"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "straight, honest",
+     "plant",
+     "pay"
+    ],
+    "readings": [
+     "ちだん",
+     "あたいだん",
+     "ねたん"
+    ]
+   }
+  },
+  {
+   "kanji": "定",
+   "track": "n3",
+   "on": "テイ・ジョウ",
+   "kun": "さだ(める)",
+   "meaning": "fix, decide, set",
+   "parts": "宀 roof radical + 正 correct → putting each thing in its right place under the roof: fixed, settled.",
+   "lookalike": "Not 完 (complete): both have 宀, but 完 has 元 underneath, 定 has a shape like 正.",
+   "words": [
+    {
+     "jp": "{予定|よてい}",
+     "reading": "よてい",
+     "en": "plans, schedule"
+    },
+    {
+     "jp": "{定食|ていしょく}",
+     "reading": "ていしょく",
+     "en": "set meal"
+    },
+    {
+     "jp": "{決定|けってい}",
+     "reading": "けってい",
+     "en": "decision"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "complete",
+     "correct",
+     "house"
+    ],
+    "readings": [
+     "よじょう",
+     "よさだ",
+     "よてん"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Comparing when you shop",
+   "title_jp": "お{店|みせ}で{比べる|くらべる}",
+   "intro": "Useful lines when you can't decide.",
+   "items": [
+    {
+     "jp": "こちらとこちらは、どう{違います|ちがいます}か。",
+     "en": "What's the difference between this one and this one?",
+     "note": "Point at both. Polite and very common."
+    },
+    {
+     "jp": "もう{少し|すこし}{安い|やすい}のはありますか。",
+     "en": "Do you have anything a bit cheaper?"
+    },
+    {
+     "jp": "{一番|いちばん}{人気|にんき}なのはどれですか。",
+     "en": "Which is the most popular?",
+     "note": "Staff love this question in restaurants."
+    }
+   ]
+  },
+  {
+   "title": "The classic {喫茶店|きっさてん} menu",
+   "title_jp": "{喫茶店|きっさてん|old-style coffee shop|3}のメニュー",
+   "intro": "What you'll find in an old coffee house.",
+   "items": [
+    {
+     "jp": "ブレンド",
+     "en": "house blend coffee",
+     "note": "The default order: ブレンドひとつ."
+    },
+    {
+     "jp": "ナポリタン",
+     "en": "ketchup spaghetti",
+     "note": "Invented in Japan, not Naples."
+    },
+    {
+     "jp": "クリームソーダ",
+     "en": "melon soda with ice cream",
+     "note": "Bright green, very retro, very photogenic."
+    },
+    {
+     "jp": "モーニング",
+     "en": "breakfast set",
+     "note": "Coffee price + free toast and egg, mornings only."
+    }
+   ]
+  }
+ ]
+}

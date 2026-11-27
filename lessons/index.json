@@ -211,5 +211,12 @@
   "category": "family-childhood",
   "function": "narrating",
   "format": "text"
+ },
+ {
+  "id": "2026-12-03",
+  "topic": "Asking レン out for coffee",
+  "category": "shops-eating-out",
+  "function": "comparing",
+  "format": "line"
  }
 ]
