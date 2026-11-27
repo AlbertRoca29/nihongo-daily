@@ -183,7 +183,7 @@
    ],
    "aliases": [],
    "color": "#2c4f86",
-   "status": "{現像|げんぞう}、{待った|まった}{甲斐|かい}があった📷",
+   "status": "24{日|か}の{上映|じょうえい}、{楽しみ|たのしみ}🎞",
    "where": "{長野市|ながのし}",
    "status_base": "{映画館|えいがかん}、なくならないで…🎞",
    "where_base": "{長野市|ながのし}"
@@ -947,6 +947,26 @@
     "健太's English is very weak.",
     "健太 and アルちゃん plan to shovel snow together on the morning of Sat 19 Dec."
    ]
+  },
+  {
+   "date": "2026-12-19",
+   "cast": [
+    "ren",
+    "kenta"
+   ],
+   "summary": "Saturday 19 Dec: after shovelling snow with 健太 in the morning, アルちゃん plucks up the courage on his break and asks レン to see a film together on the 24th. レン replies around 5 p.m. that his cinema is showing 『素晴らしき哉、人生！』 (It's a Wonderful Life), and leaves a voicemail: they'll meet in front of the cinema at 17:30.",
+   "new_facts": [
+    "アルちゃん keeps a paper diary.",
+    "アルちゃん asked レン out himself on 19 Dec.",
+    "Date set: Thu 24 Dec, meet in front of レン's cinema in 長野市 at 17:30; 『素晴らしき哉、人生！』 screens at 18:00.",
+    "アルちゃん's lower back hurt after shovelling snow on 19 Dec."
+   ],
+   "status_upd": {
+    "ren": {
+     "status": "24{日|か}の{上映|じょうえい}、{楽しみ|たのしみ}🎞",
+     "where": "{長野市|ながのし}"
+    }
+   }
   }
  ],
  "others": [

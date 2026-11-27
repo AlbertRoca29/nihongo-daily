@@ -1,0 +1,162 @@
+{
+ "topic": "Asking レン out for the 24th",
+ "category": "hobbies",
+ "function": "feelings",
+ "format": "text",
+ "reader": "you",
+ "cast": ["ren", "kenta"],
+ "title_jp": "{勇気|ゆうき}を{出した|だした}{日|ひ}",
+ "text_title": "12{月|がつ}19{日|にち}（{土|ど}）の{日記|にっき|diary|3}",
+ "context": "Saturday 19 December: after shovelling snow with {健太|けんた} in the morning, アルちゃん finally asks レン himself to see a film on the 24th. レン says yes: his cinema is showing an old Christmas classic. アルちゃん writes it all in his diary that night.",
+ "scene": "Saturday night. You open your diary: snow shovelling, a nervous message to レン, and the answer you waited all afternoon for.",
+ "keep": ["p0"],
+ "phrases": [
+  {"jp": "{時間|じかん}さえあれば、{映画|えいが}を{見て|みて}いる。", "en": "Whenever I have time, I'm watching films.", "register": "casual", "note": "〜さえあれば = as long as I have …: shows a real passion."},
+  {"jp": "{返事|へんじ}が{来る|くる}まで、{そわそわ||restless, fidgety|3}しちゃう。", "en": "I get all fidgety until the reply comes.", "register": "casual", "note": "そわそわする: can't sit still, checking your phone."},
+  {"jp": "{返事|へんじ}が{来て|きて}、{ほっと||relieved|4}した。", "en": "I was relieved when the reply came.", "register": "casual", "note": "ほっとする = a weight off your shoulders."},
+  {"jp": "{楽しみ|たのしみ}で{仕方がない|しかたがない|can't help it, unbearably|3}。", "en": "I'm so looking forward to it I can't stand it.", "register": "casual", "note": "〜て{仕方|しかた}がない = unbearably …"},
+  {"jp": "{趣味|しゅみ}が{同じ|おなじ}だと、{話が合う|はなしがあう|to get on, click|3}よね。", "en": "When you share a hobby, you really click.", "register": "casual", "note": "{話|はなし}が{合|あ}う = you have lots to talk about."}
+ ],
+ "dialogue_setting": "Your room above the {田中|たなか} house, late at night, under the kotatsu. A paper diary.",
+ "dialogue": [
+  {"who": "you", "speaker": "Morning", "jp": "{朝|あさ}、{健太|けんた}と{雪かき|ゆきかき|snow shovelling|3}をした。{腰|こし|lower back|3}が{痛い|いたい}けど、{気持ち|きもち}いい。", "en": "In the morning I shovelled snow with {健太|けんた}. My back hurts, but it felt good."},
+  {"who": "you", "speaker": "Lunch break", "jp": "{休憩|きゅうけい|break, rest|3}{中|ちゅう}、{勇気|ゆうき|courage|3}を{出して|だして}レンを{誘った|さそった}。「24{日|か}、{一緒|いっしょ}に{映画|えいが}{見ない|みない}？」", "en": "On my break I plucked up the courage and asked レン: 'Want to see a film together on the 24th?'"},
+  {"who": "you", "speaker": "Afternoon", "jp": "{返事|へんじ}が{来る|くる}まで、ずっと{そわそわ||restless, fidgety|3}。{仕事|しごと}に{全然|ぜんぜん}{集中|しゅうちゅう|concentration|3}できなかった。", "en": "Until the reply came I was on edge the whole time. I couldn't concentrate on work at all."},
+  {"who": "you", "speaker": "Evening", "jp": "5{時|じ}ごろ、やっと{返事|へんじ}。「いいね。『{素晴|すば}らしき{哉|かな}、{人生|じんせい}！』をやるよ」。{ほっと||relieved|4}した。", "en": "Around five, finally, a reply: 'Sounds good. They're showing It's a Wonderful Life.' What a relief."},
+  {"who": "you", "speaker": "Night", "jp": "{雪|ゆき}さえ{降らなければ|ふらなければ}、{電車|でんしゃ}は{大丈夫|だいじょうぶ}。{天気|てんき}さえよければ、{最高|さいこう}のイブになるはず。", "en": "As long as it doesn't snow, the trains will be fine. As long as the weather's good, it'll be the best Christmas Eve."},
+  {"who": "you", "speaker": "Night", "jp": "{嬉しくて|うれしくて|happy, glad|4}{眠れない|ねむれない|to sleep|4}。{由紀|ゆき}に{報告|ほうこく|report|3}して、{作戦|さくせん|plan, strategy|3}を{立てよう|たてよう}。", "en": "I'm too happy to sleep. I'll report to {由紀|ゆき} and work out a plan."}
+ ],
+ "listening": {
+  "type": "voicemail",
+  "intro": "While you were in the bath, レン called and left a message.",
+  "who": "ren",
+  "lines": [
+   {"who": "ren", "jp": "アルちゃん、レンです。お{風呂|ふろ}かな？24{日|か}は、5{時半|じはん}に{映画館|えいがかん}の{前|まえ}で{待ってる|まってる}ね。", "en": "アルちゃん, it's レン. In the bath? On the 24th I'll wait for you in front of the cinema at half past five."},
+   {"who": "ren", "jp": "{夜|よる}は{冷える|ひえる|to get cold|3}から、{暖かく|あたたかく}して{来て|きて}ね。", "en": "It gets cold at night, so wrap up warm."}
+  ],
+  "question": "24{日|か}は、{何時|なんじ}にどこで{会いますか|あいますか}。",
+  "options": ["5時半に映画館の前で", "5時に駅の前で", "6時に映画館の中で", "5時半に喫茶店で"],
+  "explain": "5{時半|じはん}に{映画館|えいがかん}の{前|まえ}で: half past five, in front of the cinema."
+ },
+ "grammar": {
+  "id": "n3-sae-ba",
+  "pattern": "〜さえ〜ば",
+  "level": "N3",
+  "meaning": "if only, as long as",
+  "form": "noun + さえ + ば-form ({雪|ゆき}さえ{降|ふ}らなければ, {天気|てんき}さえよければ, {時間|じかん}さえあれば) · verb stem + さえすれば ({練習|れんしゅう}しさえすれば, {飲|の}みさえすれば) · て-form + さえいれば ({寝|ね}てさえいれば)",
+  "explanation": "'As long as X': X is the only condition you need, and everything else will be fine. Very often 〜さえあれば or 〜さえよければ. Unlike a plain 〜ば, it stresses that nothing else matters. Alone, さえ means 'even'.",
+  "src": ["d4", "p0"],
+  "mark": ["雪さえ降らなければ", "天気さえよければ", "時間さえあれば", "ご飯さえあれば", "飲みさえすれば"],
+  "examples": [
+   {"jp": "{颯太|そうた}は、ゲームさえあれば{何|なに}もいらない。", "en": "As long as {颯太|そうた} has his games, he needs nothing else."},
+   {"jp": "{健太|けんた}は、お{好み焼き|このみやき|okonomiyaki|4}さえあれば{幸せ|しあわせ}だ。", "en": "{健太|けんた} is happy as long as there's okonomiyaki."}
+  ],
+  "quiz": {
+   "question": "お{金|かね}＿＿あれば、{旅行|りょこう}に{行ける|いける}のに。",
+   "en": "If only I had the money, I could go travelling.",
+   "options": ["さえ", "しか", "より", "ほど"],
+   "explain": "Noun + さえ + ば: money is the only thing missing."
+  },
+  "quiz_more": [
+   {
+    "question": "この{薬|くすり}を{飲み|のみ}＿＿すれば、すぐ{治ります|なおります}よ。",
+    "en": "As long as you take this medicine, you'll soon get better.",
+    "options": ["さえ", "たり", "ながら", "ても"],
+    "explain": "Verb stem + さえすれば = as long as you just do it."
+   },
+   {
+    "question": "{雪|ゆき}さえ＿＿、{電車|でんしゃ}は{止まらない|とまらない}。",
+    "en": "As long as it doesn't snow, the trains won't stop.",
+    "options": ["降らなければ", "降らなくて", "降らないで", "降らないのに"],
+    "explain": "さえ needs a ば-form after it: {降|ふ}らなければ."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "上映",
+  "reading": "じょうえい",
+  "romaji": "jōei",
+  "meaning": "screening (of a film)",
+  "where": "On the cinema's schedule page レン sends with his reply: 「{上映|じょうえい}{時間|じかん} 18:00」.",
+  "breakdown": "上 up + 映 project, reflect → putting the picture up on the screen.",
+  "related": "{上映中|じょうえいちゅう} = now showing. {映画|えいが} = film."
+ },
+ "tip": {
+  "mark": "心",
+  "title": "Three heartbeats",
+  "body": "ドキドキ is a pounding heart, from nerves or love. わくわく is happy excitement before something fun. そわそわ is restless: you can't sit still and keep checking your phone."
+ },
+ "challenge": {
+  "type": "write",
+  "prompt": "{由紀|ゆき} on LINE: 「で、レン{誘えた|さそえた}の？？」 Tell her you did, and that as long as it doesn't snow, you're seeing a film on the 24th.",
+  "model_answer": "{誘えた|さそえた}よ！{雪|ゆき}さえ{降らなければ|ふらなければ}、24{日|か}に{映画|えいが}を{見に行く|みにいく}よ。",
+  "explanation": "{誘|さそ}えた is the potential past: 'I managed to ask him'. {雪|ゆき}さえ{降|ふ}らなければ sets the only condition: as long as it doesn't snow. With {由紀|ゆき} plain form and よ keep it casual.",
+  "hint": "noun + さえ + negative ば-form"
+ },
+ "vocab": [
+  {"jp": "{腰|こし}", "reading": "こし", "en": "lower back, hips", "level": "N3", "src": "d0", "surface": "腰", "note": "{腰|こし}が{痛|いた}い = lower back pain, very common after snow shovelling."},
+  {"jp": "{休憩|きゅうけい}", "reading": "きゅうけい", "en": "break, rest", "level": "N3", "src": "d1", "surface": "休憩", "note": "{休憩中|きゅうけいちゅう} = on a break. Sign on shop doors too."},
+  {"jp": "そわそわ", "reading": "そわそわ", "en": "restless, fidgety", "level": "N3", "src": "d2", "surface": "そわそわ", "note": "そわそわする. Nervous waiting, often before something good."},
+  {"jp": "{集中|しゅうちゅう}", "reading": "しゅうちゅう", "en": "concentration", "level": "N3", "src": "d2", "surface": "集中", "note": "〜に{集中|しゅうちゅう}する. {集|あつ}める gather + {中|なか} centre."},
+  {"jp": "ほっと", "reading": "ほっと", "en": "relieved", "level": "N3", "src": "d3", "surface": "ほっと", "note": "ほっとする. Like a sigh of relief: ほっ."},
+  {"jp": "{嬉|うれ}しい", "reading": "うれしい", "en": "happy, glad", "level": "N4", "src": "d5", "surface": "嬉しくて", "note": "For your own feelings. For others: {嬉|うれ}しそう."},
+  {"jp": "{眠|ねむ}る", "reading": "ねむる", "en": "to sleep", "level": "N4", "src": "d5", "surface": "眠れない", "note": "{眠|ねむ}れない = can't get to sleep. {寝|ね}る = go to bed."},
+  {"jp": "{報告|ほうこく}", "reading": "ほうこく", "en": "report", "level": "N3", "src": "d5", "surface": "報告", "note": "Work word, used jokingly with friends: {報告|ほうこく}します！"},
+  {"jp": "{仕方|しかた}がない", "reading": "しかたがない", "en": "can't be helped; unbearably", "level": "N3", "src": "p3", "surface": "仕方がない", "note": "Alone: it can't be helped. After 〜て: unbearably."},
+  {"jp": "{話|はなし}が{合|あ}う", "reading": "はなしがあう", "en": "to get on, click", "level": "N3", "src": "p4", "surface": "話が合う", "note": "Lots to talk about, same wavelength."}
+ ],
+ "kanji_study": [
+  {
+   "kanji": "眠",
+   "track": "lesson",
+   "on": "ミン",
+   "kun": "ねむ(る)・ねむ(い)",
+   "meaning": "sleep",
+   "parts": "目 eye + 民 people → the eyes of all the people closed at night: sleep.",
+   "lookalike": "Not 眼 (eye): 眼 has 艮 on the right, 眠 has 民 people.",
+   "words": [
+    {"jp": "{眠|ねむ}る", "reading": "ねむる", "en": "to sleep"},
+    {"jp": "{眠|ねむ}い", "reading": "ねむい", "en": "sleepy"},
+    {"jp": "{睡眠|すいみん}", "reading": "すいみん", "en": "sleep (formal)"}
+   ],
+   "decoys": {"meanings": ["to wake up", "eye", "dream"], "readings": ["ねぶる", "みむる", "ねまる"]}
+  },
+  {
+   "kanji": "戦",
+   "track": "n3",
+   "on": "セン",
+   "kun": "たたか(う)・いくさ",
+   "meaning": "war, battle, fight",
+   "parts": "単 a simple forked weapon + 戈 halberd → weapons clashing: battle.",
+   "lookalike": "Not 我 (I, self): 我 has no 単 on the left.",
+   "words": [
+    {"jp": "{作戦|さくせん}", "reading": "さくせん", "en": "plan, strategy"},
+    {"jp": "{挑戦|ちょうせん}", "reading": "ちょうせん", "en": "challenge, attempt"},
+    {"jp": "{戦争|せんそう}", "reading": "せんそう", "en": "war"}
+   ],
+   "decoys": {"meanings": ["peace", "weapon", "victory"], "readings": ["さくぜん", "さっせん", "つくせん"]}
+  }
+ ],
+ "extras": [
+  {
+   "title": "Inviting, softly",
+   "title_jp": "やわらかく{誘う|さそう}",
+   "intro": "Negative questions make an invitation easy to refuse, which makes it easier to say.",
+   "items": [
+    {"jp": "{一緒|いっしょ}に{映画|えいが}{見ない|みない}？", "en": "Want to watch a film together?"},
+    {"jp": "よかったら、{今度|こんど}ご{飯|はん}でもどう？", "en": "If you like, how about dinner sometime?"},
+    {"jp": "{無理|むり}だったら、{全然|ぜんぜん}{大丈夫|だいじょうぶ}だから。", "en": "If you can't, that's totally fine.", "note": "Leaves the other person a way out."}
+   ]
+  },
+  {
+   "title": "Film words",
+   "title_jp": "{映画|えいが}の{言葉|ことば}",
+   "intro": "For your night at レン's cinema.",
+   "items": [
+    {"jp": "{字幕|じまく|subtitles|3}", "en": "subtitles", "note": "Old foreign films are usually {字幕|じまく}, not dubbed."},
+    {"jp": "{吹き替え|ふきかえ|dubbing|3}", "en": "dubbed version"},
+    {"jp": "{名作|めいさく|masterpiece, classic|3}", "en": "a classic, masterpiece"}
+   ]
+  }
+ ]
+}

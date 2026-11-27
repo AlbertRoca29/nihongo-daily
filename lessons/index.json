@@ -323,5 +323,12 @@
   "category": "language",
   "function": "narrating",
   "format": "dialogue"
+ },
+ {
+  "id": "2026-12-19",
+  "topic": "Asking レン out for the 24th",
+  "category": "hobbies",
+  "function": "feelings",
+  "format": "text"
  }
 ]
