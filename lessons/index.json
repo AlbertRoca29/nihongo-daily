@@ -267,5 +267,12 @@
   "category": "review",
   "function": "hearsay",
   "format": "line"
+ },
+ {
+  "id": "2026-12-11",
+  "topic": "A Christmas parcel to Spain",
+  "category": "home-admin",
+  "function": "planning",
+  "format": "story"
  }
 ]

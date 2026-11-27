@@ -238,7 +238,7 @@
    ],
    "aliases": [],
    "color": "#c9a227",
-   "status": "{面接|めんせつ}{練習|れんしゅう}ガチでやる🎺✈",
+   "status": "{面接|めんせつ}{終わった|おわった}〜！{結果|けっか}{待ち|まち}🙏",
    "where": "{鷹ノ原高校|たかのはらこうこう}",
    "status_base": "{避難訓練|ひなんくんれん}、アルちゃんガチで{走ってた|はしってた}ｗ",
    "where_base": "{鷹ノ原高校|たかのはらこうこう}"
@@ -818,6 +818,26 @@
    "status_upd": {
     "kenta": {
      "status": "アルちゃん、{10回|じゅっかい}{転んだ|ころんだ}ｗ🏂"
+    }
+   }
+  },
+  {
+   "date": "2026-12-11",
+   "cast": [
+    "sato",
+    "mio",
+    "keiko"
+   ],
+   "summary": "Friday 11 Dec: on 恵子さん's advice アルちゃん sends his family in Spain a Christmas parcel by airmail from the 鷹ノ原 post office; it's over 2 kg, so he swaps a bottle of apple juice for a letter to his mother. In the afternoon 佐藤先生 leaves a voicemail: 澪's interview went off fine and she spoke calmly thanks to practising with him.",
+   "new_facts": [
+    "On 11 Dec アルちゃん sent his family in Spain a Christmas parcel by airmail (about a week), with a letter to his mother.",
+    "The 鷹ノ原 post office has an international mail (国際郵便) window.",
+    "アルちゃん practised the interview with 澪 before Fri 11 Dec; the interview went smoothly. The result isn't known yet.",
+    "アルちゃん's December plan: 年賀状 next week, then the big year-end clean (大掃除)."
+   ],
+   "status_upd": {
+    "mio": {
+     "status": "{面接|めんせつ}{終わった|おわった}〜！{結果|けっか}{待ち|まち}🙏"
     }
    }
   }

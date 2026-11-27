@@ -1,0 +1,441 @@
+{
+ "topic": "A Christmas parcel to Spain",
+ "category": "home-admin",
+ "function": "planning",
+ "format": "story",
+ "cast": [
+  "sato"
+ ],
+ "title_jp": "スペインへの{小包|こづつみ}",
+ "context": "Friday 11 December: アルちゃん takes a Christmas parcel for his family in Spain to the {鷹ノ原|たかのはら} post office, finds it's over 2 kg and swaps a bottle of apple juice for a letter. Later {佐藤先生|さとうせんせい} leaves a voicemail about {澪|みお}'s interview.",
+ "scene": "Friday evening. You tell how you sent a Christmas parcel to your family in Spain, and plan the rest of December.",
+ "keep": [
+  "p0",
+  "p1"
+ ],
+ "phrases": [
+  {
+   "jp": "これ、スペインまで{送りたい|おくりたい}んですが。",
+   "en": "I'd like to send this to Spain.",
+   "register": "polite",
+   "note": "〜んですが: the soft way to start a request at any counter."
+  },
+  {
+   "jp": "{航空便|こうくうびん|airmail|3}だと、{何日|なんにち}くらいかかりますか。",
+   "en": "By airmail, about how many days does it take?",
+   "register": "polite",
+   "note": "Sea mail = {船便|ふなびん}: cheaper, but takes weeks."
+  },
+  {
+   "jp": "{中身|なかみ}は{何|なん}ですか。",
+   "en": "What's inside?",
+   "register": "polite",
+   "note": "What the clerk asks. Answer: お{菓子|かし}と{手紙|てがみ}です。"
+  },
+  {
+   "jp": "{送料|そうりょう|postage, shipping fee|3}って、いくら？",
+   "en": "How much is the postage?",
+   "register": "casual",
+   "note": "Noun + って = casual は: asking about a topic."
+  },
+  {
+   "jp": "{早めに|はやめに|early, in good time|3}{出した|だした}ほうがいいって。",
+   "en": "They say it's better to send it early.",
+   "register": "casual",
+   "note": "Ending in って = 'they say', passing on advice."
+  }
+ ],
+ "dialogue_setting": "アルちゃん tells the story that evening at the kotatsu: a morning at the {鷹ノ原|たかのはら} post office, up the slope from the bus stop.",
+ "dialogue": [
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "スペインの{家族|かぞく}に、クリスマスプレゼントを{送る|おくる}ことにした。{恵子|けいこ}さんが、{早めに|はやめに|early, in good time|3}{出した|だした}ほうがいいって。",
+   "en": "I decided to send my family in Spain a Christmas present. {恵子|けいこ}さん said it's better to send it early.",
+   "register": "neutral"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "{窓口|まどぐち|counter, service window|3}の{人|ひと}が{伝票|でんぴょう|shipping form, slip|2}をくれた。{中身|なかみ}は{英語|えいご}で{書く|かく}んだって。",
+   "en": "The person at the counter gave me a shipping form. Apparently you write the contents in English.",
+   "register": "neutral"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "{航空便|こうくうびん|airmail|3}なら、{一週間|いっしゅうかん}くらいで{着く|つく}って{言われた|いわれた}。クリスマスに{間に合う|まにあう}！",
+   "en": "I was told that by airmail it arrives in about a week. It'll make it for Christmas!",
+   "register": "neutral"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "でも{箱|はこ}を{量ったら|はかったら|to weigh|3}、{全部|ぜんぶ}で2キロを{超えて|こえて|to go over, exceed|3}いた。{送料|そうりょう|postage, shipping fee|3}が{高い|たかい}！",
+   "en": "But when they weighed the box, it was over 2 kilos in total. The postage was expensive!",
+   "register": "neutral"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "りんごジュースを{一本|いっぽん}{出して|だして}、{代わりに|かわりに|instead|3}{母|はは}への{手紙|てがみ}を{入れた|いれた}。",
+   "en": "I took out a bottle of apple juice and put in a letter to my mum instead.",
+   "register": "neutral"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "{帰り道|かえりみち}で{予定|よてい}を{立てた|たてた|to make (a plan)|3}。{来週|らいしゅう}は{年賀状|ねんがじょう}、その{次|つぎ}は{大掃除|おおそうじ|big year-end clean|3}だ。",
+   "en": "On the way home I made a plan. Next week, New Year cards; after that, the big year-end clean.",
+   "register": "neutral"
+  }
+ ],
+ "listening": {
+  "type": "voicemail",
+  "intro": "In the afternoon, {佐藤先生|さとうせんせい} leaves you a voicemail.",
+  "who": "sato",
+  "lines": [
+   {
+    "who": "sato",
+    "jp": "アルちゃん、{佐藤|さとう}です。{澪|みお}さんの{面接|めんせつ|interview|3}、{無事|ぶじ|safely, without trouble|3}{終わりました|おわりました}。",
+    "en": "アルちゃん, it's {佐藤|さとう}. {澪|みお}さん's interview went off without a hitch."
+   },
+   {
+    "who": "sato",
+    "jp": "アルちゃんと{練習|れんしゅう}したおかげで、{落ち着いて|おちついて}{話せた|はなせた}そうです。ありがとうございました。",
+    "en": "She says that thanks to practising with you, she could speak calmly. Thank you very much."
+   }
+  ],
+  "question": "{澪|みお}さんの{面接|めんせつ}は、どうでしたか。",
+  "options": [
+   "おちついて話せた",
+   "きんちょうして話せなかった",
+   "まだおわっていない",
+   "来週になった"
+  ],
+  "explain": "{落|お}ち{着|つ}いて{話|はな}せたそうです: she spoke calmly, thanks to your practice."
+ },
+ "grammar": {
+  "id": "n3-tte",
+  "pattern": "〜って",
+  "level": "N3",
+  "meaning": "they say / speaking of / quote (casual)",
+  "form": "quote: plain form + って ({着|つ}くって{言|い}われた, いいって) · hearsay: 〜んだって ({書|か}くんだって) · topic: noun + って ({送料|そうりょう}って, クリスマスって)",
+  "explanation": "Casual って does three jobs: it replaces と when quoting, it ends a sentence to mean 'they say', and after a noun it means 'as for / what's…'. Keep it for speech and LINE; in emails use と{言|い}っていました or だそうです.",
+  "src": [
+   "d0",
+   "d1",
+   "d2",
+   "p3"
+  ],
+  "mark": [
+   "いいって",
+   "書くんだって",
+   "着くって",
+   "送料って",
+   "クリスマスって",
+   "遅れるって"
+  ],
+  "examples": [
+   {
+    "jp": "クリスマスって、{日本|にほん}ではケーキを{食べる|たべる}の？",
+    "en": "Is Christmas in Japan about eating cake?"
+   },
+   {
+    "jp": "{健太|けんた}、{今日|きょう}ちょっと{遅れる|おくれる}って。",
+    "en": "{健太|けんた} says he'll be a bit late today."
+   }
+  ],
+  "quiz": {
+   "question": "{窓口|まどぐち|counter, service window|3}の{人|ひと}が、{一週間|いっしゅうかん}かかる＿＿{言って|いって}た。",
+   "en": "The person at the counter said it takes a week.",
+   "options": [
+    "って",
+    "て",
+    "だって",
+    "っては"
+   ],
+   "explain": "Plain verb + って + {言|い}う: casual と. No だ after a verb."
+  },
+  "quiz_more": [
+   {
+    "question": "{澪|みお}の{面接|めんせつ}、うまくいった＿＿！",
+    "en": "I hear {澪|みお}'s interview went well!",
+    "options": [
+     "んだって",
+     "んだっけ",
+     "っぽい",
+     "なんて"
+    ],
+    "explain": "Passing on news you heard → 〜んだって. っけ is for things you forgot."
+   },
+   {
+    "question": "「{送料|そうりょう}」＿＿{何|なん}ですか。",
+    "en": "What does 'postage' mean?",
+    "options": [
+     "って",
+     "とか",
+     "なんか",
+     "だっけ"
+    ],
+    "explain": "Word + って{何|なん}？ is how you ask what a word means."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "国際郵便",
+  "reading": "こくさいゆうびん",
+  "romaji": "kokusai yūbin",
+  "meaning": "international mail",
+  "where": "The sign over the far window at the {鷹ノ原|たかのはら} post office.",
+  "breakdown": "{国際|こくさい}: 国 country + 際 edge, between → 'between countries'; 郵便 = mail.",
+  "related": "{国内|こくない} = domestic. {郵便局|ゆうびんきょく} = post office."
+ },
+ "tip": {
+  "mark": "郵",
+  "title": "The 〒 mark",
+  "body": "〒 means post: on postboxes, maps, and before postcodes on envelopes. Most red postboxes have two slots, one for ordinary letters and postcards and one for express and bigger mail. Read the labels before you drop in your {年賀状|ねんがじょう}."
+ },
+ "challenge": {
+  "type": "pick",
+  "prompt": "{恵子|けいこ}さん: 「{郵便局|ゆうびんきょく}の{人|ひと}、なんて{言ってた|いってた}？」 Tell her they said it arrives in about a week.",
+  "options": [
+   {
+    "jp": "{一週間|いっしゅうかん}くらいで{着|つ}くって{言|い}ってました！",
+    "ok": true,
+    "why": "Plain {着|つ}く + って quotes it; {言|い}ってました is soft polite for {恵子|けいこ}さん."
+   },
+   {
+    "jp": "{一週間|いっしゅうかん}くらいで{着|つ}くだって{言|い}ってました！",
+    "ok": false,
+    "why": "No だ between a verb and って."
+   },
+   {
+    "jp": "{一週間|いっしゅうかん}くらいで{着|つ}いてって{言|い}ってました！",
+    "ok": false,
+    "why": "{着|つ}いてって sounds like 'they told it to arrive' (a request)."
+   },
+   {
+    "jp": "{一週間|いっしゅうかん}くらいで{着|つ}くっけ{言|い}ってました！",
+    "ok": false,
+    "why": "っけ is for trying to remember, not for quoting."
+   }
+  ],
+  "model_answer": "{一週間|いっしゅうかん}くらいで{着く|つく}って{言って|いって}ました！",
+  "explanation": "The words you heard stay in plain form ({着|つ}く) and って replaces と. {言|い}ってました (from {言|い}っていました) reports what someone said. It's warm but still polite, right for {恵子|けいこ}さん.",
+  "hint": "plain form + って + {言|い}う"
+ },
+ "vocab": [
+  {
+   "jp": "{早|はや}め",
+   "reading": "はやめ",
+   "en": "early, a bit early",
+   "level": "N3",
+   "src": "d0",
+   "surface": "早め",
+   "note": "{早|はや}めに = in good time. Opposite: {遅|おそ}めに."
+  },
+  {
+   "jp": "{窓口|まどぐち}",
+   "reading": "まどぐち",
+   "en": "counter, service window",
+   "level": "N3",
+   "src": "d1",
+   "surface": "窓口",
+   "note": "{窓|まど} window + {口|くち} opening. At banks, stations, city hall."
+  },
+  {
+   "jp": "{伝票|でんぴょう}",
+   "reading": "でんぴょう",
+   "en": "slip, shipping form",
+   "level": "N2",
+   "src": "d1",
+   "surface": "伝票",
+   "note": "Parcel forms, and the bill at a restaurant table."
+  },
+  {
+   "jp": "{航空便|こうくうびん}",
+   "reading": "こうくうびん",
+   "en": "airmail",
+   "level": "N3",
+   "src": "d2",
+   "surface": "航空便",
+   "note": "{航空|こうくう} aviation + {便|びん} mail, flight."
+  },
+  {
+   "jp": "{超|こ}える",
+   "reading": "こえる",
+   "en": "to exceed, go over",
+   "level": "N3",
+   "src": "d3",
+   "surface": "超えて",
+   "note": "For numbers and limits. Over a mountain: {越|こ}える."
+  },
+  {
+   "jp": "{送料|そうりょう}",
+   "reading": "そうりょう",
+   "en": "postage, shipping fee",
+   "level": "N3",
+   "src": "d3",
+   "surface": "送料",
+   "note": "{送|おく}る send + {料|りょう} fee. Online: {送料無料|そうりょうむりょう} = free shipping."
+  },
+  {
+   "jp": "{代|か}わりに",
+   "reading": "かわりに",
+   "en": "instead",
+   "level": "N3",
+   "src": "d4",
+   "surface": "代わりに",
+   "note": "Noun + の{代|か}わりに = instead of. Also 'in return'."
+  },
+  {
+   "jp": "{立|た}てる",
+   "reading": "たてる",
+   "en": "to make (a plan); to stand up",
+   "level": "N4",
+   "src": "d5",
+   "surface": "立てた",
+   "note": "{予定|よてい}を{立|た}てる, {計画|けいかく}を{立|た}てる = make a plan."
+  },
+  {
+   "jp": "{大掃除|おおそうじ}",
+   "reading": "おおそうじ",
+   "en": "big year-end clean",
+   "level": "N3",
+   "src": "d5",
+   "surface": "大掃除",
+   "note": "Late December, the whole house, before New Year."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "代",
+   "track": "lesson",
+   "on": "ダイ・タイ",
+   "kun": "か(わる)・か(える)・よ",
+   "meaning": "replace, instead; generation; fee",
+   "parts": "亻 person radical + 弋 a stake → one person taking the post of another: replace.",
+   "lookalike": "Not 伐 (cut down): 伐 has 戈 a spear, 代 has 弋 with no extra stroke.",
+   "words": [
+    {
+     "jp": "{代|か}わりに",
+     "reading": "かわりに",
+     "en": "instead"
+    },
+    {
+     "jp": "{時代|じだい}",
+     "reading": "じだい",
+     "en": "era, period"
+    },
+    {
+     "jp": "{電気代|でんきだい}",
+     "reading": "でんきだい",
+     "en": "electricity bill"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "exchange",
+     "person",
+     "change"
+    ],
+    "readings": [
+     "だいりに",
+     "かえりに",
+     "よわりに"
+    ]
+   }
+  },
+  {
+   "kanji": "全",
+   "track": "n3",
+   "on": "ゼン",
+   "kun": "まった(く)・すべ(て)",
+   "meaning": "all, whole",
+   "parts": "𠆢 a roof + 王 a piece of jade → treasure kept whole and safe under a roof: complete, all.",
+   "lookalike": "Not 金 (gold, money): 金 has extra dots and strokes under the roof, 全 just 王.",
+   "words": [
+    {
+     "jp": "{全部|ぜんぶ}",
+     "reading": "ぜんぶ",
+     "en": "all, everything"
+    },
+    {
+     "jp": "{全然|ぜんぜん}",
+     "reading": "ぜんぜん",
+     "en": "(not) at all"
+    },
+    {
+     "jp": "{安全|あんぜん}",
+     "reading": "あんぜん",
+     "en": "safety, safe"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "gold",
+     "half",
+     "king"
+    ],
+    "readings": [
+     "ぜんぼ",
+     "すべぶ",
+     "きんぶ"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "At the post office counter",
+   "title_jp": "{郵便局|ゆうびんきょく}の{窓口|まどぐち}で",
+   "intro": "What the clerk may ask you.",
+   "items": [
+    {
+     "jp": "{割れ物|われもの|fragile item|3}は{入って|はいって}いますか。",
+     "en": "Is there anything fragile in it?",
+     "note": "Glass bottles count."
+    },
+    {
+     "jp": "{電池|でんち}は{入って|はいって}いませんか。",
+     "en": "No batteries inside?",
+     "note": "Batteries often can't go by air."
+    },
+    {
+     "jp": "こちらにサインをお{願い|ねがい}します。",
+     "en": "Please sign here.",
+     "note": "At the end of every form."
+    }
+   ]
+  },
+  {
+   "title": "Christmas in Japan",
+   "title_jp": "{日本|にほん}のクリスマス",
+   "intro": "Not a holiday, but everywhere.",
+   "items": [
+    {
+     "jp": "クリスマスケーキ",
+     "en": "Christmas cake",
+     "note": "Strawberry sponge cake, ordered weeks ahead."
+    },
+    {
+     "jp": "イルミネーション",
+     "en": "Christmas lights",
+     "note": "Couples go out to see them on the 24th."
+    },
+    {
+     "jp": "クリぼっち",
+     "en": "spending Christmas alone",
+     "note": "Slang: クリスマス + ひとりぼっち (alone)."
+    }
+   ]
+  }
+ ]
+}
