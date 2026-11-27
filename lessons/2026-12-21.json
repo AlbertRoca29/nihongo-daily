@@ -1,0 +1,161 @@
+{
+ "topic": "Homesick at the kotatsu",
+ "category": "feelings",
+ "function": "advice",
+ "format": "dialogue",
+ "cast": ["tanaka"],
+ "title_jp": "{離れて|はなれて}いるからこそ",
+ "context": "Monday 21 December: after a video call with his mother, アルちゃん feels homesick for the first time: it's his first Christmas away from his family. At the kotatsu, {田中|たなか}さん gives him advice in his own quiet way.",
+ "scene": "Monday night at the kotatsu. You've just hung up on your mum in Spain and gone quiet. {田中|たなか}さん notices.",
+ "keep": ["p0"],
+ "phrases": [
+  {"jp": "{寂しい|さびしい|lonely|3}{時|とき}こそ、{誰か|だれか}と{話した|はなした}ほうがいいよ。", "en": "It's exactly when you're lonely that you should talk to someone.", "register": "casual", "note": "〜{時|とき}こそ = precisely when… A classic piece of advice."},
+  {"jp": "こちらこそ、よろしくお{願い|ねがい}します。", "en": "The pleasure's mine. (No, I should be thanking you.)", "register": "polite", "note": "Reply to よろしく or ありがとう: 'no, it's me who…'"},
+  {"jp": "{泣きたい|なきたい}ときは、{思い切り|おもいきり|to your heart's content|3}{泣いて|ないて}いいんだよ。", "en": "When you want to cry, it's fine to have a good cry.", "register": "casual", "note": "〜ていいんだよ = it's OK to… Gentle and warm."},
+  {"jp": "{来年|らいねん}こそ、N3に{合格|ごうかく|passing (an exam)|3}するぞ！", "en": "Next year I'm passing N3, for sure!", "register": "casual", "note": "Heard everywhere in late December: {来年|らいねん}こそ…!"},
+  {"jp": "ホームシックになったら、{家族|かぞく}の{写真|しゃしん}を{眺める|ながめる|to gaze at|3}といいよ。", "en": "When you get homesick, it helps to look at photos of your family.", "register": "casual", "note": "〜といいよ = it's good to… Friendly advice."}
+ ],
+ "dialogue_setting": "The {田中|たなか} living room, Monday evening. {恵子|けいこ}さん is in the bath; the TV is on with the sound low.",
+ "dialogue": [
+  {"who": "tanaka", "speaker": "田中さん", "jp": "{昨日|きのう}のパエリア、うまかっただに。…どうした、{調子|ちょうし|condition, shape|4}{悪い|わるい}のか。", "en": "Yesterday's paella was really good. …What's up, feeling off?", "register": "dialect", "note": "だに = emphasis (Nagano), like だよ."},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "jp": "{母|はは}とビデオ{通話|つうわ|(phone) call|3}したら、{急に|きゅうに}{家族|かぞく}に{会いたく|あいたく}なっちゃって…", "en": "I had a video call with my mum, and suddenly I really wanted to see my family…", "register": "neutral"},
+  {"who": "tanaka", "speaker": "田中さん", "jp": "{寂しい|さびしい|lonely|3}{時|とき}こそ、{体|からだ}を{動かす|うごかす|to move|4}といい。{明日|あした}、{枝|えだ|branch|3}の{雪|ゆき}{落とし|おとし}を{手伝え|てつだえ}。", "en": "It's exactly when you're lonely that you should move your body. Tomorrow, help me knock the snow off the branches.", "register": "casual"},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "jp": "はい。…{家族|かぞく}と{離れて|はなれて|to be apart|3}{過ごす|すごす}クリスマスは{初めて|はじめて}なんです。{ホームシック||homesick|3}かも。", "en": "OK. …It's my first Christmas away from my family. Maybe I'm homesick.", "register": "polite"},
+  {"who": "tanaka", "speaker": "田中さん", "jp": "{離れて|はなれて|to be apart|3}いるからこそ、{家族|かぞく}の{有り難さ|ありがたさ|value, gratitude|3}が{分かる|わかる}。それに、ここもアルちゃんの{家|いえ}だに。", "en": "It's because you're apart that you see what family means. And besides, this is your home too.", "register": "dialect", "note": "だに = emphasis (Nagano)."},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "jp": "…ありがとうございます。その{言葉|ことば}に、すごく{励まされました|はげまされました|to encourage|3}。", "en": "…Thank you. Those words really cheered me up.", "register": "polite"}
+ ],
+ "listening": {
+  "type": "dictation",
+  "intro": "As he gets up to go to bed, {田中|たなか}さん adds one more thing. Type it.",
+  "who": "tanaka",
+  "lines": [
+   {"who": "tanaka", "jp": "{明日|あした}は{五時|ごじ}{起き|おき}だに。{早く|はやく}{寝ろ|ねろ}。", "en": "Tomorrow we're up at five. Get to bed early."}
+  ]
+ },
+ "grammar": {
+  "id": "n3-koso",
+  "pattern": "〜こそ",
+  "level": "N3",
+  "meaning": "precisely, it's X that",
+  "form": "noun + こそ ({来年|らいねん}こそ, こちらこそ) · time + こそ ({寂|さび}しい{時|とき}こそ) · reason + からこそ ({離|はな}れているからこそ, だからこそ)",
+  "explanation": "こそ puts a spotlight on one thing: 'this, and no other'. {来年|らいねん}こそ = next year for sure (unlike this one). からこそ = precisely because. After thanks or an apology, こちらこそ = 'no, I should say that'. It's stronger than は or が.",
+  "src": ["d4", "d2", "p0", "p1", "p3"],
+  "mark": ["からこそ", "時こそ", "こちらこそ", "来年こそ", "今度こそ", "だからこそ"],
+  "examples": [
+   {"jp": "{今度|こんど}こそ、{絶対|ぜったい}{勝つ|かつ}で！", "en": "This time I'm winning for sure! (says {健太|けんた})"},
+   {"jp": "{田舎|いなか|countryside|3}だからこそ、{星|ほし}がきれいに{見える|みえる}。", "en": "It's precisely because it's the countryside that you can see the stars so well."}
+  ],
+  "quiz": {
+   "question": "「いつもありがとう」「いえ、こちら＿＿」",
+   "en": "'Thanks as always.' 'No, thank YOU.'",
+   "options": ["こそ", "だけ", "しか", "まで"],
+   "explain": "こちらこそ = it's me who should say it."
+  },
+  "quiz_more": [
+   {
+    "question": "{失敗|しっぱい}した＿＿、{分かる|わかる}こともある。",
+    "en": "There are things you understand precisely because you failed.",
+    "options": ["からこそ", "のに", "けど", "ても"],
+    "explain": "からこそ = exactly because of that."
+   },
+   {
+    "question": "{今年|ことし}はダメだった。{来年|らいねん}＿＿{頑張る|がんばる}！",
+    "en": "This year didn't work out. Next year for sure!",
+    "options": ["こそ", "さえ", "ほど", "ばかり"],
+    "explain": "{来年|らいねん}こそ: next year, and not like this one."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "通話終了",
+  "reading": "つうわしゅうりょう",
+  "romaji": "tsūwa shūryō",
+  "meaning": "call ended",
+  "where": "On your phone screen, the moment your mum hangs up.",
+  "breakdown": "{通話|つうわ} call ({通|つう} pass through + {話|わ} talk) + {終了|しゅうりょう} end ({終|しゅう} finish + {了|りょう} complete) → the call is over.",
+  "related": "{営業終了|えいぎょうしゅうりょう} = closed for the day (shops)."
+ },
+ "tip": {
+  "mark": "寂",
+  "title": "How care sounds",
+  "body": "Older Japanese men like {田中|たなか}さん rarely comfort you with soft words. They give you food, a bath, or a job to do tomorrow: that's the kindness. A short それに、ここも{家|いえ}だ from them means a lot."
+ },
+ "challenge": {
+  "type": "fix",
+  "prompt": "{恵子|けいこ}さん, out of the bath: 「{昨日|きのう}はパエリア、ありがとうね」 Reply that it's you who should thank them, always. One part is wrong.",
+  "parts": [
+   {"jp": "いえ、"},
+   {"jp": "こちらだけ、", "wrong": true, "why": "だけ means 'only'. To say 'no, it's me who should thank you', use こちらこそ."},
+   {"jp": "いつも"},
+   {"jp": "ありがとうございます。"}
+  ],
+  "model_answer": "いえ、こちらこそ、いつもありがとうございます。",
+  "explanation": "When someone thanks you and you feel you owe them more, こちらこそ turns it around: 'no, thank YOU'. いつも adds 'for everything, all the time'. ありがとうございます keeps it polite with your host.",
+  "hint": "こちら + the spotlight particle"
+ },
+ "vocab": [
+  {"jp": "{通話|つうわ}", "reading": "つうわ", "en": "(phone) call", "level": "N3", "src": "d1", "surface": "通話", "note": "ビデオ{通話|つうわ} = video call. {無料通話|むりょうつうわ} on LINE."},
+  {"jp": "{動|うご}かす", "reading": "うごかす", "en": "to move (something)", "level": "N4", "src": "d2", "surface": "動かす", "note": "{動|うご}く = it moves; {動|うご}かす = you move it. {体|からだ}を{動|うご}かす = exercise."},
+  {"jp": "{枝|えだ}", "reading": "えだ", "en": "branch", "level": "N3", "src": "d2", "surface": "枝", "note": "Heavy snow can snap apple branches, so farmers knock it off."},
+  {"jp": "{離|はな}れる", "reading": "はなれる", "en": "to be apart, leave", "level": "N3", "src": "d3", "surface": "離れて", "note": "〜と{離|はな}れる = be away from. {離|はな}れて{住|す}む = live apart."},
+  {"jp": "ホームシック", "reading": "ほーむしっく", "en": "homesick(ness)", "level": "N3", "src": "d3", "surface": "ホームシック", "note": "ホームシックになる = get homesick."},
+  {"jp": "{有|あ}り{難|がた}い", "reading": "ありがたい", "en": "precious, something to be grateful for", "level": "N3", "src": "d4", "surface": "有り難", "note": "Root of ありがとう. {有|あ}り{難|がた}さ = how precious something is."},
+  {"jp": "{励|はげ}ます", "reading": "はげます", "en": "to encourage, cheer up", "level": "N3", "src": "d5", "surface": "励まされました", "note": "{励|はげ}まされる = be encouraged. Noun: {励|はげ}まし."},
+  {"jp": "{思|おも}い{切|き}り", "reading": "おもいきり", "en": "to your heart's content, with all your might", "level": "N3", "src": "p2", "surface": "思い切り", "note": "{思|おも}い{切|き}り{遊|あそ}ぶ, {思|おも}い{切|き}り{笑|わら}う."},
+  {"jp": "{眺|なが}める", "reading": "ながめる", "en": "to gaze at, look at", "level": "N3", "src": "p4", "surface": "眺める", "note": "Looking for a long time: views, photos. {眺|なが}め = a view."}
+ ],
+ "kanji_study": [
+  {
+   "kanji": "離",
+   "track": "lesson",
+   "on": "リ",
+   "kun": "はな(れる)・はな(す)",
+   "meaning": "separate, leave",
+   "parts": "离 a net or trap + 隹 small bird → a bird slipping out of the net and flying off: separate.",
+   "lookalike": "Not 難 (difficult): both have 隹 bird, but 難 has 堇 on the left.",
+   "words": [
+    {"jp": "{離|はな}れる", "reading": "はなれる", "en": "to be apart"},
+    {"jp": "{距離|きょり}", "reading": "きょり", "en": "distance"},
+    {"jp": "{離婚|りこん}", "reading": "りこん", "en": "divorce"}
+   ],
+   "decoys": {"meanings": ["to gather", "to fly", "to return"], "readings": ["わかれる", "はがれる", "はずれる"]}
+  },
+  {
+   "kanji": "調",
+   "track": "n3",
+   "on": "チョウ",
+   "kun": "しら(べる)・ととの(う)",
+   "meaning": "investigate; tune, condition",
+   "parts": "言 words + 周 all around → going all around with questions: investigate. Also tuning something until it's right: condition.",
+   "lookalike": "Not 週 (week): 週 has 辶 road, 調 has 言 words.",
+   "words": [
+    {"jp": "{調子|ちょうし}", "reading": "ちょうし", "en": "condition, how things are going"},
+    {"jp": "{調|しら}べる", "reading": "しらべる", "en": "to look up, investigate"},
+    {"jp": "{体調|たいちょう}", "reading": "たいちょう", "en": "physical condition"}
+   ],
+   "decoys": {"meanings": ["to talk", "week", "around"], "readings": ["ちょうす", "しょうし", "じょうし"]}
+  }
+ ],
+ "extras": [
+  {
+   "title": "Comforting someone",
+   "title_jp": "{励ます|はげます|to encourage|3}{言葉|ことば}",
+   "intro": "Short lines that help a friend who's down.",
+   "items": [
+    {"jp": "{無理|むり}しないでね。", "en": "Don't push yourself."},
+    {"jp": "いつでも{話|はなし}、{聞く|きく}よ。", "en": "I'm here to listen, any time."},
+    {"jp": "{一人|ひとり}じゃないよ。", "en": "You're not alone."}
+   ]
+  },
+  {
+   "title": "Missing home",
+   "title_jp": "{家族|かぞく}を{思う|おもう}",
+   "intro": "Other ways to say you miss home.",
+   "items": [
+    {"jp": "{家族|かぞく}が{恋しい|こいしい|to miss (someone)|3}。", "en": "I miss my family.", "note": "{恋|こい}しい = longing for someone or somewhere far away."},
+    {"jp": "{実家|じっか}の{料理|りょうり}が{食べたい|たべたい}な。", "en": "I want to eat food from home."},
+    {"jp": "{声|こえ}を{聞いたら|きいたら}、{元気|げんき}が{出た|でた}。", "en": "Hearing their voice cheered me up."}
+   ]
+  }
+ ]
+}

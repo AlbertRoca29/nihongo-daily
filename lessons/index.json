@@ -337,5 +337,12 @@
   "category": "food-cooking",
   "function": "hypotheticals",
   "format": "line"
+ },
+ {
+  "id": "2026-12-21",
+  "topic": "Homesick at the kotatsu",
+  "category": "feelings",
+  "function": "advice",
+  "format": "dialogue"
  }
 ]
