@@ -239,5 +239,12 @@
   "category": "nature-seasons",
   "function": "feelings",
   "format": "story"
+ },
+ {
+  "id": "2026-12-07",
+  "topic": "First time at the town onsen",
+  "category": "health-body",
+  "function": "hypotheticals",
+  "format": "dialogue"
  }
 ]

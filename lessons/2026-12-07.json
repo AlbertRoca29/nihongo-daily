@@ -1,0 +1,440 @@
+{
+ "topic": "First time at the town onsen",
+ "category": "health-body",
+ "function": "hypotheticals",
+ "format": "dialogue",
+ "cast": [
+  "tanaka"
+ ],
+ "title_jp": "{冬|ふゆ}らしい{夜|よる}の{温泉|おんせん}",
+ "context": "Monday 7 December: after a cold day clearing snow in the orchard, {田中|たなか}さん takes アルちゃん to the town onsen, {鷹ノ湯|たかのゆ}, for the first time. He explains the bath rules in his few words and buys him a coffee milk afterwards.",
+ "scene": "Monday, snow all day in the orchard. On the way home, {田中|たなか}さん takes you to the town onsen. You're scared of breaking a rule.",
+ "keep": [
+  "p4"
+ ],
+ "phrases": [
+  {
+   "jp": "もし{気分|きぶん|how one feels; mood|4}が{悪く|わるく}なったら、すぐ{言って|いって}ね。",
+   "en": "If you start feeling unwell, tell me right away.",
+   "register": "casual",
+   "note": "もし〜たら: 'if… happens'. {気分|きぶん}が{悪|わる}い = feel sick, not 'bad mood'."
+  },
+  {
+   "jp": "{湯船|ゆぶね|bathtub, the bath|3}に{入る|はいる}{前|まえ}に、{体|からだ}を{洗います|あらいます}。",
+   "en": "You wash your body before getting into the bath.",
+   "register": "polite",
+   "note": "Rule number one in every onsen and home bath."
+  },
+  {
+   "jp": "{今日|きょう}は{冬|ふゆ}らしい{寒さ|さむさ|the cold|3}ですね。",
+   "en": "Today's real winter cold, isn't it?",
+   "register": "polite",
+   "note": "Perfect small talk with neighbours in December."
+  },
+  {
+   "jp": "{入れ墨|いれずみ|tattoo|2}があったら、{入れません|はいれません}か。",
+   "en": "If you have a tattoo, can't you go in?",
+   "register": "polite",
+   "note": "Ask at reception. Many places say タトゥー; some allow a cover sticker."
+  },
+  {
+   "jp": "ああ、{生き返る|いきかえる|to come back to life|3}〜。",
+   "en": "Ahh, I'm coming back to life!",
+   "register": "casual",
+   "note": "What everyone sighs as they sink into hot water."
+  }
+ ],
+ "dialogue_setting": "Monday evening, from the kei truck to the bath at {鷹ノ湯|たかのゆ}, the town onsen near the station.",
+ "dialogue": [
+  {
+   "who": "tanaka",
+   "speaker": "田中さん",
+   "jp": "{今日|きょう}は{ごしたい||(Nagano dialect) = 疲れた, tired|1}{ずら||(Nagano dialect) = だろう, right?|1}。{帰り|かえり}に{温泉|おんせん|hot spring, onsen|4}{寄って|よって}くか。",
+   "en": "You must be tired today. Shall we stop at the onsen on the way home?",
+   "register": "dialect",
+   "note": "ごしたいずら = {疲|つか}れただろう. {寄|よ}ってくか = {寄|よ}っていくか."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "{行きたい|いきたい}です！でも、もしルールを{間違えたら|まちがえたら|to make a mistake|4}、どうしよう…",
+   "en": "I'd love to! But what if I get a rule wrong…",
+   "register": "polite"
+  },
+  {
+   "who": "tanaka",
+   "speaker": "田中さん",
+   "jp": "{簡単|かんたん|easy, simple|4}{だに||(Nagano dialect) = だよ (emphasis)|1}。{湯船|ゆぶね|bathtub, the bath|3}に{入る|はいる}{前|まえ}に{体|からだ}を{洗う|あらう}。タオルはお{湯|ゆ}に{入れん|いれん|(casual) = 入れない, not put in|2}。",
+   "en": "It's easy. Wash yourself before you get in the bath. The towel doesn't go in the water.",
+   "register": "dialect",
+   "note": "だに = だよ. 入れん = 入れない (casual, western Japan and Nagano)."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "ああ、{生き返る|いきかえる|to come back to life|3}〜。{硫黄|いおう|sulphur|2}の{匂い|におい|smell|4}がして、{温泉|おんせん}らしいですね。",
+   "en": "Ahh, I'm coming back to life! It smells of sulphur, a real onsen.",
+   "register": "polite"
+  },
+  {
+   "who": "tanaka",
+   "speaker": "田中さん",
+   "jp": "{長く|ながく}{入る|はいる}と{のぼせる||to get dizzy from the heat|2}ぞ。{目|め}が{回ったら|まわったら|to turn; (目が〜) to feel dizzy|3}、{我慢|がまん|putting up with it|4}しないですぐ{出ろ|でろ}。",
+   "en": "Stay in too long and you'll get light-headed. If you feel dizzy, don't tough it out, get out at once.",
+   "register": "casual",
+   "note": "出ろ: blunt command form, normal from an older man to someone close."
+  },
+  {
+   "who": "tanaka",
+   "speaker": "田中さん",
+   "jp": "ほれ。{風呂上がり|ふろあがり|right after a bath|3}はコーヒー{牛乳|ぎゅうにゅう}だに。{腰|こし|lower back, hips|3}に{手|て}を{当てて|あてて|to put (against)|3}{飲む|のむ}ずら。",
+   "en": "Here. After a bath it's coffee milk. You drink it with a hand on your hip.",
+   "register": "dialect",
+   "note": "ほれ = ほら (here you go). だに = だよ, ずら = だろう."
+  }
+ ],
+ "listening": {
+  "type": "voicemail",
+  "intro": "In the changing room you see a voicemail from {恵子|けいこ}さん.",
+  "who": "keiko",
+  "lines": [
+   {
+    "who": "keiko",
+    "jp": "アルちゃん、{恵子|けいこ}です。お{父さん|とうさん}と{温泉|おんせん}？いいわね。{帰り|かえり}にお{豆腐|とうふ|tofu|3}{買って|かって}きてくれる？{夕飯|ゆうはん}、{湯豆腐|ゆどうふ|simmered tofu hot pot|2}にするから。",
+    "en": "アルちゃん, it's {恵子|けいこ}. An onsen with Dad? Lovely. Could you buy tofu on the way back? I'm making tofu hot pot for dinner."
+   }
+  ],
+  "question": "{恵子|けいこ}さんは{何|なに}を{頼みましたか|たのみましたか}。",
+  "options": [
+   "かえりにとうふを買ってくる",
+   "はやく家にかえってくる",
+   "おんせんでぎゅうにゅうを買う",
+   "ゆうはんをつくる"
+  ],
+  "explain": "She asks お{豆腐|とうふ}{買|か}ってきてくれる？ for tonight's {湯豆腐|ゆどうふ}. お{父|とう}さん is how she calls {田中|たなか}さん."
+ },
+ "grammar": {
+  "id": "n3-rashii-typical",
+  "pattern": "〜らしい ({典型|てんけい})",
+  "level": "N3",
+  "meaning": "typical of, true to type",
+  "form": "noun + らしい ({冬|ふゆ}らしい, {温泉|おんせん}らしい, {田中|たなか}さんらしい) · before a noun: らしい + noun ({冬|ふゆ}らしい{寒|さむ}さ) · negative: noun + らしくない ({君|きみ}らしくない)",
+  "explanation": "Noun + らしい says something really is X, a perfect example of X: {冬|ふゆ}らしい{寒|さむ}さ = proper winter cold. It's not hearsay らしい ('apparently'). And っぽい means 'looks like X' (maybe it isn't); らしい means 'is X, and very X'.",
+  "src": [
+   "d3",
+   "p2"
+  ],
+  "mark": [
+   "温泉らしい",
+   "冬らしい",
+   "君らしくない",
+   "春らしい"
+  ],
+  "examples": [
+   {
+    "jp": "そんなこと{言う|いう}なんて、{君|きみ}らしくないよ。",
+    "en": "Saying something like that isn't like you."
+   },
+   {
+    "jp": "{今日|きょう}は{春|はる}らしい{暖かい|あたたかい}{日|ひ}だね。",
+    "en": "Today's a real spring day, nice and warm."
+   }
+  ],
+  "quiz": {
+   "question": "12{月|がつ}になって、やっと{冬|ふゆ}＿＿{寒さ|さむさ|the cold|3}になった。",
+   "en": "Now it's December, it's finally properly winter-cold.",
+   "options": [
+    "らしい",
+    "らしく",
+    "のらしい",
+    "らしいの"
+   ],
+   "explain": "Noun + らしい + noun: {冬|ふゆ}らしい{寒|さむ}さ, no の in between."
+  },
+  "quiz_more": [
+   {
+    "question": "{田中|たなか}さんは{何|なに}も{言わないで|いわないで}{牛乳|ぎゅうにゅう}を{買って|かって}くれた。{田中|たなか}さん＿＿ね。",
+    "en": "{田中|たなか}さん bought me milk without a word. So typical of him.",
+    "options": [
+     "らしい",
+     "っぽい",
+     "そうだ",
+     "みたい"
+    ],
+    "explain": "He is {田中|たなか}さん, acting exactly like himself → らしい. っぽい/みたい would mean someone who only resembles him."
+   },
+   {
+    "question": "そんなに{怒る|おこる}なんて、{健太|けんた}＿＿ね。",
+    "en": "Getting that angry isn't like {健太|けんた}.",
+    "options": [
+     "らしくない",
+     "らしいない",
+     "っぽいない",
+     "らしくなく"
+    ],
+    "explain": "らしい conjugates like an い-adjective: negative らしくない."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "脱衣所",
+  "reading": "だついじょ",
+  "romaji": "datsuijo",
+  "meaning": "changing room (at a bath)",
+  "where": "The sign over the door between the reception and the baths at {鷹ノ湯|たかのゆ}.",
+  "breakdown": "{脱衣所|だついじょ}: 脱 take off + 衣 clothes + 所 place → 'the place where you take off your clothes'.",
+  "related": "{男湯|おとこゆ} = men's bath, {女湯|おんなゆ} = women's bath (on the blue and red curtains)."
+ },
+ "tip": {
+  "mark": "湯",
+  "title": "The after-bath milk",
+  "body": "Old onsen and {銭湯|せんとう} always have a fridge of glass-bottle coffee milk. Drinking it in one go, hand on hip, is a joke every Japanese person knows. Do it once: the locals will love you."
+ },
+ "challenge": {
+  "type": "pick",
+  "prompt": "Back home, {恵子|けいこ}さん: 「{鷹ノ湯|たかのゆ}、どうだった？」 Tell her it smelled of sulphur, a real onsen.",
+  "options": [
+   {
+    "jp": "{硫黄|いおう}の{匂|にお}いがして、{温泉|おんせん}らしい{温泉|おんせん}でした！",
+    "ok": true,
+    "why": "Noun + らしい + noun: a true, typical onsen. Polite past to {恵子|けいこ}さん."
+   },
+   {
+    "jp": "{硫黄|いおう}の{匂|にお}いがして、{温泉|おんせん}のらしい{温泉|おんせん}でした！",
+    "ok": false,
+    "why": "No の: the noun goes straight before らしい."
+   },
+   {
+    "jp": "{硫黄|いおう}の{匂|にお}いがして、{温泉|おんせん}らしかったそうです！",
+    "ok": false,
+    "why": "そうです is hearsay: you were there yourself."
+   },
+   {
+    "jp": "{硫黄|いおう}の{匂|にお}いがして、{温泉|おんせん}っぽい{温泉|おんせん}でした！",
+    "ok": false,
+    "why": "っぽい sounds like it only resembled an onsen."
+   }
+  ],
+  "model_answer": "{硫黄|いおう|sulphur|2}の{匂い|におい|smell|4}がして、{温泉|おんせん}らしい{温泉|おんせん}でした！",
+  "explanation": "〜の{匂|にお}いがする is how Japanese says 'it smells of…'. {温泉|おんせん}らしい{温泉|おんせん} praises it as a real, classic onsen, which is exactly the compliment you want. でした keeps it polite for {恵子|けいこ}さん.",
+  "hint": "noun + らしい + noun"
+ },
+ "vocab": [
+  {
+   "jp": "{温泉|おんせん}",
+   "reading": "おんせん",
+   "en": "hot spring, onsen",
+   "level": "N3",
+   "src": "d0",
+   "surface": "温泉",
+   "note": "{温|おん} warm + {泉|せん} spring. {温泉|おんせん}に{入|はい}る = take an onsen bath."
+  },
+  {
+   "jp": "{間違|まちが}える",
+   "reading": "まちがえる",
+   "en": "to make a mistake, get wrong",
+   "level": "N4",
+   "src": "d1",
+   "surface": "間違えたら",
+   "note": "Transitive: {道|みち}を{間違|まちが}える. {間違|まちが}い = a mistake."
+  },
+  {
+   "jp": "{簡単|かんたん}",
+   "reading": "かんたん",
+   "en": "easy, simple",
+   "level": "N4",
+   "src": "d2",
+   "surface": "簡単",
+   "note": "な-adjective. Opposite: {難|むずか}しい."
+  },
+  {
+   "jp": "{湯船|ゆぶね}",
+   "reading": "ゆぶね",
+   "en": "bathtub, the bath",
+   "level": "N2",
+   "src": "d2",
+   "surface": "湯船",
+   "note": "{湯|ゆ} hot water + {船|ふね} boat. {湯船|ゆぶね}につかる = soak in the bath."
+  },
+  {
+   "jp": "{生|い}き{返|かえ}る",
+   "reading": "いきかえる",
+   "en": "to come back to life; feel refreshed",
+   "level": "N3",
+   "src": "d3",
+   "surface": "生き返る",
+   "note": "{生|い}きる live + {返|かえ}る return. Said after a hot bath or a cold beer."
+  },
+  {
+   "jp": "{匂|にお}い",
+   "reading": "におい",
+   "en": "smell",
+   "level": "N3",
+   "src": "d3",
+   "surface": "匂い",
+   "note": "〜の{匂|にお}いがする = it smells of… Bad smells are often written {臭|にお}い."
+  },
+  {
+   "jp": "{回|まわ}る",
+   "reading": "まわる",
+   "en": "to turn, go round",
+   "level": "N4",
+   "src": "d4",
+   "surface": "回ったら",
+   "note": "{目|め}が{回|まわ}る = to feel dizzy; also 'so busy my head spins'."
+  },
+  {
+   "jp": "{我慢|がまん}",
+   "reading": "がまん",
+   "en": "putting up with, enduring",
+   "level": "N3",
+   "src": "d4",
+   "surface": "我慢",
+   "note": "{我慢|がまん}する. {我慢|がまん}しないで = don't force yourself to bear it."
+  },
+  {
+   "jp": "{気分|きぶん}",
+   "reading": "きぶん",
+   "en": "how one feels; mood",
+   "level": "N3",
+   "src": "p0",
+   "surface": "気分",
+   "note": "{気分|きぶん}が{悪|わる}い = feel sick. {気分|きぶん}がいい = feel good."
+  },
+  {
+   "jp": "{風呂上|ふろあ}がり",
+   "reading": "ふろあがり",
+   "en": "right after a bath",
+   "level": "N3",
+   "src": "d5",
+   "surface": "風呂上がり",
+   "note": "{風呂|ふろ} bath + {上|あ}がる get out. {風呂上|ふろあ}がりのビール is a classic."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "湯",
+   "track": "lesson",
+   "on": "トウ",
+   "kun": "ゆ",
+   "meaning": "hot water",
+   "parts": "氵 water radical + 昜 the sun rising high over the horizon → water warmed by the sun: hot water.",
+   "lookalike": "Not 場 (place, as in {駐車場|ちゅうしゃじょう}): 場 has 土 earth on the left, 湯 has 氵 water.",
+   "words": [
+    {
+     "jp": "{湯船|ゆぶね}",
+     "reading": "ゆぶね",
+     "en": "bathtub, the bath"
+    },
+    {
+     "jp": "お{湯|ゆ}",
+     "reading": "おゆ",
+     "en": "hot water"
+    },
+    {
+     "jp": "{銭湯|せんとう}",
+     "reading": "せんとう",
+     "en": "public bathhouse"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "place",
+     "steam",
+     "spring (water)"
+    ],
+    "readings": [
+     "とうせん",
+     "ゆふね",
+     "ばぶね"
+    ]
+   }
+  },
+  {
+   "kanji": "回",
+   "track": "n3",
+   "on": "カイ",
+   "kun": "まわ(る)・まわ(す)",
+   "meaning": "turn, go round; times",
+   "parts": "A small 口 inside a big 口 → a whirlpool going round and round: turn. Also counts times ('rounds').",
+   "lookalike": "Not 固 (hard): 固 has 古 inside the box, 回 has a small 口.",
+   "words": [
+    {
+     "jp": "{回|まわ}る",
+     "reading": "まわる",
+     "en": "to turn, go round"
+    },
+    {
+     "jp": "{今回|こんかい}",
+     "reading": "こんかい",
+     "en": "this time"
+    },
+    {
+     "jp": "{一回|いっかい}",
+     "reading": "いっかい",
+     "en": "once, one time"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "hard, firm",
+     "return",
+     "box"
+    ],
+    "readings": [
+     "かいる",
+     "まがる",
+     "めぐる"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Onsen words",
+   "title_jp": "{温泉|おんせん}のことば",
+   "intro": "What you'll read on the signs.",
+   "items": [
+    {
+     "jp": "{露天風呂|ろてんぶろ|open-air bath|3}",
+     "en": "open-air bath",
+     "note": "Best in snow: hot water, cold head."
+    },
+    {
+     "jp": "かけ{湯|ゆ|pouring water over yourself|2}",
+     "en": "rinsing with bath water first",
+     "note": "Scoop water over your body before getting in."
+    },
+    {
+     "jp": "{貸切風呂|かしきりぶろ|private bath (rented)|2}",
+     "en": "private bath you can book",
+     "note": "Good for couples, families, or tattoos."
+    }
+   ]
+  },
+  {
+   "title": "Bath and body",
+   "title_jp": "お{風呂|ふろ}と{体|からだ}",
+   "intro": "Little words for how a bath makes you feel.",
+   "items": [
+    {
+     "jp": "{湯冷め|ゆざめ|getting chilled after a bath|2}する",
+     "en": "to get chilled after a bath",
+     "note": "Why {恵子|けいこ}さん says dry your hair in winter."
+    },
+    {
+     "jp": "{肩|かた|shoulders|4}まで{浸かる|つかる|to soak|3}",
+     "en": "to soak up to your shoulders",
+     "note": "What parents tell kids in the bath."
+    },
+    {
+     "jp": "ポカポカする",
+     "en": "to feel nice and warm",
+     "note": "Warm all over after the onsen."
+    }
+   ]
+  }
+ ]
+}
