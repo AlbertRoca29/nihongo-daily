@@ -238,7 +238,7 @@
    ],
    "aliases": [],
    "color": "#c9a227",
-   "status": "{避難訓練|ひなんくんれん}、アルちゃんガチで{走ってた|はしってた}ｗ",
+   "status": "{面接|めんせつ}{練習|れんしゅう}ガチでやる🎺✈",
    "where": "{鷹ノ原高校|たかのはらこうこう}",
    "status_base": "{避難訓練|ひなんくんれん}、アルちゃんガチで{走ってた|はしってた}ｗ",
    "where_base": "{鷹ノ原高校|たかのはらこうこう}"
@@ -706,6 +706,24 @@
    "status_upd": {
     "ren": {
      "status": "{日曜|にちよう}、{楽しみ|たのしみ}☕"
+    }
+   }
+  },
+  {
+   "date": "2026-12-04",
+   "cast": [
+    "sato",
+    "mio"
+   ],
+   "summary": "Friday 4 Dec, after school at 鷹ノ原高校: 佐藤先生 asks アルちゃん in to help 澪 prepare for the selection interview for the school's summer exchange to Canada. アルちゃん says he's all for studying abroad; 澪 is sure her parents will say no because of the cost, 佐藤先生 mentions scholarships, and 澪 decides to talk to her parents that night.",
+   "new_facts": [
+    "鷹ノ原高校 has a summer exchange programme to Canada with a selection interview; 澪 is applying.",
+    "澪's school interview for the exchange is on Friday 11 Dec after school; アルちゃん promised to help her practise.",
+    "澪 thinks her parents will oppose studying abroad because of the cost; she planned to talk to them on the night of 4 Dec."
+   ],
+   "status_upd": {
+    "mio": {
+     "status": "{面接|めんせつ}{練習|れんしゅう}ガチでやる🎺✈"
     }
    }
   }

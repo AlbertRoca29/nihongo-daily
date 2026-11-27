@@ -1,0 +1,417 @@
+{
+ "topic": "{澪|みお} and the study-abroad interview",
+ "category": "school-youth",
+ "function": "opinions",
+ "format": "dialogue",
+ "cast": [
+  "sato",
+  "mio"
+ ],
+ "title_jp": "{留学|りゅうがく}、どう{思う|おもう}？",
+ "context": "Friday 4 December, after school at {鷹ノ原高校|たかのはらこうこう}: {佐藤|さとう}{先生|せんせい} has asked アルちゃん in to help {澪|みお} prepare for the interview for the school's summer exchange to Canada. {澪|みお} asks his opinion and is sure her parents will say no.",
+ "scene": "Friday after school in the English room. {佐藤|さとう}{先生|せんせい} asked you in: {澪|みお} wants to study abroad and needs your opinion.",
+ "keep": [
+  "p4"
+ ],
+ "phrases": [
+  {
+   "jp": "どう{思う|おもう}？{正直|しょうじき|honestly|4}に{言って|いって}。",
+   "en": "What do you think? Tell me honestly.",
+   "register": "casual",
+   "note": "Asking a friend for a real opinion, not a polite one."
+  },
+  {
+   "jp": "あんなに{頑張った|がんばった}んだから、{合格|ごうかく|passing (an exam)|3}するに{違いない|ちがいない}。",
+   "en": "After working that hard, they're bound to pass.",
+   "register": "casual",
+   "note": "Reason + んだから + strong conclusion."
+  },
+  {
+   "jp": "{賛成|さんせい|agreeing, in favour|3}だけど、ちょっと{心配|しんぱい}もある。",
+   "en": "I'm for it, but I'm a bit worried too.",
+   "register": "casual",
+   "note": "A soft opinion: agree, then add a 'but'."
+  },
+  {
+   "jp": "{人|ひと}によって{意見|いけん}が{違う|ちがう}よね。",
+   "en": "Opinions differ from person to person, don't they?",
+   "register": "casual",
+   "note": "A safe way to avoid taking sides."
+  },
+  {
+   "jp": "{自分|じぶん}の{将来|しょうらい|future|4}は、{自分|じぶん}で{決めたい|きめたい}。",
+   "en": "I want to decide my own future myself.",
+   "register": "casual",
+   "note": "A strong personal opinion, said calmly."
+  }
+ ],
+ "dialogue_setting": "The English room at {鷹ノ原高校|たかのはらこうこう}, Friday after school. Snow outside; the brass band is practising somewhere down the corridor.",
+ "dialogue": [
+  {
+   "who": "sato",
+   "speaker": "佐藤先生",
+   "jp": "アルちゃん、{今日|きょう}はありがとうございます。{澪|みお}さんが{留学|りゅうがく|studying abroad|3}の{面接|めんせつ|interview|3}を{受ける|うける}そうです。",
+   "en": "アルちゃん, thank you for coming today. {澪|みお}さん is going to do the interview for studying abroad.",
+   "register": "polite"
+  },
+  {
+   "who": "mio",
+   "speaker": "澪",
+   "jp": "アルちゃん、{正直|しょうじき|honestly|4}どう{思う|おもう}？{若い|わかい}うちに{留学|りゅうがく|studying abroad|3}したほうがいい？",
+   "en": "アルちゃん, honestly, what do you think? Is it better to study abroad while you're young?",
+   "register": "casual"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "{僕|ぼく}は{賛成|さんせい|agreeing, in favour|3}。{世界|せかい}が{広がる|ひろがる|to widen, spread|3}と{思う|おもう}よ。",
+   "en": "I'm all for it. I think your world gets bigger.",
+   "register": "casual"
+  },
+  {
+   "who": "mio",
+   "speaker": "澪",
+   "jp": "でもうちの{親|おや|parent(s)|4}、{絶対|ぜったい}{反対|はんたい}するに{違いない|ちがいない}っしょ。お{金|かね}も{かかる||to cost (money, time)|4}し。",
+   "en": "But my parents are definitely going to say no, for sure. And it costs money.",
+   "register": "slang",
+   "note": "Teen slang: っしょ = でしょう."
+  },
+  {
+   "who": "sato",
+   "speaker": "佐藤先生",
+   "jp": "{奨学金|しょうがくきん|scholarship|3}もありますよ。{本気|ほんき}だと{伝えれば|つたえれば}、ご{両親|りょうしん|parents|4}も{分かって|わかって}くださるに{違いありません|ちがいありません}。",
+   "en": "There are scholarships too. If you tell them you're serious, I'm sure your parents will understand.",
+   "register": "polite"
+  },
+  {
+   "who": "mio",
+   "speaker": "澪",
+   "jp": "…じゃあ{今夜|こんや}、{親|おや|parent(s)|4}に{相談|そうだん|talking over, asking advice|4}してみる。{練習|れんしゅう}、ガチで{付き合って|つきあって}ね！",
+   "en": "…OK, I'll talk to my parents tonight. And you're properly helping me practise, OK?",
+   "register": "slang",
+   "note": "Slang: ガチで = {本気|ほんき}で. {付|つ}き{合|あ}う here = keep someone company, help."
+  }
+ ],
+ "listening": {
+  "type": "dictation",
+  "intro": "{佐藤|さとう}{先生|せんせい} tells you when the interview is. Type what she says.",
+  "who": "sato",
+  "lines": [
+   {
+    "who": "sato",
+    "jp": "{面接|めんせつ|interview|3}は{来週|らいしゅう}の{金曜日|きんようび}、{放課後|ほうかご|after school|3}です。",
+    "en": "The interview is next Friday, after school."
+   }
+  ]
+ },
+ "grammar": {
+  "id": "n3-ni-chigai-nai",
+  "pattern": "〜に{違|ちが}いない",
+  "level": "N3",
+  "meaning": "must be, surely",
+  "form": "verb / い-adj plain + に{違|ちが}いない ({反対|はんたい}するに{違|ちが}いない, {高|たか}いに{違|ちが}いない) · noun / な-adj: no だ + に{違|ちが}いない ({本当|ほんとう}に{違|ちが}いない, {大丈夫|だいじょうぶ}に{違|ちが}いない) · polite: に{違|ちが}いありません",
+  "explanation": "A guess the speaker feels sure about: 'must be, I bet'. Stronger than だろう, and a bit written or dramatic, so in chat people often just say {絶対|ぜったい}… or きっと…. Nouns and な-adjectives drop だ: {本当|ほんとう}に{違|ちが}いない, not {本当|ほんとう}だに{違|ちが}いない.",
+  "src": [
+   "d3",
+   "d4",
+   "p1"
+  ],
+  "mark": [
+   "反対するに違いない",
+   "分かってくださるに違いありません",
+   "合格するに違いない",
+   "店に違いない",
+   "起きているに違いない"
+  ],
+  "examples": [
+   {
+    "jp": "こんなに{並んで|ならんで|to line up|4}る。{有名|ゆうめい}な{店|みせ}に{違いない|ちがいない}。",
+    "en": "Look at this queue. It must be a famous place."
+   },
+   {
+    "jp": "{電気|でんき}がついてる。{健太|けんた}はまだ{起きて|おきて}いるに{違いない|ちがいない}。",
+    "en": "The light's on. {健太|けんた} must still be up."
+   }
+  ],
+  "quiz": {
+   "question": "あんなに{練習|れんしゅう}したんだから、{合格|ごうかく|passing (an exam)|3}＿＿。",
+   "en": "After practising that much, she's bound to pass.",
+   "options": [
+    "するに違いない",
+    "するに違う",
+    "するの違いない",
+    "すると違いない"
+   ],
+   "explain": "Plain verb + に{違|ちが}いない; the particle is always に."
+  },
+  "quiz_more": [
+   {
+    "question": "この{財布|さいふ|wallet|4}、{健太|けんた}の＿＿。いつもここに{置く|おく}から。",
+    "en": "This wallet must be {健太|けんた}'s. He always leaves it here.",
+    "options": [
+     "に違いない",
+     "だに違いない",
+     "なに違いない",
+     "に違わない"
+    ],
+    "explain": "Nouns drop だ: {健太|けんた}のに{違|ちが}いない."
+   },
+   {
+    "question": "{間違いない|まちがいない}！{犯人|はんにん|culprit|2}はあの{人|ひと}＿＿！",
+    "en": "No doubt about it! The culprit must be that person!",
+    "options": [
+     "に違いない",
+     "かもしれない",
+     "らしい",
+     "みたいだ"
+    ],
+    "explain": "Total certainty → に{違|ちが}いない. かもしれない is only 'maybe'."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "進路指導室",
+  "reading": "しんろしどうしつ",
+  "romaji": "shinro shidō shitsu",
+  "meaning": "careers guidance room",
+  "where": "The sign on the door next to the English room, with university brochures piled outside.",
+  "breakdown": "{進路|しんろ}{指導|しどう}{室|しつ}: 進路 path forward + 指導 guidance + 室 room → the room where teachers help you choose your path.",
+  "related": "{進路|しんろ} alone = your plans after school: {進路|しんろ}はどうするの？"
+ },
+ "tip": {
+  "mark": "談",
+  "title": "The three-way meeting",
+  "body": "In Japanese high schools, big decisions go through a {三者面談|さんしゃめんだん}: student, parent and teacher sit down together. Students rarely decide alone, so 'I'll talk to my parents' ({親|おや}に{相談|そうだん}する) is the normal first step, not a sign of being childish."
+ },
+ "challenge": {
+  "type": "fix",
+  "prompt": "{佐藤|さとう}{先生|せんせい}: 「{澪|みお}さんの{面接|めんせつ|interview|3}、どう{思いますか|おもいますか}。」 You answer that you're sure she'll be fine. One part is wrong.",
+  "parts": [
+   {
+    "jp": "{澪|みお}さんなら、"
+   },
+   {
+    "jp": "{大丈夫|だいじょうぶ}だに",
+    "wrong": true,
+    "why": "な-adjectives drop だ before に{違|ちが}いない: {大丈夫|だいじょうぶ}に."
+   },
+   {
+    "jp": "{違|ちが}いないと"
+   },
+   {
+    "jp": "{思|おも}います。"
+   }
+  ],
+  "model_answer": "{澪|みお}さんなら、{大丈夫|だいじょうぶ}に{違いない|ちがいない}と{思います|おもいます}。",
+  "explanation": "〜なら sets up {澪|みお}さん as the person you're judging. {大丈夫|だいじょうぶ} is a な-adjective, so it joins に{違|ちが}いない directly, with no だ. と{思|おも}います softens the strong guess and keeps it polite for a teacher.",
+  "hint": "な-adj + に{違|ちが}いない (no だ)"
+ },
+ "vocab": [
+  {
+   "jp": "{留学|りゅうがく}",
+   "reading": "りゅうがく",
+   "en": "studying abroad",
+   "level": "N3",
+   "src": "d0",
+   "surface": "留学",
+   "note": "{留学|りゅうがく}する. A student from abroad: {留学生|りゅうがくせい}."
+  },
+  {
+   "jp": "{面接|めんせつ}",
+   "reading": "めんせつ",
+   "en": "interview",
+   "level": "N3",
+   "src": "d0",
+   "surface": "面接",
+   "note": "{面|めん} face + {接|せつ} meet. For jobs and schools; {面接|めんせつ}を{受|う}ける."
+  },
+  {
+   "jp": "{賛成|さんせい}",
+   "reading": "さんせい",
+   "en": "agreeing, being in favour",
+   "level": "N3",
+   "src": "d2",
+   "surface": "賛成",
+   "note": "Opposite of {反対|はんたい}. 〜に{賛成|さんせい}する = agree with."
+  },
+  {
+   "jp": "{広|ひろ}がる",
+   "reading": "ひろがる",
+   "en": "to widen, spread",
+   "level": "N3",
+   "src": "d2",
+   "surface": "広がる",
+   "note": "{世界|せかい}が{広|ひろ}がる = your world opens up. Also news or fire spreading."
+  },
+  {
+   "jp": "{親|おや}",
+   "reading": "おや",
+   "en": "parent(s)",
+   "level": "N3",
+   "src": "d3",
+   "surface": "親",
+   "note": "Your own parents, casually. うちの{親|おや} = my folks."
+  },
+  {
+   "jp": "かかる",
+   "reading": "かかる",
+   "en": "to cost, take (time)",
+   "level": "N4",
+   "src": "d3",
+   "surface": "かかる",
+   "note": "お{金|かね}がかかる, {時間|じかん}がかかる. Usually in kana."
+  },
+  {
+   "jp": "{奨学金|しょうがくきん}",
+   "reading": "しょうがくきん",
+   "en": "scholarship",
+   "level": "N2",
+   "src": "d4",
+   "surface": "奨学金",
+   "note": "In Japan many are loans you pay back; a grant is {給付型|きゅうふがた}."
+  },
+  {
+   "jp": "{両親|りょうしん}",
+   "reading": "りょうしん",
+   "en": "parents (both)",
+   "level": "N4",
+   "src": "d4",
+   "surface": "両親",
+   "note": "{両|りょう} both + {親|しん} parent. Someone else's: ご{両親|りょうしん}."
+  },
+  {
+   "jp": "{相談|そうだん}",
+   "reading": "そうだん",
+   "en": "talking over, asking advice",
+   "level": "N3",
+   "src": "d5",
+   "surface": "相談",
+   "note": "〜に{相談|そうだん}する = ask someone's advice. ちょっと{相談|そうだん}が… = can I ask you something?"
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "留",
+   "track": "lesson",
+   "on": "リュウ・ル",
+   "kun": "と(める)・と(まる)",
+   "meaning": "stay, keep, hold in place",
+   "parts": "卯 a gate pinned shut on top + 田 field → something held in place over the field: stay, keep.",
+   "lookalike": "Not 貿 (trade): 貿 has 貝 shell (money) underneath, 留 has 田 field.",
+   "words": [
+    {
+     "jp": "{留学|りゅうがく}",
+     "reading": "りゅうがく",
+     "en": "studying abroad"
+    },
+    {
+     "jp": "{留守|るす}",
+     "reading": "るす",
+     "en": "being away from home"
+    },
+    {
+     "jp": "{留守電|るすでん}",
+     "reading": "るすでん",
+     "en": "voicemail"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "trade",
+     "field",
+     "leave, depart"
+    ],
+    "readings": [
+     "るがく",
+     "りゅっがく",
+     "とめがく"
+    ]
+   }
+  },
+  {
+   "kanji": "相",
+   "track": "n3",
+   "on": "ソウ・ショウ",
+   "kun": "あい",
+   "meaning": "mutual, each other; minister",
+   "parts": "木 tree + 目 eye → looking closely at a tree, face to face with it: each other, mutual.",
+   "lookalike": "Not 想 (idea): 想 is 相 with 心 heart underneath.",
+   "words": [
+    {
+     "jp": "{相談|そうだん}",
+     "reading": "そうだん",
+     "en": "talking over, asking advice"
+    },
+    {
+     "jp": "{相手|あいて}",
+     "reading": "あいて",
+     "en": "the other person, partner"
+    },
+    {
+     "jp": "{首相|しゅしょう}",
+     "reading": "しゅしょう",
+     "en": "prime minister"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "idea, thought",
+     "forest",
+     "eye"
+    ],
+    "readings": [
+     "しょうだん",
+     "あいだん",
+     "そだん"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Giving an opinion",
+   "title_jp": "{意見|いけん}を{言う|いう}",
+   "intro": "Ways to say what you think, from soft to firm.",
+   "items": [
+    {
+     "jp": "どちらかと{言えば|いえば}、{賛成|さんせい|in favour|3}です。",
+     "en": "If anything, I'm in favour.",
+     "note": "A soft, very Japanese way to lean one way."
+    },
+    {
+     "jp": "{私|わたし}としては、{反対|はんたい}です。",
+     "en": "Personally, I'm against it.",
+     "note": "としては = speaking for myself."
+    },
+    {
+     "jp": "{人|ひと}それぞれだと{思う|おもう}。",
+     "en": "I think it's up to each person.",
+     "note": "The polite non-answer."
+    }
+   ]
+  },
+  {
+   "title": "Teen words for opinions",
+   "title_jp": "{若者|わかもの|young people|3}{言葉|ことば}",
+   "intro": "What {澪|みお} and her friends say. Slang: use only with friends.",
+   "items": [
+    {
+     "jp": "ガチ",
+     "en": "seriously, for real",
+     "note": "= {本気|ほんき}・{本当|ほんとう}. ガチで{楽しい|たのしい}."
+    },
+    {
+     "jp": "{微妙|びみょう|so-so, iffy|4}",
+     "en": "meh, not great",
+     "note": "Polite way to say 'not good'. Very common."
+    },
+    {
+     "jp": "ありよりのあり",
+     "en": "more yes than no",
+     "note": "Playful: 'it's in the yes zone'."
+    }
+   ]
+  }
+ ]
+}

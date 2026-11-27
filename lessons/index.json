@@ -218,5 +218,12 @@
   "category": "shops-eating-out",
   "function": "comparing",
   "format": "line"
+ },
+ {
+  "id": "2026-12-04",
+  "topic": "{澪|みお} and the study-abroad interview",
+  "category": "school-youth",
+  "function": "opinions",
+  "format": "dialogue"
  }
 ]
