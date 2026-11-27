@@ -1,0 +1,433 @@
+{
+ "topic": "Meeting レン at last",
+ "category": "nature-seasons",
+ "function": "feelings",
+ "format": "story",
+ "cast": [
+  "ren"
+ ],
+ "guest": {
+  "name": "古川さん",
+  "name_jp": "{古川|ふるかわ}さん",
+  "role": "Owner (マスター) of the old {喫茶店|きっさてん} near レン's cinema in {長野市|ながのし}",
+  "voice": "m",
+  "age": 68
+ },
+ "title_jp": "{雪|ゆき}っぽい{日曜日|にちようび}",
+ "context": "Sunday 6 December: アルちゃん and レン meet for the first time at the old {喫茶店|きっさてん} near レン's cinema in {長野市|ながのし}. The owner, {古川|ふるかわ}さん, asks if they're friends and レン quickly says yes; then snow starts to fall and レン takes out his film camera.",
+ "scene": "Sunday night. You tell the story of this afternoon: your first meeting with レン, at the old {喫茶店|きっさてん} in {長野市|ながのし}.",
+ "keep": [
+  "p2"
+ ],
+ "phrases": [
+  {
+   "jp": "{心臓|しんぞう|heart (organ)|3}が{ドキドキ||heart pounding|4}してる。",
+   "en": "My heart is pounding.",
+   "register": "casual",
+   "note": "Nerves, excitement or a crush: all ドキドキ."
+  },
+  {
+   "jp": "なんか{雪|ゆき}っぽい{空|そら}だね。",
+   "en": "The sky looks kind of like snow.",
+   "register": "casual",
+   "note": "Small talk about the weather, very natural."
+  },
+  {
+   "jp": "{会えて|あえて}うれしかった。",
+   "en": "I was so happy to meet you.",
+   "register": "casual",
+   "note": "The message to send after a first meeting."
+  },
+  {
+   "jp": "{胸|むね|chest; heart (feelings)|3}がいっぱいです。",
+   "en": "My heart is full.",
+   "register": "polite",
+   "note": "Too moved for words: after good news, a kind gesture."
+  },
+  {
+   "jp": "{初対面|しょたいめん|first meeting|3}なのに、{緊張|きんちょう}しませんでした。",
+   "en": "It was our first meeting, but I wasn't nervous.",
+   "register": "polite",
+   "note": "〜なのに: 'even though'. Nice to say to someone afterwards."
+  }
+ ],
+ "dialogue_setting": "アルちゃん tells the story that night, back under the kotatsu in {鷹ノ原|たかのはら}. One line is the {喫茶店|きっさてん}'s owner, {古川|ふるかわ}さん.",
+ "dialogue": [
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "{長野駅|ながのえき}に{着いたら|ついたら}、{空|そら}は{灰色|はいいろ|grey|3}で{雪|ゆき}っぽかった。{心臓|しんぞう|heart (organ)|3}がずっと{ドキドキ||heart pounding|4}していた。",
+   "en": "When I got to {長野|ながの} station, the sky was grey and looked like snow. My heart was pounding the whole time.",
+   "register": "neutral"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "{喫茶店|きっさてん}の{前|まえ}で、レンさんっぽい{人|ひと}が{手|て}を{振って|ふって|to wave|3}いた。{写真|しゃしん}より{背|せ|height|4}が{高かった|たかかった}。",
+   "en": "In front of the coffee shop, someone who looked like レン was waving. He was taller than in his photos.",
+   "register": "neutral"
+  },
+  {
+   "who": "guest",
+   "speaker": "古川さん",
+   "jp": "「お{二人|ふたり}さん、{初対面|しょたいめん|first meeting|3}っぽいね。お{友達|ともだち}？」",
+   "en": "'You two look like you've only just met. Friends?'",
+   "register": "casual"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "レンさんはすぐ「はい、{友達|ともだち}です」と{答えた|こたえた}。ちょっと{寂しかった|さびしかった|lonely, sad|3}けど、{気持ち|きもち}は{分かった|わかった}。",
+   "en": "レン answered straight away, 'Yes, we're friends.' It made me a bit sad, but I understood how he felt.",
+   "register": "neutral"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "{店内|てんない|inside the shop|3}で{話して|はなして}いると、{外|そと}で{雪|ゆき}が{舞い始めた|まいはじめた|to dance, flutter (snow)|2}。レンさんは{子ども|こども}っぽい{笑顔|えがお}でカメラを{出した|だした}。",
+   "en": "While we were talking inside, snow began to flutter down outside. レン took out his camera with a childlike smile.",
+   "register": "neutral"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "{帰り|かえり}の{電車|でんしゃ}でも、{胸|むね|chest; heart (feelings)|3}が{温かかった|あたたかかった}。{次|つぎ}は{雪|ゆき}の{山|やま}を{歩こう|あるこう}と{約束|やくそく|promise|4}した。",
+   "en": "Even on the train home, my heart felt warm. We promised to walk in the snowy mountains next time.",
+   "register": "neutral"
+  }
+ ],
+ "listening": {
+  "type": "ladder",
+  "intro": "At the station, レン says one last thing before your train.",
+  "who": "ren",
+  "lines": [
+   {
+    "who": "ren",
+    "jp": "{今日|きょう}は{会えて|あえて}よかった。{雪|ゆき}だから、{気をつけて|きをつけて}{帰って|かえって}ね。",
+    "en": "I'm glad we met today. It's snowing, so get home safe."
+   }
+  ]
+ },
+ "grammar": {
+  "id": "n3-ppoi",
+  "pattern": "〜っぽい",
+  "level": "N3",
+  "meaning": "-ish, kind of like",
+  "form": "noun + っぽい ({雪|ゆき}っぽい, {子|こ}どもっぽい) · verb ます-stem + っぽい ({忘|わす}れっぽい) · い-adj stem + っぽい ({安|やす}っぽい) · past: っぽかった ({雪|ゆき}っぽかった)",
+  "explanation": "Casual 'looks like, -ish'. After a noun it means 'seems to be X' ({雪|ゆき}っぽい{空|そら}) or 'has the feel of X' ({子|こ}どもっぽい, childish). After a verb stem it's a habit: {忘|わす}れっぽい = forgetful. It conjugates like an い-adjective, and is more casual than みたい.",
+  "src": [
+   "d0",
+   "d2",
+   "d1",
+   "d4",
+   "p1"
+  ],
+  "mark": [
+   "雪っぽかった",
+   "初対面っぽい",
+   "レンさんっぽい",
+   "子どもっぽい",
+   "雪っぽい",
+   "安っぽい",
+   "風邪っぽい"
+  ],
+  "examples": [
+   {
+    "jp": "この{服|ふく}、ちょっと{安っぽい|やすっぽい|cheap-looking|3}かな。",
+    "en": "Does this top look a bit cheap?"
+   },
+   {
+    "jp": "{健太|けんた}、{今日|きょう}は{風邪|かぜ}っぽいって。",
+    "en": "{健太|けんた} says he's feeling like he's got a cold today."
+   }
+  ],
+  "quiz": {
+   "question": "{空|そら}が{暗い|くらい}ね。{雨|あめ}＿＿。",
+   "en": "The sky's dark. Looks like rain.",
+   "options": [
+    "っぽい",
+    "っぽく",
+    "なっぽい",
+    "のっぽい"
+   ],
+   "explain": "Noun + っぽい directly: {雨|あめ}っぽい."
+  },
+  "quiz_more": [
+   {
+    "question": "{昨日|きのう}の{夜|よる}は、{雪|ゆき}＿＿{空|そら}だった。",
+    "en": "Last night the sky looked like snow.",
+    "options": [
+     "っぽい",
+     "っぽかった",
+     "っぽいな",
+     "っぽくて"
+    ],
+    "explain": "Before a noun ({空|そら}) use plain っぽい; the past goes at the end: だった."
+   },
+   {
+    "question": "もう{大人|おとな}なのに、{子ども|こども}＿＿ことを{言わないで|いわないで}。",
+    "en": "You're an adult, so don't say such childish things.",
+    "options": [
+     "っぽい",
+     "らしい",
+     "っぽく",
+     "みたく"
+    ],
+    "explain": "An adult acting like a kid → {子|こ}どもっぽい (childish). {子|こ}どもらしい praises a real child for being a kid."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "営業中",
+  "reading": "えいぎょうちゅう",
+  "romaji": "eigyō chū",
+  "meaning": "open (for business)",
+  "where": "The wooden sign hanging on the {喫茶店|きっさてん} door; the other side says {準備中|じゅんびちゅう}.",
+  "breakdown": "{営業中|えいぎょうちゅう}: 営業 doing business + 中 in the middle of → 'business in progress': open.",
+  "related": "{準備中|じゅんびちゅう} = 'getting ready': closed for now. {定休日|ていきゅうび} = regular closing day."
+ },
+ "tip": {
+  "mark": "友",
+  "title": "'Just friends', in public",
+  "body": "Many gay couples in Japan say {友達|ともだち} in public, even to a friendly café owner. It's usually habit and caution, not a comment on you. Later, ask gently who they're open with, so you know what to say."
+ },
+ "challenge": {
+  "type": "sticker",
+  "prompt": "On the train home, レン: 「{今日|きょう}はありがとう。また{会いたい|あいたい}な」 You're over the moon. Which sticker?",
+  "stickers": [
+   "yatta",
+   "gaan",
+   "uun",
+   "nemui"
+  ],
+  "model_answer": "やった！",
+  "explanation": "やった！ shows pure joy that he wants to meet again. ガーン is shock at bad news, うーん… sounds unsure, and {眠|ねむ}い… would sound like you're bored.",
+  "hint": "He wants to see you again. Show how happy that makes you."
+ },
+ "vocab": [
+  {
+   "jp": "{灰色|はいいろ}",
+   "reading": "はいいろ",
+   "en": "grey",
+   "level": "N3",
+   "src": "d0",
+   "surface": "灰色",
+   "note": "{灰|はい} ash + {色|いろ} colour. Also グレー."
+  },
+  {
+   "jp": "{心臓|しんぞう}",
+   "reading": "しんぞう",
+   "en": "heart (the organ)",
+   "level": "N3",
+   "src": "d0",
+   "surface": "心臓",
+   "note": "The organ. Feelings use {心|こころ} or {胸|むね}."
+  },
+  {
+   "jp": "ドキドキ",
+   "reading": "どきどき",
+   "en": "heart pounding",
+   "level": "N3",
+   "src": "d0",
+   "surface": "ドキドキ",
+   "note": "ドキドキする: nerves, excitement or love."
+  },
+  {
+   "jp": "{振|ふ}る",
+   "reading": "ふる",
+   "en": "to wave, shake",
+   "level": "N3",
+   "src": "d1",
+   "surface": "振って",
+   "note": "{手|て}を{振|ふ}る = wave. Also: to dump someone ({振|ふ}られた = got dumped)."
+  },
+  {
+   "jp": "{背|せ}",
+   "reading": "せ",
+   "en": "height; back",
+   "level": "N4",
+   "src": "d1",
+   "surface": "背",
+   "note": "{背|せ}が{高|たか}い = tall. Not {高|たか}い{人|ひと} alone."
+  },
+  {
+   "jp": "{初対面|しょたいめん}",
+   "reading": "しょたいめん",
+   "en": "first meeting",
+   "level": "N3",
+   "src": "d2",
+   "surface": "初対面",
+   "note": "{初|しょ} first + {対面|たいめん} face to face."
+  },
+  {
+   "jp": "{店内|てんない}",
+   "reading": "てんない",
+   "en": "inside the shop",
+   "level": "N3",
+   "src": "d4",
+   "surface": "店内",
+   "note": "On signs: {店内|てんない}でお{召|め}し{上|あ}がりですか = eating in?"
+  },
+  {
+   "jp": "{舞|ま}う",
+   "reading": "まう",
+   "en": "to dance, flutter",
+   "level": "N2",
+   "src": "d4",
+   "surface": "舞い始めた",
+   "note": "Snow, petals or leaves floating down. Poetic but common."
+  },
+  {
+   "jp": "{胸|むね}",
+   "reading": "むね",
+   "en": "chest; heart (feelings)",
+   "level": "N3",
+   "src": "d5",
+   "surface": "胸",
+   "note": "Where feelings live: {胸|むね}がいっぱい, {胸|むね}が{痛|いた}い."
+  },
+  {
+   "jp": "{約束|やくそく}",
+   "reading": "やくそく",
+   "en": "promise",
+   "level": "N4",
+   "src": "d5",
+   "surface": "約束",
+   "note": "{約束|やくそく}する = promise. Also a plain appointment with friends."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "振",
+   "track": "lesson",
+   "on": "シン",
+   "kun": "ふ(る)",
+   "meaning": "wave, shake, swing",
+   "parts": "扌 hand radical + 辰 a clam shell, moving → a hand swinging back and forth: wave, shake.",
+   "lookalike": "Not 震 (quake, as in {地震|じしん}): 震 has 雨 rain on top, 振 has 扌 hand on the left.",
+   "words": [
+    {
+     "jp": "{振|ふ}る",
+     "reading": "ふる",
+     "en": "to wave, shake"
+    },
+    {
+     "jp": "{振|ふ}り{返|かえ}る",
+     "reading": "ふりかえる",
+     "en": "to look back"
+    },
+    {
+     "jp": "{三振|さんしん}",
+     "reading": "さんしん",
+     "en": "strikeout (baseball)"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "quake",
+     "throw",
+     "push"
+    ],
+    "readings": [
+     "しんる",
+     "ゆる",
+     "ぶる"
+    ]
+   }
+  },
+  {
+   "kanji": "内",
+   "track": "n3",
+   "on": "ナイ・ダイ",
+   "kun": "うち",
+   "meaning": "inside, within",
+   "parts": "冂 an enclosure + 人 a person stepping in → someone going inside a space: inside.",
+   "lookalike": "Not 肉 (meat): 肉 has two 人 inside, 内 has one.",
+   "words": [
+    {
+     "jp": "{店内|てんない}",
+     "reading": "てんない",
+     "en": "inside the shop"
+    },
+    {
+     "jp": "{案内|あんない}",
+     "reading": "あんない",
+     "en": "guidance, showing around"
+    },
+    {
+     "jp": "{内側|うちがわ}",
+     "reading": "うちがわ",
+     "en": "inside, inner side"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "meat",
+     "outside",
+     "centre"
+    ],
+    "readings": [
+     "みせうち",
+     "てんだい",
+     "てんにく"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Kinds of snow",
+   "title_jp": "{雪|ゆき}のいろいろ",
+   "intro": "Snow country has a word for every kind.",
+   "items": [
+    {
+     "jp": "{粉雪|こなゆき|powder snow|3}",
+     "en": "powder snow",
+     "note": "{粉|こな} powder: dry and light, skiers love it."
+    },
+    {
+     "jp": "ぼたん{雪|ゆき}",
+     "en": "big fluffy flakes",
+     "note": "Named after peony petals; wet and heavy."
+    },
+    {
+     "jp": "{吹雪|ふぶき|snowstorm|3}",
+     "en": "snowstorm, blizzard",
+     "note": "{吹|ふ}く blow + {雪|ゆき}. Don't drive in one."
+    },
+    {
+     "jp": "{雪景色|ゆきげしき|snowy scenery|3}",
+     "en": "snowy landscape",
+     "note": "{雪|ゆき} + {景色|けしき}: perfect for a film camera."
+    }
+   ]
+  },
+  {
+   "title": "Feelings as sounds",
+   "title_jp": "{気持ち|きもち}のオノマトペ",
+   "intro": "Japanese often says a feeling with a sound word.",
+   "items": [
+    {
+     "jp": "ワクワクする",
+     "en": "to be excited (looking forward)",
+     "note": "Before a trip or a date."
+    },
+    {
+     "jp": "ソワソワする",
+     "en": "to be restless, fidgety",
+     "note": "Can't sit still while you wait."
+    },
+    {
+     "jp": "ホッとする",
+     "en": "to feel relieved",
+     "note": "When the nerves finally go."
+    }
+   ]
+  }
+ ]
+}

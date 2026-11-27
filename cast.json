@@ -183,7 +183,7 @@
    ],
    "aliases": [],
    "color": "#2c4f86",
-   "status": "{日曜|にちよう}、{楽しみ|たのしみ}☕",
+   "status": "{雪|ゆき}の{日|ひ}の{一枚|いちまい}📷",
    "where": "{長野市|ながのし}",
    "status_base": "{映画館|えいがかん}、なくならないで…🎞",
    "where_base": "{長野市|ながのし}"
@@ -738,6 +738,26 @@
    "new_facts": [
     "田中さん read 颯太's essay on 5 Dec; he said little but kept it on the living-room shelf."
    ]
+  },
+  {
+   "date": "2026-12-06",
+   "cast": [
+    "ren"
+   ],
+   "guest": "古川さん (owner of the 喫茶店 near レン's cinema)",
+   "summary": "Sunday 6 Dec: アルちゃん and レン meet for the first time at the old 喫茶店 near レン's cinema in 長野市. When the owner 古川さん asks if they're friends, レン quickly says yes, which makes アルちゃん a little sad though he understands; snow starts falling, レン takes out his film camera, and they promise to walk in the snowy mountains next time.",
+   "new_facts": [
+    "アルちゃん and レン met in person for the first time on Sun 6 Dec 2026, at the 喫茶店 near レン's cinema in 長野市.",
+    "The 喫茶店's owner (マスター) is 古川さん (68).",
+    "レン is taller than he looks in his photos.",
+    "In public, レン introduced アルちゃん as a friend (友達); アルちゃん felt a bit sad but understood.",
+    "レン and アルちゃん promised to walk in the snowy mountains together next time; no date set yet."
+   ],
+   "status_upd": {
+    "ren": {
+     "status": "{雪|ゆき}の{日|ひ}の{一枚|いちまい}📷"
+    }
+   }
   }
  ],
  "others": [
