@@ -70,7 +70,7 @@
     "Yuki"
    ],
    "color": "#80c241",
-   "status": "{年末|ねんまつ}は{実家|じっか}で{寝正月|ねしょうがつ}{予定|よてい}💤",
+   "status": "{忘年会|ぼうねんかい}、{部長|ぶちょう}のカラオケ{地獄|じごく}…🎤",
    "where": "{東京|とうきょう}",
    "status_base": "{休日出勤|きゅうじつしゅっきん}なう…カラオケ{行きたい|いきたい}",
    "where_base": "{東京|とうきょう}"
@@ -905,6 +905,24 @@
     "On 15 Dec 恵子さん drove to 鷹ノ原高校 at 4:30 to pick アルちゃん up because of heavy snow.",
     "The result of 澪's exchange interview still isn't known on 15 Dec."
    ]
+  },
+  {
+   "date": "2026-12-16",
+   "cast": [
+    "yuki"
+   ],
+   "summary": "Wednesday 16 Dec: after her company 忘年会 (her 部長 sang karaoke forever), 由紀 compares Christmas and New Year in Spain and Japan with アルちゃん on LINE, then asks if he'll spend the 24th with レン. He hasn't asked him yet; 由紀 says they're close enough and レン will be glad.",
+   "new_facts": [
+    "由紀's company 忘年会 was on Wed 16 Dec, at an izakaya with all-you-can-drink.",
+    "As of 16 Dec アルちゃん has no plans with レン for Christmas Eve and hasn't dared to ask him.",
+    "In 鷹ノ原 there is no rubbish collection from 30 Dec to 3 Jan."
+   ],
+   "status_upd": {
+    "yuki": {
+     "status": "{忘年会|ぼうねんかい}、{部長|ぶちょう}のカラオケ{地獄|じごく}…🎤",
+     "where": "{東京|とうきょう}"
+    }
+   }
   }
  ],
  "others": [

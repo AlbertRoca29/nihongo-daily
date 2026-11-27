@@ -302,5 +302,12 @@
   "category": "money-work",
   "function": "describing",
   "format": "dialogue"
+ },
+ {
+  "id": "2026-12-16",
+  "topic": "Christmas in Spain vs Japan",
+  "category": "society-opinions",
+  "function": "comparing",
+  "format": "line"
  }
 ]

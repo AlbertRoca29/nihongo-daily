@@ -1,0 +1,464 @@
+{
+ "topic": "Christmas in Spain vs Japan",
+ "category": "society-opinions",
+ "function": "comparing",
+ "format": "line",
+ "cast": [
+  "yuki"
+ ],
+ "title_jp": "クリスマスとお{正月|しょうがつ}",
+ "context": "Wednesday 16 December: {由紀|ゆき} messages アルちゃん after her company's year-end party. They compare Christmas and New Year in Spain and Japan, and she asks whether he'll spend the 24th with レン.",
+ "scene": "Wednesday night. {由紀|ゆき} has just left her office year-end party. You compare Christmas in Spain and Japan, until she asks about レン.",
+ "keep": [
+  "p0"
+ ],
+ "phrases": [
+  {
+   "jp": "{東京|とうきょう}は{鷹ノ原|たかのはら}ほど{雪|ゆき}が{降らない|ふらない}。",
+   "en": "Tokyo doesn't get as much snow as {鷹ノ原|たかのはら}.",
+   "register": "casual",
+   "note": "A は B ほど + negative = A isn't as … as B."
+  },
+  {
+   "jp": "{国|くに}によって{全然|ぜんぜん}{違う|ちがう}ね。",
+   "en": "It's totally different depending on the country.",
+   "register": "casual",
+   "note": "〜によって = depending on. Handy whenever you compare."
+  },
+  {
+   "jp": "スペインでは、どうやって{祝う|いわう|to celebrate|3}の？",
+   "en": "How do you celebrate in Spain?",
+   "register": "casual",
+   "note": "{祝|いわ}う: holidays, birthdays, success. The noun is お{祝|いわ}い."
+  },
+  {
+   "jp": "{涙|なみだ|tears|3}が{出る|でる}ほど{笑った|わらった}。",
+   "en": "I laughed till I cried.",
+   "register": "casual",
+   "note": "Verb + ほど: 'to the point of'."
+  },
+  {
+   "jp": "{良いお年を|よいおとしを|have a good New Year|4}！",
+   "en": "Have a good New Year!",
+   "register": "neutral",
+   "note": "Said the last time you see someone before New Year. After 1 January: あけましておめでとう."
+  }
+ ],
+ "dialogue_setting": "LINE, Wednesday night. {由紀|ゆき} is on the train home in Tokyo; you're under the kotatsu in {鷹ノ原|たかのはら}.",
+ "dialogue": [
+  {
+   "who": "yuki",
+   "speaker": "由紀",
+   "time": "21:32",
+   "jp": "{忘年会|ぼうねんかい|year-end party|3}{終わった|おわった}〜！{部長|ぶちょう}のカラオケ、{最後|さいご}まで{死ぬ|しぬ}ほど{長かった|ながかった}ｗ",
+   "en": "Year-end party's over! The manager's karaoke was deadly long right to the end lol",
+   "register": "casual"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "21:35",
+   "jp": "お{疲れ|つかれ}ｗ スペインは{今|いま}、クリスマスの{準備|じゅんび|preparations|4}で{忙しい|いそがしい}{時期|じき|time, season, period|3}だよ。",
+   "en": "Good job surviving lol. In Spain this is the busy season, getting ready for Christmas.",
+   "register": "casual"
+  },
+  {
+   "who": "yuki",
+   "speaker": "由紀",
+   "time": "21:36",
+   "jp": "{日本|にほん}のクリスマスって、スペインほど{大事|だいじ}じゃないでしょ？",
+   "en": "Christmas in Japan isn't as big a deal as in Spain, right?",
+   "register": "casual"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "21:38",
+   "jp": "うん。スペインは{家族|かぞく}で{過ごす|すごす|to spend (time)|3}けど、",
+   "en": "Yeah. In Spain you spend it with your family, but…",
+   "register": "casual"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "21:38",
+   "jp": "{日本|にほん}は{恋人|こいびと|boyfriend/girlfriend|3}の{日|ひ}って{感じ|かんじ}。",
+   "en": "in Japan it feels like a day for couples.",
+   "register": "casual"
+  },
+  {
+   "who": "yuki",
+   "speaker": "由紀",
+   "time": "21:39",
+   "jp": "その{代わり|かわり}、お{正月|しょうがつ}は{家族|かぞく}の{行事|ぎょうじ|event, custom|3}！{逆|ぎゃく}だよねｗ",
+   "en": "Instead, New Year is the family event! It's the other way round lol",
+   "register": "casual"
+  },
+  {
+   "who": "yuki",
+   "speaker": "由紀",
+   "time": "21:39",
+   "jp": "で、24{日|か}はレンと？ｗ",
+   "en": "So, the 24th with レン? lol",
+   "register": "casual"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "21:41",
+   "sticker": "hazukashii",
+   "jp": "{恥ずかしい|はずかしい}…",
+   "en": "So embarrassing…"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "21:41",
+   "jp": "まだ{何|なに}も{決めてない|きめてない}よ。{誘う|さそう}{勇気|ゆうき}がない…",
+   "en": "Nothing's decided yet. I don't have the guts to ask him…",
+   "register": "casual"
+  },
+  {
+   "who": "yuki",
+   "speaker": "由紀",
+   "time": "21:42",
+   "jp": "{誘える|さそえる}ほど{仲良く|なかよく|on good terms, close|3}なってるじゃん！{絶対|ぜったい}{喜ぶ|よろこぶ|to be happy, glad|4}って",
+   "en": "You're close enough to ask him! He'll definitely be happy, I'm telling you",
+   "register": "casual"
+  }
+ ],
+ "listening": {
+  "type": "announcement",
+  "intro": "At 5 p.m. the town loudspeakers ({防災無線|ぼうさいむせん}) crackle on.",
+  "who": "extra",
+  "title": "{防災無線|ぼうさいむせん}",
+  "place": "{鷹ノ原町|たかのはらまち}",
+  "lines": [
+   {
+    "who": "extra",
+    "voice": "f",
+    "jp": "{鷹ノ原町|たかのはらまち}からお{知らせ|しらせ}です。{年末年始|ねんまつねんし|the New Year holidays|3}のゴミの{収集|しゅうしゅう|collection|2}について。",
+    "en": "A notice from {鷹ノ原|たかのはら} town about rubbish collection over the New Year holidays."
+   },
+   {
+    "who": "extra",
+    "voice": "f",
+    "jp": "12{月|がつ}30{日|にち}から1{月|がつ}3{日|か}まで、{収集|しゅうしゅう|collection|2}はお{休み|やすみ}です。",
+    "en": "From 30 December to 3 January, there will be no collection."
+   }
+  ],
+  "question": "ゴミの{収集|しゅうしゅう}がないのは、いつですか。",
+  "options": [
+   "12月30日から1月3日まで",
+   "12月31日だけ",
+   "12月25日から1月7日まで",
+   "1月1日から1月3日まで"
+  ],
+  "explain": "12{月|がつ}30{日|にち}から1{月|がつ}3{日|か}まで: no collection from 30 Dec to 3 Jan."
+ },
+ "grammar": {
+  "id": "n3-hodo",
+  "pattern": "〜ほど",
+  "level": "N3",
+  "meaning": "to the extent that",
+  "form": "degree: plain form + ほど ({死|し}ぬほど, {涙|なみだ}が{出|で}るほど, {誘|さそ}えるほど) · not as … as: A は B ほど + negative (スペインほど{大事|だいじ}じゃない)",
+  "explanation": "ほど marks a degree: 'to the point that…'. {死|し}ぬほど is everyday exaggeration, 'like crazy'. With a negative it compares: A は B ほど〜ない = A isn't as … as B. For 'more than', use より, not ほど.",
+  "src": [
+   "d2",
+   "d0",
+   "d9",
+   "p0",
+   "p3"
+  ],
+  "mark": [
+   "スペインほど",
+   "死ぬほど",
+   "誘えるほど",
+   "鷹ノ原ほど",
+   "出るほど",
+   "痛いほど",
+   "お好み焼きほど"
+  ],
+  "examples": [
+   {
+    "jp": "{今日|きょう}は{手|て}が{痛い|いたい}ほど{寒い|さむい}。",
+    "en": "It's so cold today my hands hurt."
+   },
+   {
+    "jp": "{大阪|おおさか}のお{好み焼き|このみやき|okonomiyaki|4}ほどうまいものはない！",
+    "en": "Nothing's as good as Osaka okonomiyaki! (says {健太|けんた})"
+   }
+  ],
+  "quiz": {
+   "question": "{東京|とうきょう}の{冬|ふゆ}は、{長野|ながの}＿＿{寒くない|さむくない}。",
+   "en": "Winter in Tokyo isn't as cold as in Nagano.",
+   "options": [
+    "ほど",
+    "より",
+    "まで",
+    "だけ"
+   ],
+   "explain": "Negative comparison: A は B ほど〜ない."
+  },
+  "quiz_more": [
+   {
+    "question": "もう{歩けない|あるけない}＿＿{疲れた|つかれた}。",
+    "en": "I'm so tired I can't walk any more.",
+    "options": [
+     "ほど",
+     "より",
+     "ばかり",
+     "しか"
+    ],
+    "explain": "Plain form + ほど: tired to the point of not being able to walk."
+   },
+   {
+    "question": "{今年|ことし}は{去年|きょねん}＿＿{雪|ゆき}が{多い|おおい}。",
+    "en": "This year there's more snow than last year.",
+    "options": [
+     "より",
+     "ほど",
+     "まで",
+     "なら"
+    ],
+    "explain": "A positive comparison needs より. ほど only compares with a negative."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "飲み放題",
+  "reading": "のみほうだい",
+  "romaji": "nomihōdai",
+  "meaning": "all-you-can-drink",
+  "where": "On the {居酒屋|いざかや} sign in the photo {由紀|ゆき} sends from her party.",
+  "breakdown": "飲み drinking + {放題|ほうだい} as much as you like ({放|ほう} let go + {題|だい} topic) → drink freely.",
+  "related": "{食べ放題|たべほうだい} = all-you-can-eat. Usually with a time limit: 2{時間|じかん}{飲み放題|のみほうだい}."
+ },
+ "tip": {
+  "mark": "忘",
+  "title": "{忘年会|ぼうねんかい} season",
+  "body": "In December almost every company, club and group of friends holds a {忘年会|ぼうねんかい}, a party to 'forget the year'. The boss may say tonight is {無礼講|ぶれいこう} (no rank, anything goes), but nobody really believes it. As people leave, they say {良|よ}いお{年|とし}を."
+ },
+ "challenge": {
+  "type": "order",
+  "prompt": "{由紀|ゆき}: 「スペインと{比べて|くらべて}、{日本|にほん}のクリスマスってどう？」 Tell her Japan's Christmas isn't as big an event as Spain's.",
+  "pieces": [
+   "{日本|にほん}のクリスマスは、",
+   "スペインほど",
+   "{大きな|おおきな}イベント",
+   "じゃないよ。"
+  ],
+  "model_answer": "{日本|にほん}のクリスマスは、スペインほど{大きな|おおきな}イベントじゃないよ。",
+  "explanation": "The topic ({日本|にほん}のクリスマスは) comes first, then what you compare it with + ほど. The sentence must end in a negative (じゃない) for ほど to mean 'not as … as'. よ adds a friendly 'you know'.",
+  "hint": "A は B ほど + negative"
+ },
+ "vocab": [
+  {
+   "jp": "{忘年会|ぼうねんかい}",
+   "reading": "ぼうねんかい",
+   "en": "year-end party",
+   "level": "N3",
+   "src": "d0",
+   "surface": "忘年会",
+   "note": "{忘|わす}れる forget + {年|とし} year + {会|かい} party."
+  },
+  {
+   "jp": "{準備|じゅんび}",
+   "reading": "じゅんび",
+   "en": "preparation",
+   "level": "N4",
+   "src": "d1",
+   "surface": "準備",
+   "note": "{準備|じゅんび}する = to prepare. 〜の{準備|じゅんび}をする."
+  },
+  {
+   "jp": "{時期|じき}",
+   "reading": "じき",
+   "en": "time, season, period",
+   "level": "N3",
+   "src": "d1",
+   "surface": "時期",
+   "note": "{忙|いそが}しい{時期|じき} = busy season. Not a clock time."
+  },
+  {
+   "jp": "{過|す}ごす",
+   "reading": "すごす",
+   "en": "to spend (time)",
+   "level": "N3",
+   "src": "d3",
+   "surface": "過ごす",
+   "note": "Time, holidays, a day. Money is {使|つか}う."
+  },
+  {
+   "jp": "{行事|ぎょうじ}",
+   "reading": "ぎょうじ",
+   "en": "event, custom (yearly)",
+   "level": "N3",
+   "src": "d5",
+   "surface": "行事",
+   "note": "{年中行事|ねんちゅうぎょうじ} = yearly customs, like {七五三|しちごさん} or お{正月|しょうがつ}."
+  },
+  {
+   "jp": "{仲良|なかよ}い",
+   "reading": "なかよい",
+   "en": "close, on good terms",
+   "level": "N3",
+   "src": "d9",
+   "surface": "仲良く",
+   "note": "{仲|なか} relationship + {良|よ}い good. {仲良|なかよ}くなる = become close."
+  },
+  {
+   "jp": "{喜|よろこ}ぶ",
+   "reading": "よろこぶ",
+   "en": "to be happy, glad",
+   "level": "N4",
+   "src": "d9",
+   "surface": "喜ぶ",
+   "note": "Shows happiness at something. {喜|よろこ}んで! = gladly!"
+  },
+  {
+   "jp": "{祝|いわ}う",
+   "reading": "いわう",
+   "en": "to celebrate",
+   "level": "N3",
+   "src": "p2",
+   "surface": "祝う",
+   "note": "{誕生日|たんじょうび}を{祝|いわ}う. The noun: お{祝|いわ}い."
+  },
+  {
+   "jp": "{涙|なみだ}",
+   "reading": "なみだ",
+   "en": "tears",
+   "level": "N3",
+   "src": "p3",
+   "surface": "涙",
+   "note": "{涙|なみだ}が{出|で}る = tears come. Water radical on the left."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "喜",
+   "track": "lesson",
+   "on": "キ",
+   "kun": "よろこ(ぶ)",
+   "meaning": "joy, be glad",
+   "parts": "壴 a drum on a stand + 口 mouth → drumming and singing at a festival: joy.",
+   "lookalike": "Not 嘉 (praise, rare): 喜 ends in 口 at the bottom.",
+   "words": [
+    {
+     "jp": "{喜|よろこ}ぶ",
+     "reading": "よろこぶ",
+     "en": "to be glad"
+    },
+    {
+     "jp": "{大喜|おおよろこ}び",
+     "reading": "おおよろこび",
+     "en": "great joy"
+    },
+    {
+     "jp": "{喜劇|きげき}",
+     "reading": "きげき",
+     "en": "comedy"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "drum",
+     "to sing",
+     "to cry"
+    ],
+    "readings": [
+     "よろぶ",
+     "うれこぶ",
+     "きこぶ"
+    ]
+   }
+  },
+  {
+   "kanji": "最",
+   "track": "n3",
+   "on": "サイ",
+   "kun": "もっと(も)",
+   "meaning": "most, the -est",
+   "parts": "日 sun + 取 take → taking the very top, like the sun at noon: most.",
+   "lookalike": "Not 量 (amount): 量 has 里 below, 最 has 取 take.",
+   "words": [
+    {
+     "jp": "{最後|さいご}",
+     "reading": "さいご",
+     "en": "the end, last"
+    },
+    {
+     "jp": "{最近|さいきん}",
+     "reading": "さいきん",
+     "en": "recently"
+    },
+    {
+     "jp": "{最高|さいこう}",
+     "reading": "さいこう",
+     "en": "the best"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "take",
+     "amount",
+     "sun"
+    ],
+    "readings": [
+     "さいこ",
+     "もつご",
+     "しゅご"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Year-end words",
+   "title_jp": "{年末|ねんまつ}の{言葉|ことば}",
+   "intro": "You'll hear these everywhere from now on.",
+   "items": [
+    {
+     "jp": "{年末|ねんまつ|end of the year|4}",
+     "en": "end of the year"
+    },
+    {
+     "jp": "{仕事納め|しごとおさめ|last workday of the year|3}",
+     "en": "the last workday of the year",
+     "note": "Usually around 28 December."
+    },
+    {
+     "jp": "{年越し|としこし|seeing the year out|3}",
+     "en": "seeing out the old year",
+     "note": "{年越|としこ}しそば on 31 December."
+    }
+   ]
+  },
+  {
+   "title": "Christmas, two ways",
+   "title_jp": "{二つ|ふたつ}のクリスマス",
+   "intro": "Spain and Japan side by side.",
+   "items": [
+    {
+     "jp": "スペインでは1{月|がつ}6{日|か}にもプレゼントをもらう。",
+     "en": "In Spain you also get presents on 6 January.",
+     "note": "Three Kings' Day."
+    },
+    {
+     "jp": "{日本|にほん}ではクリスマスにフライドチキンを{食べる|たべる}{人|ひと}が{多い|おおい}。",
+     "en": "In Japan lots of people eat fried chicken at Christmas."
+    },
+    {
+     "jp": "24{日|か}の{夜|よる}は、レストランが{予約|よやく}でいっぱい。",
+     "en": "On the night of the 24th, restaurants are fully booked."
+    }
+   ]
+  }
+ ]
+}
