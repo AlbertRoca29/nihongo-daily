@@ -204,5 +204,12 @@
   "category": "love-relationships",
   "function": "describing",
   "format": "dialogue"
+ },
+ {
+  "id": "2026-12-02",
+  "topic": "{颯太|そうた}'s essay about Grandpa",
+  "category": "family-childhood",
+  "function": "narrating",
+  "format": "text"
  }
 ]

@@ -1,0 +1,443 @@
+{
+ "topic": "{颯太|そうた}'s essay about Grandpa",
+ "category": "family-childhood",
+ "function": "narrating",
+ "format": "text",
+ "reader": "sota",
+ "cast": [
+  "sota",
+  "tanaka"
+ ],
+ "title_jp": "おじいちゃんの{子ども|こども}の{頃|ころ}",
+ "context": "Wednesday 2 December: {恵子|けいこ}さん gets a photo from {由美|ゆみ} of {颯太|そうた}'s school essay about his grandpa's childhood, and reads it with アルちゃん at the kotatsu while {田中|たなか}さん pretends not to listen.",
+ "scene": "Wednesday night at the kotatsu. {恵子|けいこ}さん shows you {颯太|そうた}'s school essay. It's about {田中|たなか}さん as a boy.",
+ "keep": [
+  "p1"
+ ],
+ "phrases": [
+  {
+   "jp": "{子ども|こども}の{頃|ころ|time, days (when)|4}、よく{雪|ゆき}で{遊んだ|あそんだ}なあ。",
+   "en": "When I was a kid, I often played in the snow.",
+   "register": "casual",
+   "note": "なあ at the end: thinking aloud, a bit nostalgic."
+  },
+  {
+   "jp": "{去年|きょねん}に{比べて|くらべて}、{今年|ことし}は{雪|ゆき}が{多い|おおい}ね。",
+   "en": "Compared to last year, there's more snow this year.",
+   "register": "casual",
+   "note": "Perfect small talk in a snowy town."
+  },
+  {
+   "jp": "こっちの{生活|せいかつ|life, daily living|4}にも、だいぶ{慣れて|なれて|to get used to|4}きた。",
+   "en": "I've got quite used to life here.",
+   "register": "casual",
+   "note": "〜てきた: a change that has been happening little by little."
+  },
+  {
+   "jp": "{将来|しょうらい|future|4}の{夢|ゆめ}は{何|なん}ですか。",
+   "en": "What's your dream for the future?",
+   "register": "polite",
+   "note": "The classic question every Japanese kid gets from adults."
+  },
+  {
+   "jp": "{家族|かぞく}の{昔|むかし}の{話|はなし}を{聞いて|きいて}、{驚きました|おどろきました|to be surprised|4}。",
+   "en": "I was surprised to hear my family's old stories.",
+   "register": "polite",
+   "note": "Reason in て-form + {驚|おどろ}く."
+  }
+ ],
+ "dialogue_setting": "A photo of {颯太|そうた}'s essay on {恵子|けいこ}さん's phone, sent by {由美|ゆみ}: pencil on squared paper, with a red {花丸|はなまる} at the top.",
+ "text_title": "おじいちゃんの{子ども|こども}の{頃|ころ|time, days (when)|4}　5{年|ねん}　{颯太|そうた}",
+ "dialogue": [
+  {
+   "speaker": "Homework",
+   "jp": "{社会|しゃかい}の{作文|さくぶん|essay, composition|3}の{宿題|しゅくだい}で、おじいちゃんに{子ども|こども}の{頃|ころ|time, days (when)|4}の{話|はなし}を{聞いた|きいた}。",
+   "en": "For my social studies essay homework, I asked Grandpa about when he was a kid.",
+   "register": "neutral"
+  },
+  {
+   "speaker": "Snow",
+   "jp": "おじいちゃんが{子ども|こども}の{頃|ころ|time, days (when)|4}は、{今|いま}に{比べて|くらべて}{雪|ゆき}がずっと{多くて|おおくて}、{屋根|やね|roof|3}まで{積もった|つもった|to pile up (snow)|3}そうだ。",
+   "en": "When Grandpa was a kid, there was much more snow compared to now: it piled up to the roof, he says.",
+   "register": "neutral"
+  },
+  {
+   "speaker": "Winter",
+   "jp": "{家|いえ}に{暖房|だんぼう|heating|3}はなくて、{兄弟|きょうだい|brothers and sisters|4}5{人|にん}で{一つ|ひとつ}のこたつに{入った|はいった}らしい。{驚いた|おどろいた|to be surprised|4}！",
+   "en": "The house had no heating, and five brothers and sisters squeezed under one kotatsu. I was amazed!",
+   "register": "neutral"
+  },
+  {
+   "speaker": "Play",
+   "jp": "ゲームもなかった。でも{雪|ゆき}の{日|ひ}は、{ひいおじいちゃん||great-grandfather|3}がスキーに{連れて|つれて|to take (someone) along|4}{行って|いって}くれたそうだ。",
+   "en": "There were no video games either. But on snowy days, his dad (my great-grandpa) took him skiing.",
+   "register": "neutral"
+  },
+  {
+   "speaker": "Today",
+   "jp": "{昔|むかし}に{比べて|くらべて}、{今|いま}の{生活|せいかつ|life, daily living|4}はずっと{便利|べんり}だ。でもおじいちゃんは「{不便|ふべん|inconvenient|3}だったけど、{楽しかった|たのしかった}」と{言った|いった}。",
+   "en": "Compared to the old days, life now is much more convenient. But Grandpa said, 'It was inconvenient, but it was fun.'",
+   "register": "neutral"
+  },
+  {
+   "speaker": "My dream",
+   "jp": "{僕|ぼく}の{将来|しょうらい|future|4}の{夢|ゆめ}はサッカー{選手|せんしゅ|player (sports)|3}。でもいつか、おじいちゃんのりんご{畑|ばたけ|field, orchard|3}を{継ぎたい|つぎたい|to take over (a family business)|2}。",
+   "en": "My dream for the future is to be a footballer. But one day I want to take over Grandpa's apple orchard.",
+   "register": "neutral"
+  }
+ ],
+ "listening": {
+  "type": "voicemail",
+  "intro": "After school, {颯太|そうた} left a message on the house phone.",
+  "who": "sota",
+  "lines": [
+   {
+    "who": "sota",
+    "jp": "ばあちゃん、{僕|ぼく}！{作文|さくぶん|essay|3}、{先生|せんせい}に{花丸|はなまる|top mark (flower circle)|3}もらった！{土曜日|どようび}、じいちゃんに{見せる|みせる}ね。",
+    "en": "Grandma, it's me! I got a top mark from my teacher for my essay! I'll show it to Grandpa on Saturday."
+   }
+  ],
+  "question": "{颯太|そうた}は{土曜日|どようび}に{何|なに}をしますか。",
+  "options": [
+   "おじいちゃんにさくぶんを見せる",
+   "せんせいにさくぶんを出す",
+   "おじいちゃんとスキーに行く",
+   "はなまるをかく"
+  ],
+  "explain": "He says じいちゃんに{見|み}せるね: he'll show Grandpa the essay on Saturday."
+ },
+ "grammar": {
+  "id": "n3-ni-kurabete",
+  "pattern": "〜に{比|くら}べて",
+  "level": "N3",
+  "meaning": "compared to",
+  "form": "noun + に{比|くら}べて ({昔|むかし}に{比|くら}べて, {去年|きょねん}に{比|くら}べて) · softer: noun + に{比|くら}べると ({東京|とうきょう}に{比|くら}べると) · two things: AとBを{比|くら}べると ({兄|あに}と{弟|おとうと}を{比|くら}べると)",
+  "explanation": "Sets a reference point: 'compared to A, B is…'. It's used for a difference in degree, often with ずっと. The point takes に, never を: {昔|むかし}に{比|くら}べて, not {昔|むかし}を{比|くら}べて. AとBを{比|くら}べると is the separate way to put two things side by side.",
+  "src": [
+   "d1",
+   "d4",
+   "p1"
+  ],
+  "mark": [
+   "今に比べて",
+   "昔に比べて",
+   "去年に比べて",
+   "東京に比べて",
+   "先月に比べると"
+  ],
+  "examples": [
+   {
+    "jp": "{東京|とうきょう}に{比べて|くらべて}、ここは{家賃|やちん|rent|3}が{安い|やすい}。",
+    "en": "Compared to Tokyo, rent here is cheap."
+   },
+   {
+    "jp": "{先月|せんげつ}に{比べると|くらべると}、{日本語|にほんご}がかなり{上手|じょうず}になった。",
+    "en": "Compared to last month, my Japanese has got a lot better."
+   }
+  ],
+  "quiz": {
+   "question": "{東京|とうきょう}＿＿、{鷹ノ原|たかのはら}は{星|ほし}がよく{見える|みえる}。",
+   "en": "Compared to Tokyo, you can see the stars well in {鷹ノ原|たかのはら}.",
+   "options": [
+    "に比べて",
+    "を比べて",
+    "より比べて",
+    "に比べた"
+   ],
+   "explain": "The reference point takes に: {東京|とうきょう}に{比|くら}べて."
+  },
+  "quiz_more": [
+   {
+    "question": "{兄|あに}と{弟|おとうと}＿＿、{弟|おとうと}のほうが{背|せ}が{高い|たかい}。",
+    "en": "If you compare my big brother and little brother, the little one is taller.",
+    "options": [
+     "を比べると",
+     "に比べると",
+     "が比べると",
+     "で比べると"
+    ],
+    "explain": "Two things side by side: AとBを{比|くら}べると."
+   },
+   {
+    "question": "{十年前|じゅうねんまえ}に＿＿、{町|まち}の{人口|じんこう|population|3}は{減った|へった|to decrease|3}。",
+    "en": "Compared to ten years ago, the town's population has gone down.",
+    "options": [
+     "比べて",
+     "比べた",
+     "比べる",
+     "比べない"
+    ],
+    "explain": "Linking to the rest of the sentence needs the て-form: に{比|くら}べて."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "花丸",
+  "reading": "はなまる",
+  "romaji": "hanamaru",
+  "meaning": "flower circle (top mark)",
+  "where": "In red pen at the top of {颯太|そうた}'s essay, next to the teacher's comment.",
+  "breakdown": "{花丸|はなまる}: 花 flower + 丸 circle → a circle with petals drawn round it: 'excellent'.",
+  "related": "{丸|まる} alone = correct. Teachers also stamp よくできました ('very well done')."
+ },
+ "tip": {
+  "mark": "丸",
+  "title": "○ is right, ✓ can be wrong",
+  "body": "In Japan a circle (○, まる) means correct and × (バツ) means wrong. A tick ✓ often marks a mistake, so don't panic if a form comes back full of them. マルをつける = to mark something as right."
+ },
+ "challenge": {
+  "type": "pick",
+  "prompt": "{颯太|そうた} on the family LINE: 「アルちゃんの{町|まち}は？{子ども|こども}の{頃|ころ|time, days (when)|4}と{比べて|くらべて}どう？」 Tell him your town in Spain has got much bigger since you were a kid.",
+  "options": [
+   {
+    "jp": "{子|こ}どもの{頃|ころ}に{比|くら}べて、{町|まち}がずっと{大|おお}きくなったよ！",
+    "ok": true,
+    "why": "Reference point + に{比|くら}べて, past なった for a change that happened, casual for a kid."
+   },
+   {
+    "jp": "{子|こ}どもの{頃|ころ}を{比|くら}べて、{町|まち}がずっと{大|おお}きくなったよ！",
+    "ok": false,
+    "why": "The reference point takes に, not を."
+   },
+   {
+    "jp": "{子|こ}どもの{頃|ころ}より{比|くら}べて、{町|まち}がずっと{大|おお}きくなったよ！",
+    "ok": false,
+    "why": "Use より alone or に{比|くら}べて, not both together."
+   },
+   {
+    "jp": "{子|こ}どもの{頃|ころ}に{比|くら}べて、{町|まち}がずっと{大|おお}きくなるよ！",
+    "ok": false,
+    "why": "The change already happened: なった, not なる."
+   }
+  ],
+  "model_answer": "{子ども|こども}の{頃|ころ|time, days (when)|4}に{比べて|くらべて}、{町|まち}がずっと{大きく|おおきく}なったよ！",
+  "explanation": "{子|こ}どもの{頃|ころ}に{比|くら}べて sets the reference point, and ずっと stresses how big the difference is. {大|おお}きくなった is past because the town has already grown. Plain form + よ is right for chatting with an 11-year-old.",
+  "hint": "reference point + に{比|くら}べて"
+ },
+ "vocab": [
+  {
+   "jp": "{作文|さくぶん}",
+   "reading": "さくぶん",
+   "en": "essay, composition",
+   "level": "N3",
+   "src": "d0",
+   "surface": "作文",
+   "note": "{作|さく} make + {文|ぶん} sentences. The school kind; a university essay is レポート."
+  },
+  {
+   "jp": "{頃|ころ}",
+   "reading": "ころ",
+   "en": "time, days (when…)",
+   "level": "N3",
+   "src": "d0",
+   "surface": "頃",
+   "note": "{子|こ}どもの{頃|ころ} = as a kid. 3{時|じ}{頃|ごろ} = about 3 o'clock (read ごろ)."
+  },
+  {
+   "jp": "{屋根|やね}",
+   "reading": "やね",
+   "en": "roof",
+   "level": "N3",
+   "src": "d1",
+   "surface": "屋根",
+   "note": "In snow country people climb up to clear it: {屋根|やね}の{雪下|ゆきお}ろし."
+  },
+  {
+   "jp": "{暖房|だんぼう}",
+   "reading": "だんぼう",
+   "en": "heating",
+   "level": "N3",
+   "src": "d2",
+   "surface": "暖房",
+   "note": "{暖|だん} warm + {房|ぼう} room. Opposite: {冷房|れいぼう}, air conditioning."
+  },
+  {
+   "jp": "{兄弟|きょうだい}",
+   "reading": "きょうだい",
+   "en": "siblings, brothers",
+   "level": "N4",
+   "src": "d2",
+   "surface": "兄弟",
+   "note": "{兄|きょう} older + {弟|だい} younger brother. Often used for sisters too."
+  },
+  {
+   "jp": "{驚|おどろ}く",
+   "reading": "おどろく",
+   "en": "to be surprised",
+   "level": "N3",
+   "src": "d2",
+   "surface": "驚いた",
+   "note": "Written style; in speech people often say びっくりした."
+  },
+  {
+   "jp": "{生活|せいかつ}",
+   "reading": "せいかつ",
+   "en": "life, daily living",
+   "level": "N3",
+   "src": "d4",
+   "surface": "生活",
+   "note": "Everyday life: {田舎|いなか}の{生活|せいかつ}. Not 'a life story' ({人生|じんせい})."
+  },
+  {
+   "jp": "{不便|ふべん}",
+   "reading": "ふべん",
+   "en": "inconvenient",
+   "level": "N3",
+   "src": "d4",
+   "surface": "不便",
+   "note": "{不|ふ} not + {便利|べんり} convenient. A な-adjective."
+  },
+  {
+   "jp": "{将来|しょうらい}",
+   "reading": "しょうらい",
+   "en": "future",
+   "level": "N3",
+   "src": "d5",
+   "surface": "将来",
+   "note": "Your own future plans: {将来|しょうらい}の{夢|ゆめ}. {未来|みらい} is the future in general."
+  },
+  {
+   "jp": "{継|つ}ぐ",
+   "reading": "つぐ",
+   "en": "to take over, inherit",
+   "level": "N2",
+   "src": "d5",
+   "surface": "継ぎたい",
+   "note": "A family business or farm: {店|みせ}を{継|つ}ぐ, {家|いえ}を{継|つ}ぐ."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "暖",
+   "track": "lesson",
+   "on": "ダン",
+   "kun": "あたた(かい)・あたた(める)",
+   "meaning": "warm",
+   "parts": "日 sun radical + 爰 a hand reaching out → the sun's warmth reaching you: warm.",
+   "lookalike": "Not 温 (warm, of water and things): 温 has 氵 water; 暖 has 日 sun, for air and weather.",
+   "words": [
+    {
+     "jp": "{暖房|だんぼう}",
+     "reading": "だんぼう",
+     "en": "heating"
+    },
+    {
+     "jp": "{暖|あたた}かい",
+     "reading": "あたたかい",
+     "en": "warm (weather, room)"
+    },
+    {
+     "jp": "{温暖|おんだん}",
+     "reading": "おんだん",
+     "en": "mild (climate)"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "cool",
+     "bright",
+     "hot water"
+    ],
+    "readings": [
+     "だんぽう",
+     "なんぼう",
+     "あつぼう"
+    ]
+   }
+  },
+  {
+   "kanji": "連",
+   "track": "n3",
+   "on": "レン",
+   "kun": "つ(れる)・つら(なる)",
+   "meaning": "take along, link, in a row",
+   "parts": "車 cart + 辶 road radical → carts travelling the road one after another: in a row, take along.",
+   "lookalike": "Not 運 (carry): 運 has 軍 army inside 辶; 連 has just 車.",
+   "words": [
+    {
+     "jp": "{連|つ}れて{行|い}く",
+     "reading": "つれていく",
+     "en": "to take (someone) along"
+    },
+    {
+     "jp": "{連絡|れんらく}",
+     "reading": "れんらく",
+     "en": "contact, getting in touch"
+    },
+    {
+     "jp": "{連休|れんきゅう}",
+     "reading": "れんきゅう",
+     "en": "long weekend, run of days off"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "carry",
+     "car, wheel",
+     "road, way"
+    ],
+    "readings": [
+     "はこれていく",
+     "れんれていく",
+     "つなれていく"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Winter life in the old days",
+   "title_jp": "{昔|むかし}の{冬|ふゆ}の{暮らし|くらし}",
+   "intro": "Things {田中|たなか}さん's generation grew up with.",
+   "items": [
+    {
+     "jp": "{囲炉裏|いろり|sunken hearth|2}",
+     "en": "sunken hearth",
+     "note": "A fire pit in the floor, for cooking and heat."
+    },
+    {
+     "jp": "{湯たんぽ|ゆたんぽ|hot-water bottle|3}",
+     "en": "hot-water bottle",
+     "note": "Still sold today; many people take one to bed."
+    },
+    {
+     "jp": "{半纏|はんてん|padded winter jacket|2}",
+     "en": "padded cotton jacket",
+     "note": "Worn at home over your clothes."
+    },
+    {
+     "jp": "{雪かき|ゆきかき|shovelling snow|3}",
+     "en": "shovelling snow",
+     "note": "Kids helped every morning; still a daily job here."
+    }
+   ]
+  },
+  {
+   "title": "Family words: mine and yours",
+   "title_jp": "{家族|かぞく}の{呼び方|よびかた}",
+   "intro": "Your own family (humble word) and someone else's (polite word).",
+   "items": [
+    {
+     "jp": "{祖母|そぼ|(my) grandmother|3}／おばあさん",
+     "en": "grandmother",
+     "note": "{祖母|そぼ} for your own, おばあさん for someone else's."
+    },
+    {
+     "jp": "{両親|りょうしん|parents|4}／ご{両親|りょうしん}",
+     "en": "parents",
+     "note": "Add ご for someone else's parents."
+    },
+    {
+     "jp": "{ひ孫|ひまご|great-grandchild|2}",
+     "en": "great-grandchild",
+     "note": "{孫|まご} grandchild + ひ. Same ひ as in ひいおじいちゃん."
+    },
+    {
+     "jp": "いとこ",
+     "en": "cousin",
+     "note": "One word for every cousin, male or female."
+    }
+   ]
+  }
+ ]
+}
