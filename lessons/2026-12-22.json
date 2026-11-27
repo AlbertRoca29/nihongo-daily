@@ -1,0 +1,161 @@
+{
+ "topic": "No bus, so a taxi on LINE",
+ "category": "getting-around",
+ "function": "reasons",
+ "format": "line",
+ "cast": [],
+ "guest": {"name": "小池さん", "name_jp": "{小池和子|こいけかずこ}さん", "role": "{鷹ノ原|たかのはら}'s only taxi driver, {恵子|けいこ}さん's old classmate; cheerful and fast-talking", "voice": "f", "age": 66},
+ "title_jp": "バスが{運休|うんきゅう}、タクシーを{呼ぶ|よぶ}",
+ "context": "Tuesday 22 December, the winter solstice ({冬至|とうじ}): after 4th-period English at {鷹ノ原高校|たかのはらこうこう}, the 4 o'clock bus is cancelled because of snow. アルちゃん books the town's only taxi on LINE, and {小池|こいけ}さん, the driver, reminds him about ゆず{湯|ゆ}.",
+ "scene": "Tuesday, the winter solstice. Snow has cancelled the 4 o'clock bus home from school. You message {小池|こいけ}さん, the town's only taxi driver.",
+ "keep": ["p0"],
+ "phrases": [
+  {"jp": "バスだけでなく、{電車|でんしゃ}も{止まって|とまって}います。", "en": "Not only the buses but the trains are stopped too.", "register": "polite", "note": "だけでなく… も: not just X, Y as well."},
+  {"jp": "{現在|げんざい|currently, at present|3}、{電車|でんしゃ}は{運転|うんてん}を{見合わせて|みあわせて|to suspend, hold off|2}います。", "en": "Trains are currently suspended.", "register": "polite", "note": "The classic station announcement on snowy days."},
+  {"jp": "{渋滞|じゅうたい|traffic jam|3}で{遅れて|おくれて}、すみません。", "en": "Sorry I'm late, there was a traffic jam.", "register": "polite", "note": "Noun + で gives the cause."},
+  {"jp": "{正門|せいもん|main gate|2}の{手前|てまえ|just before, this side of|3}で{止めて|とめて}ください。", "en": "Please stop just before the main gate.", "register": "polite", "note": "Useful in any taxi: 〜の{手前|てまえ}で = just before ~."},
+  {"jp": "{駅|えき}まで、{料金|りょうきん|fare, charge|3}はいくらぐらいですか。", "en": "About how much is the fare to the station?", "register": "polite"}
+ ],
+ "dialogue_setting": "LINE, Tuesday afternoon. You're in the school entrance; {恵子|けいこ}さん gave you {小池|こいけ}さん's LINE for days like this.",
+ "dialogue": [
+  {"who": "you", "speaker": "アルちゃん", "me": true, "time": "15:48", "jp": "{小池|こいけ}さん、{急に|きゅうに|suddenly|4}すみません。{高校|こうこう}まで{迎え|むかえ|picking someone up|3}に{来て|きて}もらえますか。", "en": "{小池|こいけ}さん, sorry this is so sudden. Could you come and pick me up at the high school?", "register": "polite"},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "time": "15:48", "jp": "{雪|ゆき}の{影響|えいきょう|effect, influence|3}で、4{時|じ}のバスが{運休|うんきゅう|service cancelled|2}になっちゃって…", "en": "Because of the snow, the 4 o'clock bus has been cancelled…", "register": "polite"},
+  {"who": "guest", "speaker": "小池さん", "time": "15:50", "jp": "はいはい、アルちゃんね！{今日|きょう}は{雪|ゆき}だけでなく{風|かぜ}も{強くて|つよくて}ね", "en": "Yes yes, アルちゃん! Today it's not just snow, the wind's strong too.", "register": "casual"},
+  {"who": "guest", "speaker": "小池さん", "time": "15:50", "jp": "{国道|こくどう|national highway|2}が{渋滞|じゅうたい|traffic jam|3}してるの。{今|いま}{駅前|えきまえ}だから、20{分|ぷん}はかかるわ", "en": "The main road is jammed. I'm at the station now, so it'll take at least 20 minutes.", "register": "casual"},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "time": "15:51", "jp": "{大丈夫|だいじょうぶ}です。{寒い|さむい}ので、{校舎|こうしゃ|school building|2}の{中|なか}で{待って|まって}います。", "en": "That's fine. It's cold, so I'll wait inside the school building.", "register": "polite"},
+  {"who": "guest", "speaker": "小池さん", "time": "15:51", "sticker": "ryokai", "jp": "{了解|りょうかい}！", "en": "Got it!"},
+  {"who": "guest", "speaker": "小池さん", "time": "16:12", "kind": "voice", "jp": "もうすぐ{着く|つく}よ！{正門|せいもん|main gate|2}の{手前|てまえ|just before, this side of|3}に{止めて|とめて}おくからね〜", "en": "Almost there! I'll stop just before the main gate~", "register": "casual"},
+  {"who": "guest", "speaker": "小池さん", "time": "16:13", "jp": "そうそう、{今日|きょう}は{冬至|とうじ|winter solstice|2}。{かぼちゃ||pumpkin|3}だけでなく、{ゆず湯|ゆずゆ|bath with yuzu citrus|2}もね♨", "en": "Oh yes, today's the winter solstice. Not just pumpkin, a yuzu bath too ♨", "register": "casual"},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "time": "16:13", "jp": "{ゆず湯|ゆずゆ|bath with yuzu citrus|2}？どうして{冬至|とうじ|winter solstice|2}に{入る|はいる}んですか。", "en": "A yuzu bath? Why do you take one on the solstice?", "register": "polite"},
+  {"who": "guest", "speaker": "小池さん", "time": "16:14", "jp": "{風邪|かぜ|a cold|4}をひかないようにって、{昔|むかし}から{言う|いう}のよ。{恵子|けいこ}ちゃん、もう{用意|ようい|preparation|3}してるはず", "en": "So you don't catch a cold, people have always said. {恵子|けいこ}ちゃん will have it ready already.", "register": "casual", "note": "{恵子|けいこ}ちゃん: they were classmates, so ちゃん even at 60-plus."}
+ ],
+ "listening": {
+  "type": "ladder",
+  "intro": "As you get into the taxi, {小池|こいけ}さん says one more thing.",
+  "who": "guest",
+  "lines": [
+   {"who": "guest", "jp": "{今日|きょう}はゆず{湯|ゆ}で、しっかり{温まって|あたたまって|to warm up|3}ね。", "en": "Have a good warm-up in a yuzu bath today."}
+  ]
+ },
+ "grammar": {
+  "id": "n3-dake-de-naku",
+  "pattern": "〜だけでなく",
+  "level": "N3",
+  "meaning": "not only... but also",
+  "form": "noun: + だけでなく ({雪|ゆき}だけでなく, バスだけでなく) · verb / い-adj: plain + だけでなく ({食|た}べるだけでなく, {安|やす}いだけでなく) · な-adj: + なだけでなく ({便利|べんり}なだけでなく)",
+  "explanation": "Adds a second thing on top of the first: 'not just X, Y too'. The second part usually has も. In casual talk you'll hear だけじゃなくて; だけでなく sounds a bit more careful or written. Don't confuse it with だけ alone, which limits ('only').",
+  "src": ["d2", "d7", "p0"],
+  "mark": ["雪だけでなく", "かぼちゃだけでなく", "バスだけでなく", "運転だけでなく", "便利なだけでなく"],
+  "examples": [
+   {"jp": "{小池|こいけ}さんは{運転|うんてん}だけでなく、{話|はなし}も{上手|じょうず}だ。", "en": "{小池|こいけ}さん is good not only at driving but at talking too."},
+   {"jp": "このアプリは{便利|べんり}なだけでなく、{無料|むりょう}です。", "en": "This app isn't just handy, it's free too."}
+  ],
+  "quiz": {
+   "question": "{冬至|とうじ|winter solstice|2}には、かぼちゃを{食べる|たべる}＿＿、ゆず{湯|ゆ}にも{入る|はいる}。",
+   "en": "On the solstice you don't only eat pumpkin, you also take a yuzu bath.",
+   "options": ["だけでなく", "だけで", "しか", "ばかりで"],
+   "explain": "Verb (plain) + だけでなく, then も/にも for the extra thing."
+  },
+  "quiz_more": [
+   {
+    "question": "この{町|まち}は{静か|しずか}＿＿、{人|ひと}も{優しい|やさしい}。",
+    "en": "This town isn't only quiet, the people are kind too.",
+    "options": ["なだけでなく", "くだけでなく", "のだけでなく", "でだけでなく"],
+    "explain": "な-adjectives keep な: {静|しず}かなだけでなく."
+   },
+   {
+    "question": "「バス、{止まってる|とまってる}？」「バス＿＿、{電車|でんしゃ}も{止まってる|とまってる}よ」",
+    "en": "'Is the bus stopped?' 'Not just the bus, the trains too.'",
+    "options": ["だけじゃなくて", "だけしか", "だけど", "だけなら"],
+    "explain": "だけじゃなくて is the casual way to say だけでなく."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "冬至",
+  "reading": "とうじ",
+  "romaji": "tōji",
+  "meaning": "winter solstice",
+  "where": "Written in small red letters on 22 December on the staff-room calendar, and on the supermarket's pumpkin sign.",
+  "breakdown": "{冬至|とうじ}: 冬 winter + 至 reach, arrive → the day winter reaches its peak: the shortest day.",
+  "related": "{夏至|げし} = summer solstice."
+ },
+ "tip": {
+  "mark": "冬",
+  "title": "The solstice at home",
+  "body": "On {冬至|とうじ} many families eat pumpkin and take a ゆず{湯|ゆ}, a bath with whole yuzu floating in it, to stay healthy through winter. Many {銭湯|せんとう} float yuzu that day too, so it's a good day to go."
+ },
+ "challenge": {
+  "type": "write",
+  "prompt": "{恵子|けいこ}さん on the family LINE: 「バス{大丈夫|だいじょうぶ}？{迎え|むかえ|picking someone up|3}に{行こう|いこう}か？」 Tell her the bus was cancelled because of the snow, but {小池|こいけ}さん is coming to pick you up, so it's fine.",
+  "model_answer": "{雪|ゆき}でバスが{運休|うんきゅう|service cancelled|2}になったけど、{小池|こいけ}さんが{迎え|むかえ|picking someone up|3}に{来て|きて}くれるので{大丈夫|だいじょうぶ}です！",
+  "explanation": "{雪|ゆき}で gives the cause, and 〜けど sets up the 'but'. {迎|むか}えに{来|き}てくれる = she's kindly coming to get you, and ので gives the reason it's fine. With {恵子|けいこ}さん, です keeps it warm but polite.",
+  "hint": "cause with で, then 〜てくれるので"
+ },
+ "vocab": [
+  {"jp": "{影響|えいきょう}", "reading": "えいきょう", "en": "effect, influence", "level": "N3", "src": "d1", "surface": "影響", "note": "〜の{影響|えいきょう}で = because of ~ (news and announcements love it)."},
+  {"jp": "{運休|うんきゅう}", "reading": "うんきゅう", "en": "(service) cancelled, not running", "level": "N2", "src": "d1", "surface": "運休", "note": "{運|うん} from {運転|うんてん} run + {休|きゅう} rest. Buses and trains on snow days."},
+  {"jp": "{迎|むか}える", "reading": "むかえる", "en": "to meet, pick up, welcome", "level": "N3", "src": "d0", "surface": "迎え", "note": "{迎|むか}えに{来|く}る / {行|い}く = come / go to pick someone up."},
+  {"jp": "{渋滞|じゅうたい}", "reading": "じゅうたい", "en": "traffic jam", "level": "N3", "src": "d3", "surface": "渋滞", "note": "{渋滞|じゅうたい}する = be jammed. On traffic news: {渋滞|じゅうたい}{情報|じょうほう}."},
+  {"jp": "{校舎|こうしゃ}", "reading": "こうしゃ", "en": "school building", "level": "N3", "src": "d4", "surface": "校舎", "note": "{学校|がっこう} school + {舎|しゃ} building. {新校舎|しんこうしゃ} = new building."},
+  {"jp": "{手前|てまえ}", "reading": "てまえ", "en": "just before, this side of", "level": "N3", "src": "d6", "surface": "手前", "note": "Directions and taxis: {信号|しんごう}の{手前|てまえ} = just before the lights."},
+  {"jp": "{現在|げんざい}", "reading": "げんざい", "en": "now, currently", "level": "N3", "src": "p1", "surface": "現在", "note": "Formal {今|いま}: announcements, news, signs. {現在地|げんざいち} = you are here."},
+  {"jp": "{料金|りょうきん}", "reading": "りょうきん", "en": "fare, charge", "level": "N4", "src": "p4", "surface": "料金", "note": "For services: taxis, buses, phones. Goods have {値段|ねだん}."},
+  {"jp": "{風邪|かぜ}", "reading": "かぜ", "en": "a cold", "level": "N4", "src": "d9", "surface": "風邪", "note": "{風邪|かぜ}をひく = catch a cold. Sounds like {風|かぜ} wind."}
+ ],
+ "kanji_study": [
+  {
+   "kanji": "迎",
+   "track": "lesson",
+   "on": "ゲイ",
+   "kun": "むか(える)",
+   "meaning": "welcome, go to meet",
+   "parts": "卬 a person looking up at someone + 辶 road radical → going out along the road to meet someone arriving: welcome.",
+   "lookalike": "Not 近 (near): both have 辶, but 迎 has 卬 inside and 近 has 斤.",
+   "words": [
+    {"jp": "{迎|むか}える", "reading": "むかえる", "en": "to meet, pick up, welcome"},
+    {"jp": "{歓迎|かんげい}", "reading": "かんげい", "en": "welcome"},
+    {"jp": "{送迎|そうげい}", "reading": "そうげい", "en": "drop-off and pick-up"}
+   ],
+   "decoys": {"meanings": ["to send off", "near", "to wait"], "readings": ["むかう", "まちかえる", "たかえる"]}
+  },
+  {
+   "kanji": "現",
+   "track": "n3",
+   "on": "ゲン",
+   "kun": "あらわ(れる)・あらわ(す)",
+   "meaning": "present, actual; appear",
+   "parts": "王 (originally 玉 jewel) + 見 see → a jewel catching the light and coming into view: appear, what is here now.",
+   "lookalike": "Not 規 (rule): 規 has 夫 on the left, 現 has 王.",
+   "words": [
+    {"jp": "{現在|げんざい}", "reading": "げんざい", "en": "now, currently"},
+    {"jp": "{現金|げんきん}", "reading": "げんきん", "en": "cash"},
+    {"jp": "{表現|ひょうげん}", "reading": "ひょうげん", "en": "expression"}
+   ],
+   "decoys": {"meanings": ["to see", "king", "rule"], "readings": ["けんざい", "げんさい", "げざい"]}
+  }
+ ],
+ "extras": [
+  {
+   "title": "In a taxi",
+   "title_jp": "タクシーで",
+   "intro": "Short lines for the back seat.",
+   "items": [
+    {"jp": "{鷹ノ原駅|たかのはらえき}までお{願い|ねがい}します。", "en": "To {鷹ノ原駅|たかのはらえき}, please."},
+    {"jp": "{次|つぎ}の{角|かど|corner|3}を{右|みぎ}に{曲がって|まがって}ください。", "en": "Turn right at the next corner, please."},
+    {"jp": "ここで{大丈夫|だいじょうぶ}です。", "en": "Here is fine."},
+    {"jp": "カードで{払えますか|はらえますか}。", "en": "Can I pay by card?"}
+   ]
+  },
+  {
+   "title": "Why it's late",
+   "title_jp": "{遅れる|おくれる}{理由|りゆう}",
+   "intro": "Causes you'll hear on snowy days.",
+   "items": [
+    {"jp": "{大雪|おおゆき}のため、{運休|うんきゅう|service cancelled|2}です。", "en": "Cancelled due to heavy snow.", "note": "〜のため = formal 'because of', on notices."},
+    {"jp": "{事故|じこ|accident|3}の{影響|えいきょう|effect, influence|3}で{遅れて|おくれて}います。", "en": "Running late because of an accident."},
+    {"jp": "{道|みち}が{凍って|こおって}いて、{危ない|あぶない}んです。", "en": "The roads are icy and dangerous."}
+   ]
+  }
+ ]
+}

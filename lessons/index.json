@@ -344,5 +344,12 @@
   "category": "feelings",
   "function": "advice",
   "format": "dialogue"
+ },
+ {
+  "id": "2026-12-22",
+  "topic": "No bus, so a taxi on LINE",
+  "category": "getting-around",
+  "function": "reasons",
+  "format": "line"
  }
 ]
