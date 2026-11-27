@@ -1,0 +1,434 @@
+{
+ "topic": "New Year cards: asking {由紀|ゆき}",
+ "category": "traditions",
+ "function": "advice",
+ "format": "line",
+ "cast": [
+  "yuki"
+ ],
+ "title_jp": "{年賀状|ねんがじょう}って、どうするんだっけ？",
+ "context": "Tuesday 8 December: the supermarket has started selling New Year postcards, and アルちゃん wants to send his first {年賀状|ねんがじょう}s. He asks {由紀|ゆき} on LINE when to post them and how to write them.",
+ "scene": "Tuesday night. You bought New Year postcards but can't remember the rules. You ask {由紀|ゆき} on LINE.",
+ "keep": [
+  "p1"
+ ],
+ "phrases": [
+  {
+   "jp": "あれ、{今日|きょう}{何曜日|なんようび}だっけ？",
+   "en": "Wait, what day is it again?",
+   "register": "casual",
+   "note": "っけ: you knew it once and forgot. Very common out loud."
+  },
+  {
+   "jp": "{一言|ひとこと|a word, a short note|3}でも{手書き|てがき|handwritten|3}にするといいよ。",
+   "en": "It's good to write at least a line by hand.",
+   "register": "casual",
+   "note": "〜といいよ: soft, friendly advice."
+  },
+  {
+   "jp": "{本年|ほんねん|this year (formal)|2}もよろしくお{願い|ねがい}いたします。",
+   "en": "I look forward to your kindness this year too.",
+   "register": "polite",
+   "note": "The set line on cards to teachers, bosses, hosts."
+  },
+  {
+   "jp": "あけおめ！ことよろ！",
+   "en": "Happy New Year! Be good to me this year!",
+   "register": "slang",
+   "note": "= あけましておめでとう + 今年もよろしく. Friends only, LINE style."
+  },
+  {
+   "jp": "{喪中|もちゅう|in mourning (that year)|2}の{人|ひと}には{出さない|ださない}ほうがいいですよ。",
+   "en": "You'd better not send one to someone in mourning.",
+   "register": "polite",
+   "note": "Families who lost someone that year send a {喪中|もちゅう}はがき in November or December instead."
+  }
+ ],
+ "dialogue_setting": "A LINE chat with {由紀|ゆき} in Tokyo, Tuesday night, from under the kotatsu in {鷹ノ原|たかのはら}.",
+ "dialogue": [
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "21:08",
+   "jp": "{由紀|ゆき}、{年賀状|ねんがじょう|New Year card|3}って、いつまでに{出す|だす}んだっけ？",
+   "en": "{由紀|ゆき}, when do you have to post New Year cards by, again?"
+  },
+  {
+   "who": "yuki",
+   "speaker": "由紀",
+   "time": "21:15",
+   "jp": "25{日|にち}くらいまでに{出せば|だせば}、{元日|がんじつ|New Year's Day|3}に{届く|とどく}よ！",
+   "en": "If you post them by about the 25th, they arrive on New Year's Day!"
+  },
+  {
+   "who": "yuki",
+   "speaker": "由紀",
+   "time": "21:15",
+   "jp": "え、{誰|だれ}に{出す|だす}の？",
+   "en": "Wait, who are you sending them to?"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "21:17",
+   "jp": "{田中|たなか}さんたちと{佐藤先生|さとうせんせい}。{手書き|てがき|handwritten|3}のほうがいいんだっけ？",
+   "en": "The {田中|たなか}s and {佐藤先生|さとうせんせい}. Handwritten is better, isn't it?"
+  },
+  {
+   "who": "yuki",
+   "speaker": "由紀",
+   "time": "21:19",
+   "jp": "{一言|ひとこと|a word, a short note|3}だけでも{手書き|てがき}がいいよ。{印刷|いんさつ|printing|3}だけだと{冷たい|つめたい|cold (in feeling)|4}{感じ|かんじ|feeling, impression|4}",
+   "en": "Even just one line by hand is good. Only printed feels a bit cold."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "21:21",
+   "jp": "なるほど！レンにも{送った|おくった}ほうがいいかな？",
+   "en": "I see! Should I send one to レン too?"
+  },
+  {
+   "who": "yuki",
+   "speaker": "由紀",
+   "time": "21:22",
+   "jp": "{住所|じゅうしょ}{聞く|きく}のはまだ{早い|はやい}ってｗ LINEのあけおめで{十分|じゅうぶん|enough|4}じゃん",
+   "en": "Asking for his address is too soon lol. A LINE 'Happy New Year' is plenty."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "21:22",
+   "sticker": "ryokai",
+   "jp": "{了解|りょうかい}！",
+   "en": "Got it!"
+  },
+  {
+   "who": "yuki",
+   "speaker": "由紀",
+   "time": "21:24",
+   "kind": "voice",
+   "jp": "{私|わたし}は30{日|にち}から{実家|じっか|parents' home|4}に{帰る|かえる}〜！{年末|ねんまつ|end of the year|3}は{寝る|ねる}だけ！",
+   "en": "I'm going home to my parents' from the 30th! At year-end all I'll do is sleep!"
+  }
+ ],
+ "listening": {
+  "type": "announcement",
+  "intro": "Next morning at the post office, a poster announcement plays by the counter.",
+  "who": "extra",
+  "title": "{郵便局|ゆうびんきょく}のお{知らせ|しらせ}",
+  "place": "{鷹ノ原|たかのはら}{郵便局|ゆうびんきょく}",
+  "lines": [
+   {
+    "who": "extra",
+    "voice": "f",
+    "jp": "{年賀状|ねんがじょう|New Year card|3}は、25{日|にち}までにお{出し|だし}いただくと、{元日|がんじつ|New Year's Day|3}にお{届け|とどけ}できます。{年賀状|ねんがじょう}{専用|せんよう|special, only for|2}のポストにお{入れ|いれ}ください。",
+    "en": "If you post your New Year cards by the 25th, we can deliver them on New Year's Day. Please put them in the New-Year-card-only postbox."
+   }
+  ],
+  "question": "{元日|がんじつ}に{届けたい|とどけたい}とき、いつまでに{出しますか|だしますか}。",
+  "options": [
+   "25日まで",
+   "15日まで",
+   "31日まで",
+   "1月1日まで"
+  ],
+  "explain": "25{日|にち}までにお{出|だ}しいただくと…{届|とど}けできます: post by the 25th."
+ },
+ "grammar": {
+  "id": "n3-kke",
+  "pattern": "〜っけ",
+  "level": "N3",
+  "meaning": "was it...? (trying to remember)",
+  "form": "noun / な-adj: + だっけ ({何曜日|なんようび}だっけ) · plain past + っけ ({言|い}ったっけ, {見|み}たっけ) · のだ: 〜んだっけ ({出|だ}すんだっけ, いいんだっけ) · polite: 〜でしたっけ ({何|なん}でしたっけ)",
+  "explanation": "Add っけ when you once knew something and are trying to remember it: 'when was it again?'. It's casual and spoken; with people above you, use でしたっけ. Don't use it for things you never knew: then just ask 〜の？ or 〜ですか.",
+  "src": [
+   "d0",
+   "d3",
+   "p0"
+  ],
+  "mark": [
+   "出すんだっけ",
+   "いいんだっけ",
+   "何曜日だっけ",
+   "何でしたっけ",
+   "言ったっけ"
+  ],
+  "examples": [
+   {
+    "jp": "すみません、お{名前|なまえ}、{何|なん}でしたっけ？",
+    "en": "Sorry, what was your name again?"
+   },
+   {
+    "jp": "あれ、この{話|はなし}、もう{言った|いった}っけ？",
+    "en": "Hang on, did I already tell you this?"
+   }
+  ],
+  "quiz": {
+   "question": "あれ、{澪|みお}の{面接|めんせつ}、{何曜日|なんようび}＿＿？",
+   "en": "Hang on, what day was {澪|みお}'s interview again?",
+   "options": [
+    "だっけ",
+    "っけ",
+    "のっけ",
+    "だけ"
+   ],
+   "explain": "After a noun, put だ before っけ: {何曜日|なんようび}だっけ."
+  },
+  "quiz_more": [
+   {
+    "question": "{佐藤先生|さとうせんせい}、{冬休み|ふゆやすみ}は{何日|なんにち}から＿＿？",
+    "en": "{佐藤先生|さとうせんせい}, what date did winter break start from again?",
+    "options": [
+     "でしたっけ",
+     "だっけ",
+     "ましたっけ",
+     "でしたけ"
+    ],
+    "explain": "To a teacher, the polite form: noun + でしたっけ. だっけ is too casual."
+   },
+   {
+    "question": "この{映画|えいが}、{前|まえ}に{一緒|いっしょ}に{見た|みた}＿＿？",
+    "en": "Did we see this film together before?",
+    "options": [
+     "っけ",
+     "だっけ",
+     "たっけ",
+     "のっけ"
+    ],
+    "explain": "Plain past + っけ directly: {見|み}たっけ. No だ after a verb."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "謹賀新年",
+  "reading": "きんがしんねん",
+  "romaji": "kinga shinnen",
+  "meaning": "Happy New Year (formal greeting)",
+  "where": "Printed in gold on the New Year postcards on sale at the supermarket.",
+  "breakdown": "{謹賀新年|きんがしんねん}: 謹 respectfully + 賀 celebrate + 新年 new year → 'I respectfully celebrate the New Year'.",
+  "related": "{年賀状|ねんがじょう} uses the same 賀. Short form on casual cards: {賀正|がしょう}."
+ },
+ "tip": {
+  "mark": "賀",
+  "title": "Words to avoid on a {年賀状|ねんがじょう}",
+  "body": "Write {昨年|さくねん} (last year), not {去年|きょねん}: 去 means 'leave', and that's bad luck at New Year. And {元旦|がんたん} already means the morning of 1 January, so '1{月|がつ}1{日|にち}{元旦|がんたん}' says it twice."
+ },
+ "challenge": {
+  "type": "write",
+  "prompt": "Thursday is the {白馬|はくば} ski day, but you've forgotten the meeting time. Ask {健太|けんた} on LINE what time you were meeting again.",
+  "model_answer": "{白馬|はくば}の{日|ひ}、{集合|しゅうごう|meeting up (time)|3}{何時|なんじ}だっけ？",
+  "explanation": "{集合|しゅうごう} is the word for a group's meeting time or place. {何時|なんじ} is a noun question, so it takes だっけ, which tells {健太|けんた} you knew it once and forgot. Casual is right between coworkers your age.",
+  "hint": "noun + だっけ"
+ },
+ "vocab": [
+  {
+   "jp": "{年賀状|ねんがじょう}",
+   "reading": "ねんがじょう",
+   "en": "New Year card",
+   "level": "N3",
+   "src": "d0",
+   "surface": "年賀状",
+   "note": "{年|ねん} year + {賀|が} celebrate + {状|じょう} letter. {年賀状|ねんがじょう}を{出|だ}す = send one."
+  },
+  {
+   "jp": "{元日|がんじつ}",
+   "reading": "がんじつ",
+   "en": "New Year's Day",
+   "level": "N3",
+   "src": "d1",
+   "surface": "元日",
+   "note": "{元|がん} origin + {日|じつ} day. A national holiday."
+  },
+  {
+   "jp": "{手書|てが}き",
+   "reading": "てがき",
+   "en": "handwritten",
+   "level": "N3",
+   "src": "d3",
+   "surface": "手書き",
+   "note": "{手|て} hand + {書|か}く write. Feels warmer than printed."
+  },
+  {
+   "jp": "{一言|ひとこと}",
+   "reading": "ひとこと",
+   "en": "a word, a short note",
+   "level": "N3",
+   "src": "d4",
+   "surface": "一言",
+   "note": "{一言|ひとこと}でも = even just a word."
+  },
+  {
+   "jp": "{印刷|いんさつ}",
+   "reading": "いんさつ",
+   "en": "printing",
+   "level": "N3",
+   "src": "d4",
+   "surface": "印刷",
+   "note": "{印刷|いんさつ}する = to print. At a konbini: コピー{機|き}で{印刷|いんさつ}."
+  },
+  {
+   "jp": "{冷|つめ}たい",
+   "reading": "つめたい",
+   "en": "cold (to the touch; unfriendly)",
+   "level": "N4",
+   "src": "d4",
+   "surface": "冷たい",
+   "note": "Water or a person. Cold weather is {寒|さむ}い."
+  },
+  {
+   "jp": "{感|かん}じ",
+   "reading": "かんじ",
+   "en": "feeling, impression",
+   "level": "N3",
+   "src": "d4",
+   "surface": "感じ",
+   "note": "〜{感|かん}じ = 'it feels kind of…'. {感|かん}じがいい = pleasant."
+  },
+  {
+   "jp": "{十分|じゅうぶん}",
+   "reading": "じゅうぶん",
+   "en": "enough, plenty",
+   "level": "N4",
+   "src": "d6",
+   "surface": "十分",
+   "note": "Same kanji as 10 minutes (じゅっぷん): read by context."
+  },
+  {
+   "jp": "{実家|じっか}",
+   "reading": "じっか",
+   "en": "parents' home",
+   "level": "N3",
+   "src": "d8",
+   "surface": "実家",
+   "note": "Where you grew up. {実家|じっか}に{帰|かえ}る for New Year and Obon."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "印",
+   "track": "lesson",
+   "on": "イン",
+   "kun": "しるし",
+   "meaning": "seal, stamp, mark",
+   "parts": "A hand on the left pressing down on a kneeling person on the right (卩) → pressing down to leave a mark: a seal, a stamp.",
+   "words": [
+    {
+     "jp": "{印刷|いんさつ}",
+     "reading": "いんさつ",
+     "en": "printing"
+    },
+    {
+     "jp": "{目印|めじるし}",
+     "reading": "めじるし",
+     "en": "landmark, sign to look for"
+    },
+    {
+     "jp": "{矢印|やじるし}",
+     "reading": "やじるし",
+     "en": "arrow (sign)"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "paper",
+     "print shop",
+     "rule"
+    ],
+    "readings": [
+     "いんさく",
+     "しるさつ",
+     "いんせつ"
+    ]
+   }
+  },
+  {
+   "kanji": "実",
+   "track": "n3",
+   "on": "ジツ",
+   "kun": "み・みの(る)",
+   "meaning": "fruit; truth, real",
+   "parts": "宀 roof + 三 + 人 → a house full of real goods, like ripe fruit: fruit, and what's real and true.",
+   "lookalike": "Not 美 (beautiful): 美 has 羊 sheep on top, 実 has 宀 a roof.",
+   "words": [
+    {
+     "jp": "{実家|じっか}",
+     "reading": "じっか",
+     "en": "parents' home"
+    },
+    {
+     "jp": "{実|じつ}は",
+     "reading": "じつは",
+     "en": "actually, to tell the truth"
+    },
+    {
+     "jp": "{木|き}の{実|み}",
+     "reading": "きのみ",
+     "en": "nuts, berries"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "beautiful",
+     "roof",
+     "seed"
+    ],
+    "readings": [
+     "みいえ",
+     "じつか",
+     "じっけ"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Year-end words",
+   "title_jp": "{年末|ねんまつ}のことば",
+   "intro": "What you'll hear all through December.",
+   "items": [
+    {
+     "jp": "よいお{年|とし}を！",
+     "en": "Have a good New Year!",
+     "note": "Said when you part in late December, before New Year."
+    },
+    {
+     "jp": "{忘年会|ぼうねんかい|year-end party|3}",
+     "en": "year-end party",
+     "note": "{忘|わす}れる forget + {年|とし}: forget the year's troubles."
+    },
+    {
+     "jp": "{大掃除|おおそうじ|big year-end clean|3}",
+     "en": "the big year-end clean",
+     "note": "Whole families scrub the house before New Year."
+    }
+   ]
+  },
+  {
+   "title": "More ways to remember",
+   "title_jp": "{思い出す|おもいだす}ときのことば",
+   "intro": "Things people say while searching their memory.",
+   "items": [
+    {
+     "jp": "{何|なん}だっけ…",
+     "en": "What was it…",
+     "note": "Said to yourself, looking at the ceiling."
+    },
+    {
+     "jp": "ど{忘れ|わすれ|blanking on something|2}した！",
+     "en": "It's slipped my mind!",
+     "note": "For a name or word you know well."
+    },
+    {
+     "jp": "{喉|のど}まで{出て|でて}る",
+     "en": "It's on the tip of my tongue",
+     "note": "Lit. 'it's come up to my throat'."
+    }
+   ]
+  }
+ ]
+}

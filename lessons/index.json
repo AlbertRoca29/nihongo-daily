@@ -246,5 +246,12 @@
   "category": "health-body",
   "function": "hypotheticals",
   "format": "dialogue"
+ },
+ {
+  "id": "2026-12-08",
+  "topic": "New Year cards: asking {由紀|ゆき}",
+  "category": "traditions",
+  "function": "advice",
+  "format": "line"
  }
 ]

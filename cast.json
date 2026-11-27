@@ -70,7 +70,7 @@
     "Yuki"
    ],
    "color": "#80c241",
-   "status": "{話したら|はなしたら}スッキリ…でも{月曜|げつよう}{憂鬱|ゆううつ}",
+   "status": "{年末|ねんまつ}は{実家|じっか}で{寝正月|ねしょうがつ}{予定|よてい}💤",
    "where": "{東京|とうきょう}",
    "status_base": "{休日出勤|きゅうじつしゅっきん}なう…カラオケ{行きたい|いきたい}",
    "where_base": "{東京|とうきょう}"
@@ -772,6 +772,23 @@
     "恵子さん calls 田中さん お父さん.",
     "Dinner on 7 Dec was 湯豆腐."
    ]
+  },
+  {
+   "date": "2026-12-08",
+   "cast": [
+    "yuki"
+   ],
+   "summary": "Tuesday 8 Dec: アルちゃん bought New Year postcards and asks 由紀 on LINE how to send 年賀状. She tells him to post by about the 25th and write at least a line by hand, and says asking レン for his address is too soon: a LINE あけおめ is enough.",
+   "new_facts": [
+    "アルちゃん plans to send 年賀状 to the 田中s, 佐藤先生 and 健太, each with a handwritten line.",
+    "アルちゃん won't send レン a 年賀状 (he doesn't know his address); a LINE あけおめ instead.",
+    "由紀 goes home to her parents' (実家) from 30 Dec for New Year."
+   ],
+   "status_upd": {
+    "yuki": {
+     "status": "{年末|ねんまつ}は{実家|じっか}で{寝正月|ねしょうがつ}{予定|よてい}💤"
+    }
+   }
   }
  ],
  "others": [
