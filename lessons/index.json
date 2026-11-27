@@ -330,5 +330,12 @@
   "category": "hobbies",
   "function": "feelings",
   "format": "text"
+ },
+ {
+  "id": "2026-12-20",
+  "topic": "Burnt yakisoba, paella tonight",
+  "category": "food-cooking",
+  "function": "hypotheticals",
+  "format": "line"
  }
 ]

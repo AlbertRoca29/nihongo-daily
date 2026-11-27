@@ -1,0 +1,467 @@
+{
+ "topic": "Burnt yakisoba, paella tonight",
+ "category": "food-cooking",
+ "function": "hypotheticals",
+ "format": "line",
+ "cast": [
+  "sota"
+ ],
+ "title_jp": "{二人|ふたり}でお{昼|ひる}ご{飯|はん}",
+ "context": "Sunday 20 December: {恵子|けいこ}さん and {田中|たなか}さん are in {長野市|ながのし} buying お{歳暮|せいぼ} at the last minute, so アルちゃん and {颯太|そうた} must make lunch. On the family LINE, 'what ifs' turn into a plan: アルちゃん will cook paella tonight.",
+ "scene": "Sunday. The {田中|たなか}s are in {長野|ながの} buying year-end gifts. Lunch is up to you and {颯太|そうた}, with {恵子|けいこ}さん's instructions on LINE.",
+ "keep": [
+  "p0"
+ ],
+ "phrases": [
+  {
+   "jp": "これを{入れる|いれる}と、もっと{美味しく|おいしく}なるよ。",
+   "en": "If you put this in, it gets even tastier.",
+   "register": "casual",
+   "note": "A と B: whenever A, B follows naturally. Perfect for cooking tips."
+  },
+  {
+   "jp": "もし{失敗|しっぱい|failure, mistake|4}したら、どうしよう。",
+   "en": "What if I mess it up?",
+   "register": "casual",
+   "note": "もし〜たら, どうしよう = what'll I do if…"
+  },
+  {
+   "jp": "{味見|あじみ|tasting (while cooking)|3}してもいい？",
+   "en": "Can I have a taste?",
+   "register": "casual",
+   "note": "Said by whoever hovers near the pan."
+  },
+  {
+   "jp": "ちょっと{味|あじ|taste, flavour|4}が{薄い|うすい|weak, bland|3}かも。",
+   "en": "It might be a bit bland.",
+   "register": "casual",
+   "note": "{味|あじ}が{薄|うす}い = bland; {濃|こ}い = strong, rich."
+  },
+  {
+   "jp": "{私|わたし}だったら、もう{少し|すこし}{塩|しお}を{入れます|いれます}。",
+   "en": "If it were me, I'd add a bit more salt.",
+   "register": "polite",
+   "note": "{私|わたし}だったら = if I were you: soft advice."
+  }
+ ],
+ "dialogue_setting": "The {田中|たなか} family LINE group, Sunday late morning. You and {颯太|そうた} are in the kitchen; {恵子|けいこ}さん is at a department store in {長野|ながの}.",
+ "dialogue": [
+  {
+   "who": "keiko",
+   "speaker": "恵子さん",
+   "time": "11:02",
+   "jp": "お{歳暮|せいぼ|year-end gift|2}、ギリギリ{買えた|かえた}〜！お{昼|ひる}は{二人|ふたり}でお{願い|ねがい}ね🙏",
+   "en": "Just made it with the year-end gifts! Lunch is up to you two, please 🙏",
+   "register": "casual"
+  },
+  {
+   "who": "keiko",
+   "speaker": "恵子さん",
+   "time": "11:03",
+   "jp": "{冷蔵庫|れいぞうこ|fridge|4}に{焼きそば|やきそば}があるよ。{強火|つよび|high heat|3}で{炒める|いためる|to stir-fry|3}と、すぐ{焦げる|こげる|to burn (food)|3}からね",
+   "en": "There's yakisoba in the fridge. Fry it on high heat and it burns in no time, so careful.",
+   "register": "casual"
+  },
+  {
+   "who": "sota",
+   "speaker": "颯太",
+   "time": "11:05",
+   "jp": "もしアルちゃんが{作ったら|つくったら}、スペインの{味|あじ|taste, flavour|4}になる？ｗ",
+   "en": "If アルちゃん makes it, will it taste Spanish? lol",
+   "register": "casual"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "11:06",
+   "jp": "{焼きそば|やきそば}は{作った|つくった}{経験|けいけん|experience|3}ないｗ でも、パエリアなら{得意|とくい}だよ",
+   "en": "I've never made yakisoba lol. But paella, that I'm good at.",
+   "register": "casual"
+  },
+  {
+   "who": "keiko",
+   "speaker": "恵子さん",
+   "time": "11:08",
+   "jp": "パエリア！？{材料|ざいりょう}があったら、{夜|よる}{作って|つくって}ほしいな",
+   "en": "Paella?! If we have the ingredients, I'd love you to make it tonight.",
+   "register": "casual"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "11:09",
+   "jp": "エビとイカがあると、もっと{美味しく|おいしく}なるんだけど…",
+   "en": "If there's prawns and squid, it gets even better, but…",
+   "register": "casual"
+  },
+  {
+   "who": "keiko",
+   "speaker": "恵子さん",
+   "time": "11:10",
+   "kind": "voice",
+   "jp": "じゃあ{帰り|かえり}に{買って|かって}くるね！{台所|だいどころ}、{片付けて|かたづけて|to tidy up|4}おいてね〜",
+   "en": "Then I'll buy them on the way back! Tidy the kitchen for me, OK?",
+   "register": "casual"
+  },
+  {
+   "who": "sota",
+   "speaker": "颯太",
+   "time": "11:10",
+   "sticker": "yatta",
+   "jp": "やった！",
+   "en": "Yay!"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "12:24",
+   "jp": "ごめん、{焦げちゃった|こげちゃった|to burn (food)|3}…{颯太|そうた}が{混ぜる|まぜる|to mix, stir|3}のやめなくてｗ",
+   "en": "Sorry, it burned… {颯太|そうた} wouldn't stop stirring lol",
+   "register": "casual"
+  },
+  {
+   "who": "sota",
+   "speaker": "颯太",
+   "time": "12:25",
+   "jp": "{焦げた|こげた|to burn (food)|3}とこが{一番|いちばん}うまいんだって！",
+   "en": "The burnt bits are the best part, though!",
+   "register": "slang",
+   "note": "とこ = ところ; うまい = {美味|おい}しい (boys' casual)."
+  }
+ ],
+ "listening": {
+  "type": "announcement",
+  "intro": "Behind {恵子|けいこ}さん's voice message, you can hear the department store speakers.",
+  "who": "extra",
+  "title": "デパートの{放送|ほうそう}",
+  "place": "{長野市|ながのし}のデパート",
+  "lines": [
+   {
+    "who": "extra",
+    "voice": "f",
+    "jp": "お{客様|きゃくさま}にお{知らせ|しらせ}いたします。{地下|ちか}1{階|かい}{食品|しょくひん|food (goods)|3}{売り場|うりば|sales floor|3}より、",
+    "en": "Announcement to all customers. From the basement food floor:"
+   },
+   {
+    "who": "extra",
+    "voice": "f",
+    "jp": "{午後|ごご}3{時|じ}から、{魚|さかな}のタイムセールを{行います|おこないます}。",
+    "en": "from 3 p.m. there will be a time sale on fish."
+   }
+  ],
+  "question": "タイムセールは、どこで{何時|なんじ}からですか。",
+  "options": [
+   "地下1階で、午後3時から",
+   "1階で、午後3時から",
+   "地下1階で、午後1時から",
+   "3階で、午後5時から"
+  ],
+  "explain": "{地下|ちか}1{階|かい}, {午後|ごご}3{時|じ}から: basement floor 1, from 3 p.m."
+ },
+ "grammar": {
+  "id": "n4-to-cond",
+  "pattern": "〜と (条件)",
+  "level": "N4",
+  "meaning": "whenever / if A then naturally B",
+  "form": "verb dictionary form + と ({炒|いた}めると, {入|い}れると) · ない-form + と ({入|い}れないと) · い-adj + と ({強|つよ}いと) · noun / な-adj + だと ({強火|つよび}だと)",
+  "explanation": "A と B: when A happens, B always or automatically follows, like a rule, a machine, or nature. Great for recipes and directions. B can't be a wish, request or invitation: say {材料|ざいりょう}があったら{作|つく}ってほしい, not があると.",
+  "src": [
+   "d1",
+   "d5",
+   "p0"
+  ],
+  "mark": [
+   "炒めると",
+   "あると",
+   "入れると",
+   "押すと",
+   "曲がると"
+  ],
+  "examples": [
+   {
+    "jp": "このボタンを{押す|おす}と、ご{飯|はん}が{炊けます|たけます|to cook (rice)|3}。",
+    "en": "Press this button and the rice cooks."
+   },
+   {
+    "jp": "{右|みぎ}に{曲がる|まがる}と、{駅|えき}が{見えます|みえます}。",
+    "en": "Turn right and you'll see the station."
+   }
+  ],
+  "quiz": {
+   "question": "{冬|ふゆ}になる＿＿、{鷹ノ原|たかのはら}は{雪|ゆき}が{降る|ふる}。",
+   "en": "When winter comes, it snows in {鷹ノ原|たかのはら}.",
+   "options": [
+    "と",
+    "のに",
+    "ても",
+    "ながら"
+   ],
+   "explain": "A natural, every-year result: と."
+  },
+  "quiz_more": [
+   {
+    "question": "{塩|しお}を{入れ|いれ}＿＿、{味|あじ}が{薄い|うすい}よ。",
+    "en": "If you don't add salt, it's bland.",
+    "options": [
+     "ないと",
+     "ると",
+     "なくて",
+     "たいと"
+    ],
+    "explain": "ない-form + と: without salt, it's always bland."
+   },
+   {
+    "question": "{時間|じかん}が＿＿、{一緒|いっしょ}に{作ろう|つくろう}。",
+    "en": "If you have time, let's cook together.",
+    "options": [
+     "あったら",
+     "あると",
+     "あるのに",
+     "あって"
+    ],
+    "explain": "The second half is an invitation, so と can't be used: 〜たら."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "賞味期限",
+  "reading": "しょうみきげん",
+  "romaji": "shōmi kigen",
+  "meaning": "best-before date",
+  "where": "Printed on the yakisoba packet you pull out of the fridge.",
+  "breakdown": "{賞|しょう} enjoy, prize + {味|み} taste + {期限|きげん} time limit → the deadline for enjoying the taste: best before.",
+  "related": "{消費期限|しょうひきげん} = use-by date (eat it before then to be safe)."
+ },
+ "tip": {
+  "mark": "暮",
+  "title": "Gifts with a deadline",
+  "body": "お{歳暮|せいぼ}, the year-end thank-you gift, should arrive by around 20 December. Miss it, and you send it in early January as お{年賀|ねんが} instead, or later as a {寒中見舞|かんちゅうみま}い."
+ },
+ "challenge": {
+  "type": "order",
+  "prompt": "{恵子|けいこ}さん: 「パエリアって、どうすると{美味しく|おいしく}なるの？」 Tell her it gets tasty if you turn the heat up high at the end.",
+  "pieces": [
+   "{最後|さいご}に",
+   "{強火|つよび}にすると、",
+   "{美味しく|おいしく}",
+   "なりますよ。"
+  ],
+  "model_answer": "{最後|さいご}に{強火|つよび|high heat|3}にすると、{美味しく|おいしく}なりますよ。",
+  "explanation": "{強火|つよび}にすると: 'when you turn it to high heat', the condition, and {美味|おい}しくなります is the natural result, so と fits. In Spain this crispy bottom is the socarrat, like Japanese お{焦|こ}げ.",
+  "hint": "condition + と, then the result"
+ },
+ "vocab": [
+  {
+   "jp": "お{歳暮|せいぼ}",
+   "reading": "おせいぼ",
+   "en": "year-end gift",
+   "level": "N2",
+   "src": "d0",
+   "surface": "お歳暮",
+   "note": "{歳|さい} year + {暮|ぼ} end. Summer version: お{中元|ちゅうげん}."
+  },
+  {
+   "jp": "{冷蔵庫|れいぞうこ}",
+   "reading": "れいぞうこ",
+   "en": "fridge",
+   "level": "N3",
+   "src": "d1",
+   "surface": "冷蔵庫",
+   "note": "{冷|れい} cold + {蔵|ぞう} storehouse + {庫|こ} store. Freezer: {冷凍庫|れいとうこ}."
+  },
+  {
+   "jp": "{炒|いた}める",
+   "reading": "いためる",
+   "en": "to stir-fry",
+   "level": "N3",
+   "src": "d1",
+   "surface": "炒める",
+   "note": "{野菜炒|やさいいた}め = stir-fried vegetables."
+  },
+  {
+   "jp": "{焦|こ}げる",
+   "reading": "こげる",
+   "en": "to burn (food)",
+   "level": "N3",
+   "src": "d1",
+   "surface": "焦げる",
+   "note": "Same kanji as {焦|あせ}る (panic). お{焦|こ}げ = the crispy burnt bit."
+  },
+  {
+   "jp": "{味|あじ}",
+   "reading": "あじ",
+   "en": "taste, flavour",
+   "level": "N4",
+   "src": "d2",
+   "surface": "味",
+   "note": "{味|あじ}がする = tastes of. {味見|あじみ} = tasting."
+  },
+  {
+   "jp": "{片付|かたづ}ける",
+   "reading": "かたづける",
+   "en": "to tidy up",
+   "level": "N3",
+   "src": "d6",
+   "surface": "片付けて",
+   "note": "{片付|かたづ}けておいて = tidy it up (in advance) for me."
+  },
+  {
+   "jp": "{混|ま}ぜる",
+   "reading": "まぜる",
+   "en": "to mix, stir",
+   "level": "N3",
+   "src": "d8",
+   "surface": "混ぜる",
+   "note": "Same kanji as {混|こ}む (crowded)."
+  },
+  {
+   "jp": "{失敗|しっぱい}",
+   "reading": "しっぱい",
+   "en": "failure, mistake",
+   "level": "N4",
+   "src": "p1",
+   "surface": "失敗",
+   "note": "{失敗|しっぱい}する. Opposite: {成功|せいこう}."
+  },
+  {
+   "jp": "{味見|あじみ}",
+   "reading": "あじみ",
+   "en": "tasting (while cooking)",
+   "level": "N3",
+   "src": "p2",
+   "surface": "味見",
+   "note": "{味|あじ} taste + {見|み}る try → have a little taste."
+  },
+  {
+   "jp": "{薄|うす}い",
+   "reading": "うすい",
+   "en": "weak, bland; thin",
+   "level": "N4",
+   "src": "p3",
+   "surface": "薄い",
+   "note": "Also thin (a book) and light (a colour)."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "混",
+   "track": "lesson",
+   "on": "コン",
+   "kun": "ま(ぜる)・ま(ざる)・こ(む)",
+   "meaning": "mix; crowded",
+   "parts": "氵 water radical + 昆 many small creatures crowded together → lots of things swirling in water: mix, crowded.",
+   "lookalike": "Not 泥 (mud): 泥 has 尼 on the right, 混 has 昆 (日 over 比).",
+   "words": [
+    {
+     "jp": "{混|ま}ぜる",
+     "reading": "まぜる",
+     "en": "to mix"
+    },
+    {
+     "jp": "{混|こ}む",
+     "reading": "こむ",
+     "en": "to be crowded"
+    },
+    {
+     "jp": "{混雑|こんざつ}",
+     "reading": "こんざつ",
+     "en": "congestion, crowds"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "to pour",
+     "to wash",
+     "to boil"
+    ],
+    "readings": [
+     "こぜる",
+     "まざる",
+     "ませる"
+    ]
+   }
+  },
+  {
+   "kanji": "経",
+   "track": "n3",
+   "on": "ケイ・キョウ",
+   "kun": "へ(る)・た(つ)",
+   "meaning": "pass through; experience",
+   "parts": "糸 thread + 圣 the warp threads on a loom → the long threads everything passes along: pass through, go through (experience).",
+   "lookalike": "Not 軽 (light): 軽 has 車 car on the left, 経 has 糸 thread.",
+   "words": [
+    {
+     "jp": "{経験|けいけん}",
+     "reading": "けいけん",
+     "en": "experience"
+    },
+    {
+     "jp": "{経済|けいざい}",
+     "reading": "けいざい",
+     "en": "economy"
+    },
+    {
+     "jp": "{経|た}つ",
+     "reading": "たつ",
+     "en": "(time) to pass"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "thread",
+     "to weave",
+     "knowledge"
+    ],
+    "readings": [
+     "きょうけん",
+     "けいげん",
+     "へいけん"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Kitchen heat",
+   "title_jp": "{火|ひ}{加減|かげん}",
+   "intro": "Every Japanese recipe says one of these.",
+   "items": [
+    {
+     "jp": "{強火|つよび|high heat|3}",
+     "en": "high heat"
+    },
+    {
+     "jp": "{中火|ちゅうび|medium heat|3}",
+     "en": "medium heat"
+    },
+    {
+     "jp": "{弱火|よわび|low heat|3}",
+     "en": "low heat",
+     "note": "{弱火|よわび}で{煮|に}る = simmer gently."
+    }
+   ]
+  },
+  {
+   "title": "What if…",
+   "title_jp": "もしも…",
+   "intro": "Three easy ways to imagine.",
+   "items": [
+    {
+     "jp": "もし{雪|ゆき}が{降ったら|ふったら}、どうする？",
+     "en": "What will you do if it snows?"
+    },
+    {
+     "jp": "{僕|ぼく}だったら、{断る|ことわる|to refuse|3}かな。",
+     "en": "If it were me, I'd probably say no."
+    },
+    {
+     "jp": "お{金|かね}があれば、{毎日|まいにち}{外食|がいしょく}したい。",
+     "en": "If I had money, I'd eat out every day."
+    }
+   ]
+  }
+ ]
+}
