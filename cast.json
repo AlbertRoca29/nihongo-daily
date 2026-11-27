@@ -99,7 +99,7 @@
     "Kenta"
    ],
    "color": "#f39800",
-   "status": "{応援|おうえん}してるで☕ 12/10は{白馬|はくば}や🏂",
+   "status": "アルちゃん、{10回|じゅっかい}{転んだ|ころんだ}ｗ🏂",
    "where": "ゲストハウス{風|かぜ}",
    "status_base": "「ごしたい」≠「{何|なに}かしたい」やでｗ",
    "where_base": "ゲストハウス{風|かぜ}"
@@ -802,6 +802,24 @@
     "恵子さん wants ハナおばあちゃん's soba for 年越しそば on New Year's Eve.",
     "恵子さん invited アルちゃん to try soba-making (そば打ち); he said he'd love to if he has time."
    ]
+  },
+  {
+   "date": "2026-12-10",
+   "cast": [
+    "kenta"
+   ],
+   "summary": "Thursday 10 Dec, the 白馬 ski day: at 6 a.m. 健太 messages アルちゃん not to oversleep, says the forecast gives heavy snow in 白馬 from midday and 翔さん promises powder in the morning, and passes on 沙織's warning about breaking a wrist when falling. Then 健太 himself is ten minutes late after shovelling snow.",
+   "new_facts": [
+    "On the 白馬 ski day (10 Dec) 健太 was about 10 minutes late to 鷹ノ原駅 because he was shovelling snow.",
+    "沙織 (a nurse) warned that putting your hand out when you fall on skis easily breaks your wrist.",
+    "On 10 Dec it snowed heavily in 白馬 from midday; the morning was powder snow.",
+    "アルちゃん fell about ten times on his first ski day; 健太 posted a photo of him face-first in the snow in 「白馬いこ」."
+   ],
+   "status_upd": {
+    "kenta": {
+     "status": "アルちゃん、{10回|じゅっかい}{転んだ|ころんだ}ｗ🏂"
+    }
+   }
   }
  ],
  "others": [

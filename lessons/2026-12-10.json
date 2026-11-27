@@ -1,0 +1,436 @@
+{
+ "topic": "Ski day morning: {健太|けんた} is late",
+ "category": "review",
+ "function": "hearsay",
+ "format": "line",
+ "cast": [
+  "kenta"
+ ],
+ "title_jp": "{白馬|はくば}の{朝|あさ}",
+ "context": "Thursday 10 December, the {白馬|はくば} ski day. Before dawn {健太|けんた} reminds アルちゃん not to oversleep, passes on the snow forecast and {沙織|さおり}'s advice on falling, then is late himself because of snow clearing.",
+ "scene": "Thursday, 6 a.m., ski day! {健太|けんた} messages you before you meet at the station. He has lots of things he heard.",
+ "keep": [
+  "p0"
+ ],
+ "phrases": [
+  {
+   "jp": "{天気予報|てんきよほう|weather forecast|4}によると、{明日|あした}は{大雪|おおゆき|heavy snow|3}だそうです。",
+   "en": "According to the forecast, there'll be heavy snow tomorrow.",
+   "register": "polite",
+   "note": "Review: source + によると + そうです/らしい."
+  },
+  {
+   "jp": "{怪我|けが|injury|4}しないように{気をつけて|きをつけて}ね。",
+   "en": "Be careful not to get hurt.",
+   "register": "casual",
+   "note": "{怪我|けが}する = get hurt. Said before any sport or trip."
+  },
+  {
+   "jp": "{着いたら|ついたら}{連絡|れんらく}してね。",
+   "en": "Message me when you get there.",
+   "register": "casual",
+   "note": "Review: たら for 'when (it happens)'."
+  },
+  {
+   "jp": "{無理|むり}しないでくださいね。",
+   "en": "Don't push yourself.",
+   "register": "polite",
+   "note": "Kind words to anyone tired, sick or trying something new."
+  },
+  {
+   "jp": "{寝坊|ねぼう}したら、{置いて|おいて|to put; leave behind|4}いくよ。",
+   "en": "If you oversleep, we're leaving without you.",
+   "register": "casual",
+   "note": "{置|お}いていく = go and leave someone behind. Teasing between friends."
+  }
+ ],
+ "dialogue_setting": "A LINE chat with {健太|けんた} before dawn, while you get ready in your room at the {田中|たなか} house.",
+ "dialogue": [
+  {
+   "who": "kenta",
+   "speaker": "健太",
+   "time": "6:02",
+   "jp": "おはよー！{起きてる|おきてる}？{寝坊|ねぼう}したら{置いて|おいて|to put; leave behind|4}いくで",
+   "en": "Morning! You up? If you oversleep, we're leaving without you.",
+   "register": "dialect",
+   "note": "で = よ (Kansai)."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "6:03",
+   "jp": "{起きてる|おきてる}よ！{集合|しゅうごう}、7{時|じ}だっけ？",
+   "en": "I'm up! We meet at 7, right?"
+  },
+  {
+   "who": "kenta",
+   "speaker": "健太",
+   "time": "6:04",
+   "jp": "せや、7{時|じ}に{駅|えき}って{決めた|きめた}やん",
+   "en": "Yep, we said 7 at the station.",
+   "register": "dialect",
+   "note": "せや = そうだ, やん = じゃない (Kansai)."
+  },
+  {
+   "who": "kenta",
+   "speaker": "健太",
+   "time": "6:04",
+   "jp": "{天気予報|てんきよほう|weather forecast|4}によると、{白馬|はくば}は{昼|ひる}から{大雪|おおゆき|heavy snow|3}らしいで",
+   "en": "According to the forecast, there'll be heavy snow in {白馬|はくば} from midday.",
+   "register": "dialect"
+  },
+  {
+   "who": "kenta",
+   "speaker": "健太",
+   "time": "6:05",
+   "jp": "{翔|しょう}さんの{話|はなし}やと、{朝|あさ}はパウダーやって！",
+   "en": "{翔|しょう}さん says the morning's powder snow!",
+   "register": "dialect",
+   "note": "やと = だと, やって = だって (they say), Kansai."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "6:07",
+   "jp": "マジ？{初心者|しょしんしゃ}でも{大丈夫|だいじょうぶ}かな…",
+   "en": "Really? Will I be OK as a beginner…"
+  },
+  {
+   "who": "kenta",
+   "speaker": "健太",
+   "time": "6:08",
+   "jp": "{沙織|さおり}{言うてた|いうてた}けど、{転んで|ころんで}{手|て}を{つく|つく|to put (hand) on the ground|3}と{手首|てくび|wrist|3}{骨折|こっせつ|broken bone|3}しやすいねんて",
+   "en": "{沙織|さおり} said if you fall and put your hand out, it's easy to break your wrist.",
+   "register": "dialect",
+   "note": "言うてた = 言っていた, ねんて = んだって (Kansai hearsay)."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "6:08",
+   "sticker": "kowai",
+   "jp": "{怖い|こわい}…",
+   "en": "Scary…"
+  },
+  {
+   "who": "kenta",
+   "speaker": "健太",
+   "time": "6:51",
+   "kind": "voice",
+   "jp": "ごめん！{雪かき|ゆきかき|shovelling snow|3}してたら{遅なった|おそなった|(Kansai) = 遅くなった, got late|2}！10{分|ぷん}{待って|まって}て！",
+   "en": "Sorry! I was shovelling snow and now I'm late! Wait ten minutes!",
+   "register": "dialect",
+   "note": "{遅|おそ}なった = {遅|おそ}くなった (Kansai)."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "6:52",
+   "jp": "{置いて|おいて}いくよ〜ｗ {駅|えき}で{待って|まって}るね",
+   "en": "We're leaving without you lol. I'll wait at the station."
+  }
+ ],
+ "listening": {
+  "type": "ladder",
+  "intro": "At the bottom of the slope, {健太|けんた} reports what the lift staff told him.",
+  "who": "kenta",
+  "lines": [
+   {
+    "who": "kenta",
+    "jp": "{係|かかり|staff in charge|3}の{人|ひと}によると、{上|うえ}はもう{吹雪|ふぶき|snowstorm|3}らしいで。",
+    "en": "According to the staff, it's already a snowstorm up top."
+   }
+  ]
+ },
+ "grammar": {
+  "id": "n3-ni-yoru-to",
+  "pattern": "〜によると",
+  "level": "N3",
+  "meaning": "according to",
+  "form": "source + によると ({天気予報|てんきよほう}によると, {先生|せんせい}によると) · ends with: 〜そうだ / 〜らしい / 〜って ({大雪|おおゆき}だそうだ, {大雪|おおゆき}らしい)",
+  "explanation": "Review: によると names where you heard something, and the sentence must end with a hearsay ending (そうだ, らしい, って). In casual speech people often swap it for 〜の{話|はなし}だと or 〜が{言|い}ってた. Don't end it with a plain statement.",
+  "src": [
+   "d3",
+   "p0"
+  ],
+  "mark": [
+   "天気予報によると",
+   "ニュースによると",
+   "先生によると"
+  ],
+  "examples": [
+   {
+    "jp": "ニュースによると、{電車|でんしゃ}が{止まって|とまって}いるそうです。",
+    "en": "According to the news, the trains have stopped."
+   },
+   {
+    "jp": "{先生|せんせい}によると、{明日|あした}は{休み|やすみ}らしいよ。",
+    "en": "According to the teacher, tomorrow's a day off."
+   }
+  ],
+  "quiz": {
+   "question": "{天気予報|てんきよほう}＿＿、{午後|ごご}から{雪|ゆき}だそうだ。",
+   "en": "According to the forecast, it'll snow from the afternoon.",
+   "options": [
+    "によると",
+    "によって",
+    "にとって",
+    "について"
+   ],
+   "explain": "The source of information → によると. によって is 'depending on' or 'by'."
+  },
+  "quiz_more": [
+   {
+    "question": "{沙織|さおり}さんによると、{手首|てくび|wrist|3}を{骨折|こっせつ|broken bone|3}しやすい＿＿。",
+    "en": "According to {沙織|さおり}さん, it's easy to break your wrist.",
+    "options": [
+     "そうだ",
+     "だろう",
+     "つもりだ",
+     "ことにする"
+    ],
+    "explain": "によると needs a hearsay ending: そうだ."
+   },
+   {
+    "question": "{翔|しょう}さん＿＿{話|はなし}だと、{朝|あさ}はパウダーだって。",
+    "en": "From what {翔|しょう}さん says, the morning's powder.",
+    "options": [
+     "の",
+     "に",
+     "を",
+     "が"
+    ],
+    "explain": "Casual version: person + の{話|はなし}だと = 'from what X says'."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "乗り場",
+  "reading": "のりば",
+  "romaji": "noriba",
+  "meaning": "boarding point",
+  "where": "The sign at the bottom of the ski lift: リフト{乗り場|のりば}.",
+  "breakdown": "{乗|の}り{場|ば}: 乗 ride + 場 place → 'the place where you get on'.",
+  "related": "{降|お}り{場|ば} = where you get off (at the top of the lift). Also バス{乗|の}り{場|ば}, タクシー{乗|の}り{場|ば}."
+ },
+ "tip": {
+  "mark": "言",
+  "title": "Hearsay, Osaka style",
+  "body": "In Kansai, だって becomes やって and 〜んだって becomes 〜ねんて. So {健太|けんた}'s 「パウダーやって」 is just 「パウダーだって」. Understand it, but stick to standard forms yourself."
+ },
+ "challenge": {
+  "type": "sticker",
+  "prompt": "Evening. {健太|けんた} posts a photo in 「{白馬|はくば}いこ」: you, face-first in the snow. 「アルちゃん、{今日|きょう}{10回|じゅっかい}{転んだ|ころんだ}ｗ」 You're embarrassed. Which sticker?",
+  "stickers": [
+   "hazukashii",
+   "yatta",
+   "shochi",
+   "oyasumi"
+  ],
+  "model_answer": "{恥|は}ずかしい…",
+  "explanation": "{恥|は}ずかしい… says 'so embarrassing', the honest reaction to that photo. やった！ would mean you're proud of falling, {承知|しょうち}しました is stiff work keigo, and おやすみ ends the chat.",
+  "hint": "He's teasing you about falling."
+ },
+ "vocab": [
+  {
+   "jp": "{置|お}く",
+   "reading": "おく",
+   "en": "to put; to leave (behind)",
+   "level": "N4",
+   "src": "d0",
+   "surface": "置いて",
+   "note": "{置|お}いていく = go and leave behind. {置|お}いてきた = left it (at home)."
+  },
+  {
+   "jp": "{天気予報|てんきよほう}",
+   "reading": "てんきよほう",
+   "en": "weather forecast",
+   "level": "N4",
+   "src": "d3",
+   "surface": "天気予報",
+   "note": "{天気|てんき} + {予報|よほう} forecast. Check it before every mountain trip."
+  },
+  {
+   "jp": "{大雪|おおゆき}",
+   "reading": "おおゆき",
+   "en": "heavy snow",
+   "level": "N3",
+   "src": "d3",
+   "surface": "大雪",
+   "note": "On the news: {大雪警報|おおゆきけいほう} = heavy-snow warning."
+  },
+  {
+   "jp": "つく",
+   "reading": "つく",
+   "en": "to put (a hand) down on",
+   "level": "N3",
+   "src": "d6",
+   "surface": "つく",
+   "note": "{手|て}をつく = put your hands down to catch yourself."
+  },
+  {
+   "jp": "{手首|てくび}",
+   "reading": "てくび",
+   "en": "wrist",
+   "level": "N3",
+   "src": "d6",
+   "surface": "手首",
+   "note": "{手|て} hand + {首|くび} neck → the hand's 'neck'. Ankle = {足首|あしくび}."
+  },
+  {
+   "jp": "{骨折|こっせつ}",
+   "reading": "こっせつ",
+   "en": "broken bone, fracture",
+   "level": "N3",
+   "src": "d6",
+   "surface": "骨折",
+   "note": "{骨|こつ} bone + {折|せつ} break. {骨折|こっせつ}する = break a bone."
+  },
+  {
+   "jp": "{雪|ゆき}かき",
+   "reading": "ゆきかき",
+   "en": "shovelling snow",
+   "level": "N3",
+   "src": "d8",
+   "surface": "雪かき",
+   "note": "かく = scrape. Every snowy morning in {鷹ノ原|たかのはら}."
+  },
+  {
+   "jp": "{怪我|けが}",
+   "reading": "けが",
+   "en": "injury",
+   "level": "N3",
+   "src": "p1",
+   "surface": "怪我",
+   "note": "{怪我|けが}する = get hurt. Often written in kana: ケガ."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "折",
+   "track": "lesson",
+   "on": "セツ",
+   "kun": "お(る)・お(れる)",
+   "meaning": "break, fold",
+   "parts": "扌 hand radical + 斤 an axe → a hand with an axe snapping a branch: break, fold.",
+   "lookalike": "Not 析 (analyse): 析 has 木 tree on the left, 折 has 扌 hand.",
+   "words": [
+    {
+     "jp": "{骨折|こっせつ}",
+     "reading": "こっせつ",
+     "en": "broken bone"
+    },
+    {
+     "jp": "{折|お}る",
+     "reading": "おる",
+     "en": "to break, fold"
+    },
+    {
+     "jp": "{折|お}り{紙|がみ}",
+     "reading": "おりがみ",
+     "en": "origami, paper folding"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "cut",
+     "bend",
+     "hit"
+    ],
+    "readings": [
+     "こつおり",
+     "ほねせつ",
+     "こっせい"
+    ]
+   }
+  },
+  {
+   "kanji": "決",
+   "track": "n3",
+   "on": "ケツ",
+   "kun": "き(める)・き(まる)",
+   "meaning": "decide",
+   "parts": "氵 water radical + 夬 a cut, a gap → water bursting through a broken bank, no going back: decide.",
+   "lookalike": "Not 快 (pleasant): 快 has 忄 heart on the left, 決 has 氵 water.",
+   "words": [
+    {
+     "jp": "{決|き}める",
+     "reading": "きめる",
+     "en": "to decide"
+    },
+    {
+     "jp": "{決|き}まる",
+     "reading": "きまる",
+     "en": "to be decided"
+    },
+    {
+     "jp": "{解決|かいけつ}",
+     "reading": "かいけつ",
+     "en": "solution, solving"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "flow",
+     "pleasant",
+     "promise"
+    ],
+    "readings": [
+     "けつめる",
+     "さだめる",
+     "とめる"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "On the slopes",
+   "title_jp": "ゲレンデのことば",
+   "intro": "Words on every ski-resort sign.",
+   "items": [
+    {
+     "jp": "ゲレンデ",
+     "en": "ski slope",
+     "note": "From German 'Gelände'."
+    },
+    {
+     "jp": "{初級|しょきゅう|beginner level|3}コース",
+     "en": "beginner run",
+     "note": "Then {中級|ちゅうきゅう}, {上級|じょうきゅう}."
+    },
+    {
+     "jp": "{滑走禁止|かっそうきんし|no skiing (sign)|2}",
+     "en": "no skiing here",
+     "note": "Red sign at the edge of the run. Bears, cliffs or both."
+    }
+   ]
+  },
+  {
+   "title": "Small injuries",
+   "title_jp": "{怪我|けが}いろいろ",
+   "intro": "To tell the doctor (or {沙織|さおり}さん) what happened.",
+   "items": [
+    {
+     "jp": "{捻挫|ねんざ|sprain|3}した",
+     "en": "I sprained it",
+     "note": "Ankles and wrists."
+    },
+    {
+     "jp": "{打撲|だぼく|bruise (from a blow)|2}",
+     "en": "bruise",
+     "note": "From hitting something hard."
+    },
+    {
+     "jp": "{擦りむいた|すりむいた|to scrape (skin)|3}",
+     "en": "I scraped it",
+     "note": "Knees on ice, elbows on snow."
+    }
+   ]
+  }
+ ]
+}

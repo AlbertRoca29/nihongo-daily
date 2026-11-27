@@ -260,5 +260,12 @@
   "category": "history-samurai",
   "function": "reasons",
   "format": "dialogue"
+ },
+ {
+  "id": "2026-12-10",
+  "topic": "Ski day morning: {健太|けんた} is late",
+  "category": "review",
+  "function": "hearsay",
+  "format": "line"
  }
 ]
