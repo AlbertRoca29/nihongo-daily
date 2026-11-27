@@ -1,0 +1,423 @@
+{
+ "topic": "Not even hiragana",
+ "category": "language",
+ "function": "narrating",
+ "format": "dialogue",
+ "cast": [
+  "kenta"
+ ],
+ "title_jp": "ひらがなさえ{読めなかった|よめなかった}",
+ "context": "Friday 18 December, a quiet afternoon at ゲストハウス{風|かぜ}: {健太|けんた} asks アルちゃん how he started learning Japanese. He tells him about his language exchange with {由紀|ゆき} in Spain, and about being called ずくなし by {恵子|けいこ}さん the night before.",
+ "scene": "Friday, a quiet hour at reception. {健太|けんた} wants to know how you learned Japanese. You tell him, and confess last night's mystery word.",
+ "keep": [
+  "p0"
+ ],
+ "phrases": [
+  {
+   "jp": "{日本|にほん}に{来る|くる}{前|まえ}は、{箸|はし|chopsticks|3}さえ{使えなかった|つかえなかった}。",
+   "en": "Before I came to Japan, I couldn't even use chopsticks.",
+   "register": "casual",
+   "note": "Noun + さえ + negative = not even."
+  },
+  {
+   "jp": "{何|なん}のこっちゃ{分からへん|わからへん|(Kansai) = 分からない|2}。",
+   "en": "No idea what that's supposed to mean.",
+   "register": "dialect",
+   "note": "Kansai for {何|なん}のことか{分|わ}からない. {健太|けんた}'s reaction to anything strange."
+  },
+  {
+   "jp": "{聞き間違えた|ききまちがえた|to mishear|3}みたい。",
+   "en": "I think I misheard.",
+   "register": "casual",
+   "note": "{聞|き}く hear + {間違|まちが}える get wrong. Saves face in any misunderstanding."
+  },
+  {
+   "jp": "{言語|げんご|language|3}{交換|こうかん|exchange|3}の{相手|あいて|partner|3}を{探して|さがして}います。",
+   "en": "I'm looking for a language exchange partner.",
+   "register": "polite",
+   "note": "What you'd write on a poster or an app profile."
+  },
+  {
+   "jp": "{毎日|まいにち}{続ける|つづける|to keep doing|4}のが{大事|だいじ}だよ。",
+   "en": "The important thing is to keep at it every day.",
+   "register": "casual",
+   "note": "Verb + のが{大事|だいじ} = what matters is …ing."
+  }
+ ],
+ "dialogue_setting": "Reception at ゲストハウス{風|かぜ}, Friday afternoon. No check-ins until four.",
+ "dialogue": [
+  {
+   "who": "kenta",
+   "speaker": "健太",
+   "jp": "アルちゃんの{日本語|にほんご}、{最初|さいしょ}はどうやって{勉強|べんきょう}したん？",
+   "en": "Your Japanese, アルちゃん: how did you start learning it?",
+   "register": "dialect",
+   "note": "したん？ = したの？ (Kansai)."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "スペインで{由紀|ゆき}と{言語|げんご|language|3}{交換|こうかん|exchange|3}を{始めた|はじめた}のが{きっかけ||how it started, trigger|3}。{最初|さいしょ}はひらがなさえ{読めなかった|よめなかった}よ。",
+   "en": "It started with a language exchange with {由紀|ゆき} in Spain. At first I couldn't even read hiragana.",
+   "register": "casual"
+  },
+  {
+   "who": "kenta",
+   "speaker": "健太",
+   "jp": "ほんまに？{今|いま}はめっちゃ{喋れる|しゃべれる|to chat, talk|4}やん。{俺|おれ}なんか、{英語|えいご}は{挨拶|あいさつ|greeting|4}さえ{怪しい|あやしい|shaky, doubtful|3}で。",
+   "en": "Seriously? You can really talk now. Me, my English is shaky even for 'hello'.",
+   "register": "dialect",
+   "note": "ほんまに = {本当|ほんとう}に; やん = じゃない; で = よ (Kansai)."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "でも{昨日|きのう}の{夜|よる}、{恵子|けいこ}さんに「ずくなし」って{言われて|いわれて}…{意味|いみ}さえ{分からなかった|わからなかった}。",
+   "en": "But last night {恵子|けいこ}さん called me 'zukunashi'… I didn't even know what it meant.",
+   "register": "casual"
+  },
+  {
+   "who": "kenta",
+   "speaker": "健太",
+   "jp": "ははっ、{怠け者|なまけもの|lazy person|2}って{意味|いみ}や。{関西|かんさい}{人|じん}の{俺|おれ}も、{最初|さいしょ}は{何|なん}のこっちゃ{思った|おもった}わ。",
+   "en": "Ha! It means 'lazy bones'. Being from Kansai, I had no clue either at first.",
+   "register": "dialect",
+   "note": "や = だ; 何のこっちゃ = 何のことだ (Kansai)."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "やっぱり…。こたつから{出られなくて|でられなくて}、{雪かき|ゆきかき|snow shovelling|3}さえ{手伝わなかった|てつだわなかった}から。",
+   "en": "I knew it… I couldn't get out of the kotatsu and didn't even help shovel the snow.",
+   "register": "casual"
+  }
+ ],
+ "listening": {
+  "type": "ladder",
+  "intro": "{健太|けんた} gives you his one piece of language advice.",
+  "who": "kenta",
+  "lines": [
+   {
+    "who": "kenta",
+    "jp": "{毎日|まいにち}ちょっとずつでも{続ける|つづける|to keep doing|4}のが、{一番|いちばん}やで。",
+    "en": "Keeping at it every day, even a little, is what counts most."
+   }
+  ]
+ },
+ "grammar": {
+  "id": "n3-sae",
+  "pattern": "〜さえ",
+  "level": "N3",
+  "meaning": "even",
+  "form": "noun + さえ (ひらがなさえ, {挨拶|あいさつ}さえ) · noun + で / に + さえ ({子|こ}どもでさえ, {私|わたし}にさえ) · verb ます-stem + さえ + しない ({見|み}さえしない)",
+  "explanation": "さえ picks the most basic, obvious case and says even that is true (usually 'not even'). It's stronger and a bit more written than も: ひらがなさえ{読|よ}めない sounds more shocking than ひらがなも. Don't confuse it with さえ〜ば, 'as long as'.",
+  "src": [
+   "d1",
+   "d3",
+   "d2",
+   "d5",
+   "p0"
+  ],
+  "mark": [
+   "ひらがなさえ",
+   "意味さえ",
+   "挨拶さえ",
+   "雪かきさえ",
+   "箸さえ",
+   "子どもでさえ",
+   "名前さえ",
+   "見さえしない"
+  ],
+  "examples": [
+   {
+    "jp": "この{漢字|かんじ}は、{日本人|にほんじん}の{子|こ}どもでさえ{読める|よめる}。",
+    "en": "Even Japanese kids can read this kanji."
+   },
+   {
+    "jp": "{忙しくて|いそがしくて}、{名前|なまえ}さえ{聞けなかった|きけなかった}。",
+    "en": "It was so busy I didn't even get to ask her name."
+   },
+   {
+    "jp": "{颯太|そうた}は{宿題|しゅくだい}を{見|み}さえしない。",
+    "en": "{颯太|そうた} won't even look at his homework."
+   }
+  ],
+  "quiz": {
+   "question": "{疲れて|つかれて}、ご{飯|はん}＿＿{食べられなかった|たべられなかった}。",
+   "en": "I was so tired I couldn't even eat.",
+   "options": [
+    "さえ",
+    "だけ",
+    "しか",
+    "より"
+   ],
+   "explain": "さえ + negative = not even the most basic thing."
+  },
+  "quiz_more": [
+   {
+    "question": "{専門家|せんもんか|expert|3}＿＿{分からない|わからない}{問題|もんだい}だ。",
+    "en": "It's a problem even experts don't understand.",
+    "options": [
+     "でさえ",
+     "でしか",
+     "だけで",
+     "さえば"
+    ],
+    "explain": "With a person as subject, use でさえ: even experts."
+   },
+   {
+    "question": "{彼|かれ}は{私|わたし}の{顔|かお}を{見|み}＿＿しなかった。",
+    "en": "He didn't even look at my face.",
+    "options": [
+     "さえ",
+     "ても",
+     "ながら",
+     "たり"
+    ],
+    "explain": "ます-stem + さえしない = won't even do it."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "翻訳",
+  "reading": "ほんやく",
+  "romaji": "hon'yaku",
+  "meaning": "translation",
+  "where": "On the {翻訳|ほんやく}アプリ {健太|けんた} opens on the reception tablet to check 'zukunashi'. It finds nothing.",
+  "breakdown": "{翻|ほん} flip over + {訳|やく} translate, meaning → flipping words over into another language.",
+  "related": "{通訳|つうやく} = interpreting (spoken), {翻訳|ほんやく} = translating (written)."
+ },
+ "tip": {
+  "mark": "弁",
+  "title": "ずく: Nagano's favourite word",
+  "body": "In Nagano, ずく is the energy to get things done. ずくがある = hard-working, ずくなし = lazy, ずくを{出|だ}す = make the effort. Outside Nagano almost nobody knows it, so it's a fun word to drop when you visit elsewhere."
+ },
+ "challenge": {
+  "type": "sticker",
+  "prompt": "That evening {健太|けんた} on LINE: 「{明日|あした}の{朝|あさ}、{一緒|いっしょ}に{雪かき|ゆきかき}やろか。ずくなし{卒業|そつぎょう}や！」 Tell him: got it, you're in!",
+  "stickers": [
+   "ryokai",
+   "nemui",
+   "gaan",
+   "uun"
+  ],
+  "model_answer": "{了解|りょうかい}！",
+  "explanation": "{健太|けんた} invites you to shovel snow with him, and you agree, so {了解|りょうかい}！ fits. {眠|ねむ}い… or ガーン would sound like you'd rather stay in the kotatsu, and うーん… is hesitating: exactly what a ずくなし would send.",
+  "hint": "You're saying yes."
+ },
+ "vocab": [
+  {
+   "jp": "{言語|げんご}",
+   "reading": "げんご",
+   "en": "language",
+   "level": "N3",
+   "src": "d1",
+   "surface": "言語",
+   "note": "Formal word; in chat people say {言葉|ことば}. {言語交換|げんごこうかん} = language exchange."
+  },
+  {
+   "jp": "{交換|こうかん}",
+   "reading": "こうかん",
+   "en": "exchange, swap",
+   "level": "N3",
+   "src": "d1",
+   "surface": "交換",
+   "note": "{交換|こうかん}する. Also for swapping LINE: LINE{交換|こうかん}."
+  },
+  {
+   "jp": "きっかけ",
+   "reading": "きっかけ",
+   "en": "trigger, how something started",
+   "level": "N3",
+   "src": "d1",
+   "surface": "きっかけ",
+   "note": "〜のがきっかけ = it all started with …"
+  },
+  {
+   "jp": "{喋|しゃべ}る",
+   "reading": "しゃべる",
+   "en": "to chat, talk",
+   "level": "N3",
+   "src": "d2",
+   "surface": "喋れる",
+   "note": "Casual {話|はな}す. Also means chatty: よく{喋|しゃべ}る{人|ひと}."
+  },
+  {
+   "jp": "{挨拶|あいさつ}",
+   "reading": "あいさつ",
+   "en": "greeting",
+   "level": "N4",
+   "src": "d2",
+   "surface": "挨拶",
+   "note": "Also a short speech: {挨拶|あいさつ}をお{願|ねが}いします."
+  },
+  {
+   "jp": "{怪|あや}しい",
+   "reading": "あやしい",
+   "en": "shaky, doubtful; suspicious",
+   "level": "N3",
+   "src": "d2",
+   "surface": "怪しい",
+   "note": "Suspicious person or shaky skills: {英語|えいご}が{怪|あや}しい."
+  },
+  {
+   "jp": "{怠|なま}け{者|もの}",
+   "reading": "なまけもの",
+   "en": "lazy person",
+   "level": "N2",
+   "src": "d4",
+   "surface": "怠け者",
+   "note": "{怠|なま}ける be lazy + {者|もの} person. Also the sloth!"
+  },
+  {
+   "jp": "{聞|き}き{間違|まちが}える",
+   "reading": "ききまちがえる",
+   "en": "to mishear",
+   "level": "N3",
+   "src": "p2",
+   "surface": "聞き間違えた",
+   "note": "{言|い}い{間違|まちが}える = to misspeak."
+  },
+  {
+   "jp": "{相手|あいて}",
+   "reading": "あいて",
+   "en": "partner, the other person",
+   "level": "N3",
+   "src": "p3",
+   "surface": "相手",
+   "note": "{話|はな}し{相手|あいて} = someone to talk to."
+  },
+  {
+   "jp": "{続|つづ}ける",
+   "reading": "つづける",
+   "en": "to keep doing, continue",
+   "level": "N4",
+   "src": "p4",
+   "surface": "続ける",
+   "note": "Verb stem + {続|つづ}ける: {読|よ}み{続|つづ}ける = keep reading."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "換",
+   "track": "lesson",
+   "on": "カン",
+   "kun": "か(える)・か(わる)",
+   "meaning": "exchange, replace",
+   "parts": "扌 hand radical + 奐 (a person holding something out) → hands passing things back and forth: exchange.",
+   "lookalike": "Not 喚 (call out): 喚 has 口 mouth on the left, 換 has 扌 hand.",
+   "words": [
+    {
+     "jp": "{交換|こうかん}",
+     "reading": "こうかん",
+     "en": "exchange"
+    },
+    {
+     "jp": "{乗|の}り{換|か}え",
+     "reading": "のりかえ",
+     "en": "changing trains"
+    },
+    {
+     "jp": "{換気|かんき}",
+     "reading": "かんき",
+     "en": "ventilation"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "to send",
+     "to borrow",
+     "to hold"
+    ],
+    "readings": [
+     "こうがん",
+     "こかん",
+     "きょうかん"
+    ]
+   }
+  },
+  {
+   "kanji": "関",
+   "track": "n3",
+   "on": "カン",
+   "kun": "せき・かか(わる)",
+   "meaning": "barrier; connection",
+   "parts": "門 gate + 关 a bar across it → the bar that locks a gate: a checkpoint. Things that pass through it are 'connected'.",
+   "lookalike": "Not 開 (open): 開 has 开 inside the gate, 関 has 关 with two dots on top.",
+   "words": [
+    {
+     "jp": "{関係|かんけい}",
+     "reading": "かんけい",
+     "en": "relationship, connection"
+    },
+    {
+     "jp": "{関西|かんさい}",
+     "reading": "かんさい",
+     "en": "Kansai (Osaka, Kyoto area)"
+    },
+    {
+     "jp": "{玄関|げんかん}",
+     "reading": "げんかん",
+     "en": "entrance hall"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "gate",
+     "to open",
+     "between"
+    ],
+    "readings": [
+     "せきけい",
+     "かんかい",
+     "げんけい"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "More Nagano words",
+   "title_jp": "{信州弁|しんしゅうべん}",
+   "intro": "Ones you might hear from {田中|たなか}さん's generation.",
+   "items": [
+    {
+     "jp": "ずくを{出す|だす}",
+     "en": "to make the effort, get going",
+     "note": "ずくを{出|だ}せ！ = come on, get moving!"
+    },
+    {
+     "jp": "{ごしたい||(Nagano) = 疲れた, tired|1}",
+     "en": "tired (= {疲|つか}れた)",
+     "note": "Not 'I want to do something'."
+    },
+    {
+     "jp": "{〜ずら||(Nagano) = 〜だろう|1}",
+     "en": "…right? (= だろう)"
+    }
+   ]
+  },
+  {
+   "title": "How it started",
+   "title_jp": "{始まり|はじまり}を{話す|はなす}",
+   "intro": "Ways to tell how something began.",
+   "items": [
+    {
+     "jp": "{友達|ともだち}に{誘われた|さそわれた}のがきっかけです。",
+     "en": "It started when a friend invited me."
+    },
+    {
+     "jp": "アニメを{見て|みて}、{興味|きょうみ|interest|4}を{持った|もった}んです。",
+     "en": "I got interested after watching anime."
+    },
+    {
+     "jp": "{気がついたら|きがついたら|before I knew it|4}、{夢中|むちゅう}になっていた。",
+     "en": "Before I knew it, I was hooked."
+    }
+   ]
+  }
+ ]
+}

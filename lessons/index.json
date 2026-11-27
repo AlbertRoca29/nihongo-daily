@@ -316,5 +316,12 @@
   "category": "safety",
   "function": "opinions",
   "format": "story"
+ },
+ {
+  "id": "2026-12-18",
+  "topic": "Not even hiragana",
+  "category": "language",
+  "function": "narrating",
+  "format": "dialogue"
  }
 ]
