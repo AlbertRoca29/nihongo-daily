@@ -212,8 +212,8 @@
     "Sōta"
    ],
    "color": "#2f7d32",
-   "status": "{冬休み|ふゆやすみ}！じいちゃん{家|ち}にいるよ⛄",
-   "where": "{鷹ノ原|たかのはら} · {冬休み|ふゆやすみ}は{畑|はたけ}",
+   "status": "アルちゃんと{雪|ゆき}だるま{作った|つくった}！⛄",
+   "where": "{長野市|ながのし} · {週末|しゅうまつ}は{畑|はたけ}",
    "status_base": "{熱|ねつ}で{寝てる|ねてる}…ゲームしたい",
    "where_base": "{長野市|ながのし} · {週末|しゅうまつ}は{畑|はたけ}"
   },
@@ -1212,6 +1212,26 @@
     "On 4 Jan 2027 アルちゃん posted 戸隠 photos on Instagram: scenery plus one of レン from behind, with location turned off, after asking レン.",
     "ゲストハウス風 was quiet on 4 Jan after the New Year rush."
    ]
+  },
+  {
+   "date": "2027-01-05",
+   "cast": [
+    "sota",
+    "tanaka",
+    "keiko"
+   ],
+   "summary": "Tuesday 5 Jan: アルちゃん keeps his 年賀状 promise and builds a snowman with 颯太. The first one snaps at the neck because the head is too heavy; on 田中さん's advice they rebuild it in the shade behind the barn, wearing アルちゃん's glasses. 颯太 goes back to 長野 that evening.",
+   "new_facts": [
+    "The 田中 snowman (two balls, small head) stands in the shade behind the 納屋; there is a 落雪注意 sign on the 納屋 roof corner.",
+    "颯太 went back to 長野市 on the evening of 5 Jan 2027; 由美 picked him up at 17:00.",
+    "田中さん's back was well enough on 5 Jan to come out and help."
+   ],
+   "status_upd": {
+    "sota": {
+     "status": "アルちゃんと{雪|ゆき}だるま{作った|つくった}！⛄",
+     "where": "{長野市|ながのし} · {週末|しゅうまつ}は{畑|はたけ}"
+    }
+   }
   }
  ],
  "others": [

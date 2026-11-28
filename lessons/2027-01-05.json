@@ -1,0 +1,408 @@
+{
+ "topic": "Why our snowman fell over",
+ "category": "review",
+ "function": "reasons",
+ "format": "story",
+ "cast": [
+  "sota",
+  "tanaka"
+ ],
+ "title_jp": "{雪だるま|ゆきだるま}{作戦|さくせん}",
+ "context": "Tuesday 5 January: アルちゃん keeps the promise from his {年賀状|ねんがじょう} and builds a snowman with {颯太|そうた} before the winter break ends. It doesn't go to plan, and the two of them tell why.",
+ "scene": "Winter break is nearly over. You and {颯太|そうた} finally build the snowman you promised. Twice.",
+ "keep": [
+  "p0",
+  "p1"
+ ],
+ "phrases": [
+  {
+   "jp": "{重すぎた|おもすぎた}せいで、{折れちゃった|おれちゃった|to snap, break|3}。",
+   "en": "It was too heavy, so it snapped.",
+   "register": "casual",
+   "note": "〜せいで blames the cause for a bad result."
+  },
+  {
+   "jp": "{手伝って|てつだって}くれたおかげで、{早く|はやく}{終わった|おわった}よ。",
+   "en": "Thanks to your help, we finished quickly.",
+   "register": "casual",
+   "note": "〜おかげで credits the cause for a good result."
+  },
+  {
+   "jp": "{玄関|げんかん}を{開けた|あけた}とたん、{颯太|そうた}が{飛びついて|とびついて|to jump at, leap onto|3}きた。",
+   "en": "The moment I opened the front door, {颯太|そうた} leapt at me.",
+   "register": "neutral"
+  },
+  {
+   "jp": "{日陰|ひかげ|shade|3}なので、なかなか{溶けません|とけません|to melt|3}。",
+   "en": "It's in the shade, so it hardly melts.",
+   "register": "polite"
+  },
+  {
+   "jp": "{寒い|さむい}{中|なか}、ありがとうございました。",
+   "en": "Thank you for coming out in this cold.",
+   "register": "polite",
+   "note": "{寒|さむ}い{中|なか} = 'in the cold': a set way to thank someone who came out in winter."
+  }
+ ],
+ "dialogue_setting": "The 田中 orchard and the back of the barn, a sunny, freezing Tuesday. アルちゃん and {颯太|そうた} tell the story that evening.",
+ "dialogue": [
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "{冬休み|ふゆやすみ}もあと{少し|すこし}。{今日|きょう}は{颯太|そうた}と、{年賀状|ねんがじょう}で{約束|やくそく}した{雪だるま|ゆきだるま}を{作った|つくった}。",
+   "en": "Winter break is almost over. Today {颯太|そうた} and I built the snowman I'd promised on my New Year card.",
+   "register": "neutral"
+  },
+  {
+   "who": "sota",
+   "speaker": "颯太",
+   "jp": "{雪|ゆき}がサラサラすぎて、なかなか{固まらなかった|かたまらなかった|to harden, set|3}。だから{水|みず}をかけたんだ。",
+   "en": "The snow was too powdery and wouldn't pack. So we poured water on it.",
+   "register": "casual"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "{頭|あたま}を{乗せた|のせた}とたん、{首|くび}のところで{折れて|おれて|to snap, break|3}しまった。{重すぎた|おもすぎた}せいだ。",
+   "en": "The moment we put the head on, it snapped at the neck. It was too heavy.",
+   "register": "neutral"
+  },
+  {
+   "who": "sota",
+   "speaker": "颯太",
+   "jp": "そこへじいちゃんが{来て|きて}、{日陰|ひかげ|shade|3}なら{溶けにくい|とけにくい|to melt|3}って{教えて|おしえて}くれた。",
+   "en": "Then Grandpa came and told us it melts less in the shade.",
+   "register": "casual"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "だから{納屋|なや|barn, shed|3}の{裏|うら|back, behind|3}に{作り直した|つくりなおした|to make again, redo|3}。{今度|こんど}は{頭|あたま}を{小さく|ちいさく}した。",
+   "en": "So we rebuilt it behind the barn. This time we made the head smaller.",
+   "register": "neutral"
+  },
+  {
+   "who": "sota",
+   "speaker": "颯太",
+   "jp": "{完成|かんせい|completion|3}！アルちゃんの{眼鏡|めがね}もかけた。{寒い|さむい}{中|なか}、{頑張った|がんばった|to do your best|4}おかげだね！",
+   "en": "Done! We put アルちゃん's glasses on it too. All thanks to working hard in the cold!",
+   "register": "casual"
+  }
+ ],
+ "listening": {
+  "type": "voicemail",
+  "intro": "While you're behind the barn, {恵子|けいこ}さん leaves a message.",
+  "who": "keiko",
+  "lines": [
+   {
+    "who": "keiko",
+    "jp": "アルちゃん、{恵子|けいこ}です。{由美|ゆみ}の{都合|つごう}で、{颯太|そうた}は{今夜|こんや}{長野|ながの}に{帰る|かえる}ことになったの。",
+    "en": "アルちゃん, it's {恵子|けいこ}. Because of {由美|ゆみ}'s schedule, {颯太|そうた} is going back to {長野|ながの} tonight."
+   },
+   {
+    "who": "keiko",
+    "jp": "{夕方|ゆうがた}5{時|じ}に{迎えに|むかえに}{来る|くる}って。それまでに{帰って|かえって}きてね。",
+    "en": "She's coming to pick him up at 5. Come back before then."
+   }
+  ],
+  "question": "{颯太|そうた}は、いつ{長野|ながの}に{帰りますか|かえりますか}。",
+  "options": [
+   "こんや",
+   "あしたのあさ",
+   "あさって",
+   "しゅうまつ"
+  ],
+  "explain": "{今夜|こんや}{長野|ながの}に{帰|かえ}る: {由美|ゆみ} comes for him at 5 this evening."
+ },
+ "grammar": {
+  "id": "n3-totan",
+  "pattern": "〜たとたん",
+  "level": "N3",
+  "meaning": "the moment that",
+  "form": "{動詞|どうし}た{形|けい} + とたん(に) ({乗|の}せる → {乗|の}せたとたん, {開|あ}ける → {開|あ}けたとたん)",
+  "explanation": "Review: the instant A happened, B happened, usually a surprise. B is a fact, not your plan or request. Compare 〜てすぐ (neutral 'right after') and 〜たびに ('every time').",
+  "src": [
+   "d2",
+   "p2"
+  ],
+  "mark": [
+   "乗せたとたん",
+   "開けたとたん",
+   "置いたとたん",
+   "鳴ったとたん"
+  ],
+  "examples": [
+   {
+    "jp": "{鍋|なべ}をテーブルに{置いた|おいた}とたん、{颯太|そうた}が{走って|はしって}きた。",
+    "en": "The second I put the hot pot on the table, {颯太|そうた} came running."
+   },
+   {
+    "jp": "チャイムが{鳴った|なった}とたん、{生徒|せいと}たちは{教室|きょうしつ}を{出た|でた}。",
+    "en": "The moment the bell rang, the students left the classroom."
+   }
+  ],
+  "quiz": {
+   "question": "{頭|あたま}を＿＿とたん、{雪だるま|ゆきだるま}が{崩れた|くずれた|to collapse|3}。",
+   "en": "The moment we put the head on, the snowman collapsed.",
+   "options": [
+    "乗せた",
+    "乗せる",
+    "乗せて",
+    "乗せよう"
+   ],
+   "explain": "とたん follows the た-form: {乗|の}せたとたん."
+  },
+  "quiz_more": [
+   {
+    "question": "{窓|まど}を{開けた|あけた}＿＿、{冷たい|つめたい}{風|かぜ}が{入って|はいって}きた。",
+    "en": "The moment I opened the window, cold wind came in.",
+    "options": [
+     "とたん",
+     "たびに",
+     "ついでに",
+     "最中に"
+    ],
+    "explain": "A sudden result of one moment: とたん. たびに is 'every time'."
+   },
+   {
+    "question": "{家|いえ}を{出た|でた}とたん、＿＿。",
+    "en": "The moment I left the house, ＿＿.",
+    "options": [
+     "雪が降り出した",
+     "駅まで歩こう",
+     "傘を持っていこうと思う",
+     "早く来てください"
+    ],
+    "explain": "After とたん: something that happened, not a plan or a request."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "落雪注意",
+  "reading": "らくせつちゅうい",
+  "romaji": "rakusetsu chūi",
+  "meaning": "caution: snow falling from the roof",
+  "where": "A tin sign on the corner of the {納屋|なや} roof, right above where you first wanted to build.",
+  "breakdown": "{落雪|らくせつ}: 落 fall + 雪 snow → snow sliding off a roof; {注意|ちゅうい}: pay attention.",
+  "related": "{雪下|ゆきお}ろし = clearing snow off a roof."
+ },
+ "tip": {
+  "mark": "雪",
+  "title": "Two balls, not three",
+  "body": "A Japanese {雪|ゆき}だるま is usually two balls, like a Daruma doll, while the Western snowman has three. In snow country, never build or stand under a roof edge: heavy snow slides off without warning, which is what {落雪注意|らくせつちゅうい} signs are for."
+ },
+ "challenge": {
+  "type": "write",
+  "prompt": "{恵子|けいこ}さん on the family LINE: 「{雪|ゆき}だるま、どうして{納屋|なや|barn, shed|3}の{裏|うら|back, behind|3}に{作った|つくった}の？」 Explain why, politely.",
+  "hint": "{日陰|ひかげ}だと + {溶|と}けにくい + から",
+  "model_answer": "{日陰|ひかげ|shade|3}だと{溶けにくい|とけにくい|to melt|3}から、{納屋|なや|barn, shed|3}の{裏|うら|back, behind|3}に{作りました|つくりました}。",
+  "explanation": "{日陰|ひかげ}だと = 'if it's in the shade'. {溶|と}け + にくい = hard to melt. から gives the reason before the result, and {作|つく}りました keeps it polite for {恵子|けいこ}さん."
+ },
+ "vocab": [
+  {
+   "jp": "{固|かた}まる",
+   "reading": "かたまる",
+   "en": "to harden, set",
+   "level": "N3",
+   "src": "d1",
+   "surface": "固まらなかった",
+   "note": "{雪|ゆき}が{固|かた}まる. Also 'to freeze up' with nerves."
+  },
+  {
+   "jp": "{折|お}れる",
+   "reading": "おれる",
+   "en": "to snap, break",
+   "level": "N3",
+   "src": "d2",
+   "surface": "折れて",
+   "note": "Long things: branches, bones, pencils. Transitive: {折|お}る."
+  },
+  {
+   "jp": "{日陰|ひかげ}",
+   "reading": "ひかげ",
+   "en": "shade",
+   "level": "N3",
+   "src": "d3",
+   "surface": "日陰",
+   "note": "{日|ひ} sun + {陰|かげ} shadow. Opposite: {日向|ひなた}."
+  },
+  {
+   "jp": "{溶|と}ける",
+   "reading": "とける",
+   "en": "to melt",
+   "level": "N3",
+   "src": "d3",
+   "surface": "溶け",
+   "note": "Snow, ice, chocolate. {溶|と}けにくい = slow to melt."
+  },
+  {
+   "jp": "{裏|うら}",
+   "reading": "うら",
+   "en": "back, behind",
+   "level": "N3",
+   "src": "d4",
+   "surface": "裏",
+   "note": "{家|いえ}の{裏|うら} = behind the house. Opposite: {表|おもて}."
+  },
+  {
+   "jp": "{作|つく}り{直|なお}す",
+   "reading": "つくりなおす",
+   "en": "to make again, redo",
+   "level": "N3",
+   "src": "d4",
+   "surface": "作り直した",
+   "note": "Stem + {直|なお}す = do again: {書|か}き{直|なお}す."
+  },
+  {
+   "jp": "{完成|かんせい}",
+   "reading": "かんせい",
+   "en": "completion",
+   "level": "N3",
+   "src": "d5",
+   "surface": "完成",
+   "note": "{完成|かんせい}！ = done! {完成|かんせい}する = be finished."
+  },
+  {
+   "jp": "{頑張|がんば}る",
+   "reading": "がんばる",
+   "en": "to do your best",
+   "level": "N4",
+   "src": "d5",
+   "surface": "頑張った",
+   "note": "{頑張|がんば}って！ = good luck, go for it."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "裏",
+   "track": "lesson",
+   "on": "リ",
+   "kun": "うら",
+   "meaning": "back, reverse side",
+   "parts": "衣 clothing split open, with 里 inside → the inner lining of a garment: the back, the hidden side.",
+   "lookalike": "Not 表 (front, surface): 表 is a whole garment with no 里 inside.",
+   "words": [
+    {
+     "jp": "{裏|うら}",
+     "reading": "うら",
+     "en": "back, behind"
+    },
+    {
+     "jp": "{裏口|うらぐち}",
+     "reading": "うらぐち",
+     "en": "back door"
+    },
+    {
+     "jp": "{裏切|うらぎ}る",
+     "reading": "うらぎる",
+     "en": "to betray"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "front, surface",
+     "village",
+     "clothes"
+    ],
+    "readings": [
+     "り",
+     "おもて",
+     "さと"
+    ]
+   }
+  },
+  {
+   "kanji": "都",
+   "track": "n3",
+   "on": "ト・ツ",
+   "kun": "みやこ",
+   "meaning": "capital, city",
+   "parts": "者 person + ⻏ town (on the right) → a town where crowds of people gather: the capital.",
+   "lookalike": "Not 部 (part, section): 部 has 立 and 口 on the left; 都 has 者.",
+   "words": [
+    {
+     "jp": "{都合|つごう}",
+     "reading": "つごう",
+     "en": "convenience, schedule"
+    },
+    {
+     "jp": "{東京都|とうきょうと}",
+     "reading": "とうきょうと",
+     "en": "Tokyo Metropolis"
+    },
+    {
+     "jp": "{京都|きょうと}",
+     "reading": "きょうと",
+     "en": "Kyoto"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "part, section",
+     "person",
+     "village"
+    ],
+    "readings": [
+     "とごう",
+     "みやこあい",
+     "つあい"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Giving reasons",
+   "title_jp": "{理由|りゆう}の{言い方|いいかた}",
+   "intro": "Same 'because', different feelings.",
+   "items": [
+    {
+     "jp": "{寒い|さむい}から",
+     "en": "because it's cold",
+     "note": "Everyday, your own reason."
+    },
+    {
+     "jp": "{日陰|ひかげ|shade|3}なので",
+     "en": "since it's in the shade",
+     "note": "Softer and more polite."
+    },
+    {
+     "jp": "{重い|おもい}せいで",
+     "en": "because it was heavy (bad result)",
+     "note": "Blames the cause."
+    },
+    {
+     "jp": "{手伝って|てつだって}くれたおかげで",
+     "en": "thanks to your help",
+     "note": "Credits the cause."
+    }
+   ]
+  },
+  {
+   "title": "Snow play",
+   "title_jp": "{雪遊び|ゆきあそび}",
+   "intro": "For the next snowy weekend with {颯太|そうた}.",
+   "items": [
+    {
+     "jp": "{雪合戦|ゆきがっせん|snowball fight|3}",
+     "en": "snowball fight"
+    },
+    {
+     "jp": "かまくら",
+     "en": "snow hut (igloo)"
+    },
+    {
+     "jp": "そり",
+     "en": "sledge"
+    },
+    {
+     "jp": "{粉雪|こなゆき|powder snow|3}",
+     "en": "powder snow"
+    }
+   ]
+  }
+ ]
+}
