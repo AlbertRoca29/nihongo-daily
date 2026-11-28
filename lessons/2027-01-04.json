@@ -1,0 +1,439 @@
+{
+ "topic": "Can I post our date photo?",
+ "category": "tech-internet",
+ "function": "advice",
+ "format": "line",
+ "cast": [
+  "kenta",
+  "ren"
+ ],
+ "title_jp": "{載せて|のせて}もいい？",
+ "context": "Monday 4 January, the first workday of the year: アルちゃん wants to put a photo from the {戸隠|とがくし} date on Instagram, but レン isn't out at work. He asks {健太|けんた} for advice on LINE.",
+ "scene": "Monday lunchtime. You have a lovely photo of you and レン at {戸隠|とがくし}. Can you post it? You ask {健太|けんた}.",
+ "keep": [
+  "p0"
+ ],
+ "phrases": [
+  {
+   "jp": "{本人|ほんにん|the person themselves|3}に{聞いた|きいた}ほうがいいよ。",
+   "en": "You'd better ask them first.",
+   "register": "casual",
+   "note": "〜たほうがいい: the everyday way to advise. {本人|ほんにん} = the person concerned."
+  },
+  {
+   "jp": "{写真|しゃしん}は{撮った|とった}ものの、まだ{載せて|のせて|to post, put up|3}いない。",
+   "en": "I took the photos, but I haven't posted them yet.",
+   "register": "neutral"
+  },
+  {
+   "jp": "{設定|せってい|settings|3}で、{位置情報|いちじょうほう|location data|2}をオフにしてください。",
+   "en": "Please turn off location in the settings.",
+   "register": "polite"
+  },
+  {
+   "jp": "{無理|むり}に{投稿|とうこう|posting online|3}しなくてもいいんじゃない？",
+   "en": "You don't have to post it if it doesn't feel right, do you?",
+   "register": "casual",
+   "note": "〜んじゃない？ softens advice into a suggestion."
+  },
+  {
+   "jp": "{買った|かった}ものの、{一度|いちど}も{使って|つかって}いません。",
+   "en": "I bought it, but I haven't used it even once.",
+   "register": "polite"
+  }
+ ],
+ "dialogue_setting": "LINE, Monday lunchtime. You're in your room at the 田中 house; {健太|けんた} is at the guesthouse reception.",
+ "dialogue": [
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "12:10",
+   "jp": "{健太|けんた}、{相談|そうだん}がある。{昨日|きのう}の{戸隠|とがくし}の{写真|しゃしん}、インスタに{載せたい|のせたい|to post, put up|3}んだけど…",
+   "en": "{健太|けんた}, I need advice. I want to put yesterday's {戸隠|とがくし} photos on Instagram, but…",
+   "register": "casual"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "12:10",
+   "jp": "レンと{二人|ふたり}で{撮った|とった}ものの、{投稿|とうこう|posting online|3}していいか{分からなくて|わからなくて}",
+   "en": "We took them together, but I don't know if it's OK to post them.",
+   "register": "casual"
+  },
+  {
+   "who": "kenta",
+   "speaker": "健太",
+   "time": "12:14",
+   "jp": "おお、デートの{報告|ほうこく}か〜ｗ ええやん",
+   "en": "Ooh, a date report lol. Nice.",
+   "register": "dialect",
+   "note": "ええやん = いいじゃない (Kansai)."
+  },
+  {
+   "who": "kenta",
+   "speaker": "健太",
+   "time": "12:15",
+   "jp": "でもレン、{職場|しょくば|workplace|3}には{言うてへん|いうてへん}のやろ？{顔|かお}が{写ってる|うつってる|to appear (in a photo)|3}のはやめとき",
+   "en": "But レン hasn't told people at work, right? Skip the ones where his face shows.",
+   "register": "dialect",
+   "note": "{言|い}うてへん = {言|い}っていない; やめとき = やめておきなさい (Kansai)."
+  },
+  {
+   "who": "kenta",
+   "speaker": "健太",
+   "time": "12:15",
+   "jp": "{載せる|のせる|to post, put up|3}{前|まえ}に、{本人|ほんにん|the person themselves|3}に{聞いた|きいた}ほうがええで",
+   "en": "Ask him himself before you post.",
+   "register": "dialect",
+   "note": "ええで = いいよ (Kansai)."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "12:20",
+   "jp": "そっか…{景色|けしき}だけにする。{位置情報|いちじょうほう|location data|2}も{消した|けした|to turn off, erase|4}ほうがいい？",
+   "en": "Right… I'll post just the scenery. Should I turn off the location too?",
+   "register": "casual"
+  },
+  {
+   "who": "kenta",
+   "speaker": "健太",
+   "time": "12:22",
+   "jp": "うん、{田舎|いなか}はすぐ{噂|うわさ}になるからな。{設定|せってい|settings|3}でオフにしとき",
+   "en": "Yeah, rumours spread fast in the countryside. Switch it off in the settings.",
+   "register": "dialect",
+   "note": "しとき = しておきなさい (Kansai)."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "12:30",
+   "jp": "レンに{聞いたら|きいたら}、「{後ろ姿|うしろすがた|someone seen from behind|3}ならいいよ」って！",
+   "en": "I asked レン: he said a shot from behind is fine!",
+   "register": "casual"
+  },
+  {
+   "who": "kenta",
+   "speaker": "健太",
+   "time": "12:31",
+   "sticker": "ii-ne",
+   "jp": "いいね！",
+   "en": "Nice!"
+  },
+  {
+   "who": "kenta",
+   "speaker": "健太",
+   "time": "12:31",
+   "jp": "ほな{俺|おれ}、{一番|いちばん}に「いいね」{押す|おす}わ。{仕事|しごと}は{始まった|はじまった}ものの、{暇|ひま|free, not busy|4}やしｗ",
+   "en": "Then I'll be the first to hit 'like'. Work's started again, but it's dead here lol",
+   "register": "dialect",
+   "note": "ほな = じゃあ; {暇|ひま}やし = {暇|ひま}だし (Kansai)."
+  }
+ ],
+ "listening": {
+  "type": "ladder",
+  "intro": "レン's reply, as a voice message.",
+  "who": "ren",
+  "lines": [
+   {
+    "who": "ren",
+    "jp": "{後ろ姿|うしろすがた|someone seen from behind|3}なら、{載せて|のせて|to post, put up|3}もいいよ。",
+    "en": "If it's from behind, you can post it."
+   }
+  ]
+ },
+ "grammar": {
+  "id": "n3-mono-no",
+  "pattern": "〜ものの",
+  "level": "N3",
+  "meaning": "although",
+  "form": "verb: plain form + ものの ({撮|と}ったものの, {始|はじ}まったものの) · い-adj: + ものの ({安|やす}いものの) · な-adj: + なものの ({便利|べんり}なものの)",
+  "explanation": "'Although X, (things didn't go the expected way)'. The second half is often hesitation or a plan not carried out. Firmer and a bit more written than けど; unlike のに, it doesn't sound like a complaint.",
+  "src": [
+   "d1",
+   "p1",
+   "d9",
+   "p4"
+  ],
+  "mark": [
+   "撮ったものの",
+   "始まったものの",
+   "買ったものの",
+   "申し込んだものの",
+   "便利なものの"
+  ],
+  "examples": [
+   {
+    "jp": "ジムに{申し込んだ|もうしこんだ}ものの、まだ{一回|いっかい}も{行って|いって}いない。",
+    "en": "I signed up for the gym, but I haven't gone once."
+   },
+   {
+    "jp": "このアプリは{便利|べんり}なものの、{電池|でんち}がすぐなくなる。",
+    "en": "This app is handy, but it drains the battery fast."
+   }
+  ],
+  "quiz": {
+   "question": "{写真|しゃしん}は{撮った|とった}＿＿、まだ{載せて|のせて|to post|3}いない。",
+   "en": "I took the photos, but I haven't posted them yet.",
+   "options": [
+    "ものの",
+    "ものだ",
+    "ものに",
+    "ものか"
+   ],
+   "explain": "ものの joins 'I did X' with 'but not the next step'."
+  },
+  "quiz_more": [
+   {
+    "question": "{仕事|しごと}は＿＿ものの、まだ{暇|ひま|free, not busy|4}だ。",
+    "en": "Work has started, but it's still quiet.",
+    "options": [
+     "始まった",
+     "始まって",
+     "始まり",
+     "始まったな"
+    ],
+    "explain": "ものの follows the plain form: {始|はじ}まった."
+   },
+   {
+    "question": "{子|こ}どもの{頃|ころ}は、よく{雪|ゆき}で{遊んだ|あそんだ}＿＿。",
+    "en": "As a kid, I used to play in the snow a lot.",
+    "options": [
+     "ものだ",
+     "ものの",
+     "ものに",
+     "ものか"
+    ],
+    "explain": "A fond past habit ends with ものだ; ものの needs a second clause."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "下書き",
+  "reading": "したがき",
+  "romaji": "shitagaki",
+  "meaning": "draft",
+  "where": "On the Instagram screen, where アルちゃん saved the post before asking レン: 「{下書き|したがき}に{保存|ほぞん}しました」.",
+  "breakdown": "{下書|したが}き: 下 under, before + 書き writing → the writing that comes before the final version: a draft.",
+  "related": "{保存|ほぞん} = save; {削除|さくじょ} = delete."
+ },
+ "tip": {
+  "mark": "顔",
+  "title": "{顔出し|かおだし}NG",
+  "body": "Many people in Japan keep their face off social media, and friends blur or crop others before posting. {顔出し|かおだし}NG means 'no face shown, please'. Asking 「{載|の}せてもいい？」 before you post is normal good manners, not over-careful."
+ },
+ "challenge": {
+  "type": "sticker",
+  "prompt": "That evening, レン: 「{投稿|とうこう}{見た|みた}よ。{写真|しゃしん}、すごくいいね。{僕|ぼく}の{後ろ姿|うしろすがた}、かっこよすぎ？ｗ」 You're happy but a little embarrassed. Which sticker?",
+  "stickers": [
+   "hazukashii",
+   "gaan",
+   "kowai",
+   "otsukaresama"
+  ],
+  "model_answer": "{恥ずかしい|はずかしい}…",
+  "hint": "Pleased and shy at the same time.",
+  "explanation": "{恥|は}ずかしい… covers that shy, pleased feeling when someone teases you kindly. ガーン is shock, {怖|こわ}い… makes no sense, and お{疲|つか}れ{様|さま}です is a work greeting."
+ },
+ "vocab": [
+  {
+   "jp": "{載|の}せる",
+   "reading": "のせる",
+   "en": "to post, put up (online); to put on",
+   "level": "N3",
+   "src": "d0",
+   "surface": "載せたい",
+   "note": "インスタに{載|の}せる. Same sound as {乗|の}せる (give a ride)."
+  },
+  {
+   "jp": "{職場|しょくば}",
+   "reading": "しょくば",
+   "en": "workplace",
+   "level": "N3",
+   "src": "d3",
+   "surface": "職場",
+   "note": "{職|しょく} job + {場|ば} place. {職場|しょくば}の{人|ひと} = colleagues."
+  },
+  {
+   "jp": "{写|うつ}る",
+   "reading": "うつる",
+   "en": "to appear (in a photo)",
+   "level": "N3",
+   "src": "d3",
+   "surface": "写ってる",
+   "note": "For photos. Screens and reflections use {映|うつ}る."
+  },
+  {
+   "jp": "{本人|ほんにん}",
+   "reading": "ほんにん",
+   "en": "the person themselves",
+   "level": "N3",
+   "src": "d4",
+   "surface": "本人",
+   "note": "{本人|ほんにん}{確認|かくにん} = ID check at banks and offices."
+  },
+  {
+   "jp": "{消|け}す",
+   "reading": "けす",
+   "en": "to turn off; to erase",
+   "level": "N4",
+   "src": "d5",
+   "surface": "消した",
+   "note": "{電気|でんき}を{消|け}す, {写真|しゃしん}を{消|け}す. Intransitive: {消|き}える."
+  },
+  {
+   "jp": "{設定|せってい}",
+   "reading": "せってい",
+   "en": "settings",
+   "level": "N3",
+   "src": "d6",
+   "surface": "設定",
+   "note": "The ⚙ menu on any app. {設定|せってい}する = set up."
+  },
+  {
+   "jp": "{後|うし}ろ{姿|すがた}",
+   "reading": "うしろすがた",
+   "en": "someone seen from behind",
+   "level": "N3",
+   "src": "d7",
+   "surface": "後ろ姿",
+   "note": "{後|うし}ろ behind + {姿|すがた} figure."
+  },
+  {
+   "jp": "{暇|ひま}",
+   "reading": "ひま",
+   "en": "free, not busy",
+   "level": "N4",
+   "src": "d9",
+   "surface": "暇",
+   "note": "{暇|ひま}なとき = in your free time. Opposite: {忙|いそが}しい."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "職",
+   "track": "lesson",
+   "on": "ショク",
+   "kun": "",
+   "meaning": "job, employment",
+   "parts": "耳 ear + 音 sound + 戈 halberd → a guard with his ear tuned to orders and his weapon ready: someone doing their post, a job.",
+   "lookalike": "Not 識 (knowledge): 識 has 言 words on the left; 職 has 耳 ear.",
+   "words": [
+    {
+     "jp": "{職場|しょくば}",
+     "reading": "しょくば",
+     "en": "workplace"
+    },
+    {
+     "jp": "{職業|しょくぎょう}",
+     "reading": "しょくぎょう",
+     "en": "occupation"
+    },
+    {
+     "jp": "{退職|たいしょく}",
+     "reading": "たいしょく",
+     "en": "leaving a job, retirement"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "knowledge",
+     "to weave",
+     "ear"
+    ],
+    "readings": [
+     "しょくじょう",
+     "しきば",
+     "しょっぱ"
+    ]
+   }
+  },
+  {
+   "kanji": "取",
+   "track": "n3",
+   "on": "シュ",
+   "kun": "と(る)",
+   "meaning": "take, get",
+   "parts": "耳 ear + 又 hand → a hand grabbing an ear: in ancient battles, soldiers took an ear as proof. To take.",
+   "lookalike": "Not 最 (most): 最 is 取 with 日 sun on top.",
+   "words": [
+    {
+     "jp": "{取|と}り{消|け}す",
+     "reading": "とりけす",
+     "en": "to cancel, take back"
+    },
+    {
+     "jp": "{受|う}け{取|と}る",
+     "reading": "うけとる",
+     "en": "to receive"
+    },
+    {
+     "jp": "{取材|しゅざい}",
+     "reading": "しゅざい",
+     "en": "news coverage, interview"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "most",
+     "ear",
+     "to give"
+    ],
+    "readings": [
+     "しゅりけす",
+     "とりきす",
+     "とけす"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Social media words",
+   "title_jp": "SNSの{言葉|ことば}",
+   "intro": "What you'll see and hear around posting.",
+   "items": [
+    {
+     "jp": "いいねを{押す|おす}",
+     "en": "to like (a post)"
+    },
+    {
+     "jp": "{加工|かこう|editing (a photo)|3}する",
+     "en": "to edit, filter a photo"
+    },
+    {
+     "jp": "{炎上|えんじょう|online backlash, going viral badly|3}",
+     "en": "a post blowing up with angry comments"
+    },
+    {
+     "jp": "{鍵垢|かぎあか|private account (slang)|3}",
+     "en": "a private (locked) account",
+     "note": "{鍵|かぎ} key + アカウント."
+    }
+   ]
+  },
+  {
+   "title": "Kansai advice",
+   "title_jp": "{関西弁|かんさいべん}のアドバイス",
+   "intro": "How {健太|けんた} tells you what to do.",
+   "items": [
+    {
+     "jp": "やめとき",
+     "en": "don't (= やめておきなさい)"
+    },
+    {
+     "jp": "{聞いた|きいた}ほうがええで",
+     "en": "you'd better ask (= いいよ)"
+    },
+    {
+     "jp": "ほな、そうしよか",
+     "en": "then let's do that (= じゃあ、そうしようか)"
+    }
+   ]
+  }
+ ]
+}

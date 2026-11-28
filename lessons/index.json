@@ -435,5 +435,12 @@
   "category": "entertainment",
   "function": "hypotheticals",
   "format": "dialogue"
+ },
+ {
+  "id": "2027-01-04",
+  "topic": "Can I post our date photo?",
+  "category": "tech-internet",
+  "function": "advice",
+  "format": "line"
  }
 ]
