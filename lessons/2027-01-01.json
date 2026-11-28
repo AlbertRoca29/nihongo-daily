@@ -1,0 +1,485 @@
+{
+ "topic": "Frozen pipes on New Year's morning",
+ "category": "home-admin",
+ "function": "feelings",
+ "format": "line",
+ "cast": [
+  "yuki",
+  "tanaka"
+ ],
+ "title_jp": "{元日|がんじつ}の{朝|あさ}、{水|みず}が{出ない|でない}！",
+ "context": "Friday 1 January 2027, New Year's Day: the 田中 kitchen tap won't run because a water pipe froze overnight. {由紀|ゆき}, at her parents' house, looks up what to do on LINE, and her {年賀状|ねんがじょう} has arrived.",
+ "scene": "New Year's morning, minus ten outside. The kitchen tap gives nothing. {由紀|ゆき} messages from her parents' kotatsu.",
+ "keep": [
+  "p0"
+ ],
+ "phrases": [
+  {
+   "jp": "{水|みず}が{出なくて|でなくて}、{困って|こまって|to be in trouble, stuck|4}います。",
+   "en": "The water isn't running and I'm stuck.",
+   "register": "polite",
+   "note": "〜て{困|こま}っています: the standard way to report a problem to a landlord, shop or office."
+  },
+  {
+   "jp": "{残念|ざんねん|unfortunate, a pity|4}ながら、{今日|きょう}はお{休み|やすみ}です。",
+   "en": "Unfortunately, we're closed today.",
+   "register": "polite",
+   "note": "{残念|ざんねん}ながら = 'unfortunately'. You'll see it on shop signs all New Year."
+  },
+  {
+   "jp": "{朝|あさ}から{最悪|さいあく|the worst|4}…{ついてない||out of luck|3}なあ。",
+   "en": "The worst, since this morning… I'm so unlucky.",
+   "register": "casual",
+   "note": "ついてない = luck isn't on my side. Very common grumble."
+  },
+  {
+   "jp": "{狭い|せまい}ながら、{居心地|いごこち|how comfortable a place feels|3}のいい{部屋|へや}です。",
+   "en": "It's small, but it's a cosy room.",
+   "register": "polite"
+  },
+  {
+   "jp": "{子|こ}どもながら、よく{気が利く|きがきく|to be thoughtful, attentive|3}ね。",
+   "en": "He's only a kid, but he's so thoughtful.",
+   "register": "casual"
+  }
+ ],
+ "dialogue_setting": "LINE, New Year's morning. You're in the freezing 田中 kitchen; {由紀|ゆき} is at her parents' house.",
+ "dialogue": [
+  {
+   "who": "yuki",
+   "speaker": "由紀",
+   "time": "9:12",
+   "jp": "あけおめ〜🎍ことよろ！{実家|じっか}のこたつから{出られない|でられない}ｗ",
+   "en": "Happy New Year! Let's have a good one! I can't get out of my parents' kotatsu lol",
+   "register": "slang",
+   "note": "あけおめ・ことよろ = あけましておめでとう・{今年|ことし}もよろしく."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "9:20",
+   "jp": "あけおめ！こっちは{元日|がんじつ}から{最悪|さいあく|the worst|4}…{水道管|すいどうかん|water pipe|2}が{凍った|こおった}みたい😭",
+   "en": "Happy New Year! Here it's the worst, right from New Year's Day… the water pipe seems to have frozen.",
+   "register": "casual"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "9:20",
+   "jp": "{田中|たなか}さん、{腰|こし}が{痛い|いたい}と{言いながら|いいながら}、{外|そと}に{見に|みに}{行こう|いこう}としてる",
+   "en": "田中さん keeps saying his back hurts, and yet he's trying to go outside and look.",
+   "register": "casual"
+  },
+  {
+   "who": "yuki",
+   "speaker": "由紀",
+   "time": "9:22",
+   "sticker": "maji",
+   "jp": "え、マジ？",
+   "en": "Wait, seriously?"
+  },
+  {
+   "who": "yuki",
+   "speaker": "由紀",
+   "time": "9:23",
+   "jp": "ネットで{見た|みた}けど、{蛇口|じゃぐち|tap, faucet|3}にタオル{巻いて|まいて|to wrap, wind|3}、ぬるま{湯|ゆ}かけるといいって",
+   "en": "I read online: wrap a towel round the tap and pour lukewarm water on it.",
+   "register": "casual",
+   "note": "ぬるま{湯|ゆ} = lukewarm water."
+  },
+  {
+   "who": "yuki",
+   "speaker": "由紀",
+   "time": "9:23",
+   "jp": "{熱湯|ねっとう|boiling water|3}はダメらしい！{割れる|われる|to crack, break|3}こともあるって",
+   "en": "Apparently boiling water is a no! It can crack.",
+   "register": "casual"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "9:41",
+   "kind": "voice",
+   "jp": "{出た|でた}！{作戦|さくせん|plan, operation|3}{成功|せいこう|success|4}！{田中|たなか}さんも{笑ってる|わらってる}よ",
+   "en": "It's running! Operation success! 田中さん's laughing too.",
+   "register": "casual"
+  },
+  {
+   "who": "yuki",
+   "speaker": "由紀",
+   "time": "9:43",
+   "jp": "よかった〜！{年賀状|ねんがじょう}{届いた|とどいた}？{絵|え}は{下手|へた}ながら、ひつじ{描いた|かいた|to draw|3}よ🐑",
+   "en": "Phew! Did my New Year card arrive? I'm bad at drawing, but I drew a sheep.",
+   "register": "casual",
+   "note": "2027 is the year of the sheep (ひつじ{年|どし})."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "9:45",
+   "jp": "{届いた|とどいた}！{残念|ざんねん|unfortunate, a pity|4}ながら、{犬|いぬ}にしか{見えない|みえない}ｗ",
+   "en": "It arrived! Sadly, it only looks like a dog lol",
+   "register": "casual"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "time": "9:45",
+   "jp": "でも{最悪|さいあく|the worst|4}な{朝|あさ}だったから、すごく{嬉しかった|うれしかった}。ありがとう！",
+   "en": "But after such an awful morning, it made me really happy. Thank you!",
+   "register": "casual"
+  }
+ ],
+ "listening": {
+  "type": "announcement",
+  "intro": "That afternoon, at {初詣|はつもうで} at {鷹ノ原神社|たかのはらじんじゃ}, a loudspeaker crackles over the queue.",
+  "who": "extra",
+  "title": "{初詣|はつもうで}のご{案内|あんない}",
+  "place": "{鷹ノ原神社|たかのはらじんじゃ}",
+  "lines": [
+   {
+    "who": "extra",
+    "voice": "m",
+    "jp": "{本日|ほんじつ}はお{参り|まいり|visiting a shrine|3}の{方|かた}で{大変|たいへん}{混雑|こんざつ|crowding|2}しております。",
+    "en": "Today it's very crowded with people coming to pray."
+   },
+   {
+    "who": "extra",
+    "voice": "m",
+    "jp": "お{守り|まもり}は、{本殿|ほんでん|main shrine hall|2}の{右側|みぎがわ}でお{受け|うけ}ください。{足元|あしもと|footing, underfoot|3}が{凍って|こおって}おりますので、ご{注意|ちゅうい}ください。",
+    "en": "Please receive your charms to the right of the main hall. The ground is frozen, so watch your step."
+   }
+  ],
+  "question": "お{守り|まもり}は、どこで{買えますか|かえますか}。",
+  "options": [
+   "ほんでんのみぎがわ",
+   "ほんでんのひだりがわ",
+   "とりいのまえ",
+   "しゃむしょのなか"
+  ],
+  "explain": "{本殿|ほんでん}の{右側|みぎがわ} = to the right of the main hall. Shrines say お{守|まも}りを{受|う}ける (receive), not {買|か}う."
+ },
+ "grammar": {
+  "id": "n3-nagara-contrast",
+  "pattern": "〜ながら (逆接)",
+  "level": "N3",
+  "meaning": "although, while",
+  "form": "verb: stem + ながら ({言|い}いながら, {知|し}りながら) · い-adj: + ながら ({狭|せま}いながら, {小|ちい}さいながら) · な-adj / noun: + ながら ({下手|へた}ながら, {残念|ざんねん}ながら, {子|こ}どもながら)",
+  "explanation": "Joins two things that clash: 'although, and yet'. Often with も: ながらも. {残念|ざんねん}ながら is a set phrase for 'unfortunately'. Not the 'while doing' ながら: here the second part goes against what the first suggests.",
+  "src": [
+   "d7",
+   "d8",
+   "p3",
+   "d2",
+   "p1",
+   "p4"
+  ],
+  "mark": [
+   "下手ながら",
+   "残念ながら",
+   "狭いながら",
+   "言いながら",
+   "子どもながら",
+   "知っていながら"
+  ],
+  "examples": [
+   {
+    "jp": "{颯太|そうた}は{子|こ}どもながら、{雪かき|ゆきかき}を{手伝って|てつだって}くれた。",
+    "en": "{颯太|そうた} is just a kid, but he helped shovel the snow."
+   },
+   {
+    "jp": "{危ない|あぶない}と{知っていながら|しっていながら}、{熱湯|ねっとう|boiling water|3}をかけてしまった。",
+    "en": "I knew it was risky, and yet I poured boiling water on it."
+   }
+  ],
+  "quiz": {
+   "question": "{狭い|せまい}＿＿、{居心地|いごこち|how comfortable a place feels|3}のいい{部屋|へや}だ。",
+   "en": "It's small, but it's a cosy room.",
+   "options": [
+    "ながら",
+    "くながら",
+    "でながら",
+    "なながら"
+   ],
+   "explain": "い-adjectives take ながら directly: {狭|せま}いながら."
+  },
+  "quiz_more": [
+   {
+    "question": "{残念|ざんねん}＿＿、{明日|あした}は{行けません|いけません}。",
+    "en": "Unfortunately, I can't go tomorrow.",
+    "options": [
+     "ながら",
+     "なながら",
+     "だながら",
+     "にながら"
+    ],
+    "explain": "な-adjectives and nouns add ながら straight on, with no な or だ."
+   },
+   {
+    "question": "{危ない|あぶない}と＿＿、{熱湯|ねっとう|boiling water|3}をかけてしまった。",
+    "en": "I knew it was risky, and yet I poured boiling water on it.",
+    "options": [
+     "知っていながら",
+     "知るながら",
+     "知ったながら",
+     "知ってながらに"
+    ],
+    "explain": "Verbs use the stem (or ている stem): {知|し}っていながら. Plain and た forms don't take ながら."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "謹賀新年",
+  "reading": "きんがしんねん",
+  "romaji": "kinga shinnen",
+  "meaning": "Happy New Year (formal, on cards)",
+  "where": "Printed in gold across the top of {由紀|ゆき}'s {年賀状|ねんがじょう}, above her sheep.",
+  "breakdown": "{謹賀|きんが}: 謹 respectfully + 賀 celebrate → 'I humbly celebrate'; {新年|しんねん}: new + year.",
+  "related": "賀 is also in {年賀状|ねんがじょう} (New Year card)."
+ },
+ "tip": {
+  "mark": "凍",
+  "title": "{水抜き|みずぬき}: draining the pipes",
+  "body": "In cold parts of Nagano many houses have a {水抜き栓|みずぬきせん}, a valve to empty the pipes before a very cold night. If a pipe freezes anyway, wrap it in a towel and pour lukewarm water: boiling water can crack it."
+ },
+ "challenge": {
+  "type": "order",
+  "prompt": "{健太|けんた}: 「あけおめ！{初詣|はつもうで}もう{行った|いった}？」 Tell him that unfortunately, because of the pipe, it's in the afternoon.",
+  "pieces": [
+   "{残念|ざんねん}ながら、",
+   "{水道管|すいどうかん}のせいで",
+   "{午後|ごご}に",
+   "なった。"
+  ],
+  "model_answer": "{残念|ざんねん|unfortunate, a pity|4}ながら、{水道管|すいどうかん|water pipe|2}のせいで{午後|ごご}になった。",
+  "explanation": "{残念|ざんねん}ながら opens the sentence like 'unfortunately'. 〜のせいで blames the cause: 'because of the pipe'. Plain なった keeps it casual for {健太|けんた}.",
+  "hint": "{残念|ざんねん}ながら first, then the cause with のせいで"
+ },
+ "vocab": [
+  {
+   "jp": "{最悪|さいあく}",
+   "reading": "さいあく",
+   "en": "the worst",
+   "level": "N3",
+   "src": "d1",
+   "surface": "最悪",
+   "note": "{最|さい} most + {悪|あく} bad. Opposite of {最高|さいこう}."
+  },
+  {
+   "jp": "{水道管|すいどうかん}",
+   "reading": "すいどうかん",
+   "en": "water pipe",
+   "level": "N2",
+   "src": "d1",
+   "surface": "水道管",
+   "note": "{水道|すいどう} water supply + {管|かん} pipe."
+  },
+  {
+   "jp": "{蛇口|じゃぐち}",
+   "reading": "じゃぐち",
+   "en": "tap, faucet",
+   "level": "N3",
+   "src": "d4",
+   "surface": "蛇口",
+   "note": "Literally 'snake mouth'. {蛇口|じゃぐち}をひねる = turn on the tap."
+  },
+  {
+   "jp": "{巻|ま}く",
+   "reading": "まく",
+   "en": "to wrap; to wind",
+   "level": "N3",
+   "src": "d4",
+   "surface": "巻いて",
+   "note": "マフラーを{巻|ま}く = wear a scarf. {巻|ま}き{寿司|ずし} = rolled sushi."
+  },
+  {
+   "jp": "{熱湯|ねっとう}",
+   "reading": "ねっとう",
+   "en": "boiling water",
+   "level": "N3",
+   "src": "d5",
+   "surface": "熱湯",
+   "note": "{熱|ねつ} hot + {湯|ゆ} hot water. Lukewarm is ぬるま{湯|ゆ}."
+  },
+  {
+   "jp": "{割|わ}れる",
+   "reading": "われる",
+   "en": "to crack, break",
+   "level": "N3",
+   "src": "d5",
+   "surface": "割れる",
+   "note": "Glass, plates, pipes. Transitive: {割|わ}る = break something."
+  },
+  {
+   "jp": "{成功|せいこう}",
+   "reading": "せいこう",
+   "en": "success",
+   "level": "N3",
+   "src": "d6",
+   "surface": "成功",
+   "note": "{成功|せいこう}する = succeed. Opposite: {失敗|しっぱい}."
+  },
+  {
+   "jp": "{描|か}く",
+   "reading": "かく",
+   "en": "to draw, paint",
+   "level": "N3",
+   "src": "d7",
+   "surface": "描いた",
+   "note": "Same sound as {書|か}く (write); {描|か}く is for pictures."
+  },
+  {
+   "jp": "{残念|ざんねん}",
+   "reading": "ざんねん",
+   "en": "unfortunate, a pity",
+   "level": "N4",
+   "src": "d8",
+   "surface": "残念",
+   "note": "{残念|ざんねん}ながら = unfortunately. {残念|ざんねん}だね = what a shame."
+  },
+  {
+   "jp": "{居心地|いごこち}",
+   "reading": "いごこち",
+   "en": "comfort (of a place)",
+   "level": "N3",
+   "src": "p3",
+   "surface": "居心地",
+   "note": "{居|い}る being somewhere + {心地|ここち} feeling. {居心地|いごこち}がいい = cosy."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "巻",
+   "track": "lesson",
+   "on": "カン",
+   "kun": "ま(く)・まき",
+   "meaning": "roll, wind; volume",
+   "parts": "Top: two hands bundling something together; bottom: 己, a curled-up shape → hands rolling something into a coil: to roll, to wind.",
+   "lookalike": "Not 券 (ticket): 券 has 刀 knife at the bottom; 巻 has 己.",
+   "words": [
+    {
+     "jp": "{巻|ま}く",
+     "reading": "まく",
+     "en": "to wrap, wind"
+    },
+    {
+     "jp": "{巻|ま}き{寿司|ずし}",
+     "reading": "まきずし",
+     "en": "rolled sushi"
+    },
+    {
+     "jp": "{第1巻|だいいっかん}",
+     "reading": "だいいっかん",
+     "en": "volume 1"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "ticket",
+     "to fold",
+     "to bend"
+    ],
+    "readings": [
+     "かく",
+     "まける",
+     "かんく"
+    ]
+   }
+  },
+  {
+   "kanji": "成",
+   "track": "n3",
+   "on": "セイ・ジョウ",
+   "kun": "な(る)・な(す)",
+   "meaning": "become, accomplish",
+   "parts": "戈 a halberd with a nail-like stroke hammered inside → finishing a weapon by beating it into shape: to complete, to become.",
+   "lookalike": "Not 城 (castle): 城 adds 土 earth on the left.",
+   "words": [
+    {
+     "jp": "{成功|せいこう}",
+     "reading": "せいこう",
+     "en": "success"
+    },
+    {
+     "jp": "{成人|せいじん}の{日|ひ}",
+     "reading": "せいじんのひ",
+     "en": "Coming-of-Age Day"
+    },
+    {
+     "jp": "{完成|かんせい}",
+     "reading": "かんせい",
+     "en": "completion"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "castle",
+     "weapon",
+     "to fail"
+    ],
+    "readings": [
+     "せいく",
+     "じょうこう",
+     "なりこう"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "New Year greetings",
+   "title_jp": "{新年|しんねん}の{挨拶|あいさつ}",
+   "intro": "From LINE slang to a formal card.",
+   "items": [
+    {
+     "jp": "あけおめ！ことよろ！",
+     "en": "Happy New Year! (slang)",
+     "note": "Friends only, mostly on LINE."
+    },
+    {
+     "jp": "{明けまして|あけまして}おめでとうございます。",
+     "en": "Happy New Year.",
+     "note": "Say it the first time you meet someone in January."
+    },
+    {
+     "jp": "{本年|ほんねん}もよろしくお{願い|ねがい}いたします。",
+     "en": "I look forward to this year with you.",
+     "note": "Polite follow-up, cards and work."
+    },
+    {
+     "jp": "{謹賀新年|きんがしんねん|Happy New Year (formal, written)|2}",
+     "en": "Happy New Year (written)",
+     "note": "Only printed, never spoken."
+    }
+   ]
+  },
+  {
+   "title": "Winter house trouble",
+   "title_jp": "{冬|ふゆ}の{家|いえ}のトラブル",
+   "intro": "Words you'll need in a Nagano winter.",
+   "items": [
+    {
+     "jp": "{凍結|とうけつ|freezing over|2}",
+     "en": "freezing (pipes, roads)"
+    },
+    {
+     "jp": "{水抜き|みずぬき|draining the pipes|2}",
+     "en": "draining the pipes"
+    },
+    {
+     "jp": "{結露|けつろ|condensation|2}",
+     "en": "condensation on windows"
+    },
+    {
+     "jp": "{雪下ろし|ゆきおろし|clearing snow off a roof|2}",
+     "en": "clearing snow off the roof"
+    }
+   ]
+  }
+ ]
+}

@@ -1164,6 +1164,20 @@
      "where": "{田中|たなか}さんの{隣|となり}"
     }
    }
+  },
+  {
+   "date": "2027-01-01",
+   "cast": [
+    "yuki",
+    "tanaka"
+   ],
+   "summary": "Friday 1 Jan 2027, New Year's Day: the 田中 kitchen water pipe froze overnight. While 田中さん, bad back and all, tries to go and look, 由紀 (at her parents') finds the fix online: a towel and lukewarm water, never boiling water. It works, and 由紀's 年賀状 arrives with a sheep that looks like a dog. 初詣 moves to the afternoon.",
+   "new_facts": [
+    "The 田中 kitchen water pipe froze on the morning of 1 Jan 2027; アルちゃん thawed it with a towel and lukewarm water.",
+    "由紀 sent アルちゃん a 年賀状 at the 田中 house with a sheep (2027 is the year of the sheep) that looks like a dog.",
+    "Because of the pipe, the 田中 household's 初詣 at 鷹ノ原神社 was on the afternoon of 1 Jan.",
+    "At 鷹ノ原神社, お守り are given out to the right of the main hall (本殿)."
+   ]
   }
  ],
  "others": [

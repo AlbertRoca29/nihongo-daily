@@ -414,5 +414,12 @@
   "category": "history-samurai",
   "function": "narrating",
   "format": "text"
+ },
+ {
+  "id": "2027-01-01",
+  "topic": "Frozen pipes on New Year's morning",
+  "category": "home-admin",
+  "function": "feelings",
+  "format": "line"
  }
 ]
