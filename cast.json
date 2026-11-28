@@ -154,7 +154,7 @@
     "Hana-obāchan"
    ],
    "color": "#8e4b6e",
-   "status": "{野沢菜|のざわな}、よう{漬かった|つかった}よ",
+   "status": "{細く|ほそく}{長く|ながく}、よいお{年|とし}を",
    "where": "{田中|たなか}さんの{隣|となり}",
    "status_base": "{膝|ひざ}に{湿布|しっぷ}、{貼っとる|はっとる}よ",
    "where_base": "{田中|たなか}さんの{隣|となり}"
@@ -1142,6 +1142,28 @@
     "アルちゃん plans 初詣 at 鷹ノ原神社 on New Year's Day and to buy an お守り there.",
     "颯太 wants to join the soba-making with ハナおばあちゃん on 31 Dec."
    ]
+  },
+  {
+   "date": "2026-12-31",
+   "cast": [
+    "hana",
+    "sota",
+    "ren"
+   ],
+   "summary": "Thursday 31 Dec, New Year's Eve: ハナおばあちゃん teaches アルちゃん and 颯太 to make soba at the 田中 house, and アルちゃん reads her column in the newsletter's New Year issue: after the Tenmei famine, buckwheat saved the village, and 黒鉄隼人 shared soba with the children on New Year's Eve, telling them to live 'thin and long'. In the evening レン leaves a voice message from his parents' home, where he's watching 紅白 with 葵.",
+   "new_facts": [
+    "ハナおばあちゃん writes a column, 「ハナさんのむかし話」, in 町報たかのはら; its New Year issue told the legend of 隼人 and 年越しそば.",
+    "In the legend, after the Tenmei famine buckwheat from the cold mountain fields saved 鷹ノ原, and on New Year's Eve 隼人 made soba in his hut on the pass and gave it to the village children: 「細く長く生きるのじゃ」. That is said to be why the town eats soba on 大晦日.",
+    "ハナおばあちゃん's soba is 十割 (100% buckwheat).",
+    "On 31 Dec 2026 アルちゃん and 颯太 made 年越しそば with ハナおばあちゃん.",
+    "レン spent New Year's Eve at his parents' home (実家) in Nagano, watching 紅白 with 葵; he left アルちゃん a voice message."
+   ],
+   "status_upd": {
+    "hana": {
+     "status": "{細く|ほそく}{長く|ながく}、よいお{年|とし}を",
+     "where": "{田中|たなか}さんの{隣|となり}"
+    }
+   }
   }
  ],
  "others": [

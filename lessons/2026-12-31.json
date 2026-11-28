@@ -1,0 +1,170 @@
+{
+ "topic": "ハナおばあちゃん's legend of New Year's Eve soba",
+ "category": "history-samurai",
+ "function": "narrating",
+ "format": "text",
+ "cast": ["hana", "hayato"],
+ "reader": "hana",
+ "title_jp": "{隼人|はやと}さまと{年越し|としこし}そば",
+ "context": "Thursday 31 December, New Year's Eve: while ハナおばあちゃん teaches アルちゃん and {颯太|そうた} to make soba, アルちゃん reads her column in the New Year issue of the town newsletter: the legend of how {黒鉄隼人|くろがねはやと} started {鷹ノ原|たかのはら}'s New Year's Eve soba.",
+ "scene": "New Year's Eve. While the soba dough rests, you read ハナおばあちゃん's column in the town newsletter: why {鷹ノ原|たかのはら} eats soba tonight.",
+ "text_title": "{町報|ちょうほう|town newsletter|2}たかのはら{新年号|しんねんごう|New Year issue|2}：ハナさんのむかし{話|ばなし}",
+ "keep": ["p0"],
+ "phrases": [
+  {"jp": "{天気予報|てんきよほう}によると、{今夜|こんや}は{雪|ゆき}が{降る|ふる}そうです。", "en": "According to the forecast, it's going to snow tonight.", "register": "polite", "note": "〜によると + 〜そうです: the classic pair for passing on what you heard."},
+  {"jp": "{昔|むかし}はお{米|こめ}がほとんど{取れなかった|とれなかった|to be harvested|3}そうだよ。", "en": "Apparently they could hardly grow any rice in the old days.", "register": "casual"},
+  {"jp": "そばは{細く|ほそく|thin|4}{長く|ながく}、{長生き|ながいき}できるようにって{意味|いみ}なんだって。", "en": "Apparently soba means 'thin and long': so you'll live a long life.", "register": "casual", "note": "〜んだって = casual 'I heard'. Very common in speech."},
+  {"jp": "よいお{年|とし}を！", "en": "Have a good New Year!", "register": "neutral", "note": "Only before New Year. From 1 January it's あけましておめでとう."},
+  {"jp": "{除夜の鐘|じょやのかね|New Year's Eve temple bells|3}、{聞き|きき}に{行こう|いこう}か。", "en": "Shall we go and hear the New Year's Eve bells?", "register": "casual"}
+ ],
+ "dialogue_setting": "The 田中 kitchen, the afternoon of 31 December. Flour everywhere, and the town newsletter open on the table.",
+ "dialogue": [
+  {"who": "hana", "speaker": "Title", "jp": "{黒鉄隼人|くろがねはやと}と{年越し|としこし|seeing the old year out|3}そば", "en": "{黒鉄隼人|くろがねはやと} and the New Year's Eve soba"},
+  {"who": "hana", "speaker": "Story 1", "jp": "{天明|てんめい}の{飢饉|ききん|famine|2}のあと、{鷹ノ原|たかのはら}の{村|むら}は{貧しく|まずしく|poor|3}、お{米|こめ}がほとんど{取れなかった|とれなかった|to be harvested|3}そうだ。", "en": "After the Tenmei famine, {鷹ノ原|たかのはら} village was poor, and they say it could hardly grow any rice."},
+  {"who": "hana", "speaker": "Story 2", "jp": "でも{寒い|さむい}{山|やま}の{畑|はたけ|field|3}でも{育つ|そだつ}そばが、{人々|ひとびと}の{命|いのち|life|3}を{救った|すくった|to save, rescue|3}という。", "en": "But buckwheat, which grows even in cold mountain fields, is said to have saved people's lives."},
+  {"who": "hana", "speaker": "Story 3", "jp": "{大晦日|おおみそか|New Year's Eve|3}の{夜|よる}、{隼人|はやと}さまは{峠|とうげ|mountain pass|2}の{小屋|こや|hut, cabin|3}でそばを{打ち|うち|to make (noodles) by hand|3}、{村|むら}の{子|こ}どもたちに{配った|くばった}そうだ。", "en": "On New Year's Eve, they say, {隼人|はやと}さま made soba in his hut on the pass and shared it with the village children."},
+  {"who": "hana", "speaker": "隼人", "jp": "「{細く|ほそく|thin|4}{長く|ながく}{生きる|いきる|to live|4}のじゃ。{来年|らいねん}も{皆|みな}で{食べよう|たべよう}ぞ」", "en": "'Live thin and long. Next year too, we shall all eat together!'", "register": "archaic", "note": "Drama samurai speech. Modern: {細|ほそ}く{長|なが}く{生|い}きるんだ。{来年|らいねん}もみんなで{食|た}べよう."},
+  {"who": "hana", "speaker": "Story 4", "jp": "それから{村|むら}では、{大晦日|おおみそか}にそばを{食べる|たべる}ようになったそうだ。{本当|ほんとう}かどうかは、{知らん|しらん}けどね。", "en": "From then on, they say, the village began eating soba on New Year's Eve. Whether it's true, I couldn't tell you.", "register": "dialect", "note": "{知|し}らん = {知|し}らない (casual, older speech)."},
+  {"who": "hana", "speaker": "Sign-off", "jp": "{皆|みな}さんも{細く|ほそく}{長く|ながく}、よいお{年|とし}を。（{山本|やまもと}ハナ）", "en": "Everyone, live thin and long, and have a good New Year. ({山本|やまもと} ハナ)"}
+ ],
+ "listening": {
+  "type": "voicemail",
+  "intro": "That evening, a voice message from レン.",
+  "who": "ren",
+  "lines": [
+   {"who": "ren", "jp": "レンです。{今|いま}、{実家|じっか}で{葵|あおい}と{紅白|こうはく|NHK's New Year's Eve song show|3}{見てる|みてる}よ。", "en": "It's レン. I'm at my parents' place watching Kōhaku with {葵|あおい}."},
+   {"who": "ren", "jp": "3{日|か}、{楽しみ|たのしみ}にしてるね。よいお{年|とし}を。", "en": "Looking forward to the 3rd. Have a good New Year."}
+  ],
+  "question": "レンは{今|いま}、どこにいますか。",
+  "options": ["じっか", "えいがかん", "ながのえき", "とがくし"],
+  "explain": "{実家|じっか}で = at his parents' home, watching {紅白|こうはく} with his sister."
+ },
+ "grammar": {
+  "id": "n4-sou-hear",
+  "pattern": "〜そうだ (伝聞)",
+  "level": "N4",
+  "meaning": "I heard that, they say",
+  "form": "verb: plain form + そうだ ({取|と}れなかったそうだ, {配|くば}ったそうだ, {降|ふ}るそうだ) · い-adj: + そうだ ({寒|さむ}いそうだ) · な-adj / noun: + だそうだ ({有名|ゆうめい}だそうだ, {雪|ゆき}だそうだ)",
+  "explanation": "Passes on something you heard or read: 'apparently, they say'. Often with 〜によると for the source. Don't mix it up with stem + そう ('looks like'): {降|ふ}りそう = looks like snow, {降|ふ}るそうだ = I hear it'll snow. It never goes past: not そうだった.",
+  "src": ["d1", "d3", "d5", "p0"],
+  "mark": ["取れなかったそうだ", "配ったそうだ", "なったそうだ", "降るそうです", "看護師だそうです"],
+  "examples": [
+   {"jp": "{健太|けんた}の{彼女|かのじょ}は、{看護師|かんごし}だそうです。", "en": "Apparently {健太|けんた}'s girlfriend is a nurse."},
+   {"jp": "{隼人|はやと}は、{和歌|わか|classical poem|2}が{下手|へた}だったそうだ。", "en": "They say {隼人|はやと} was bad at poetry."}
+  ],
+  "quiz": {
+   "question": "ニュースによると、{明日|あした}は{大雪|おおゆき}＿＿。",
+   "en": "According to the news, there'll be heavy snow tomorrow.",
+   "options": ["だそうだ", "そうだ", "のそうだ", "らしいだ"],
+   "explain": "A noun needs だ before hearsay そうだ: {大雪|おおゆき}だそうだ."
+  },
+  "quiz_more": [
+   {
+    "question": "{天気予報|てんきよほう}で{聞いた|きいた}。{午後|ごご}から{雪|ゆき}が＿＿。",
+    "en": "I heard it on the forecast: it'll snow from the afternoon.",
+    "options": ["降るそうだ", "降りそうだ", "降ったそうだった", "降るのそうだ"],
+    "explain": "You heard it, so plain form + そうだ. {降|ふ}りそう is what you guess from the sky."
+   },
+   {
+    "question": "{隼人|はやと}は、そばが{大好き|だいすき}＿＿。",
+    "en": "They say {隼人|はやと} loved soba.",
+    "options": ["だったそうだ", "そうだった", "なそうだ", "だったそうだった"],
+    "explain": "Put the past in front: {大好|だいす}きだった + そうだ. そうだ itself stays present."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "十割",
+  "reading": "じゅうわり",
+  "romaji": "jūwari",
+  "meaning": "100% (buckwheat soba)",
+  "where": "Written on ハナおばあちゃん's bag of buckwheat flour: 「十割そば用」.",
+  "breakdown": "{十割|じゅうわり}: 十 ten + 割 one tenth → 'ten tenths', all of it: soba with no wheat flour.",
+  "related": "{二八|にはち}そば = 80% buckwheat, 20% wheat; {割引|わりびき} = discount."
+ },
+ "tip": {
+  "mark": "鐘",
+  "title": "The last night of the year",
+  "body": "Eat {年越し|としこし}そば before midnight: leaving some for next year is thought unlucky. Temples ring the {除夜の鐘|じょやのかね} 108 times, once for each worldly desire, while many families watch NHK's {紅白歌合戦|こうはくうたがっせん}. Say よいお{年|とし}を until the 31st, then あけましておめでとう."
+ },
+ "challenge": {
+  "type": "pick",
+  "prompt": "{由紀|ゆき}, at her parents' house, on LINE: 「{年越し|としこし}そばって、なんで{食べる|たべる}か{知ってる|しってる}？」 Pass on what you read: apparently it's so you live a long life.",
+  "options": [
+   {"jp": "{細|ほそ}く{長|なが}く{生|い}きられるように、{食|た}べるそうだよ。", "ok": true, "why": "Plain form {食|た}べる + そうだ passes on what you read; casual よ for a friend."},
+   {"jp": "{細|ほそ}く{長|なが}く{生|い}きられるように、{食|た}べそうだよ。", "ok": false, "why": "Stem + そう means 'looks like it'll eat', not 'I heard'."},
+   {"jp": "{細|ほそ}く{長|なが}く{生|い}きられるように、{食|た}べるそうだったよ。", "ok": false, "why": "Hearsay そうだ has no past form."},
+   {"jp": "{細|ほそ}く{長|なが}く{生|い}きられるように、{食|た}べるそうでございます。", "ok": false, "why": "Hotel-level keigo: very odd with a friend on LINE."}
+  ],
+  "hint": "You read it: plain form + そうだ",
+  "model_answer": "{細く|ほそく|thin|4}{長く|ながく}{生きられる|いきられる|to be able to live|4}ように、{食べる|たべる}そうだよ。",
+  "explanation": "〜ように = 'so that': so you can live thin and long. {食|た}べるそうだ is hearsay: you're passing on what ハナおばあちゃん wrote, not your own idea. Plain だよ keeps it casual for {由紀|ゆき}."
+ },
+ "vocab": [
+  {"jp": "{貧|まず}しい", "reading": "まずしい", "en": "poor", "level": "N3", "src": "d1", "surface": "貧しく", "note": "Written, a bit serious. In speech: お{金|かね}がない."},
+  {"jp": "{取|と}れる", "reading": "とれる", "en": "to be harvested; to come off", "level": "N3", "src": "d1", "surface": "取れなかった", "note": "お{米|こめ}が{取|と}れる = rice can be grown. Also ボタンが{取|と}れた = a button came off."},
+  {"jp": "{命|いのち}", "reading": "いのち", "en": "life", "level": "N3", "src": "d2", "surface": "命", "note": "Life itself. {命|いのち}の{恩人|おんじん} = someone who saved your life."},
+  {"jp": "{救|すく}う", "reading": "すくう", "en": "to save, rescue", "level": "N3", "src": "d2", "surface": "救った", "note": "Big rescues and lives. Everyday 'help' is {助|たす}ける."},
+  {"jp": "{大晦日|おおみそか}", "reading": "おおみそか", "en": "New Year's Eve", "level": "N3", "src": "d3", "surface": "大晦日", "note": "Every 31 December. みそか = last day of a month."},
+  {"jp": "{小屋|こや}", "reading": "こや", "en": "hut, cabin", "level": "N3", "src": "d3", "surface": "小屋", "note": "{山小屋|やまごや} = mountain hut for hikers."},
+  {"jp": "{打|う}つ", "reading": "うつ", "en": "to make (noodles) by hand; to hit", "level": "N4", "src": "d3", "surface": "打ち", "note": "そばを{打|う}つ, うどんを{打|う}つ. Also: {打|う}つ = type, hit."},
+  {"jp": "{細|ほそ}い", "reading": "ほそい", "en": "thin, slender", "level": "N4", "src": "d4", "surface": "細く", "note": "Opposite: {太|ふと}い. {細|ほそ}く{長|なが}く = modestly but for a long time."},
+  {"jp": "{生|い}きる", "reading": "いきる", "en": "to live, be alive", "level": "N4", "src": "d4", "surface": "生きる", "note": "Being alive. Living somewhere is {住|す}む."}
+ ],
+ "kanji_study": [
+  {
+   "kanji": "救",
+   "track": "lesson",
+   "on": "キュウ",
+   "kun": "すく(う)",
+   "meaning": "save, rescue",
+   "parts": "求 to seek, ask for + 攵 act, strike → taking action for someone who is asking for help: rescue.",
+   "lookalike": "Not 球 (ball): 球 has 王 jewel on the left; 救 has 攵 on the right.",
+   "words": [
+    {"jp": "{救|すく}う", "reading": "すくう", "en": "to save"},
+    {"jp": "{救急車|きゅうきゅうしゃ}", "reading": "きゅうきゅうしゃ", "en": "ambulance"},
+    {"jp": "{救助|きゅうじょ}", "reading": "きゅうじょ", "en": "rescue"}
+   ],
+   "decoys": {"meanings": ["to ask for", "ball", "to hit"], "readings": ["すくる", "きゅうう", "たすう"]}
+  },
+  {
+   "kanji": "務",
+   "track": "n3",
+   "on": "ム",
+   "kun": "つと(める)",
+   "meaning": "duty, task, serve",
+   "parts": "矛 a halberd + 攵 strike, act + 力 strength → putting all your strength into the task you're given: duty.",
+   "lookalike": "Not 努 (effort): 努 has 奴 on top of 力; 務 has 矛 and 攵.",
+   "words": [
+    {"jp": "{事務所|じむしょ}", "reading": "じむしょ", "en": "office"},
+    {"jp": "{義務|ぎむ}", "reading": "ぎむ", "en": "duty, obligation"},
+    {"jp": "{勤務|きんむ}", "reading": "きんむ", "en": "work, being on duty"}
+   ],
+   "decoys": {"meanings": ["spear", "strength", "to win"], "readings": ["じむじょ", "じぶしょ", "ことむしょ"]}
+  }
+ ],
+ "extras": [
+  {
+   "title": "New Year's Eve words",
+   "title_jp": "{大晦日|おおみそか}",
+   "intro": "Tonight's vocabulary, all over TV and town.",
+   "items": [
+    {"jp": "{年越し|としこし|seeing the old year out|3}そば", "en": "New Year's Eve soba"},
+    {"jp": "{除夜の鐘|じょやのかね|New Year's Eve temple bells|3}", "en": "the 108 bells at midnight"},
+    {"jp": "{紅白歌合戦|こうはくうたがっせん|NHK's Red and White song contest|3}", "en": "NHK's year-end song show"},
+    {"jp": "{カウントダウン||countdown|3}", "en": "countdown"}
+   ]
+  },
+  {
+   "title": "Ways to say 'I heard'",
+   "title_jp": "{聞いた|きいた}{話|はなし}",
+   "intro": "From written to very casual.",
+   "items": [
+    {"jp": "〜そうです。", "en": "I've heard that…", "note": "Neutral and polite."},
+    {"jp": "〜という。", "en": "It is said that…", "note": "Written: stories, articles."},
+    {"jp": "〜んだって。", "en": "Apparently…", "note": "Casual speech."},
+    {"jp": "〜らしいよ。", "en": "Seems like…", "note": "Hearsay plus a bit of guessing."}
+   ]
+  }
+ ]
+}

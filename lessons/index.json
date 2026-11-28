@@ -407,5 +407,12 @@
   "category": "traditions",
   "function": "opinions",
   "format": "dialogue"
+ },
+ {
+  "id": "2026-12-31",
+  "topic": "ハナおばあちゃん's legend of New Year's Eve soba",
+  "category": "history-samurai",
+  "function": "narrating",
+  "format": "text"
  }
 ]
