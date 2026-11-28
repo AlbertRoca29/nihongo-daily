@@ -386,5 +386,12 @@
   "category": "school-youth",
   "function": "requesting",
   "format": "dialogue"
+ },
+ {
+  "id": "2026-12-28",
+  "topic": "Fox tracks in the snowy orchard",
+  "category": "nature-seasons",
+  "function": "describing",
+  "format": "line"
  }
 ]

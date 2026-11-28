@@ -1,0 +1,169 @@
+{
+ "topic": "Fox tracks in the snowy orchard",
+ "category": "nature-seasons",
+ "function": "describing",
+ "format": "line",
+ "cast": ["kenta"],
+ "title_jp": "{雪|ゆき}の{上|うえ}の{足跡|あしあと}",
+ "context": "Monday 28 December, the day offices close for the year: heavy snow fell overnight. {健太|けんた} messages from the guesthouse, and アルちゃん describes the small tracks he's found in the white orchard.",
+ "scene": "Monday morning after a big snowfall. {健太|けんた} messages from the guesthouse while you're out in the orchard, looking at strange little footprints.",
+ "keep": ["p1"],
+ "phrases": [
+  {"jp": "{外|そと}は{一面|いちめん|all over, the whole surface|3}の{銀世界|ぎんせかい|snowy landscape (silver world)|2}だね。", "en": "Outside, everything is white with snow.", "register": "neutral", "note": "{銀世界|ぎんせかい} is a poetic word for a snow-covered view. Weather reports love it."},
+  {"jp": "{家|いえ}を{出た|でた}とたん、{雪|ゆき}が{降り出した|ふりだした|to start falling|3}。", "en": "The moment I left the house, it started to snow.", "register": "neutral"},
+  {"jp": "{昨夜|ゆうべ}は、かなり{積もりました|つもりました|to pile up (snow)|3}ね。", "en": "A lot of snow settled last night, didn't it?", "register": "polite", "note": "A safe small-talk line with neighbours all winter."},
+  {"jp": "{息|いき|breath|3}が{白い|しろい}ね。", "en": "You can see your breath.", "register": "casual", "note": "Literally 'breath is white'."},
+  {"jp": "{雪|ゆき}がサラサラで、{歩きやすい|あるきやすい}です。", "en": "The snow is powdery, so it's easy to walk on.", "register": "polite", "note": "サラサラ = dry and loose. Wet heavy snow is ベチャベチャ."}
+ ],
+ "dialogue_setting": "LINE, Monday morning. You're in the orchard behind the 田中 house, in snow up to your knees.",
+ "dialogue": [
+  {"who": "kenta", "speaker": "健太", "time": "7:42", "jp": "アルちゃん、{起きとる|おきとる|(Kansai) are you up|3}？{外|そと}、めっちゃ{積もっとる|つもっとる|(Kansai) has piled up|3}で！", "en": "アルちゃん, you up? There's loads of snow outside!", "register": "dialect", "note": "Kansai 〜とる = 〜ている. めっちゃ = とても."},
+  {"who": "kenta", "speaker": "健太", "time": "7:43", "jp": "ドア{開けた|あけた}とたん、{雪|ゆき}がドサッと{落ちて|おちて}きてん。{頭|あたま}まで{真っ白|まっしろ|pure white|4}やｗ", "en": "The second I opened the door, a pile of snow fell on me. White right up to my head lol", "register": "dialect", "note": "きてん = きたんだ (Kansai). ドサッ = the thud of a heavy load falling."},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "time": "7:45", "jp": "こっちも{畑|はたけ|field, orchard|3}が{一面|いちめん|all over, the whole surface|3}{真っ白|まっしろ|pure white|4}！{外|そと}に{出た|でた}とたん、{眼鏡|めがね|glasses|4}が{曇った|くもった|to fog up|3}よ", "en": "Here too, the whole orchard is white! The moment I stepped outside, my glasses fogged up.", "register": "casual"},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "time": "7:46", "jp": "あと、{雪|ゆき}の{上|うえ}に{小さい|ちいさい}{足跡|あしあと|footprints|3}が{一列|いちれつ}に{続いてる|つづいてる|to continue, go on|4}🐾", "en": "Also, there's a line of small footprints going across the snow 🐾", "register": "casual"},
+  {"who": "kenta", "speaker": "健太", "time": "7:46", "jp": "どんな{形|かたち}？{猫|ねこ}ちゃうん？", "en": "What shape? Isn't it a cat?", "register": "dialect", "note": "ちゃうん？ = {違|ちが}うの？ (Kansai)."},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "time": "7:48", "jp": "{猫|ねこ}より{細長い|ほそながい|long and thin|3}。{木|き}の{下|した}で、ふさふさの{尻尾|しっぽ|tail|3}が{見えた|みえた}！", "en": "Longer and thinner than a cat's. Under a tree I saw a fluffy tail!", "register": "casual", "note": "ふさふさ = thick and fluffy (tails, hair)."},
+  {"who": "kenta", "speaker": "健太", "time": "7:48", "kind": "voice", "jp": "それキツネやで！{冬|ふゆ}は{山|やま}から{下りて|おりて}くるって、{田中|たなか}さん{言うとった|いうとった|(Kansai) was saying|3}わ", "en": "That's a fox! 田中さん said they come down from the mountains in winter.", "register": "dialect", "note": "{言|い}うとった = {言|い}っていた (Kansai)."},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "time": "7:51", "jp": "{写真|しゃしん}{撮ろう|とろう}としたとたん、{走って|はしって}{行っちゃった|いっちゃった}😭", "en": "The moment I went to take a photo, it ran off 😭", "register": "casual"},
+  {"who": "kenta", "speaker": "健太", "time": "7:52", "sticker": "donmai", "jp": "ドンマイ", "en": "Never mind!"},
+  {"who": "kenta", "speaker": "健太", "time": "7:52", "jp": "{今日|きょう}は{役場|やくば|town hall|2}も{仕事納め|しごとおさめ|last workday of the year|3}やし、{町|まち}も{静か|しずか}やな", "en": "The town hall finishes for the year today too, so the town's nice and quiet.", "register": "dialect", "note": "〜やし = 〜だし (Kansai)."}
+ ],
+ "listening": {
+  "type": "announcement",
+  "intro": "At noon the town loudspeakers crackle across the snowy fields.",
+  "who": "extra",
+  "title": "{町|まち}のお{知らせ|しらせ}",
+  "place": "{鷹ノ原町|たかのはらまち}の{防災無線|ぼうさいむせん|town emergency loudspeakers|2}",
+  "lines": [
+   {"who": "extra", "voice": "f", "jp": "こちらは{鷹ノ原町役場|たかのはらまちやくば}です。{役場|やくば|town hall|2}は{本日|ほんじつ}が{仕事納め|しごとおさめ|last workday of the year|3}です。", "en": "This is {鷹ノ原|たかのはら} Town Hall. Today is the town hall's last working day of the year."},
+   {"who": "extra", "voice": "f", "jp": "{年始|ねんし|start of the year|2}は、1{月|がつ}4{日|か}{月曜日|げつようび}から{開きます|ひらきます}。{雪道|ゆきみち}に{気|き}をつけて、よいお{年|とし}を。", "en": "In the new year it opens from Monday 4 January. Mind the snowy roads, and have a good New Year."}
+  ],
+  "question": "{役場|やくば}は{何日|なんにち}から{開きますか|ひらきますか}。",
+  "options": ["1月4日", "12月29日", "1月1日", "1月3日"],
+  "explain": "1{月|がつ}4{日|か}{月曜日|げつようび}から{開|ひら}きます = it opens from Monday 4 January."
+ },
+ "grammar": {
+  "id": "n3-totan",
+  "pattern": "〜たとたん",
+  "level": "N3",
+  "meaning": "the moment that",
+  "form": "{動詞|どうし}た{形|けい} + とたん(に) ({開|あ}ける → {開|あ}けたとたん, {出|で}る → {出|で}たとたん, {撮|と}ろうとする → {撮|と}ろうとしたとたん)",
+  "explanation": "The moment A happened, B happened, suddenly and often unexpectedly. B is something that happened, not your plan or a request: you can't say {家|いえ}に{着|つ}いたとたん、{寝|ね}よう. 〜てすぐ is the neutral 'right after'.",
+  "src": ["d1", "d2", "d7", "p1"],
+  "mark": ["開けたとたん", "出たとたん", "撮ろうとしたとたん", "立ったとたん", "座ったとたん"],
+  "examples": [
+   {"jp": "{立った|たった}とたん、{足|あし}が{滑った|すべった}。", "en": "The moment I stood up, my foot slipped."},
+   {"jp": "{電車|でんしゃ}で{座った|すわった}とたん、{寝ちゃった|ねちゃった}。", "en": "I fell asleep the second I sat down on the train."}
+  ],
+  "quiz": {
+   "question": "ドアを＿＿とたん、{猫|ねこ}が{入って|はいって}きた。",
+   "en": "The moment I opened the door, the cat came in.",
+   "options": ["開けた", "開ける", "開けて", "開けない"],
+   "explain": "とたん always follows the た-form: {開|あ}けたとたん."
+  },
+  "quiz_more": [
+   {
+    "question": "{外|そと}に＿＿、{眼鏡|めがね}が{曇った|くもった}。",
+    "en": "The moment I went out, my glasses fogged up.",
+    "options": ["出たとたん", "出るとたん", "出てとたん", "出るたびに"],
+    "explain": "た-form + とたん for 'the moment'. たびに means 'every time'."
+   },
+   {
+    "question": "{家|いえ}に{着いた|ついた}とたん、＿＿。",
+    "en": "The moment I got home, ＿＿.",
+    "options": ["雨が降り出した", "シャワーを浴びよう", "ご飯を食べるつもりだ", "電話してください"],
+    "explain": "After とたん comes something that suddenly happened, not a plan or a request."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "凍結注意",
+  "reading": "とうけつちゅうい",
+  "romaji": "tōketsu chūi",
+  "meaning": "caution: icy road",
+  "where": "A yellow road sign on the farm road outside the 田中 house.",
+  "breakdown": "{凍結|とうけつ}: 凍 freeze + 結 tie, set hard → 'frozen over'; {注意|ちゅうい}: 注 pour + 意 mind → 'pay attention'.",
+  "related": "{凍|こお}る = to freeze; {路面凍結|ろめんとうけつ} = icy road surface."
+ },
+ "tip": {
+  "mark": "納",
+  "title": "{仕事納め|しごとおさめ}",
+  "body": "Government offices close from 29 December to 3 January, so 28 December is their {仕事納め|しごとおさめ}, and many companies stop around the same day. Shops, onsen and guesthouses keep going: New Year is their busy season."
+ },
+ "challenge": {
+  "type": "order",
+  "prompt": "{健太|けんた}: 「キツネの{写真|しゃしん}、{撮れた|とれた}？」 Tell him it ran away the moment you tried to take one.",
+  "pieces": ["{写真|しゃしん}を", "{撮|と}ろうとした", "とたん、", "{逃|に}げちゃった。"],
+  "model_answer": "{写真|しゃしん}を{撮ろう|とろう}としたとたん、{逃げちゃった|にげちゃった|to run away|4}。",
+  "explanation": "{撮|と}ろうとする = try to take (a photo); its た-form + とたん marks the exact moment. {逃|に}げちゃった (= {逃|に}げてしまった) adds 'and, sadly, it got away'. Casual, right for {健太|けんた}.",
+  "hint": "volitional + とした + とたん"
+ },
+ "vocab": [
+  {"jp": "{真|ま}っ{白|しろ}", "reading": "まっしろ", "en": "pure white", "level": "N3", "src": "d2", "surface": "真っ白", "note": "{真|ま}っ adds 'completely': {真|ま}っ{暗|くら}, {真|ま}っ{赤|か}."},
+  {"jp": "{一面|いちめん}", "reading": "いちめん", "en": "all over, the whole surface", "level": "N3", "src": "d2", "surface": "一面", "note": "{一面|いちめん}の{雪|ゆき} = snow as far as you can see."},
+  {"jp": "{眼鏡|めがね}", "reading": "めがね", "en": "glasses", "level": "N4", "src": "d2", "surface": "眼鏡", "note": "Often written メガネ."},
+  {"jp": "{曇|くも}る", "reading": "くもる", "en": "to fog up; to get cloudy", "level": "N3", "src": "d2", "surface": "曇った", "note": "{眼鏡|めがね}が{曇|くも}る, {空|そら}が{曇|くも}る. {曇|くも}り = cloudy weather."},
+  {"jp": "{足跡|あしあと}", "reading": "あしあと", "en": "footprints, tracks", "level": "N3", "src": "d3", "surface": "足跡", "note": "{足|あし} foot + {跡|あと} trace."},
+  {"jp": "{続|つづ}く", "reading": "つづく", "en": "to continue, go on", "level": "N4", "src": "d3", "surface": "続いてる", "note": "Intransitive: the thing goes on by itself. {続|つづ}ける = to keep doing."},
+  {"jp": "{細長|ほそなが}い", "reading": "ほそながい", "en": "long and thin", "level": "N3", "src": "d5", "surface": "細長い", "note": "{細|ほそ}い thin + {長|なが}い long."},
+  {"jp": "{尻尾|しっぽ}", "reading": "しっぽ", "en": "tail", "level": "N3", "src": "d5", "surface": "尻尾", "note": "Usually written in kana: しっぽ."},
+  {"jp": "{役場|やくば}", "reading": "やくば", "en": "town hall, town office", "level": "N2", "src": "d9", "surface": "役場", "note": "Towns and villages have a {役場|やくば}; cities have a {市役所|しやくしょ}."},
+  {"jp": "{仕事納|しごとおさ}め", "reading": "しごとおさめ", "en": "last workday of the year", "level": "N3", "src": "d9", "surface": "仕事納め", "note": "Pair: {仕事始|しごとはじ}め = first workday of the new year."}
+ ],
+ "kanji_study": [
+  {
+   "kanji": "面",
+   "track": "lesson",
+   "on": "メン",
+   "kun": "おも・おもて・つら",
+   "meaning": "face; surface; side",
+   "parts": "A picture of a face: an outer outline with 目 an eye in the middle → face, and then any surface.",
+   "lookalike": "Not 画 (picture): 画 is open at the top with 田 inside.",
+   "words": [
+    {"jp": "{一面|いちめん}", "reading": "いちめん", "en": "the whole surface"},
+    {"jp": "{面白|おもしろ}い", "reading": "おもしろい", "en": "interesting, funny"},
+    {"jp": "{面接|めんせつ}", "reading": "めんせつ", "en": "interview"}
+   ],
+   "decoys": {"meanings": ["eye", "head", "picture"], "readings": ["いちめ", "ひとめん", "いっめん"]}
+  },
+  {
+   "kanji": "要",
+   "track": "n3",
+   "on": "ヨウ",
+   "kun": "い(る)・かなめ",
+   "meaning": "need; essential, main point",
+   "parts": "覀 a cover + 女 woman → originally a woman's waist, the pivot that holds the body together: essential, need.",
+   "lookalike": "Not 栗 (chestnut): 栗 has 木 tree under 覀, 要 has 女.",
+   "words": [
+    {"jp": "{必要|ひつよう}", "reading": "ひつよう", "en": "necessary"},
+    {"jp": "{重要|じゅうよう}", "reading": "じゅうよう", "en": "important"},
+    {"jp": "{要|い}る", "reading": "いる", "en": "to need"}
+   ],
+   "decoys": {"meanings": ["west", "woman", "to want"], "readings": ["ひっよう", "ひつよ", "ひよう"]}
+  }
+ ],
+ "extras": [
+  {
+   "title": "Kinds of snow",
+   "title_jp": "{雪|ゆき}のことば",
+   "intro": "Japanese has a word for every kind.",
+   "items": [
+    {"jp": "{粉雪|こなゆき|powder snow|3}", "en": "powder snow", "note": "Fine and dry, the skiers' favourite."},
+    {"jp": "ぼたん{雪|ゆき|large wet flakes|2}", "en": "big wet flakes", "note": "Named after peony petals."},
+    {"jp": "{吹雪|ふぶき|snowstorm|3}", "en": "snowstorm, blizzard"},
+    {"jp": "つらら", "en": "icicle"}
+   ]
+  },
+  {
+   "title": "{健太|けんた}'s Kansai-ben today",
+   "title_jp": "{関西弁|かんさいべん}",
+   "intro": "What he wrote, in standard Japanese.",
+   "items": [
+    {"jp": "{起きとる|おきとる}？ → {起きてる|おきてる}？", "en": "Are you up?"},
+    {"jp": "{落ちて|おちて}きてん → {落ちて|おちて}きたんだ", "en": "It fell on me."},
+    {"jp": "ちゃうん？ → {違う|ちがう}の？", "en": "Isn't it…?"},
+    {"jp": "{静か|しずか}やな → {静か|しずか}だね", "en": "It's quiet, isn't it."}
+   ]
+  }
+ ]
+}

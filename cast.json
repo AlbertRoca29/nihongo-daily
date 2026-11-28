@@ -99,7 +99,7 @@
     "Kenta"
    ],
    "color": "#f39800",
-   "status": "アルちゃん、{10回|じゅっかい}{転んだ|ころんだ}ｗ🏂",
+   "status": "ドア{開けた|あけた}とたん、{雪|ゆき}ドサーッｗ☃",
    "where": "ゲストハウス{風|かぜ}",
    "status_base": "「ごしたい」≠「{何|なに}かしたい」やでｗ",
    "where_base": "ゲストハウス{風|かぜ}"
@@ -1088,6 +1088,25 @@
    "status_upd": {
     "mio": {
      "status": "{留学|りゅうがく}、{決まった|きまった}！カナダ{行って|いって}くる🎺"
+    }
+   }
+  },
+  {
+   "date": "2026-12-28",
+   "cast": [
+    "kenta"
+   ],
+   "summary": "Monday 28 Dec, 仕事納め: after heavy overnight snow, 健太 tells アルちゃん on LINE that snow fell on his head the moment he opened the guesthouse door. In the white orchard アルちゃん finds a line of small footprints and sees a fluffy tail: a fox, but it runs off the moment he tries to photograph it.",
+   "new_facts": [
+    "Foxes (キツネ) come down from the mountains to the 田中 orchard in winter; 田中さん told 健太 so.",
+    "On the morning of 28 Dec 2026 アルちゃん saw a fox in the orchard but couldn't photograph it.",
+    "アルちゃん wears glasses (they fog up in the cold).",
+    "鷹ノ原 town hall (役場) closed for the year on 28 Dec and reopens on Mon 4 Jan 2027; it makes announcements on the 防災無線.",
+    "There is a yellow 凍結注意 sign on the farm road outside the 田中 house."
+   ],
+   "status_upd": {
+    "kenta": {
+     "status": "ドア{開けた|あけた}とたん、{雪|ゆき}ドサーッｗ☃"
     }
    }
   }
