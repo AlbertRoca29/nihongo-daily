@@ -1,0 +1,173 @@
+{
+ "topic": "Mock exam: January",
+ "category": "mock",
+ "function": "planning",
+ "format": "mock",
+ "title_jp": "1{月|がつ}の{模試|もし}",
+ "context": "Saturday 2 January: a quiet, snowy New Year holiday at the {田中|たなか} house, the day before the {戸隠|とがくし} walk with レン. Time for this month's N3-style mock, using only words, kanji and grammar you've already met.",
+ "listening": {
+  "type": "mock",
+  "intro": "Two things you hear this Saturday: a voice message from レン and an announcement at {鷹ノ原駅|たかのはらえき}.",
+  "who": "ren",
+  "lines": [
+   {
+    "who": "ren",
+    "jp": "レンです。{明日|あした}は9{時|じ}に{長野駅|ながのえき}でね。{雪|ゆき}が{積もってる|つもってる}から、{手袋|てぶくろ}{忘れないで|わすれないで}。",
+    "en": "It's レン. Tomorrow, 9 o'clock at {長野駅|ながのえき}. There's lots of snow, so don't forget your gloves."
+   },
+   {
+    "who": "extra",
+    "voice": "f",
+    "jp": "{本日|ほんじつ}、{鷹ノ原駅|たかのはらえき}の{窓口|まどぐち}は、{午後|ごご}5{時|じ}に{閉まります|しまります}。",
+    "en": "Today the ticket window at {鷹ノ原駅|たかのはらえき} closes at 5 p.m."
+   }
+  ]
+ },
+ "mock": {
+  "questions": [
+   {
+    "section": "漢字読み",
+    "prompt": "そばは【細く】て長い。",
+    "options": [
+     "ほそく",
+     "こまかく",
+     "ふとく",
+     "うすく"
+    ],
+    "explain": "{細|ほそ}い = thin. {細|こま}かい (detailed, small) uses the same kanji with another reading."
+   },
+   {
+    "section": "漢字読み",
+    "prompt": "【大晦日】に、家族でそばを食べた。",
+    "options": [
+     "おおみそか",
+     "だいみそか",
+     "おおかいじつ",
+     "おみそか"
+    ],
+    "explain": "{大晦日|おおみそか} = New Year's Eve, 31 December."
+   },
+   {
+    "section": "表記",
+    "prompt": "{蛇口|じゃぐち}にタオルを【まいて】ください。",
+    "options": [
+     "巻いて",
+     "券いて",
+     "巻えて",
+     "舞いて"
+    ],
+    "explain": "{巻|ま}く = to wrap. 券 (ticket) has 刀 at the bottom, not 己."
+   },
+   {
+    "section": "表記",
+    "prompt": "{神社|じんじゃ}でしめかざりを{買って|かって}、{玄関|げんかん}に【かざった】。",
+    "options": [
+     "飾った",
+     "節った",
+     "飼った",
+     "師った"
+    ],
+    "explain": "{飾|かざ}る = to decorate. 飼う (keep a pet) shares the 食 side."
+   },
+   {
+    "section": "文脈規定",
+    "prompt": "{本番|ほんばん}で{吹く|ふく}たびに、{手|て}が（　）。",
+    "options": [
+     "{震|ふる}える",
+     "{曇|くも}る",
+     "{割|わ}れる",
+     "{積|つ}もる"
+    ],
+    "explain": "Nerves on stage make your hands shake: {手|て}が{震|ふる}える."
+   },
+   {
+    "section": "文脈規定",
+    "prompt": "{田中|たなか}さん、{腰|こし}の（　）はどうですか。",
+    "options": [
+     "{具合|ぐあい}",
+     "{担当|たんとう}",
+     "{縁起|えんぎ}",
+     "{伝統|でんとう}"
+    ],
+    "explain": "{具合|ぐあい} = how something (your health, a machine) is doing."
+   },
+   {
+    "section": "言い換え",
+    "prompt": "{残り|のこり}の{掃除|そうじ}は、アルちゃんの{担当|たんとう}だ。",
+    "options": [
+     "{残り|のこり}の{掃除|そうじ}は、アルちゃんがすることになっている",
+     "{残り|のこり}の{掃除|そうじ}は、アルちゃんが{得意|とくい}だ",
+     "{残り|のこり}の{掃除|そうじ}は、アルちゃんが{手伝って|てつだって}もらう",
+     "{残り|のこり}の{掃除|そうじ}は、アルちゃんが{嫌い|きらい}だ"
+    ],
+    "explain": "〜の{担当|たんとう} = it's someone's job, they're in charge of it."
+   },
+   {
+    "section": "文法 ★",
+    "order": {
+     "before": "",
+     "pieces": [
+      "{家|いえ}を",
+      "{出た|でた}",
+      "とたん、",
+      "{雪|ゆき}が"
+     ],
+     "after": "{降り出した|ふりだした}。",
+     "star": 1
+    },
+    "explain": "{家|いえ}を{出|で}た / とたん、 / {雪|ゆき}が{降|ふ}り{出|だ}した: た-form + とたん = the very moment."
+   },
+   {
+    "section": "文法 ★",
+    "order": {
+     "before": "{絵|え}は",
+     "pieces": [
+      "{下手|へた}",
+      "ながら、",
+      "{心|こころ}を",
+      "{込めて|こめて}"
+     ],
+     "after": "{描いた|かいた}。",
+     "star": 1
+    },
+    "explain": "{下手|へた}ながら = although I'm bad at it; then {心|こころ}を{込|こ}めて{描|か}いた."
+   },
+   {
+    "section": "読解",
+    "text": "ゲストハウス{風|かぜ}より：{年末年始|ねんまつねんし}は{大変|たいへん}{混雑|こんざつ}しましたが、ありがとうございました。1{月|がつ}4{日|か}（{月|げつ}）から、お{風呂|ふろ}は{午後|ごご}4{時|じ}から10{時|じ}まで{使えます|つかえます}。",
+    "prompt": "1{月|がつ}4{日|か}から、お{風呂|ふろ}は{何時|なんじ}まで{使えますか|つかえますか}。",
+    "options": [
+     "{午後|ごご}10{時|じ}",
+     "{午後|ごご}4{時|じ}",
+     "{午後|ごご}11{時|じ}",
+     "{午前|ごぜん}10{時|じ}"
+    ],
+    "explain": "{午後|ごご}4{時|じ}から10{時|じ}まで: from 4 until 10 p.m."
+   },
+   {
+    "section": "聴解",
+    "listen": "l0",
+    "prompt": "{明日|あした}、{何時|なんじ}にどこで{会いますか|あいますか}。",
+    "options": [
+     "9{時|じ}に{長野駅|ながのえき}",
+     "9{時|じ}に{戸隠|とがくし}",
+     "10{時|じ}に{長野駅|ながのえき}",
+     "8{時|じ}に{鷹ノ原駅|たかのはらえき}"
+    ],
+    "explain": "9{時|じ}に{長野駅|ながのえき}でね: 9 o'clock at {長野駅|ながのえき}."
+   },
+   {
+    "section": "聴解",
+    "listen": "l1",
+    "prompt": "{窓口|まどぐち}は{何時|なんじ}に{閉まりますか|しまりますか}。",
+    "options": [
+     "{午後|ごご}5{時|じ}",
+     "{午後|ごご}3{時|じ}",
+     "{午前|ごぜん}5{時|じ}",
+     "{午後|ごご}7{時|じ}"
+    ],
+    "explain": "{午後|ごご}5{時|じ}に{閉|し}まります = it closes at 5 p.m."
+   }
+  ]
+ }
+}
