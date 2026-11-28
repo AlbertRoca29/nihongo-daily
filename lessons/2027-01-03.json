@@ -1,0 +1,417 @@
+{
+ "topic": "Snowshoes, soba and 'what if'",
+ "category": "entertainment",
+ "function": "hypotheticals",
+ "format": "dialogue",
+ "cast": [
+  "ren"
+ ],
+ "title_jp": "もしこれが{映画|えいが}だったら",
+ "context": "Sunday 3 January, the snowshoe date at {戸隠|とがくし}: after walking to the snow-covered {鏡池|かがみいけ}, アルちゃん and レン warm up in a soba shop where the TV shows the second day of the {箱根駅伝|はこねえきでん}.",
+ "scene": "After a morning on snowshoes, you and レン thaw out over {戸隠|とがくし} soba. The TV is showing the {箱根駅伝|はこねえきでん}.",
+ "keep": [
+  "p1"
+ ],
+ "phrases": [
+  {
+   "jp": "もし{時間|じかん}を{戻せたら|もどせたら|to turn back, return (something)|3}、あの{日|ひ}に{戻りたい|もどりたい}な。",
+   "en": "If I could turn back time, I'd go back to that day.",
+   "register": "casual"
+  },
+  {
+   "jp": "{子|こ}どもの{頃|ころ}は、よく{雪|ゆき}で{遊んだ|あそんだ}ものだ。",
+   "en": "When I was a kid, I used to play in the snow a lot.",
+   "register": "neutral",
+   "note": "た-form + ものだ: fond memories of a past habit."
+  },
+  {
+   "jp": "{生まれ変わったら|うまれかわったら|to be reborn|3}、{何|なに}になりたい？",
+   "en": "If you were born again, what would you want to be?",
+   "register": "casual"
+  },
+  {
+   "jp": "お{正月|しょうがつ}は、{家族|かぞく}で{過ごす|すごす}ものです。",
+   "en": "New Year is something you spend with your family.",
+   "register": "polite",
+   "note": "Dictionary form + ものだ: 'that's how it's done'."
+  },
+  {
+   "jp": "{雪|ゆき}が{降らなければ|ふらなければ}、{山|やま}が{見えた|みえた}のになあ。",
+   "en": "If it weren't snowing, we'd have seen the mountain.",
+   "register": "casual",
+   "note": "〜のに at the end = a small regret."
+  }
+ ],
+ "dialogue_setting": "A soba shop in {戸隠|とがくし}, Sunday lunchtime. Wet snowshoes by the door, steam from the bowls, the relay race on TV.",
+ "dialogue": [
+  {
+   "who": "ren",
+   "speaker": "レン",
+   "jp": "この{時期|じき}の{鏡池|かがみいけ}、{真っ白|まっしろ}だったね。{夏|なつ}なら{山|やま}が{池|いけ}に{映る|うつる|to be reflected|3}んだよ。",
+   "en": "{鏡池|かがみいけ} was all white at this time of year. In summer the mountain is reflected in the pond.",
+   "register": "casual"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "{映画|えいが}のワンシーンみたいだった。もしこれが{映画|えいが}だったら、{次|つぎ}はどうなる？",
+   "en": "It was like a scene from a film. If this were a film, what would happen next?",
+   "register": "casual"
+  },
+  {
+   "who": "ren",
+   "speaker": "レン",
+   "jp": "{二人|ふたり}で{遭難|そうなん|getting lost in the mountains|2}して…って、{冗談|じょうだん|joke|4}だよ。{温かい|あたたかい|warm (food)|4}そばでハッピーエンドかな。",
+   "en": "We both get lost in the mountains… just kidding. A happy ending with hot soba, I think.",
+   "register": "casual"
+  },
+  {
+   "who": "ren",
+   "speaker": "レン",
+   "jp": "{子|こ}どもの{頃|ころ}は、{正月|しょうがつ}になると{父|ちち}と{駅伝|えきでん|long-distance relay race|3}の{中継|ちゅうけい|live broadcast|3}を{見た|みた}ものだよ。",
+   "en": "When I was a kid, every New Year I used to watch the relay race on TV with my dad.",
+   "register": "casual"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "スペインでは、{大晦日|おおみそか}にテレビの{鐘|かね|bell|3}に{合わせて|あわせて|to keep time with|3}、ぶどうを12{粒|つぶ|grain, (counter for) small round things|3}{食べる|たべる}ものなんだ。",
+   "en": "In Spain, on New Year's Eve you eat twelve grapes in time with the bells on TV.",
+   "register": "casual"
+  },
+  {
+   "who": "ren",
+   "speaker": "レン",
+   "jp": "{面白い|おもしろい}！…ねえ、もし{僕|ぼく}の{友達|ともだち}に{会って|あって}くれたら、{嬉しい|うれしい}な。みんな{会いたがってる|あいたがってる}んだ。",
+   "en": "That's fun! …Hey, if you'd meet my friends, I'd be happy. They all want to meet you.",
+   "register": "casual"
+  }
+ ],
+ "listening": {
+  "type": "dictation",
+  "intro": "Paying at the counter, レン checks the time.",
+  "who": "ren",
+  "lines": [
+   {
+    "who": "ren",
+    "jp": "{帰り|かえり}のバス、2{時|じ}{半|はん}だって。{急ごう|いそごう}。",
+    "en": "The bus back is at half past two. Let's hurry."
+   }
+  ]
+ },
+ "grammar": {
+  "id": "n3-mono-da",
+  "pattern": "〜ものだ",
+  "level": "N3",
+  "meaning": "used to / that's just how it is",
+  "form": "used to: verb た-form + ものだ ({見|み}たものだ, {遊|あそ}んだものだ) · that's how it is: dictionary form + ものだ ({食|た}べるものだ, {過|す}ごすものだ) · casual: もんだ ({行|い}ったもんだ)",
+  "explanation": "With the た-form it looks back fondly at a past habit: 'I used to…'. With the dictionary form it states what's natural or customary: 'that's what you do'. Not for one single event: 'I went yesterday' is just {行|い}った.",
+  "src": [
+   "d3",
+   "d4",
+   "p1",
+   "p3"
+  ],
+  "mark": [
+   "見たものだ",
+   "食べるものなんだ",
+   "遊んだものだ",
+   "過ごすものです",
+   "歩いたものだ",
+   "したくなるものだ"
+  ],
+  "examples": [
+   {
+    "jp": "{昔|むかし}はこの{坂|さか|slope|3}を、{毎日|まいにち}{歩いた|あるいた}ものだ。",
+    "en": "In the old days I used to walk up this slope every day."
+   },
+   {
+    "jp": "{冬|ふゆ}になると、{温かい|あたたかい}ものが{食べ|たべ}たくなるものだ。",
+    "en": "When winter comes, you just want something warm to eat."
+   }
+  ],
+  "quiz": {
+   "question": "{若い|わかい}{頃|ころ}は、よく{夜中|よなか}まで{映画|えいが}を＿＿。",
+   "en": "When I was young, I often used to watch films until late at night.",
+   "options": [
+    "見たものだ",
+    "見るものだ",
+    "見ものだ",
+    "見てものだ"
+   ],
+   "explain": "A past habit: た-form + ものだ."
+  },
+  "quiz_more": [
+   {
+    "question": "お{正月|しょうがつ}は、{家族|かぞく}で{過ごす|すごす}＿＿。",
+    "en": "New Year is something you spend with family.",
+    "options": [
+     "ものだ",
+     "ものの",
+     "ものに",
+     "ものを"
+    ],
+    "explain": "Dictionary form + ものだ: 'that's how it's done'."
+   },
+   {
+    "question": "{昨日|きのう}、{初めて|はじめて}{戸隠|とがくし}へ＿＿。",
+    "en": "Yesterday I went to {戸隠|とがくし} for the first time.",
+    "options": [
+     "行った",
+     "行ったものだ",
+     "行くものだ",
+     "行ったもんだ"
+    ],
+    "explain": "One single event, not a habit: no ものだ."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "復路",
+  "reading": "ふくろ",
+  "romaji": "fukuro",
+  "meaning": "the return leg (of the relay)",
+  "where": "In the corner of the soba shop's TV screen: 「{箱根駅伝|はこねえきでん} {復路|ふくろ}」.",
+  "breakdown": "{復路|ふくろ}: 復 go back, return + 路 road → 'the road back': day 2, from {箱根|はこね} back to Tokyo.",
+  "related": "{往路|おうろ} = the outward leg (day 1, 2 January)."
+ },
+ "tip": {
+  "mark": "駅",
+  "title": "{箱根駅伝|はこねえきでん}",
+  "body": "On 2 and 3 January, university teams run a relay of over 200 km from Tokyo to {箱根|はこね} and back, ten runners per team. Many families leave it on TV all morning, like a New Year ritual. Ask someone which university they support and you'll get a long answer."
+ },
+ "challenge": {
+  "type": "fix",
+  "prompt": "レン: 「アルちゃんは、{子|こ}どもの{頃|ころ}、{冬|ふゆ}に{何|なに}してた？」 You answered, but one part is wrong.",
+  "parts": [
+   {
+    "jp": "{子|こ}どもの{頃|ころ}は、"
+   },
+   {
+    "jp": "{冬|ふゆ}になると"
+   },
+   {
+    "jp": "{祖父|そふ}と{山|やま}に"
+   },
+   {
+    "jp": "{登る|のぼる}ものだよ。",
+    "wrong": true,
+    "why": "Dictionary form + ものだ means 'that's what one does'. For 'I used to', use the た-form: {登|のぼ}ったものだ."
+   }
+  ],
+  "model_answer": "{子|こ}どもの{頃|ころ}は、{冬|ふゆ}になると{祖父|そふ}と{山|やま}に{登った|のぼった}ものだよ。",
+  "explanation": "〜になると = 'whenever (winter) came'. {登|のぼ}った + ものだ looks back fondly at a habit: 'I used to climb'. よ keeps it warm and casual for レン.",
+  "hint": "A past habit: た-form + ものだ"
+ },
+ "vocab": [
+  {
+   "jp": "{映|うつ}る",
+   "reading": "うつる",
+   "en": "to be reflected; to appear (on screen)",
+   "level": "N3",
+   "src": "d0",
+   "surface": "映る",
+   "note": "{池|いけ}に{映|うつ}る, テレビに{映|うつ}る. Transitive: {映|うつ}す."
+  },
+  {
+   "jp": "{冗談|じょうだん}",
+   "reading": "じょうだん",
+   "en": "joke",
+   "level": "N3",
+   "src": "d2",
+   "surface": "冗談",
+   "note": "{冗談|じょうだん}だよ = just kidding. {冗談|じょうだん}でしょう？ = you're kidding?"
+  },
+  {
+   "jp": "{遭難|そうなん}",
+   "reading": "そうなん",
+   "en": "getting lost or stranded (mountains, sea)",
+   "level": "N2",
+   "src": "d2",
+   "surface": "遭難",
+   "note": "News word for climbers in trouble. {遭難|そうなん}する."
+  },
+  {
+   "jp": "{温|あたた}かい",
+   "reading": "あたたかい",
+   "en": "warm (food, drink, heart)",
+   "level": "N4",
+   "src": "d2",
+   "surface": "温かい",
+   "note": "Things you touch or eat. Weather is {暖|あたた}かい."
+  },
+  {
+   "jp": "{中継|ちゅうけい}",
+   "reading": "ちゅうけい",
+   "en": "live broadcast, relay",
+   "level": "N3",
+   "src": "d3",
+   "surface": "中継",
+   "note": "{生中継|なまちゅうけい} = live on air."
+  },
+  {
+   "jp": "{鐘|かね}",
+   "reading": "かね",
+   "en": "bell (big, temple)",
+   "level": "N3",
+   "src": "d4",
+   "surface": "鐘",
+   "note": "{除夜|じょや}の{鐘|かね} = the 108 bells on New Year's Eve."
+  },
+  {
+   "jp": "{粒|つぶ}",
+   "reading": "つぶ",
+   "en": "grain; counter for small round things",
+   "level": "N3",
+   "src": "d4",
+   "surface": "粒",
+   "note": "ぶどう12{粒|つぶ}, {米|こめ}{一粒|ひとつぶ}."
+  },
+  {
+   "jp": "{戻|もど}す",
+   "reading": "もどす",
+   "en": "to put back, return",
+   "level": "N3",
+   "src": "p0",
+   "surface": "戻せたら",
+   "note": "Transitive pair of {戻|もど}る. {元|もと}に{戻|もど}す = put back as it was."
+  },
+  {
+   "jp": "{生|う}まれ{変|か}わる",
+   "reading": "うまれかわる",
+   "en": "to be reborn",
+   "level": "N3",
+   "src": "p2",
+   "surface": "生まれ変わったら",
+   "note": "{生|う}まれる be born + {変|か}わる change. Also 'become a new person'."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "映",
+   "track": "lesson",
+   "on": "エイ",
+   "kun": "うつ(る)・うつ(す)・は(える)",
+   "meaning": "reflect, project",
+   "parts": "日 sun + 央 centre → the sun right in the middle, its light bouncing back from water and glass: reflect, project.",
+   "lookalike": "Not 英 (English, excellent): 英 has 艹 grass on top instead of 日 on the left.",
+   "words": [
+    {
+     "jp": "{映|うつ}る",
+     "reading": "うつる",
+     "en": "to be reflected"
+    },
+    {
+     "jp": "{映画|えいが}",
+     "reading": "えいが",
+     "en": "film"
+    },
+    {
+     "jp": "{反映|はんえい}",
+     "reading": "はんえい",
+     "en": "reflection, influence"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "English",
+     "centre",
+     "to shine brightly"
+    ],
+    "readings": [
+     "えいる",
+     "はえる",
+     "てる"
+    ]
+   }
+  },
+  {
+   "kanji": "期",
+   "track": "n3",
+   "on": "キ・ゴ",
+   "kun": "",
+   "meaning": "period, term; expect",
+   "parts": "其 a basket (gives the sound キ) + 月 moon → the moon marks out fixed stretches of time: period, term.",
+   "lookalike": "Not 基 (base): 基 has 土 earth at the bottom; 期 has 月 on the right.",
+   "words": [
+    {
+     "jp": "{時期|じき}",
+     "reading": "じき",
+     "en": "time of year, period"
+    },
+    {
+     "jp": "{期待|きたい}",
+     "reading": "きたい",
+     "en": "expectation"
+    },
+    {
+     "jp": "{学期|がっき}",
+     "reading": "がっき",
+     "en": "school term"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "base, foundation",
+     "moon",
+     "basket"
+    ],
+    "readings": [
+     "じご",
+     "ときき",
+     "じっき"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Talking about films",
+   "title_jp": "{映画|えいが}の{話|はなし}",
+   "intro": "For the next time レン brings up old movies.",
+   "items": [
+    {
+     "jp": "ハッピーエンド",
+     "en": "happy ending"
+    },
+    {
+     "jp": "ネタバレ",
+     "en": "spoiler",
+     "note": "ネタバレしないで！ = no spoilers!"
+    },
+    {
+     "jp": "{名作|めいさく|masterpiece|3}",
+     "en": "classic, masterpiece"
+    },
+    {
+     "jp": "{主演|しゅえん|starring role|2}",
+     "en": "leading role"
+    }
+   ]
+  },
+  {
+   "title": "Ways to say 'what if'",
+   "title_jp": "もしも",
+   "intro": "Same idea, different feel.",
+   "items": [
+    {
+     "jp": "もし{時間|じかん}があったら…",
+     "en": "If I had time…",
+     "note": "たら: the everyday one."
+    },
+    {
+     "jp": "{夏|なつ}なら…",
+     "en": "If it were summer…",
+     "note": "なら: 'in that case'."
+    },
+    {
+     "jp": "{雪|ゆき}が{降らなければ|ふらなければ}…",
+     "en": "If it didn't snow…",
+     "note": "ば: a bit more written or regretful."
+    }
+   ]
+  }
+ ]
+}

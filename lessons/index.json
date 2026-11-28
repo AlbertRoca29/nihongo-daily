@@ -428,5 +428,12 @@
   "category": "mock",
   "function": "planning",
   "format": "mock"
+ },
+ {
+  "id": "2027-01-03",
+  "topic": "Snowshoes, soba and 'what if'",
+  "category": "entertainment",
+  "function": "hypotheticals",
+  "format": "dialogue"
  }
 ]
