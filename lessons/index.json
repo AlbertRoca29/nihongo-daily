@@ -449,5 +449,12 @@
   "category": "review",
   "function": "reasons",
   "format": "story"
+ },
+ {
+  "id": "2027-01-06",
+  "topic": "Visitors next week, rumours this week",
+  "category": "work-volunteering",
+  "function": "hearsay",
+  "format": "dialogue"
  }
 ]

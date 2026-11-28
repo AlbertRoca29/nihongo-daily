@@ -1,0 +1,422 @@
+{
+ "topic": "Visitors next week, rumours this week",
+ "category": "work-volunteering",
+ "function": "hearsay",
+ "format": "dialogue",
+ "cast": [
+  "sato"
+ ],
+ "title_jp": "{職員室|しょくいんしつ}の{噂|うわさ}",
+ "context": "Wednesday 6 January: the school holidays aren't over, but {佐藤|さとう}{先生|せんせい} asks アルちゃん into the staff room at {鷹ノ原高校|たかのはらこうこう}. She passes on news from the vice principal, and a rumour from the students.",
+ "scene": "Still the holidays. {佐藤|さとう}{先生|せんせい} has called you into the staff room with news, and with something she heard from the students.",
+ "keep": [
+  "p0"
+ ],
+ "phrases": [
+  {
+   "jp": "{急ぐ|いそぐ|to hurry|4}ことはないよ。ゆっくりでいい。",
+   "en": "There's no need to hurry. Take your time.",
+   "register": "casual",
+   "note": "Reassuring a friend or a kid. Polite: {急|いそ}ぐことはありません."
+  },
+  {
+   "jp": "{聞いた|きいた}{話|はなし}では、{今年|ことし}は{雪|ゆき}が{多い|おおい}そうです。",
+   "en": "From what I've heard, there'll be a lot of snow this year.",
+   "register": "polite",
+   "note": "{聞|き}いた{話|はなし}では opens hearsay; end with そうです."
+  },
+  {
+   "jp": "お{休み|やすみ}の{日|ひ}に{呼び出して|よびだして|to call someone in|3}、すみません。",
+   "en": "Sorry to call you in on your day off.",
+   "register": "polite"
+  },
+  {
+   "jp": "{わざわざ||going to the trouble|3}{来る|くる}ことはなかったのに。",
+   "en": "You didn't have to come all this way.",
+   "register": "neutral",
+   "note": "Past ことはなかった + のに: gently 'there was no need'. Warm, not a complaint."
+  },
+  {
+   "jp": "{授業|じゅぎょう}を{見学|けんがく|observing, a study visit|3}させていただけますか。",
+   "en": "Could I observe a lesson?",
+   "register": "polite",
+   "note": "Humble request: させていただけますか = may I be allowed to."
+  }
+ ],
+ "dialogue_setting": "The staff room ({職員室|しょくいんしつ}) of {鷹ノ原高校|たかのはらこうこう}, nearly empty, the heater humming. New Year greetings have just been exchanged.",
+ "dialogue": [
+  {
+   "who": "sato",
+   "speaker": "佐藤先生",
+   "jp": "{早速|さっそく|right away, without delay|3}ですが、{教頭|きょうとう|vice principal|2}{先生|せんせい}によると、{来週|らいしゅう}、{教育委員会|きょういくいいんかい|board of education|2}の{方|かた}が{見学|けんがく|observing, a study visit|3}に{来られる|こられる}そうです。",
+   "en": "Straight to business: according to the vice principal, someone from the board of education is coming to observe next week.",
+   "register": "polite",
+   "note": "{来|こ}られる here is respectful (= いらっしゃる), not 'can come'."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "えっ、{僕|ぼく}の{授業|じゅぎょう}もですか？スーツを{着て|きて}きたほうがいいでしょうか。",
+   "en": "What, my class too? Should I come in a suit?",
+   "register": "polite"
+  },
+  {
+   "who": "sato",
+   "speaker": "佐藤先生",
+   "jp": "いいえ、{特別|とくべつ|special|4}な{準備|じゅんび|preparation|4}をすることはありません。{いつも通り|いつもどおり|as usual|4}で{大丈夫|だいじょうぶ}ですよ。",
+   "en": "No, there's no need to prepare anything special. Just as usual is fine.",
+   "register": "polite"
+  },
+  {
+   "who": "sato",
+   "speaker": "佐藤先生",
+   "jp": "それと、{生徒|せいと}から{聞いた|きいた}んですが、アルちゃんに{長野|ながの}の{彼女|かのじょ}がいるって{噂|うわさ|rumour|3}があるらしいですね。",
+   "en": "Also, I heard from the students: apparently there's a rumour you have a girlfriend in {長野|ながの}.",
+   "register": "polite"
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "えっ、{学校|がっこう}にまで{広まって|ひろまって|to spread|3}るんですか…。{何て|なんて}{答えたら|こたえたら}いいでしょう。",
+   "en": "What, it's spread all the way to school? What should I tell them?",
+   "register": "polite",
+   "note": "{広|ひろ}まってる = {広|ひろ}まっている, dropping い in speech."
+  },
+  {
+   "who": "sato",
+   "speaker": "佐藤先生",
+   "jp": "{無理に|むりに|forcibly, against your will|3}{答える|こたえる}ことはありませんよ。「{秘密|ひみつ|secret|4}です」で{十分|じゅうぶん|enough|4}です。",
+   "en": "You don't have to answer if you'd rather not. 'It's a secret' is quite enough.",
+   "register": "polite"
+  }
+ ],
+ "listening": {
+  "type": "announcement",
+  "intro": "As you're leaving, the staff-room speaker comes on.",
+  "who": "extra",
+  "title": "{職員室|しょくいんしつ}の{放送|ほうそう}",
+  "place": "{鷹ノ原高校|たかのはらこうこう}",
+  "lines": [
+   {
+    "who": "extra",
+    "voice": "f",
+    "jp": "{先生方|せんせいがた}にお{知らせ|しらせ}します。{本日|ほんじつ|today (formal)|3}の{打ち合わせ|うちあわせ|meeting, briefing|3}は、2{時|じ}から{和室|わしつ|Japanese-style room|3}で{行います|おこないます}。",
+    "en": "A notice for teachers. Today's meeting will be held from 2 o'clock in the Japanese-style room."
+   },
+   {
+    "who": "extra",
+    "voice": "f",
+    "jp": "{会議室|かいぎしつ}ではありませんので、ご{注意|ちゅうい}ください。",
+    "en": "Please note: not in the meeting room."
+   }
+  ],
+  "question": "{打ち合わせ|うちあわせ}は、どこでありますか。",
+  "options": [
+   "わしつ",
+   "かいぎしつ",
+   "しょくいんしつ",
+   "きょうしつ"
+  ],
+  "explain": "{和室|わしつ} = the tatami room. The second line warns it's not the usual {会議室|かいぎしつ}."
+ },
+ "grammar": {
+  "id": "n3-koto-wa-nai",
+  "pattern": "〜ことはない",
+  "level": "N3",
+  "meaning": "there's no need to",
+  "form": "{動詞|どうし}{辞書形|じしょけい}: + ことはない ({急|いそ}ぐ → {急|いそ}ぐことはない, する → することはない) · polite: + ことはありません ({答|こた}える → {答|こた}えることはありません) · past: + ことはなかった ({来|く}る → {来|く}ることはなかった)",
+  "explanation": "Tells someone an action isn't necessary, usually to reassure them: 'no need to worry'. It sounds warmer and firmer than 〜なくてもいい. It always follows the dictionary form, never the ない-form.",
+  "src": [
+   "d5",
+   "d2",
+   "p0",
+   "p3"
+  ],
+  "mark": [
+   "答えることはありません",
+   "することはありません",
+   "急ぐことはない",
+   "来ることはなかった",
+   "謝ることはない",
+   "買うことはありません"
+  ],
+  "examples": [
+   {
+    "jp": "{謝る|あやまる|to apologise|4}ことはないよ。{誰|だれ}でも{間違える|まちがえる|to make a mistake|4}から。",
+    "en": "No need to apologise. Everyone makes mistakes."
+   },
+   {
+    "jp": "{高い|たかい}{靴|くつ}を{買う|かう}ことはありません。{長靴|ながぐつ|rubber boots|3}で{十分|じゅうぶん|enough|4}です。",
+    "en": "There's no need to buy expensive shoes. Rubber boots are plenty."
+   }
+  ],
+  "quiz": {
+   "question": "{心配|しんぱい}＿＿ことはないよ。すぐ{慣れる|なれる|to get used to|3}から。",
+   "en": "No need to worry. You'll soon get used to it.",
+   "options": [
+    "する",
+    "しない",
+    "して",
+    "した"
+   ],
+   "explain": "ことはない follows the dictionary form: {心配|しんぱい}することはない."
+  },
+  "quiz_more": [
+   {
+    "question": "{大雪|おおゆき|heavy snow|3}だから、{今日|きょう}は{無理|むり}して{来る|くる}＿＿。",
+    "en": "It's snowing heavily, so there's no need to force yourself to come today.",
+    "options": [
+     "ことはありません",
+     "ことがあります",
+     "ことにします",
+     "ことになります"
+    ],
+    "explain": "ことはありません = no need. ことがあります means 'sometimes happens'."
+   },
+   {
+    "question": "{電話|でんわ}でよかったのに。{わざわざ||going to the trouble|3}{来る|くる}＿＿のに。",
+    "en": "A phone call would have done. You didn't have to come all this way.",
+    "options": [
+     "ことはなかった",
+     "ことはない",
+     "ことになった",
+     "ことがあった"
+    ],
+    "explain": "They already came, so use the past: ことはなかったのに."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "来客用",
+  "reading": "らいきゃくよう",
+  "romaji": "raikyaku-yō",
+  "meaning": "for visitors",
+  "where": "A label on the slipper rack at the school entrance, where you change out of your snow boots.",
+  "breakdown": "{来客|らいきゃく}: 来 come + 客 guest → a visitor; 用 'for use by' → 'for visitors'.",
+  "related": "{職員用|しょくいんよう} = for staff."
+ },
+ "tip": {
+  "mark": "礼",
+  "title": "In and out of the staff room",
+  "body": "Say 「{失礼|しつれい}します」 as you enter a {職員室|しょくいんしつ} and 「{失礼|しつれい}しました」 as you leave, even if nobody looks up. Shoes stay at the entrance: visitors take the {来客用|らいきゃくよう} slippers, and you put them back neatly."
+ },
+ "challenge": {
+  "type": "order",
+  "prompt": "{恵子|けいこ}さん: 「{見学|けんがく|observing, a study visit|3}の{日|ひ}、{主人|しゅじん}のスーツ{貸そうか|かそうか}？」 Thank her, and pass on that there's apparently no need to wear one.",
+  "pieces": [
+   "ありがとうございます。",
+   "でも、スーツを",
+   "{着る|きる}ことは",
+   "ないそうです。"
+  ],
+  "model_answer": "ありがとうございます。でも、スーツを{着る|きる}ことはないそうです。",
+  "explanation": "{着|き}る (dictionary form) + ことはない = no need to wear. Adding そうです after ない passes it on as something you heard from {佐藤|さとう}{先生|せんせい}. ございます keeps it polite for {恵子|けいこ}さん.",
+  "hint": "ことはない, then そうです for hearsay"
+ },
+ "vocab": [
+  {
+   "jp": "{早速|さっそく}",
+   "reading": "さっそく",
+   "en": "right away, without delay",
+   "level": "N3",
+   "src": "d0",
+   "surface": "早速",
+   "note": "{早速|さっそく}ですが = 'to get straight to it', a polite way into business."
+  },
+  {
+   "jp": "{教頭|きょうとう}",
+   "reading": "きょうとう",
+   "en": "vice principal",
+   "level": "N2",
+   "src": "d0",
+   "surface": "教頭",
+   "note": "Called {教頭|きょうとう}{先生|せんせい}. The principal is {校長|こうちょう}{先生|せんせい}."
+  },
+  {
+   "jp": "{見学|けんがく}",
+   "reading": "けんがく",
+   "en": "observing, a study visit",
+   "level": "N3",
+   "src": "d0",
+   "surface": "見学",
+   "note": "{見|み} see + {学|がく} learn. {工場見学|こうじょうけんがく} = factory tour."
+  },
+  {
+   "jp": "{特別|とくべつ}",
+   "reading": "とくべつ",
+   "en": "special",
+   "level": "N4",
+   "src": "d2",
+   "surface": "特別",
+   "note": "な-adjective: {特別|とくべつ}な{日|ひ}. Adverb: {特別|とくべつ}に."
+  },
+  {
+   "jp": "いつも{通|どお}り",
+   "reading": "いつもどおり",
+   "en": "as usual",
+   "level": "N3",
+   "src": "d2",
+   "surface": "いつも通り",
+   "note": "Noun + {通|どお}り = just like: {予定通|よていどお}り, as planned."
+  },
+  {
+   "jp": "{急|いそ}ぐ",
+   "reading": "いそぐ",
+   "en": "to hurry",
+   "level": "N4",
+   "src": "p0",
+   "surface": "急ぐ",
+   "note": "{急|いそ}いで！ = hurry up! {急|きゅう}に = suddenly."
+  },
+  {
+   "jp": "{呼|よ}び{出|だ}す",
+   "reading": "よびだす",
+   "en": "to call someone in, summon",
+   "level": "N3",
+   "src": "p2",
+   "surface": "呼び出して",
+   "note": "{呼|よ}ぶ call + {出|だ}す out. Also being called to the teacher's office."
+  },
+  {
+   "jp": "わざわざ",
+   "reading": "わざわざ",
+   "en": "going to the trouble, specially",
+   "level": "N3",
+   "src": "p3",
+   "surface": "わざわざ",
+   "note": "Often thanking: わざわざありがとう = thanks for going to the trouble."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "呼",
+   "track": "lesson",
+   "on": "コ",
+   "kun": "よ(ぶ)",
+   "meaning": "to call; breathe out",
+   "parts": "口 mouth + 乎 (a sound of breath leaving) → breath coming out of the mouth: to call out, to breathe.",
+   "lookalike": "Not 平 (flat): 呼 has 口 on the left and a hooked stroke at the bottom.",
+   "words": [
+    {
+     "jp": "{呼|よ}び{出|だ}す",
+     "reading": "よびだす",
+     "en": "to call someone in"
+    },
+    {
+     "jp": "{呼|よ}ぶ",
+     "reading": "よぶ",
+     "en": "to call"
+    },
+    {
+     "jp": "{呼吸|こきゅう}",
+     "reading": "こきゅう",
+     "en": "breathing"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "flat, calm",
+     "to shout, cry",
+     "to sing"
+    ],
+    "readings": [
+     "よびいだす",
+     "こしゅつ",
+     "よんだす"
+    ]
+   }
+  },
+  {
+   "kanji": "和",
+   "track": "n3",
+   "on": "ワ",
+   "kun": "やわ(らぐ)・なご(む)",
+   "meaning": "harmony, peace; Japanese style",
+   "parts": "禾 a stalk of grain + 口 mouth → a mouth with food (rice): everyone fed and at peace. Harmony, and by extension 'Japanese'.",
+   "lookalike": "Not 私 (I, private): 私 has the hook ム on the right, 和 has 口.",
+   "words": [
+    {
+     "jp": "{和室|わしつ}",
+     "reading": "わしつ",
+     "en": "Japanese-style (tatami) room"
+    },
+    {
+     "jp": "{平和|へいわ}",
+     "reading": "へいわ",
+     "en": "peace"
+    },
+    {
+     "jp": "{和食|わしょく}",
+     "reading": "わしょく",
+     "en": "Japanese food"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "private, I",
+     "rice field",
+     "autumn"
+    ],
+    "readings": [
+     "わじつ",
+     "かしつ",
+     "わへや"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Where did you hear it?",
+   "title_jp": "{伝聞|でんぶん}の{言い方|いいかた}",
+   "intro": "Ways to say 'I heard that…', from formal to chatty.",
+   "items": [
+    {
+     "jp": "{教頭|きょうとう|vice principal|2}{先生|せんせい}によると",
+     "en": "according to the vice principal",
+     "note": "Names the source. Ends with そうです."
+    },
+    {
+     "jp": "{聞いた|きいた}{話|はなし}では",
+     "en": "from what I've heard",
+     "note": "Softer, the source stays vague."
+    },
+    {
+     "jp": "{雪|ゆき}が{降る|ふる}らしい",
+     "en": "apparently it'll snow",
+     "note": "Heard it, and it sounds likely."
+    },
+    {
+     "jp": "{雪|ゆき}が{降る|ふる}って",
+     "en": "they say it'll snow",
+     "note": "Casual spoken hearsay."
+    }
+   ]
+  },
+  {
+   "title": "School people and places",
+   "title_jp": "{学校|がっこう}の{言葉|ことば}",
+   "intro": "Words you'll hear around the staff room.",
+   "items": [
+    {
+     "jp": "{校長|こうちょう|principal|3}{先生|せんせい}",
+     "en": "the principal"
+    },
+    {
+     "jp": "{職員室|しょくいんしつ|staff room|3}",
+     "en": "staff room"
+    },
+    {
+     "jp": "{始業式|しぎょうしき|opening ceremony of term|2}",
+     "en": "start-of-term ceremony"
+    },
+    {
+     "jp": "{上履き|うわばき|indoor shoes|3}",
+     "en": "indoor shoes"
+    }
+   ]
+  }
+ ]
+}
