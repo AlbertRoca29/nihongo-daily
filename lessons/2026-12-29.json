@@ -1,0 +1,156 @@
+{
+ "topic": "A bad back in the middle of the big clean",
+ "category": "health-body",
+ "function": "comparing",
+ "format": "story",
+ "cast": ["tanaka", "sota"],
+ "title_jp": "{大掃除|おおそうじ}とぎっくり{腰|ごし}",
+ "context": "Tuesday 29 December, the 田中 family's year-end clean. In the middle of it {田中|たなか}さん puts his back out lifting a box in the barn; アルちゃん and {恵子|けいこ}さん tell how the day went.",
+ "scene": "Tuesday, the big year-end clean. {田中|たなか}さん lifted one box too many. You and {恵子|けいこ}さん tell the story of the day.",
+ "keep": ["p1"],
+ "phrases": [
+  {"jp": "{腰|こし|lower back|3}を{痛めて|いためて|to hurt, injure|3}しまいました。", "en": "I've hurt my lower back.", "register": "polite", "note": "{痛|いた}める = injure a body part. What you say at the clinic desk."},
+  {"jp": "{冷やす|ひやす|to cool, ice|3}のと{温める|あたためる|to warm|3}のと、どちらがいいですか。", "en": "Which is better, icing it or warming it?", "register": "polite", "note": "AのとBのと、どちらが〜 = which is more…, A or B?"},
+  {"jp": "{昨日|きのう}より、だいぶ{楽|らく|comfortable, easier|4}になりました。", "en": "It's a lot better than yesterday.", "register": "polite", "note": "{楽|らく}になる = the pain eases."},
+  {"jp": "{掃除|そうじ}の{最中|さいちゅう}に、{電話|でんわ}が{鳴った|なった}。", "en": "The phone rang right in the middle of the cleaning.", "register": "neutral"},
+  {"jp": "{重い|おもい}ものは、{膝|ひざ|knee|3}を{曲げて|まげて|to bend|3}{持ち上げて|もちあげて|to lift|3}ね。", "en": "Bend your knees when you lift heavy things, OK?", "register": "casual"}
+ ],
+ "dialogue_setting": "Evening, at the kotatsu. アルちゃん and {恵子|けいこ}さん tell the story of the day's {大掃除|おおそうじ}.",
+ "dialogue": [
+  {"who": "you", "speaker": "アルちゃん", "me": true, "jp": "{今日|きょう}は{大掃除|おおそうじ|big year-end clean|3}。{僕|ぼく}と{颯太|そうた}は{窓|まど}を{拭いて|ふいて|to wipe|3}、{田中|たなか}さんは{納屋|なや|barn, shed|2}の{棚|たな|shelf|3}を{片付けて|かたづけて|to tidy up|4}いた。", "en": "Today was the big clean. {颯太|そうた} and I wiped the windows, and {田中|たなか}さん was tidying the shelves in the barn.", "register": "neutral"},
+  {"who": "keiko", "speaker": "恵子さん", "jp": "{重い|おもい}{箱|はこ}を{持ち上げて|もちあげて|to lift|3}いる{最中|さいちゅう}に、お{父|とう}さんが「うっ」と{言って|いって}、{動けなく|うごけなく}なったの。", "en": "Right in the middle of lifting a heavy box, Dad went 'ugh!' and couldn't move.", "register": "neutral", "note": "お{父|とう}さん = what {恵子|けいこ}さん calls her husband."},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "jp": "ぎっくり{腰|ごし|(acute) back strain|3}だった。{田中|たなか}さんは「{若い|わかい|young|4}{頃|ころ}に{比べて|くらべて}、{体|からだ}が{固く|かたく|stiff, hard|4}なったずら」と{笑った|わらった}。", "en": "He'd put his back out. {田中|たなか}さん laughed: 'Compared with when I was young, my body's got stiff, eh.'", "register": "dialect", "note": "ずら = だろう (Nagano dialect)."},
+  {"who": "keiko", "speaker": "恵子さん", "jp": "{病院|びょういん}はもう{年末|ねんまつ}で{休み|やすみ}。でも{駅前|えきまえ}の{整骨院|せいこついん|bone-setting clinic|2}は、{今日|きょう}まで{開いて|あいて}いたのよ。", "en": "The hospital's already closed for the holidays. But the bone-setting clinic by the station was open until today.", "register": "neutral"},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "jp": "{先生|せんせい}によると、{最初|さいしょ}の{二日|ふつか}は{温める|あたためる}より{冷やす|ひやす|to cool, ice|3}{方|ほう}がいいらしい。{冷たい|つめたい}{湿布|しっぷ|medicated patch|3}を{貼って|はって|to stick on|3}もらった。", "en": "According to the doctor, for the first two days icing is better than heat. They put a cold patch on him.", "register": "neutral"},
+  {"who": "keiko", "speaker": "恵子さん", "jp": "{夕飯|ゆうはん|dinner|4}の{最中|さいちゅう}も「{平気|へいき}だ」って。でも{残り|のこり}の{掃除|そうじ}は、アルちゃんの{担当|たんとう|being in charge|3}ね。", "en": "Even halfway through dinner he kept saying 'I'm fine'. But the rest of the cleaning is your job now, アルちゃん.", "register": "neutral"}
+ ],
+ "listening": {
+  "type": "dictation",
+  "intro": "At the clinic, the nurse says one thing twice. Type what she says.",
+  "who": "extra",
+  "lines": [
+   {"who": "extra", "voice": "f", "jp": "{冷たい|つめたい}{湿布|しっぷ|medicated patch|3}を{一日|いちにち}{二回|にかい}、{貼って|はって|to stick on|3}ください。", "en": "Put on a cold patch twice a day, please."}
+  ]
+ },
+ "grammar": {
+  "id": "n3-saichuu",
+  "pattern": "〜{最中|さいちゅう}に",
+  "level": "N3",
+  "meaning": "right in the middle of",
+  "form": "verb: ている + {最中|さいちゅう}に ({持|も}ち{上|あ}げている{最中|さいちゅう}に, {話|はな}している{最中|さいちゅう}に) · noun: の + {最中|さいちゅう}に ({掃除|そうじ}の{最中|さいちゅう}に, {夕飯|ゆうはん}の{最中|さいちゅう})",
+  "explanation": "Right in the middle of doing A, B happens, usually something unexpected that interrupts. Stronger than 〜ているときに. It's for an action in progress, not a long state: {東京|とうきょう}に{住|す}んでいる{最中|さいちゅう}に is wrong; use {間|あいだ}に.",
+  "src": ["d1", "d5", "p3"],
+  "mark": ["持ち上げている最中に", "夕飯の最中", "掃除の最中に", "会議の最中に", "話している最中に"],
+  "examples": [
+   {"jp": "{会議|かいぎ}の{最中|さいちゅう}に、スマホが{鳴っちゃった|なっちゃった}。", "en": "My phone went off right in the middle of the meeting."},
+   {"jp": "{話して|はなして}いる{最中|さいちゅう}に、{電車|でんしゃ}が{来た|きた}。", "en": "The train came right in the middle of our chat."}
+  ],
+  "quiz": {
+   "question": "{料理|りょうり}を＿＿{最中|さいちゅう}に、{停電|ていでん}した。",
+   "en": "The power went out right in the middle of my cooking.",
+   "options": ["している", "した", "する", "して"],
+   "explain": "Verbs take ている before {最中|さいちゅう}: the action is in progress."
+  },
+  "quiz_more": [
+   {
+    "question": "{試合|しあい}＿＿{最中|さいちゅう}に、{雨|あめ}が{降り出した|ふりだした}。",
+    "en": "It started raining in the middle of the match.",
+    "options": ["の", "な", "に", "が"],
+    "explain": "Noun + の + {最中|さいちゅう}に."
+   },
+   {
+    "question": "{東京|とうきょう}に＿＿、{日本語|にほんご}が{上手|じょうず}になった。",
+    "en": "While I was living in Tokyo, my Japanese got better.",
+    "options": ["住んでいる間に", "住んでいる最中に", "住んだ最中に", "住む最中に"],
+    "explain": "Living somewhere is a long state, so {間|あいだ}に. {最中|さいちゅう}に is for an action in full swing."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "休診",
+  "reading": "きゅうしん",
+  "romaji": "kyūshin",
+  "meaning": "(clinic) closed, no consultations",
+  "where": "On a card taped to the clinic door: 「12/30〜1/3 休診」.",
+  "breakdown": "{休診|きゅうしん}: 休 rest + 診 examine (a patient) → 'no examinations today'.",
+  "related": "{診察|しんさつ} = medical examination; {休診日|きゅうしんび} = a clinic's day off."
+ },
+ "tip": {
+  "mark": "腰",
+  "title": "Hurting yourself at New Year",
+  "body": "Most clinics close from about 29 December to 3 January. Towns post a list of {休日当番医|きゅうじつとうばんい} (doctors on holiday duty) on their website or newsletter. For a sprain or a bad back many people go to a {整骨院|せいこついん}; for an X-ray it's the {整形外科|せいけいげか}."
+ },
+ "challenge": {
+  "type": "write",
+  "prompt": "{由紀|ゆき} on LINE: 「{大掃除|おおそうじ}{終わった|おわった}？」 Tell her not yet: {田中|たなか}さん hurt his back right in the middle of it.",
+  "model_answer": "まだ。{掃除|そうじ}の{最中|さいちゅう}に、{田中|たなか}さんが{腰|こし|lower back|3}を{痛めちゃった|いためちゃった|to hurt, injure|3}。",
+  "explanation": "{掃除|そうじ}の{最中|さいちゅう}に sets the moment: noun + の + {最中|さいちゅう}に. {腰|こし}を{痛|いた}める is the natural way to say 'hurt your back', and 〜ちゃった (= てしまった) adds 'unfortunately'. Casual, right for {由紀|ゆき}.",
+  "hint": "noun + の{最中|さいちゅう}に, {腰|こし}を{痛|いた}める"
+ },
+ "vocab": [
+  {"jp": "{棚|たな}", "reading": "たな", "en": "shelf", "level": "N3", "src": "d0", "surface": "棚", "note": "{本棚|ほんだな} = bookshelf (た → だ)."},
+  {"jp": "{持|も}ち{上|あ}げる", "reading": "もちあげる", "en": "to lift, raise", "level": "N3", "src": "d1", "surface": "持ち上げて", "note": "{持|も}つ hold + {上|あ}げる raise."},
+  {"jp": "{若|わか}い", "reading": "わかい", "en": "young", "level": "N4", "src": "d2", "surface": "若い", "note": "{若|わか}い{頃|ころ} = in one's youth. Not for small children."},
+  {"jp": "{固|かた}い", "reading": "かたい", "en": "stiff, hard", "level": "N3", "src": "d2", "surface": "固く", "note": "{体|からだ}が{固|かた}い = not flexible. Also {硬|かた}い, {堅|かた}い in other senses."},
+  {"jp": "{冷|ひ}やす", "reading": "ひやす", "en": "to cool, chill", "level": "N3", "src": "d4", "surface": "冷やす", "note": "Transitive: you cool something. {冷|ひ}える = gets cold by itself."},
+  {"jp": "{湿布|しっぷ}", "reading": "しっぷ", "en": "medicated (pain) patch", "level": "N3", "src": "d4", "surface": "湿布", "note": "Sold in every pharmacy. {湿布|しっぷ}を{貼|は}る = put one on."},
+  {"jp": "{貼|は}る", "reading": "はる", "en": "to stick on, paste", "level": "N3", "src": "d4", "surface": "貼って", "note": "Patches, stickers, posters. A plaster too: {絆創膏|ばんそうこう}を{貼|は}る."},
+  {"jp": "{夕飯|ゆうはん}", "reading": "ゆうはん", "en": "dinner, evening meal", "level": "N4", "src": "d5", "surface": "夕飯", "note": "Everyday word at home. Politer: {夕食|ゆうしょく}."},
+  {"jp": "{担当|たんとう}", "reading": "たんとう", "en": "being in charge (of a task)", "level": "N3", "src": "d5", "surface": "担当", "note": "{担当者|たんとうしゃ} = the person in charge. Very common at work."}
+ ],
+ "kanji_study": [
+  {
+   "kanji": "固",
+   "track": "lesson",
+   "on": "コ",
+   "kun": "かた(い)・かた(める)・かた(まる)",
+   "meaning": "hard, firm, stiff",
+   "parts": "囗 enclosure + 古 old → something old shut tight in a box until it sets hard: hard, firm.",
+   "lookalike": "Not 個 (individual): 個 adds 亻 person on the left.",
+   "words": [
+    {"jp": "{固|かた}い", "reading": "かたい", "en": "hard, stiff"},
+    {"jp": "{固|かた}める", "reading": "かためる", "en": "to harden, make firm"},
+    {"jp": "{頑固|がんこ}", "reading": "がんこ", "en": "stubborn"}
+   ],
+   "decoys": {"meanings": ["old", "box", "round"], "readings": ["こたい", "かとい", "がたい"]}
+  },
+  {
+   "kanji": "制",
+   "track": "n3",
+   "on": "セイ",
+   "kun": "",
+   "meaning": "control; system, rule",
+   "parts": "An old drawing of a branching tree + 刂 knife radical → cutting branches to keep a tree in shape: control, a system of rules.",
+   "lookalike": "Not 製 (manufacture): 製 is 制 with 衣 clothing underneath.",
+   "words": [
+    {"jp": "{制服|せいふく}", "reading": "せいふく", "en": "uniform"},
+    {"jp": "{制度|せいど}", "reading": "せいど", "en": "system, institution"},
+    {"jp": "{制限|せいげん}", "reading": "せいげん", "en": "limit, restriction"}
+   ],
+   "decoys": {"meanings": ["knife", "tree", "to make"], "readings": ["せふく", "せいぶく", "しょうふく"]}
+  }
+ ],
+ "extras": [
+  {
+   "title": "At the clinic desk",
+   "title_jp": "{受付|うけつけ}で",
+   "intro": "What you'll hear, and what to say.",
+   "items": [
+    {"jp": "どうされましたか。", "en": "What seems to be the problem?", "note": "The staff's first question."},
+    {"jp": "いつからですか。", "en": "Since when?"},
+    {"jp": "{今朝|けさ}から、{腰|こし|lower back|3}が{痛い|いたい}です。", "en": "My lower back has hurt since this morning."},
+    {"jp": "お{大事|だいじ}に。", "en": "Take care (get well soon).", "note": "Said as you leave any clinic or pharmacy."}
+   ]
+  },
+  {
+   "title": "Comparing two options",
+   "title_jp": "どっちがいい？",
+   "intro": "Three common ways to compare.",
+   "items": [
+    {"jp": "AとBと、どちらがいいですか。", "en": "Which is better, A or B?"},
+    {"jp": "AよりBの{方|ほう}がいいです。", "en": "B is better than A."},
+    {"jp": "{前|まえ}に{比べて|くらべて}、{楽|らく|easier|4}になった。", "en": "It's easier than before."}
+   ]
+  }
+ ]
+}

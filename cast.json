@@ -40,7 +40,7 @@
     "Tanaka-san"
    ],
    "color": "#c0392b",
-   "status": "{初雪|はつゆき}だに。{雪道|ゆきみち}{気|き}をつけろ",
+   "status": "{腰|こし}なんか{平気|へいき}だに",
    "where": "{鷹ノ原|たかのはら} · {畑|はたけ}",
    "status_base": "{初雪|はつゆき}だに。{雪道|ゆきみち}{気|き}をつけろ",
    "where_base": "{鷹ノ原|たかのはら} · {畑|はたけ}"
@@ -1107,6 +1107,26 @@
    "status_upd": {
     "kenta": {
      "status": "ドア{開けた|あけた}とたん、{雪|ゆき}ドサーッｗ☃"
+    }
+   }
+  },
+  {
+   "date": "2026-12-29",
+   "cast": [
+    "tanaka",
+    "keiko",
+    "sota"
+   ],
+   "summary": "Tuesday 29 Dec, the 田中 family's 大掃除: アルちゃん and 颯太 wipe the windows while 田中さん tidies the barn shelves, and right in the middle of lifting a heavy box he puts his back out (ぎっくり腰). The clinic by the station puts a cold patch on him, and the rest of the cleaning becomes アルちゃん's job.",
+   "new_facts": [
+    "田中さん put his back out (ぎっくり腰) during the 大掃除 on 29 Dec 2026; he keeps saying he's fine.",
+    "There is a bone-setting clinic (整骨院) by 鷹ノ原駅; it is closed (休診) from 30 Dec to 3 Jan.",
+    "The clinic said to ice 田中さん's back for the first two days; cold patches twice a day.",
+    "The rest of the 田中 house 大掃除 is アルちゃん's job (担当)."
+   ],
+   "status_upd": {
+    "tanaka": {
+     "status": "{腰|こし}なんか{平気|へいき}だに"
     }
    }
   }
