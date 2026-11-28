@@ -379,5 +379,12 @@
   "category": "shops-eating-out",
   "function": "reacting",
   "format": "line"
+ },
+ {
+  "id": "2026-12-27",
+  "topic": "{澪|みお}'s solo at the year-end concert",
+  "category": "school-youth",
+  "function": "requesting",
+  "format": "dialogue"
  }
 ]

@@ -238,7 +238,7 @@
    ],
    "aliases": [],
    "color": "#c9a227",
-   "status": "{面接|めんせつ}{終わった|おわった}〜！{結果|けっか}{待ち|まち}🙏",
+   "status": "{留学|りゅうがく}、{決まった|きまった}！カナダ{行って|いって}くる🎺",
    "where": "{鷹ノ原高校|たかのはらこうこう}",
    "status_base": "{避難訓練|ひなんくんれん}、アルちゃんガチで{走ってた|はしってた}ｗ",
    "where_base": "{鷹ノ原高校|たかのはらこうこう}"
@@ -1068,6 +1068,26 @@
     "sota": {
      "status": "{冬休み|ふゆやすみ}！じいちゃん{家|ち}にいるよ⛄",
      "where": "{鷹ノ原|たかのはら} · {冬休み|ふゆやすみ}は{畑|はたけ}"
+    }
+   }
+  },
+  {
+   "date": "2026-12-27",
+   "cast": [
+    "mio",
+    "sota"
+   ],
+   "summary": "Sunday 27 Dec: at the 鷹ノ原高校 brass band's year-end concert in the 公民館, 澪 tells アルちゃん she passed the exchange interview and asks him to film her solo, because her hands shake every time she plays on stage. 颯太 begs to try her trumpet afterwards.",
+   "new_facts": [
+    "The 鷹ノ原高校 brass band (吹奏楽部) gave a free year-end concert at the 公民館 on Sun 27 Dec 2026.",
+    "澪 passed the selection interview for the summer exchange to Canada.",
+    "澪 had a trumpet solo at the concert; her hands shake every time she plays for real. アルちゃん filmed the solo for her.",
+    "颯太 asked to try 澪's trumpet after the concert.",
+    "On 27 Dec 恵子さん asked アルちゃん to buy two bags of rice cakes (お餅) on the shopping street on the way home."
+   ],
+   "status_upd": {
+    "mio": {
+     "status": "{留学|りゅうがく}、{決まった|きまった}！カナダ{行って|いって}くる🎺"
     }
    }
   }

@@ -1,0 +1,167 @@
+{
+ "topic": "{澪|みお}'s solo at the year-end concert",
+ "category": "school-youth",
+ "function": "requesting",
+ "format": "dialogue",
+ "cast": ["mio", "sota"],
+ "title_jp": "{澪|みお}のソロと{演奏会|えんそうかい}",
+ "context": "Sunday 27 December: the {鷹ノ原高校|たかのはらこうこう} brass band gives its free year-end concert at the {公民館|こうみんかん}. Before it starts, {澪|みお} tells アルちゃん she passed the exchange interview and asks him to film her solo, while {颯太|そうた} begs to try the trumpet.",
+ "scene": "Sunday, the school brass band's year-end concert at the {公民館|こうみんかん}. {澪|みお} runs over before it starts, with big news and a favour to ask.",
+ "keep": ["p1"],
+ "phrases": [
+  {"jp": "ちょっと{手伝って|てつだって|to help|4}もらえない？", "en": "Could you give me a hand?", "register": "casual", "note": "〜てもらえない？ is softer than 〜て！. With friends and family."},
+  {"jp": "{動画|どうが|video|4}を{撮って|とって|to film, take (a photo)|4}いただけますか。", "en": "Could you film it for me, please?", "register": "polite", "note": "〜ていただけますか: the polite request for strangers, staff, teachers."},
+  {"jp": "{練習|れんしゅう|practice|4}するたびに、{上手|じょうず}になるね。", "en": "Every time you practise, you get better.", "register": "neutral"},
+  {"jp": "{一回|いっかい}だけ、やらせて！", "en": "Let me have a go, just once!", "register": "casual", "note": "Causative 〜させて = let me. Kids say it a lot."},
+  {"jp": "よかったら、{前|まえ}の{席|せき|seat|4}、{取って|とって}おいてくれる？", "en": "If you can, would you save me a seat at the front?", "register": "casual", "note": "{席|せき}を{取|と}っておく = save a seat in advance."}
+ ],
+ "dialogue_setting": "The {公民館|こうみんかん} hall, Sunday afternoon, ten minutes before the concert. You came with {颯太|そうた}.",
+ "dialogue": [
+  {"who": "mio", "speaker": "澪", "jp": "アルちゃん、{来て|きて}くれてありがとう！{聞いて|きいて}、{留学|りゅうがく|studying abroad|3}の{面接|めんせつ|interview|3}、{通った|とおった|to pass (a test)|4}の！", "en": "アルちゃん, thanks for coming! Listen, I passed the exchange interview!", "register": "casual"},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "jp": "おめでとう！{演奏会|えんそうかい|concert, recital|2}の{前|まえ}に{最高|さいこう|the best|4}のニュースだね。{客席|きゃくせき|audience seats|2}から{応援|おうえん|cheering on, support|4}してるよ。", "en": "Congratulations! Best news ever, right before the concert. I'll be cheering you on from the audience.", "register": "casual"},
+  {"who": "mio", "speaker": "澪", "jp": "ありがとう。でも{本番|ほんばん|the real performance|3}で{吹く|ふく|to blow, play (a wind instrument)|3}たびに、{手|て}が{震える|ふるえる|to shake, tremble|3}んだよね。{ガチで||(slang) seriously, for real|3}。", "en": "Thanks. But every time I play for real, my hands shake. Seriously.", "register": "slang", "note": "ガチで is teen slang for {本当|ほんとう}に."},
+  {"who": "mio", "speaker": "澪", "jp": "ねえ、ソロのとこ、{動画|どうが|video|4}{撮って|とって|to film|4}もらえない？あとで{見直したい|みなおしたい|to watch again, review|3}から。", "en": "Hey, could you film my solo? I want to watch it back later.", "register": "casual", "note": "とこ = ところ (the part). 〜てもらえない？ = a soft casual request."},
+  {"who": "sota", "speaker": "颯太", "jp": "ねえねえ、{澪|みお}ちゃん！{終わったら|おわったら}、トランペット{一回|いっかい}{吹かせて|ふかせて|let (me) play it|3}！", "en": "Hey hey, {澪|みお}! When it's over, let me play the trumpet once!", "register": "casual"},
+  {"who": "you", "speaker": "アルちゃん", "me": true, "jp": "{颯太|そうた}は{人|ひと}に{会う|あう}たびに{何か|なにか}{頼む|たのむ|to ask for|4}よね。{動画|どうが}は{任せて|まかせて|to leave it to (someone)|4}！", "en": "{颯太|そうた}, every time you meet someone you ask for something. The video, leave it to me!", "register": "casual"}
+ ],
+ "listening": {
+  "type": "voicemail",
+  "intro": "Just before the concert, {恵子|けいこ}さん leaves a message on your phone.",
+  "who": "keiko",
+  "lines": [
+   {"who": "keiko", "jp": "{恵子|けいこ}です。{演奏会|えんそうかい|concert|2}、{楽しんで|たのしんで}ね。", "en": "It's {恵子|けいこ}. Enjoy the concert."},
+   {"who": "keiko", "jp": "{帰り|かえり}に{商店街|しょうてんがい}で、お{餅|もち|rice cake|4}を{二袋|ふたふくろ}{買って|かって}きてくれる？お{願い|ねがい}ね。", "en": "On the way back, could you buy two bags of rice cakes on the shopping street? Thanks."}
+  ],
+  "question": "{恵子|けいこ}さんは{何|なに}を{頼みました|たのみました}か。",
+  "options": ["おもちを二ふくろ買ってくる", "おもちを二つ作る", "えんそうかいの動画をとる", "しょうてんがいで待つ"],
+  "explain": "お{餅|もち}を{二袋|ふたふくろ}{買|か}ってきてくれる？ = could you buy two bags of rice cakes and bring them home?"
+ },
+ "grammar": {
+  "id": "n3-tabi-ni",
+  "pattern": "〜たびに",
+  "level": "N3",
+  "meaning": "every time",
+  "form": "verb: dictionary form + たびに ({吹|ふ}く → {吹|ふ}くたびに, {会|あ}う → {会|あ}うたびに) · noun: + のたびに ({旅行|りょこう}のたびに, {試合|しあい}のたびに)",
+  "explanation": "Every time A happens, B happens too: often a feeling, a habit or a change. A bit stronger than 〜とき、いつも. The classic mistake: it never follows the た-form ({会|あ}うたびに, not {会|あ}ったたびに).",
+  "src": ["d2", "d5", "p2"],
+  "mark": ["吹くたびに", "会うたびに", "練習するたびに", "聞くたびに", "旅行のたびに"],
+  "examples": [
+   {"jp": "この{歌|うた}を{聞く|きく}たびに、スペインを{思い出す|おもいだす}。", "en": "Every time I hear this song, I think of Spain."},
+   {"jp": "{旅行|りょこう}のたびに、{写真|しゃしん}を{撮り|とり}すぎちゃう。", "en": "Every time I travel, I take far too many photos."}
+  ],
+  "quiz": {
+   "question": "{颯太|そうた}は{会う|あう}＿＿、サッカーの{話|はなし}をする。",
+   "en": "Every time I meet {颯太|そうた}, he talks about football.",
+   "options": ["たびに", "たびで", "たびが", "ために"],
+   "explain": "Dictionary form + たびに. ために means 'in order to'."
+  },
+  "quiz_more": [
+   {
+    "question": "{雪|ゆき}が＿＿、{田中|たなか}さんは5{時|じ}に{起きて|おきて}{雪|ゆき}かきをする。",
+    "en": "Every time it snows, {田中|たなか}さん gets up at 5 to shovel.",
+    "options": ["降るたびに", "降ったたびに", "降りたびに", "降るのたびに"],
+    "explain": "Verbs take the dictionary form: {降|ふ}るたびに. No た-form, no の."
+   },
+   {
+    "question": "{試験|しけん}＿＿、{緊張|きんちょう}してお{腹|なか}が{痛く|いたく}なる。",
+    "en": "Every exam, I get so nervous my stomach hurts.",
+    "options": ["のたびに", "たびに", "なたびに", "のたびで"],
+    "explain": "After a noun, add の: {試験|しけん}のたびに."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "入場無料",
+  "reading": "にゅうじょうむりょう",
+  "romaji": "nyūjō muryō",
+  "meaning": "free admission",
+  "where": "On the concert poster at the {公民館|こうみんかん} door.",
+  "breakdown": "{入場|にゅうじょう}: 入 enter + 場 place → 'entry'; {無料|むりょう}: 無 none + 料 fee → 'free'.",
+  "related": "{入場券|にゅうじょうけん} = admission ticket; {有料|ゆうりょう} = there's a charge."
+ },
+ "tip": {
+  "mark": "部",
+  "title": "Clubs don't stop for winter",
+  "body": "School clubs ({部活|ぶかつ}) often keep practising into the winter holidays and start again in early January. Brass bands usually give one or two concerts a year, often free, for families and the town."
+ },
+ "challenge": {
+  "type": "pick",
+  "prompt": "After the concert {颯太|そうた} suddenly goes shy. Ask {澪|みお} for him, casually: could she let him try the trumpet a bit?",
+  "options": [
+   {"jp": "{颯太|そうた}にも、ちょっと{吹|ふ}かせてもらえない？", "ok": true, "why": "Causative {吹|ふ}かせて (let him play) + もらえない？: a soft, casual request."},
+   {"jp": "{颯太|そうた}にも、ちょっと{吹|ふ}いてもらえない？", "ok": false, "why": "No causative: it sounds like you want {颯太|そうた} to play for you, not to be allowed to."},
+   {"jp": "{颯太|そうた}にも、ちょっと{吹|ふ}かせていただけませんか。", "ok": false, "why": "Grammatical, but far too stiff for a student you joke with."},
+   {"jp": "{颯太|そうた}にも、ちょっと{吹|ふ}かせたい？", "ok": false, "why": "'Do you want to let him play?' is a question, not a request."}
+  ],
+  "model_answer": "{颯太|そうた}にも、ちょっと{吹かせて|ふかせて|let (him) play|3}もらえない？",
+  "hint": "causative + てもらえない？",
+  "explanation": "{吹|ふ}かせる is the causative of {吹|ふ}く: 'let (him) play'. Adding 〜てもらえない？ turns it into a gentle casual request, right for {澪|みお}. With a teacher you'd say 〜ていただけませんか."
+ },
+ "vocab": [
+  {"jp": "{通|とお}る", "reading": "とおる", "en": "to pass (a test); to go through", "level": "N3", "src": "d0", "surface": "通った", "note": "{面接|めんせつ}に{通|とお}る = pass an interview. {試験|しけん}に{通|とお}る too."},
+  {"jp": "{演奏会|えんそうかい}", "reading": "えんそうかい", "en": "concert, recital", "level": "N3", "src": "d1", "surface": "演奏会", "note": "{演奏|えんそう} playing music + {会|かい} gathering. Classical or school bands, not pop."},
+  {"jp": "{客席|きゃくせき}", "reading": "きゃくせき", "en": "audience seats", "level": "N3", "src": "d1", "surface": "客席", "note": "{客|きゃく} guest + {席|せき} seat."},
+  {"jp": "{応援|おうえん}", "reading": "おうえん", "en": "cheering on, support", "level": "N3", "src": "d1", "surface": "応援", "note": "{応援|おうえん}してるよ = I'm rooting for you. Very common encouragement."},
+  {"jp": "{本番|ほんばん}", "reading": "ほんばん", "en": "the real thing (performance, exam day)", "level": "N3", "src": "d2", "surface": "本番", "note": "Opposite of {練習|れんしゅう} or rehearsal. {本番|ほんばん}に{強|つよ}い = good under pressure."},
+  {"jp": "{震|ふる}える", "reading": "ふるえる", "en": "to shake, tremble", "level": "N3", "src": "d2", "surface": "震える", "note": "From nerves or cold. {手|て}が{震|ふる}える, {声|こえ}が{震|ふる}える."},
+  {"jp": "{見直|みなお}す", "reading": "みなおす", "en": "to look at again; to review", "level": "N3", "src": "d3", "surface": "見直したい", "note": "{見|み}る + {直|なお}す fix → look again to check. Also 'see someone in a better light'."},
+  {"jp": "{任|まか}せる", "reading": "まかせる", "en": "to leave (a task) to someone", "level": "N3", "src": "d5", "surface": "任せて", "note": "{任|まか}せて！ = leave it to me! Confident and friendly."},
+  {"jp": "{練習|れんしゅう}", "reading": "れんしゅう", "en": "practice", "level": "N4", "src": "p2", "surface": "練習", "note": "{練習|れんしゅう}する = to practise. {朝練|あされん} = morning club practice."}
+ ],
+ "kanji_study": [
+  {
+   "kanji": "任",
+   "track": "lesson",
+   "on": "ニン",
+   "kun": "まか(せる)・まか(す)",
+   "meaning": "entrust; duty",
+   "parts": "亻 person radical + 壬 a load hung on a pole → a person carrying the load someone handed them: duty, entrust.",
+   "lookalike": "Not 住 (live): 住 has 主 on the right, 任 has 壬.",
+   "words": [
+    {"jp": "{任|まか}せる", "reading": "まかせる", "en": "to leave to someone"},
+    {"jp": "{責任|せきにん}", "reading": "せきにん", "en": "responsibility"},
+    {"jp": "{担任|たんにん}", "reading": "たんにん", "en": "homeroom teacher"}
+   ],
+   "decoys": {"meanings": ["to live", "to carry", "to rest"], "readings": ["まかえる", "にんせる", "まなせる"]}
+  },
+  {
+   "kanji": "性",
+   "track": "n3",
+   "on": "セイ・ショウ",
+   "kun": "",
+   "meaning": "nature, character; sex, gender",
+   "parts": "忄 heart radical + 生 be born, life → the heart you are born with: your nature.",
+   "lookalike": "Not 姓 (surname): 姓 has 女 woman on the left, 性 has 忄 heart.",
+   "words": [
+    {"jp": "{性格|せいかく}", "reading": "せいかく", "en": "personality"},
+    {"jp": "{女性|じょせい}", "reading": "じょせい", "en": "woman"},
+    {"jp": "{相性|あいしょう}", "reading": "あいしょう", "en": "compatibility, chemistry"}
+   ],
+   "decoys": {"meanings": ["birth", "feeling", "life"], "readings": ["しょうかく", "せいがく", "せかく"]}
+  }
+ ],
+ "extras": [
+  {
+   "title": "Asking for favours, soft to polite",
+   "title_jp": "{頼み方|たのみかた}",
+   "intro": "The same favour, from friends to teachers.",
+   "items": [
+    {"jp": "{撮って|とって}！", "en": "Film it!", "note": "Close friends, family."},
+    {"jp": "{撮って|とって}くれる？", "en": "Will you film it?"},
+    {"jp": "{撮って|とって}もらえない？", "en": "Could you film it?", "note": "Softer: you'd be receiving a favour."},
+    {"jp": "{撮って|とって}いただけますか。", "en": "Could you film it, please?", "note": "Teachers, staff, strangers."}
+   ]
+  },
+  {
+   "title": "At a school concert",
+   "title_jp": "{吹奏楽部|すいそうがくぶ}",
+   "intro": "Words you'll hear around a brass band.",
+   "items": [
+    {"jp": "{指揮者|しきしゃ|conductor|2}", "en": "conductor"},
+    {"jp": "{楽譜|がくふ|sheet music|2}", "en": "sheet music"},
+    {"jp": "アンコール！", "en": "Encore!"},
+    {"jp": "{緊張|きんちょう}したけど、{楽しかった|たのしかった}！", "en": "I was nervous, but it was fun!"}
+   ]
+  }
+ ]
+}
