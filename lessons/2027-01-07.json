@@ -1,0 +1,425 @@
+{
+ "topic": "Sold out of the seven herbs",
+ "category": "money-work",
+ "function": "politeness",
+ "format": "text",
+ "cast": [],
+ "guest": {
+  "name": "石井さん",
+  "name_jp": "{石井勝|いしいまさる}さん",
+  "role": "owner of {八百勝|やおかつ}, the greengrocer on the shopping street; brisk, friendly shopkeeper talk, very polite on paper",
+  "voice": "m",
+  "age": 63
+ },
+ "title_jp": "{七草|ななくさ}セットのお{詫び|わび}",
+ "context": "Thursday 7 January, the day for {七草|ななくさ}がゆ. {恵子|けいこ}さん sends アルちゃん to the greengrocer for the herbs, but a polite notice is taped to the box instead.",
+ "scene": "7 January. {恵子|けいこ}さん needs the seven herbs for the rice porridge. At the greengrocer, the box is empty, with a very polite notice on it.",
+ "keep": [
+  "p0"
+ ],
+ "phrases": [
+  {
+   "jp": "ご{迷惑|めいわく|trouble, inconvenience|3}をおかけして、{申し訳ありません|もうしわけありません|I'm very sorry|3}。",
+   "en": "I'm very sorry for the trouble.",
+   "register": "polite",
+   "note": "The standard work apology. Even more formal: {申|もう}し{訳|わけ}ございません."
+  },
+  {
+   "jp": "{今年|ことし}は{野菜|やさい}が{高い|たかい}らしいよ。",
+   "en": "Apparently vegetables are expensive this year.",
+   "register": "casual"
+  },
+  {
+   "jp": "{少々|しょうしょう|a little (polite)|3}お{待ち|まち}いただけますか。",
+   "en": "Could you wait a moment, please?",
+   "register": "polite",
+   "note": "Shop and phone keigo. {少々|しょうしょう} = polite ちょっと."
+  },
+  {
+   "jp": "{七草|ななくさ|the seven spring herbs|3}がゆを{食べる|たべる}と、{一年|いちねん}{元気|げんき}に{過ごせる|すごせる}らしい。",
+   "en": "They say if you eat seven-herb porridge, you'll stay healthy all year.",
+   "register": "neutral"
+  },
+  {
+   "jp": "{税込|ぜいこみ|tax included|3}でおいくらですか。",
+   "en": "How much is it with tax?",
+   "register": "polite",
+   "note": "Opposite: {税抜|ぜいぬ}き (before tax). Price tags often show both."
+  }
+ ],
+ "dialogue_setting": "A handwritten notice taped to an empty cardboard box outside {八百勝|やおかつ}, the greengrocer on the shopping street, on a frosty morning.",
+ "text_title": "{八百勝|やおかつ}よりお{知らせ|しらせ}",
+ "dialogue": [
+  {
+   "who": "guest",
+   "speaker": "Title",
+   "jp": "{七草|ななくさ|the seven spring herbs|3}セット{品切れ|しなぎれ|out of stock|3}のお{詫び|わび|apology|2}",
+   "en": "Apology: seven-herb sets out of stock"
+  },
+  {
+   "who": "guest",
+   "speaker": "Notice",
+   "jp": "{本日|ほんじつ}の{七草|ななくさ|the seven spring herbs|3}セットは、{午前中|ごぜんちゅう}に{品切れ|しなぎれ|out of stock|3}となりました。",
+   "en": "Today's seven-herb sets sold out in the morning."
+  },
+  {
+   "who": "guest",
+   "speaker": "Apology",
+   "jp": "ご{迷惑|めいわく|trouble, inconvenience|3}をおかけして、{誠に|まことに|truly, sincerely (formal)|2}{申し訳ございません|もうしわけございません|I'm terribly sorry|3}。",
+   "en": "We sincerely apologise for the inconvenience."
+  },
+  {
+   "who": "guest",
+   "speaker": "Reason",
+   "jp": "{市場|しじょう|(wholesale) market|3}の{話|はなし}では、{年末|ねんまつ}の{寒波|かんぱ|cold wave|2}のせいで、{今年|ことし}は{数|かず|number, quantity|3}が{少ない|すくない}らしいです。",
+   "en": "According to the market, the cold wave at the end of the year means there are apparently fewer this year."
+  },
+  {
+   "who": "guest",
+   "speaker": "Restock",
+   "jp": "{午後|ごご}3{時|じ}に、{少しだけ|すこしだけ}{追加|ついか|addition, extra|3}で{入荷|にゅうか|new stock arriving|2}いたします。",
+   "en": "A few more will come in at 3 p.m."
+  },
+  {
+   "who": "guest",
+   "speaker": "Price",
+   "jp": "{仕入れ値|しいれね|wholesale cost|2}が{上がった|あがった}ため、1パック398{円|えん}（{税込|ぜいこみ|tax included|3}）とさせていただきます。",
+   "en": "As our costs have gone up, the price will be 398 yen a pack (tax included)."
+  },
+  {
+   "who": "guest",
+   "speaker": "Thanks",
+   "jp": "いつもご{来店|らいてん|coming to the shop|2}いただき、ありがとうございます。{八百勝|やおかつ} {石井|いしい}",
+   "en": "Thank you, as always, for shopping with us. {八百勝|やおかつ}, {石井|いしい}"
+  }
+ ],
+ "listening": {
+  "type": "dictation",
+  "intro": "{石井|いしい}さん spots you reading the notice and leans out of the shop.",
+  "who": "guest",
+  "lines": [
+   {
+    "who": "guest",
+    "jp": "3{時|じ}にまた{来て|きて}よ。ひとつ{取っておく|とっておく|to set aside, keep|3}から。",
+    "en": "Come back at three. I'll put one aside for you."
+   }
+  ]
+ },
+ "grammar": {
+  "id": "n4-rashii",
+  "pattern": "〜らしい",
+  "level": "N4",
+  "meaning": "apparently, it seems (from what I hear)",
+  "form": "verb / い-adj: plain form + らしい ({過|す}ごせる → {過|す}ごせるらしい, {少|すく}ない → {少|すく}ないらしい) · な-adj / noun: no だ ({静|しず}か → {静|しず}からしい, {雨|あめ} → {雨|あめ}らしい) · past: + たらしい ({行|い}った → {行|い}ったらしい)",
+  "explanation": "Passes on what you heard or read, with a sense of 'it seems likely'. Softer and vaguer than 〜そうだ, which simply reports. Classic mistake: no だ before it, so {雨|あめ}らしい, never {雨|あめ}だらしい.",
+  "src": [
+   "d3",
+   "p1",
+   "p3"
+  ],
+  "mark": [
+   "少ないらしい",
+   "高いらしい",
+   "過ごせるらしい",
+   "なるらしい",
+   "美味しいらしい"
+  ],
+  "examples": [
+   {
+    "jp": "{来週|らいしゅう}はもっと{寒く|さむく}なるらしいです。",
+    "en": "Apparently it's going to get even colder next week."
+   },
+   {
+    "jp": "{駅前|えきまえ}の{新しい|あたらしい}{店|みせ}、ラーメンが{美味しい|おいしい}らしいよ。",
+    "en": "I hear the new place by the station does good ramen."
+   }
+  ],
+  "quiz": {
+   "question": "{天気予報|てんきよほう}によると、{明日|あした}は{雪|ゆき}＿＿。",
+   "en": "According to the forecast, it'll be snow tomorrow.",
+   "options": [
+    "らしい",
+    "だらしい",
+    "のらしい",
+    "ならしい"
+   ],
+   "explain": "Nouns take らしい directly: {雪|ゆき}らしい, with no だ."
+  },
+  "quiz_more": [
+   {
+    "question": "{店|みせ}の{人|ひと}の{話|はなし}では、{七草|ななくさ}セットは{午前中|ごぜんちゅう}に＿＿らしい。",
+    "en": "According to the shop, the herb sets sold out in the morning.",
+    "options": [
+     "売り切れた",
+     "売り切れ",
+     "売り切れて",
+     "売り切れよう"
+    ],
+    "explain": "It already happened: plain past + らしい."
+   },
+   {
+    "question": "{空|そら}が{真っ暗|まっくら|pitch dark|3}だ。{今|いま}にも{雨|あめ}が{降り|ふり}＿＿だ。",
+    "en": "The sky's pitch dark. It looks like it'll rain any minute.",
+    "options": [
+     "そう",
+     "らしい",
+     "そうな",
+     "らしく"
+    ],
+    "explain": "You see it yourself right now: stem + そうだ. らしい is for what you heard."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "本日入荷",
+  "reading": "ほんじつにゅうか",
+  "romaji": "honjitsu nyūka",
+  "meaning": "arrived today, fresh in",
+  "where": "A red card stuck on the crates of mandarins and leeks outside {八百勝|やおかつ}.",
+  "breakdown": "{本日|ほんじつ} today + {入荷|にゅうか}: 入 come in + 荷 goods → 'goods that came in today'.",
+  "related": "{入荷待|にゅうかま}ち = waiting for new stock."
+ },
+ "tip": {
+  "mark": "草",
+  "title": "Seven herbs on 7 January",
+  "body": "On 7 January people eat {七草|ななくさ}がゆ, rice porridge with seven spring herbs (せり, なずな, ごぎょう, はこべら, ほとけのざ, すずな, すずしろ), to wish for a healthy year and rest the stomach after New Year feasting. Few people pick them now: supermarkets sell ready-made packs for a few days only."
+ },
+ "challenge": {
+  "type": "fix",
+  "prompt": "{恵子|けいこ}さん on the family LINE: 「{七草|ななくさ}、あった？」 You replied, but one part is wrong.",
+  "parts": [
+   {
+    "jp": "{午前中|ごぜんちゅう}に{売り切れて|うりきれて}いました。"
+   },
+   {
+    "jp": "{寒波|かんぱ}のせいで、"
+   },
+   {
+    "jp": "{数|かず}が{少ない|すくない}だらしいです。",
+    "wrong": true,
+    "why": "い-adjectives take らしい directly: {少|すく}ないらしい, no だ."
+   },
+   {
+    "jp": "3{時|じ}にまた{行きます|いきます}。"
+   }
+  ],
+  "model_answer": "{午前中|ごぜんちゅう}に{売り切れて|うりきれて}いました。{寒波|かんぱ|cold wave|2}のせいで、{数|かず|number, quantity|3}が{少ない|すくない}らしいです。3{時|じ}にまた{行きます|いきます}。",
+  "explanation": "〜のせいで blames the cold wave. {少|すく}ないらしい passes on what the notice said without claiming it as your own fact, and です makes it polite for {恵子|けいこ}さん. Nothing goes between an い-adjective and らしい.",
+  "hint": "Look at what comes right before らしい"
+ },
+ "vocab": [
+  {
+   "jp": "{迷惑|めいわく}",
+   "reading": "めいわく",
+   "en": "trouble, inconvenience",
+   "level": "N3",
+   "src": "p0",
+   "surface": "迷惑",
+   "note": "ご{迷惑|めいわく}をおかけする = to cause trouble (humble). {迷惑|めいわく}メール = spam."
+  },
+  {
+   "jp": "{申|もう}し{訳|わけ}ありません",
+   "reading": "もうしわけありません",
+   "en": "I'm very sorry",
+   "level": "N3",
+   "src": "p0",
+   "surface": "申し訳ありません",
+   "note": "Work and customer apologies; much stronger than すみません."
+  },
+  {
+   "jp": "{少々|しょうしょう}",
+   "reading": "しょうしょう",
+   "en": "a little, a moment (polite)",
+   "level": "N3",
+   "src": "p2",
+   "surface": "少々",
+   "note": "Polite ちょっと: {少々|しょうしょう}お{待|ま}ちください."
+  },
+  {
+   "jp": "{税込|ぜいこみ}",
+   "reading": "ぜいこみ",
+   "en": "tax included",
+   "level": "N3",
+   "src": "p4",
+   "surface": "税込",
+   "note": "{税|ぜい} tax + {込|こ}み included. Opposite: {税抜|ぜいぬ}き."
+  },
+  {
+   "jp": "{品切|しなぎ}れ",
+   "reading": "しなぎれ",
+   "en": "out of stock",
+   "level": "N3",
+   "src": "d0",
+   "surface": "品切れ",
+   "note": "Shop word, more formal than {売|う}り{切|き}れ."
+  },
+  {
+   "jp": "お{詫|わ}び",
+   "reading": "おわび",
+   "en": "apology",
+   "level": "N2",
+   "src": "d0",
+   "surface": "お詫び",
+   "note": "Written, formal: お{詫|わ}び{申|もう}し{上|あ}げます. Seen on shop and train notices."
+  },
+  {
+   "jp": "{市場|しじょう}",
+   "reading": "しじょう",
+   "en": "(wholesale) market",
+   "level": "N3",
+   "src": "d3",
+   "surface": "市場",
+   "note": "Also read いちば (a market you walk around)."
+  },
+  {
+   "jp": "{数|かず}",
+   "reading": "かず",
+   "en": "number, quantity",
+   "level": "N3",
+   "src": "d3",
+   "surface": "数",
+   "note": "{数|かず}が{少|すく}ない = there are few. {数|すう} in compounds: {人数|にんずう}."
+  },
+  {
+   "jp": "{追加|ついか}",
+   "reading": "ついか",
+   "en": "addition, extra",
+   "level": "N3",
+   "src": "d4",
+   "surface": "追加",
+   "note": "{追加|ついか}で = as extra. {追加注文|ついかちゅうもん} = an extra order."
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "品",
+   "track": "lesson",
+   "on": "ヒン",
+   "kun": "しな",
+   "meaning": "goods, article; quality",
+   "parts": "Three 口 boxes stacked up → items piled on a shop shelf: goods.",
+   "lookalike": "Not 器 (container): 器 has four 口 around 大.",
+   "words": [
+    {
+     "jp": "{品切|しなぎ}れ",
+     "reading": "しなぎれ",
+     "en": "out of stock"
+    },
+    {
+     "jp": "{商品|しょうひん}",
+     "reading": "しょうひん",
+     "en": "product, goods"
+    },
+    {
+     "jp": "{品物|しなもの}",
+     "reading": "しなもの",
+     "en": "article, goods"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "container",
+     "mouth",
+     "to sell"
+    ],
+    "readings": [
+     "ひんぎれ",
+     "しなきれ",
+     "ひんせつ"
+    ]
+   }
+  },
+  {
+   "kanji": "加",
+   "track": "n3",
+   "on": "カ",
+   "kun": "くわ(える)・くわ(わる)",
+   "meaning": "to add, join",
+   "parts": "力 strength + 口 mouth → adding your voice to someone's effort: to add, to join in.",
+   "lookalike": "Not 協 (cooperate): 協 has 十 and three 力; 加 is one 力 and 口.",
+   "words": [
+    {
+     "jp": "{追加|ついか}",
+     "reading": "ついか",
+     "en": "addition, extra"
+    },
+    {
+     "jp": "{参加|さんか}",
+     "reading": "さんか",
+     "en": "taking part"
+    },
+    {
+     "jp": "{加|くわ}える",
+     "reading": "くわえる",
+     "en": "to add"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "strength",
+     "to cooperate",
+     "to reduce"
+    ],
+    "readings": [
+     "ついが",
+     "ついけ",
+     "おいか"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "Shop keigo on paper",
+   "title_jp": "お{店|みせ}の{敬語|けいご}",
+   "intro": "Phrases you'll see on notices and hear at the till.",
+   "items": [
+    {
+     "jp": "〜とさせていただきます",
+     "en": "we will (humbly) make it…",
+     "note": "Announcing prices, closures, changes."
+    },
+    {
+     "jp": "{入荷|にゅうか|new stock arriving|2}いたします",
+     "en": "will come in (humble)",
+     "note": "いたす = humble する."
+    },
+    {
+     "jp": "ご{来店|らいてん|coming to the shop|2}いただき",
+     "en": "thank you for visiting",
+     "note": "Always followed by ありがとうございます."
+    },
+    {
+     "jp": "ご{了承|りょうしょう|understanding, acceptance|2}ください",
+     "en": "we ask for your understanding",
+     "note": "The polite 'sorry, that's how it is'."
+    }
+   ]
+  },
+  {
+   "title": "The seven spring herbs",
+   "title_jp": "{春|はる}の{七草|ななくさ}",
+   "intro": "Kids learn them as a rhythm: せり、なずな、ごぎょう、はこべら、ほとけのざ、すずな、すずしろ.",
+   "items": [
+    {
+     "jp": "せり",
+     "en": "Japanese parsley"
+    },
+    {
+     "jp": "なずな",
+     "en": "shepherd's purse"
+    },
+    {
+     "jp": "すずな",
+     "en": "turnip",
+     "note": "Today: かぶ."
+    },
+    {
+     "jp": "すずしろ",
+     "en": "daikon radish",
+     "note": "Today: {大根|だいこん}."
+    }
+   ]
+  }
+ ]
+}

@@ -456,5 +456,12 @@
   "category": "work-volunteering",
   "function": "hearsay",
   "format": "dialogue"
+ },
+ {
+  "id": "2027-01-07",
+  "topic": "Sold out of the seven herbs",
+  "category": "money-work",
+  "function": "politeness",
+  "format": "text"
  }
 ]
