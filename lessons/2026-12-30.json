@@ -1,0 +1,417 @@
+{
+ "topic": "Buying New Year decorations at the shrine",
+ "category": "traditions",
+ "function": "opinions",
+ "format": "dialogue",
+ "cast": [],
+ "guest": {
+  "name": "宮下さん",
+  "name_jp": "{宮下正雄|みやしたまさお}さん",
+  "role": "the elderly priest of {鷹ノ原神社|たかのはらじんじゃ}; slow, old-fashioned polite speech",
+  "voice": "m",
+  "age": 74
+ },
+ "title_jp": "しめ{飾り|かざり}と{一夜飾り|いちやかざり}",
+ "context": "Wednesday 30 December: with {田中|たなか}さん's back still bad, アルちゃん goes to {鷹ノ原神社|たかのはらじんじゃ} to buy the New Year rope decoration, after picking up rice cakes at the rice shop. The old priest, {宮下|みやした}さん, already knows about the bad back.",
+ "scene": "Wednesday. {田中|たなか}さん can't lift a thing, so you're at the town shrine to buy the New Year decoration. The old priest already knows why.",
+ "keep": [
+  "p0"
+ ],
+ "phrases": [
+  {
+   "jp": "{買い物|かいもの}のついでに、{神社|じんじゃ}に{寄って|よって|to drop in|4}きた。",
+   "en": "I stopped by the shrine while I was out shopping.",
+   "register": "casual",
+   "note": "Noun + のついでに = while doing that anyway."
+  },
+  {
+   "jp": "{私|わたし}は、いい{習慣|しゅうかん}だと{思います|おもいます}。",
+   "en": "I think it's a good custom.",
+   "register": "polite",
+   "note": "The basic way to give an opinion politely."
+  },
+  {
+   "jp": "{迷信|めいしん|superstition|2}かもしれないけど、{大切|たいせつ}にしたいな。",
+   "en": "It might be a superstition, but I want to respect it.",
+   "register": "casual"
+  },
+  {
+   "jp": "それは{縁起|えんぎ|luck, omen|3}が{悪い|わるい}ですよ。",
+   "en": "That's bad luck, you know.",
+   "register": "polite",
+   "note": "{縁起|えんぎ}がいい = lucky. You'll hear both all through New Year."
+  },
+  {
+   "jp": "{正直|しょうじき}、どっちでもいいと{思う|おもう}。",
+   "en": "Honestly, I don't think it matters either way.",
+   "register": "casual",
+   "note": "A soft way to say you don't mind."
+  }
+ ],
+ "dialogue_setting": "The charm window of {鷹ノ原神社|たかのはらじんじゃ}, Wednesday morning. Snow on the roofs, a bag of rice cakes in your hand.",
+ "dialogue": [
+  {
+   "who": "guest",
+   "speaker": "宮下さん",
+   "jp": "おや、{田中|たなか}さんとこのスペインの{方|かた}ですな。お{父|とう}さんの{腰|こし}の{具合|ぐあい|condition (of health)|3}はどうです？",
+   "en": "Ah, you're the Spanish gentleman staying with the 田中s. How's his back?",
+   "register": "polite",
+   "note": "〜ですな = old-fashioned 〜ですね. 〜とこ = 〜のところ (the household of)."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "もうご{存じ|ぞんじ|(honorific) to know|2}なんですか！{米屋|こめや}でお{餅|もち|rice cake|4}を{受け取る|うけとる|to receive, collect|3}ついでに、しめ{飾り|かざり|New Year rope decoration|3}を{買い|かい}に{来ました|きました}。",
+   "en": "You already know! I'm picking up rice cakes at the rice shop, so while I'm at it I came to buy the New Year decoration.",
+   "register": "polite"
+  },
+  {
+   "who": "guest",
+   "speaker": "宮下さん",
+   "jp": "{今日|きょう}{飾る|かざる|to decorate, put up|3}なら{結構|けっこう}。{明日|あした}だと「{一夜飾り|いちやかざり|decorating only the night before|2}」で、{縁起|えんぎ|luck, omen|3}が{悪い|わるい}と{言われとります|いわれとります}。",
+   "en": "If you put it up today, that's fine. Tomorrow would be 'one-night decorating', which is said to bring bad luck.",
+   "register": "dialect",
+   "note": "〜とります = 〜ております (older regional speech)."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "{迷信|めいしん|superstition|2}かもしれませんが、{私|わたし}は{好き|すき}です。{神様|かみさま|god, the gods|4}を{丁寧|ていねい}に{迎える|むかえる}{感じ|かんじ}がして。",
+   "en": "It might be a superstition, but I like it. It feels like welcoming the gods properly.",
+   "register": "polite"
+  },
+  {
+   "who": "guest",
+   "speaker": "宮下さん",
+   "jp": "わしもそう{思います|おもいます}な。{伝統|でんとう|tradition|3}は、{形|かたち}より{心|こころ}が{大事|だいじ|important|4}だと{考えとります|かんがえとります}。",
+   "en": "I think so too. With traditions, I believe the heart matters more than the form.",
+   "register": "dialect",
+   "note": "わし = an old man's 'I'. Don't copy it."
+  },
+  {
+   "who": "you",
+   "speaker": "アルちゃん",
+   "me": true,
+   "jp": "じゃあ、{一つ|ひとつ}ください。{元日|がんじつ}は{初詣|はつもうで|first shrine visit of the year|3}のついでに、お{守り|まもり|charm, amulet|3}も{買います|かいます}ね！",
+   "en": "Then one, please. On New Year's Day I'll buy a charm too when I come for my first shrine visit!",
+   "register": "polite"
+  }
+ ],
+ "listening": {
+  "type": "ladder",
+  "intro": "As you leave, {宮下|みやした}さん calls a reminder after you.",
+  "who": "guest",
+  "lines": [
+   {
+    "who": "guest",
+    "jp": "{今日|きょう}のうちに、{玄関|げんかん|entrance (of a house)|3}に{飾って|かざって|to put up|3}くださいな。",
+    "en": "Put it up on the front door today, won't you."
+   }
+  ]
+ },
+ "grammar": {
+  "id": "n3-tsuide-ni",
+  "pattern": "〜ついでに",
+  "level": "N3",
+  "meaning": "while you're at it",
+  "form": "verb: dictionary or た-form + ついでに ({受|う}け{取|と}るついでに, {行|い}ったついでに) · noun: + のついでに ({買|か}い{物|もの}のついでに, {初詣|はつもうで}のついでに)",
+  "explanation": "You're doing A anyway, so you also do B, taking the chance. A is the main errand; B is the extra. Don't swap them: {神社|じんじゃ}に{行|い}くついでに{旅行|りょこう}する sounds odd, because the trip is the big thing.",
+  "src": [
+   "d1",
+   "d5",
+   "p0"
+  ],
+  "mark": [
+   "受け取るついでに",
+   "初詣のついでに",
+   "買い物のついでに",
+   "行くついでに",
+   "散歩のついでに"
+  ],
+  "examples": [
+   {
+    "jp": "コンビニに{行く|いく}ついでに、ゴミを{出して|だして}くれる？",
+    "en": "While you're going to the konbini, could you take the rubbish out?"
+   },
+   {
+    "jp": "{散歩|さんぽ}のついでに、ポストに{手紙|てがみ}を{入れた|いれた}。",
+    "en": "I posted a letter while I was out for a walk."
+   }
+  ],
+  "quiz": {
+   "question": "{駅|えき}に{行く|いく}＿＿、{切符|きっぷ}も{買って|かって}きて。",
+   "en": "While you're going to the station, buy the tickets too.",
+   "options": [
+    "ついでに",
+    "ついで",
+    "のついでに",
+    "ついでで"
+   ],
+   "explain": "Verb dictionary form + ついでに, no の."
+  },
+  "quiz_more": [
+   {
+    "question": "{買い物|かいもの}＿＿ついでに、{郵便局|ゆうびんきょく}に{寄った|よった}。",
+    "en": "I stopped at the post office while I was shopping.",
+    "options": [
+     "の",
+     "な",
+     "に",
+     "を"
+    ],
+    "explain": "Noun + の + ついでに."
+   },
+   {
+    "question": "{米屋|こめや}に{行った|いった}＿＿、{神社|じんじゃ}に{寄った|よった}。",
+    "en": "While I was at the rice shop anyway, I dropped in at the shrine.",
+    "options": [
+     "ついでに",
+     "ついでで",
+     "のついでに",
+     "ついでを"
+    ],
+    "explain": "Verb (here た-form) + ついでに. の only comes after a noun."
+   }
+  ]
+ },
+ "kanji": {
+  "kanji": "授与所",
+  "reading": "じゅよしょ",
+  "romaji": "juyosho",
+  "meaning": "the shrine window for charms and talismans",
+  "where": "Above the little wooden window where {宮下|みやした}さん sits.",
+  "breakdown": "{授与所|じゅよしょ}: 授 give + 与 give, bestow + 所 place → 'the place where things are given'. Shrines avoid the word 'sell'.",
+  "related": "お{守|まも}り = charm; お{札|ふだ} = paper talisman for the home."
+ },
+ "tip": {
+  "mark": "飾",
+  "title": "When to put up New Year decorations",
+  "body": "Many families put up しめ{飾|かざ}り and {門松|かどまつ} around 28 December. The 29th is avoided because 9 (く) sounds like {苦|く}, suffering, and the 31st is 'one-night decorating', thought rude to the New Year god. They come down around 7 January (later in some regions)."
+ },
+ "challenge": {
+  "type": "sticker",
+  "prompt": "Back home, {颯太|そうた} on the family LINE: 「アルちゃん、{明日|あした}ハナばあちゃんとそば{打ち|うち|making (noodles) by hand|2}でしょ？{俺|おれ}もやりたい！」 You think that's a great idea. Which sticker?",
+  "stickers": [
+   "ii-ne",
+   "gomen",
+   "kowai",
+   "otsukaresama"
+  ],
+  "model_answer": "いいね！",
+  "hint": "He's suggesting something. Say 'sounds good'.",
+  "explanation": "いいね！ is the casual 'great idea!' for a suggestion. ごめん！ would sound like you're saying no, {怖|こわ}い… makes no sense here, and お{疲|つか}れ{様|さま}です is a work greeting, far too stiff for an 11-year-old."
+ },
+ "vocab": [
+  {
+   "jp": "{具合|ぐあい}",
+   "reading": "ぐあい",
+   "en": "condition (health, how something works)",
+   "level": "N3",
+   "src": "d0",
+   "surface": "具合",
+   "note": "{具合|ぐあい}が{悪|わる}い = feel unwell. Also for machines."
+  },
+  {
+   "jp": "{受|う}け{取|と}る",
+   "reading": "うけとる",
+   "en": "to receive, collect",
+   "level": "N3",
+   "src": "d1",
+   "surface": "受け取る",
+   "note": "{受|う}ける receive + {取|と}る take. Parcels, orders, change."
+  },
+  {
+   "jp": "{飾|かざ}る",
+   "reading": "かざる",
+   "en": "to decorate, put up (on display)",
+   "level": "N3",
+   "src": "d2",
+   "surface": "飾る",
+   "note": "{飾|かざ}り = a decoration. しめ{飾|かざ}り, {正月飾|しょうがつかざ}り."
+  },
+  {
+   "jp": "{縁起|えんぎ}",
+   "reading": "えんぎ",
+   "en": "luck, omen",
+   "level": "N2",
+   "src": "d2",
+   "surface": "縁起",
+   "note": "{縁起|えんぎ}がいい / {悪|わる}い = lucky / unlucky. {縁起物|えんぎもの} = lucky charm."
+  },
+  {
+   "jp": "{神様|かみさま}",
+   "reading": "かみさま",
+   "en": "god, the gods",
+   "level": "N4",
+   "src": "d3",
+   "surface": "神様",
+   "note": "Shinto has countless {神様|かみさま}, so no 'the one God' nuance."
+  },
+  {
+   "jp": "{伝統|でんとう}",
+   "reading": "でんとう",
+   "en": "tradition",
+   "level": "N3",
+   "src": "d4",
+   "surface": "伝統",
+   "note": "{伝統的|でんとうてき} = traditional."
+  },
+  {
+   "jp": "{大事|だいじ}",
+   "reading": "だいじ",
+   "en": "important, precious",
+   "level": "N4",
+   "src": "d4",
+   "surface": "大事",
+   "note": "A bit softer than {大切|たいせつ}. お{大事|だいじ}に = get well soon."
+  },
+  {
+   "jp": "{初詣|はつもうで}",
+   "reading": "はつもうで",
+   "en": "first shrine visit of the year",
+   "level": "N3",
+   "src": "d5",
+   "surface": "初詣",
+   "note": "{初|はつ} first + {詣|もうで} pilgrimage. Usually 1–3 January."
+  },
+  {
+   "jp": "お{守|まも}り",
+   "reading": "おまもり",
+   "en": "charm, amulet",
+   "level": "N3",
+   "src": "d5",
+   "surface": "守り",
+   "note": "From {守|まも}る (protect). One for exams, traffic safety, love…"
+  }
+ ],
+ "kanji_study": [
+  {
+   "kanji": "具",
+   "track": "lesson",
+   "on": "グ",
+   "kun": "",
+   "meaning": "tool, utensil; ingredient",
+   "parts": "An old drawing of a cauldron (now like 目) held up by two hands below → hands holding up a vessel: things provided, tools.",
+   "lookalike": "Not 貝 (shell): 具 has three lines inside and a long flat stroke underneath.",
+   "words": [
+    {
+     "jp": "{具合|ぐあい}",
+     "reading": "ぐあい",
+     "en": "condition"
+    },
+    {
+     "jp": "{家具|かぐ}",
+     "reading": "かぐ",
+     "en": "furniture"
+    },
+    {
+     "jp": "{道具|どうぐ}",
+     "reading": "どうぐ",
+     "en": "tool"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "eye",
+     "shell",
+     "to boil"
+    ],
+    "readings": [
+     "ぐわい",
+     "ぐうあい",
+     "くあい"
+    ]
+   }
+  },
+  {
+   "kanji": "治",
+   "track": "n3",
+   "on": "ジ・チ",
+   "kun": "なお(る)・なお(す)・おさ(める)",
+   "meaning": "govern; heal, cure",
+   "parts": "氵 water radical + 台 platform → building banks to keep rivers under control: govern; and a body brought back under control: heal.",
+   "lookalike": "Not 冶 (smelt): 冶 has two ice strokes 冫, 治 has three water strokes 氵.",
+   "words": [
+    {
+     "jp": "{治|なお}る",
+     "reading": "なおる",
+     "en": "to get better, heal"
+    },
+    {
+     "jp": "{政治|せいじ}",
+     "reading": "せいじ",
+     "en": "politics"
+    },
+    {
+     "jp": "{明治|めいじ}",
+     "reading": "めいじ",
+     "en": "the Meiji era"
+    }
+   ],
+   "decoys": {
+    "meanings": [
+     "platform",
+     "water",
+     "to start"
+    ],
+    "readings": [
+     "なおす",
+     "おさる",
+     "ちる"
+    ]
+   }
+  }
+ ],
+ "extras": [
+  {
+   "title": "New Year decorations",
+   "title_jp": "{正月飾り|しょうがつかざり|New Year decorations|3}",
+   "intro": "What you'll see on doors and altars this week.",
+   "items": [
+    {
+     "jp": "しめ{飾り|かざり|New Year rope decoration|3}",
+     "en": "straw rope decoration for the front door",
+     "note": "Keeps bad luck out."
+    },
+    {
+     "jp": "{門松|かどまつ|pine-and-bamboo gate decoration|2}",
+     "en": "pine and bamboo by the gate"
+    },
+    {
+     "jp": "{鏡餅|かがみもち|stacked New Year rice cakes|3}",
+     "en": "two stacked rice cakes with a mandarin on top"
+    },
+    {
+     "jp": "{鏡開き|かがみびらき|breaking the New Year rice cake|2}",
+     "en": "breaking and eating the rice cake, around 11 January"
+    }
+   ]
+  },
+  {
+   "title": "Giving and asking opinions",
+   "title_jp": "{意見|いけん}",
+   "intro": "From casual to polite.",
+   "items": [
+    {
+     "jp": "どう{思う|おもう}？",
+     "en": "What do you think?"
+    },
+    {
+     "jp": "{私|わたし}は{賛成|さんせい}です。",
+     "en": "I agree (with the idea)."
+    },
+    {
+     "jp": "{人|ひと}によると{思います|おもいます}。",
+     "en": "I think it depends on the person."
+    },
+    {
+     "jp": "うーん、ちょっと{違う|ちがう}かな。",
+     "en": "Hmm, I'm not so sure.",
+     "note": "Soft disagreement."
+    }
+   ]
+  }
+ ]
+}

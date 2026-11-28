@@ -400,5 +400,12 @@
   "category": "health-body",
   "function": "comparing",
   "format": "story"
+ },
+ {
+  "id": "2026-12-30",
+  "topic": "Buying New Year decorations at the shrine",
+  "category": "traditions",
+  "function": "opinions",
+  "format": "dialogue"
  }
 ]
